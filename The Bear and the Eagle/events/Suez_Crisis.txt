@@ -1,0 +1,302 @@
+﻿add_namespace = egypt
+### Nationalization of the Suez
+
+# English Response
+country_event = {
+	id = egypt.60
+	title = egypt.60.t
+	desc = egypt.60.d
+	picture = GFX_report_event_german_troops
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # This means war!
+		name = egypt.60.a
+		ai_chance = { 
+			factor = 0
+		}
+		add_political_power = -150
+		add_national_unity = -0.1
+		FRA = {
+			country_event = egypt.61
+		}
+	}
+
+	option = { # Diplomatic response
+		name = egypt.60.b
+		ai_chance = { factor = 100 }
+		FRA = { country_event = egypt.62 }
+		add_opinion_modifier = { target = EGY modifier = protest_action }
+	}
+}
+
+# French Response (British Press for War)
+country_event = {
+	id = egypt.61
+	title = egypt.60.t
+	desc = egypt.61.d
+	picture = GFX_report_event_german_troops
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # War out of the question
+		name = egypt.61.a
+		ai_chance = { factor = 25 }
+		ENG = { 
+			country_event = { hours = 6 id = egypt.63 }
+		}
+	}
+	option = { # Support Britain
+		name = egypt.61.b
+		ai_chance = { factor = 75 }
+		add_political_power = -150
+		add_national_unity = -0.1
+		FRA = { 
+			country_event = { hours = 6 id = egypt.64 }
+		}
+	}
+}
+
+# French Response (British Want Peace)
+country_event = {
+	id = egypt.62
+	title = egypt.60.t
+	desc = egypt.62.d
+	picture = GFX_report_event_german_troops
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = egypt.62.a
+		hidden_effect = {
+			news_event = { hours = 6 id = news.200 }
+		}
+		add_opinion_modifier = { target = EGY modifier = protest_action }
+	}
+}
+
+# Britain (French Refuses Support)
+country_event = {
+	id = egypt.63
+	title = egypt.63.t
+	desc = egypt.63.d
+	picture = GFX_report_event_chamberlain_announce
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # Push Ahead
+		name = egypt.63.a
+		ai_chance = { 
+			factor = 60		
+		}		
+		EGY = { country_event = egypt.66 }
+	}
+	option = { # Back Down
+		name = egypt.63.b
+		ai_chance = { factor = 40 }
+		FRA = { country_event = egypt.67 }
+		add_opinion_modifier = { target = EGY modifier = protest_action }
+	}
+}
+
+# Britain (France Gives Support)
+country_event = {
+	id = egypt.64
+	title = egypt.64.t
+	desc = egypt.64.d
+	picture = GFX_report_event_british_inspect_troops
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = egypt.64.a
+		EGY = { country_event = egypt.65 }
+	}
+}
+
+# Egypt (France and Britain go to war)
+country_event = {
+	id = egypt.65
+	title = egypt.65.t
+	desc = egypt.65.d
+	picture = GFX_report_event_british_artillery
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			factor = 1
+		}
+		name = egypt.65.a
+		ENG = {
+			declare_war_on = {
+				target = EGY
+				type = take_state_focus
+				generator = { 743 } 
+			}
+		}
+		FRA = {
+			add_to_war = { targeted_alliance = ENG enemy = EGY }	
+		}
+		ISR = { country_event = egypt.69 }
+		hidden_effect = {
+			#news_event = { hours = 6 id = news.206 }
+			ENG = { country_event = { hours = 72 id = egypt.70 } }
+		}
+	}
+}
+
+# Egypt (Britain goes to war)
+country_event = {
+	id = egypt.66
+	title = egypt.66.t
+	desc = egypt.66.d
+	picture = GFX_report_event_degaulle_inspect_troops
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = egypt.65.a
+		ENG = { 
+			country_event = egypt.68 
+		}
+		ENG = {
+			declare_war_on = {
+				target = EGY
+				type = take_state_focus
+				generator = { 743 } 
+			}
+		}
+		hidden_effect = {
+			news_event = { hours = 6 id = news.207 }
+		}
+	}
+}
+
+# France (Britain Backs Down)
+country_event = {
+	id = egypt.67
+	title = egypt.67.t
+	desc = egypt.67.d
+	picture = GFX_report_event_german_inspect_troops\
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = egypt.67.a
+		hidden_effect = {
+			news_event = { hours = 6 id = news.200 }
+		}
+		add_opinion_modifier = { target = EGY modifier = protest_action }
+	}
+}
+
+# France (Britain Goes Ahead Anyway)
+country_event = {
+	id = egypt.68
+	title = egypt.68.t
+	desc = egypt.68.d
+	picture = GFX_report_event_french_liberation
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = egypt.68.a
+	}
+}
+# Israel Offered to Join War
+country_event = {
+	id = egypt.69
+	title = egypt.69.t
+	desc = egypt.69.d
+	picture = GFX_report_event_british_artillery
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		ai_chance = {
+			factor = 1
+		}
+		name = egypt.65.a
+		ISR = {
+			add_to_war = { targeted_alliance = ENG enemy = EGY }	
+		}
+		#hidden_effect = {
+		#	news_event = { hours = 6 id = news.208 }
+		#}
+	}
+}
+
+# France invites Britain to the Franco-British Union
+country_event = {
+	id = egypt.70
+	title = egypt.70.t
+	desc = egypt.70.d
+	picture = GFX_report_event_british_artillery
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # Yes
+		ai_chance = {
+			factor = 10
+		}
+		name = egypt.70.a
+		ENG = { annex_country = { target = FRA transfer_troops = yes} }
+		ENG = { set_cosmetic_tag = ENG_FBU }
+
+		hidden_effect = {
+			FRA = { set_country_flag = become_fbu }
+			ENG = { set_country_flag = become_fbu }
+			news_event = news.1023
+			every_state = {
+				limit = {
+					is_core_of = FRA
+				}
+				ENG = {
+					add_state_core = PREV
+				}
+			}
+			every_country = {
+				limit = {
+					is_puppet_of = FRA
+				}
+				ENG = {
+					puppet = PREV
+				}
+			}
+
+		}
+	}
+
+	option = { # No
+		ai_chance = {
+			factor = 90
+		}
+		name = egypt.70.b
+	}
+}

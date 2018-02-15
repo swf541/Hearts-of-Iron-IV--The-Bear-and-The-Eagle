@@ -1,0 +1,90 @@
+﻿###########################
+# Syria Events
+###########################
+
+add_namespace = syria
+
+
+#Surrender when Israel has taken too much land in Syria
+country_event = {
+	id = syria.1
+	title = syria.1.t
+	desc = syria.1.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	trigger = {
+		tag = SYR
+		has_war_with = ISR
+		surrender_progress > 0.25
+		has_civil_war = no
+		ISR = { has_completed_focus = ISR_pre_emptive_strike }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	fire_only_once = yes
+
+	#Surrender and offer territory
+	option = {
+		name = syria.1.a
+
+		ISR = {
+			country_event = { id = syria.2 }
+		}
+		custom_effect_tooltip = syria.1.a_tt
+		effect_tooltip = {
+			ISR = { 
+				white_peace = {
+					tag = SYR 
+					message = SYR_agree_peace 
+				} 
+			}
+			transfer_state = 753
+
+		}
+	}
+}
+
+#Israel response to Syria surrender
+country_event = {
+	id = syria.2
+	title = syria.2.t
+	desc = syria.2.d
+	picture = GFX_report_event_finnish_soldiers_snow
+	
+	is_triggered_only = yes
+
+	#Accept surrender
+	option = {
+		name = syria.2.a
+
+		white_peace = SYR
+		transfer_state = 753
+	}
+}
+
+
+add_namespace = swfs
+country_event = {
+	id = swfs.15
+	title = "Syria Requests the Annexation of Kuwait"
+	desc = "Syria Requests the Annexation of Kuwait"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Agree to the Demands"
+		SYR = { annex_country = { target = KUW } }
+		ai_chance = {
+			factor = 80
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 20
+		}
+		name = "Decline"
+
+	}
+}

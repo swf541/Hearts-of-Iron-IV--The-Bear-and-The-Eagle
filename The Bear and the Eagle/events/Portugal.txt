@@ -1,0 +1,24 @@
+﻿add_namespace = swfs
+country_event = {
+	id = swfs.16
+	title = "Portugal Wants Reunification"
+	desc = "Portugal Wants Reunification"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Agree to the Demands"
+		annex_country = { target = BRA } 
+		ai_chance = {
+			factor = 100
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "Decline"
+
+	}
+}

@@ -1,0 +1,111 @@
+﻿#####################
+# Austria Events
+#####################
+
+add_namespace = aus
+
+# The unification of Austria, Question
+country_event = {
+	id = aus.1
+	hidden = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		date > 1955.7.20
+		NOT = { has_global_flag = aus_questions_over }
+		date < 1955.7.30
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	immediate = {
+		USA = {
+			country_event = usa.701
+		}
+		SOV = {
+			country_event = sov.3
+		}
+		FRA = {
+			country_event = fra.1
+		}
+		ENG = {
+			country_event = eng.1
+		}
+		set_global_flag = aus_questions_over
+	}
+
+	option = {}
+
+}
+
+# The unification of Austria, Unification
+country_event = {
+	id = aus.2
+	hidden = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		has_global_flag = eng_yes_austria
+		has_global_flag = fra_yes_austria
+		has_global_flag = sov_yes_austria
+		has_global_flag = usa_yes_austria
+		NOT = { has_global_flag = aus_austria_united }
+	}
+
+	immediate = {
+		AUS = {
+			transfer_state = 152
+			transfer_state = 758
+			transfer_state = 4
+			transfer_state = 153
+                                                transfer_state = 999
+		}
+		news_event = news.1014
+		set_global_flag = aus_austria_united
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	option = {}
+
+}
+
+# The unification of Austria, No Unification
+country_event = {
+	id = aus.3
+	hidden = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			has_global_flag = eng_no_austria
+			has_global_flag = fra_no_austria
+			has_global_flag = sov_no_austria
+			has_global_flag = usa_no_austria
+		}
+		NOT = { has_global_flag = aus_austria_not_united }
+	}
+
+	immediate = {
+		ENG = { news_event = news.1015 }
+		FRA = { news_event = news.1015 }
+		SOV = { news_event = news.1015 }
+		USA = { news_event = news.1015 }
+		set_global_flag = aus_austria_not_united
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	option = {}
+
+}
+	

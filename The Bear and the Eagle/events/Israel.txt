@@ -1,0 +1,130 @@
+﻿###########################
+# Israel Events
+###########################
+
+add_namespace = israel
+
+#Invitation to the Alliance Democratic Middle East
+country_event = {
+	id = israel.1
+	title = {
+		text = israel.1.t1
+		trigger = { FROM = { tag = ISR } }
+	}
+	title = {
+		text = israel.1.t2
+		trigger = {
+			NOT = { FROM = { tag = ISR } }
+		}
+	}
+	desc = {
+		text = israel.1.d1
+		trigger = { FROM = { tag = ISR } }
+	}
+	desc = {
+		text = israel.1.d2
+		trigger = { 
+			NOT = { FROM = { tag = ISR } }
+		}
+	}
+	#picture = GFX_report_event_israel_flag
+	
+	is_triggered_only = yes
+	
+	option = {	#We accept
+		name = israel.1.o1
+		#set_country_flag = seek_israel_alliance
+		if = {
+			limit = { ISR = { is_faction_leader = yes } }
+			ISR = { add_to_faction = ROOT }
+		}
+		if = {
+			limit = { ISR = { is_faction_leader = no } }
+			random_country = {
+				limit = {
+					is_in_faction_with = ISR
+					is_faction_leader = yes
+				}
+				add_to_faction = ROOT
+			}
+		}
+		ISR = { country_event = diplomatic_response.1 }
+		ai_chance = {
+			factor = 10
+			modifier = {
+				has_government = democratic
+				has_government = islamism
+				has_government = nationalism
+				has_government = neutrality
+				add = 50
+			}
+
+			modifier = {
+				factor = 0
+				has_government = neutrality
+			}
+		}
+	}
+	
+	option = {	#We reject
+		name = israel.1.o2
+		ISR = { country_event = diplomatic_response.2 }
+		ai_chance = {
+			factor = 10
+			modifier = {
+				tag = PAL 
+				add = -10
+			}
+			modifier = {
+				tag = JOR
+				add = -10
+			}
+			modifier = {
+				tag = SYR
+				add = -10
+			}
+			modifier = {
+				tag = LEB
+				add = -10
+			}
+			modifier = {
+				tag = SAU
+				add = -10
+			}
+
+			modifier = {
+				tag = IRQ
+				add = -10
+			}
+		}
+	}
+}
+
+
+#FROM accepts!
+country_event = {
+	id = israel.2
+	title = israel.2.t
+	desc = israel.2.d
+	#picture = GFX_report_event_political_deal2
+	
+	is_triggered_only = yes
+	
+	option = {	#Excellent.
+		name = israel.2.o1
+	}
+}
+
+#FROM rejects!
+country_event = {
+	id = israel.3
+	title = israel.3.t
+	desc = israel.3.d
+	#picture = GFX_report_event_political_deal2
+	
+	is_triggered_only = yes
+	
+	option = {	#Well, too bad.
+		name = israel.3.o1
+	}
+}

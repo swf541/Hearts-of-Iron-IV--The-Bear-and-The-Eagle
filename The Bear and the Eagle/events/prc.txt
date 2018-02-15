@@ -1,0 +1,591 @@
+﻿##############
+# People Republic of China Events
+##############
+
+add_namespace = prc
+
+# 5 base division because of Focus Tree
+country_event = {
+	id = prc.1
+	title = prc.1.t
+	desc = prc.1.d
+	picture = GFX_report_event_indian_soldiers
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = prc.1.a
+		hidden_effect = {
+			load_oob = "PRC_communist_reinforcements"
+		}
+		custom_effect_tooltip = PRC_Communist_Army_arrives
+		set_global_flag = prc_communist_army_setup
+	}
+}
+
+# PRC goes with South Korea
+country_event = {
+	id = prc.2
+	title = prc.2.t
+	desc = prc.2.d
+	picture = GFX_report_event_prc_successful
+	
+	fire_only_once = yes
+	
+	trigger = {
+		PRC = {
+			owns_state = 746
+			owns_state = 745
+			owns_state = 747
+			owns_state = 749
+			owns_state = 748
+			controls_state = 746
+			controls_state = 745
+			controls_state = 747
+			controls_state = 749
+			controls_state = 748
+		}
+	}
+
+	option = {
+		name = prc.2.a
+		KOR = {
+			transfer_state = 745
+			transfer_state = 746
+			transfer_state = 747
+			transfer_state = 748
+			transfer_state = 749
+		}
+	}
+
+	option = {
+		name = prc.2.b
+		add_opinion_modifier = { target = KOR modifier = PRC_south_korea_no_states } 
+	}
+}
+
+# PRC goes with North Korea
+country_event = {
+	id = prc.3
+	title = prc.3.t
+	desc = prc.3.d
+	picture = GFX_report_event_prc_successful
+	
+	fire_only_once = yes
+	
+	trigger = {
+		PRC = {
+			owns_state = 750
+			owns_state = 753
+			owns_state = 754
+			owns_state = 751
+			owns_state = 752
+			controls_state = 750
+			controls_state = 753
+			controls_state = 754
+			controls_state = 752
+			controls_state = 751
+		}
+	}
+
+	option = {
+		name = prc.3.a
+		effect_tooltip = {
+			KPA = {
+				transfer_state = 750
+				transfer_state = 751
+				transfer_state = 752
+				transfer_state = 753
+				transfer_state = 754
+				transfer_state = 755
+				transfer_state = 525
+			}
+		}
+	}
+
+	option = {
+		name = prc.3.b
+		add_opinion_modifier = { target = KPA modifier = PRC_north_korea_no_states } 
+	}
+}
+
+# After the civil war, the Republic of China exists in Taiwan
+country_event = {
+	id = prc.4
+	hidden = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		PRC = {
+			owns_state = 524
+			owns_state = 604
+			owns_state = 601
+			controls_state = 524
+			controls_state = 604
+			controls_state = 601
+		}
+	}
+
+	immediate = {
+		CHI = {
+			transfer_state = 524
+                                                transfer_state = 1006
+                                                transfer_state = 1024
+			country_event = chi.2
+                                                if = {
+			limit = {
+			              CHI = { owns_state = 618 }
+			}
+			PRC = { transfer_state = 618 }
+		}
+		}
+		set_global_flag = PRC_mainland
+		news_event = news.1009
+	}
+
+	option = {}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+}
+
+# 7 division because of Focus Tree
+country_event = {
+	id = prc.5
+	title = prc.5.t
+	desc = prc.5.d
+	picture = GFX_report_event_indian_soldiers
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = prc.5.a
+		hidden_effect = {
+			load_oob = "PRC_revolution_aid"
+		}
+		custom_effect_tooltip = PRC_revolution_reinforcement
+		set_global_flag = PRC_revolution_reinforcement
+	}
+}
+
+# PRC / USA says no to request
+news_event = {
+	id = prc.6
+	title = prc.6.t
+	desc = prc.6.d
+	picture = GFX_report_event_prc_successful
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = prc.6.a
+	}
+}
+
+# PRC / USA says yes to request
+news_event = {
+	id = prc.7
+	title = prc.7.t
+	desc = prc.7.d
+	picture = GFX_report_event_prc_successful
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = prc.7.a
+	}
+}
+
+# PRC / USA says no to faction request
+news_event = {
+	id = prc.8
+	title = prc.8.t
+	desc = prc.8.d
+	picture = GFX_report_event_prc_successful
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = prc.7.a
+	}
+}
+
+# PRC gets into the UN
+country_event = {
+	id = prc.9
+	hidden = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		has_global_flag = eng_yes_prc_un_recognition
+		has_global_flag = usa_yes_prc_un_recognition
+		has_global_flag = sov_yes_prc_un_recognition
+		has_global_flag = fra_yes_prc_un_recognition
+		NOT = { has_global_flag = prc_un_recognized }
+	}
+
+	immediate = {
+		add_opinion_modifier = { target = SOV modifier = PRC_un_recognition_opinion }
+		add_opinion_modifier = { target = FRA modifier = PRC_un_recognition_opinion }
+		add_opinion_modifier = { target = ENG modifier = PRC_un_recognition_opinion }
+		add_opinion_modifier = { target = CHI modifier = PRC_not_un_recognition_opinion }
+		news_event = news.1016
+		set_global_flag = prc_un_recognizzed
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	option = {}
+
+}
+
+# PRC does not get into UN
+country_event = {
+	id = prc.10
+	hidden = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			has_global_flag = eng_no_prc_un_recognition
+			has_global_flag = usa_no_prc_un_recognition
+			has_global_flag = sov_no_prc_un_recognition
+			has_global_flag = fra_no_prc_un_recognition
+		}
+		NOT = { has_global_flag = prc_un_not_recognized }
+	}
+
+	immediate = {
+		add_opinion_modifier = { target = CHI modifier = PRC_un_recognition_opinion }
+		FRA = { news_event = news.1017 }
+		ENG = { news_event = news.1017 }
+		SOV = { news_event = news.1017 }
+		USA = { news_event = news.1017 }
+		CHI = { news_event = news.1017 }
+		set_global_flag = prc_un_not_recognized
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	option = {}
+
+}
+
+# PRC sends out communist event
+country_event = {
+	id = prc.11
+	title = prc.11.t
+	desc = prc.11.d
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = prc.11.b
+		ROOT = { add_opinion_modifier = { target = PRC modifier = PRC_communism_for_PRC_opinion } }
+		ROOT = { add_opinion_modifier = { target = SOV modifier = PRC_communism_against_USSR_opinion } }
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.1
+				ROOT = { is_in_faction_with = SOV }
+			}
+		}
+	}
+
+	option = {
+		name = prc.11.b
+		ROOT = { add_opinion_modifier = { target = SOV modifier = PRC_communism_for_USSR_opinion } }
+		ROOT = { add_opinion_modifier = { target = PRC modifier = PRC_communism_against_PRC_opinion } }
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+# Annexation of ETR
+country_event = {
+	id = prc.12
+	title = prc.12.t
+	desc = prc.12.d
+
+	trigger = {
+		PRC = { NOT = { has_war_with = CHI } }
+		country_exists = ETR
+	}
+	
+	fire_only_once = yes
+
+	option = {
+		name = prc.12.a
+		ETR = { country_event = prc.13 }
+	}
+
+	mean_time_to_happen = { days = 7 }
+
+}
+
+# Annexation of ETR to ETR
+country_event = {
+	id = prc.13
+	title = prc.13.t
+	desc = prc.13.d
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = {
+		name = prc.13.a
+		PRC = { annex_country = { target = ETR } }
+		ai_chance = {
+			factor = 50
+		}
+	}
+
+	option = {
+		name = prc.13.b
+		PRC = {
+			declare_war_on = {
+				target = ETR
+				type = annex_everything
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+# China event from Cambodia: Become puppet or not
+country_event = {
+	id = prc.14
+	title = prc.14.t
+	desc = prc.14.d
+	picture = GFX_report_event_asian_politicians
+	
+	is_triggered_only = yes
+	
+	#Accept - become puppet
+	option = {
+		name = prc.14.a
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 0
+				strength_ratio = {
+					tag = PRC
+					ratio > 0.10
+				}
+				is_historical_focus_on = yes
+			}
+		}
+		PRC = { 
+			country_event = { id = prc.15 }
+			effect_tooltip = { puppet = CAM }
+		}
+	}
+
+	option = {
+		name = prc.14.b
+		ai_chance = { factor = 40 }
+		PRC = { 
+			country_event = { id = prc.16 }
+			effect_tooltip = {
+				create_wargoal = {
+					type = take_state
+					target = CAM
+					generator = owned_states
+				}
+			}
+		}
+	}
+}
+
+# Cambodia accepts and is puppeted
+country_event = {
+	id = prc.15
+	title = prc.15.t
+	desc = prc.15.d
+	picture = GFX_report_event_chinese_japanese_handshake
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = prc.15.a
+		puppet = CAM
+		#add_named_threat = { threat = 20 name = prc_khmer_rogue }
+		#hidden_effect = {
+		#	news_event = { hours = 6 id = news.210 }
+		#}
+	}
+}
+
+# Cambodia refuses, gain cb
+country_event = {
+	id = prc.16
+	title = prc.16.t
+	desc = prc.16.d
+	picture = GFX_report_event_chinese_soldiers_02
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = prc.16.a
+		create_wargoal = {
+			type = take_state
+			target = CAM
+			generator = owned_states
+		}
+	}
+}
+
+# China event from Vietnam: Become puppet or not
+country_event = {
+	id = prc.17
+	title = prc.17.t
+	desc = prc.17.d
+	picture = GFX_report_event_asian_politicians
+	
+	is_triggered_only = yes
+	
+	#Accept - become puppet
+	option = {
+		name = prc.17.a
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 0
+				strength_ratio = {
+					tag = PRC
+					ratio > 0.10
+				}
+				is_historical_focus_on = yes
+			}
+		}
+		PRC = { 
+			country_event = { id = prc.18 }
+			effect_tooltip = { puppet = VIN }
+		}
+	}
+
+	option = {
+		name = prc.17.b
+		ai_chance = { factor = 40 }
+		PRC = { 
+			country_event = { id = prc.19 }
+			effect_tooltip = {
+				create_wargoal = {
+					type = take_state
+					target = VIN
+					generator = owned_states
+				}
+			}
+		}
+	}
+}
+
+# Vietnam accepts and is puppeted
+country_event = {
+	id = prc.18
+	title = prc.18.t
+	desc = prc.18.d
+	picture = GFX_report_event_chinese_japanese_handshake
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = prc.18.a
+		puppet = VIN
+		#add_named_threat = { threat = 20 name = prc_khmer_rogue }
+		#hidden_effect = {
+		#	news_event = { hours = 6 id = news.210 }
+		#}
+	}
+}
+
+# Vietnam refuses, gain cb
+country_event = {
+	id = prc.19
+	title = prc.19.t
+	desc = prc.19.d
+	picture = GFX_report_event_chinese_soldiers_02
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = prc.19.a
+		create_wargoal = {
+			type = take_state
+			target = VIN
+			generator = owned_states
+		}
+	}
+}
+
+country_event = {
+	id = prc.20
+	title = prc.20.t
+	desc = prc.20.d
+	picture = report_event_chinese_elections_1958
+	
+	fire_only_once = yes
+	
+trigger = {
+		tag = PRC
+		date > 1959.4.1
+		date < 1959.4.30
+	}
+	
+	option = {
+		name = prc.20.a
+		retire_country_leader = yes 
+		create_country_leader = {
+			name = "Liu Shaoqi"
+			picture = "Portrait_China_Liu_Shaoqi.dds"
+			ideology = maoist
+		}
+	}
+	option = {
+		name = prc.20.b
+		retire_country_leader = yes 
+		create_country_leader = {
+			name = "Chen Yun"
+			picture = "Portrait_China_Chen_Yun.dds"
+			ideology = maoist
+		}
+	}
+	option = {
+		name = prc.20.c
+		retire_country_leader = yes 
+		create_country_leader = {
+			name = "Zhou Enlai"
+			picture = "Portrait_China_Zhou_Enlai.dds"
+			ideology = maoist
+		}
+	}
+	
+	option = {
+		name = prc.20.do
+	}
+
+}

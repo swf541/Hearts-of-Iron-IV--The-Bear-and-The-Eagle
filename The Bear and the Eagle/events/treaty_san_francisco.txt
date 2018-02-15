@@ -1,0 +1,106 @@
+﻿###########################
+# 
+###########################
+
+add_namespace = treaty_san_francisco
+news_event = {
+	id = treaty_san_francisco.1
+	title = "The Treaty of San Francisco"
+	desc = treaty_san_francisco.1.d
+	picture = GFX_news_event_Treaty_of_San_Francisco
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "A Success for the UN Charter"
+		if = {
+			limit = { 
+				tag = JAP
+				has_completed_focus	= JAP_Combat_Inflation
+			}
+					set_autonomy = {
+							target = JAP
+							autonomy_state = autonomy_free
+						}
+				set_politics = {
+
+					parties = {
+						Liberal_Conservatism = { 
+							popularity = 40
+						}
+						socialist = {
+							popularity = 20
+						}
+
+						fascism = {
+							popularity = 10
+						}
+						
+						Social_Democratic = {
+							popularity = 20
+							#banned = no #default is no
+						}
+						monarchism = {
+							popularity = 10
+						}
+					}
+					
+					ruling_party = Liberal_Conservatism
+					last_election = "1951.1.1"
+					election_frequency = 48
+					elections_allowed = yes
+				}			
+				set_political_party = { ideology = American_Democratic popularity = 0.0 }	
+				set_political_party = { ideology = Liberal_Conservatism popularity = 0.4 }	
+				set_political_party = { ideology = Social_Democratic popularity = 0.2 }	
+				set_political_party = { ideology = monarchism popularity = 0.1 }	
+				set_political_party = { ideology = fascism popularity = 0.1 }	
+				set_political_party = { ideology = socialist popularity = 0.2 }	
+		}
+		
+		if = {
+			limit = { 
+				tag = JAP
+				has_completed_focus	= JAP_Socialist_Victory
+			}
+					set_autonomy = {
+							target = JAP
+							autonomy_state = autonomy_free
+						}
+				set_politics = {
+
+					parties = {
+						Liberal_Conservatism = { 
+							popularity = 20
+						}
+						socialist = {
+							popularity = 40
+						}
+						fascism = {
+							popularity = 10
+						}
+						
+						Social_Democratic = {
+							popularity = 20
+							#banned = no #default is no
+						}
+						monarchism = {
+							popularity = 10
+						}
+					}
+					
+					ruling_party = socialist
+					last_election = "1951.1.1"
+					election_frequency = 48
+					elections_allowed = yes
+				}
+				set_political_party = { ideology = American_Democratic popularity = 0.0 }	
+				set_political_party = { ideology = Liberal_Conservatism popularity = 0.2 }	
+				set_political_party = { ideology = Social_Democratic popularity = 0.2 }	
+				set_political_party = { ideology = monarchism popularity = 0.1 }	
+				set_political_party = { ideology = fascism popularity = 0.1 }	
+				set_political_party = { ideology = socialist popularity = 0.4 }					
+		}
+	}
+}

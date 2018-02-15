@@ -1,0 +1,392 @@
+﻿ add_namespace = fin
+ 
+ country_event = {
+ 	id = fin.1
+ 	title = "fin.1.t"
+ 	desc = "fin.1.d"
+ 
+ 	is_triggered_only = yes
+ 
+ 	option = {
+ 		name = "fin.1.a"
+ 		FIN = { transfer_state = 962 }  
+ 		ai_chance = {
+ 			factor = 95
+ 		}
+ 	}
+ 
+ 	option = {
+ 		ai_chance = {
+ 			factor = 5
+ 		}
+ 		name = "fin.1.b"
+ 		FIN = { country_event = fin.2 }
+ 	}
+}
+
+ country_event = {
+ 	id = fin.2
+ 	title = "fin.2.t"
+ 	desc = "fin.2.d"
+ 
+ 	is_triggered_only = yes
+	
+	 option = {
+ 	name = "fin.2.a"
+ 	FIN = { add_national_unity = -0.1 }  
+ 	ai_chance = {
+ 			factor = 47
+ 		}
+ 	}
+ 
+ 	option = {
+ 		name = "fin.2.b"
+ 		FIN = { add_national_unity = -0.5 }  
+ 		ai_chance = {
+ 			factor = 47
+ 		}
+ 	}
+ 
+ 	option = {
+ 		ai_chance = {
+ 			factor = 6
+ 		}
+ 		name = "fin.2.c"
+ 		FIN = { create_wargoal = { type = annex_everything target = SOV } }
+	}
+}
+
+country_event = {
+	id = fin.3
+	title = fin.3.t
+	desc = fin.3.d
+	picture = GFX_report_event_political_deal
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FIN
+		date > 1956.6.1
+		date < 1956.6.30
+	}
+	
+	option = {
+		name = finland.1.a
+		create_country_leader = {
+			name = "Jussi Saukkonen"
+			picture = "Saukkonen.dds"
+			ideology = Liberal_Conservatism
+		}
+	}
+}
+
+news_event = {
+	id = fin.4
+	title = fin.4.t
+	desc = fin.4.d
+	picture = news_event_FIN_cancel_yya
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = finland.4.a
+	}
+}
+
+country_event = {
+	id = fin.5
+	title = fin.5.t
+	desc = fin.5.de
+	picture = GFX_report_event_political_deal
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = fin.5a
+		retire_country_leader = yes 
+		create_country_leader = {
+			name = "Bruno Salmiala"
+			picture = "Salmila.dds"
+			ideology = fascism_ideology
+		}
+	}
+	option = {
+		name = fin.5.b
+	}
+	option = {
+		name = fin.5.c
+		retire_country_leader = yes 
+		create_country_leader = {
+			name = "Helmi Arneberg-Pentti"
+			picture = "Arneberg.dds"
+			ideology = fascism_ideology
+		}
+	}
+	option = {
+		name = fin.5.d
+		retire_country_leader = yes 
+		create_country_leader = {
+			name = "Hilja Riipinen"
+			picture = "Riipinen.dds"
+			ideology = fascism_ideology
+		}
+	}
+	option = {
+		name = fin.5.e
+		retire_country_leader = yes 
+		create_country_leader = {
+			name = "Urho Kekkonen"
+			picture = "kekkonen.dds"
+			ideology = fascism_ideology
+		}
+	}
+}
+
+
+
+
+
+
+#########################################################################################
+# Other Finish Events #
+##################################
+
+
+add_namespace = swfs
+
+country_event = {
+	id = swfs.7
+	title = "Finland Demands The Return of Their Former Territory"
+	desc = "Finland Demands The Return of Their Former Territory lost in the prior war"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Agree to the Demands"
+		FIN = { transfer_state = 722 } 
+		FIN = { transfer_state = 147 } 
+		FIN = { transfer_state = 146 } 
+		ai_chance = {
+			factor = 50
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 50
+		}
+		name = "Decline"
+		FIN = { create_wargoal = { type = annex_everything target = SOV } }
+	}
+}
+country_event = {
+	id = swfs.8
+	title = "Finland Demands Greater Finland"
+	desc = "Finland Demands Greater Finland"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Agree to the Demands"
+			FIN = { transfer_state = 216 } 
+			FIN = { transfer_state = 13 } 
+			FIN = { transfer_state = 191 } 
+			FIN = { transfer_state = 208 } 
+			FIN = { transfer_state = 195 } 
+			FIN = { transfer_state = 215 } 
+			FIN = { transfer_state = 213 } 
+		ai_chance = {
+			factor = 25
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 75
+		}
+		name = "Decline"
+		FIN = { create_wargoal = { type = annex_everything target = SOV } }
+	}
+}
+country_event = {
+	id = swfs.9
+	title = "Finland Offers to Purchase Former Territory"
+	desc = "Finland Offers to Purchase Former Territory"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Agree to the Sale"
+			transfer_state = 147
+			transfer_state = 146
+			transfer_state = 722
+			add_timed_idea = { idea = soviet_payments days = 1825 }	
+			SOV = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+							
+			}
+		ai_chance = {
+			factor = 100
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "Decline"
+		FIN = { create_wargoal = { type = annex_everything target = SOV } }
+	}
+}

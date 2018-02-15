@@ -1,0 +1,274 @@
+﻿#####################
+# West Germany Events
+#####################
+
+add_namespace = wgr
+
+# WGR in NATO
+country_event = {
+	id = wgr.1
+	title = wgr.1.t
+	desc = wgr.1.d
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = wgr.1.a
+		add_to_faction = WGR
+		ai_chance = { factor = 95 }
+	}
+
+	option = {
+		name = wgr.1.b
+		add_opinion_modifier = { target = WGR modifier = WGR_Not_NATO_Opinion }
+		ai_chance = { factor = 5 }
+	}
+}
+
+# Invite Saarland
+country_event = {
+	id = wgr.2
+	title = wgr.2.t
+	desc = wgr.2.d
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = wgr.2.a
+		WGR = { annex_country = { target = SAR } }
+		ai_chance = {
+			factor = 90
+		}
+	}
+
+	option = {
+		name = wgr.2.b
+		FRA = { puppet = SAR }
+		add_opinion_modifier = { target = WGR modifier = WGR_No_Saarland_Opinion }
+		ai_chance = { factor = 5 }
+	}
+	option = {
+		name = wgr.2.c
+		add_opinion_modifier = { target = WGR modifier = WGR_No_Saarland_Opinion }
+		add_opinion_modifier = { target = FRA modifier = WGR_No_Saarland_Opinion }
+		ai_chance = { factor = 5 }
+	}
+}
+
+# Vote Alsace-Lorraine
+country_event = {
+	id = wgr.3
+	title = wgr.3.t
+	desc = wgr.3.d
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = wgr.3.a
+		WGR = { 
+			transfer_state = 28
+			transfer_state = 17
+		}
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = wgr.3.b
+		add_opinion_modifier = { target = WGR modifier = WGR_No_Alsace_Opinion }
+		ai_chance = { factor = 99 }
+	}
+}
+
+# Unification of Germany
+country_event = {
+	id = wgr.4
+	title = wgr.4.t
+	desc = wgr.4.d
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = wgr.4.a
+		WGR = { 
+			transfer_state = 42
+			transfer_state = 50
+			transfer_state = 51
+			transfer_state = 52
+			transfer_state = 53
+			transfer_state = 54
+			transfer_state = 55
+			transfer_state = 56
+			transfer_state = 57
+			transfer_state = 58
+			transfer_state = 59
+			transfer_state = 60
+			transfer_state = 61
+			transfer_state = 62
+			transfer_state = 64
+			transfer_state = 65
+			transfer_state = 68
+		}
+		random_other_country = {
+			limit = { tag = WGR }
+			change_tag_from = DDR
+		}
+		ai_chance = { factor = 80 }
+	}
+
+	option = {
+		name = wgr.4.b
+		add_opinion_modifier = { target = WGR modifier = WGR_No_Unification_Opinion }
+		ai_chance = { factor = 20 }
+	}
+}
+
+# After Election 1953
+country_event = {
+	id = wgr.5
+	hidden = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+		tag = WGR
+		democratic > 0.2
+		date > 1953.1.1
+		date < 1954.1.1
+	}
+	
+	option = { 
+		name = wgr.5.a
+		WGR = { remove_ideas = democratic_drift_1 }
+	}
+}
+
+# Join the EDC
+country_event = {
+	id = wgr.6
+	title = wgr.6.t
+	desc = wgr.6.d
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "Yes, sure!"
+		add_opinion_modifier = {
+			target = FROM
+			modifier = WGR_Joining_the_EDC_opinion
+		}
+		remove_ideas = Pleven_Plan
+		add_ideas = Member_of_European_Defense_Community
+		ai_chance = { 
+			factor = 80
+			modifier = {
+				factor = 1
+				is_historical_focus_on = yes
+			}
+		}
+		hidden_effect = {
+			FROM = { country_event = { id = wgr.7 hours = 12 } }
+		}
+	}
+
+	option = {
+		name = "No thanks"
+		ai_chance = { 
+			factor = 20
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+# [From.GetName] joined the EDC
+country_event = {
+	id = wgr.7
+	title = wgr.7.t
+	desc = wgr.7.d
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "Nice!"
+		ai_chance = { 
+			factor = 1
+		}
+	}
+}
+
+# [From.GetName] created the EDC
+news_event = {
+	id = wgr.8
+	title = wgr.8.t
+	desc = wgr.8.d
+	
+	is_triggered_only = yes
+	major = yes
+
+	picture = GFX_news_event_EDC_created
+	
+	option = { 
+		name = "Interesting."
+		ai_chance = { 
+			factor = 1
+		}
+	}
+}
+country_event = {
+	id = wgr.9
+	title = wgr.9.t
+	desc = wgr.9.d
+	picture = GFX_report_event_political_deal
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wgr.9.a
+		retire_country_leader = yes 
+		create_country_leader = {
+				name = "Louis I"
+				desc = ""
+				picture = "Louis.dds"
+				expire = "1995.1.1"
+				ideology = absolute_monarchist
+			}
+			set_politics = { ruling_party = monarchism elections_allowed = no }
+	}
+	option = {
+		name = wgr.9.b
+				retire_country_leader = yes 
+		create_country_leader = {
+				name = "Victoria I"
+				picture = "louise.dds"
+				expire = "1995.1.1"
+				ideology = absolute_monarchist
+			}
+			set_politics = { ruling_party = monarchism elections_allowed = no }
+	}
+
+}
+
+country_event = {
+	id = wgr.10
+	title = wgr.10.t
+	desc = wgr.10.d
+	picture = GFX_report_event_political_deal
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wgr.10.a
+		ai_chance = { 
+			factor = 100
+		}
+		DDR	= { country_event = ddr.41 }
+	}
+	option = {
+		name = wgr.10.b
+	}
+
+}		

@@ -1,0 +1,233 @@
+﻿###########################
+#  Operation Power Pack Event
+###########################
+
+add_namespace = kaiser
+add_namespace = hitler
+
+
+country_event = {
+	id = kaiser.1
+	title = "Pro-Western Strife"
+	desc = "In recent days it has been revealed the military has been heavily infilitrated by traitors threatening civil war or a coup"
+	picture = GFX_report_event_cambodia
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Accede to the Demands"
+		WGR = { 
+		annex_country = { target = DDR }
+		set_capital = 742 
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = "It's treason then...."
+		start_civil_war = {
+			ideology = monarchism
+			size = 0.5
+		}		
+	}
+}
+country_event = {
+	id = kaiser.2
+	title = "Germany Demands Old Lands"
+	desc = "Germany Demands Old Lands"
+	picture = GFX_report_event_cambodia
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Accede to the Demands"
+		WGR = {
+			transfer_state = 63
+			63 = { add_core_of = WGR }
+			transfer_state = 85
+			85 = { add_core_of = WGR }
+			transfer_state = 741
+			741 = { add_core_of = WGR }
+			transfer_state = 66
+			66 = { add_core_of = WGR }
+			transfer_state = 951
+			951 = { add_core_of = WGR }
+			transfer_state = 950
+			950 = { add_core_of = WGR }
+			transfer_state = 795
+			795 = { add_core_of = WGR }
+			transfer_state = 1010
+			1010 = { add_core_of = WGR }
+                                                transfer_state = 86
+			86 = { add_core_of = WGR }
+                                                transfer_state = 86
+			86 = { add_core_of = WGR }
+                                                transfer_state = 797
+			797 = { add_core_of = WGR }
+                                                transfer_state = 5
+			5 = { add_core_of = WGR }
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = "Decline"
+		WGR = {
+			63 = { add_core_of = WGR }
+			85 = { add_core_of = WGR }
+			741 = { add_core_of = WGR }
+			66 = { add_core_of = WGR }
+			951 = { add_core_of = WGR }
+			950 = { add_core_of = WGR }
+			795 = { add_core_of = WGR }
+			1010 = { add_core_of = WGR }
+                                                86 = { add_core_of = WGR }
+                                                797 = { add_core_of = WGR }
+                                                5 = { add_core_of = WGR }
+		}
+	}
+}
+
+country_event = {
+	id = kaiser.3
+	title = "Germany Demands Return of Alsace-Lorraine"
+	desc = "Germany Demands Return of Alsace-Lorraine"
+	picture = GFX_report_event_cambodia
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Accede to the Demands"
+		WGR = { 
+			transfer_state = 28 
+		}
+		28 = { add_core_of = WGR }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = "Decline"
+			28 = { add_core_of = WGR }
+	}
+}
+
+country_event = {
+	id = kaiser.4
+	title = "Germany Demands Kaliningrad"
+	desc = "Germany has demanded that we transfer the ex-German Kaliningrad Oblast to them. They also want the Klaipeda region from Lithuania."
+	picture = GFX_report_event_cambodia
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Accede to the Demands"
+		WGR = {
+			transfer_state = 188
+			188 = { add_core_of = WGR }
+                                                transfer_state = 892
+			892 = { add_core_of = WGR }
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = "Decline"
+		WGR = {
+			188 = { add_core_of = WGR }
+                                                892 = { add_core_of = WGR }
+		}
+	}
+}
+
+country_event = {
+	id = kaiser.5
+	title = "Germany Demands Old Colonies"
+	desc = "Germany Demands Old Colonies"
+	picture = GFX_report_event_cambodia
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Accede to the Demands"
+		WGR = {
+                                                transfer_state = 761
+			761 = { add_core_of = WGR }
+			transfer_state = 541
+			541 = { add_core_of = WGR }
+			transfer_state = 546
+			546 = { add_core_of = WGR }
+			transfer_state = 816
+			816 = { add_core_of = WGR }
+			transfer_state = 768
+			768 = { add_core_of = WGR }
+			transfer_state = 817
+			817 = { add_core_of = WGR }
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = "Decline"
+		WGR = {
+			761 = { add_core_of = WGR }
+			541 = { add_core_of = WGR }
+			546 = { add_core_of = WGR }
+			816 = { add_core_of = WGR }
+			768 = { add_core_of = WGR }
+			817 = { add_core_of = WGR }
+		}
+	}
+}
+country_event = {
+	id = kaiser.6
+	title = "Germany Demands Eupen-Malmedy"
+	desc = "Germany has today requested that we turn over the German-speaking region of Belgium, known as Eupen-Malmedy, to them."
+	picture = GFX_report_event_cambodia
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Why not? They do speak German after all"
+		WGR = {
+                                                transfer_state = 891
+			891 = { add_core_of = WGR }
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = "Piss off!"
+		WGR = {
+			891 = { add_core_of = WGR }
+		}
+	}
+}
+country_event = {
+	id = hitler.1
+	title = "Hitler Returns to Power"
+	desc = "Our expedition has discovered Adolf Hitler in the depths of South America"
+	picture = GFX_report_event_cambodia
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "The Fuhrer Returns"
+		create_country_leader = {
+			name = "Adolf Hitler"
+			desc = "POLITICS_ADOLF_HITLER_DESC"
+			picture = "gfx/leaders/WGR/Portrait_WestGermany_Adolf_hitler.dds"
+			expire = "1965.1.1"
+			ideology = nazism
+			traits = {
+				dictator
+			}
+		}
+		add_popularity = { ideology = fascism popularity = 0.75 }
+	}
+}

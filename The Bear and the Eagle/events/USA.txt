@@ -1,0 +1,2066 @@
+﻿#############################
+# USA events
+#############################
+
+add_namespace = usa
+
+# Yes or No to help to PRC?
+country_event = {
+	id = usa.700
+	title = usa.700.t
+	desc = usa.700.d
+	picture = GFX_report_event_help_PRC
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = usa.700.a
+		send_equipment = { target = PRC type = infantry_equipment amount = 10000 }
+		add_opinion_modifier = { target = PRC modifier = USA_yes_intervention_opinion }
+		ai_chance = {
+			factor = 50
+		}
+		hidden_effect = {
+			PRC = {
+				country_event = prc.6
+			}
+		}
+	}
+	option = {
+		name = usa.700.b
+		add_opinion_modifier = { target = PRC modifier = USA_no_intervention_opinion }
+		ai_chance = {
+			factor = 50
+		}
+		hidden_effect = {
+			PRC = {
+				country_event = prc.7
+			}
+		}
+	}
+}
+
+# The Reunification of Austria
+country_event = {
+	id = usa.701
+	title = usa.701.t
+	desc = usa.701.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = usa.701.a
+		set_global_flag = usa_yes_austria
+		ai_chance = {
+			factor = 90
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 1
+			}
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+		name = usa.701.b
+		set_global_flag = usa_no_austria
+	}
+}
+
+# UN recognition of PRC
+country_event = {
+	id = usa.702
+	title = usa.702.t
+	desc = usa.702.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = usa.702.a
+		set_global_flag = usa_yes_prc_un_recognition
+		ai_chance = {
+			factor = 15
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 1
+		}
+		name = usa.702.b
+		set_global_flag = usa_no_prc_un_recognition
+	}
+}
+
+
+# Election of 1952: American_Democratic Nomination
+country_event = {
+	id = usa.1000
+	title = usa.1000.t
+	desc = usa.1000.d
+	picture = GFX_report_event_usa_election_generic
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		date > 1952.7.15
+		date < 1952.8.31
+	}
+
+	mean_time_to_happen = { days = 1 }
+	
+	option = { 
+		name = usa.1000.a
+		ai_chance = {
+			factor = 70
+				modifier = {
+					factor = 1000
+					is_historical_focus_on = yes
+				}
+		}
+		set_global_flag = stevenson_dem_nominee_52
+	}
+
+	option = { 
+		name = usa.1000.b
+		ai_chance = {
+			factor = 0
+		}
+		set_global_flag = truman_dem_nominee_52
+	}
+	option = { 
+		name = usa.1000.c
+		ai_chance = {
+			factor = 30
+		}
+		set_global_flag = kefauver_dem_nominee_52
+	}	
+	
+}
+
+
+
+# Election of 1952: Republican Nomination
+country_event = {
+	id = usa.1001
+	title = usa.1001.t
+	desc = usa.1001.d
+	picture = GFX_report_event_usa_election_generic
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		date > 1952.7.1
+		date < 1952.8.15
+	}
+
+	mean_time_to_happen = { days = 1 }
+	
+	option = { 
+		name = usa.1001.a
+		trigger = {
+			NOT = { has_global_flag = eisenhower_scandal }
+		}
+		ai_chance = {
+			factor = 55
+				modifier = {
+					factor = 1000
+					is_historical_focus_on = yes
+				}
+		}
+		set_global_flag = eisenhower_gop_nominee_52
+	}
+
+	option = { 
+		name = usa.1001.b
+		ai_chance = {
+			factor = 35
+		}
+		set_global_flag = taft_gop_nominee_52
+	}
+	option = { 
+		name = usa.1001.c
+		ai_chance = {
+			factor = 10
+		}
+		set_global_flag = macarthur_gop_nominee_52
+	}	
+}
+
+# Election of 1952
+country_event = {
+	id = usa.1002
+	title = usa.1002.t
+	desc = usa.1002.d
+	picture = GFX_report_event_usa_election_generic
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		date > 1952.1.1
+		date < 1953.1.1
+	}
+	
+	option = { 
+		name = usa.1002.a
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			has_global_flag = truman_dem_nominee_52
+		}
+		add_political_power = 10
+	}
+
+	option = { 
+		name = usa.1002.b
+		ai_chance = {
+			factor = 30
+		}
+		trigger = {
+			has_global_flag = stevenson_dem_nominee_52
+		}
+		retire_country_leader = yes
+		set_party_name = { ideology = American_Democratic long_name = USA_American_Democratic_party name = USA_American_Democratic_party }
+		create_country_leader = {
+			name = "Adlai Stevenson III"
+			desc = ""
+			picture = "Portrait_USA_Stevenson.dds"
+			expire = "1965.1.1"
+			ideology = democratic_america
+		}
+		set_global_flag = president_stevenson
+	}
+	
+	option = { 
+		name = usa.1002.c
+		ai_chance = {
+			factor = 35
+		}
+		trigger = {
+			has_global_flag = kefauver_dem_nominee_52
+		}
+		set_party_name = { ideology = American_Democratic long_name = USA_American_Democratic_party name = USA_American_Democratic_party }
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Estes Kefauver"
+			desc = ""
+			picture = "Portrait_USA_Kefauver.dds"
+			expire = "1965.1.1"
+			ideology = democratic_america
+		}
+		set_global_flag = president_kefauver
+	}
+	option = { 
+		name = usa.1002.d
+		trigger = {
+			has_global_flag = macarthur_gop_nominee_52
+		}
+		ai_chance = {
+			factor = 35
+		}
+		retire_country_leader = yes
+		set_politics = { ruling_party = fascism elections_allowed = yes }
+		add_popularity = { ideology = fascism popularity = 0.36 }
+		add_popularity = { ideology = American_Democratic popularity = -0.16 }
+		add_popularity = { ideology = Republicanism popularity = -0.20 }
+		set_party_name = { ideology = fascism long_name = USA_republican_party name = USA_republican_party }
+		create_country_leader = {
+			name = "Douglas MacArthur"
+			desc = "POLITICS_DOUGLAS_MACARTHUR_DESC"
+			picture = "Portrait_USA_Douglas_MacArthur.dds"
+			expire = "1965.1.1"
+			ideology = fascism_ideology
+			traits = {
+				
+			} 
+		}
+		set_global_flag = president_macarthur
+		remove_unit_leader = 57
+	}
+	option = { 
+		name = usa.1002.e
+		trigger = {
+			has_global_flag = taft_gop_nominee_52
+		}
+		ai_chance = {
+			factor = 35
+		}
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Robert Taft"
+			desc = ""
+			picture = "Portrait_USA_Taft.dds"
+			expire = "1965.1.1"
+			ideology = republican
+			traits = {
+				
+			} 
+		}
+		set_politics = { ruling_party = Republicanism elections_allowed = yes }
+		set_global_flag = president_taft
+	}
+	option = { 
+		name = usa.1002.f
+		trigger = {
+			has_global_flag = eisenhower_gop_nominee_52
+		}
+		ai_chance = {
+			factor = 35
+				modifier = {
+					factor = 1000
+					is_historical_focus_on = yes
+				}
+		}
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Dwight D. Eisenhower"
+			desc = ""
+			picture = "Portrait_USA_Eisenhower.dds"
+			expire = "1965.1.1"
+			ideology = republican
+			traits = {
+				
+			} 
+		}
+		set_politics = { ruling_party = Republicanism elections_allowed = yes }
+		set_global_flag = president_eisenhower
+	}
+}
+
+# Election of 1956: American_Democratic Nomination
+country_event = {
+	id = usa.1956
+	title = "Election of 1956: American_Democratic Nomination"
+	desc = "Election of 1956: American_Democratic Nomination"
+	picture = GFX_report_event_usa_election_generic
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		date > 1956.7.15
+		date < 1956.8.31
+	}
+
+	mean_time_to_happen = { days = 1 }
+	
+	option = { 
+		name = "Adlai Stevenson III"
+		trigger = {
+			NOT = { has_global_flag = president_kefauver }
+		}
+		ai_chance = {
+			factor = 70
+				modifier = {
+					factor = 1000
+					is_historical_focus_on = yes
+				}
+		}
+		set_global_flag = stevenson_dem_nominee_56
+	}
+
+	option = { 
+		name = "Estes Kefauver"
+		trigger = {
+			NOT = { has_global_flag = president_stevenson }
+		}
+		ai_chance = {
+			factor = 30
+		}
+		set_global_flag = kefauver_dem_nominee_56
+	}	
+	
+}
+
+
+
+# Election of 1956: Republican Nomination
+country_event = {
+	id = usa.19562
+	title = "Election of 1956: Republican Nomination"
+	desc = "Election of 1956: Republican Nomination"
+	picture = GFX_report_event_usa_election_generic
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		date > 1956.7.1
+		date < 1956.8.15
+	}
+
+	mean_time_to_happen = { days = 1 }
+	
+	option = { 
+		name = "Dwight Eisenhower"
+		trigger = {
+			NOT = { has_global_flag = president_macarthur }
+			NOT = { has_global_flag = president_taft }
+		}
+		ai_chance = {
+			factor = 55
+				modifier = {
+					factor = 1000
+					is_historical_focus_on = yes
+				}
+		}
+		set_global_flag = eisenhower_gop_nominee_56
+	}
+
+	option = { 
+		name = "Robert Taft"
+		trigger = {
+			NOT = { has_global_flag = president_macarthur }
+			NOT = { has_global_flag = president_eisenhower }
+		}
+		ai_chance = {
+			factor = 35
+		}
+
+		set_global_flag = taft_gop_nominee_56
+	}
+	option = { 
+		name = "Douglas MacArthur"
+		trigger = {
+			NOT = { has_global_flag = president_taft }
+			NOT = { has_global_flag = president_eisenhower }
+		}
+		ai_chance = {
+			factor = 10
+		}
+		set_global_flag = macarthur_gop_nominee_56
+	}	
+}
+
+# Election of 1956
+country_event = {
+	id = usa.19563
+	title = "Election of 1956"
+	desc = "The Election of 1956"
+	picture = GFX_report_event_usa_election_generic
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		date > 1956.1.1
+		date < 1957.1.1
+	}
+
+	option = { 
+		name = "Adlai Stevenson III"
+		ai_chance = {
+			factor = 30
+		}
+		trigger = {
+			has_global_flag = stevenson_dem_nominee_56
+		}
+		set_politics = { ruling_party = American_Democratic elections_allowed = yes }
+		set_party_name = { ideology = American_Democratic long_name = USA_American_Democratic_party name = USA_American_Democratic_party }
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Adlai Stevenson III"
+			picture = "Portrait_USA_Stevenson.dds"
+			expire = "1965.1.1"
+			ideology = democratic_america
+		}
+		set_global_flag = president_stevenson
+	}
+	
+	option = { 
+		name = "Estes Kefauver"
+		ai_chance = {
+			factor = 35
+		}
+		trigger = {
+			has_global_flag = kefauver_dem_nominee_56
+		}
+		set_politics = { ruling_party = American_Democratic elections_allowed = yes }
+		set_party_name = { ideology = American_Democratic long_name = USA_American_Democratic_party name = USA_American_Democratic_party }
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Estes Kefauver"
+			desc = ""
+			picture = "Portrait_USA_Kefauver.dds"
+			expire = "1965.1.1"
+			ideology = democratic_america
+		}
+		set_global_flag = president_kefauver
+	}
+	option = { 
+		name = "Douglas MacArthur"
+		trigger = {
+			has_global_flag = macarthur_gop_nominee_56
+		}
+		ai_chance = {
+			factor = 35
+		}
+		set_politics = { ruling_party = fascism elections_allowed = yes }
+		add_popularity = { ideology = fascism popularity = 0.36 }
+		add_popularity = { ideology = American_Democratic popularity = -0.16 }
+		add_popularity = { ideology = Republicanism popularity = -0.20 }
+		set_party_name = { ideology = fascism long_name = USA_republican_party name = USA_republican_party }
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Douglas MacArthur"
+			desc = "POLITICS_DOUGLAS_MACARTHUR_DESC"
+			picture = "Portrait_USA_Douglas_MacArthur.dds"
+			expire = "1965.1.1"
+			ideology = fascism_ideology
+			traits = {
+				
+			} 
+		}
+		set_global_flag = president_macarthur
+		remove_unit_leader = 57
+	}
+	option = { 
+		name = "Robert Taft"
+		trigger = {
+			has_global_flag = taft_gop_nominee_56
+		}
+		ai_chance = {
+			factor = 35
+		}
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Robert Taft"
+			desc = ""
+			picture = "Portrait_USA_Taft.dds"
+			expire = "1965.1.1"
+			ideology = republican
+			traits = {
+				
+			} 
+		}
+		set_politics = { ruling_party = Republicanism elections_allowed = yes }
+		set_global_flag = president_taft
+	}
+	option = { 
+		name = "Dwight Eisenhower"
+		trigger = {
+			has_global_flag = eisenhower_gop_nominee_56
+		}
+		ai_chance = {
+			factor = 35
+				modifier = {
+					factor = 1000
+					is_historical_focus_on = yes
+				}
+		}
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Dwight D. Eisenhower"
+			desc = ""
+			picture = "Portrait_USA_Eisenhower.dds"
+			expire = "1965.1.1"
+			ideology = republican
+			traits = {
+				
+			} 
+		}
+		set_politics = { ruling_party = Republicanism elections_allowed = yes }
+		set_global_flag = president_eisenhower
+	}
+}
+# Election of 1960: American_Democratic Nomination
+country_event = {
+	id = usa.19601
+	title = "Election of 1960: American_Democratic Nomination"
+	desc = "Election of 1960: American_Democratic Nomination"
+	picture = GFX_report_event_usa_election_generic
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		date > 1960.7.15
+		date < 1960.8.31
+	}
+
+	mean_time_to_happen = { days = 1 }
+	
+	option = { 
+		name = "John F. Kennedy"
+		trigger = {
+			NOT = { has_global_flag = president_kefauver }
+		}
+		ai_chance = {
+			factor = 70
+				modifier = {
+					factor = 1000
+					is_historical_focus_on = yes
+				}
+		}
+		set_global_flag = jfk_dem_nominee_60
+	}
+	option = { 
+		name = "Hubert Humphrey III"
+		trigger = {
+			NOT = { has_global_flag = president_stevenson }
+		}
+		ai_chance = {
+			factor = 30
+		}
+		set_global_flag = humphrey_dem_nominee_60
+	}	
+	
+}
+
+
+
+# Election of 1960: Republican Nomination
+country_event = {
+	id = usa.19602
+	title = "Election of 1960: Republican Nomination"
+	desc = "Election of 1960: Republican Nomination"
+	picture = GFX_report_event_usa_election_generic
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		date > 1960.7.1
+		date < 1960.8.15
+	}
+
+	mean_time_to_happen = { days = 1 }
+	
+	option = { 
+		name = "Richard Nixon"
+	}
+
+
+}
+
+# Election of 1960
+country_event = {
+	id = usa.19603
+	title = "Election of 1960"
+	desc = "The Election of 1960"
+	picture = GFX_report_event_usa_election_generic
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		date > 1960.1.1
+		date < 1963.1.1
+	}
+	
+	immediate = {
+		set_global_flag = us_elections_1960
+	}
+
+	option = { 
+		name = "Hubert Humphrey III"
+		ai_chance = {
+			factor = 30
+		}
+		trigger = {
+			has_global_flag = humphrey_dem_nominee_60
+		}
+		set_politics = { ruling_party = American_Democratic elections_allowed = yes }
+		set_party_name = { ideology = American_Democratic long_name = USA_American_Democratic_party name = USA_American_Democratic_party }
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Hubert Humphrey III"
+			desc = ""
+			picture = "humphrey.dds"
+			expire = "1977.1.1"
+			ideology = democratic_america
+		}
+		set_global_flag = humphrey_60
+	}
+	
+	option = { 
+		name = "John F. Kennedy"
+		ai_chance = {
+			factor = 35
+		}
+		trigger = {
+			has_global_flag = jfk_dem_nominee_60
+		}
+		retire_country_leader = yes
+		set_politics = { ruling_party = American_Democratic elections_allowed = yes }
+		set_party_name = { ideology = American_Democratic long_name = USA_American_Democratic_party name = USA_American_Democratic_party }
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "John F. Kennedy"
+			desc = ""
+			picture = "Portrait_USA_John_Kennedy.dds"
+			expire = "1965.1.1"
+			ideology = democratic_america
+		}
+		set_global_flag = jfk_60
+	}
+	option = { 
+		name = "Richard Nixon"
+		ai_chance = {
+			factor = 35
+				modifier = {
+					factor = 1000
+					is_historical_focus_on = yes
+				}
+		}
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Richard Nixon"
+			picture = "Portrait_USA_Richard_Nixon.dds"
+			expire = "1965.1.1"
+			ideology = republican
+		}
+		set_politics = { ruling_party = Republicanism elections_allowed = yes }
+		set_global_flag = nixon_60
+	}
+}
+# Election of 1964: American_Democratic Nomination
+country_event = {
+	id = usa.19641
+	title = "Election of 1964: American_Democratic Nomination"
+	desc = "Election of 1964: American_Democratic Nomination"
+	picture = GFX_report_event_usa_election_generic
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		date > 1964.7.15
+		date < 1964.8.31
+	}
+
+	mean_time_to_happen = { days = 1 }
+	
+	option = { 
+		name = "Hubert Humphrey"
+		trigger = {
+			NOT = { has_global_flag = lbj_63 }
+		}
+		set_global_flag = humphrey_dem_nominee_64
+	}
+	option = { 
+		name = "Lyndon Johnson"
+		trigger = {
+			has_global_flag = lbj_63
+		}
+		ai_chance = {
+			factor = 30
+		}
+		set_global_flag = lbj_dem_nominee_64
+	}	
+	
+}
+
+
+
+# Election of 1964: Republican Nomination
+country_event = {
+	id = usa.19642
+	title = "Election of 1964: Republican Nomination"
+	desc = "Election of 1964: Republican Nomination"
+	picture = GFX_report_event_usa_election_generic
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		date > 1964.7.1
+		date < 1964.8.15
+	}
+
+	mean_time_to_happen = { days = 1 }
+	
+	option = { 
+		name = "Barry Goldwater"
+	}
+
+
+}
+# Election of 1964
+country_event = {
+	id = usa.19643
+	title = "Election of 1964"
+	desc = "The Election of 1964"
+	picture = GFX_report_event_usa_election_generic
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		date > 1964.1.1
+		date < 1967.1.1
+	}
+	immediate = {
+		set_global_flag = us_elections_1964
+	}
+	option = { 
+		name = "Hubert Humphrey III"
+		ai_chance = {
+			factor = 30
+		}
+		trigger = {
+			has_global_flag = humphrey_dem_nominee_64
+		}
+		set_politics = { ruling_party = American_Democratic elections_allowed = yes }
+		set_party_name = { ideology = American_Democratic long_name = USA_American_Democratic_party name = USA_American_Democratic_party }
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Hubert Humphrey III"
+			desc = ""
+			picture = "humphrey.dds"
+			expire = "1977.1.1"
+			ideology = democratic_america
+		}
+		set_global_flag = humphrey_64
+	}
+	
+	option = { 
+		name = "Lyndon Johnson"
+		ai_chance = {
+			factor = 35
+		}
+		trigger = {
+			has_global_flag = lbj_dem_nominee_64
+		}
+		set_politics = { ruling_party = American_Democratic elections_allowed = yes }
+		set_party_name = { ideology = American_Democratic long_name = USA_American_Democratic_party name = USA_American_Democratic_party }
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Lyndon Johnson"
+			desc = ""
+			picture = "Portrait_USA_Lyndon_Johnson.dds"
+			expire = "1980.1.1"
+			ideology = democratic_america
+		}
+		set_global_flag = lbj_64
+	}
+	option = { 
+		name = "Barry Goldwater"
+		ai_chance = {
+			factor = 35
+				modifier = {
+					factor = 0
+					is_historical_focus_on = yes
+				}
+		}
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Barry Goldwater"
+			picture = "Goldwater.dds"
+			expire = "1990.1.1"
+			ideology = republican
+		}
+		set_politics = { ruling_party = Republicanism elections_allowed = yes }
+		set_global_flag = goldwater_1964
+	}
+}
+
+# Election of 1968: American_Democratic Nomination
+country_event = {
+	id = usa.19681
+	title = "Election of 1968: American_Democratic Nomination"
+	desc = "Election of 1968: American_Democratic Nomination"
+	picture = GFX_report_event_usa_election_generic
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		date > 1968.7.15
+		date < 1968.8.31
+	}
+
+	mean_time_to_happen = { days = 1 }
+	
+	option = { 
+		name = "Hubert Humphrey"
+		trigger = {
+			NOT = { has_global_flag = humphrey_60}
+			OR = {
+				has_global_flag = lbj_63
+				has_global_flag = humphrey_64
+			}
+		}
+		set_global_flag = humphrey_dem_nominee_68
+	}
+	option = { 
+		name = "Robert F. Kennedy"
+		ai_chance = {
+			factor = 30
+		}
+		set_global_flag = rfk_dem_nominee_68
+	}	
+	option = { 
+		name = "Lyndon Johnson"
+		trigger = {
+			has_global_flag = lbj_64
+		}
+		ai_chance = {
+			factor = 30
+		}
+		set_global_flag = lbj_dem_nominee_68
+	}	
+	
+}
+
+
+
+# Election of 1968: Republican Nomination
+country_event = {
+	id = usa.19682
+	title = "Election of 1968: Republican Nomination"
+	desc = "Election of 1968: Republican Nomination"
+	picture = GFX_report_event_usa_election_generic
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		date > 1968.7.1
+		date < 1968.8.15
+	}
+
+	mean_time_to_happen = { days = 1 }
+	
+	option = { 
+		name = "Barry Goldwater"
+		trigger = {
+			has_global_flag = goldwater_1964
+		}
+		ai_chance = {
+			factor = 30
+		}
+		set_global_flag = goldwater_nominee_1968
+	}	
+	option = { 
+		name = "Richard Nixon"
+		trigger = {
+			NOT = { has_global_flag = nixon_60 }
+		}
+		ai_chance = {
+			factor = 35
+				modifier = {
+					factor = 1000
+					is_historical_focus_on = yes
+				}
+		}
+		set_global_flag = nixon_nominee_1968
+	}	
+	option = { 
+		name = "Ronald Reagen"
+		trigger = {
+			NOT = { has_global_flag = goldwater_1964 }
+		}
+		ai_chance = {
+			factor = 35
+				modifier = {
+					factor = 1000
+					is_historical_focus_on = yes
+				}
+		}
+		set_global_flag = reagen_nominee_1968
+	}	
+}
+# Election of 1968
+country_event = {
+	id = usa.19683
+	title = "Election of 1968"
+	desc = "The Election of 1968"
+	picture = GFX_report_event_usa_election_generic
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		date > 1968.1.1
+		date < 1973.1.1
+	}
+	immediate = {
+		set_global_flag = us_elections_1968
+	}
+	option = { 
+		name = "Lyndon Johnson"
+		ai_chance = {
+			factor = 100
+		}
+		trigger = {
+			has_global_flag = lbj_dem_nominee_68
+		}
+		set_politics = { ruling_party = American_Democratic elections_allowed = yes }
+		set_party_name = { ideology = American_Democratic long_name = USA_American_Democratic_party name = USA_American_Democratic_party }
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Lyndon Johnson"
+			desc = ""
+			picture = "Portrait_USA_Lyndon_Johnson.dds"
+			expire = "1980.1.1"
+			ideology = democratic_america
+		}
+		set_global_flag = lbj_68
+	}
+	option = { 
+		name = "Hubert Humphrey III"
+		ai_chance = {
+			factor = 30
+		}
+		trigger = {
+			has_global_flag = humphrey_dem_nominee_68
+		}
+		set_politics = { ruling_party = American_Democratic elections_allowed = yes }
+		set_party_name = { ideology = American_Democratic long_name = USA_American_Democratic_party name = USA_American_Democratic_party }
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Hubert Humphrey III"
+			desc = ""
+			picture = "humphrey.dds"
+			expire = "1977.1.1"
+			ideology = democratic_america
+		}
+		set_global_flag = humphrey_68
+	}
+	
+	option = { 
+		name = "Robert F. Kennedy"
+		ai_chance = {
+			factor = 35
+		}
+		trigger = {
+			has_global_flag = rfk_dem_nominee_68
+		}
+		set_politics = { ruling_party = American_Democratic elections_allowed = yes }
+		set_party_name = { ideology = American_Democratic long_name = USA_American_Democratic_party name = USA_American_Democratic_party }
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Robert F. Kennedy"
+			desc = ""
+			picture = "rfk.dds"
+			expire = "2010.1.1"
+			ideology = democratic_america
+		}
+		set_global_flag = rfk_64
+	}
+	option = { 
+		name = "Barry Goldwater"
+		ai_chance = {
+			factor = 35
+				modifier = {
+					factor = 0
+					is_historical_focus_on = yes
+				}
+		}
+		trigger = {
+			has_global_flag = goldwater_nominee_1968
+		}
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Barry Goldwater"
+			picture = "Goldwater.dds"
+			expire = "1990.1.1"
+			ideology = republican
+		}
+		set_politics = { ruling_party = Republicanism elections_allowed = yes }
+		set_global_flag = goldwater_1968
+	}
+	option = { 
+		name = "Richard Nixon"
+		ai_chance = {
+			factor = 35
+				modifier = {
+					factor = 1000
+					is_historical_focus_on = yes
+				}
+		}
+		trigger = {
+			has_global_flag = nixon_nominee_1968
+		}
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Richard Nixon"
+			picture = "Portrait_USA_Nixon.dds"
+			expire = "1990.1.1"
+			ideology = republican
+		}
+		set_politics = { ruling_party = Republicanism elections_allowed = yes }
+		set_global_flag = nixon_68
+	}
+	option = { 
+		name = "Ronald Reagen"
+		trigger = {
+			has_global_flag = reagen_nominee_1968
+		}
+		ai_chance = {
+			factor = 35
+				modifier = {
+					factor = 1000
+					is_historical_focus_on = yes
+				}
+		}
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Ronald Reagan"
+			picture = "Portrait_USA_Reagan.dds"
+			expire = "1990.1.1"
+			ideology = republican
+		}
+		set_politics = { ruling_party = Republicanism elections_allowed = yes }
+		set_global_flag = reagen_68
+	}	
+	
+	option = { 
+		name = "George Wallace"
+		ai_chance = {
+			factor = 35
+				modifier = {
+					factor = 1000
+					is_historical_focus_on = yes
+				}
+		}
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "George Wallace"
+			picture = "Portrait_USA_Wallace.dds"
+			expire = "1990.1.1"
+			ideology = fascism_ideology
+		}
+		set_politics = { ruling_party = fascism elections_allowed = yes }
+		set_global_flag = wallace_68
+	}
+}
+# Election of 1972: American_Democratic Nomination
+country_event = {
+	id = usa.19721
+	title = "Election of 1972: American_Democratic Nomination"
+	desc = "Election of 1972: American_Democratic Nomination"
+	picture = GFX_report_event_usa_election_generic
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		date > 1972.7.15
+		date < 1972.8.31
+	}
+
+	mean_time_to_happen = { days = 1 }
+	
+	option = { 
+		name = "Hubert Humphrey"
+		trigger = {
+			has_global_flag = humphrey_68
+			NOT = {
+				has_global_flag = humphrey_64
+			}
+		}
+		set_global_flag = humphrey_dem_nominee_72
+	}
+	option = { 
+		name = "Robert F. Kennedy"
+		trigger = {
+			has_global_flag = rfk_68
+		}
+		ai_chance = {
+			factor = 30
+		}
+		set_global_flag = rfk_dem_nominee_72
+	}	
+	option = { 
+		name = "George McGovern"
+		trigger = {
+			NOT = { has_global_flag = rfk_68 }
+		}
+		ai_chance = {
+			factor = 30
+		}
+		set_global_flag = mcgovern_dem_nominee_72
+	}	
+	option = { 
+		name = "George Wallace"
+		trigger = {
+			NOT = { has_global_flag = wallace_68 }
+		}
+		ai_chance = {
+			factor = 30
+		}
+		set_global_flag = wallace_dem_nominee_72
+	}		
+}
+
+
+
+# Election of 1972: Republican Nomination
+country_event = {
+	id = usa.19722
+	title = "Election of 1972: Republican Nomination"
+	desc = "Election of 1972: Republican Nomination"
+	picture = GFX_report_event_usa_election_generic
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		date > 1972.7.1
+		date < 1972.8.15
+	}
+
+	mean_time_to_happen = { days = 1 }
+	
+	option = { 
+		name = "Richard Nixon"
+		trigger = {
+			has_global_flag = nixon_68
+		}
+		ai_chance = {
+			factor = 35
+				modifier = {
+					factor = 1000
+					is_historical_focus_on = yes
+				}
+		}
+		set_global_flag = nixon_nominee_1972
+	}	
+	option = { 
+		name = "Ronald Reagen"
+		trigger = {
+			NOT = { has_global_flag = nixon_1968 }
+		}
+		ai_chance = {
+			factor = 35
+				modifier = {
+					factor = 1000
+					is_historical_focus_on = yes
+				}
+		}
+		set_global_flag = reagen_nominee_1972
+	}	
+}
+# Election of 1972
+country_event = {
+	id = usa.19723
+	title = "Election of 1972"
+	desc = "The Election of 1972"
+	picture = GFX_report_event_usa_election_generic
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		date > 1972.1.1
+		date < 1977.1.1
+	}
+	immediate = {
+		set_global_flag = us_elections_1960
+	}
+	option = { 
+		name = "Hubert Humphrey III"
+		ai_chance = {
+			factor = 30
+		}
+		trigger = {
+			has_global_flag = humphrey_dem_nominee_68
+		}
+		set_party_name = { ideology = American_Democratic long_name = USA_American_Democratic_party name = USA_American_Democratic_party }
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Hubert Humphrey III"
+			desc = ""
+			picture = "humphrey.dds"
+			expire = "1977.1.1"
+			ideology = democratic_america
+		}
+		set_politics = { ruling_party = American_Democratic elections_allowed = yes }
+		set_global_flag = humphrey_72
+	}
+	
+	option = { 
+		name = "Robert F. Kennedy"
+		ai_chance = {
+			factor = 35
+		}
+		trigger = {
+			has_global_flag = rfk_dem_nominee_72
+		}
+		set_politics = { ruling_party = American_Democratic elections_allowed = yes }
+		set_party_name = { ideology = American_Democratic long_name = USA_American_Democratic_party name = USA_American_Democratic_party }
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Robert F. Kennedy"
+			desc = ""
+			picture = "rfk.dds"
+			expire = "2010.1.1"
+			ideology = democratic_america
+		}
+		set_global_flag = rfk_72
+	}
+
+	option = { 
+		name = "Richard Nixon"
+		ai_chance = {
+			factor = 35
+				modifier = {
+					factor = 1000
+					is_historical_focus_on = yes
+				}
+		}
+		trigger = {
+			has_global_flag = nixon_nominee_1972
+		}
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Richard Nixon"
+			picture = "Portrait_USA_Richard_Nixon.dds"
+			expire = "1990.1.1"
+			ideology = republican
+		}
+		set_politics = { ruling_party = Republicanism elections_allowed = yes }
+		set_global_flag = nixon_72
+	}
+	option = { 
+		name = "Ronald Reagen"
+		trigger = {
+			has_global_flag = reagen_nominee_1972
+		}
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Ronald Reagan"
+			picture = "Portrait_USA_Reagan.dds"
+			expire = "1990.1.1"
+			ideology = republican
+		}
+		set_politics = { ruling_party = Republicanism elections_allowed = yes }
+		set_global_flag = reagen_72
+	}	
+	
+	option = { 
+		name = "George Wallace"
+		ai_chance = {
+			factor = 35
+				modifier = {
+					factor = 0
+					is_historical_focus_on = yes
+				}
+		}
+		trigger = {
+			has_global_flag = wallace_68
+		}
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "George Wallace"
+			picture = "Portrait_USA_Wallace.dds"
+			expire = "1990.1.1"
+			ideology = fascism_ideology
+		}
+		set_politics = { ruling_party = fascism elections_allowed = yes }
+		set_global_flag = wallace_72
+	}
+	option = { 
+		name = "George Wallace"
+		ai_chance = {
+			factor = 35
+				modifier = {
+					factor = 0
+					is_historical_focus_on = yes
+				}
+		}
+		trigger = {
+			has_global_flag = wallace_dem_nominee_72
+		}
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "George Wallace"
+			picture = "Portrait_USA_Wallace.dds"
+			expire = "1990.1.1"
+			ideology = democratic_america
+		}
+		set_politics = { ruling_party = American_Democratic elections_allowed = yes }
+		set_global_flag = wallace_72
+	}
+	option = { 
+		name = "George McGovern"
+		ai_chance = {
+			factor = 35
+				modifier = {
+					factor = 0
+					is_historical_focus_on = yes
+				}
+		}
+		trigger = {
+			has_global_flag = mcgovern_dem_nominee_72
+		}
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "George McGovern"
+			picture = "Portrait_USA_McGovern.dds"
+			expire = "1990.1.1"
+			ideology = democratic_america
+		}
+		set_politics = { ruling_party = American_Democratic elections_allowed = yes }
+		set_global_flag = mcgovern_72
+	}
+}
+
+
+
+
+
+####################################################################################################################""
+#  Domestic civil_rights Events ####
+###########################
+
+add_namespace = civil_rights
+
+
+news_event = {
+	id = civil_rights.2
+	title = civil_rights.2.t
+	desc = civil_rights.2.d
+	picture = GFX_news_event_civil_rights
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "A Troubling Situation"
+		trigger = {
+			has_idea = nato_member
+		}
+		add_national_unity = -0.02	
+	}
+
+	option = {
+		name = "The fate of all minorties under Imperialist rule"
+		trigger = {
+			OR = {
+				tag = SOV
+				is_in_faction_with = SOV	
+			}
+			
+		}
+		add_national_unity = 0.02	
+	}
+	option = {
+		name = "A Concerning Development"
+		trigger = {
+			NOT = {
+				tag = SOV
+				is_in_faction_with = SOV	
+				has_idea = nato_member
+			}
+		}
+	}
+}
+news_event = {
+	id = civil_rights.3
+	title = civil_rights.3.t
+	desc = civil_rights.3.d
+	picture = GFX_news_event_civil_rights
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "A Troubling Situation"
+		trigger = {
+			has_idea = nato_member
+		}
+		add_national_unity = -0.02	
+	}
+
+	option = {
+		name = "The fate of all minorties under Imperialist rule"
+		trigger = {
+			OR = {
+				tag = SOV
+				is_in_faction_with = SOV	
+			}
+			
+		}
+		add_national_unity = 0.02	
+	}
+	option = {
+		name = "A Concerning Development"
+		trigger = {
+			NOT = {
+				tag = SOV
+				is_in_faction_with = SOV	
+				has_idea = nato_member
+			}
+		}
+	}
+}
+news_event = {
+	id = civil_rights.4
+	title = civil_rights.4.t
+	desc = civil_rights.4.d
+	picture = GFX_news_event_civil_rights
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "A Troubling Situation"
+		trigger = {
+			has_idea = nato_member
+			NOT = { tag = USA }
+		}
+		add_national_unity = -0.02	
+	}
+	option = {
+		name = "And the Second American Civil War is upon us....."
+		trigger = {
+			tag = USA 
+		}
+		add_national_unity = -0.15
+		start_civil_war = {
+			ideology = fascism
+			size = 0.3
+			states = { 371 370 367 365 364 372 368 }
+		}
+	}
+	option = {
+		name = "The Twilight of the American Empire?"
+		trigger = {
+			OR = {
+				tag = SOV
+				is_in_faction_with = SOV	
+			}
+			
+		}
+		add_national_unity = 0.02	
+	}
+	option = {
+		name = "A Concerning Development"
+		trigger = {
+			NOT = {
+				tag = SOV
+				is_in_faction_with = SOV	
+				has_idea = nato_member
+			}
+		}
+	}
+}
+news_event = {
+	id = civil_rights.5
+	title = civil_rights.5.t
+	desc = civil_rights.5.d
+	picture = GFX_news_event_civil_rights
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "A Troubling Situation"
+		trigger = {
+			has_idea = nato_member
+		}
+		add_national_unity = -0.02	
+	}
+
+	option = {
+		name = "The fate of all minorties under Imperialist rule"
+		trigger = {
+			OR = {
+				tag = SOV
+				is_in_faction_with = SOV	
+			}
+			
+		}
+		add_national_unity = 0.02	
+	}
+	option = {
+		name = "A Concerning Development"
+		trigger = {
+			NOT = {
+				tag = SOV
+				is_in_faction_with = SOV	
+				has_idea = nato_member
+			}
+		}
+	}
+}
+news_event = {
+	id = civil_rights.6
+	title = civil_rights.6.t
+	desc = civil_rights.6.d
+	picture = GFX_news_event_civil_rights
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "An inspiring speech"
+		trigger = {
+			has_idea = nato_member
+		}
+		add_national_unity = 0.02	
+	}
+
+	option = {
+		name = "How can we exploit this?"
+		trigger = {
+			OR = {
+				tag = SOV
+				is_in_faction_with = SOV	
+			}
+		}
+	}
+	option = {
+		name = "An inspiring speech"
+		trigger = {
+			NOT = {
+				tag = SOV
+				is_in_faction_with = SOV	
+				has_idea = nato_member
+			}
+		}
+	}
+}
+news_event = {
+	id = civil_rights.7
+	title = civil_rights.7.t
+	desc = civil_rights.7.d
+	picture = GFX_news_event_civil_rights
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "A Troubling Situation"
+		trigger = {
+			has_idea = nato_member
+		}
+		add_national_unity = -0.02	
+	}
+
+	option = {
+		name = "The fate of all minorties under Imperialist rule"
+		trigger = {
+			OR = {
+				tag = SOV
+				is_in_faction_with = SOV	
+			}
+			
+		}
+		add_national_unity = 0.02	
+	}
+	option = {
+		name = "A Concerning Development"
+		trigger = {
+			NOT = {
+				tag = SOV
+				is_in_faction_with = SOV	
+				has_idea = nato_member
+			}
+		}
+	}
+}
+
+
+
+
+
+
+################################################################################################################
+#  Domestic CIA Events ####
+###########################
+
+add_namespace = cia
+
+
+news_event = {
+	id = cia.20
+	title = cia.20.t
+	desc = cia.20.d
+	picture = GFX_news_event_cia
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "Good Riddance"
+		trigger = {
+			has_idea = nato_member
+		}
+		add_national_unity = -0.02	
+	}
+
+	option = {
+		name = "Not suprising for the Fascist Capitalists"
+		trigger = {
+			OR = {
+				tag = SOV
+				is_in_faction_with = SOV	
+			}
+			
+		}
+		add_national_unity = 0.02	
+	}
+	option = {
+		name = "A Concerning Development"
+		trigger = {
+			NOT = {
+				tag = SOV
+				is_in_faction_with = SOV	
+				has_idea = nato_member
+			}
+		}
+	}
+}
+
+
+
+
+
+############################################################################################
+# Truman Assasination
+##########################
+
+add_namespace = swf
+# Truman Assasination Attempt Trigger
+country_event = {
+	id = swf.1
+	hidden = yes
+
+	trigger = {
+		tag = USA
+		date > 1950.10.31
+		date < 1950.11.5
+		NOT = { has_global_flag = truman_assasination_attempt }
+		NOT = { has_global_flag = truman_assasinated }
+		has_capitulated = no
+	}
+
+	mean_time_to_happen = { days = 1 }
+	fire_only_once = yes
+
+
+	immediate = {
+		random_list = { 
+			80 = { news_event = { hours = 6 id = swf.2 } } 
+			20 = { news_event = { hours = 6 id = swf.3 } } 
+		}	
+	}
+}
+news_event = {
+	id = swf.2
+	title = "Attempted Assassination on President Truman!"
+	desc = swf.2.d
+	picture = GFX_news_event_truman_assasination_attempt
+
+	fire_only_once = yes
+	
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Thank God for Truman being fine."
+		trigger = { TAG = USA }
+	}
+	
+	option = {
+		name = "A close call for our 'friend'."
+		trigger = { TAG = SOV }
+	}
+	
+	option = {
+		name = "Thank God for Truman being alive."
+		trigger = { 
+			NOT = { TAG = SOV }
+			NOT = { TAG = USA }
+		}
+	}	
+}
+news_event = {
+	id = swf.3
+	title = "President Truman Assassinated!"
+	desc = swf.3.d
+	picture = GFX_news_event_truman_death
+
+	fire_only_once = yes
+	
+	major = yes
+
+	is_triggered_only = yes
+
+#	immediate = {
+#
+#	}
+	option = {
+		name = "President Truman will be missed. President Barkley will lead us now."
+		trigger = { TAG = USA }
+		set_country_flag = truman_assasinated
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Alben W. Barkley"
+			desc = ""
+			picture = "gfx/leaders/USA/Portrait_USA_Barkley.dds"
+			expire = "1960.1.1"
+			ideology = liberalism
+		}
+	}
+	
+	option = {
+		name = "How will this change for us?"
+		trigger = { TAG = SOV }
+	}
+	
+	option = {
+		name = "President Truman will be missed. What will happen now?"
+		trigger = { 
+			NOT = { TAG = SOV }
+			NOT = { TAG = USA }
+		}
+	}	
+}
+
+
+
+
+
+
+
+
+################################################################################################################
+# Bay of Pigs Events ######
+###########################
+
+add_namespace = bay_of_pigs
+
+
+country_event = {
+	id = bay_of_pigs.1
+	title = bay_of_pigs.1.t
+	desc = bay_of_pigs.1.d
+	picture = GFX_report_event_bay_of_pigs
+	
+	is_triggered_only = yes
+
+	option = {
+		name = bay_of_pigs.1.a
+			random_list = { 
+				50 = { 
+					news_event = bay_of_pigs.3
+					set_global_flag = bay_of_pigs_disaster
+				} 
+				50 = { 
+					news_event = bay_of_pigs.4 
+					set_politics = { ruling_party = democratic elections_allowed = yes } 
+					set_global_flag = bay_of_pigs_successful 
+					start_civil_war = { ideology = communism size = 0.35 }	
+				} 
+			}	
+		
+	
+		
+	}
+}
+news_event = {
+	id = bay_of_pigs.3
+	title = bay_of_pigs.3.t
+	desc = bay_of_pigs.3.d
+	picture = GFX_news_event_bay_of_pigs
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "Well that was catastrophic"
+		trigger = {
+			has_idea = nato_member
+		}
+		add_national_unity = -0.02	
+	}
+
+	option = {
+		name = "A Victory for Communism against the Capitalist Swine!"
+		trigger = {
+			OR = {
+				tag = SOV
+				tag = CUB
+				is_in_faction_with = SOV	
+			}
+			
+		}
+		add_national_unity = 0.02	
+	}
+	option = {
+		name = "What is going on in Cuba?"
+		trigger = {
+			NOT = {
+				tag = SOV
+				tag = CUB
+				is_in_faction_with = SOV	
+				has_idea = nato_member
+			}
+		}
+	}
+}
+news_event = {
+	id = bay_of_pigs.4 
+	title = bay_of_pigs.4.t
+	desc = bay_of_pigs.4.d
+	picture = GFX_news_event_bay_of_pigs
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "A Victory For Freedom"
+		trigger = {
+			OR = {
+				has_idea = nato_member
+				tag = CUB
+			}
+		}
+		add_national_unity = 0.02	
+	}
+
+	option = {
+		name = "The Capitalists Show Their Fascist Colors"
+		trigger = {
+			OR = {
+				tag = SOV
+				is_in_faction_with = SOV	
+			}
+			
+		}
+		add_national_unity = -0.02	
+	}
+	option = {
+		name = "What is going on in Cuba?"
+		trigger = {
+			NOT = {
+				tag = SOV
+				is_in_faction_with = SOV	
+				has_idea = nato_member
+			}
+		}
+	}
+}
+
+
+
+
+
+
+###########################
+# Gulf of Tonkin Incident
+###########################
+
+add_namespace = tonkin
+
+
+news_event = {
+	id = tonkin.1
+	title = tonkin.1.t
+	desc = tonkin.1.d
+	picture = GFX_news_event_tonkin
+
+	major = yes
+	trigger = {
+		tag = USA
+		date > 1964.8.1
+		date < 1970.6.10
+	}	
+
+	mean_time_to_happen = {
+		days = 15
+	}
+
+	option = {
+		name = "Time for War?"
+		trigger = {
+			has_idea = nato_member
+		}
+		set_global_flag = gulf_of_tonkin
+	}
+
+	option = {
+		name = "What Happens Now?"
+		trigger = {
+			OR = {
+				tag = SOV
+				is_in_faction_with = SOV	
+				tag = VIN
+			}
+		}
+	}
+	option = {
+		name = "Well that escalated quickly"
+		trigger = {
+			NOT = {
+				tag = SOV
+				is_in_faction_with = SOV	
+				has_idea = nato_member
+			}
+		}
+	}
+}
+
+###########################
+# Taft Event Chain
+###########################
+add_namespace = taft
+
+country_event = {
+	id = taft.1
+	title = taft.1.t
+	desc = taft.1.d
+	picture = GFX_event_taft_presi
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = taft.1.a
+		remove_from_faction = USA
+		USA = { news_event = taft.2 }
+	}
+	
+	option = {
+		name = taft.1.b
+	}
+}
+
+news_event = {
+	id = taft.2
+	title = taft.2.t
+	desc = taft.2.d
+	picture = news_event_FIN_cancel_yya
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = taft.2.a
+	}
+}
+
+country_event = {
+	id = taft.3
+	title = taft.3.t
+	desc = taft.3.d
+	picture = GFX_event_taft_presi
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = taft.3.a
+	}
+	
+	option = {
+		name = taft.3.b
+		remove_from_faction = FROM
+	}
+}

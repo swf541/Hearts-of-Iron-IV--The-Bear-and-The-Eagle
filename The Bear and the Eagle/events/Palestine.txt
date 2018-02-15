@@ -1,0 +1,142 @@
+﻿add_namespace = PAL
+country_event = {
+	id = PAL.2
+	title = "Palestine Proposed a Israeli-Palestinian Union"
+	desc = "Palestine Proposed a Israeli-Palestinian Union"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Agree to the Demands"
+		PAL = {
+			create_faction = "Israeli-Palestinian Union"	
+			add_to_faction = ISR
+		}
+		ai_chance = {
+			factor = 80
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 20
+		}
+		name = "Decline"
+
+	}
+}
+country_event = {
+	id = PAL.3
+	title = "Palestine Demands the West Bank"
+	desc = "Iraq Requests the Annexation of Kuwait"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Agree to the Demands"
+		PAL = {
+			transfer_state = 332
+			transfer_state = 781
+		}
+		ai_chance = {
+			factor = 80
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 20
+		}
+		name = "Decline"
+
+	}
+}
+country_event = {
+	id = PAL.4
+	title = "Palestine Demands the West Bank"
+	desc = "Iraq Requests the Annexation of Kuwait"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Agree to the Demands"
+		PAL = {
+			transfer_state = 453
+			transfer_state = 805
+		}
+		ai_chance = {
+			factor = 80
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 20
+		}
+		name = "Decline"
+
+	}
+}
+country_event = {
+	id = PAL.1
+	title = "Palestine Wants to Unite With Us"
+	desc = "Palestine Wants to Unite With Us"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Agree to the Proposal"
+		FROM = {
+			set_cosmetic_tag = ARF_IRQ
+			annex_country = { target = JOR } 
+			annex_country = { target = PAL } 
+			set_politics = {
+
+				parties = {
+					democratic = { 
+						popularity = 20
+					}
+
+					fascism = {
+						popularity = 10
+					}
+					
+					communism = {
+						popularity = 5
+						#banned = no #default is no
+					}
+					
+					neutrality = { 
+						popularity = 40
+					}
+					pan_arabism = {
+						popularity = 25
+					}
+				}
+				
+				ruling_party = monarchism
+				last_election = "1949.1.1"
+				election_frequency = 48
+				elections_allowed = yes
+			}
+					create_country_leader = {
+							name = "Hussein bin Talal"
+							picture = "Talal.dds"
+							expire = "1999.1.1"
+							ideology = royal_democrat
+						}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "Decline"
+
+	}
+}
+			

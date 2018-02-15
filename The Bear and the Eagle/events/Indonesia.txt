@@ -1,0 +1,153 @@
+﻿#####################
+# Malaysia Events
+#####################
+
+add_namespace = INO
+
+country_event = {
+	id = INO.201
+	title = "Indonesia Demands Brunei"
+	desc = "Indonesia Demands Brunei"
+	picture = GFX_report_event_german_troops
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Agree to the Demands"
+		ai_chance = {
+			factor = 80
+		}
+		INO = { annex_country = { target = BRU } }
+	}
+
+	option = {
+		name = "Reject the Demands"
+		ai_chance = {
+			factor = 20
+		}
+		INO = {
+			create_wargoal = { 
+				type = annex_everything 
+				target = BRU
+			}
+		}
+	}	
+}
+country_event = {
+	id = INO.202
+	title = "Indonesia Demands East Timor"
+	desc = "Indonesia Demands East Timor"
+	picture = GFX_report_event_german_troops
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Agree to the Demands"
+		ai_chance = {
+			factor = 80
+		}	
+		INO = { annex_country = { target = MAL } }
+	}
+	option = {
+		name = "Reject the Demands"
+		ai_chance = {
+			factor = 20
+		}
+		INO = {
+			create_wargoal = { 
+				type = annex_everything 
+				target = MAL
+			}
+		}
+	}	
+}
+country_event = {
+	id = INO.205
+	title = "Indonesia Requests Unification with Malaysia"
+	desc = "Indonesia Requests Unification with Malaysia"
+	picture = GFX_report_event_german_troops
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Agree to the Demands"
+		ai_chance = {
+			factor = 80
+		}	
+		INO = { annex_country = { target = MAL } }
+	}
+	option = {
+		name = "Reject the Demands"
+		ai_chance = {
+			factor = 20
+		}
+		INO = {
+			create_wargoal = { 
+				type = annex_everything 
+				target = MAL
+			}
+		}
+	}	
+}
+
+# Hidden Trigger, end of civil war
+country_event = {
+	id = INO.1
+	hidden = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		INS = {
+			exists = yes
+			has_war_with = INO
+			surrender_progress > 0.60
+		}
+	}
+
+	fire_only_once = yes
+
+	immediate = {
+		INS = { white_peace = INO }
+		INO = { annex_country = { target = INS } }
+		INO = { set_capital = 1413 }
+		HOL = { white_peace = INO }
+		PON = { white_peace = INO }
+		GDA = { white_peace = INO }
+		PAS = { white_peace = INO }
+	}
+
+	mean_time_to_happen = { days = 7 }
+
+	option = {}
+}
+#INS End of Civil War
+country_event = {
+	id = INO.2
+	hidden = yes
+
+
+	trigger = {
+		INO = {
+			exists = yes
+			has_war_with = INS
+			surrender_progress > 0.75
+		}
+	}
+
+	fire_only_once = yes
+
+	immediate = {
+		INS = { white_peace = INO }
+		INO = { annex_country = { target = INS } }
+		INO = { set_capital = 1413 }
+		HOL = { white_peace = INO }
+		PON = { white_peace = INO }
+		GDA = { white_peace = INO }
+		PAS = { white_peace = INO }
+	}
+
+	mean_time_to_happen = { days = 7 }
+
+	option = {}
+}

@@ -1,0 +1,51 @@
+﻿add_namespace = swfs
+country_event = {
+	id = swfs.3
+	title = "Romania Demands The Return of Moldavia"
+	desc = "Romania Demands The Return of Moldavia"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Agree to the Demands"
+		ROM = { transfer_state = 78 } 
+                                UKR = { transfer_state = 949 } 
+		ai_chance = {
+			factor = 80
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 20
+		}
+		name = "Decline"
+
+	}
+}
+country_event = {
+	id = swfs.4
+	title = "Romania Demands The Return of Carpathia"
+	desc = "Romania Demands The Return of Carpathia"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Agree to the Demands"
+		ROM = { transfer_state = 80 } 
+                                ROM = { transfer_state = 991 } 
+		80 = { add_core_of = ROM }
+                                991 = { add_core_of = ROM }
+		ai_chance = {
+			factor = 80
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 20
+		}
+		name = "Decline"
+
+	}
+}

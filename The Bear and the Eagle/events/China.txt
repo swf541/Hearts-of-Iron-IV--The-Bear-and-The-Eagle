@@ -1,0 +1,130 @@
+﻿##########################
+# Chinese Events
+##########################
+
+add_namespace = chi
+
+# UN recognition of PRC
+country_event = {
+	id = chi.1
+	title = chi.1.t
+	desc = chi.1.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = chi.1.a
+		set_global_flag = chi_yes_prc_un_recognition
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 15
+		}
+		name = chi.1.b
+		set_global_flag = chi_no_prc_un_recognition
+	}
+}
+
+# Removes Civil War ideas
+country_event = {
+	id = chi.2
+	hidden = yes
+
+	is_triggered_only = yes
+
+	option = {}
+
+	immediate = {
+		remove_ideas = {
+			CHI_communist_uprisings
+			CHI_disorganized_military
+		}
+		PRC = {
+			remove_ideas = {
+				PRC_peoples_army
+			}
+		}
+	}
+}
+
+country_event = {
+	id = chi.3
+	title = "The ROC Demands Mongolia"
+	desc = "The Republic of China is formally Demanding that Mongolia be puppeted by China"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Agree to the Demands"
+		CHI = { puppet = MON }
+		ai_chance = {
+			factor = 50
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 50
+		}
+		name = "Never"
+		CHI = {
+			create_wargoal = {
+				type = puppet
+				target = MON
+			}
+		}
+	}
+}
+news_event = {
+	id = chi.4
+	title = "Execution of Mao"
+	desc = "After the Chinese Civil War concluded, many former PRC Officials were interned by the government and put on trial. Earlier today, Mao Zedong was executed by firing squad"
+	picture = GFX_roc_army
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Death to the Communists"
+		trigger = { TAG = CHI  }
+	}
+	
+	option = {
+		name = "An Intersting Development"
+		trigger = { NOT = {  TAG = CHI } }
+	}
+	
+}
+country_event = {
+	id = chi.5
+	title = "The Second Taiwanese Straits Crisis"
+	desc = "A artillery skrimish between ourselves and the PRC has occured leaving thousands dead on both sides, what shall we do?"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "De-Esclaate the Situation"
+		puppet = CHI
+		ai_chance = {
+			factor = 75
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 25
+		}
+		name = "Escalate the Situation"
+		CHI = {
+			create_wargoal = {
+				type = annex_everything
+				target = PRC
+			}
+		}
+	}
+}

@@ -1,0 +1,125 @@
+#Independence of
+
+#Independence of Uganda
+country_event = {
+  id = eng.5
+	title = eng.5.t
+	desc = eng.5.d
+
+	fire_only_once = yes
+
+	trigger = {
+	  date > 1962.10.8
+		date < 1962.8.10
+	}
+
+	option = {
+	  ai_chance = {
+		  factor = 90
+		}
+		name = eng.5.a
+		release = UGA
+		USA = { remove_from_faction = UGA }
+	}
+
+	option = {
+	  ai_chance = {
+		  factor = 10
+		}
+		name = eng.5.b
+		add_political_power = -125
+	}
+}
+
+	#Independence of Nigeria
+	country_event = {
+	  id = eng.6
+		title = eng.6.t
+		desc = eng.6.d
+
+		fire_only_once = yes
+
+		trigger = {
+		  date > 1961.5.31
+			date < 1961.6.1
+		}
+
+		option = {
+		  ai_chance = {
+			  factor = 90
+			}
+			name = eng.6.a
+			release = NIA
+			USA = { remove_from_faction = NIA }
+		}
+
+		option = {
+		  ai_chance = {
+			  factor = 10
+			}
+			name = eng.6.b
+			add_political_power = -125
+		}
+  }
+
+	#Independence of Kenya
+	country_event = {
+	  id = eng.7
+		title = eng.7.t
+		desc = eng.7.d
+
+		fire_only_once = yes
+
+		trigger = {
+		  date > 1963.12.11
+			date < 1963.12.13
+		}
+
+		option = {
+		  ai_chance = {
+			  factor = 90
+			}
+			name = eng.7.a
+			release = KEN
+			USA = { remove_from_faction = KEN }
+		}
+
+		option = {
+		  ai_chance = {
+			  factor = 10
+			}
+			name = eng.7.b
+			add_political_power = -125
+		}
+  }
+
+	#Independence of Sudan
+	country_event = {
+	  id = eng.8
+		title = eng.8.t
+		desc = eng.8.d
+
+		fire_only_once = yes
+
+		trigger = {
+		  date > 1955.12.31
+			date < 1956.1.2
+		}
+
+		option = {
+		  ai_chance = {
+			  factor = 90
+			}
+			name = eng.8.a
+			release = SUD
+			USA = { remove_from_faction = SUD }
+		}
+
+		option = {
+		  ai_chance = {
+			  factor = 10
+			}
+			name = eng.8.b
+			add_political_power = -125
+		}
+  }

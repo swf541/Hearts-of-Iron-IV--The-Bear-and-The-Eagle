@@ -1,0 +1,97 @@
+﻿add_namespace = philippines
+
+# PHI win against CPH
+country_event = {
+	id = philippines.1
+	hidden = yes
+	
+	fire_only_once = yes
+
+	trigger = {
+		CPH = {
+		NOT = {
+		controls_state = 872
+		}
+		has_war_with = PHI
+		}
+	}
+	
+	immediate = {
+	every_country = { limit = { tag = PHI } annex_country = { target = CPH transfer_troops = no } }
+	news_event = { hours = 6 id = philippines.2 }
+	}
+
+	option = { }
+
+	mean_time_to_happen = { days = 7 }
+}
+
+
+# Philippines victory
+news_event = {
+	id = philippines.2
+	title = philippines.2.t
+	desc = philippines.2.d
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = philippines.2.a
+		trigger = {
+			NOT = {
+			tag = PHI
+			}
+		}
+	}
+	option = {
+		name = philippines.2.b
+		trigger = { 
+		TAG = PHI
+		}
+	}
+
+}
+# CPH victory
+news_event = {
+	id = philippines.3
+	title = philippines.3.t
+	desc = philippines.3.d
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = philippines.3.a
+	}
+
+
+}
+# CPH win against PHI
+country_event = {
+	id = philippines.4
+	hidden = yes
+	
+	fire_only_once = yes
+
+	trigger = {
+		CPH = { 
+		controls_state = 327
+		has_war_with = PHI
+		}
+	}
+	
+	immediate = {
+	every_country = { limit = { tag = CPH } annex_country = { target = PHI transfer_troops = no } }
+	news_event = { hours = 6 id = philippines.3 }
+	CPH = { white_peace = USA }
+	}
+
+	option = { }
+
+	mean_time_to_happen = { days = 7 }
+}

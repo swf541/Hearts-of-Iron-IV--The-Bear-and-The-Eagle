@@ -1,0 +1,593 @@
+﻿###########################
+# Cuba Events
+###########################
+
+add_namespace = cuba
+
+# USA Cuban Protection Pact
+country_event = {
+
+	id = cuba.2
+	title = cuba.2.t
+	desc = cuba.2.d
+	picture = GFX_report_event_german_speech
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 1
+		}
+
+		name = cuba.2.t
+		add_political_power = 50
+		USA = { give_guarantee = CUB }
+	}
+}
+
+# Elect Batista
+country_event = {
+
+	id = cuba.3
+	title = cuba.3.t
+	desc = cuba.3.d
+	picture = GFX_report_event_german_speech
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 1
+		}
+
+		name = cuba.3.a
+		create_country_leader = { 
+			name = "Fulgencio Batista" 
+			picture = "gfx/leaders/CUB/fulgencio_batista.dds"
+			ideology = conservatism 
+		}
+	}
+}
+
+# Communist Revolution
+country_event = {
+
+	id = cuba.4
+	title = cuba.4.t
+	desc = cuba.4.d
+	picture = GFX_report_event_german_speech
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 1
+		}
+
+		name = cuba.4.d
+		create_country_leader = { 
+			name = "Fidel Castro" 
+			picture = "gfx/leaders/CUB/fidel_castro.dds" 
+			expire = "1999.1.1" 
+			ideology = marxism 
+		}
+		add_popularity = { ideology = communism popularity = 0.65 }
+		set_politics = { ruling_party = communism elections_allowed = no }
+		set_party_name = { ideology = communism long_name = "Partido Comunista de Cuba" name = "Partido Comunista de Cuba" }
+	}
+}
+
+country_event = {
+
+	id = cuba.5
+	title = cuba.5.t
+	desc = cuba.5.d
+	picture = GFX_report_event_german_speech
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 1
+		}
+
+		name = cuba.5.a
+		create_faction = "Carribean Alligence"
+	}
+}
+
+country_event = {
+
+	id = cuba.6
+	title = cuba.6.t
+	desc = cuba.6.d
+	picture = GFX_report_event_german_speech
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 1
+		}
+
+		name = cuba.6.a
+		USA = {
+			add_to_faction = CUB }
+	}
+}
+
+country_event = {
+
+	id = cuba.7
+	title = cuba.7.t
+	desc = cuba.7.d
+	picture = GFX_report_event_german_speech
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 1
+		}
+
+		name = cuba.7.a
+		SOV = {
+			add_to_faction = CUB }
+	}
+}
+
+country_event = {
+
+	id = cuba.8
+	title = cuba.8.t
+	desc = cuba.8.d
+	picture = GFX_report_event_german_speech
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 1
+		}
+
+		name = cuba.8.a
+		SPR = {
+			create_faction = "Trans-Atlantic Spanish Alliance" 
+		}
+		SPR = {
+			add_to_faction = CUB 
+		}
+		remove_ideas = internationalism
+	}
+}
+
+# Soviets Cuban Protection Pact
+
+country_event = {
+
+	id = cuba.9
+	title = cuba.9.t
+	desc = cuba.9.d
+	picture = GFX_report_event_german_speech
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 1
+		}
+
+		name = cuba.9.a
+		add_political_power = 50
+		SOV = { give_guarantee = CUB }
+		USA = { diplomatic_relation = { country = CUB relation = military_access active = no } }
+	}
+}
+
+# Ban Elections
+country_event = {
+
+	id = cuba.10
+	title = cuba.10.t
+	desc = cuba.10.d
+	picture = GFX_report_event_german_speech
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 1
+		}
+
+		name = cuba.10.a
+		create_country_leader = { name = "Fulgencio Batista" desc = "" picture = "gfx/leaders/CUB/fulgencio_batista.dds" expire = "1965.1.1" ideology = fascism_ideology traits = { } }
+		set_politics = { ruling_party = fascism elections_allowed = no }
+		hidden_effect = {add_popularity = { ideology = fascism popularity = 0.65 } }
+		hidden_effect = {add_popularity = { ideology = communism popularity = 0.35 } }
+		hidden_effect = {add_popularity = { ideology = communism popularity = -0.10 } }
+	}
+}
+
+# Cuban Missile Crisis
+country_event = {
+
+	id = cuba.11
+	title = cuba.11.t
+	desc = cuba.11.d
+	picture = GFX_report_event_german_speech
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 1
+		}
+
+		name = cuba.11.a
+		add_political_power = 25
+		add_popularity = { ideology = communism popularity = -0.15 }
+		add_national_unity = -0.05
+		hidden_effect = {
+			country_event = { id = cubamc.1 days = 2 }
+		}
+
+	}
+}
+
+# Cuban Trade Embargo
+country_event = {
+
+	id = cuba.12
+	title = cuba.12.t
+	desc = cuba.12.d
+	picture = GFX_report_event_german_speech
+
+	fire_only_once = yes
+
+	trigger = {
+		date > 1960.10.19
+		CUB = { exists = yes }
+	}
+	
+	option = {
+		ai_chance = {
+			base = 1
+		}
+
+		name = cuba.12.a
+		add_political_power = -50
+		add_popularity = { ideology = communism popularity = 0.10 }
+		add_national_unity = 0.20
+		add_ideas = trade_embargo
+		CUB = { 
+				add_opinion_modifier = { target = USA modifier = embargo } 
+			}
+	}
+}
+
+# Invite Carribean Members
+country_event = {
+
+	id = cuba.13
+	title = cuba.13.t
+	desc = cuba.13.d
+	picture = GFX_report_event_german_speech
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 1
+		}
+
+		name = cuba.13.a
+		add_to_faction = HAI
+		add_to_faction = DOM	
+	}
+}
+
+# Invite Mainland Members
+country_event = {
+
+	id = cuba.14
+	title = cuba.14.t
+	desc = cuba.14.d
+	picture = GFX_report_event_german_speech
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 1
+		}
+
+		name = cuba.14.a
+		add_to_faction = GUA
+		add_to_faction = HON
+		add_to_faction = NIC
+		add_to_faction = COS
+		add_to_faction = PAN
+	}
+}
+
+# Restrict Communist
+country_event = {
+
+	id = cuba.15
+	title = cuba.15.t
+	desc = cuba.15.d
+	picture = GFX_report_event_german_speech
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 1
+		}
+
+		name = cuba.15.a
+		add_popularity = { ideology = communism popularity = -0.25 }
+		add_ideas = internationalism
+		remove_ideas = liberty_ethos_focus
+	}
+}
+
+# Anti-Imperialist Propaganda
+country_event = {
+
+	id = cuba.16
+	title = cuba.16.t
+	desc = cuba.16.d
+	picture = GFX_report_event_german_speech
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 1
+		}
+
+		name = cuba.16.a
+			ENG = { 
+				add_opinion_modifier = { target = ROOT modifier = SAF_anti_colonialist_crusaders }
+			}
+			FRA = { 
+			 	add_opinion_modifier = { target = ROOT modifier = SAF_anti_colonialist_crusaders } 
+			}
+			BEL = { 
+			 	add_opinion_modifier = { target = ROOT modifier = SAF_anti_colonialist_crusaders } 
+			}
+			POR = { 
+			 	add_opinion_modifier = { target = ROOT modifier = SAF_anti_colonialist_crusaders } 
+			}
+
+		}
+}
+
+# Support Congo Uprising
+country_event = {
+
+	id = cuba.17
+	title = cuba.17.t
+	desc = cuba.17.d
+	picture = GFX_report_event_fascist_gathering
+	is_triggered_only = yes
+
+	option = {
+		name = cuba.17.a
+		COG = { set_state_owner = 353 }
+		}
+	}
+
+# Support Angola
+country_event = {
+
+	id = cuba.18
+	title = cuba.18.t
+	desc = cuba.18.d
+	picture = GFX_report_event_fascist_gathering
+
+	is_triggered_only = yes
+
+	option = {
+		name = cuba.18.a
+		ANG = { set_state_owner = 353 }
+	}
+}
+
+# Subjugate Carribean
+country_event = {
+
+	id = cuba.19
+	title = cuba.19.t
+	desc = cuba.19.d
+	picture = GFX_report_event_fascist_gathering
+
+	is_triggered_only = yes
+
+	option = {
+		name = cuba.19.a
+		annex_country = { target = DOM transfer_troops = yes }
+		annex_country = { target = HAI transfer_troops = yes }
+		add_political_power = 75
+	}
+}
+
+# Recover from Sugar Crisis
+country_event = {
+
+	id = cuba.20
+	title = cuba.20.t
+	desc = cuba.20.d
+	picture = GFX_report_event_fascist_gathering
+
+	is_triggered_only = yes
+
+	option = {
+
+		name = cuba.20.a
+		remove_ideas = sugar_crisis
+
+	}
+
+}
+
+# Greek Uprising
+country_event = {
+
+	id = cuba.21
+	title = cuba.21.t
+	desc = cuba.21.d
+	picture = GFX_report_event_fascist_gathering
+
+	is_triggered_only = yes
+
+	option = {
+
+		name = cuba.21.a
+		hidden_effect = { GRE = { start_civil_war = { ideology = communism size = 0.1 } } }
+		hidden_effect = { GRE = { add_popularity = { ideology = fascism popularity = 0.5 } } }
+		hidden_effect = { GRE = { set_politics = { ruling_party = fascism elections_allowed = no } } }
+		send_equipment = { target = GRE type = infantry_equipment amount = 1500 }
+		set_rule = { can_send_volunteers = yes }
+
+	}
+}
+
+# Expand Industry
+country_event = {
+
+	id = cuba.22
+	title = cuba.22.t
+	desc = cuba.22.d
+	picture = GFX_report_event_fascist_gathering
+
+	is_triggered_only = yes
+
+	option = {
+
+		name = cuba.22.a
+		CUB = { set_state_owner = 311 }
+		311 = { add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes		
+			}
+		}
+		311 = { add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes		
+			}
+		}
+	}
+}
+
+# Peurto Rico Pact
+country_event = {
+
+	id = cuba.23
+	title = cuba.23.t
+	desc = cuba.23.d
+	picture = GFX_report_event_fascist_gathering
+
+	is_triggered_only = yes
+
+	option = {
+
+		name = cuba.23.a
+		CUB = { set_state_owner = 686 }
+		send_equipment = { target = USA type = infantry_equipment amount = 1500 }
+		USA = { add_resource = { type = chromium amount = 16 state = 366 } }
+	}
+}
+
+# Spread the Revolution
+country_event = {
+
+	id = cuba.24
+	title = cuba.24.t
+	desc = cuba.24.d
+	picture = GFX_report_event_fascist_gathering
+
+	is_triggered_only = yes
+
+	option = {
+
+		name = cuba.24.a
+		hidden_effect = { BOL = { start_civil_war = { ideology = communism size = 0.4 } } }
+		hidden_effect = { BOL = { add_popularity = { ideology = fascism popularity = 0.5 } } }
+		hidden_effect = { BOL = { set_politics = { ruling_party = fascism elections_allowed = no } } }
+		set_rule = { can_send_volunteers = yes }
+	}
+}
+
+# State Visit from East Germany 1972 - Ernst Thälmann Island
+country_event = {
+	id = cuba.25
+	title = cuba.25.t
+	desc = cuba.25.d
+	picture = GFX_event_ernst_thalmann_island
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = CUB
+                                DDR = {
+			exists = yes
+                                                has_government = communism
+		}
+		owns_state = 1023
+                                has_government = communism
+		NOT = { has_global_flag = ddr_cuba_state_visit }
+		date > 1972.6.19
+	}	
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = cuba.25.a
+		ai_chance = { factor = 100 }
+		set_global_flag = ddr_cuba_state_visit_yes
+                                DDR = {
+			transfer_state = 1023
+		}
+	}
+	option = {
+		name = cuba.25.b
+		ai_chance = { factor = 0 }
+		set_global_flag = ddr_cuba_state_visit_no
+	}
+}

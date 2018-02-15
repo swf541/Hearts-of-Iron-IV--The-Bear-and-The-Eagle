@@ -1,0 +1,489 @@
+﻿add_namespace = election
+
+#Actual Election
+country_event = {
+	id = election.1
+	title = election.1.t
+	desc = election.1.d
+	picture = GFX_report_event_election
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			NOT = { tag = USA }
+            NOT = { tag = ENG }
+			NOT = { tag = ZIM }
+			NOT = { tag = BRA }
+			NOT = { tag = FRA }
+		}
+		NOT = { is_subject = yes }
+	}
+	
+	option = {	#The Ruling Party
+		name = election.1.o12
+		
+		trigger = {
+			OR = {
+				AND = { has_government = communism communism > 0.2 }
+				AND = { has_government = socialist socialist > 0.2 }
+				AND = { has_government = liberal liberal > 0.2 }
+				AND = { has_government = conservative conservative > 0.2 }
+				AND = { has_government = democratic democratic > 0.2 }
+				AND = { has_government = centrist centrist > 0.2 }
+				AND = { has_government = neutrality neutrality > 0.2 }
+				AND = { has_government = monarchism monarchism > 0.2 }
+				AND = { has_government = nationalism nationalism > 0.2 }
+				AND = { has_government = fascism fascism > 0.2 }
+				AND = { has_government = islamism islamism > 0.2 }
+				AND = { has_government = trotskyism trotskyism > 0.2 }
+				AND = { has_government = maoism maoism > 0.2 }
+				AND = { has_government = radical_shiaism radical_shiaism > 0.2 }
+				AND = { has_government = Liberal_Conservatism Liberal_Conservatism > 0.2 }
+				AND = { has_government = Judaism Judaism > 0.2 }
+				AND = { has_government = Republicanism Republicanism > 0.2 }
+				AND = { has_government = Christian_Democratic Christian_Democratic > 0.2 }
+				AND = { has_government = American_Democratic American_Democratic > 0.2 }
+				AND = { has_government = National_Socialism National_Socialism > 0.2 }
+				AND = { has_government = Social_Democratic Social_Democratic > 0.2 }
+				AND = { has_government = Social_Liberalism Social_Liberalism > 0.2 }
+				AND = { has_government = progressive_green progressive_green > 0.2 }
+				AND = { has_government = Salafism Salafism > 0.2 }
+				AND = { has_government = Christianism Christianism > 0.2 }
+				AND = {
+					communism < 0.2
+					socialist < 0.2
+					democratic < 0.2
+					centrist < 0.2
+					liberal < 0.2
+					trotskyism < 0.2
+					conservative < 0.2
+					neutrality < 0.2
+					monarchism < 0.2
+					nationalism < 0.2
+					fascism < 0.2
+					islamism < 0.2
+                    maoism < 0.2
+                    radical_shiaism < 0.2
+					Liberal_Conservatism < 0.2
+					Judaism < 0.2
+					Republicanism < 0.2
+					Christian_Democratic < 0.2
+					American_Democratic < 0.2
+					National_Socialism < 0.2
+					Social_Democratic < 0.2
+					Social_Liberalism < 0.2
+					progressive_green < 0.2
+					Salafism < 0.2
+					Christianism < 0.2
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 10
+		}
+		
+		add_political_power = 20
+	}
+	
+	option = {	#Communism
+		name = election.1.o1
+		ai_chance = {
+			factor = 2
+		}
+		trigger = {
+			NOT = { has_government = communism }
+			communism > 0.29
+		}
+		
+		set_politics = {
+			ruling_party = communism
+			elections_allowed = no
+		}
+	}
+	
+	option = {	#Socialism
+		name = election.1.o2
+		trigger = {
+			NOT = { has_government = socialist }
+			socialist > 0.29
+		}
+		ai_chance = {
+			factor = 4
+		}
+		
+		set_politics = {
+			ruling_party = socialist
+			elections_allowed = yes
+		}
+	}
+	
+	option = {	#Centrism
+		name = election.1.o3
+		ai_chance = {
+			factor = 6
+		}
+		trigger = {
+			NOT = { has_government = centrist }
+			centrist > 0.29
+		}
+		
+		set_politics = {
+			ruling_party = centrist
+			elections_allowed = yes
+		}
+	}
+	
+	option = {	#Democratic
+		name = election.1.o4
+		trigger = {
+			NOT = { has_government = democratic }
+			democratic > 0.29
+		}
+		ai_chance = {
+			factor = 4
+		}
+		
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+	}
+	
+	option = {	#Liberal
+		name = election.1.o5
+		ai_chance = {
+			factor = 6
+		}	
+		trigger = {
+			NOT = { has_government = liberal }
+			liberal > 0.29
+		}
+		
+		set_politics = {
+			ruling_party = liberal
+			elections_allowed = yes
+		}
+	}
+	
+	option = {	#Trotskyism
+		name = election.1.o6
+		ai_chance = {
+			factor = 3
+		}
+		trigger = {
+			NOT = { has_government = trotskyism }
+			trotskyism > 0.29
+		}
+		
+		set_politics = {
+			ruling_party = trotskyism
+			elections_allowed = yes
+		}
+	}
+	
+	option = {	#Conservative
+		name = election.1.o7
+		ai_chance = {
+			factor = 4
+		}
+		trigger = {
+			NOT = { has_government = conservative }
+			conservative > 0.29
+		}
+		
+		set_politics = {
+			ruling_party = conservative
+			elections_allowed = yes
+		}
+	}
+	
+	option = {	#Neutrality
+		name = election.1.o8
+		ai_chance = {
+			factor = 4
+		}
+		trigger = {
+			NOT = { has_government = neutrality }
+			neutrality > 0.29
+		}
+		
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = yes
+		}
+	}
+	
+	option = {	#Nationalism
+		name = election.1.o9
+		ai_chance = {
+			factor = 2
+		}
+		trigger = {
+			NOT = { has_government = nationalism }
+			nationalism > 0.29
+		}
+		
+		set_politics = {
+			ruling_party = nationalism
+			elections_allowed = no
+		}
+	}
+	
+	option = {	#Fascism
+		name = election.1.o10
+		ai_chance = {
+			factor = 1
+		}
+		trigger = {
+			NOT = { has_government = fascism }
+			fascism > 0.29
+		}
+		
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}
+	}
+	
+	option = {	#Islamism
+		name = election.1.o11
+		ai_chance = {
+			factor = 2
+		}
+		trigger = {
+			NOT = { has_government = islamism }
+			islamism > 0.29
+		}
+		
+		set_politics = {
+			ruling_party = islamism
+			elections_allowed = no
+		}
+	}
+	
+	option = {	#Monarchism
+		name = election.1.o13
+		ai_chance = {
+			factor = 3
+		}
+		trigger = {
+			NOT = { has_government = monarchism }
+			monarchism > 0.29
+		}
+		
+		set_politics = {
+			ruling_party = monarchism
+			elections_allowed = no
+		}
+	}
+
+	option = {	#Maoism
+		name = election.1.o14
+		ai_chance = {
+			factor = 3
+		}
+		trigger = {
+			NOT = { has_government = maoism }
+			maoism > 0.29
+		}
+		
+		set_politics = {
+			ruling_party = maoism
+			elections_allowed = no
+		}
+	}
+
+	option = {	#Radical Shiaism
+		name = election.1.o15
+		ai_chance = {
+			factor = 3
+		}
+		trigger = {
+			NOT = { has_government = radical_shiaism }
+			radical_shiaism > 0.29
+		}
+		
+		set_politics = {
+			ruling_party = radical_shiaism
+			elections_allowed = no
+		}
+	}
+
+	option = {	#Liberal Conservatism
+		name = election.1.o16
+		ai_chance = {
+			factor = 3
+		}
+		trigger = {
+			NOT = { has_government = Liberal_Conservatism }
+			Liberal_Conservatism > 0.29
+		}
+		
+		set_politics = {
+			ruling_party = Liberal_Conservatism
+			elections_allowed = yes
+		}
+	}
+	
+	option = {	#Judaism
+		name = election.1.o17
+		ai_chance = {
+			factor = 3
+		}
+		trigger = {
+			NOT = { has_government = Judaism }
+			Judaism > 0.29
+		}
+		
+		set_politics = {
+			ruling_party = Judaism
+			elections_allowed = no
+		}
+	}
+	
+	option = {	#Republicanism
+		name = election.1.o18
+		ai_chance = {
+			factor = 3
+		}
+		trigger = {
+			NOT = { has_government = Republicanism }
+			Republicanism > 0.29
+		}
+		
+		set_politics = {
+			ruling_party = Republicanism
+			elections_allowed = yes
+		}
+	}
+	
+	option = {	#Christian_Democratic
+		name = election.1.o19
+		ai_chance = {
+			factor = 3
+		}
+		trigger = {
+			NOT = { has_government = Christian_Democratic }
+			Christian_Democratic > 0.29
+		}
+		
+		set_politics = {
+			ruling_party = Christian_Democratic
+			elections_allowed = yes
+		}
+	}
+	
+	option = {	#American_Democratic
+		name = election.1.o20
+		ai_chance = {
+			factor = 3
+		}
+		trigger = {
+			NOT = { has_government = American_Democratic }
+			American_Democratic > 0.29
+		}
+		
+		set_politics = {
+			ruling_party = American_Democratic
+			elections_allowed = yes
+		}
+	}
+	
+	option = {	#National_Socialism
+		name = election.1.o21
+		ai_chance = {
+			factor = 3
+		}
+		trigger = {
+			NOT = { has_government = National_Socialism }
+			National_Socialism > 0.29
+		}
+		
+		set_politics = {
+			ruling_party = National_Socialism
+			elections_allowed = no
+		}
+	}
+	
+	option = {	#Social_Democratic
+		name = election.1.o22
+		ai_chance = {
+			factor = 3
+		}
+		trigger = {
+			NOT = { has_government = Social_Democratic }
+			Social_Democratic > 0.29
+		}
+		
+		set_politics = {
+			ruling_party = Social_Democratic
+			elections_allowed = yes
+		}
+	}
+	
+	option = {	#Social_Liberalism
+		name = election.1.o23
+		ai_chance = {
+			factor = 3
+		}
+		trigger = {
+			NOT = { has_government = Social_Liberalism }
+			Social_Liberalism > 0.29
+		}
+		
+		set_politics = {
+			ruling_party = Social_Liberalism
+			elections_allowed = yes
+		}
+	}
+	
+	option = {	#progressive_green
+		name = election.1.o24
+		ai_chance = {
+			factor = 3
+		}
+		trigger = {
+			NOT = { has_government = progressive_green }
+			progressive_green > 0.29
+		}
+		
+		set_politics = {
+			ruling_party = progressive_green
+			elections_allowed = yes
+		}
+	}
+	
+	option = {	#Salafism
+		name = election.1.o25
+		ai_chance = {
+			factor = 3
+		}
+		trigger = {
+			NOT = { has_government = Salafism }
+			Salafism > 0.29
+		}
+		
+		set_politics = {
+			ruling_party = Salafism
+			elections_allowed = no
+		}
+	}
+
+	option = {	#Christianism
+		name = election.1.o26
+		ai_chance = {
+			factor = 3
+		}
+		trigger = {
+			NOT = { has_government = Christianism }
+			Christianism > 0.29
+		}
+		
+		set_politics = {
+			ruling_party = Christianism
+			elections_allowed = yes
+		}
+	}
+}

@@ -1,0 +1,111 @@
+﻿add_namespace = cambodia
+
+# cambodian War Declaration
+country_event = {
+	id = cambodia.1
+	title = cambodia.1.t
+	desc = cambodia.1.d
+	picture = GFX_report_event_soviet_invasion_map
+	
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { country_exists = CMB }
+		country_exists = CAM
+		NOT = { CAM = { has_government = communism } }
+		date > 1967.3.10
+		date < 1970.6.10
+	}	
+
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	option = {
+		name = cambodia.1.o.a
+		ai_chance = { factor = 100 }
+		set_global_flag = cambodian_civil_war
+		CMB = { transfer_state = 840 }	
+		CMB = { set_politics = { ruling_party = communism elections_allowed = no } }
+		CMB = { load_oob = CMB_1967	
+			declare_war_on = {
+				target = CMB
+				type = annex_everything
+			}
+		}
+	}
+}
+
+# cambodian War Declaration - News
+news_event = {
+	id = cambodia.2
+	title = cambodia.2.t
+	desc = cambodia.2.d
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = cambodia.2.o.a
+		trigger = {
+			NOT = {
+				TAG = KPA
+				TAG = PRC
+				TAG = KOR
+				TAG = SOV
+				TAG = USA
+			}
+		}
+	}
+	option = {
+		name = cambodia.2.o.b
+		trigger = { 
+			OR = {
+				TAG = CMB
+				TAG = PRC
+				TAG = SOV }
+		}
+	}
+	option = {
+		name = cambodia.2.o.c
+		trigger = { TAG = CAM }
+	}
+	option = {
+		name = cambodia.2.o.d
+		trigger = { TAG = USA }
+
+	}
+}
+
+
+
+
+
+###########################
+#  Lon Nol Coup Event
+###########################
+
+add_namespace = Lon_Nol_coup
+
+
+country_event = {
+	id = Lon_Nol_coup.1
+	title = Lon_Nol_coup.1.t
+	desc = Lon_Nol_coup.1.d
+	picture = GFX_report_event_cambodia
+	
+	is_triggered_only = yes
+
+	option = {
+		name = Lon_Nol_coup.1.a
+		set_politics = { ruling_party = democratic elections_allowed = no } 
+		create_country_leader = {
+			name = "Lon Nol"
+			picture = Nol.dds
+			ideology = progressive
+		}		
+		
+	}
+}

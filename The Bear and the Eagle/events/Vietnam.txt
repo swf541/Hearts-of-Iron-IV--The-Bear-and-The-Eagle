@@ -1,0 +1,257 @@
+﻿ #############################
+# Vietnam events
+#############################
+
+add_namespace = vie
+
+# The Geneva Conference (hidden trigger)
+country_event = {
+	id = vie.1
+	hidden = yes
+	
+	fire_only_once = yes
+
+	trigger = {
+		VIN = {
+			controls_state = 786
+			controls_state = 787
+			controls_state = 788
+			controls_state = 838
+			controls_state = 881
+		}
+	}
+	
+	immediate = {
+		FRA = { country_event = vie.2 }
+		VIE = { country_event = vie.4 } 
+	}
+
+	option = { }
+
+	mean_time_to_happen = { days = 7 }
+}
+
+# The Geneva Conference (Preload)
+country_event = {
+	id = vie.2
+	title = vie.2.t
+	desc = vie.2.d
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = vie.2.a
+		hidden_effect = {
+			set_global_flag = FRA_yes_Geneva
+		}
+		ai_chance = {
+			factor = 98
+		}
+	}
+	
+	option = {
+		name = vie.2.b
+		ai_chance = {
+			factor = 2
+		}
+	}
+
+}
+
+# The Geneva Conference
+news_event = {
+	id = vie.3
+	title = vie.3.t
+	desc = vie.3.d
+	picture = GFX_news_event_geneva_conference
+	
+	trigger = {
+		has_global_flag = VIE_yes_Geneva
+		has_global_flag = FRA_yes_Geneva
+		date < 1952.1.1
+		NOT = { has_global_flag = Geneva_Conference }
+	}
+
+	major = yes
+
+	immediate = {
+		hidden_effect = {
+			country_event = vie.5
+			set_global_flag = Geneva_Conference
+		}
+	}
+
+	option = { 
+		name = vie.3.a
+		trigger = { tag = VIN }
+	}
+
+	option = {
+		name = vie.3.b
+		trigger = { NOT = { tag = VIN } }
+	}
+
+	mean_time_to_happen = {
+		days = 2
+	}
+}
+
+# The Geneva Conference (Preload)
+country_event = {
+	id = vie.4
+	title = vie.4.t
+	desc = vie.4.d
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = vie.4.a
+
+		hidden_effect = {
+			set_global_flag = VIE_yes_Geneva
+		}
+		ai_chance = {
+			factor = 98
+		}
+	}
+	
+	option = {
+		name = vie.4.b
+		ai_chance = {
+			factor = 2
+		}
+	}
+
+}
+
+# The Geneva Conference
+country_event = {
+	id = vie.5
+	title = vie.5.t
+	desc = vie.5.d
+	hidden = yes
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		FRA = { 
+			white_peace = VIN
+			end_puppet = CAM
+			end_puppet = VIE
+                                                end_puppet = VIN
+                                                end_puppet = LOS
+		}
+		VIE = { 
+			transfer_state = 788
+			transfer_state = 757
+			transfer_state = 966
+			add_state_core = 788
+			add_state_core = 757
+			add_state_core = 671
+			add_state_core = 786
+			add_state_core = 787
+			transfer_state = 839
+                                                transfer_state = 997
+                                                add_state_core = 997
+			add_state_core = 839
+			set_capital = 839
+		}
+		VIN = {
+			transfer_state = 671
+			transfer_state = 786
+			transfer_state = 787
+			transfer_state = 838
+			set_capital = 786
+		}
+		CAM = {
+			transfer_state = 286
+			add_state_core = 286
+			transfer_state = 840
+			add_state_core = 840
+		}
+		LOS = {
+			transfer_state = 670
+			add_state_core = 670
+			transfer_state = 841
+			add_state_core = 841
+		}
+                                USA = {
+			remove_from_faction = VIE
+			remove_from_faction = VIN
+			remove_from_faction = LOS
+			remove_from_faction = CAM
+		}
+		787 = {
+			set_demilitarized_zone = yes
+		}
+		788 = {
+			set_demilitarized_zone = yes
+		}
+		country_event = { id = vie.6 days = 1 }
+	}
+
+	option = { }
+
+}
+# 17th North / South DMZ failsafe event
+country_event = {
+	id = vie.6
+	title = vie.6.t
+	desc = vie.6.d
+	hidden = yes
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { 787 = { is_demilitarized_zone = no }}
+			787 = {
+				set_demilitarized_zone = yes
+			}
+		}
+		if = {
+			limit = { 788 = { is_demilitarized_zone = no }}
+			788 = {
+				set_demilitarized_zone = yes
+			}
+		}
+	}
+
+	option = { }
+
+}
+# FRA win against VIN
+country_event = {
+	id = vie.7
+	hidden = yes
+	
+	fire_only_once = yes
+
+	trigger = {
+		VIN = {
+			NOT = {
+				controls_state = 881
+			}
+			has_war_with = FRA
+		}
+	}
+	
+	immediate = {
+		FRA = { 
+			white_peace = VIN
+			annex_country = { target = VIN transfer_troops = no }
+		}
+	}
+
+	option = { }
+
+	mean_time_to_happen = { days = 7 }
+}

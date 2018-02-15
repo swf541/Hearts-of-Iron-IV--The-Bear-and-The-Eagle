@@ -1,0 +1,99 @@
+﻿###SAF EVENTS###
+add_namespace = cw_saf
+
+#Elections of 1953
+
+country_event = {
+	id = cw_saf.1
+	title = cw_saf.1.t
+	desc = cw_saf.1.d
+	picture = GFX
+	
+	is_triggered_only = no
+	fire_only_once = yes
+	trigger = {
+	tag = SAF
+	date > 1953.1.1 
+	}
+	
+	option = { #Nat Victory
+		name = cw_saf.1.a
+		set_country_flag = saf_nat_53
+		add_popularity ={
+		ideology = neutrality
+		popularity = 0.05
+		}
+		ai_chance = { 
+			factor = 49 
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+# Malan Resigns
+country_event = {
+	id = cw_saf.2
+	title = cw_saf.2.t
+	desc = cw_saf.2.d
+	picture = GFX
+	
+	is_triggered_only = no
+	fire_only_once = yes
+	trigger = {
+	tag = SAF
+	date > 1954.6.1 
+	has_country_flag = saf_nat_53
+	}
+	
+	option = { #kk
+		name = cw_saf.2.a
+		set_country_flag = saf_strijdom
+		clr_country_flag = saf_malan
+		hidden_effect = {
+		kill_country_leader = yes
+		}
+create_country_leader = {
+	name = "Johannes Strijdom"
+	desc = "POLITICS_STRIJDOM_DESC"
+	picture = "Strijdom.dds"
+	expire = "1990.1.1"
+	ideology = reactionary
+}
+
+	}
+}
+#Strijdom's Death
+country_event = {
+	id = cw_saf.3
+	title = cw_saf.3.t
+	desc = cw_saf.3.d
+	picture = GFX
+	
+	is_triggered_only = no
+	fire_only_once = yes
+	trigger = {
+	tag = SAF
+	date > 1958.8.1 
+	has_country_flag = saf_nat_53
+	has_country_flag = saf_strijdom
+	}
+	
+	option = { #kk
+		name = cw_saf.3.a
+		set_country_flag = saf_verwoerd
+		clr_country_flag = saf_strijdom
+		hidden_effect = {
+		kill_country_leader = yes
+		}
+create_country_leader = {
+	name = "Hendrik Verwoerd"
+	desc = "POLITICS_VERWOERD_DESC"
+	picture = "Verwoerd.dds"
+	expire = "1990.1.1"
+	ideology = reactionary
+}
+
+	}
+}

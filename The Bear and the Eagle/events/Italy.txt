@@ -1,0 +1,151 @@
+﻿###########################
+# Italian Events
+###########################
+
+add_namespace = itacw
+
+# Worker's Strike
+country_event = {
+	id = itacw.1
+	title = itacw.1.t
+	desc = itacw.1.d
+	picture = GFX_report_event_royal_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = itacw.1.a
+		ai_chance = {
+			factor = 90
+		}
+		set_politics = {
+			ruling_party = communism
+			elections_allowed = no
+		}
+		hidden_effect = {
+			country_event = { days = 1 id = itacw_news.1 }
+		}
+	}
+	
+	option = {
+		name = itacw.1.b
+		ai_chance = {
+			factor = 10
+		}
+		add_ideas = ITA_workers_strike
+		hidden_effect = {
+			country_event = { days = 1 id = itacw_news.2 }
+		}
+	}
+}
+
+# Seek Soviet Support
+country_event = {
+	id = itacw.2
+	title = itacw.2.t
+	desc = itacw.2.d
+	picture = GFX_report_event_royal_parade
+	
+	is_triggered_only = yes
+
+	option = {
+		name = itacw.2.a
+		ai_chance = {
+			factor = 100
+		}
+		give_guarantee = ITA
+		ITA = { add_opinion_modifier = { target = ROOT modifier = ITA_sov_guarantee_focus } }
+	}
+	
+	option = {
+		name = itacw.2.b
+		ITA = { add_opinion_modifier = { target = ROOT modifier = ITA_sov_deny_guarantee_focus } }
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Italy Requests Joining Warsaw Pact
+country_event = {
+	id = itacw.3
+	title = itacw.3.t
+	desc = itacw.3.d
+	picture = GFX_report_event_fascist_gathering
+
+	is_triggered_only = yes
+		
+	option = {
+		name = itacw.3.a
+		ai_chance = { factor = 100 }
+		SOV = { add_to_faction = ITA }
+		ITA = { country_event = itacw.4 }
+		ITA = {
+			add_ai_strategy = {
+				type = alliance
+				id = "SOV"
+				value = 200
+			}
+		}
+	}
+	option = {
+		name = itacw.3.b
+		ai_chance = { factor = 0 }
+		ITA = {
+			add_opinion_modifier = {
+				target = SOV
+				modifier = ITA_sov_deny_guarantee_focus
+			}
+			country_event = itacw.5
+		}
+	}
+}	
+
+# [Country] Accepts our Request
+country_event = {
+	id = itacw.4
+	title = itacw.4.t
+	desc = itacw.4.d
+	picture = GFX_report_event_finnish_letter
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = itacw.4.a
+		ITA = { add_opinion_modifier = { target = ROOT modifier = ITA_sov_guarantee_focus } }
+	}
+}
+
+# [Country] Rejects our Request
+country_event = {
+	id = itacw.5
+	title = itacw.5.t
+	desc = itacw.5.d
+	picture = GFX_report_event_soldiers_in_france
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = itacw.5.a
+		ITA = { add_opinion_modifier = { target = ROOT modifier = ITA_sov_deny_guarantee_focus } }
+	}
+}
+
+# Trust Territory of Soaliland
+country_event = {
+	id = itacw.6
+	title = itacw.6.t
+	desc = itacw.6.d
+	picture = GFX_report_event_soldiers_in_france
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = itacw.6.a
+			ITA = { transfer_state = 669 }
+	}
+	
+	option = {
+		name = itacw.6.b
+	}
+}

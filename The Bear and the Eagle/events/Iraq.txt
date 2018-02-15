@@ -1,0 +1,149 @@
+﻿###########################
+# Iraq Events
+###########################
+
+add_namespace = iraq
+
+
+#Surrender when Israel has taken too much land in Iraq
+country_event = {
+	id = iraq.1
+	title = iraq.1.t
+	desc = iraq.1.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	trigger = {
+		tag = IRQ
+		has_war_with = ISR
+		surrender_progress > 0.25
+		has_civil_war = no
+		ISR = { has_completed_focus = ISR_pre_emptive_strike }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	fire_only_once = yes
+
+	#Surrender and offer territory
+	option = {
+		name = iraq.1.a
+
+		ISR = {
+			country_event = { id = iraq.2 }
+		}
+		custom_effect_tooltip = iraq.1.a_tt
+		effect_tooltip = {
+			ISR = { 
+				white_peace = {
+					tag = IRQ 
+					message = IRQ_agree_peace 
+				} 
+			}
+
+		}
+	}
+}
+
+#Israel response to Iraq surrender
+country_event = {
+	id = iraq.2
+	title = iraq.2.t
+	desc = iraq.2.d
+	picture = GFX_report_event_finnish_soldiers_snow
+	
+	is_triggered_only = yes
+
+	#Accept surrender
+	option = {
+		name = iraq.2.a
+
+		white_peace = IRQ
+	}
+}
+
+
+
+
+###############################################################################
+
+add_namespace = swfs
+add_namespace = ARF
+country_event = {
+	id = swfs.2
+	title = "14th of July Revolution"
+	desc = "Free Officer Coup Attempt"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Successful Coup"
+		release = JOR
+		drop_cosmetic_tag = yes	
+		set_country_flag = fall_of_the_monarchy
+			set_politics = { ruling_party = socialist elections_allowed = no }
+			add_timed_idea = { idea = IRQ_free_officer_era_drift days = 365 }	
+		ai_chance = {
+			factor = 80
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 20
+		}
+		name = "Support the Monarchy"
+		set_country_flag = stand_with_the_monarchy
+		start_civil_war = { ideology = socialist size = 0.40 }	
+	}
+}
+
+country_event = {
+	id = swfs.5
+	title = "Iraq Requests the Annexation of Kuwait"
+	desc = "Iraq Requests the Annexation of Kuwait"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Agree to the Demands"
+		IRQ = { annex_country = { target = KUW } }
+		ai_chance = {
+			factor = 80
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 20
+		}
+		name = "Decline"
+
+	}
+}
+country_event = {
+	id = ARF.1
+	title = "The Arab Federation"
+	desc = "The Arab Federation Proposal to Unite Iraq and Jordan"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Agree to the Proposal"
+		FROM = {
+			set_cosmetic_tag = ARF_IRQ
+			annex_country = { target = JOR } 
+			annex_country = { target = IRQ } 
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "Decline"
+
+	}
+}	

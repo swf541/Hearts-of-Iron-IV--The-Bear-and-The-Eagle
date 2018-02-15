@@ -1,0 +1,633 @@
+﻿################################
+# Events for the Soviet union
+################################
+
+add_namespace = sov
+
+# Yes or No to help to PRC?
+country_event = {
+	id = sov.1
+	title = sov.1.t
+	desc = sov.1.d
+	picture = GFX_report_event_help_PRC
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sov.1.a
+		send_equipment = { target = PRC type = infantry_equipment amount = 10000 }
+		add_opinion_modifier = { target = PRC modifier = SOV_yes_intervention_opinion }
+		ai_chance = {
+			factor = 75
+		}
+		hidden_effect = {
+			PRC = {
+				country_event = prc.6
+			}
+		}
+	}
+	option = {
+		name = sov.1.b
+		add_opinion_modifier = { target = PRC modifier = SOV_no_intervention_opinion }
+		ai_chance = {
+			factor = 25
+		}
+		hidden_effect = {
+			PRC = {
+				country_event = prc.7
+			}
+		}
+	}
+}
+
+# Yes or No XXX joins faction
+country_event = {
+	id = sov.2
+	title = sov.2.t
+	desc = sov.2.d
+	picture = GFX_report_event_help_PRC
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = sov.2.a
+		add_to_Faction = FROM
+		ai_chance = {
+			factor = 10
+		}
+		hidden_effect = {
+			news_event = news.1012
+		}
+	}
+	option = {
+		name = sov.2.b
+		add_opinion_modifier = { target = FROM modifier = SOV_no_faction_opinion }
+		ai_chance = {
+			factor = 1
+		}
+		hidden_effect = {
+			FROM = {
+				country_event = prc.8
+			}
+		}
+	}
+}
+
+# The Reunification of Austria
+country_event = {
+	id = sov.3
+	title = sov.3.t
+	desc = sov.3.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = sov.3.a
+		set_global_flag = sov_yes_austria
+		ai_chance = {
+			factor = 90
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 1
+			}
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+		name = sov.3.b
+		set_global_flag = sov_no_austria
+	}
+}
+
+# UN recognition of PRC
+country_event = {
+	id = sov.4
+	title = sov.4.t
+	desc = sov.4.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = sov.4.a
+		set_global_flag = sov_yes_prc_un_recognition
+		ai_chance = {
+			factor = 15
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 1
+		}
+		name = sov.4.b
+		set_global_flag = sov_no_prc_un_recognition
+	}
+}
+
+#Keeping the SSRs or annexing them
+news_event = {
+	id = sov.5
+	title = sov.5.t
+	desc = sov.5.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = sov.5.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = sov.5.b
+		annex_country = { target = ARM }
+		annex_country = { target = GEO }
+		annex_country = { target = AZR }
+		annex_country = { target = EST }
+		annex_country = { target = LAT }
+		annex_country = { target = LIT }
+		annex_country = { target = UKR }
+		annex_country = { target = BLR }
+		annex_country = { target = MLD }
+		annex_country = { target = KAZ }
+		annex_country = { target = TJK }
+		annex_country = { target = UZB }
+		annex_country = { target = KRG }
+		annex_country = { target = TRK }
+		annex_country = { target = KRL }
+	}
+}
+
+
+
+
+
+#######################################################################
+# Death of Stalin #
+#######################################################################
+
+add_namespace = swf
+country_event = {
+	id = swf.4
+	title = "Death of Stalin"
+	desc = swf.4.d
+	picture = GFX_report_stalin_death
+
+	
+
+	trigger = {
+		tag = SOV
+		date > 1953.3.3
+		date < 1953.10.6
+		NOT = { has_global_flag = stalin_dead }
+		
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	fire_only_once = yes
+
+
+	option = {
+		name = "Nikita Khrushchev will be our next Premier"
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 1000
+				is_historical_focus_on = yes
+			}
+		}
+		set_global_flag = stalin_dead
+		set_country_flag = premier_khrushchev
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Nikita Khrushchev"
+			desc = ""
+			picture = "Portrait_Soviet_Nikita_Khrushchev.dds"
+			expire = "1980.1.1"
+			ideology = leninism
+		}
+		news_event = { hours = 6 id = news.1029 }
+		news_event = { hours = 12 id = news.1030 }
+	}
+	
+	option = {
+		name = "Georgy Malenkov will be our next Premier."
+		  ai_chance = {
+			  factor = 25
+		   }
+		   set_global_flag = stalin_dead
+		set_country_flag = premier_malenkov
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Georgy Malenkov"
+			desc = ""
+			picture = "Portrait_Soviet_Georgy_Malenkov.dds"
+			expire = "1980.1.1"
+			ideology = leninism
+		}
+	}
+	option = {
+		name = "Lavrentiy Beria will be our next Premier."
+		  ai_chance = {
+			  factor = 25
+		   }
+		   set_global_flag = stalin_dead
+		set_country_flag = premier_beria
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Lavrentiy Beria"
+			desc = ""
+			picture = "Portrait_Beria.dds"
+			expire = "1980.1.1"
+			ideology = leninism
+		}
+	}	
+	option = {
+		name = "Other Options"
+		  ai_chance = {
+			  factor = 20
+		   }
+		   set_global_flag = stalin_dead
+		SOV = { country_event = { id = swf.5 } }
+	}	
+}
+country_event = {
+	id = swf.5
+	title = "Death of Stalin"
+	desc = swf.4.d
+	picture = GFX_report_stalin_death
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Klim Voroshilov will be our next Premier"
+		  ai_chance = {
+			  factor = 25
+		   }
+		set_country_flag = premier_voroshilo
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Klim Voroshilov"
+			desc = ""
+			picture = "Portrait_Soviet_Kliment_Voroshilov.dds"
+			expire = "1980.1.1"
+			ideology = leninism
+		}
+	}
+	
+	option = {
+		name = "Georgy Zhukov will be our next Premier"
+		  ai_chance = {
+			  factor = 25
+		   }
+		set_country_flag = premier_zhukov
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Georgy Zhukov"
+			desc = ""
+			picture = "Portrait_Soviet_Gregory_Zhukov.dds"
+			expire = "1980.1.1"
+			ideology = leninism
+		}
+	}
+	option = {
+		name = "Vyacheslav Molotov will be our next Premier."
+		  ai_chance = {
+			  factor = 25
+		   }
+		set_country_flag = premier_molotov
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Vyacheslav Molotov"
+			desc = ""
+			picture = "Portrait_Molotov.dds"
+			expire = "1980.1.1"
+			ideology = stalinism
+		}
+	}	
+	option = {
+		name = "Other Options"
+		  ai_chance = {
+			  factor = 25
+		   }
+		SOV = { country_event = { id = swf.6 } }
+	}	
+}
+country_event = {
+	id = swf.6
+	title = "Death of Stalin"
+	desc = swf.4.d
+	picture = GFX_report_stalin_death
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Nikolai Bulganin will be our next Premier"
+		  ai_chance = {
+			  factor = 34
+		   }
+		set_country_flag = premier_bulganin
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Nikolai Bulganin"
+			desc = ""
+			picture = "Portrait_Bulganin.dds"
+			expire = "1980.1.1"
+			ideology = stalinism
+		}
+	}
+	
+	option = {
+		name = "Lazar Kaganovich will be our next Premier"
+		  ai_chance = {
+			  factor = 33
+		   }
+		set_country_flag = premier_kaganovich
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Lazar Kaganovich"
+			desc = ""
+			picture = "Portrait_Kaganovich.dds"
+			expire = "1980.1.1"
+			ideology = leninism
+		}
+	}
+	option = {
+		name = "Anastas Mikoyan will be our next Premier."
+		  ai_chance = {
+			  factor = 33
+		   }
+		set_country_flag = premier_mikoyan
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Anastas Mikoyan"
+			desc = ""
+			picture = "Portrait_Mikoyan.dds"
+			expire = "1991.1.1"
+			ideology = leninism
+		}
+	}	
+	option = {
+		name = "Other Options"
+		SOV = { country_event = { id = swf.59 } }
+	}	
+}
+
+country_event = {
+	id = swf.59
+	title = "Death of Stalin"
+	desc = swf.4.d
+	picture = GFX_report_stalin_death
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = "Nikita Khrushchev will be our next Premier"
+		  ai_chance = {
+			  factor = 30
+				modifier = {
+					factor = 1000
+					is_historical_focus_on = yes
+				}
+		   }
+		set_global_flag = stalin_dead
+		set_country_flag = premier_khrushchev
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Nikita Khrushchev"
+			desc = ""
+			picture = "Portrait_Soviet_Nikita_Khrushchev.dds"
+			expire = "1980.1.1"
+			ideology = leninism
+		}
+		news_event = { hours = 6 id = news.1029 }
+		news_event = { hours = 12 id = news.1030 }
+	}
+	
+	option = {
+		name = "Georgy Malenkov will be our next Premier."
+		  ai_chance = {
+			  factor = 25
+		   }
+		   set_global_flag = stalin_dead
+		set_country_flag = premier_malenkov
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Georgy Malenkov"
+			desc = ""
+			picture = "Portrait_Soviet_Georgy_Malenkov.dds"
+			expire = "1980.1.1"
+			ideology = leninism
+		}
+	}
+	option = {
+		name = "Lavrentiy Beria will be our next Premier."
+		  ai_chance = {
+			  factor = 25
+		   }
+		   set_global_flag = stalin_dead
+		set_country_flag = premier_beria
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Lavrentiy Beria"
+			desc = ""
+			picture = "Portrait_Beria.dds"
+			expire = "1980.1.1"
+			ideology = leninism
+		}
+	}	
+	option = {
+		name = "Other Options"
+		  ai_chance = {
+			  factor = 20
+		   }
+		   set_global_flag = stalin_dead
+		SOV = { country_event = { id = swf.5 } }
+	}	
+}
+
+
+
+
+
+###########################################################################
+# More Soviet Events #
+###########################################################################
+
+add_namespace = soviet
+country_event = {
+    id = soviet.1
+	title = "Transfer of Crimea?"
+	desc = soviet.1.d
+	picture = GFX_report_soviet_union
+	
+	fire_only_once = yes
+	
+	is_triggered_only = no
+	
+	mean_time_to_happen = {
+	        days = 1
+	}
+	trigger = {
+	    tag = SOV
+		country_exists = UKR
+		date > 1954.2.19
+		date < 1954.3.1
+	}
+	
+	option = {
+	    name = "Vote Yes on the Decree"
+		ai_chance = {
+		    factor = 90
+		}
+		UKR = { transfer_state = 137 }	
+					add_opinion_modifier = {
+							target = UKR
+							modifier = large_increase
+						}
+					UKR = {
+							add_opinion_modifier = {
+									target = ROOT
+									modifier = large_increase
+								}
+						}
+		hidden_effect = {
+			news_event = { hours = 6 id = soviet.2 }
+		}
+	}
+	
+	option = {
+	    name = "Vote No on the Decree"
+		ai_chance = {
+		    factor = 10
+		}
+		UKR = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = large_decrease
+			}
+		}
+	}
+}
+news_event = {
+    id = soviet.2
+	title = "USSR Transfers Crimea to Ukraine SSR"
+	desc = soviet.2.d
+	picture = GFX_crimea_annexation
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Interesting development, what does it mean?"
+		trigger = { TAG = USA }
+	}
+	
+	option = {
+		name = "For our friend for over 300 years"
+		trigger = { TAG = SOV }
+	}
+	
+	option = {
+		name = "We accept this gift of friendship."
+		trigger = { TAG = UKR }
+	}	
+	option = {
+		name = "Finally something good done by the USSR"
+		trigger = { 
+			NOT = { TAG = UKR }
+			NOT = { TAG = SOV }
+			NOT = { TAG = USA }
+		}
+	}	
+}
+country_event = {
+    id = soviet.3
+	title = "Annexation of Karelo-Finnish SSR?"
+	desc = soviet.3.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	fire_only_once = yes
+	
+	is_triggered_only = no
+	
+	mean_time_to_happen = {
+	        days = 1
+	}
+	trigger = {
+	    tag = SOV
+		country_exists = KRL
+		date > 1956.7.15
+		date < 1956.8.15
+	}
+	
+	option = {
+	    name = "Vote Yes on the Decree"
+		ai_chance = {
+		    factor = 90
+		}
+		annex_country = { target = KRL }	
+					FIN = {
+							add_opinion_modifier = {
+									target = SOV
+									modifier = small_decrease
+								}
+						}
+		hidden_effect = {
+			news_event = { hours = 6 id = soviet.4 }
+		}
+	}
+	
+	option = {
+	    name = "Vote No on the Decree"
+		ai_chance = {
+		    factor = 10
+		}
+		FIN = {
+			add_opinion_modifier = {
+				target = SOV
+				modifier = large_increase
+			}
+		}
+	}
+}
+news_event = {
+    id = soviet.4
+	title = "Karelo-Finnish SSR Annexed into USSR"
+	desc = soviet.4.d
+	picture = GFX_news_event_karelia_annex
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Interesting"
+		trigger = { 
+			NOT = { TAG = SOV } 
+			NOT = { TAG = FIN } 
+		}
+	}
+	option = {
+		name = "Disturbing"
+		trigger = { TAG = FIN }
+	}	
+	option = {
+		name = "We will keep marching on the West."
+		trigger = { TAG = SOV }
+	}	
+}

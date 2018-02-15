@@ -1,0 +1,30 @@
+﻿add_namespace = t52_european_union
+
+#Add the EU Modifiers
+country_event = {
+	id = t52_european_union.1
+	hidden = yes
+	
+	trigger = {
+		date > 1990.1.1
+		has_country_flag = european_union_member_state
+		NOT = { has_country_flag = has_EU_modifiers }
+	}
+	
+	immediate = {
+		set_country_flag = has_EU_modifiers
+	}
+	
+	option = {
+		every_country = {
+			limit = {
+				has_country_flag = european_union_member_state
+			}
+			add_opinion_modifier = { target = FROM 	modifier = european_union_member }
+			add_opinion_modifier = { target = FROM 	modifier = european_union_member_trade }
+		}
+	}
+}
+
+#TBA: Removal of Modifiers upon leaving the Union
+#(Looking at you, Britain)

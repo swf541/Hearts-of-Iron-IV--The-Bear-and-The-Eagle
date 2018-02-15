@@ -1,0 +1,251 @@
+﻿add_namespace = AFR
+
+country_event = {
+	id = AFR.201
+	hidden = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		drop_cosmetic_tag = yes
+		OVERLORD = { end_puppet = ROOT }
+		remove_from_faction = ROOT
+		set_politics = {
+			elections_allowed = yes
+		}
+                               if = {
+			limit = {
+			is_in_faction_with = USA
+			}
+			USA = {
+			remove_from_faction = ROOT
+		}			
+                                }
+		if = {
+			limit = {
+					tag = UGA
+			}
+								
+							create_country_leader = {
+									name = "Milton Obote"
+									desc = ""
+									picture = "gfx/leaders/AFR/Obote.dds"
+									expire = "1999.1.1"
+									ideology = liberalism
+									traits = {
+
+}
+								}
+						}
+					#
+ #
+					if = {
+							limit = {
+									tag = KNA
+								}
+							create_country_leader = {
+									name = "Jomo Kenyatta"
+									desc = ""
+									picture = "Jomo.dds"
+									expire = "1999.1.1"
+									ideology = liberalism
+									traits = {
+
+}
+								}
+						}
+					#
+					if = {
+							limit = {
+									tag = NYA
+								}
+							retire_country_leader = yes
+							set_politics = {
+									ruling_party = neutrality
+									elections_allowed = no
+								}
+						}
+					if = {
+							limit = {
+									tag = ZAM
+								}
+							create_country_leader = {
+									name = "Kenneth Kaunda"
+									desc = ""
+									picture = "Kenneth.dds"
+									expire = "1999.1.1"
+									ideology = liberalism
+									traits = {
+
+}
+								}
+						}
+					#
+					if = {
+							limit = {
+									tag = NIA
+								}
+							create_country_leader = {
+									name = "Nnamdi Azikiwe"
+									desc = ""
+									picture = "gfx/leaders/AFR/Azikiwe.dds"
+									expire = "1999.1.1"
+									ideology = liberalism
+									traits = {
+
+}
+								}
+						}
+					#
+					if = {
+							limit = {
+									tag = MLI
+								}
+							create_country_leader = {
+									name = "Modibo Keïta"
+									desc = ""
+									picture = "gfx/leaders/AFR/Keïta.dds"
+									expire = "1999.1.1"
+									ideology = liberalism
+									traits = {
+
+}
+								}
+						}
+					#
+					if = {
+							limit = {
+									tag = NIG
+								}
+							create_country_leader = {
+									name = "Hamani Diori"
+									desc = ""
+									picture = "gfx/leaders/AFR/Diori.dds"
+									expire = "1999.1.1"
+									ideology = liberalism
+									traits = {
+
+}
+								}
+						}
+					#
+					if = {
+							limit = {
+									tag = BRK
+								}
+							create_country_leader = {
+									name = "Maurice Yaméogo"
+									desc = ""
+									picture = "gfx/leaders/AFR/Portrait_Africa_Generic_1.dds"
+									expire = "1999.1.1"
+									ideology = liberalism
+									traits = {
+
+}
+								}
+						}
+					#
+					if = {
+							limit = {
+									tag = BEN
+								}
+							create_country_leader = {
+									name = "Hubert Maga"
+									desc = ""
+									picture = "gfx/leaders/AFR/Portrait_Africa_Generic_1.dds"
+									expire = "1999.1.1"
+									ideology = liberalism
+									traits = {
+
+}
+								}
+						}
+					#
+					if = {
+							limit = {
+									tag = CTD
+								}
+							retire_country_leader = yes
+							set_politics = {
+									ruling_party = neutrality
+									elections_allowed = no
+								}
+						}
+					if = {
+							limit = {
+									tag = TOG
+								}
+							create_country_leader = {
+									name = "Sylvanus Olympio"
+									desc = ""
+									picture = "gfx/leaders/AFR/Olympio.dds"
+									expire = "1999.1.1"
+									ideology = liberalism
+									traits = {
+
+}
+								}
+						}
+					#
+					if = {
+							limit = {
+									tag = MAU
+								}
+							retire_country_leader = yes
+							set_politics = {
+									ruling_party = neutrality
+									elections_allowed = no
+								}
+						}
+					if = {
+							limit = {
+									tag = GUI
+								}
+							create_country_leader = {
+									name = "Ahmed Sékou Touré"
+									desc = ""
+									picture = "gfx/leaders/AFR/Touré"
+									expire = "2005.1.1"
+									ideology = liberalism
+									traits = {
+
+}
+								}
+						}
+					#
+					if = {
+							limit = {
+									tag = SEN
+								}
+							create_country_leader = {
+									name = "Léopold Sédar Senghor"
+									desc = ""
+									picture = "gfx/leaders/AFR/Senghor"
+									expire = "2005.1.1"
+									ideology = liberalism
+									traits = {
+
+}
+								}
+						}
+				}
+	}
+country_event = {
+  id = AFR.202
+	hidden = yes
+
+  fire_only_once = yes #This should only trigger
+
+  trigger = {
+    tag = KOR
+	is_ai = no
+ }
+
+  mean_time_to_happen = {
+    days = 1
+  }
+  
+  	immediate = {
+		OVERLORD = { end_puppet = KOR }
+	}
+}

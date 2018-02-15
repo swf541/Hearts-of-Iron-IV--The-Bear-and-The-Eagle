@@ -1,0 +1,70 @@
+﻿###########################
+# Gulf of dmz_conflict Incident
+###########################
+
+add_namespace = dmz_conflict
+
+
+news_event = {
+	id = dmz_conflict.1
+	title = dmz_conflict.1.t
+	desc = dmz_conflict.1.d
+	picture = GFX_news_event_dmz_conflict
+
+	major = yes
+	trigger = {
+		tag = USA
+		date > 1966.10.1
+		date < 1970.6.10
+	}	
+
+	mean_time_to_happen = {
+		days = 15
+	}
+
+	option = {
+		name = "Time for War?"
+		trigger = {
+			has_idea = nato_member
+		}
+		set_global_flag = dmz_conflict
+	}
+	option = {
+		name = "Time for War?"
+		trigger = {
+			tag = KPA
+		}
+		set_global_flag = dmz_conflict
+		create_wargoal = { type = annex_everything target = KOR }
+	}
+	option = {
+		name = "Time for War?"
+		trigger = {
+			tag = KOR
+		}
+		set_global_flag = dmz_conflict
+		create_wargoal = { type = annex_everything target = KPA }
+	}
+	option = {
+		name = "What Happens Now?"
+		trigger = {
+			OR = {
+				tag = SOV
+				is_in_faction_with = SOV	
+				tag = VIN
+			}
+		}
+	}
+	option = {
+		name = "Well that escalated quickly"
+		trigger = {
+			NOT = {
+				tag = SOV
+				tag = KOR
+				tag = KPA
+				is_in_faction_with = SOV	
+				has_idea = nato_member
+			}
+		}
+	}
+}

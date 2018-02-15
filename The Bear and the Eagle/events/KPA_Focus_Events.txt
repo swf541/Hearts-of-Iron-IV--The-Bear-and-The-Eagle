@@ -1,0 +1,56 @@
+﻿add_namespace = Korean_UN
+add_namespace = KPA
+news_event = {
+	id = KPA.2001
+	title = "North Korean Purge"
+	desc = KPA.2001.d
+	picture = GFX_news_warsaw_pact
+
+	fire_only_once = yes
+	
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Barbaric"
+	}
+}
+news_event = {
+	id = KPA.2000
+	title = "Kimg Il-Sung Purged"
+	desc = KPA.2000.d
+	picture = GFX_news_warsaw_pact
+
+	fire_only_once = yes
+	
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Barbaric"
+	}
+}
+news_event = {
+	id = Korean_UN.1
+	title = "Formation of the Warsaw Pact"
+	desc = swf.9.d
+	picture = GFX_news_warsaw_pact
+
+	fire_only_once = yes
+	
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "This changes nothing. Communism will be destroyed.  "
+		trigger = { 
+			or = {
+				TAG = USA 
+				is_in_faction_with = USA
+			}
+		}
+	}
+}

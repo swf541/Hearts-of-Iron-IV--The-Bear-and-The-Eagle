@@ -1,0 +1,1212 @@
+﻿###########################
+# East German events made by Kaiser1871
+###########################
+ 
+add_namespace = ddr
+ 
+# Increased Work Quotas
+country_event = {
+    id = ddr.1
+    title = ddr.1.t
+    Desc = ddr.1.d
+    picture = news_event_india_troops
+   
+    is_triggered_only = yes
+	
+	option = { #Uprising
+	    name = ddr.1.o1
+		hidden_effect = {
+		    DDR = {
+		        country_event = { days = 30 id = ddr.2 } 
+		    }
+		}
+	}
+}
+
+# Uprising
+country_event = {
+    id = ddr.2
+    title = ddr.2.t
+    Desc = ddr.2.d
+    picture = news_event_india_troops
+   
+    is_triggered_only = yes
+	
+	option = { 
+	    name = ddr.2.o1
+		add_manpower = -600
+		add_national_unity = -0.04
+		add_popularity = {
+			ideology = communism
+		    popularity = -0.05
+		}
+		WGR = {
+		    add_popularity = {
+			    ideology = communism
+		        popularity = -0.08
+		    }
+		}
+	}
+}
+
+# DDR Established
+news_event = {
+    id = ddr.3
+    title = ddr.3.t
+    Desc = ddr.3.d
+    picture = GFX_news_event_foundation_ddr
+   
+    is_triggered_only = yes
+	major = yes
+	
+	option = { 
+		trigger = { tag = DDR }
+	    name = ddr.3.o1
+		add_political_power = 10
+		add_national_unity = 0.05
+		drop_cosmetic_tag = yes
+	}
+
+	option = { 
+		trigger = { NOT = { tag = DDR } }
+	    name = ddr.3.o2
+	}
+}
+
+# SOV - East Germany toeing the line. Send back some industry?
+country_event = {
+    id = ddr.4
+    title = ddr.4.t
+    Desc = ddr.4.d
+    picture = news_event_india_troops
+   
+    is_triggered_only = yes
+	
+	option = { #Yes 
+	    name = ddr.4.o1
+		ai_chance = {
+			factor = 30
+		}
+		DDR = {
+		    country_event = { days = 1 id = ddr.5 } 
+		}
+	}
+	
+	option = { #No
+	    name = ddr.4.o2
+		ai_chance = {
+			factor = 70
+		}
+		DDR = {
+		    country_event = { days = 1 id = ddr.6 } 
+	    }
+	}
+}
+
+# Soviets send back some industry
+country_event = {
+    id = ddr.5
+    title = ddr.5.t
+    Desc = ddr.5.d
+    picture = news_event_india_troops
+   
+    is_triggered_only = yes
+	
+	option = { #Yes 
+	    name = ddr.5.o1
+		SOV = {
+		    random_owned_controlled_state = {
+			    add_building_construction = {
+				    type = industrial_complex
+				    level = -1
+				    instant_build = yes
+			    }
+			}
+			random_owned_controlled_state = {
+			    add_building_construction = {
+				    type = industrial_complex
+				    level = -1
+				    instant_build = yes
+			    }
+			}
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+# Soviets refuse to send back industry
+country_event = {
+    id = ddr.6
+    title = ddr.6.t
+    Desc = ddr.6.d
+    picture = news_event_india_troops
+   
+    is_triggered_only = yes
+	
+	option = { 
+	    name = ddr.6.o1
+		add_political_power = -20
+		add_opinion_modifier = { target = SOV modifier = refused_to_return_industry }
+	}
+}
+
+# SOV - DDR pressures us to side with them and let them take German lands in Poland
+country_event = {
+    id = ddr.7
+    title = ddr.7.t
+    Desc = ddr.7.d
+    picture = news_event_india_troops
+   
+    is_triggered_only = yes
+	
+	option = { #Support DDR
+	    name = ddr.7.o1
+		ai_chance = {
+			factor = 15
+		}
+		DDR = {
+		    country_event = { days = 3 id = ddr.8 } 
+		}
+		POL = {
+		    country_event = { days = 3 id = ddr.9 } 
+		}
+	}
+	
+	option = { #Support Poland and kick DDR out of warsaw pact
+	    name = ddr.7.o2
+		ai_chance = {
+			factor = 85
+		}
+		POL = {
+		    country_event = { days = 1 id = ddr.10 } 
+		}
+		DDR = {
+		    country_event = { days = 1 id = ddr.11 } 
+		}
+		remove_from_faction = DDR
+	}
+}
+
+# USSR supports us. Take Polish states
+country_event = {
+    id = ddr.8
+    title = ddr.8.t
+    Desc = ddr.8.d
+    picture = news_event_india_troops
+   
+    is_triggered_only = yes
+	
+	option = { 
+	    name = ddr.8.o1
+		transfer_state = 741
+		transfer_state = 63
+		transfer_state = 66
+		transfer_state = 795
+                                transfer_state = 951
+                                transfer_state = 950
+	}
+}
+
+# POL - USSR supports East Germans in taking our western provinces
+country_event = {
+    id = ddr.9
+    title = ddr.9.t
+    Desc = ddr.9.d
+    picture = news_event_india_troops
+   
+    is_triggered_only = yes
+	
+	option = { #Accept the decision, stay in warsaw pact
+	    name = ddr.9.o1
+		ai_chance = {
+			factor = 70
+		}
+        add_national_unity = -0.1
+	}
+	
+	option = { #Declare war
+	    name = ddr.9.o2
+		ai_chance = {
+			factor = 30
+		}
+		SOV = {
+		    remove_from_faction = POL
+		}
+		declare_war_on = { target = DDR type = annex_everything }
+	}
+}
+
+# USSR supports us. Germany won't take our states and will be kicked out of faction
+country_event = {
+    id = ddr.10
+    title = ddr.10.t
+    Desc = ddr.10.d
+    picture = news_event_india_troops
+   
+    is_triggered_only = yes
+	
+	option = { 
+	    name = ddr.10.o1
+        add_national_unity = 0.1
+		add_political_power = 50
+		add_opinion_modifier = { target = DDR modifier = expansion_attempts }
+	}
+}
+
+# USSR supports Poland. We've been kicked out of the warsaw pact
+country_event = {
+    id = ddr.11
+    title = ddr.11.t
+    Desc = ddr.11.d
+    picture = news_event_india_troops
+   
+    is_triggered_only = yes
+	
+	option = { 
+	    name = ddr.11.o1
+        add_national_unity = -0.2
+		add_political_power = -200
+		add_opinion_modifier = { target = POL modifier = expansion_attempts }
+	}
+}
+
+# WGR - East Germany proposes unifying under neutral ideology
+country_event = {
+    id = ddr.12
+    title = ddr.12.t
+    Desc = ddr.12.d
+    picture = news_event_india_troops
+   
+    is_triggered_only = yes
+	
+	option = { #Accept
+	    name = ddr.12.o1
+		ai_chance = {
+			factor = 34
+		}
+		if = {
+		    limit = {
+			    is_ai = no
+			}
+			annex_country = { target = DDR } 
+			set_politics = {
+			    ruling_party = neutrality
+			    elections_allowed = yes
+		    }
+		    add_popularity = {
+			    ideology = neutrality
+			    popularity = 0.55
+		    }
+		}
+		if = {
+		    limit = {
+			    is_in_faction_with = USA
+			}
+			USA = {
+			    remove_from_faction = WGR
+			}
+		}
+		if = {
+		    limit = {
+			    is_ai = yes
+			}
+			DDR = {
+		        country_event = { days = 1 id = ddr.13 } 
+		    }
+		}
+	}
+	
+	option = { #Refuse
+	    name = ddr.12.o2
+		ai_chance = {
+			factor = 66
+		}
+        DDR = {
+		    country_event = { days = 1 id = ddr.14 } 
+		}
+	}
+}
+
+# West Germany accepts unifying under a neutral government
+country_event = {
+    id = ddr.13
+    title = ddr.13.t
+    Desc = ddr.13.d
+    picture = news_event_india_troops
+   
+    is_triggered_only = yes
+	
+	option = { 
+	    name = ddr.13.o1
+        annex_country = { target = WGR } 
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.55
+		}
+		if = {
+		    limit = {
+			    is_in_faction_with = SOV
+			}
+			SOV = {
+			    remove_from_faction = DDR
+			}
+		}
+	}
+}
+	
+# West Germany denies unifying under a neutral government
+country_event = {
+    id = ddr.14
+    title = ddr.14.t
+    Desc = ddr.14.d
+    picture = news_event_india_troops
+   
+    is_triggered_only = yes
+	
+	option = { 
+	    name = ddr.14.o1
+        add_political_power = -20
+		add_national_unity = -0.05
+		add_popularity = {
+			ideology = communism
+			popularity = -0.1
+		}
+	}
+}
+
+# WGR - Berlin wall broken down
+country_event = {
+    id = ddr.15
+    title = ddr.15.t
+    Desc = ddr.15.d
+    picture = news_event_india_troops
+   
+    fire_only_once = yes
+	
+	trigger = {
+	    tag = WGR
+		communism > 0.5
+		NOT = {
+			has_government = communism
+		}
+		DDR = {
+		    has_completed_focus = DDR_influence_western_population
+		}
+	}
+	
+	option = {
+	    name = ddr.15.o1
+		set_politics = {
+			ruling_party = communism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.2
+		}
+		if = {
+		    limit = {
+			    is_ai = no
+			}
+			annex_country = { target = DDR } 
+		}
+		if = {
+		    limit = {
+			    is_ai = yes
+			}
+			DDR = {
+		        country_event = { days = 3  id = ddr.16 } 
+		    }
+		}
+	}
+}
+
+# Berlin wall comes down, west germans begging to get into the east
+country_event = {
+    id = ddr.16
+    title = ddr.16.t
+    Desc = ddr.16.d
+    picture = news_event_india_troops
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = ddr.16.o1
+		annex_country = { target = WGR } 
+		add_national_unity = 0.2
+		add_political_power = 200
+	}
+}
+
+# WGR - DDR proposes one country two systems unification
+country_event = {
+    id = ddr.17
+    title = ddr.17.t
+    Desc = ddr.17.d
+    picture = news_event_india_troops
+	
+	is_triggered_only = yes
+	
+	option = { #Accept
+	    name = ddr.17.o1
+		ai_chance = {
+			factor = 50
+		}
+		if = {
+		    limit = {
+			    is_ai = no
+			}
+			puppet = DDR
+			DDR = {
+			    set_politics = {
+			        ruling_party = communism
+			        elections_allowed = no
+		        }
+		        add_popularity = {
+			        ideology = communism
+			        popularity = 0.5
+		        }
+			}
+			
+		}
+		if = {
+		    limit = {
+			    is_in_faction_with = USA
+			}
+			USA = {
+			    remove_from_faction = WGR
+			}
+		}
+		if = {
+		    limit = {
+			    DDR = { is_in_faction_with = SOV }
+			}
+			SOV = {
+			    remove_from_faction = DDR
+			}
+		}
+		if = {
+		    limit = {
+			    is_ai = yes
+			}
+			DDR = {
+		        country_event = { days = 1  id = ddr.18 } 
+		    }
+			
+		}
+		DDR = {
+		    set_cosmetic_tag = DDR_onecountrytwosystems
+		}
+		set_cosmetic_tag = WGR_onecountrytwosystems
+	}
+	
+	option = { #Refuse
+	    name = ddr.17.o2
+		ai_chance = {
+			factor = 50
+		}
+		DDR = {
+		    country_event = { days = 1  id = ddr.19 } 
+	    }
+	}
+}
+
+# West Germany accepts one country two systems
+country_event = {
+    id = ddr.18
+    title = ddr.18.t
+    Desc = ddr.18.d
+    picture = news_event_india_troops
+	
+	is_triggered_only = yes
+	
+	option = { #Accept
+	    name = ddr.18.o1
+		puppet = WGR
+	    WGR = {
+			set_politics = {
+			    ruling_party = democratic
+			    elections_allowed = yes
+		    }
+		    add_popularity = {
+			    ideology = democratic
+			    popularity = 0.5
+		    }
+	    }
+	}
+}
+
+# West Germany denies unifying under one country two systems
+country_event = {
+    id = ddr.19
+    title = ddr.19.t
+    Desc = ddr.19.d
+    picture = news_event_india_troops
+   
+    is_triggered_only = yes
+	
+	option = { 
+	    name = ddr.19.o1
+        add_political_power = -20
+		add_national_unity = -0.05
+		add_popularity = {
+			ideology = communism
+			popularity = -0.1
+		}
+	}
+}
+
+# Top leadership killed. Volkskammer takes over
+country_event = {
+    id = ddr.20
+    title = ddr.20.t
+    Desc = ddr.20.d
+    picture = news_event_india_troops
+   
+    is_triggered_only = yes
+	
+	option = { 
+	    name = ddr.20.o1
+        create_country_leader = {
+			name = "Volkskammer"
+			desc = ""
+			picture = "Portrait_DDR_Volkskammer.dds"
+			expire = "1992.1.1"
+			ideology = stalinism
+			traits = {
+				
+			}
+		}
+	}
+}
+
+# Nazi coup
+country_event = {
+    id = ddr.21
+    title = ddr.21.t
+    Desc = ddr.21.d
+    picture = news_event_india_troops
+   
+    is_triggered_only = yes
+	
+	option = { 
+	    name = ddr.21.o1
+        remove_ideas = ddr_country_in_chaos
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.5
+		}
+		create_country_leader = {
+			name = "Transitional Authority"
+			desc = ""
+			picture = "Portrait_DDR_Transitional_Authority.dds"
+			expire = "1992.1.1"
+			ideology = nazism
+			traits = {
+				
+			}
+		}
+		SOV = { end_puppet = DDR }
+		SOV = {
+		    country_event = { days = 2  id = ddr.23 } 
+	    }
+		add_ideas = ddr_idea_lack_of_leadership
+	}
+}
+
+# Choose a leader
+country_event = {
+    id = ddr.22
+    title = ddr.22.t
+    Desc = ddr.22.d
+    picture = news_event_india_troops
+   
+    is_triggered_only = yes
+	
+	option = { #Donitz
+	    name = ddr.22.o1
+		ai_chance = {
+			factor = 80
+		}
+        create_country_leader = {
+			name = "Karl Donitz"
+			desc = ""
+			picture = "Portrait_DDR_Karl_Donitz.dds"
+			expire = "1992.1.1"
+			ideology = nazism
+			traits = {
+				
+			}
+		}
+		remove_ideas = ddr_idea_lack_of_leadership
+	}
+	
+	option = { #Speer
+	    name = ddr.22.o2
+		ai_chance = {
+			factor = 10
+		}
+        create_country_leader = {
+			name = "Albert Speer"
+			desc = ""
+			picture = "Portrait_DDR_Albert_Speer.dds"
+			expire = "1992.1.1"
+			ideology = nazism
+			traits = {
+				
+			}
+		}
+		remove_ideas = ddr_idea_lack_of_leadership
+	}
+	option = { #von Krosigk
+	    name = ddr.22.o3
+		ai_chance = {
+			factor = 10
+		}
+        create_country_leader = {
+			name = "Lutz von Krosigk"
+			desc = ""
+			picture = "Portrait_DDR_Krosigk.dds"
+			expire = "1992.1.1"
+			ideology = nazism
+			traits = {
+				
+			}
+		}
+		remove_ideas = ddr_idea_lack_of_leadership
+	}
+}
+
+# Soviets - Nazi coup in east germany
+country_event = {
+    id = ddr.23
+    title = ddr.23.t
+    Desc = ddr.23.d
+    picture = news_event_india_troops
+   
+    is_triggered_only = yes
+	
+	option = { #Invade
+	    name = ddr.23.o1
+		ai_chance = {
+			factor = 80
+		}
+		declare_war_on = { target = DDR type = annex_everything }
+	}
+	
+	option = { #Let them be
+	    name = ddr.23.o2
+		ai_chance = {
+			factor = 20
+		}
+	}
+}
+
+# Poland - east german nazis want western poland back
+country_event = {
+    id = ddr.24
+    title = ddr.24.t
+    Desc = ddr.24.d
+    picture = news_event_india_troops
+   
+    is_triggered_only = yes
+	
+	option = { #Eastmark and Pommerania
+	    name = ddr.24.o1
+		ai_chance = {
+			factor = 25
+		}
+		DDR = {
+		    country_event = { days = 1  id = ddr.25 } 
+	    }
+	}
+	
+	option = { #All of it
+	    name = ddr.24.o2
+		ai_chance = {
+			factor = 5
+		}
+		DDR = {
+		    country_event = { days = 1  id = ddr.26 } 
+	    }
+	}
+	
+	option = { #Yeah nah
+	    name = ddr.24.o3
+		ai_chance = {
+			factor = 70
+		}
+		DDR = {
+		    country_event = { days = 1  id = ddr.27 } 
+	    }
+	}
+}
+
+# Poland will give us Eastmark and Pommerania
+country_event = {
+    id = ddr.25
+    title = ddr.25.t
+    Desc = ddr.25.d
+    picture = news_event_india_troops
+   
+    is_triggered_only = yes
+	
+	option = {  #Ok
+	    name = ddr.25.o1
+		ai_chance = {
+			factor = 80
+		}
+		transfer_state = 741
+		transfer_state = 63
+	}
+	
+	option = {  #Give them a second chance
+	    name = ddr.25.o2
+		ai_chance = {
+			factor = 20
+		}
+		POL = {
+		    country_event = { days = 1  id = ddr.28 } 
+	    }
+	}
+}
+
+# Poland accepts
+country_event = {
+    id = ddr.26
+    title = ddr.26.t
+    Desc = ddr.26.d
+    picture = news_event_india_troops
+   
+    is_triggered_only = yes
+	
+	option = {  
+	    name = ddr.26.o1
+		transfer_state = 741
+		transfer_state = 63
+		transfer_state = 66
+		transfer_state = 795
+                                transfer_state = 951
+                                transfer_state = 950
+	}
+}
+
+# Poland refuses
+country_event = {
+    id = ddr.27
+    title = ddr.27.t
+    Desc = ddr.27.d
+    picture = news_event_india_troops
+   
+    is_triggered_only = yes
+	
+	option = {  #Invade
+	    name = ddr.27.o1
+		ai_chance = {
+			factor = 45
+		}
+		declare_war_on = { target = POL type = annex_everything }
+		add_political_power = -50 
+	}
+	
+	option = {  #Back down
+	    name = ddr.27.o2
+		ai_chance = {
+			factor = 55
+		}
+		add_national_unity = -0.05 
+	}
+}
+
+# Poland - Eastern reich gives us a second chance after offering only a few states
+country_event = {
+    id = ddr.28
+    title = ddr.28.t
+    Desc = ddr.28.d
+    picture = news_event_india_troops
+   
+    is_triggered_only = yes
+	
+	option = {  #Fine have all of it
+	    name = ddr.28.o1
+		ai_chance = {
+			factor = 25
+		}
+		DDR = {
+		    country_event = { days = 1  id = ddr.29 } 
+	    }
+	}
+	
+	option = {  #Maybe, but yeah nah
+	    name = ddr.28.o2
+		ai_chance = {
+			factor = 75
+		}
+		DDR = {
+		    country_event = { days = 1  id = ddr.30 } 
+	    }
+		add_national_unity = 0.05
+	}
+}
+
+# Poland accepts after given second chance
+country_event = {
+    id = ddr.29
+    title = ddr.29.t
+    Desc = ddr.29.d
+    picture = news_event_india_troops
+   
+    is_triggered_only = yes
+	
+	option = {  
+	    name = ddr.29.o1
+		transfer_state = 741
+		transfer_state = 63
+		transfer_state = 66
+		transfer_state = 795
+                                transfer_state = 951
+                                transfer_state = 950
+	}
+}
+
+# Poland refuses after given second chance
+country_event = {
+    id = ddr.30
+    title = ddr.30.t
+    Desc = ddr.30.d
+    picture = news_event_india_troops
+   
+    is_triggered_only = yes
+	
+	option = {  #Invade
+	    name = ddr.30.o1
+		ai_chance = {
+			factor = 30
+		}
+		declare_war_on = { target = POL type = annex_everything }
+		add_political_power = -50 
+	}
+	
+	option = {  #Back down
+	    name = ddr.30.o2
+		ai_chance = {
+			factor = 70
+		}
+		add_national_unity = -0.05 
+	}
+}
+
+# West Germany - Eastern Reich offers unification, only available if wgr and ddr are fascist
+country_event = {
+    id = ddr.31
+    title = ddr.31.t
+    Desc = ddr.31.d
+    picture = news_event_india_troops
+   
+    is_triggered_only = yes
+	
+	option = {  #Of course
+	    name = ddr.31.o1
+		ai_chance = {
+			factor = 99
+		}
+		if = {
+		    limit = {
+			    WGR = {
+				    is_ai = yes
+				}
+			}
+			DDR = {
+				country_event = ddr.32 
+		    }
+		}
+		if = {
+		    limit = {
+			    WGR = {
+				    is_ai = no
+				 }
+			}
+			annex_country = { target = DDR }
+		}
+	}
+	
+	option = {  #No
+	    name = ddr.31.o2
+		ai_chance = {
+			factor = 1
+		}
+		DDR = {
+		    country_event = { days = 2  id = ddr.33 } 
+	    }
+	}
+}
+
+# West Germany accepts, reich unified
+country_event = {
+    id = ddr.32
+    title = ddr.32.t
+    Desc = ddr.32.d
+    picture = news_event_india_troops
+   
+    is_triggered_only = yes
+	
+	option = {  
+	    name = ddr.32.o1
+		annex_country = { target = WGR } 
+		add_national_unity = 0.2
+		add_political_power = 200
+	}
+}
+
+# West Germany refuses, war?
+country_event = {
+    id = ddr.33
+    title = ddr.33.t
+    Desc = ddr.33.d
+    picture = news_event_india_troops
+   
+    is_triggered_only = yes
+	
+	option = {  #No war
+	    name = ddr.33.o1
+		ai_chance = {
+			factor = 60
+		}
+		add_political_power = -10
+		add_national_unity = -0.05
+	}
+	
+	option = {  #Stab stab
+	    name = ddr.33.o2
+		ai_chance = {
+			factor = 40
+		}
+		add_political_power = -10
+		add_national_unity = -0.05
+		declare_war_on = { target = WGR type = annex_everything }
+	}
+}
+	
+# Berlin Spring
+country_event = {
+    id = ddr.34
+    title = ddr.34.t
+    Desc = ddr.34.d
+    picture = news_event_india_troops
+   
+    is_triggered_only = yes
+	
+	option = { 
+	    name = ddr.34.o1
+		add_political_power = 100
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.4
+		}
+		remove_ideas = ddr_idea_mass_emigration
+		SOV = {
+		    country_event = { days = 2  id = ddr.35 } 
+	    }
+		SOV = { end_puppet = DDR }
+
+	}
+}
+
+# Soviets - Berlin Spring
+country_event = {
+    id = ddr.35
+    title = ddr.35.t
+    Desc = ddr.35.d
+    picture = news_event_india_troops
+   
+    is_triggered_only = yes
+	
+	option = { #Invade
+	    name = ddr.35.o1
+		ai_chance = {
+			factor = 60
+		}
+		declare_war_on = { target = DDR type = annex_everything }
+	}
+	
+	option = { #Let them be
+	    name = ddr.35.o2
+		ai_chance = {
+			factor = 40
+		}
+	}
+}
+
+# West Germany - New democratic government in east offers reunification
+country_event = {
+    id = ddr.36
+    title = ddr.36.t
+    Desc = ddr.36.d
+    picture = news_event_india_troops
+   
+    is_triggered_only = yes
+	
+	option = {  #Of course
+	    name = ddr.36.o1
+		ai_chance = {
+			factor = 100
+		}
+		if = {
+		    limit = {
+			    WGR = {
+				    is_ai = yes
+				}
+			}
+			DDR = {
+				country_event = { days = 1 id = ddr.37 } 
+			}
+		}
+		if = {
+		    limit = {
+			    WGR = {
+				    is_ai = no
+				}
+			}
+			annex_country = { target = DDR } 
+		}
+	}
+	
+	option = {  #No
+	    name = ddr.36.o2
+		ai_chance = {
+			factor = 0
+		}
+		DDR = {
+		    country_event = { days = 2  id = ddr.38 } 
+	    }
+	}
+}
+	
+# West Germany accepts
+country_event = {
+    id = ddr.37
+    title = ddr.37.t
+    Desc = ddr.37.d
+    picture = news_event_india_troops
+   
+    is_triggered_only = yes	
+	
+	option = {  
+	    name = ddr.37.o1
+		annex_country = { target = WGR } 
+		add_national_unity = 0.2
+	}
+}
+
+# West Germany refuses
+country_event = {
+    id = ddr.38
+    title = ddr.38.t
+    Desc = ddr.38.d
+    picture = news_event_india_troops
+   
+    is_triggered_only = yes	
+	
+	option = {  
+	    name = ddr.38.o1
+		add_political_power = -30
+	}
+}
+
+country_event = {
+	id = ddr.39
+	title = ddr.39.t
+	desc = ddr.39.d
+	picture = GFX_report_event_bruder1
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = DDR
+		date > 1972.8.15
+	}	
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = ddr.39.a
+		WGR  = { country_event = { id = wgr.10 hours = 6 } }
+		WGR  = { country_event = { id = ddr.40 days = 1 } }
+	}
+	option = {
+		name = ddr.39.b
+	}
+
+}
+
+news_event = {
+	id = ddr.40
+	title = ddr.40.t
+	desc = ddr.40.d
+	picture = news_event_bruder2
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = "Dear god"
+	}
+}
+
+country_event = {
+	id = ddr.41
+	title = ddr.41.t
+	desc = ddr.41.d
+	picture = GFX_report_event_bruder1
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	
+	option = {
+		name = ddr.41.a
+	}
+	option = {
+		name = ddr.41.b
+		WGR	= { country_event = wgr.11 }
+		WGR	= { news_event = ddr.42 }
+	}
+
+}
+
+
+	
+	
+
+
+
+

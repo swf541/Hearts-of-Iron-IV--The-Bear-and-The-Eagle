@@ -1,0 +1,410 @@
+﻿###########################
+# French Events
+###########################
+
+add_namespace = french_elections
+add_namespace = De_Galle
+add_namespace = Concordat
+add_namespace = FRA_CIVIL_WAR
+add_namespace = Evain_Accords
+add_namespace = france_junta
+add_namespace = algeirs
+add_namespace = may_68
+
+# Brazil Election 1965
+country_event = {
+	id = french_elections.2
+	title = "1965 Presidential Elections"
+	desc = french_elections.2.d
+	picture = GFX_report_event_brazil_election_1955
+	
+	trigger = {
+		tag = FRA
+		has_civil_war = no
+		date > 1965.12.3
+		date < 1966.10.15
+		NOT = { has_country_flag = french_elections_1965 }
+	}
+
+	mean_time_to_happen = { days = 2 }
+
+	immediate = {
+		set_country_flag = french_elections_1965
+	}
+
+	# Charles de Gaulle
+	option = {
+		name = "Charles de Gaulle"
+		create_country_leader = {
+			name = "Charles de Gaulle"
+			picture = "Portrait_France_Charles_de_Gaulle.dds"
+			expire = "1970.11.9"
+			ideology = gaullist
+		}
+		set_global_flag = de_galle_1965
+		set_politics = {
+			ruling_party = conservative
+			elections_allowed = yes
+		}
+		ai_chance = {
+			factor = 70
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 1
+			}
+		}
+	}
+	# François Mitterrand
+	option = {
+		name = "François Mitterrand"
+	create_country_leader = {
+		name = "François Mitterrand"
+		picture = "Portrait_France_Francois_Mitterrand.dds"
+		expire = "1996.1.8"
+		ideology = socialism
+	}
+				set_global_flag = mitterand_1965
+		set_politics = {
+			ruling_party = socialist
+			elections_allowed = yes
+		}
+		ai_chance = {
+			factor = 15
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+	}
+}
+
+# Brazil Election 1969
+country_event = {
+	id = french_elections.3
+	title = "1969 Presidential Elections"
+	desc = french_elections.3.d
+	picture = GFX_report_event_brazil_election_1960
+	
+	trigger = {
+		tag = FRA
+		has_civil_war = no
+		date > 1969.6.13
+		date < 1969.10.15
+		NOT = { has_country_flag = french_elections_1969 }
+	}
+
+	mean_time_to_happen = { days = 2 }
+
+	immediate = {
+		set_country_flag = french_elections_1969
+	}
+
+	# Georges Pompidou
+	option = {
+		name = "Georges Pompidou"
+		create_country_leader = {
+			name = "Georges Pompidou"
+			picture = Portrait_France_Georges_Pompidou.dds
+			ideology = gaullist
+		}
+		set_politics = {
+			ruling_party = conservative
+			elections_allowed = yes
+		}
+		set_global_flag = pompidou_1969
+		ai_chance = {
+			factor = 15
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 100
+			}
+		}
+	}
+	# Alain Poher
+	option = {
+		name = "Alain Poher"
+		create_country_leader = {
+			name = "Alain Poher"
+			picture = Protrait_Alain_Poher.dds
+			ideology = christian_democracy
+		}
+		set_global_flag = alain_poher_1969
+		set_politics = {
+			ruling_party = Christian_Democratic
+			elections_allowed = yes
+		}
+
+		ai_chance = {
+			factor = 15
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+	}
+}
+country_event = {
+	id = De_Galle.9
+	title = "Legislative Elections"
+	desc = "Legislative Elections"
+	picture = GFX_report_event_brazil_election_1950
+	
+	trigger = {
+		tag = FRA
+	}
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = "Resignation of De Galle"
+		add_political_power = 300
+		add_national_unity = 0.10
+	}
+}
+country_event = {
+	id = De_Galle.10 
+	title = "Resignation of De Galle"
+	desc = "Resignation of De Galle"
+	picture = GFX_report_event_brazil_election_1950
+	
+	trigger = {
+		tag = FRA
+	}
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = "Resignation of De Galle"
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Alain Poher"
+			picture = Protrait_Alain_Poher.dds
+			ideology = christian_democracy
+		}
+		set_politics = {
+			ruling_party = Christian_Democratic
+			elections_allowed = yes
+		}
+	}
+}
+country_event = {
+	id = Concordat.1
+	title = "Invitation to the Concordat"
+	desc = "Invitation to the Concordat"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Agree"
+		FRA = { add_to_faction = ROOT }
+		ai_chance = {
+			factor = 99
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 1
+		}
+		name = "Decline"
+
+	}
+}
+news_event = {
+	id = france_junta.1
+	title = "Execution of De Galle"
+	desc = royal.2.d
+	picture = GFX_news_event_Japanese_Palace #Change
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "How Barbaric"
+		trigger = {
+			has_idea = nato_member
+		}
+		
+	}
+
+	option = {
+		name = "Death to the Imperialist Scum"
+		trigger = {
+			OR = {
+				tag = SOV
+				is_in_faction_with = SOV	
+			}
+		}
+	}
+	option = {
+		name = "Death to the Imperialist Scum"
+		trigger = {
+			OR = {
+				tag = PRC
+				is_in_faction_with = PRC
+			}
+		}
+	}
+	option = {
+		name = "How Barbaric"
+		trigger = {
+			NOT = {
+				tag = SOV
+				is_in_faction_with = SOV	
+				has_idea = nato_member
+			}
+		}
+	}
+}
+news_event = {
+	id = france_junta.2
+	title = "Execution of the French Communist Leadership"
+	desc = royal.2.d
+	picture = GFX_news_event_Japanese_Palace #Change
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "How Barbaric"
+		trigger = {
+			has_idea = nato_member
+		}
+		
+	}
+
+	option = {
+		name = "Death to the Imperialist Scum"
+		trigger = {
+			OR = {
+				tag = SOV
+				is_in_faction_with = SOV	
+			}
+		}
+	}
+	option = {
+		name = "Death to the Imperialist Scum"
+		trigger = {
+			OR = {
+				tag = PRC
+				is_in_faction_with = PRC
+			}
+		}
+	}
+	option = {
+		name = "How Barbaric"
+		trigger = {
+			NOT = {
+				tag = SOV
+				is_in_faction_with = SOV	
+				has_idea = nato_member
+			}
+		}
+	}
+}
+country_event = {
+	id = Evain_Accords.1
+	title = "Evain Accords"
+	desc = "Evain Accords"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Sign the Accords"
+		release = ALG
+		set_autonomy = { target = ALG autonomy_state = autonomy_free }	
+	}
+}
+country_event = {
+	id = algeirs.1
+	title = "Algeirs Putsch"
+	desc = "Algeirs Putsch"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Failure of the Putsch"
+		add_political_power = 300
+		set_country_flag = coup_fail
+	}
+	option = {
+		name = "Success of the Putsch"
+		add_political_power = 300
+		set_politics = { ruling_party = neutrality elections_allowed = no }	
+		set_country_flag = coup_success
+	}
+	option = {
+		name = "Civil War (Back Communists)"
+		add_political_power = 300
+		set_politics = { ruling_party = communism elections_allowed = no }
+		start_civil_war = { ideology = fascism size = 0.45 }			
+		set_country_flag = coup_success
+		set_country_flag = french_civil_war
+	}	
+	option = {
+		name = "Civil War (Back OAS)"
+		add_political_power = 300
+		set_politics = { ruling_party = fascism elections_allowed = no }
+		start_civil_war = { ideology = communism size = 0.45 }			
+		set_country_flag = coup_success
+		set_country_flag = french_civil_war
+	}
+
+	immediate ={
+		set_country_flag = FRA_MAY_68
+	}
+}
+country_event = {
+	id = FRA_CIVIL_WAR.5 
+	title = "French Civil War"
+	desc = "French Civil War"
+
+	is_triggered_only = yes
+	option = {
+		name = "Civil War (Back Military)"
+		add_political_power = 300
+		set_politics = { ruling_party = neutrality elections_allowed = no }	
+	}
+	option = {
+		name = "Civil War (Back Communists)"
+		add_political_power = 300
+		set_politics = { ruling_party = communism elections_allowed = no }
+		start_civil_war = { ideology = fascism size = 0.45 }			
+		set_country_flag = coup_success
+	}	
+	option = {
+		name = "Civil War (Back OAS)"
+		add_political_power = 300
+		set_politics = { ruling_party = fascism elections_allowed = no }
+		start_civil_war = { ideology = communism size = 0.45 }			
+		set_country_flag = coup_success
+	}	
+}
+
+country_event = {
+	id = may_68.1
+	title = "May 1968"
+	desc = "May 1968"
+	picture = GFX_report_event_brazil_election_1955
+	
+	trigger = {
+		tag = FRA
+		has_country_flag = de_galle_1965
+		date > 1968.4.30
+		date < 1969.10.15
+		NOT = { has_country_flag = FRA_MAY_68 }
+	}
+
+	mean_time_to_happen = { days = 2 }
+
+	immediate = {
+		set_country_flag = FRA_MAY_68
+	}
+
+	# Charles de Gaulle
+	option = {
+		name = "Concerning Development"
+	}
+}

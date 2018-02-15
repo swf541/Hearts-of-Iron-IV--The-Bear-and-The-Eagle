@@ -1,0 +1,32 @@
+﻿#####################
+# Malaysia Events
+#####################
+
+add_namespace = mal
+
+# The unification of Austria, Question
+country_event = {
+	id = mal.1
+	hidden = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		MLA = { controls_state = 784 }
+		MLA = { controls_state = 792 }
+		MLA = { controls_state = 791 } 
+		MAL = { has_capitulated = yes }
+	}
+
+	mean_time_to_happen = {
+		days = 3
+	}
+
+	immediate = {
+		ENG = { white_peace = MLA }
+		MLA =  { annex_country = { target = MAL transfer_troops = no } set_capital = 784 }
+	}
+
+	option = {}
+
+}

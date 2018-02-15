@@ -1,0 +1,102 @@
+﻿###########################
+# Pakistan Events
+###########################
+
+add_namespace = pakistan
+
+#Surrender when India has taken too much land
+country_event = {
+	id = pakistan.1
+	title = pakistan.1.t
+	desc = pakistan.1.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	trigger = {
+		tag = RAJ
+		has_war_with = PAK
+		surrender_progress > 0.25
+		has_civil_war = no
+		is_in_faction = no
+		RAJ = { has_completed_focus = RAJ_First_India_Pakistan_War }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	fire_only_once = yes
+
+	#Surrender and offer territory
+	option = {
+		name = pakistan.1.a
+
+		PAK = {
+			country_event = { id = pakistan.2 }
+		}
+		custom_effect_tooltip = pakistan.1.a_tt
+		effect_tooltip = {
+			PAK = { 
+				white_peace = {
+					tag = RAJ 
+					message = RAJ_agree_peace 
+				} 
+			}
+
+		}
+	}
+}
+
+#Pakistan response to India surrender
+country_event = {
+	id = pakistan.2
+	title = pakistan.2.t
+	desc = pakistan.2.d
+	picture = GFX_report_event_finnish_soldiers_snow
+	
+	is_triggered_only = yes
+
+	#Accept surrender
+	option = {
+		name = pakistan.2.a
+
+		white_peace = PAK
+	}
+}
+
+#Surrender when India has taken too much land
+country_event = {
+	id = pakistan.3
+	title = pakistan.3.t
+	desc = pakistan.3.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	trigger = {
+		tag = RAJ
+		has_war_with = PAK
+		surrender_progress > 0.25
+		has_civil_war = no
+		is_in_faction = no
+		RAJ = { has_completed_focus = RAJ_Second_India_Pakistan_War }
+	}
+
+	mean_time_to_happen = { days = 3 }
+
+	fire_only_once = yes
+
+	#Surrender and offer territory
+	option = {
+		name = pakistan.3.a
+
+		PAK = {
+			country_event = { id = pakistan.2 }
+		}
+		custom_effect_tooltip = pakistan.3.a_tt
+		effect_tooltip = {
+			PAK = { 
+				white_peace = {
+					tag = RAJ 
+					message = RAJ_agree_peace 
+				} 
+			}
+
+		}
+	}
+}

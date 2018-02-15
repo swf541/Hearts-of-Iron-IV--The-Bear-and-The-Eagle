@@ -1,0 +1,1071 @@
+﻿########################
+# British Events
+########################
+
+add_namespace = eng
+
+# The Reunification of Austria
+country_event = {
+	id = eng.1
+	title = eng.1.t
+	desc = eng.1.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = eng.1.a
+		set_global_flag = eng_yes_austria
+		ai_chance = {
+			factor = 90
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 1
+			}
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+		name = eng.1.b
+		set_global_flag = eng_no_austria
+	}
+}
+
+# UN recognition of PRC
+country_event = {
+	id = eng.2
+	title = eng.2.t
+	desc = eng.2.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = eng.2.a
+		set_global_flag = eng_yes_prc_un_recognition
+		ai_chance = {
+			factor = 15
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 1
+		}
+		name = eng.2.b
+		set_global_flag = eng_no_prc_un_recognition
+	}
+}
+
+country_event = {
+  id = eng.3
+	title = eng.3.t
+	desc = eng.3.d
+	picture = GFX_report_BCR_NATO_says_no
+
+	is_triggered_only = yes
+
+	option = {
+    ai_chance = {
+		  factor = 100
+		}
+		name = eng.3.a
+		add_national_unity = 0.1
+	}
+}
+
+country_event = {
+  id = eng.4
+	title = eng.4.t
+	desc = eng.4.d
+  picture = GFX_news_event_czech_uprising_1968
+
+	is_triggered_only = yes
+
+
+	option = {
+	  ai_chance = {
+		  factor = 100
+	}
+	name = eng.4.a
+	  add_national_unity = -0.2
+	  add_political_power = 25
+  }
+}
+
+
+
+
+
+
+##############################################################################################################
+# Cold War English Election Event File #
+################################
+
+add_namespace = CWelect
+	
+# - Election of 1950 - Clement Attlee v. Winston Churchill -
+
+country_event = {
+    id = CWelect.1
+	title = CWelect.1.t
+	desc = CWelect.1.d
+	picture = GFX_report_event_usa_election_generic
+	
+	fire_only_once = yes
+	
+	is_triggered_only = no
+	
+	mean_time_to_happen = {
+	        days = 30
+			}
+	trigger = {
+	    tag = ENG
+		
+		date > 1950.1.1
+		date < 1951.1.1
+	}
+	
+	option = {
+	    name = CWelect.1.a
+		ai_chance = {
+		    factor = 50
+		}
+	}
+	
+	option = {
+	    name = CWelect.1.b
+		ai_chance = {
+		    factor = 50
+		}
+		set_politics = { ruling_party = conservative elections_allowed = yes }
+		create_country_leader = {
+		    name = "Winston Churchill"
+			desc = "churchill"
+			picture = "Portrait_Britain_Winston_Churchill.dds"
+			expire = "1965.1.1"
+			ideology = conservatism
+		}
+	}
+}
+
+
+# - Election of 1951 - Clement Attlee v. Winston Churchill. - Snap Election -
+
+country_event = {
+    id = CWelect.2
+	title = CWelect.2.t
+	desc = CWelect.2.d
+	picture = GFX_report_event_usa_election_generic
+	
+	fire_only_once = yes
+	
+	is_triggered_only = no
+	
+	mean_time_to_happen = {
+	        days = 30
+			}
+	trigger = {
+	    tag = ENG
+		
+		date > 1951.1.1
+		date < 1952.1.1
+	}
+	
+	option = {
+	    name = CWelect.2.a
+		ai_chance = {
+		    factor = 50
+		}
+		
+		set_politics = { ruling_party = socialist elections_allowed = yes }
+	}
+	
+	option = {
+	    name = CWelect.2.b
+		ai_chance = {
+		    factor = 50
+		}
+		set_politics = { ruling_party = conservative elections_allowed = yes }
+		create_country_leader = {
+		    name = "Winston Churchill"
+			desc = "churchill"
+			picture = "Portrait_Britain_Winston_Churchill.dds"
+			expire = "1965.1.1"
+			ideology = conservatism
+		}
+	}
+}
+
+
+# - Election of 1955 & Resignation of Winston Churchill - 
+
+country_event = {
+    id = CWelect.3
+	title = CWelect.3.t
+	desc = CWelect.3.d
+	picture = GFX_report_event_usa_election_generic
+	
+	fire_only_once = yes
+	
+	is_triggered_only = no
+	
+	mean_time_to_happen = {
+	        days = 30
+			}
+	trigger = {
+	    tag = ENG
+		
+		date > 1955.1.1
+		date < 1956.1.1
+	}
+	
+	option = {
+	    name = CWelect.3.a
+		ai_chance = {
+		    factor = 50
+		}
+		set_country_flag = Anthony_Eden_flag
+		create_country_leader = {
+		    name = "Anthony Eden"
+			desc = "anthony_eden"
+			picture = "Portrait_Britain_Anthony_Eden.dds"
+			expire = "1977.1.1"
+			ideology = conservatism
+		}
+	}
+	
+	option = {
+	    name = CWelect.3.b
+		ai_chance = {
+		    factor = 50
+		}
+		set_politics = { ruling_party = socialist elections_allowed = yes }
+		
+	}
+}
+
+
+# - Resignation of Anthony Eden - 
+
+country_event = {
+    id = CWelect.4
+	title = CWelect.4.t
+	desc = CWelect.4.d
+	picture = GFX_report_event_usa_election_generic
+	
+	fire_only_once = yes
+	
+	is_triggered_only = no
+	
+	mean_time_to_happen = {
+	        days = 30
+			}
+	trigger = {
+	    tag = ENG
+		
+		date > 1957.1.1
+		date < 1958.1.1
+		has_country_flag = Anthony_Eden_flag 
+	}
+	
+	option = {
+	    name = CWelect.4.a
+		ai_chance = {
+		    factor = 100
+		}
+		create_country_leader = {
+		    name = "Harold Macmillian"
+			desc = "Harold_Macmillian"
+			picture = "Portrait_Britain_Harold_Macmillian.dds"
+			expire = "2010.1.1"
+			ideology = conservatism
+		}
+	}
+}
+
+
+# - Election of 1959 - Harold Macmillian v. Hugh Gaitskell
+
+country_event = {
+    id = CWelect.5
+	title = CWelect.5.t
+	desc = CWelect.5.d
+	picture = GFX_report_event_usa_election_generic
+	
+	fire_only_once = yes
+	
+	is_triggered_only = no
+	
+	mean_time_to_happen = {
+	        days = 30
+			}
+	trigger = {
+	    tag = ENG
+		
+		date > 1959.1.1
+		date < 1960.1.1
+	}
+	
+	option = {
+	    name = CWelect.5.a
+		ai_chance = {
+		    factor = 50
+		}
+		set_country_flag = Harold_Macmillian_flag
+		create_country_leader = {
+		    name = "Harold Macmillian"
+			desc = "Harold_Macmillian"
+			picture = "Portrait_Britain_Harold_Macmillian.dds"
+			expire = "2010.1.1"
+			ideology = conservatism
+		}
+	}
+	
+	option = {
+	    name = CWelect.5.b
+		ai_chance = {
+		    factor = 50
+		}
+		set_country_flag = Hugh_Gaitskell_flag
+		set_politics = { ruling_party = socialist elections_allowed = yes }
+		create_country_leader = {
+		    name = "Hugh Gaitskell"
+			desc = "Hugh_Gaitskell"
+			picture = "Portrait_Britain_Hugh_Gaitskell.dds"
+			expire = "1966.1.1"
+			ideology = socialism
+		}
+		
+	}
+}
+
+# - Resignation of Harold Macmillian -
+
+country_event = {
+    id = CWelect.6
+	title = CWelect.6.t
+	desc = CWelect.6.d
+	picture = GFX_report_event_usa_election_generic
+	
+	fire_only_once = yes
+	
+	is_triggered_only = no
+	
+	mean_time_to_happen = {
+	        days = 30
+			}
+	trigger = {
+	    tag = ENG
+		
+		date > 1963.1.1
+		date < 1964.1.1
+		has_country_flag = Harold_Macmillian_flag
+	}
+	
+	option = {
+	    name = CWelect.6.a
+		ai_chance = {
+		    factor = 100
+		}
+		create_country_leader = {
+		    name = "Alec Douglas-Home"
+			desc = "Alec_Douglas-Home"
+			picture = "Portrait_Britain_Alec_Douglas_Home.dds"
+			expire = "1995.1.1"
+			ideology = conservatism
+		}
+	}
+}
+
+# - Death of Hugh Gaitskell - #
+
+country_event = {
+    id = CWelect.7
+	title = CWelect.7.t
+	desc = CWelect.7.d
+	picture = GFX_report_event_usa_election_generic
+	
+	fire_only_once = yes
+	
+	is_triggered_only = no
+	
+	mean_time_to_happen = {
+	        days = 30
+			}
+	trigger = {
+	    tag = ENG
+		
+		date > 1963.1.1
+		date < 1964.1.1
+		has_country_flag = Hugh_Gaitskell_flag
+	}
+	
+	option = {
+	    name = CWelect.7.a
+		ai_chance = {
+		    factor = 100
+		}
+		set_politics = { ruling_party = socialist elections_allowed = yes }
+		create_country_leader = {
+		    name = "Harold Wilson"
+			desc = "Harold_Wilson"
+			picture = "Portrait_Britain_Harold_Wilson.dds"
+			expire = "1995.1.1"
+			ideology = socialism
+		}
+	}
+}
+
+
+# - Election of 1964 - Harold Wilson v. Alec Douglas-Home - 
+
+country_event = {
+    id = CWelect.8
+	title = CWelect.8.t
+	desc = CWelect.8.d
+	picture = GFX_report_event_usa_election_generic
+	
+	fire_only_once = yes
+	
+	is_triggered_only = no
+	
+	mean_time_to_happen = {
+	        days = 30
+			}
+	trigger = {
+	    tag = ENG
+		
+		date > 1964.1.1
+		date < 1965.1.1
+	}
+	
+	option = {
+	    name = CWelect.8.a
+		ai_chance = {
+		    factor = 50
+		}
+		set_politics = { ruling_party = socialist elections_allowed = yes }
+		create_country_leader = {
+		    name = "Harold Wilson"
+			desc = "Harold_Wilson"
+			picture = "Portrait_Britain_Harold_Wilson.dds"
+			expire = "1995.1.1"
+			ideology = socialism
+		}
+	}
+	
+	option = {
+	    name = CWelect.8.b
+		ai_chance = {
+		    factor = 50
+		}
+		set_politics = { ruling_party = conservative elections_allowed = yes }
+		create_country_leader = {
+		    name = "Alec Douglas-Home"
+			desc = "Alec_Douglas-Home"
+			picture = "Portrait_Britain_Alec_Douglas_Home.dds"
+			expire = "1995.1.1"
+			ideology = conservatism
+		}
+		
+	}
+}
+
+# - Election of 1966 - Harold Wilson v. Edward Heath - Snap Election - 
+
+country_event = {
+    id = CWelect.9
+	title = CWelect.9.t
+	desc = CWelect.9.d
+	picture = GFX_report_event_usa_election_generic
+	
+	fire_only_once = yes
+	
+	is_triggered_only = no
+	
+	mean_time_to_happen = {
+	        days = 30
+			}
+	trigger = {
+	    tag = ENG
+		
+		date > 1966.1.1
+		date < 1967.1.1
+	}
+	
+	option = {
+	    name = CWelect.9.a
+		ai_chance = {
+		    factor = 50
+		}
+		set_politics = { ruling_party = socialist elections_allowed = yes }
+		create_country_leader = {
+		    name = "Harold Wilson"
+			desc = "Harold_Wilson"
+			picture = "Portrait_Britain_Harold_Wilson.dds"
+			expire = "1995.1.1"
+			ideology = socialism
+		}
+	}
+	
+	option = {
+	    name = CWelect.9.b
+		ai_chance = {
+		    factor = 50
+		}
+		set_politics = { ruling_party = conservative elections_allowed = yes }
+		create_country_leader = {
+		    name = "Edward Heath"
+			desc = "Edward_Heath"
+			picture = "Portrait_Britain_Edward_Heath.dds"
+			expire = "1995.1.1"
+			ideology = conservatism
+		}
+		
+	}	
+}
+
+# - Election of 1970 - Harold Wilson v. Edward Heath - Once More -
+
+country_event = {
+    id = CWelect.10
+	title = CWelect.10.t
+	desc = CWelect.10.d
+	picture = GFX_report_event_usa_election_generic
+	
+	fire_only_once = yes
+	
+	is_triggered_only = no
+	
+	mean_time_to_happen = {
+	        days = 30
+			}
+	trigger = {
+	    tag = ENG
+		
+		date > 1970.1.1
+		date < 1971.1.1
+	}
+	
+	option = {
+	    name = CWelect.10.a
+		ai_chance = {
+		    factor = 50
+		}
+		set_politics = { ruling_party = socialist elections_allowed = yes }
+		create_country_leader = {
+		    name = "Harold Wilson"
+			desc = "Harold_Wilson"
+			picture = "Portrait_Britain_Harold_Wilson.dds"
+			expire = "1995.1.1"
+			ideology = socialism
+		}
+	}
+	
+	option = {
+	    name = CWelect.10.b
+		ai_chance = {
+		    factor = 50
+		}
+		set_politics = { ruling_party = conservative elections_allowed = yes }
+		create_country_leader = {
+		    name = "Edward Heath"
+			desc = "Edward_Heath"
+			picture = "Portrait_Britain_Edward_Heath.dds"
+			expire = "1995.1.1"
+			ideology = conservatism
+		}
+		
+	}	
+}
+
+# - Election of 1974 - Hung Parliament Chaos - 
+
+country_event = {
+    id = CWelect.11
+	title = CWelect.11.t
+	desc = CWelect.11.d
+	picture = GFX_report_event_usa_election_generic
+	
+	fire_only_once = yes
+	
+	is_triggered_only = no
+	
+	mean_time_to_happen = {
+	        days = 30
+			}
+	trigger = {
+	    tag = ENG
+		
+		date > 1974.1.1
+		date < 1975.1.1
+	}
+	
+	option = {
+	    name = CWelect.11.a
+		ai_chance = {
+		    factor = 50
+		}
+		set_politics = { ruling_party = socialist elections_allowed = yes }
+		set_country_flag = Harold_Wilson_flag
+		create_country_leader = {
+		    name = "Harold Wilson"
+			desc = "Harold_Wilson"
+			picture = "Portrait_Britain_Harold_Wilson.dds"
+			expire = "1995.1.1"
+			ideology = socialism
+		}
+	}
+	
+	option = {
+	    name = CWelect.11.b
+		ai_chance = {
+		    factor = 50
+		}
+		set_country_flag = Edward_Heath_flag
+		set_politics = { ruling_party = conservative elections_allowed = yes }
+		create_country_leader = {
+		    name = "Edward Heath"
+			desc = "Edward_Heath"
+			picture = "Portrait_Britain_Edward_Heath.dds"
+			expire = "1995.1.1"
+			ideology = conservatism
+		}
+		
+	}	
+}
+
+# - Resignation of Harold Wilson - #
+
+country_event = {
+    id = CWelect.12
+	title = CWelect.12.t
+	desc = CWelect.12.d
+	picture = GFX_report_event_usa_election_generic
+	
+	fire_only_once = yes
+	
+	is_triggered_only = no
+	
+	mean_time_to_happen = {
+	        days = 30
+			}
+	trigger = {
+	    tag = ENG
+		
+		date > 1976.1.1
+		date < 1977.1.1
+		has_country_flag = Harold_Wilson_flag
+	}
+	
+	option = {
+	    name = CWelect.12.a
+		ai_chance = {
+		    factor = 100
+		}
+		set_politics = { ruling_party = socialist elections_allowed = yes }
+		create_country_leader = {
+		    name = "James Callaghan"
+			desc = "James_Callaghan"
+			picture = "Portrait_Britain_James_Callaghan.dds"
+			expire = "1995.1.1"
+			ideology = socialism
+		}
+	}
+}
+
+# - The Rise of Margret Thatcher - #
+
+country_event = {
+    id = CWelect.13
+	title = CWelect.13.t
+	desc = CWelect.13.d
+	picture = GFX_report_event_usa_election_generic
+	
+	fire_only_once = yes
+	
+	is_triggered_only = no
+	
+	mean_time_to_happen = {
+	        days = 30
+			}
+	trigger = {
+	    tag = ENG
+		
+		date > 1975.1.1
+		date < 1976.1.1
+		has_country_flag = Edward_Heath_flag
+	}
+	
+	option = {
+	    name = CWelect.13.a
+		ai_chance = {
+		    factor = 100
+		}
+		set_politics = { ruling_party = conservative elections_allowed = yes }
+		create_country_leader = {
+		    name = "Margret Thatcher"
+			desc = "Margret_Thatcher"
+			picture = "Portrait_Britain_Margaret_Thatcher.dds"
+			expire = "1995.1.1"
+			ideology = conservatism
+		}
+	}
+}
+
+# - Election of 1979 - Thatcher v. Callaghan 
+
+country_event = {
+    id = CWelect.14
+	title = CWelect.14.t
+	desc = CWelect.14.d
+	picture = GFX_report_event_usa_election_generic
+	
+	fire_only_once = yes
+	
+	is_triggered_only = no
+	
+	mean_time_to_happen = {
+	        days = 30
+			}
+	trigger = {
+	    tag = ENG
+		
+		date > 1974.1.1
+		date < 1975.1.1
+	}
+	
+	option = {
+	    name = CWelect.14.a
+		ai_chance = {
+		    factor = 50
+		}
+		set_politics = { ruling_party = conservative elections_allowed = yes }
+		create_country_leader = {
+		    name = "Margret Thatcher"
+			desc = "Margret_Thatcher"
+			picture = "Portrait_Britain_Margaret_Thatcher.dds"
+			expire = "1995.1.1"
+			ideology = conservatism
+		}
+	}
+	
+	option = {
+	    name = CWelect.14.b
+		ai_chance = {
+		    factor = 50
+		}
+		set_politics = { ruling_party = socialist elections_allowed = yes }
+		create_country_leader = {
+		    name = "James Callaghan"
+			desc = "James_Callaghan"
+			picture = "Portrait_Britain_James_Callaghan.dds"
+			expire = "1995.1.1"
+			ideology = socialism
+		}
+		
+	}	
+}
+
+# - Election of 1983 - Thatcher v. Foot
+
+country_event = {
+    id = CWelect.15
+	title = CWelect.15.t
+	desc = CWelect.15.d
+	picture = GFX_report_event_usa_election_generic
+	
+	fire_only_once = yes
+	
+	is_triggered_only = no
+	
+	mean_time_to_happen = {
+	        days = 30
+			}
+	trigger = {
+	    tag = ENG
+		
+		date > 1983.1.1
+		date < 1984.1.1
+	}
+	
+	option = {
+	    name = CWelect.15.a
+		ai_chance = {
+		    factor = 50
+		}
+		set_politics = { ruling_party = conservative elections_allowed = yes }
+		create_country_leader = {
+		    name = "Margret Thatcher"
+			desc = "Margret_Thatcher"
+			picture = "Portrait_Britain_Margaret_Thatcher.dds"
+			expire = "1995.1.1"
+			ideology = conservatism
+		}
+	}
+	
+	option = {
+	    name = CWelect.15.b
+		ai_chance = {
+		    factor = 50
+		}
+		set_politics = { ruling_party = socialist elections_allowed = yes }
+		create_country_leader = {
+		    name = "Michael Foot"
+			desc = "Michael_Foot"
+			picture = "Portrait_Britain_Michael_Foot.dds"
+			expire = "1995.1.1"
+			ideology = socialism
+		}
+		
+	}	
+}
+
+# - Election of 1987 - Thatcher v. Kinnock
+
+country_event = {
+    id = CWelect.16
+	title = CWelect.16.t
+	desc = CWelect.16.d
+	picture = GFX_report_event_usa_election_generic
+	
+	fire_only_once = yes
+	
+	is_triggered_only = no
+	
+	mean_time_to_happen = {
+	        days = 30
+			}
+	trigger = {
+	    tag = ENG
+		
+		date > 1987.1.1
+		date < 1988.1.1
+	}
+	
+	option = {
+	    name = CWelect.16.a
+		ai_chance = {
+		    factor = 50
+		}
+		set_politics = { ruling_party = conservative elections_allowed = yes }
+		set_country_flag = Margret_Thatcher_flag
+		create_country_leader = {
+		    name = "Margret Thatcher"
+			desc = "Margret_Thatcher"
+			picture = "Portrait_Britain_Margaret_Thatcher.dds"
+			expire = "1995.1.1"
+			ideology = conservatism
+		}
+	}
+	
+	option = {
+	    name = CWelect.16.b
+		ai_chance = {
+		    factor = 50
+		}
+		set_politics = { ruling_party = socialist elections_allowed = yes }
+		create_country_leader = {
+		    name = "Neil Kinnock"
+			desc = "Neil_Kinnock"
+			picture = "Portrait_Britain_Neil_Kinnock.dds"
+			expire = "1995.1.1"
+			ideology = socialism
+		}
+		
+	}	
+}
+
+# - Resignation of Margaret Thatcher - 
+
+country_event = {
+    id = CWelect.17
+	title = CWelect.17.t
+	desc = CWelect.17.d
+	picture = GFX_report_event_usa_election_generic
+	
+	fire_only_once = yes
+	
+	is_triggered_only = no
+	
+	mean_time_to_happen = {
+	        days = 30
+			}
+	trigger = {
+	    tag = ENG
+		
+		date > 1990.1.1
+		date < 1991.1.1
+		has_country_flag = Margret_Thatcher_flag 
+	}
+	
+	option = {
+	    name = CWelect.17.a
+		ai_chance = {
+		    factor = 100
+		}
+		set_politics = { ruling_party = conservative elections_allowed = yes }
+		create_country_leader = {
+		    name = "John Major"
+			desc = "John_Major"
+			picture = "Portrait_Britain_John_Major.dds"
+			expire = "2010.1.1"
+			ideology = conservatism
+		}
+	}
+}
+
+
+# - Election of 1992 - Major v. Kinnock - 
+
+country_event = {
+    id = CWelect.18
+	title = CWelect.18.t
+	desc = CWelect.18.d
+	picture = GFX_report_event_usa_election_generic
+	
+	fire_only_once = yes
+	
+	is_triggered_only = no
+	
+	mean_time_to_happen = {
+	        days = 30
+			}
+	trigger = {
+	    tag = ENG
+		
+		date > 1992.1.1
+		date < 1993.1.1
+	}
+	
+	option = {
+	    name = CWelect.18.a
+		ai_chance = {
+		    factor = 50
+		}
+		set_politics = { ruling_party = conservative elections_allowed = yes }
+		create_country_leader = {
+		    name = "John Major"
+			desc = "John_Major"
+			picture = "Portrait_Britain_John_Major.dds"
+			expire = "1995.1.1"
+			ideology = conservatism
+		}
+	}
+	
+	option = {
+	    name = CWelect.18.b
+		ai_chance = {
+		    factor = 50
+		}
+		set_politics = { ruling_party = socialist elections_allowed = yes }
+		set_country_flag = Neil_Kinnock_flag
+		create_country_leader = {
+		    name = "Neil Kinnock"
+			desc = "Neil_Kinnock"
+			picture = "Portrait_Britain_Neil_Kinnock.dds"
+			expire = "1995.1.1"
+			ideology = socialism
+		}
+		
+	}	
+}
+
+# - Resignation of Neil Kinnock - 
+
+country_event = {
+    id = CWelect.19
+	title = CWelect.19.t
+	desc = CWelect.19.d
+	picture = GFX_report_event_usa_election_generic
+	
+	fire_only_once = yes
+	
+	is_triggered_only = no
+	
+	mean_time_to_happen = {
+	        days = 30
+			}
+	trigger = {
+	    tag = ENG
+		
+		date > 1993.1.1
+		date < 1994.1.1
+		has_country_flag = Neil_Kinnock_flag
+	}
+	
+	option = {
+	    name = CWelect.19.a
+		ai_chance = {
+		    factor = 100
+		}
+		set_politics = { ruling_party = socialist elections_allowed = yes }
+		create_country_leader = {
+		    name = "Tony Blair"
+			desc = "Tony_Blair"
+			picture = "Portrait_Britain_Tony_Blair.dds"
+			expire = "2011.1.1"
+			ideology = socialism
+		}
+	}
+}
+
+# - Election of 1997 - Major v. Blair - 
+
+country_event = {
+    id = CWelect.20
+	title = CWelect.20.t
+	desc = CWelect.20.d
+	picture = GFX_report_event_usa_election_generic
+	
+	fire_only_once = yes
+	
+	is_triggered_only = no
+	
+	mean_time_to_happen = {
+	        days = 30
+			}
+	trigger = {
+	    tag = ENG
+		
+		date > 1997.1.1
+		date < 1998.1.1
+	}
+	
+	option = {
+	    name = CWelect.20.a
+		ai_chance = {
+		    factor = 25
+		}
+		set_politics = { ruling_party = conservative elections_allowed = yes }
+		create_country_leader = {
+		    name = "John Major"
+			desc = "John_Major"
+			picture = "Portrait_Britain_John_Major.dds"
+			expire = "1995.1.1"
+			ideology = conservatism
+		}
+	}
+	
+	option = {
+	    name = CWelect.20.b
+		ai_chance = {
+		    factor = 75
+		}
+		set_politics = { ruling_party = socialist elections_allowed = yes }
+		create_country_leader = {
+		    name = "Tony Blair"
+			desc = "Tony_Blair"
+			picture = "Portrait_Britain_Tony_Blair.dds"
+			expire = "1995.1.1"
+			ideology = socialism
+		}
+		
+	}	
+}
