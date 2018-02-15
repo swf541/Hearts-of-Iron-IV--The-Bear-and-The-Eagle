@@ -1,0 +1,694 @@
+focus_tree = {
+                        id = syria_focus
+ icon = GFX_goal_generic_fortify_city
+                        country = {
+                                          factor = 0
+ 
+                                           modifier = {
+                                                              add = 10
+                                                               tag = SYR
+                                           }
+                          }
+                       default = no
+    focus  = {
+              id = SYR_Polit_1
+              icon = GFX_goal_generic_fortify_city
+              x = 4
+              y = 0
+              cost = 10
+              ai_will_do = {
+                                                            factor= 12
+                                         }
+               completion_reward = {
+                554 = {
+                add_building_construction = {
+                        type = bunker
+                        level = 10
+                        province = 1074
+                        instant_build = yes
+                    }
+                }
+            }
+        }
+    focus = {
+             id = SYR_Polit_2
+             icon = GFX_goal_generic_forceful_treaty
+             prerequisite = { focus = SYR_Polit_1 }
+             x = 4
+             y = 1
+             cost = 10
+             ai_will_do = {
+                                                            factor= 12
+                                         }
+            completion_reward = {
+            add_timed_idea = {
+                    idea = SYR_Accepted_Refugees
+                    days = 365
+                }
+        }
+    }
+    focus = {
+             id = SYR_Polit_3
+             icon = GFX_goal_generic_navy_battleship
+             prerequisite = { focus = SYR_Polit_2 }
+             x = 4
+             y = 2
+             ai_will_do = {
+                                                            factor= 12
+                                         }
+             completion_reward = {
+                677 = {
+                add_building_construction = {
+                        type = naval_base
+                        level = 4
+                        province = 1088
+                        instant_build = yes
+                    }
+                }
+            }
+        }
+    focus = {
+             id = SYR_Polit_4
+             icon = GFX_goal_generic_forceful_treaty
+             mutually_exclusive = { focus = SYR_Polit_5 }
+             prerequisite = { focus = SYR_Polit_3 }
+             x = 3
+             y = 3
+             ai_will_do = {
+                                                            factor= 12
+                                         }
+            completion_reward = {
+            add_ideas = URA_Accepted
+        }
+    }
+    focus = {
+             id = SYR_Polit_5
+             icon = GFX_goal_generic_political_pressure
+             mutually_exclusive = { focus = SYR_Polit_4 }
+             prerequisite = { focus = SYR_Polit_3 }
+             x = 5
+             y = 3
+             ai_will_do = {
+                                                            factor= 12
+                                         }
+            completion_reward = {
+            add_political_power = 120
+        }
+    }
+    focus = {
+             id = SYR_Polit_6
+             icon = GFX_goal_generic_political_pressure
+             prerequisite = { focus = SYR_Polit_4 }
+             x = 3
+             y = 4
+             ai_will_do = {
+                                                            factor= 12
+                                         }
+            completion_reward = {
+            EGY = {
+                add_opinion_modifier = { target = SYR modifier = break_away_egypt }
+            }
+            TUR = {
+                add_opinion_modifier = { target = SYR modifier = break_away_turkey }
+            }
+            random_owned_state = {
+                limit = {
+                    free_building_slots = {
+                        building = arms_factory
+                        size > 1
+                        include_locked = yes
+                    }
+                }
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+    focus = {
+             id = SYR_Polit_7
+             icon = GFX_goal_generic_construct_infrastructure
+             prerequisite = { focus = SYR_Polit_6 focus = SYR_Polit_5 }
+             x = 4
+             y = 5           
+             ai_will_do = {
+                                                            factor= 12
+                                         }
+            completion_reward = {
+                677 = {
+                add_building_construction = {
+                        type = infrastructure
+                        level = 1
+                        instant_build = yes
+                    }
+                }
+            554 = {
+                add_building_construction = {
+                        type = infrastructure
+                        level = 3
+                        instant_build = yes
+                    }
+                }
+            }
+        }
+    focus = {
+             id = SYR_Polit_8
+             icon = GFX_goal_generic_more_territorial_claims
+             prerequisite = { focus = SYR_Polit_7 }
+             x = 4
+             y = 6
+             ai_will_do = {
+                                                            factor= 12
+                                         }
+            completion_reward = {
+            add_ideas = SYR_Lost_Golan
+        }
+    }
+    focus = {
+             id = SYR_Polit_9
+             icon = GFX_goal_generic_forceful_treaty
+             prerequisite = { focus = SYR_Polit_8 }
+             x = 4
+             y = 7
+             ai_will_do = {
+                                                            factor= 12
+                                         }
+            completion_reward = {
+            add_ideas = SYR_Accepted_Refugees_2
+        }
+    }
+    focus = {
+             id = SYR_Polit_10
+             icon = GFX_goal_generic_major_alliance
+             prerequisite = { focus = SYR_Polit_9 }
+             x = 4
+             y = 8
+             ai_will_do = {
+                                                            factor= 12
+                                         }
+            completion_reward = {
+            random_owned_state = {
+                limit = {
+                    free_building_slots = {
+                        building = arms_factory
+                        size > 1
+                        include_locked = yes
+                    }
+                }
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+    focus = {
+             id = SYR_Polit_11
+             icon = GFX_goal_generic_major_war
+             prerequisite = { focus = SYR_Polit_10 }
+             x = 4
+             y = 9
+             ai_will_do = {
+                                                            factor= 12
+                                         }
+            completion_reward = {
+            set_rule = { can_create_factions = yes }
+            create_faction = arab_alliance
+            }
+        EGY = {
+                add_opinion_modifier = { target = SYR modifier = arab_alliance}
+            }
+        }
+    focus = {
+             id = SYR_Polit_12
+             icon = GFX_goal_generic_attack_allies
+             prerequisite = { focus = SYR_Polit_11 }
+             x = 4
+             y = 10
+             ai_will_do = {
+                                                            factor= 12
+                                         }
+            completion_reward = {
+            create_wargoal = {
+                type = annex_everything
+                target = LEB
+            }
+            SAU = {
+                add_opinion_modifier = { target = SYR modifier = attack_lebanon }
+            }
+            PER = {
+                add_opinion_modifier = { target = SYR modifier = attack_lebanon_2 }
+            }
+        }
+    }
+    focus = {
+             id = SYR_Polit_13
+             icon = GFX_goal_generic_major_alliance
+             mutually_exclusive = { focus = SYR_Polit_14 }
+             prerequisite = { focus = SYR_Polit_12 }
+             x = 3
+             y = 11
+             ai_will_do = {
+                                                            factor= 12
+                                         }
+            completion_reward = {
+            SOV = {
+                add_opinion_modifier = { target = SYR modifier = join_warsaw_pact }
+            }
+            SYR = {
+                add_opinion_modifier = { target = SOV modifier = join_warsaw_pact }
+            }
+        }
+    }
+    focus = {
+             id = SYR_Polit_14
+             icon = GFX_goal_generic_major_alliance
+             mutually_exclusive = { focus = SYR_Polit_13 }
+             prerequisite = { focus = SYR_Polit_12 }
+             x = 5
+             y = 11
+             ai_will_do = {
+                                                            factor= 12
+                                         }
+            completion_reward = {
+            IRQ = {
+                add_opinion_modifier = { target = SYR modifier = invite_iraq }
+               }
+            SYR = {
+                add_opinion_modifier = { target = IRQ modifier = invite_iraq } 
+                }
+            SOV = {
+                add_opinion_modifier = { target = SYR modifier = invited_iraq }
+                }
+            }
+        }
+    focus = {
+             id = SYR_Ind_1
+             icon = GFX_goal_generic_oil_refinery
+             x = 10
+             y = 0
+             cost = 10
+             ai_will_do = {
+                                                            factor= 12
+                                         }
+            completion_reward = {
+            677 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = synthetic_refinery
+                    level = 1
+                    instant_build = yes
+                }
+            }  
+       
+        }
+    }
+    focus = {
+             id = SYR_Ind_2
+             icon = GFX_goal_generic_production
+             prerequisite = { focus = SYR_Ind_1 }
+             x = 10
+             y = 1
+             cost = 10
+             ai_will_do = {
+                                                            factor= 12
+                                         }
+            completion_reward = {
+            554 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = radar_station
+                    level = 1
+                    instant_build = yes
+                }
+            }  
+       
+        }
+    }
+    focus = {
+             id = SYR_Ind_3
+             icon = GFX_focus_research
+             prerequisite = { focus = SYR_Ind_2 }
+             x = 10
+             y = 2           
+             cost = 10
+             ai_will_do = {
+                                                            factor= 12
+                                         }
+            completion_reward = {
+            add_research_slot = 1
+                   
+            add_tech_bonus = {
+                name = industrial_bonus
+                bonus = 0.75
+                uses = 1
+                category = industry
+            }
+        }      
+    }
+    focus = {
+             id = SYR_Ind_4
+             icon = GFX_goal_generic_construct_civ_factory
+             prerequisite = { focus = SYR_Ind_3 }
+             x = 10
+             y = 3
+             cost = 10
+             ai_will_do = {
+                                                            factor= 12
+                                         }
+            completion_reward = {
+            677 = {
+                limit = {
+                    free_building_slots = {
+                        building = industrial_complex
+                        size > 1
+                        include_locked = yes
+                    }
+                }
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+    focus = {
+             id = SYR_Ind_5
+             icon = GFX_goal_generic_construct_civ_factory
+             prerequisite = { focus = SYR_Ind_4 }
+             x = 10
+             y = 4
+             cost = 10
+             ai_will_do = {
+                                                            factor= 12
+                                         }
+            completion_reward = {
+            554 = {
+                limit = {
+                    free_building_slots = {
+                        building = industrial_complex
+                        size > 1
+                        include_locked = yes
+                    }
+                }
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+    focus = {
+             id = SYR_Mil_1
+             icon = GFX_goal_generic_army_doctrines
+             x = 14
+             y = 0
+             cost = 10
+             ai_will_do = {
+                                                            factor= 12
+                                         }
+            completion_reward = {
+            add_ideas = SYR_Army_Org
+        army_experience = 10              
+                  add_tech_bonus = {
+                name = land_doc_bonus
+                bonus = 0.5
+                uses = 2
+                category = land_doctrine
+            }
+        }      
+    }
+    focus = {
+             id = SYR_Mil_2
+             icon = GFX_goal_generic_army_tanks
+             prerequisite = { focus = SYR_Mil_1 }
+             x = 14
+             y = 1
+             cost = 10
+             ai_will_do = {
+                                                            factor= 12
+                                         }
+            completion_reward = {
+            add_ideas = SYR_Tank_Pro
+            add_tech_bonus = {
+                bonus = 0.5
+                uses = 1
+                name = mech_army_bonus
+                technology = light_tanks_1
+                technology = light_tanks_2
+                technology = main_battle_tanks_1
+            }
+        }
+    }
+    focus = {
+             id = SYR_Mil_3
+             icon = GFX_goal_generic_military_deal
+             prerequisite = { focus = SYR_Mil_2 }
+             x = 14
+             y = 2
+             cost = 10
+             ai_will_do = {
+                                                            factor= 12
+                                         }
+            completion_reward = {
+             add_tech_bonus = {
+                bonus = 0.5
+                uses = 1
+                name = mech_army_bonus
+                technology = main_battle_tanks_2
+            }
+        }
+    }
+    focus = {
+             id = SYR_Mil_4
+             icon = GFX_goal_generic_allies_build_infantry
+             prerequisite = { focus = SYR_Mil_3 }
+             x = 14
+             y = 3
+             cost = 10
+             ai_will_do = {
+                                                            factor= 12
+                                         }
+            completion_reward = {
+             add_ideas = SYR_Soviet_Support
+             }
+        }
+    focus = {
+             id = SYR_Air_1
+             icon = GFX_goal_generic_air_doctrine
+             x = 18
+             y = 0
+             cost = 10
+             ai_will_do = {
+                                                            factor= 12
+                                         }
+            completion_reward = {
+             add_ideas = SYR_Air_Force_Est
+             add_tech_bonus = {
+                name = land_doc_bonus
+                bonus = 0.5
+                uses = 2
+                category = air_doctrine
+            }
+        }      
+    }
+    focus = {
+           id = SYR_Air_2
+           icon = GFX_goal_generic_military_deal
+           prerequisite = { focus = SYR_Air_1 }
+           x = 18
+           y = 1
+           cost = 10
+           ai_will_do = {
+                                                            factor= 12
+                                         }
+            completion_reward = {
+            add_tech_bonus = {
+                name = fighter_bonus
+                bonus = 0.5
+                uses = 1
+                technology = fighter2
+                technology = fighter3
+            }
+        }
+    }
+    focus = {
+             id = SYR_Air_3
+             icon = GFX_goal_generic_air_bomber
+             mutually_exclusive = { focus = SYR_Air_4 }
+             prerequisite = { focus = SYR_Air_2 }
+             x = 17
+             y = 2
+             cost = 10
+             ai_will_do = {
+                                                            factor= 12
+                                         }
+            completion_reward = {
+            add_tech_bonus = {
+                name = bomber_bonus
+                bonus = 0.5
+                uses = 1
+                category = tactical_bomber
+            }
+        }
+    }
+    focus = {
+             id = SYR_Air_4
+             icon = GFX_goal_generic_air_naval_bomber
+             mutually_exclusive = { focus = SYR_Air_3 }
+             prerequisite = { focus = SYR_Air_2 }
+             x = 19
+             y = 2
+             cost = 10
+             ai_will_do = {
+                                                            factor= 12
+                                         }
+            add_tech_bonus = {
+                name = nav_bomber_bonus
+                bonus = 0.5
+                uses = 1
+                category = naval_bomber_2
+                category = naval_bomber_3
+            }
+        }
+    focus = {
+             id = SYR_Nav_1
+             icon = GFX_goal_generic_build_navy
+             x = 22
+             y = 0
+             cost = 10
+             ai_will_do = {
+                                                            factor= 12
+                                         }
+            completion_reward = {
+                677 = {
+                add_building_construction = {
+                        type = naval_base
+                        level = 2
+                        province = 1088
+                        instant_build = yes
+                    }
+                }
+            }
+        }
+    focus = {
+             id = SYR_Nav_2
+             icon = GFX_goal_generic_navy_battleship
+             prerequisite = { focus = SYR_Nav_1 }
+             x = 22
+             y = 1
+             cost = 10
+             ai_will_do = {
+                                                            factor= 12
+                                         }
+            completion_reward = {
+            677 = {
+                limit = {
+                    free_building_slots = {
+                        building = dockyard
+                        size > 1
+                        include_locked = yes
+                    }
+                }
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = dockyard
+                    level = 2
+                    instant_build = yes
+                }
+            }    
+        }
+    }
+    focus = {
+             id = SYR_Nav_3
+             icon = GFX_goal_generic_navy_submarine
+             mutually_exclusive = { focus = SYR_Nav_4 }
+             prerequisite = { focus = SYR_Nav_2 }
+             x = 21
+             y = 2
+             cost = 10
+             ai_will_do = {
+                                                            factor= 12
+                                         }
+             completion_reward = {
+            add_tech_bonus = {
+                name = ss_bonus
+                bonus = 0.5
+                uses = 1
+                technology = improved_submarine
+                technology = advanced_submarine
+            }
+        677 = {
+                limit = {
+                    free_building_slots = {
+                        building = dockyard
+                        size > 1
+                        include_locked = yes
+                    }
+                }
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = dockyard
+                    level = 1
+                    instant_build = yes
+                }
+            }    
+        }
+    }
+    focus = {
+             id = SYR_Nav_4
+             icon = GFX_goal_generic_navy_doctrines_tactics
+             mutually_exclusive = { focus = SYR_Nav_3 }
+             prerequisite = { focus = SYR_Nav_2 }
+             x = 23
+             y = 2
+             cost = 10
+             ai_will_do = {
+                                                            factor= 12
+                                         }
+            completion_reward = {
+            add_tech_bonus = {
+                name = dd_bonus
+                bonus = 0.5
+                uses = 1
+                technology = improved_destroyer
+                technology = advanced_destroyer
+            }
+        677 = {
+                limit = {
+                    free_building_slots = {
+                        building = dockyard
+                        size > 1
+                        include_locked = yes
+                    }
+                }
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = dockyard
+                    level = 1
+                    instant_build = yes
+                }
+            }    
+        }
+    }

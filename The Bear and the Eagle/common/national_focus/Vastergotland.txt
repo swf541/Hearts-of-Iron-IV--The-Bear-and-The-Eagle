@@ -1,0 +1,306 @@
+focus_tree = {
+	id = Vastergotland
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = VGD
+		}
+	}
+	default = no
+	focus = {
+		id = VGD_independence
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		x = 20
+		y = 0
+		completion_reward = {
+					add_political_power = 200
+					add_national_unity = 0.3
+				}
+
+	}
+	focus = {
+		id = VGD_political_destiny
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = VGD_independence
+		}
+		x = 8
+		y = 2
+		completion_reward = {
+					add_political_power = 150
+				}
+	}
+	focus = {
+		id = VGD_islamist_path
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = VGD_political_destiny
+		}
+		mutually_exclusive = {
+			focus = VGD_go_communist
+			focus = VGD_joys_of_monarchy
+			focus = VGN_strong_state
+			focus = VGN_democratic_path
+		}
+		x = 2
+		y = 3
+		completion_reward = {
+					add_political_power = 120
+					add_national_unity = -0.1
+					set_politics = {
+							ruling_party = islamism
+							elections_allowed = no
+						}
+				}
+	}
+	focus = {
+		id = VGD_go_communist
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = VGD_political_destiny
+		}
+		mutually_exclusive = {
+			focus = VGD_islamist_path
+			focus = VGD_joys_of_monarchy
+			focus = VGN_strong_state
+			focus = VGN_democratic_path
+		}
+		x = 5
+		y = 3
+		completion_reward = {
+					add_political_power = 120
+					set_politics = {
+							ruling_party = communism
+							elections_allowed = no
+						}
+				}
+	}
+	focus = {
+		id = VGD_joys_of_monarchy
+		icon = GFX_focus_hun_elect_a_king
+		cost = 10.00
+		prerequisite = {
+			focus = VGD_political_destiny
+		}
+		mutually_exclusive = {
+			focus = VGD_islamist_path
+			focus = VGD_go_communist
+			focus = VGN_strong_state
+			focus = VGN_democratic_path
+		}
+		x = 8
+		y = 3
+		completion_reward = {
+					add_political_power = 120
+					set_politics = {
+							ruling_party = monarchism
+							elections_allowed = no
+						}
+				}
+	}
+	focus = {
+		id = VGN_strong_state
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = VGD_political_destiny
+		}
+		mutually_exclusive = {
+			focus = VGD_islamist_path
+			focus = VGD_go_communist
+			focus = VGD_joys_of_monarchy
+			focus = VGN_democratic_path
+		}
+		x = 11
+		y = 3
+		completion_reward = {
+					add_political_power = 120
+					set_politics = {
+							ruling_party = fascism
+							elections_allowed = no
+						}
+				}
+	}
+	focus = {
+		id = VGN_democratic_path
+		icon = GFX_goal_support_democracy
+		cost = 1.00
+		prerequisite = {
+			focus = VGD_political_destiny
+		}
+		mutually_exclusive = {
+			focus = VGD_islamist_path
+			focus = VGD_go_communist
+			focus = VGD_joys_of_monarchy
+			focus = VGN_strong_state
+		}
+		x = 18
+		y = 3
+
+	}
+	focus = {
+		id = VGD_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = VGD_independence
+		}
+		x = 31
+		y = 2
+		
+	}
+	focus = {
+		id = VGD_civil_factory
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = VGD_industry
+		}
+		x = 29
+		y = 3
+		completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+		}
+	}
+	focus = {
+		id = VGD_military_factory
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = VGD_industry
+		}
+		x = 33
+		y = 3
+		completion_reward = {
+					army_experience = 25
+					random_owned_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+						}
+		}
+	}
+	focus = {
+		id = VGN_social_democracy
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = VGN_democratic_path
+		}
+		x = 21
+		y = 4
+		completion_reward = {
+					add_political_power = 120
+					set_politics = {
+							ruling_party = socialist
+							elections_allowed = yes
+						}
+				}
+	}
+	focus = {
+		id = VGN_christian_democratic_path
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = VGN_democratic_path
+		}
+		x = 18
+		y = 4
+		completion_reward = {
+					add_political_power = 120
+					set_politics = {
+							ruling_party = Christian_Democratic
+							elections_allowed = yes
+						}
+				}
+	}
+	focus = {
+		id = VGD_nationalist_democracy
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = VGN_democratic_path
+		}
+		x = 15
+		y = 4
+		completion_reward = {
+					add_political_power = 120
+					set_politics = {
+							ruling_party = nationalism
+							elections_allowed = no
+						}
+				}
+	}
+	focus = {
+		id = VGD_military
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = VGD_independence
+		}
+		x = 39
+		y = 2
+		completion_reward = {
+			add_ideas = military_expansion
+		}
+	}
+}

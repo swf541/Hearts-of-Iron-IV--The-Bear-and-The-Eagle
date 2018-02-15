@@ -1,0 +1,80 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+# alliance
+# ignore
+# invade
+
+ETR_civil_war = {
+	enable = {
+		tag = ETR
+	}
+	abort = {
+		ETR = { exists = no }
+	}
+	
+	ai_strategy = {
+		type = alliance
+		id = "SOV"
+		value = -5000
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "SOV"
+		value = 5000
+	}
+	
+	ai_strategy = {
+		type = alliance
+		id = "USA"
+		value = -5000
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "USA"
+		value = 5000
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "CHI"
+		value = 5000
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "PRC"
+		value = 5000
+	}
+}
+
+ETR_civil_war2 = {
+	enable = {
+		tag = SOV
+	}
+	abort = {
+		ETR = { exists = no }
+	}
+	
+	ai_strategy = {
+		type = alliance
+		id = "ETR"
+		value = -5000
+	}
+	
+	ai_strategy = {
+		type = ignore
+		id = "ETR"
+		value = 5000
+	}
+}

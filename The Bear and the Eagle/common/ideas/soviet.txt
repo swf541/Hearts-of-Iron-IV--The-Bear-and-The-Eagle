@@ -1,0 +1,2990 @@
+ideas = {
+	country = {
+		militarized_schools = {
+		
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				conscription = 0.05
+			}
+		}
+	
+		workers_culture = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			picture = generic_production_bonus
+			
+			modifier = {
+				production_speed_buildings_factor = 0.10
+			}
+		}
+	
+		partisan_suppression_focus = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+
+			picture = generic_intel_bonus
+			
+			modifier = {
+				enemy_partisan_effect = -0.2
+			}
+		}
+		repression = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+
+			picture = generic_intel_bonus
+			
+			modifier = {
+				enemy_partisan_effect = -0.2
+				unity_factor = -0.1
+				conscription_factor = -0.01
+			}
+		}
+		progress_cult_focus = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_research_bonus
+			
+			modifier = {
+				research_time_factor = -0.025
+			}
+		}
+		egalitarian_beliefs = {
+		
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				conscription = 0.01
+			}
+		}
+	
+		traditional_beliefs = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				army_morale_factor = 0.10
+			}
+		}
+
+		traditional_farms = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			picture = idea_ast_all_in
+			
+			modifier = {
+				subversive_activites_upkeep = -0.5
+			}
+		}
+		kainiji_dam = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.2
+				research_time_factor = -0.025
+			}
+		}
+		capitalism = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.2
+				research_time_factor = -0.025
+				political_power_factor = 0.25
+			}
+		}
+		capitalism_expansion = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.2
+			}
+		}
+		industry_rearrangement = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.2
+			}
+		}
+		
+		healthcare_benefits = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_communism_drift_bonus
+			
+			modifier = {
+				communism_drift = 0.05
+				conscription = 0.03
+			}
+		}
+
+		traditional_healthcare = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_research_bonus
+			
+			modifier = {
+				
+			}
+		}
+
+		educate_the_peasants = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				research_time_factor = -0.025
+			}
+		}
+
+		peasants_shall_work = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_production_bonus
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			modifier = {
+			local_factories = 0.2
+			}
+		}
+
+		iron_curtain = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+			army_core_attack_factor = 0.15
+			army_core_defence_factor = 0.15
+			}
+		}
+		SOV_fortification_focus = {
+		
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = FRA_fortification_focus
+			
+			removal_cost = -1
+
+			modifier = {
+				production_speed_bunker_factor = 0.3
+				conscription = 0.003
+			}
+		}		
+		hold_til_the_russians = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+			army_core_defence_factor = 0.10
+			}
+		}
+
+		gulag_politic = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			picture = generic_production_bonus
+			
+			modifier = {
+				production_speed_buildings_factor = 0.10
+			}
+		}
+		gulag_politic_expanded = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			picture = generic_production_bonus
+			
+			modifier = {
+				production_speed_buildings_factor = 0.20
+				unity_factor = -0.20
+			}
+		}
+		
+		home_of_revolution = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				drift_defence_factor = 0.5
+				production_speed_buildings_factor = -0.1
+			}
+			rule = {
+				can_join_opposite_factions = no
+				can_create_factions = yes
+			}
+		}
+		
+		total_loyalty = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				drift_defence_factor = 0.25
+				unity_factor = 0.05
+				army_morale_factor = 0.10
+			}
+		}
+
+		one_form_of_government = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				drift_defence_factor = 1.5
+
+			}
+		}
+
+		destalinization = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			research_bonus = {
+				land_doctrine = -0.10
+				naval_doctrine = -0.10
+				air_doctrine = -0.10
+			}
+
+			modifier = {
+				army_org_factor = 0.5
+			}
+		}
+
+		art_and_liberalization = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				research_time_factor = -0.025
+			}
+		}
+		soviet_research_collaboration = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				research_time_factor = -0.025
+			}
+		}
+		SOV_military_primacy = {
+		
+			picture = generic_air_manufacturer_3
+			
+	
+			research_bonus = {
+				air_equipment = 0.10
+				infantry_weapons = 0.10
+				land_doctrine = 0.10
+			}
+	
+			modifier = {
+				conscription = 0.05
+				army_org_factor = 0.05
+			}			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		incompetent_officer_corps = {
+		
+			picture = generic_air_manufacturer_3
+			
+			modifier = {
+				army_org_factor = -0.15
+			}			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		hungarian_seperatism = {
+		
+			picture = generic_air_manufacturer_3
+			
+
+	
+			modifier = {
+				conscription_factor = -0.05
+				unity_factor = -0.10
+			}			
+			ai_will_do = {
+				factor = 1
+			}
+		}		
+		SOV_military_production_initiatiive_idea = {
+			removal_cost = -1
+
+			picture = officers_purged
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}	
+			equipment_bonus = {
+				fighter_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				cv_fighter_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				jet_fighter_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				cv_CAS_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				CAS_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				nav_bomber_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				cv_nav_bomber_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				rocket_interceptor_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				tac_bomber_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				jet_tac_bomber_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				jet_strat_bomber_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				heavy_fighter_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				strat_bomber_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				transport_plane_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				guided_missile_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.10 instant = yes
+				}
+				lt_equipment = {
+					instant = yes
+					build_cost_ic = -0.10 instant = yes
+				}
+				mbt_equipment = {
+					instant = yes
+					build_cost_ic = -0.10 instant = yes
+				}
+				ht_equipment = {
+					instant = yes
+					build_cost_ic = -0.10 instant = yes
+				}
+			}	
+		}
+		SOV_great_soviet_engineering = {
+			
+			picture = generic_local_self_management
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		khrushchev_standards = {
+			removal_cost = -1
+
+			picture = officers_purged
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			modifier = {
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		cuban_missles = {
+			removal_cost = -1
+
+			picture = officers_purged
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			research_bonus = {
+				naval_doctrine = 0.10
+				air_doctrine = 0.10
+			}
+
+			modifier = {
+				army_org_factor = 0.5
+			}
+		}
+		higher_political_payments = {
+			removal_cost = -1
+
+			picture = officers_purged
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			research_bonus = {
+				land_doctrine = -0.07
+				naval_doctrine = -0.07
+				air_doctrine = -0.07
+			}
+
+			modifier = {
+				army_org_factor = -0.35
+			}
+		}
+		increase_the_wages = {
+			removal_cost = -1
+
+			picture = officers_purged
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			research_bonus = {
+				land_doctrine = -0.06
+				naval_doctrine = -0.06
+				air_doctrine = -0.06
+			}
+
+			modifier = {
+				army_org_factor = 0.1
+			}
+		}
+		for_the_people = {
+			removal_cost = -1
+
+			picture = officers_purged
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+
+			modifier = {
+				army_org_factor = 0.25
+			}
+		}
+		farmers_first = {
+			removal_cost = -1
+
+			picture = officers_purged
+			
+			allowed = {
+				always = no # Added via focus
+			}
+			
+			allowed_civil_war = {
+				has_government = communism
+			}
+		
+
+			modifier = {
+				MONTHLY_POPULATION = 0.02
+			}
+		}
+		increase_the_population = {
+			removal_cost = -1
+
+			picture = officers_purged
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+
+			modifier = { 
+				MONTHLY_POPULATION = 0.02
+			}
+		}
+		helsinki_treaty = {
+			removal_cost = -1
+
+			picture = officers_purged
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			research_bonus = {
+				land_doctrine = -0.02
+				naval_doctrine = -0.02
+				air_doctrine = -0.02
+			}
+
+			modifier = {
+				army_org_factor = -0.10
+			}
+		}
+		stabilisation_policy= {
+			removal_cost = -1
+
+			picture = officers_purged
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+
+			modifier = {
+				communism_drift = 0.10
+				unity_factor = 0.05
+				army_morale_factor = 0.10
+			}
+		}
+
+		brezhnev_doctrine = {
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+			
+			allowed = {
+				always = no # Added via event
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.05
+				naval_doctrine = 0.05
+				air_doctrine = 0.05
+			}
+
+			modifier = {
+				army_org_factor = 0.5
+			}
+		}
+
+		comumnist_world = {
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+			
+			allowed = {
+				always = no # Added via event
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.04
+				naval_doctrine = 0.04
+				air_doctrine = 0.04
+			}
+
+			modifier = {
+				army_org_factor = 0.35
+			}
+		}
+
+		revise_the_economy = {
+			removal_cost = -1
+			
+			picture = generic_intel_bonus
+			
+			allowed = {
+				always = no # Added via event
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+				production_speed_synthetic_refinery_factor = 0.1
+			}
+		}
+
+		reduce_soviet_army = {
+			removal_cost = -1
+			
+			picture = generic_intel_bonus
+
+			allowed = {
+				always = no # Added via event
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			research_bonus = {
+			}
+
+			modifier = {
+				conscription = -0.05
+				army_org_factor = 0.05
+			}
+		}
+
+		rights_for_people = {
+			removal_cost = -1
+			
+			picture = generic_intel_bonus
+
+			allowed = {
+				always = no # Added via event
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+
+			
+			modifier = {
+				trade_opinion_factor = 0.2
+				democratic_acceptance = 10
+				democratic_drift = 0.10
+			}
+		}
+
+
+		end_of_the_soviet_era = { 
+			removal_cost = -1
+			
+			picture = soviet_german_friendship
+
+			allowed = {
+				always = no # Added via event
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+		}
+
+		make_the_russian_federation = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				unity_factor = -15.0
+			}
+
+		}
+
+		restore_the_glory = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+			army_core_attack_factor = 0.10
+			army_core_defence_factor = 0.10
+			}
+
+		}
+
+		keep_the_union = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				unity_factor = 0.5
+			}
+
+		}
+
+		revise_the_system = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				unity_factor = 0.5
+			}
+
+		}
+
+		kgb_coup = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				unity_factor = -20.0
+			}
+
+		}
+
+		immortal_nation = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				unity_factor = 2.0
+			}
+
+		}
+
+		kgb_leading_union = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				unity_factor = 0.1
+			}
+
+		}
+
+		rule_with_iron_fist = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				unity_factor = 0.1
+			}
+
+		}
+
+		mass_propaganda = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				communism_drift = 0.05
+			}
+
+		}
+
+		stabilize_the_union = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				unity_factor = 0.05
+				communism_drift = 0.02
+			}
+
+		}
+
+		restore_the_economy = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				unity_factor = 0.2
+				consumer_goods_factor = 0.1
+			}
+
+		}
+		increased_living_standards = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				unity_factor = 0.2
+				consumer_goods_factor = 0.1
+			}
+
+		}
+		undo_the_damage = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				unity_factor = 0.05
+				communism_drift = 0.02
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = 0.05
+			}
+
+		}		
+
+		soviet_development = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				production_speed_buildings_factor = 0.10
+			}
+
+		}
+
+		socialist_utopia = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				unity_factor = 0.2
+			}
+
+		}
+		urban_planning = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				production_speed_buildings_factor = 0.10
+			}
+
+		}
+
+		city_economies = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+			}
+
+		}
+
+
+		city_growth = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				unity_factor = 0.2
+			}
+
+		}
+		city_propaganda = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				unity_factor = 0.2
+			}
+
+		}
+
+		encourage_population_growth = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				MONTHLY_POPULATION = 0.02
+			}
+
+		}
+		agriculture = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				MONTHLY_POPULATION = 0.02
+			}
+
+		}
+
+		reorganize_farms = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				MONTHLY_POPULATION = 0.02
+			}
+
+		}
+
+		internal_economy = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_infrastructure_factor = 0.05
+				production_speed_synthetic_refinery_factor = 0.05
+			}
+
+		}
+		economic_liberalization = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_infrastructure_factor = 0.05
+				production_speed_synthetic_refinery_factor = 0.05
+			}
+
+		}
+		fix_the_inefficiencies = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+
+		}
+		black_sea_canal = {
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.2
+				research_time_factor = -0.025
+				production_speed_buildings_factor = 0.10
+			}
+		}
+		
+		constructing_black_Sea_canal = {
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				consumer_goods_factor = 0.15
+				unity_factor = -0.15
+			}
+
+		}
+		abandon_collectivized_farming = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				unity_factor = 0.1
+				MONTHLY_POPULATION = 0.01
+			}
+
+
+		}
+
+#######ARMY########
+
+		ground_froces_expenditure = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+			training_time_army_factor = -0.15
+			}
+
+		}
+		
+		improved_training = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+			training_time_army_factor = -0.10
+			}
+
+		}
+
+		mobile_warfare = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+			army_armor_speed_factor = 0.05 
+			army_armor_attack_factor = 0.1 
+			}
+
+		}
+
+		mixed_warfare = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+			recon_factor = 0.25
+			supply_consumption_factor = 0.10
+			}
+
+		}
+
+		armoured_superiority = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+			army_armor_speed_factor = 0.1
+			army_armor_attack_factor = 0.1 
+			}
+
+		}
+		big_seven = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+			army_armor_attack_factor = 0.05 
+			}
+
+		}
+
+		fulda_gap_tactics = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+			army_armor_speed_factor = 0.1
+			}
+
+		}
+
+		mass_armor= { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+			army_armor_attack_factor = 0.1 
+			}
+
+		}
+
+		armored_invasion = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+			army_armor_speed_factor = 0.1
+			}
+
+		}
+
+		yyyyyyyyyyyyyyy = {
+
+			picture = generic_research_bonus
+
+			allowed = {
+				always = no # Added via event
+			}
+
+			research_bonus = {
+				armor = -0.75
+			}
+
+		}
+
+		soviet_advisors = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			removal_cost = -1
+			
+			research_bonus = {
+				land_doctrine = 0.07
+			}
+			research_bonus = {
+				infantry_weapons = 0.07
+			}			
+		}
+
+	}
+
+
+	political_advisor = {
+	
+	lubomir_klimov = {
+			
+			
+			allowed = {
+				original_tag = SOV
+
+			}
+			
+
+			
+			traits = { amatuer_minister }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		stal = {
+			
+			
+			allowed = {
+				original_tag = SOV
+
+			}
+			
+
+			
+			traits = { market_socialist_activist }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		ib = {
+			
+			
+			allowed = {
+				original_tag = SOV
+
+			}
+			
+
+			
+			traits = { market_socialist_activist }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		adv2 = {
+			
+			
+			allowed = {
+				original_tag = SOV
+
+			}
+			
+
+			
+			traits = { conservative_reformer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		adv3 = {
+			
+			
+			allowed = {
+				original_tag = SOV
+
+			}
+			
+
+			
+			traits = { fortification_engineer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		adv4 = {
+			
+			
+			allowed = {
+				original_tag = SOV
+
+			}
+			
+
+			
+			traits = { crime_fighter }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		adv5 = {
+			
+			
+			allowed = {
+				original_tag = SOV
+
+			}
+			
+
+			
+			traits = { for_the_people }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		adv6 = {
+			
+			
+			allowed = {
+				original_tag = SOV
+
+			}
+			
+
+			
+			traits = { monarchist_advisor }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		adv7 = {
+			
+			
+			allowed = {
+				original_tag = SOV
+
+			}
+			
+
+			
+			traits = { political_dancer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		mikhail_kalinin = {
+			
+			
+			allowed = {
+				original_tag = "SOV"
+			}
+			available = 
+			{
+				NOT = { has_country_flag = purged_kalinin }
+				NOT = { has_country_flag = counter_purge }
+			}
+			
+
+			
+			traits = { popular_figurehead }
+		}
+
+		SOV_lavrentiy_beria = {
+			
+			picture = generic_army_europe_2
+			
+			allowed = {
+				original_tag = SOV
+			}
+
+			available = {
+				custom_trigger_tooltip = {
+					tooltip =  SOV_beria_idea
+					has_country_flag = purge_2_group_a
+				}
+				NOT = { 
+					has_country_flag = counter_purge
+				}
+			}
+			
+			traits = { ideological_crusader }
+		}
+
+		SOV_vyacheslav_molotov = {
+			
+			picture = generic_political_advisor_europe_1
+			
+			allowed = {
+				original_tag = SOV
+			}
+			
+			traits = { smooth_talking_charmer }
+		}
+
+		SOV_nikolai_voznesensky = {
+			
+			picture = generic_political_advisor_europe_2
+			
+			allowed = {
+				original_tag = SOV
+			}
+			
+			traits = { captain_of_industry }
+		}
+
+		SOV_nikolai_yezhov = {
+			
+			picture = generic_army_europe_2
+			
+			allowed = {
+				original_tag = SOV
+			}
+
+			available = 
+			{
+				NOT = { has_country_flag = counter_purge }
+				NOT = { has_country_flag = purge_2_group_a }
+			}
+			
+			traits = { prince_of_terror }
+		}
+
+		
+		
+		nikita_khrushchev = {
+			
+			
+			allowed = {
+				original_tag = "SOV"
+			}
+			available = 
+			{
+				NOT = { has_country_flag = purged_khrushchev }
+				NOT = { has_country_flag = counter_purge }
+			}
+			
+
+			
+			traits = { communist_revolutionary }
+	
+			on_add = {
+				country_event = political.1
+			}
+	
+			do_effect = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}	
+			
+		alexander_kerensky = {
+			
+			
+			allowed = {
+				original_tag = "SOV"
+			}
+			
+
+			
+			traits = { democratic_reformer }
+	
+			on_add = {
+				country_event = political.13
+			}
+	
+			do_effect = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		konstantin_rodzaevsky = {
+			
+			
+			allowed = {
+				original_tag = "SOV"
+			}
+			available = 
+			{
+				NOT = { has_country_flag = counter_purge }
+			}
+			
+
+			
+			traits = { fascist_demagogue }
+	
+			on_add = {
+				country_event = political.7
+			}
+	
+			do_effect = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+		
+	army_chief = {
+		
+		
+		semyon_timoshenko = {
+			#Also unit leader: 404
+			
+			allowed = {
+				original_tag = SOV
+			}
+			available = 
+			{
+				NOT = { has_country_flag = purge_1_group_b }
+				hidden_trigger = {
+					NOT = { 
+						any_other_country = {
+							has_war_with = SOV
+							original_tag = SOV
+							has_unit_leader = 404
+						} 
+					}
+				}
+			}
+			
+
+			
+			traits = { army_chief_reform_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		kliment_voroshilov = {
+			#Also unit leader: 405
+			
+			allowed = {
+				original_tag = SOV
+			}
+			available = 
+			{
+				NOT = { has_country_flag = purge_1_group_b }
+				hidden_trigger = {
+					NOT = { 
+						any_other_country = {
+							has_war_with = SOV
+							original_tag = SOV
+							has_unit_leader = 405
+						} 
+					}
+				}
+			}
+			
+
+			
+			traits = { army_chief_drill_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		alexander_yegorov = {
+			
+			
+			allowed = {
+				original_tag = SOV
+			}
+			available = 
+			{
+				NOT = { has_country_flag = purge_1_group_a }
+			}
+			
+
+			
+			# PURGED
+			traits = { army_chief_defensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		vasily_blucher = {
+			
+			
+			allowed = {
+				original_tag = SOV
+
+			}
+			available = 
+			{
+				NOT = { has_country_flag = purge_1_group_a }
+			}
+			
+
+			
+			# PURGED
+			traits = { army_chief_maneuver_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+	}
+	navy_chief = {
+		
+		pyotr_smirnov = {
+			
+			
+			allowed = {
+				original_tag = SOV
+
+			}
+			available = 
+			{
+				NOT = { has_country_flag = purge_1_group_a }
+			}
+			
+
+			
+			# PURGED
+			traits = { navy_chief_naval_aviation_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		mikhail_frinovsky = {
+			
+			
+			allowed = {
+				original_tag = SOV
+
+			}
+			available = 
+			{
+				NOT = { has_country_flag = purge_1_group_a }
+			}
+			
+
+			
+			# PURGED
+			traits = { navy_chief_commerce_raiding_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		nikolay_kuznetsov = {
+			
+			
+			allowed = {
+				original_tag = SOV
+
+			}
+			available = 
+			{
+				NOT = { has_country_flag = purge_2_group_b }
+			}
+			
+
+			
+			# Not Purged, but eventually demoted
+			traits = { navy_chief_reform_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		ivan_yumashev = {
+			
+			
+			allowed = {
+				original_tag = SOV
+
+			}
+			available = 
+			{
+				NOT = { has_country_flag = purge_1_group_b }
+			}
+			
+
+			
+			traits = { navy_chief_decisive_battle_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+	}
+	
+	air_chief = {
+		
+		
+		alexander_novikov = {
+						
+			allowed = {
+				original_tag = SOV
+
+			}
+			available = 
+			{
+				NOT = { has_country_flag = purge_2_group_a }
+			}
+			
+
+			
+			# Not Purged, but imprisoned
+			traits = { air_chief_reform_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		konstantin_vershinin = {
+			
+			
+			allowed = {
+				original_tag = SOV
+
+			}
+			available = 
+			{
+				NOT = { has_country_flag = purge_2_group_b }
+			}
+			
+
+			
+			traits = { air_chief_ground_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		yakov_smushkevich = {
+			
+			
+			allowed = {
+				original_tag = SOV
+
+			}
+			available = 
+			{
+				NOT = { has_country_flag = purge_2_group_a }
+			}
+			
+
+			
+			# PURGED
+			traits = { air_chief_safety_2 } # Could also have reform
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		pavel_rychagov = {
+			
+			
+			allowed = {
+				original_tag = SOV
+
+			}
+			available = 
+			{
+				NOT = { has_country_flag = purge_2_group_a }
+			}
+			
+
+			
+			# PURGED
+			traits = { air_chief_all_weather_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+	}
+	
+	
+	high_command = {
+	
+		ivan_konev = {
+			#Also unit leader: 408
+			
+			allowed = {
+				original_tag = SOV
+			}
+			available = 
+			{
+				NOT = { has_country_flag = counter_purge }
+				custom_trigger_tooltip = {
+				tooltip = SOV_konev_civil_war
+					NOT = { 
+						any_other_country = {
+							has_war_with = SOV
+							original_tag = SOV
+							has_unit_leader = 408
+						}
+					}
+				}
+			}
+			
+
+			
+			traits = { army_concealment_2 }
+			# Almost certainly a psychopath
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		aleksandr_vasilevsky = {
+			#Also unit leader: 407
+			
+			allowed = {
+				original_tag = SOV
+
+			}
+			available = 
+			{
+				NOT = { has_country_flag = purge_2_group_b }
+				hidden_trigger = {
+					NOT = { 
+						any_other_country = {
+							has_war_with = SOV
+							original_tag = SOV
+							has_unit_leader = 407
+						} 
+					}
+				}
+			}
+			
+
+			
+			traits = { army_regrouping_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		konstantin_rokossovsky = {
+			#Also unit leader: 402
+			
+			allowed = {
+				original_tag = SOV # Unlocked via focus
+				hidden_trigger = {
+					NOT = {
+						any_other_country = {
+							has_war_with = SOV
+							original_tag = SOV
+							has_unit_leader = 403
+						} 
+					}
+				}
+			}
+			available = 
+			{
+				NOT = { has_country_flag = purge_1_group_b }
+			}
+			
+
+			
+			# Not purged, but tried and tortured, then released
+			traits = { army_armored_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+		
+		pavel_zhigarev = {
+			
+			
+			allowed = {
+				original_tag = SOV
+
+			}
+			available = 
+			{
+				NOT = { has_country_flag = counter_purge }
+			}
+			
+
+			
+			traits = { air_airborne_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		sergei_khudyakov = {
+			
+			
+			allowed = {
+				original_tag = SOV
+
+			}
+			available = 
+			{
+				NOT = { has_country_flag = purge_2_group_b }
+			}
+			
+
+			
+			# Purged, but post-war
+			traits = { air_close_air_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		stepan_krasovsky = {
+			
+			
+			allowed = {
+				original_tag = SOV
+
+			}
+			available = 
+			{
+				NOT = { has_country_flag = counter_purge }
+			}
+			
+
+			
+			traits = { air_air_combat_training_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+		
+		vladimir_kasatonov = {
+			#Also unit leader: 403
+			
+			allowed = {
+				original_tag = SOV
+
+			}
+			available = 
+			{
+				NOT = { has_country_flag = purge_1_group_b }
+				hidden_trigger = {
+					NOT = { 
+						any_other_country = {
+							has_war_with = SOV
+							original_tag = SOV
+							has_unit_leader = 403
+						} 
+					}
+				}
+			}
+			
+
+			
+			traits = { navy_submarine_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		gordey_levchenko = {
+			#Also unit leader: 406
+			
+			allowed = {
+				original_tag = SOV
+
+			}
+			available = 
+			{
+				NOT = { has_country_flag = purge_2_group_a }
+				hidden_trigger = {
+					NOT = { 
+						any_other_country = {
+							has_war_with = SOV
+							original_tag = SOV
+							has_unit_leader = 406
+						} 
+					}
+				}
+			}
+			
+
+			
+			# Not purged, but arrested and released
+			traits = { navy_capital_ship_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		arseniy_golovko = {
+			#Also unit leader: 409
+			
+			allowed = {
+				original_tag = SOV
+
+			}
+			available = 
+			{
+				NOT = { has_country_flag = counter_purge }
+				hidden_trigger = {
+					NOT = { 
+						any_other_country = {
+							has_war_with = SOV
+							original_tag = SOV
+							has_unit_leader = 409
+						} 
+					}
+				}
+			}
+			
+
+			
+			traits = { navy_amphibious_assault_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+	}
+		
+	tank_manufacturer = {
+		
+		designer = yes
+		
+		Uralvagonzavod = {
+			
+			
+			allowed = {
+				original_tag = SOV
+			}
+			
+
+			
+			research_bonus = {
+				armor = 0.10
+			}
+			
+			traits = { Uralvagonzavod }
+			
+			modifier = {
+			
+			}
+		}
+	
+		Omsktransmash = {
+			
+			
+			allowed = {
+				original_tag = SOV
+			}
+			
+
+			
+			research_bonus = {
+				armor = 0.10
+			}
+			
+			traits = { Omsktransmash }
+			
+			modifier = {
+			}
+		}
+	}
+	
+		aircraft_manufacturer = {
+		
+			designer = yes
+		
+			mig_design_bureau = {
+			
+			
+			allowed = {
+				original_tag = SOV
+			}
+			
+
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			modifier = {
+			}
+		  }
+		
+		ilyushin_design_bureau = {
+			
+			
+			allowed = {
+				original_tag = SOV
+			}
+			
+
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { medium_aircraft_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		tupolev_design_bureau = {
+			
+			
+			allowed = {
+				original_tag = SOV
+			}
+			
+
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { heavy_aircraft_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		yakovlev_design_bureau = {
+			
+			
+			allowed = {
+				original_tag = SOV
+			}
+			
+
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { naval_aircraft_manufacturer }
+			
+			modifier = {
+			}
+		}
+	}
+	
+	
+	industrial_concern = {
+				
+		stalingrad_tractor_factory = {
+		
+			
+			allowed = {
+				original_tag = SOV
+			}
+			
+
+			
+			research_bonus = {
+				industry = 0.10
+			}
+			
+			traits = { industrial_concern }
+			
+			modifier = {
+			}
+		}
+		
+		leningrad_polytechnical_institute = {
+			
+			
+			allowed = {
+				original_tag = SOV
+			}
+			
+
+			
+			research_bonus = {
+				electronics = 0.10
+			}
+			
+			traits = { electronics_concern }
+			
+			modifier = {
+			}
+		}
+	}
+	
+	materiel_manufacturer = {
+			
+		designer = yes
+		
+		grabin_design_bureau = {
+			
+			
+			allowed = {
+				original_tag = SOV
+			}
+			
+
+			
+			research_bonus = {
+				artillery = 0.10
+			}
+			
+			traits = { artillery_manufacturer }
+			
+			modifier = {
+			}
+		}	
+		
+	
+		
+		tula_arms_plant = {
+			
+			
+			allowed = {
+				original_tag = SOV
+			}
+			
+
+			
+			research_bonus = {
+				infantry_weapons = 0.10
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		gaz = {
+			
+			
+			allowed = {
+				original_tag = SOV
+			}
+			
+
+			
+			research_bonus = {
+				motorized_equipment = 0.10
+				mot_rockets = 0.50
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+			
+			modifier = {
+			}
+		}
+	}
+	
+	naval_manufacturer = {
+	
+		designer = yes
+		
+		nevskoye_design_bureau = {
+			
+			
+			allowed = {
+				original_tag = SOV
+			}
+			
+
+			
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			
+			traits = { naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+	}
+	
+	theorist = {	
+	
+			
+		mikhail_tukhachevsky = {
+			
+			
+			allowed = {
+				original_tag = SOV
+
+			}
+			available = 
+			{
+				NOT = { has_country_flag = purge_1_group_a }
+			}
+			
+			cost = 250
+			
+			research_bonus = {
+				cat_mass_assault = 0.10
+			}
+			
+			# PURGED
+			traits = { mass_assault_expert }
+		}
+		
+		boris_shaposhnikov = {
+			
+			
+			allowed = {
+				original_tag = SOV
+			}
+			
+
+			
+			research_bonus = {
+				land_doctrine = 0.07
+			}
+			
+			traits = { military_theorist }
+		}
+		
+		georgy_zhukov = {
+			
+			
+			allowed = {
+				original_tag = SOV # Unlocked via focus
+
+			}
+			available = 
+			{
+				NOT = { has_country_flag = counter_purge }
+			}
+			available = {
+				has_completed_focus = SOV_positive_heroism
+			}
+			
+			cost = 250
+			
+			research_bonus = {
+				cat_mass_assault = 0.10
+			}
+			
+			traits = { mass_assault_expert }
+		}
+		
+		sergey_gorshkov = {
+			
+			
+			allowed = {
+				original_tag = SOV
+
+			}
+			available = 
+			{
+				NOT = { has_country_flag = counter_purge }
+			}
+			
+			cost = 150
+			
+			research_bonus = {
+				naval_doctrine = 0.07
+			}
+			
+			traits = { naval_theorist }
+		}
+		
+		vladimir_tributs = {
+			
+			
+			allowed = {
+				original_tag = SOV
+			}
+			
+			cost = 250
+			
+			research_bonus = {
+				cat_fleet_in_being = 0.10
+			}
+			
+			traits = { grand_fleet_proponent}
+		}
+		
+		sergei_rudenko = {
+			
+			
+			allowed = {
+				original_tag = SOV
+
+			}
+			available = 
+			{
+				NOT = { has_country_flag = counter_purge }
+			}
+			
+			cost = 250
+			
+			research_bonus = {
+				cat_battlefield_support = 0.10
+			}
+			
+			traits = { close_air_support_proponent }
+		}
+		
+		alexander_golovanov = {
+			
+			
+			allowed = {
+				original_tag = SOV
+			}
+			
+
+			
+			research_bonus = {
+				air_doctrine = 0.07
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+		
+		igor_kurchatov = {
+			
+			
+			allowed = {
+				original_tag = SOV
+			}
+			
+
+			
+			research_bonus = {
+				nuclear = 0.10
+			}
+			
+			traits = { nuclear_scientist }
+		}
+		
+		sergei_korolev = {
+			
+			
+			allowed = {
+				original_tag = SOV
+			}
+			
+			research_bonus = {
+				rocketry = 0.10
+			}
+
+			
+			traits = { rocket_scientist }
+		}
+	}
+	
+}

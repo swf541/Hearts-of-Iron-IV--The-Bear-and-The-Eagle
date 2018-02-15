@@ -1,0 +1,121 @@
+ideas = {
+
+	# TECHNOLOGY
+	
+	naval_manufacturer = { 
+		
+		designer = yes
+		
+		wartsila = {
+
+			
+			allowed = {
+				original_tag = DDR
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			
+			equipment_bonus = {
+				
+			}
+			
+			traits = { naval_manufacturer }
+			
+		}
+	}
+	
+	aircraft_manufacturer = { 
+			
+		designer = yes
+		
+		valmet = { 
+			
+			allowed = {
+				original_tag = FIN
+			}
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { 
+				light_aircraft_manufacturer 
+				CAS_manufacturer 
+			}
+			
+			equipment_bonus = {
+				
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+	}
+
+	materiel_manufacturer = {
+		
+		designer = yes
+		
+		sako = {
+			
+			allowed = {
+				original_tag = FIN
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.10
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		nokia = {
+			
+			allowed = {
+				original_tag = FIN
+			}
+			
+			research_bonus = {
+				electronics = 0.10
+			}
+			
+			traits = { electronics_concern }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	# MILITARy
+	
+	air_chief = {
+		
+		frans_helminen = {
+
+			
+			allowed = {
+				original_tag = FIN
+			}
+			
+			available = {
+				date < 1952.9.21
+			}
+						
+			traits = { air_chief_ground_support_2 }
+			
+			ai_will_do = {
+				factor = 2
+			}
+		}
+	}
+	
+}

@@ -1,0 +1,184 @@
+focus_tree = {
+	id = ethiopia
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ETH
+		}
+	}
+	default = no
+	
+		focus = {
+		id = ETH_find_new_tactics
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 3
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+			focus = {
+		id = ETH_western_tactics
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 2
+		y = 1
+		cost = 10
+		prerequisite = { focus = ETH_find_new_tactics }
+		mutually_exclusive = { focus = ETH_own_tactics } 
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_political_power = -50
+			army_experience = 50
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = cat_grand_battle_plan
+			}
+		}
+	}
+				focus = {
+		id = ETH_american_military_experts
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 2
+		cost = 10
+		prerequisite = { focus = ETH_western_tactics }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+					focus = {
+		id = ETH_better_planning
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 2
+		y = 2
+		cost = 10
+		prerequisite = { focus = ETH_western_tactics }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_ideas = eth_plan_bonus
+		}
+	}
+						focus = {
+		id = ETH_reform_high_command
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 2
+		y = 3
+		cost = 10
+		prerequisite = { focus = ETH_better_planning }
+		prerequisite = { focus = ETH_american_military_experts }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_ideas = eth_reformed_high_command
+		}
+	}
+				focus = {
+		id = ETH_own_tactics
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 4
+		y = 1
+		cost = 10
+		prerequisite = { focus = ETH_find_new_tactics }
+		mutually_exclusive = { focus = ETH_western_tactics } 
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_political_power = 50
+			army_experience = 10
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = cat_mass_assault
+			}
+		}
+	}
+					focus = {
+		id = ETH_human_waves
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 4
+		y = 2
+		cost = 10
+		prerequisite = { focus = ETH_own_tactics }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_manpower = 10000
+		add_ideas = eth_consc_bonus
+		}
+	}
+		focus = {
+		id = ETH_peoples_army
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 6
+		y = 2
+		cost = 10
+		prerequisite = { focus = ETH_own_tactics }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_ideas = eth_peoples_army
+		}
+	}
+			focus = {
+		id = ETH_elected_officers
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 4
+		y = 3
+		cost = 10
+		prerequisite = { focus = ETH_peoples_army }
+		prerequisite = { focus = ETH_human_waves }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		army_experience = 20
+		add_ideas = eth_elected_officers
+		}
+	}
+		focus = {
+		id = ETH_african_model_army
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 3
+		y = 4
+		cost = 10
+		prerequisite = { focus = ETH_elected_officers focus = ETH_reform_high_command }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		army_experience = 50
+		}
+	}
+	

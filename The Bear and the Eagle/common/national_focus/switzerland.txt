@@ -1,0 +1,3523 @@
+focus_tree = {
+	id = SWI_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SWI
+		}
+	}
+	default = no
+	focus = {
+		id = SWI_industrial_effort
+		icon = GFX_goal_generic_production
+		cost = 10.00
+		x = 4
+		y = 0
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = industrial_bonus
+							bonus = 0.5
+							uses = 1
+							category = industry
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_non_aligned
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10.00
+		mutually_exclusive = {
+			focus = SWI_soviet_alignment
+		}
+		x = 12
+		y = 0
+			completion_reward = {
+					add_political_power = 120
+					add_national_unity = 0.10
+				}
+
+	}
+	focus = {
+		id = SWI_soviet_alignment
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		mutually_exclusive = {
+			focus = SWI_non_aligned
+			focus = SWI_american_alignment
+		}
+		x = 20
+		y = 0
+			completion_reward = {
+					SWI = {
+							add_opinion_modifier = {
+									target = SOV
+									modifier = large_increase
+								}
+						}
+					SOV = {
+							add_opinion_modifier = {
+									target = SWI
+									modifier = large_increase
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_american_alignment
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		mutually_exclusive = {
+			focus = SWI_soviet_alignment
+		}
+		x = 28
+		y = 0
+			completion_reward = {
+					SWI = {
+							add_opinion_modifier = {
+									target = USA
+									modifier = large_increase
+								}
+						}
+					USA = {
+							add_opinion_modifier = {
+									target = SWI
+									modifier = large_increase
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_cold_war
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10.00
+		x = 42
+		y = 0
+			completion_reward = {
+					add_political_power = 150
+				}
+
+	}
+	focus = {
+		id = SWI_construction_effort
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_industrial_effort
+		}
+		x = 2
+		y = 1
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = construction_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = industrial_complex
+											size < 1
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_construction_effort_2
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_construction_effort
+		}
+		x = 2
+		y = 2
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = construction_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = industrial_complex
+											size < 1
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_infrastructure_effort
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_construction_effort_2
+		}
+		x = 2
+		y = 3
+			available_if_capitulated = yes
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = infrastructure_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = infrastructure
+											size < 1
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 0
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 0
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 1
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 1
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_construction_effort_3
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_infrastructure_effort
+		}
+		x = 2
+		y = 4
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = construction_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = industrial_complex
+											size < 2
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 1
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 1
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_production_effort
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_industrial_effort
+		}
+		x = 4
+		y = 1
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = production_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = arms_factory
+											size < 1
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_production_effort_2
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_production_effort
+		}
+		x = 4
+		y = 2
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = production_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = arms_factory
+											size < 1
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_production_effort_3
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_production_effort_2
+		}
+		x = 4
+		y = 3
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = production_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = arms_factory
+											size < 1
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_infrastructure_effort_2
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_infrastructure_effort
+		}
+		prerequisite = {
+			focus = SWI_production_effort_3
+		}
+		x = 4
+		y = 4
+			available_if_capitulated = yes
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = infrastructure_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = infrastructure
+											size < 1
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 0
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 0
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 1
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 1
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_secret_weapons
+		icon = GFX_goal_generic_secret_weapon
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_infrastructure_effort_2
+		}
+		prerequisite = {
+			focus = SWI_construction_effort_3
+		}
+		x = 1
+		y = 5
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = secret_bonus
+							bonus = 0.5
+							uses = 4
+							category = electronics
+							category = nuclear
+							category = rocketry
+						}
+				}
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0.25
+							always = yes
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_nuclear_effort
+		icon = GFX_focus_wonderweapons
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_infrastructure_effort_2
+		}
+		prerequisite = {
+			focus = SWI_construction_effort_3
+		}
+		x = 3
+		y = 5
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = nuclear_bonus
+							ahead_reduction = 0.5
+							category = nuclear
+						}
+				}
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0.25
+							always = yes
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_extra_tech_slot
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_infrastructure_effort_2
+		}
+		prerequisite = {
+			focus = SWI_construction_effort_3
+		}
+		x = 5
+		y = 5
+			available_if_capitulated = yes
+			completion_reward = {
+					add_research_slot = 1
+				}
+
+	}
+	focus = {
+		id = SWI_mining_development
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_industrial_effort
+		}
+		x = 6
+		y = 1
+			completion_reward = {
+					random_owned_state = {
+							add_resource = {
+									type = chromium
+									amount = 25
+								}
+							add_resource = {
+									type = steel
+									amount = 25
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_steel_industry
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_mining_development
+		}
+		x = 6
+		y = 2
+			completion_reward = {
+					random_owned_state = {
+							add_resource = {
+									type = oil
+									amount = 50
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_oil_development
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_steel_industry
+		}
+		x = 6
+		y = 3
+			completion_reward = {
+					random_owned_state = {
+							add_resource = {
+									type = oil
+									amount = 25
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_Chromium_development
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_oil_development
+		}
+		x = 6
+		y = 4
+			completion_reward = {
+					random_owned_state = {
+							add_resource = {
+									type = chromium
+									amount = 25
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_army_effort
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_non_aligned
+		}
+		x = 10
+		y = 1
+			available_if_capitulated = yes
+			completion_reward = {
+					army_experience = 5
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_equipment_effort
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_army_effort
+		}
+		x = 9
+		y = 2
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 1
+							category = infantry_weapons
+							category = artillery
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_equipment_effort_2
+		icon = GFX_goal_generic_army_artillery
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_equipment_effort
+		}
+		x = 9
+		y = 4
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = infantry_artillery_bonus
+							bonus = 0.5
+							uses = 1
+							category = infantry_weapons
+							category = artillery
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_equipment_effort_3
+		icon = GFX_goal_generic_army_artillery2
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_equipment_effort_2
+		}
+		x = 9
+		y = 6
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = infantry_artillery_bonus
+							ahead_reduction = 1
+							uses = 1
+							category = infantry_weapons
+							category = artillery
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_doctrine_effort
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_army_effort
+		}
+		x = 10
+		y = 3
+			available_if_capitulated = yes
+			completion_reward = {
+					army_experience = 5
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_doctrine_effort_2
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_doctrine_effort
+		}
+		x = 10
+		y = 5
+			available_if_capitulated = yes
+			completion_reward = {
+					army_experience = 5
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_motorization_effort
+		icon = GFX_goal_generic_army_motorized
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_army_effort
+		}
+		x = 11
+		y = 2
+			bypass = {
+					has_tech = motorised_infantry
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = motorized_bonus
+							bonus = 0.75
+							technology = motorised_infantry
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_mechanization_effort
+		icon = GFX_goal_generic_build_tank
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_motorization_effort
+		}
+		x = 11
+		y = 4
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = motorized_bonus
+							ahead_reduction = 0.5
+							uses = 1
+							category = motorized_equipment
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_armor_effort
+		icon = GFX_goal_generic_army_tanks
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_mechanization_effort
+		}
+		x = 11
+		y = 6
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = armor_bonus
+							bonus = 0.5
+							uses = 2
+							category = armor
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_special_forces
+		icon = GFX_goal_generic_special_forces
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_equipment_effort_3
+		}
+		prerequisite = {
+			focus = SWI_doctrine_effort_2
+		}
+		prerequisite = {
+			focus = SWI_armor_effort
+		}
+		x = 10
+		y = 7
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = special_forces_bonus
+							bonus = 0.5
+							uses = 1
+							technology = paratroopers
+							technology = paratroopers2
+							technology = marines
+							technology = marines2
+							technology = tech_mountaineers
+							technology = tech_mountaineers2
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_aviation_effort
+		icon = GFX_goal_generic_build_airforce
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_non_aligned
+		}
+		x = 14
+		y = 1
+			available_if_capitulated = yes
+			complete_tooltip = {
+					air_experience = 25
+					if = {
+							limit = {
+									has_country_flag = aviation_effort_AB
+								}
+							add_building_construction = {
+									type = air_base
+									level = 2
+									instant_build = yes
+								}
+						}
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = air_doctrine
+						}
+				}
+			completion_reward = {
+					air_experience = 25
+					if = {
+							limit = {
+									capital_scope = {
+											NOT = {
+													free_building_slots = {
+															building = air_base
+															size > 1
+														}
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+									add_building_construction = {
+											type = air_base
+											level = 2
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_AB
+										}
+								}
+						}
+					if = {
+							limit = {
+									capital_scope = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+								}
+							capital_scope = {
+									add_building_construction = {
+											type = air_base
+											level = 2
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_AB
+										}
+								}
+						}
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = air_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_fighter_focus
+		icon = GFX_goal_generic_air_fighter
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_aviation_effort
+		}
+		mutually_exclusive = {
+			focus = SWI_bomber_focus
+		}
+		x = 13
+		y = 2
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = fighter_bonus
+							bonus = 0.5
+							uses = 2
+							technology = early_fighter
+							technology = fighter1
+							technology = fighter2
+							technology = fighter3
+							technology = heavy_fighter1
+							technology = heavy_fighter2
+							technology = heavy_fighter3
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_bomber_focus
+		icon = GFX_goal_generic_air_bomber
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_aviation_effort
+		}
+		mutually_exclusive = {
+			focus = SWI_fighter_focus
+		}
+		x = 15
+		y = 2
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = bomber_bonus
+							bonus = 0.5
+							uses = 2
+							technology = strategic_bomber1
+							technology = strategic_bomber2
+							technology = strategic_bomber3
+							category = tactical_bomber
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_aviation_effort_2
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_bomber_focus
+			focus = SWI_fighter_focus
+		}
+		x = 14
+		y = 3
+			available_if_capitulated = yes
+			complete_tooltip = {
+					air_experience = 25
+					if = {
+							limit = {
+									has_country_flag = aviation_effort_2_AB
+								}
+							add_building_construction = {
+									type = air_base
+									level = 2
+									instant_build = yes
+								}
+						}
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = air_doctrine
+						}
+				}
+			completion_reward = {
+					air_experience = 25
+					if = {
+							limit = {
+									capital_scope = {
+											OR = {
+													NOT = {
+															is_controlled_by = ROOT
+														}
+													NOT = {
+															free_building_slots = {
+																	building = air_base
+																	size > 1
+																}
+														}
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+									add_building_construction = {
+											type = air_base
+											level = 2
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_2_AB
+										}
+								}
+						}
+					if = {
+							limit = {
+									capital_scope = {
+											is_controlled_by = ROOT
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+								}
+							capital_scope = {
+									add_building_construction = {
+											type = air_base
+											level = 2
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_2_AB
+										}
+								}
+						}
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = air_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_CAS_effort
+		icon = GFX_goal_generic_CAS
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_aviation_effort_2
+		}
+		x = 13
+		y = 4
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = CAS_bonus
+							bonus = 0.5
+							ahead_reduction = 1
+							uses = 1
+							category = cas_bomber
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_NAV_effort
+		icon = GFX_goal_generic_air_naval_bomber
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_aviation_effort_2
+		}
+		x = 15
+		y = 4
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = nav_bomber_bonus
+							bonus = 0.5
+							ahead_reduction = 1
+							uses = 1
+							category = naval_bomber
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_rocket_effort
+		icon = GFX_focus_rocketry
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_CAS_effort
+		}
+		prerequisite = {
+			focus = SWI_NAV_effort
+		}
+		x = 14
+		y = 5
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = jet_rocket_bonus
+							ahead_reduction = 0.5
+							uses = 2
+							category = rocketry
+							category = jet_technology
+						}
+				}
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0.25
+							always = yes
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_reform_officer_corps
+		icon = GFX_goal_generic_special_forces
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_special_forces
+		}
+		prerequisite = {
+			focus = SWI_rocket_effort
+		}
+		x = 12
+		y = 8
+			completion_reward = {
+					remove_ideas = incompetent_officer_corps
+				}
+
+	}
+	focus = {
+		id = SWI_soviet_advisors
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_soviet_alignment
+		}
+		x = 18
+		y = 1
+			completion_reward = {
+					add_ideas = soviet_advisors
+				}
+
+	}
+	focus = {
+		id = SWI_surplus_soviet_equipment
+		icon = GFX_goal_continuous_reduce_training_time
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_soviet_advisors
+		}
+		x = 17
+		y = 2
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = assault_rifle_equipment_1
+							amount = 2000
+							producer = SOV
+						}
+					add_equipment_to_stockpile = {
+							type = main_battle_tanks_2
+							amount = 150
+							producer = SOV
+						}
+					add_equipment_to_stockpile = {
+							type = lt_equipment_1
+							amount = 300
+							producer = SOV
+						}
+					add_equipment_to_stockpile = {
+							type = ht_equipment_2
+							amount = 100
+							producer = SOV
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_soviet_armed_divisions
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_surplus_soviet_equipment
+		}
+		x = 17
+		y = 3
+			completion_reward = {
+					load_oob = SWI_soviet_armed_division
+				}
+
+	}
+	focus = {
+		id = SWI_soviet_trainer_pilots
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_soviet_alignment
+		}
+		x = 22
+		y = 1
+			completion_reward = {
+					air_experience = 25
+				}
+
+	}
+	focus = {
+		id = SWI_personel_exchanges
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_soviet_trainer_pilots
+		}
+		prerequisite = {
+			focus = SWI_soviet_advisors
+		}
+		x = 20
+		y = 2
+			completion_reward = {
+					add_manpower = 50000
+					army_experience = 5
+				}
+
+	}
+	focus = {
+		id = SWI_soviet_army_doctrine
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_personel_exchanges
+		}
+		prerequisite = {
+			focus = SWI_surplus_soviet_equipment
+		}
+		x = 19
+		y = 3
+			completion_reward = {
+					army_experience = 5
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.75
+							uses = 2
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_more_surplus_equipment
+		icon = GFX_focus_secret_rearmament
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_soviet_armed_divisions
+		}
+		prerequisite = {
+			focus = SWI_soviet_army_doctrine
+		}
+		x = 17
+		y = 4
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = assault_rifle_equipment_1
+							amount = 2000
+							producer = SOV
+						}
+					add_equipment_to_stockpile = {
+							type = main_battle_tanks_2
+							amount = 150
+							producer = SOV
+						}
+					add_equipment_to_stockpile = {
+							type = lt_equipment_1
+							amount = 300
+							producer = SOV
+						}
+					add_equipment_to_stockpile = {
+							type = ht_equipment_2
+							amount = 100
+							producer = SOV
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_soviet_fighters
+		icon = GFX_goal_generic_air_fighter
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_soviet_trainer_pilots
+		}
+		x = 23
+		y = 2
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = CAS_equipment_4
+							amount = 200
+							producer = SOV
+						}
+					add_equipment_to_stockpile = {
+							type = jet_fighter_equipment_2
+							amount = 800
+							producer = SOV
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_soviet_bombers
+		icon = GFX_goal_generic_air_bomber
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_soviet_fighters
+		}
+		prerequisite = {
+			focus = SWI_personel_exchanges
+		}
+		x = 21
+		y = 3
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = jet_strat_bomber_equipment_2
+							amount = 200
+							producer = SOV
+						}
+					add_equipment_to_stockpile = {
+							type = jet_tac_bomber_equipment_2
+							amount = 800
+							producer = SOV
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_soviet_air_doctrine
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_soviet_fighters
+		}
+		prerequisite = {
+			focus = SWI_personel_exchanges
+		}
+		x = 23
+		y = 3
+			completion_reward = {
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.5
+							uses = 3
+							category = air_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_soviet_airfield_development
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_soviet_air_doctrine
+		}
+		prerequisite = {
+			focus = SWI_soviet_bombers
+		}
+		x = 21
+		y = 4
+			completion_reward = {
+					air_experience = 25
+					if = {
+							limit = {
+									capital_scope = {
+											OR = {
+													NOT = {
+															is_controlled_by = ROOT
+														}
+													NOT = {
+															free_building_slots = {
+																	building = air_base
+																	size > 1
+																}
+														}
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+									add_building_construction = {
+											type = air_base
+											level = 5
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_2_AB
+										}
+								}
+						}
+					if = {
+							limit = {
+									capital_scope = {
+											is_controlled_by = ROOT
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+								}
+							capital_scope = {
+									add_building_construction = {
+											type = air_base
+											level = 5
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_2_AB
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_soviet_anti_air_defenses
+		icon = GFX_focus_generic_air_defense
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_soviet_air_doctrine
+		}
+		prerequisite = {
+			focus = SWI_soviet_bombers
+		}
+		x = 23
+		y = 4
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = anti_air_building
+											size > 3
+										}
+								}
+							add_building_construction = {
+									type = anti_air_building
+									level = 2
+									instant_build = yes
+								}
+							ROOT = {
+									set_country_flag = aviation_effort_2_AB
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = anti_air_building
+											size > 3
+										}
+								}
+							add_building_construction = {
+									type = anti_air_building
+									level = 2
+									instant_build = yes
+								}
+							ROOT = {
+									set_country_flag = aviation_effort_2_AB
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_research_advances_air
+		icon = GFX_goal_continuous_air_production
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_soviet_airfield_development
+		}
+		prerequisite = {
+			focus = SWI_soviet_anti_air_defenses
+		}
+		x = 22
+		y = 5
+		completion_reward = {
+			add_tech_bonus = {
+				name = TUR_fighter_modernisation
+				bonus = 0.5
+				uses = 2
+				category = light_fighter
+			}
+		}
+	}
+	
+	focus = {
+		id = SWI_soviet_scuds
+		icon = GFX_focus_rocketry
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_research_advances_air
+		}
+		x = 22
+		y = 6
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = cruisemissile_1
+							amount = 400
+							producer = SOV
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_american_advisors
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_american_alignment
+		}
+		x = 26
+		y = 1
+			completion_reward = {
+					add_ideas = american_advisors
+				}
+
+	}
+	focus = {
+		id = SWI_american_surplus_equipment
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_american_advisors
+		}
+		x = 25
+		y = 2
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = assault_rifle_equipment_1
+							amount = 2000
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = main_battle_tanks_2
+							amount = 150
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = lt_equipment_1
+							amount = 300
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = ht_equipment_2
+							amount = 100
+							producer = USA
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_american_armed_divisions
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_american_surplus_equipment
+		}
+		x = 25
+		y = 3
+			completion_reward = {
+					load_oob = SWI_american_armed_division
+				}
+
+	}
+	focus = {
+		id = SWI_american_aircraft_training
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_american_alignment
+		}
+		x = 30
+		y = 1
+			completion_reward = {
+					air_experience = 25
+				}
+
+	}
+	focus = {
+		id = SWI_american_weapon_sale
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_american_aircraft_training
+		}
+		prerequisite = {
+			focus = SWI_american_advisors
+		}
+		x = 28
+		y = 2
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = assault_rifle_equipment_1
+							amount = 2000
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = main_battle_tanks_2
+							amount = 150
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = lt_equipment_1
+							amount = 300
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = ht_equipment_2
+							amount = 100
+							producer = USA
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_american_doctrine
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_american_weapon_sale
+		}
+		prerequisite = {
+			focus = SWI_american_surplus_equipment
+		}
+		x = 27
+		y = 3
+			completion_reward = {
+					army_experience = 5
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.75
+							uses = 2
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_american_intelligence_aid
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_american_doctrine
+		}
+		prerequisite = {
+			focus = SWI_american_armed_divisions
+		}
+		x = 26
+		y = 4
+			completion_reward = {
+					add_ideas = american_intel_sharing
+				}
+
+	}
+	focus = {
+		id = SWI_american_tanks
+		icon = GFX_goal_generic_army_tanks
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_american_intelligence_aid
+		}
+		x = 25
+		y = 5
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = main_battle_tanks_2
+							amount = 150
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = lt_equipment_1
+							amount = 300
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = ht_equipment_2
+							amount = 100
+							producer = USA
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_american_weapon_sale_Copy
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_american_weapon_sale
+		}
+		x = 28
+		y = 4
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = assault_rifle_equipment_1
+							amount = 2000
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = main_battle_tanks_2
+							amount = 150
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = lt_equipment_1
+							amount = 300
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = ht_equipment_2
+							amount = 100
+							producer = USA
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_american_weapon_sale_Copy_Copy
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_american_weapon_sale_Copy
+		}
+		x = 28
+		y = 6
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = assault_rifle_equipment_1
+							amount = 2000
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = main_battle_tanks_2
+							amount = 150
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = lt_equipment_1
+							amount = 300
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = ht_equipment_2
+							amount = 100
+							producer = USA
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_american_fighters
+		icon = GFX_goal_generic_air_fighter
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_american_aircraft_training
+		}
+		x = 31
+		y = 2
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = CAS_equipment_4
+							amount = 200
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = jet_fighter_equipment_2
+							amount = 800
+							producer = USA
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_american_bombers
+		icon = GFX_goal_generic_air_bomber
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_american_weapon_sale
+		}
+		prerequisite = {
+			focus = SWI_american_fighters
+		}
+		x = 29
+		y = 3
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = jet_strat_bomber_equipment_2
+							amount = 200
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = jet_tac_bomber_equipment_2
+							amount = 800
+							producer = USA
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_american_doctrine_air
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_american_fighters
+		}
+		x = 31
+		y = 3
+			completion_reward = {
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.5
+							uses = 3
+							category = air_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_american_anti_air_defences
+		icon = GFX_focus_generic_air_defense
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_american_bombers
+		}
+		prerequisite = {
+			focus = SWI_american_doctrine_air
+		}
+		x = 30
+		y = 4
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = anti_air_building
+											size > 3
+										}
+								}
+							add_building_construction = {
+									type = anti_air_building
+									level = 2
+									instant_build = yes
+								}
+							ROOT = {
+									set_country_flag = aviation_effort_2_AB
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = anti_air_building
+											size > 3
+										}
+								}
+							add_building_construction = {
+									type = anti_air_building
+									level = 2
+									instant_build = yes
+								}
+							ROOT = {
+									set_country_flag = aviation_effort_2_AB
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_american_rocket_tech
+		icon = GFX_focus_rocketry
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_american_anti_air_defences
+		}
+		x = 29
+		y = 5
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = cruisemissile_1
+							amount = 400
+							producer = USA
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_american_airfield_development
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_american_anti_air_defences
+		}
+		x = 31
+		y = 5
+			completion_reward = {
+					air_experience = 25
+					if = {
+							limit = {
+									capital_scope = {
+											OR = {
+													NOT = {
+															is_controlled_by = ROOT
+														}
+													NOT = {
+															free_building_slots = {
+																	building = air_base
+																	size > 1
+																}
+														}
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+									add_building_construction = {
+											type = air_base
+											level = 5
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_2_AB
+										}
+								}
+						}
+					if = {
+							limit = {
+									capital_scope = {
+											is_controlled_by = ROOT
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+								}
+							capital_scope = {
+									add_building_construction = {
+											type = air_base
+											level = 5
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_2_AB
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_american_mic_contracts
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_american_rocket_tech
+		}
+		prerequisite = {
+			focus = SWI_american_airfield_development
+		}
+		x = 30
+		y = 6
+			completion_reward = {
+					add_ideas = american_mic_advisors
+				}
+
+	}
+	focus = {
+		id = SWI_neutral
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_cold_war
+		}
+		mutually_exclusive = {
+			focus = SWI_new_course
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 1
+			}
+		}
+		x = 35
+		y = 1
+			completion_reward = {
+					random_owned_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_deterrence
+		icon = GFX_goal_generic_defence
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_neutral
+		}
+		x = 35
+		y = 2
+		completion_reward = {
+			add_ideas = deterrence
+		}
+	}
+	focus = {
+		id = SWI_law_reforms
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_deterrence
+		}
+		x = 35
+		y = 3
+		completion_reward = {
+					add_ideas = WGR_Reformed_Law
+				}
+	}
+	focus = {
+		id = SWI_nazi_gold
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_law_reforms
+		}
+		x = 35
+		y = 4
+		completion_reward = {
+			add_national_unity = 0.10
+			
+		}
+	}
+	focus = {
+		id = SWI_cern
+		icon = GFX_goal_continuous_research
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_nazi_gold
+		}
+		x = 35
+		y = 5
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = SWI_no_war
+		icon = GFX_goal_generic_major_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_cern
+		}
+		x = 35
+		y = 6
+
+	}
+	focus = {
+		id = SWI_new_course
+		icon = GFX_goal_anschluss
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_cold_war
+		}
+		mutually_exclusive = {
+			focus = SWI_neutral
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+		x = 49
+		y = 1
+			ai_will_do = {
+					factor = 10
+				}
+			complete_tooltip = {
+					add_popularity = {
+							ideology = fascism
+							popularity = 0.1
+						}
+				}
+			completion_reward = {
+					set_political_power = 100
+				}
+
+	}
+	focus = {
+		id = SWI_communism
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_new_course
+		}
+		mutually_exclusive = {
+			focus = SWI_far_right
+			focus = SWI_monarchy
+			focus = SWI_democracy
+		}
+		x = 42
+		y = 2
+		completion_reward = {
+					add_political_power = 50
+					add_popularity = {
+							ideology = communism
+							popularity = 0.15
+						}
+					add_popularity = {
+							ideology = maoism
+							popularity = 0.15
+						}
+					add_popularity = {
+							ideology = trotskyism
+							popularity = 0.15
+						}
+				}
+	}
+	focus = {
+		id = SWI_marxism_leninism
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_communism
+		}
+		mutually_exclusive = {
+			focus = SWI_global_revolution
+			focus = SWI_maosim
+		}
+		x = 39
+		y = 3
+		completion_reward = {
+					add_political_power = 100
+					add_national_unity = 0.05
+					set_politics = {
+							ruling_party = communism
+							elections_allowed = no
+					}
+			}
+	}
+	focus = {
+		id = SWI_global_revolution
+		icon = GFX_goal_support_fourth_int
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_communism
+		}
+		mutually_exclusive = {
+			focus = SWI_marxism_leninism
+			focus = SWI_maosim
+		}
+		x = 42
+		y = 3
+		completion_reward = {
+					add_political_power = 100
+					add_national_unity = 0.05
+					set_politics = {
+							ruling_party = trotskyism
+							elections_allowed = no
+					}
+			}
+	}
+	focus = {
+		id = SWI_maosim
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_communism
+		}
+		mutually_exclusive = {
+			focus = SWI_marxism_leninism
+			focus = SWI_global_revolution
+		}
+		x = 45
+		y = 3
+		completion_reward = {
+					add_political_power = 100
+					add_national_unity = 0.05
+					set_politics = {
+							ruling_party = maoism
+							elections_allowed = no
+					}
+			}
+	}
+	focus = {
+		id = SWI_first_five_year_plan
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_marxism_leninism
+			focus = SWI_global_revolution
+			focus = SWI_maosim
+		}
+		x = 42
+		y = 4
+		completion_reward = {
+		    add_timed_idea = { idea = DDR_idea_first_five_year_plan days = 1825 }
+		}
+	}
+	focus = {
+		id = SWI_revolutionary_army
+		icon = GFX_goal_support_fourth_int
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_global_revolution
+		}
+		x = 42
+		y = 5
+		completion_reward = {
+			add_ideas = revolutionary_army
+		}
+	}
+	focus = {
+		id = SWI_mobilization_of_masses
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_revolutionary_army
+		}
+		x = 42
+		y = 6
+		completion_reward = {
+			add_ideas = TUR_mobilization_of_the_masses
+		}
+	}
+	focus = {
+		id = SWI_collectivization
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_mobilization_of_masses
+		}
+		x = 42
+		y = 7
+		completion_reward = {
+					every_owned_state = {
+							add_extra_state_shared_building_slots = 1
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+	}
+	focus = {
+		id = SWI_export_the_revolution
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_collectivization
+		}
+		x = 42
+		y = 8
+		completion_reward = {
+			every_neighbor_country = {
+				add_timed_idea = { idea = trotskyism_drift days = 365 }	
+			}
+		}
+	}
+	focus = {
+		id = SWI_agarian_reform
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_maosim
+		}
+		x = 45
+		y = 5
+		completion_reward = {
+			add_ideas = agrarian_reform
+		}
+	}
+	focus = {
+		id = SWI_cultural_revolution
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_agarian_reform
+		}
+		x = 45
+		y = 6
+		completion_reward = {
+			add_ideas = PRC_cultural_revolution
+		}
+	}
+	focus = {
+		id = SWI_chinese_visit
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_cultural_revolution
+		}
+		x = 45
+		y = 7
+		completion_reward = {
+					SWI = {
+							add_opinion_modifier = {
+									target = PRC
+									modifier = large_increase
+								}
+						}
+					PRC = {
+							add_opinion_modifier = {
+									target = SWI
+									modifier = large_increase
+								}
+						}
+				}
+	}
+	focus = {
+		id = SWI_join_chinese_faction
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_chinese_visit
+		}
+		x = 45
+		y = 8
+		completion_reward = {
+			PRC = { add_to_faction = SWI }
+		}
+	}
+	focus = {
+		id = SWI_far_right
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_new_course
+		}
+		mutually_exclusive = {
+			focus = SWI_communism
+			focus = SWI_monarchy
+			focus = SWI_democracy
+		}
+		x = 49
+		y = 2
+		completion_reward = {
+					add_political_power = 50
+					add_popularity = {
+							ideology = National_Socialism
+							popularity = 0.15
+						}
+					add_popularity = {
+							ideology = fascism
+							popularity = 0.15
+						}
+				}
+	}
+	focus = {
+		id = SWI_neo_nazism
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_far_right
+		}
+		mutually_exclusive = {
+			focus = SWI_fascism_go
+		}
+		x = 48
+		y = 3
+		completion_reward = {
+					add_political_power = 100
+					add_national_unity = 0.05
+					set_politics = {
+							ruling_party = National_Socialism
+							elections_allowed = no
+					}
+			}
+	}
+	focus = {
+		id = SWI_fascism_go
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_far_right
+		}
+		mutually_exclusive = {
+			focus = SWI_neo_nazism
+		}
+		x = 50
+		y = 3
+		completion_reward = {
+					add_political_power = 100
+					add_national_unity = 0.05
+					set_politics = {
+							ruling_party = fascism
+							elections_allowed = no
+					}
+			}
+	}
+	focus = {
+		id = SWI_strong_leadership
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_neo_nazism
+			focus = SWI_fascism_go
+		}
+		x = 49
+		y = 4
+		completion_reward = {
+			add_ideas = fra_strong_executive
+		}
+	}
+	focus = {
+		id = SWI_military_youth
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_strong_leadership
+		}
+		x = 49
+		y = 5
+		completion_reward = {
+			add_ideas = military_youth_focus
+		}
+	}
+	focus = {
+		id = SWI_anti_democracy
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_military_youth
+		}
+		x = 49
+		y = 6
+		completion_reward = {
+			add_ideas = anti_democracy_drift
+		}
+	}
+	focus = {
+		id = SWI_national_corporations
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_anti_democracy
+		}
+		x = 49
+		y = 7
+		completion_reward = {
+			add_ideas = national_corporations
+		}
+	}
+	focus = {
+		id = SWI_leftist_persecution
+		icon = GFX_goal_generic_secret_weapon
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_national_corporations
+		}
+		x = 49
+		y = 8
+		completion_reward = {
+			add_national_unity = -0.03
+			add_ideas = leftist_persecution
+		}
+	}
+	focus = {
+		id = SWI_monarchy
+		icon = GFX_focus_hun_elect_a_king
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_new_course
+		}
+		mutually_exclusive = {
+			focus = SWI_communism
+			focus = SWI_far_right
+			focus = SWI_democracy
+		}
+		x = 56
+		y = 2
+		completion_reward = {
+					add_political_power = 50
+					add_popularity = {
+							ideology = monarchism
+							popularity = 0.15
+						}
+						set_politics = {
+							ruling_party = monarchism
+							elections_allowed = no
+					}
+				}
+	}
+	focus = {
+		id = SWI_monarchist_militarism
+		icon = GFX_focus_hun_elect_a_king
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_monarchy
+		}
+		x = 56
+		y = 3
+		completion_reward = {
+			add_ideas = militarism_focus
+		}
+	}
+	focus = {
+		id = SWI_revanchism
+		icon = GFX_focus_hun_elect_a_king
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_monarchist_militarism
+		}
+		x = 56
+		y = 4
+		completion_reward = {
+			add_ideas = TUR_revanchism_focus
+		}
+	}
+	focus = {
+		id = SWI_fight_for_king
+		icon = GFX_focus_hun_elect_a_king
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_revanchism
+		}
+		x = 56
+		y = 5
+
+	}
+	focus = {
+		id = SWI_boost_morale
+		icon = GFX_focus_hun_elect_a_king
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_fight_for_king
+		}
+		x = 56
+		y = 6
+		completion_reward = {
+					add_political_power = 100
+					add_national_unity = 0.2
+			}
+	}
+	focus = {
+		id = SWI_strike_france
+		icon = GFX_focus_hun_elect_a_king
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_monarchist_propaganda
+		}
+		x = 56
+		y = 8
+		completion_reward = {
+					create_wargoal = {
+							type = annex_everything
+							target = FRA
+						}
+					FRA = { every_owned_state = { add_core_of = SWI }	}
+			}
+	}
+	focus = {
+		id = SWI_reform_officer_corps_usa
+		icon = GFX_goal_generic_special_forces
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_american_weapon_sale_Copy_Copy
+		}
+		prerequisite = {
+			focus = SWI_american_mic_contracts
+		}
+		prerequisite = {
+			focus = SWI_american_license_agreements
+		}
+		x = 28
+		y = 7
+			completion_reward = {
+					remove_ideas = incompetent_officer_corps
+				}
+
+	}
+	focus = {
+		id = SWI_extra_tech_slot_2
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_extra_tech_slot
+		}
+		prerequisite = {
+			focus = SWI_nuclear_effort
+		}
+		prerequisite = {
+			focus = SWI_secret_weapons
+		}
+		x = 3
+		y = 6
+			available = {
+					num_of_factories > 50
+				}
+			cancel_if_invalid = no
+			continue_if_invalid = yes
+			available_if_capitulated = yes
+			completion_reward = {
+					add_research_slot = 1
+				}
+
+	}
+	focus = {
+		id = SWI_soviet_motorization_aid
+		icon = GFX_goal_generic_army_motorized
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_soviet_army_doctrine
+		}
+		prerequisite = {
+			focus = SWI_soviet_armed_divisions
+		}
+		x = 19
+		y = 4
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = motorized_equipment_2
+							amount = 500
+							producer = SOV
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_soviet_tanks
+		icon = GFX_goal_generic_army_tanks
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_soviet_motorization_aid
+		}
+		prerequisite = {
+			focus = SWI_more_surplus_equipment
+		}
+		x = 17
+		y = 5
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = main_battle_tanks_2
+							amount = 150
+							producer = SOV
+						}
+					add_equipment_to_stockpile = {
+							type = lt_equipment_1
+							amount = 300
+							producer = SOV
+						}
+					add_equipment_to_stockpile = {
+							type = ht_equipment_2
+							amount = 100
+							producer = SOV
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_soviet_mechanized_equipment
+		icon = GFX_goal_generic_build_tank
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_more_surplus_equipment
+		}
+		prerequisite = {
+			focus = SWI_soviet_motorization_aid
+		}
+		x = 19
+		y = 5
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = mechanized_equipment_3
+							amount = 500
+							producer = SOV
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_backwards_engineer_soviet_designs
+		icon = GFX_focus_secret_rearmament
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_soviet_mechanized_equipment
+		}
+		prerequisite = {
+			focus = SWI_soviet_tanks
+		}
+		x = 18
+		y = 6
+			completion_reward = {
+					add_ideas = soviet_military_desgins
+				}
+
+	}
+	focus = {
+		id = SWI_purge_officer_corps
+		icon = GFX_goal_generic_special_forces
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_backwards_engineer_soviet_designs
+		}
+		prerequisite = {
+			focus = SWI_soviet_scuds
+		}
+		x = 20
+		y = 7
+			completion_reward = {
+					remove_ideas = incompetent_officer_corps
+				}
+
+	}
+	focus = {
+		id = SWI_american_mechanized_equipment
+		icon = GFX_goal_generic_build_tank
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_american_intelligence_aid
+		}
+		x = 27
+		y = 5
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = mechanized_equipment_3
+							amount = 500
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = motorized_equipment_2
+							amount = 500
+							producer = SOV
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_american_license_agreements
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_american_mechanized_equipment
+		}
+		prerequisite = {
+			focus = SWI_american_tanks
+		}
+		x = 26
+		y = 6
+			completion_reward = {
+					create_production_license = {
+							target = USA
+							cost_factor = 1.0
+							equipment = {
+									type = motorized_equipment_2
+									version = 0
+								}
+						}
+					create_production_license = {
+							target = USA
+							cost_factor = 1.0
+							equipment = {
+									type = mechanized_equipment_3
+									version = 0
+								}
+						}
+					create_production_license = {
+							target = USA
+							cost_factor = 1.0
+							equipment = {
+									type = main_battle_tanks_2
+									version = 0
+								}
+						}
+					create_production_license = {
+							target = USA
+							cost_factor = 1.0
+							equipment = {
+									type = lt_equipment_1
+									version = 0
+								}
+						}
+					create_production_license = {
+							target = USA
+							cost_factor = 1.0
+							equipment = {
+									type = ht_equipment_2
+									version = 0
+								}
+						}
+					create_production_license = {
+							target = USA
+							cost_factor = 1.0
+							equipment = {
+									type = assault_rifle_equipment_1
+									version = 0
+								}
+						}
+					create_production_license = {
+							target = USA
+							cost_factor = 1.0
+							equipment = {
+									type = CAS_equipment_4
+									version = 0
+								}
+						}
+					create_production_license = {
+							target = USA
+							cost_factor = 1.0
+							equipment = {
+									type = jet_fighter_equipment_2
+									version = 0
+								}
+						}
+					create_production_license = {
+							target = USA
+							cost_factor = 1.0
+							equipment = {
+									type = jet_tac_bomber_equipment_2
+									version = 0
+								}
+						}
+					create_production_license = {
+							target = USA
+							cost_factor = 1.0
+							equipment = {
+									type = jet_strat_bomber_equipment_2
+									version = 0
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = SWI_control_the_masses
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_marxism_leninism
+		}
+		x = 39
+		y = 5
+		completion_reward = {
+			add_political_power = 150
+			add_national_unity = 0.15
+		}
+	}
+	focus = {
+		id = SWI_political_correctness
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_control_the_masses
+		}
+		x = 39
+		y = 6
+		completion_reward = {
+			add_ideas = idea_political_correctness
+		}
+	}
+	focus = {
+		id = SWI_join_the_warsaw_pact
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_political_correctness
+		}
+		x = 39
+		y = 7
+		completion_reward = {
+			SOV = { add_to_faction = SWI }
+		}
+	}
+	focus = {
+		id = SWI_spread_communism
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_join_the_warsaw_pact
+		}
+		x = 39
+		y = 8
+		completion_reward = {
+			every_neighbor_country = {
+				add_timed_idea = { idea = communist_influence days = 365 }	
+			}
+		}
+	}
+	focus = {
+		id = SWI_Socialist_science
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_spread_communism
+			focus = SWI_export_the_revolution
+			focus = SWI_join_chinese_faction
+		}
+		x = 42
+		y = 9
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = SWI_secreret_weapons
+		icon = GFX_goal_generic_secret_weapon
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_leftist_persecution
+		}
+		x = 49
+		y = 9
+
+	}
+	focus = {
+		id = SWI_democracy
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_new_course
+		}
+		mutually_exclusive = {
+			focus = SWI_monarchy
+			focus = SWI_far_right
+			focus = SWI_communism
+		}
+		x = 63
+		y = 2
+		completion_reward = {
+			add_political_power = 100
+			add_national_unity = 0.1
+			add_popularity = {
+				ideology = conservative
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = socialist
+				popularity = 0.05
+		}
+			add_popularity = {
+				ideology = centrist
+				popularity = 0.05
+		}
+		}
+	}
+	focus = {
+		id = SWI_drop_neutrality
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_democracy
+		}
+		x = 63
+		y = 3
+		completion_reward = {
+			add_national_unity = -0.10
+			remove_ideas = neutrality_idea
+		}
+	}
+	focus = {
+		id = SWI_friends_in_west
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_drop_neutrality
+		}
+		x = 63
+		y = 4
+		completion_reward = {
+						USA = {
+							add_opinion_modifier = {
+									target = SWI
+									modifier = small_increase
+								}
+						}
+					SWI = {
+							add_opinion_modifier = {
+									target = USA
+									modifier = small_increase
+								}
+						}
+						ENG = {
+						add_opinion_modifier = {
+									target = SWI
+									modifier = small_increase
+								}
+						}
+					SWI = {
+							add_opinion_modifier = {
+									target = ENG
+									modifier = small_increase
+								}
+						}
+					FRA = {
+					add_opinion_modifier = {
+									target = SWI
+									modifier = small_increase
+								}
+						}
+					SWI = {
+							add_opinion_modifier = {
+									target = FRA
+									modifier = small_increase
+								}
+						}
+		}
+	}
+	focus = {
+		id = SWI_join_nato
+		icon = GFX_nato
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_friends_in_west
+		}
+		x = 63
+		y = 5
+			completion_reward = {
+					USA = { add_to_faction = ROOT }
+					add_ideas = nato_member
+				}
+	}
+	focus = {
+		id = SWI_embrace_capitalism
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_join_nato
+		}
+		x = 63
+		y = 6
+		completion_reward = {
+			add_ideas = capitalism
+		}
+	}
+	focus = {
+		id = SWI_western_investments
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_embrace_capitalism
+		}
+		x = 63
+		y = 7
+		completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+	}
+	focus = {
+		id = SWI_united_we_stand
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_western_investments
+		}
+		x = 63
+		y = 8
+		completion_reward = {
+			add_national_unity = 0.4
+		}
+	}
+	
+	focus = {
+		id = SWI_friends_in_west_and_east
+		icon = GFX_goal_generic_major_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_no_war
+		}
+		x = 35
+		y = 7
+		completion_reward = {
+					SOV = {
+							add_opinion_modifier = {
+									target = SWI
+									modifier = small_increase
+								}
+						}
+					SWI = {
+							add_opinion_modifier = {
+									target = SOV
+									modifier = small_increase
+								}
+						}
+						USA = {
+							add_opinion_modifier = {
+									target = SWI
+									modifier = small_increase
+								}
+						}
+					SWI = {
+							add_opinion_modifier = {
+									target = USA
+									modifier = small_increase
+								}
+						}
+		}
+	}
+	
+	focus = {
+		id = SWI_celebrate_neutrality
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_friends_in_west_and_east
+		}
+		x = 35
+		y = 8
+		completion_reward = {
+			add_national_unity = 0.15
+			add_political_power = 120
+		}
+	}
+	
+	focus = {
+		id = SWI_monarchist_propaganda
+		icon = GFX_focus_hun_elect_a_king
+		cost = 10.00
+		prerequisite = {
+			focus = SWI_boost_morale
+		}
+		x = 56
+		y = 7
+		completion_reward = {
+			add_ideas = ideological_fanaticism_focus
+		}
+	}
+}

@@ -1,0 +1,148 @@
+leader_traits = {
+
+	GMAVAG_manufacturer_air = {
+		random = no
+		equipment_bonus = {
+			fighter_equipment = {
+				air_agility = 0.05 maximum_speed = 0.05 build_cost_ic = -0.10
+			}
+			cv_fighter_equipment = {
+				air_agility = 0.05 maximum_speed = 0.05 build_cost_ic = -0.10
+			}
+			CAS_equipment = {
+				air_ground_attack = 0.05 reliability = 0.05 build_cost_ic = -0.10
+			}
+			cv_CAS_equipment = {
+				air_ground_attack = 0.05 reliability = 0.05 build_cost_ic = -0.10
+			}		
+			jet_CAS_equipment = {
+				air_ground_attack = 0.05 reliability = 0.05 build_cost_ic = -0.10
+			}
+			cv_jet_CAS_equipment = {
+				air_ground_attack = 0.05 reliability = 0.05 build_cost_ic = -0.10
+			}
+			jet_fighter_equipment = {
+				air_agility = 0.05 maximum_speed = 0.05 build_cost_ic = -0.10
+			}
+			cv_jet_fighter_equipment = {
+				air_agility = 0.05 maximum_speed = 0.05 build_cost_ic = -0.10
+			}
+			stealth_fighter_equipment = {
+				air_agility = 0.05 maximum_speed = 0.05 build_cost_ic = -0.10
+			}
+			cv_stealth_fighter_equipment = {
+				air_agility = 0.05 maximum_speed = 0.05 build_cost_ic = -0.10
+			}
+			jump_jet_equipment = {
+				air_agility = 0.05 maximum_speed = 0.05 build_cost_ic = -0.10
+			}
+			jet_interceptor_equipment = {
+				air_agility = 0.05 maximum_speed = 0.05 build_cost_ic = -0.10
+			}
+
+
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	IFA_motorized = {
+		random = no
+		equipment_bonus = {
+			mechanized_equipment = {
+				reliability = 0.10 soft_attack = 0.10
+			}
+			mechanized_airborne_equipment = {
+				reliability = 0.10 soft_attack = 0.10
+			}
+			mechanized_heavy_equipment = {
+				reliability = 0.10 soft_attack = 0.10
+			}
+			mechanized_marine_equipment = {
+				reliability = 0.10 soft_attack = 0.10
+			}
+			motorized_equipment = {
+				reliability = 0.10 soft_attack = 0.10
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	CSEPEL_motorized = {
+		random = no
+		equipment_bonus = {
+			mechanized_equipment = {
+				build_cost_ic = -0.25
+			}
+			mechanized_airborne_equipment = {
+				build_cost_ic = -0.25
+			}
+			mechanized_heavy_equipment = {
+				build_cost_ic = -0.25
+			}
+			mechanized_marine_equipment = {
+				build_cost_ic = -0.25
+			}
+			motorized_equipment = {
+				build_cost_ic = -0.25
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	FEG_inf = {
+		random = no
+		equipment_bonus = {
+			artillery_equipment = {
+				reliability = 0.10 soft_attack = 0.10
+			}
+			infantry_equipment = {
+				reliability = 0.10 soft_attack = 0.10
+			}
+			lmg_infantry_equipment = {
+				reliability = 0.10 soft_attack = 0.10
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	Kharkiv_Morozov_Machine_Building_Design_Bureau_armor = {
+		random = no
+		equipment_bonus = {
+			armor = {
+				soft_attack = 0.05 
+				armor_value = 0.05 
+				hard_attack = 0.05
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Motovilikha_Plants_inf = {
+		random = no
+		equipment_bonus = {
+			artillery_equipment = {
+				build_cost_ic = -0.25
+			}
+			infantry_equipment = {
+				build_cost_ic = -0.25
+			}
+			lmg_infantry_equipment = {
+				build_cost_ic = -0.25
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}		
+}

@@ -1,0 +1,108 @@
+equipments = {
+
+	mechanized_heavy_equipment = {
+		year = 1965
+
+		is_archetype = yes
+		picture = archetype_mechanized_heavy_equipment		
+		is_buildable = no
+		type = {
+			#infantry #Removing inf type 
+			mechanized
+		}
+		group_by = archetype
+		
+		interface_category = interface_category_land
+		
+		#Misc Abilities
+		maximum_speed = 15
+		reliability = 0.8
+		
+		#Defensive Abilities
+		defense = 50
+		breakthrough = 30
+		hardness = 0.65
+		armor_value = 35
+
+		#Offensive Abilities
+		soft_attack = 55
+		hard_attack = 15
+		ap_attack = 36
+
+		#Space taken in convoy
+		lend_lease_cost = 5
+		
+		build_cost_ic = 30 
+		resources = {
+			steel = 5
+			oil = 4
+			tungsten = 2
+		}
+	}
+
+	mechanized_heavy_equipment_1 = {
+		year = 1965
+
+		archetype = mechanized_heavy_equipment
+		priority = 40
+		visual_level = 0
+	}
+
+	mechanized_heavy_equipment_2 = {
+		year = 1980
+
+		archetype = mechanized_heavy_equipment
+		parent = mechanized_heavy_equipment_1
+		priority = 40
+		visual_level = 1
+
+		maximum_speed = 15
+
+		#Defensive Abilities
+		defense = 54
+		breakthrough = 40
+		hardness = 0.65
+		armor_value = 40
+
+		#Offensive Abilities
+		soft_attack = 60
+		hard_attack = 20
+		ap_attack = 41
+		
+		build_cost_ic = 35
+		resources = {
+			steel = 6
+			tungsten = 4
+			oil = 5
+		}
+	}
+
+	mechanized_heavy_equipment_3 = {
+		year = 1992
+
+		archetype = mechanized_heavy_equipment
+		parent = mechanized_heavy_equipment_2
+		priority = 40
+		visual_level = 2
+		
+		maximum_speed = 15
+
+		#Defensive Abilities
+		defense = 58
+		breakthrough = 50
+		hardness = 0.65
+		armor_value = 45
+
+		#Offensive Abilities
+		soft_attack = 65
+		hard_attack = 20
+		ap_attack = 46	
+		
+		build_cost_ic = 40
+		resources = {
+			steel = 7
+			tungsten = 5
+			oil = 6
+		}
+	}
+}

@@ -1,0 +1,2633 @@
+###################
+#Written by: Voronsky (steamid: leon912)
+##################
+focus_tree = {
+
+	#Jordianian focus tree
+	id = jordan_focus
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 35
+			tag = JOR
+		}
+	}
+
+	default = no
+
+	########### JORDAN NATIONAL FOCUS TREE #######
+	focus = {
+		id = JOR_rename_nation
+		icon = GFX_goal_generic_propaganda
+		x = 2
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_tooltip = {
+			add_national_unity = 0.10 #add %10 national unity
+		}
+
+		completion_reward = {
+			add_national_unity = 0.10
+		}
+	}
+
+	focus = {
+		id = JOR_annex_west_bank
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = JOR_rename_nation }
+		x = 2
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			ISR = {
+				add_opinion_modifier = { target = JOR modifier = democratic_leanings_bad }
+			}
+			332 = {
+				add_claim_by = JOR
+			}
+		}
+
+		completion_reward = {
+			ISR = {
+				add_opinion_modifier = { target = JOR modifier = democratic_leanings_bad }
+			}
+			332 = {
+				add_claim_by = JOR
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = JOR_death_king_abdullah
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = JOR_annex_west_bank }
+		x = 2
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_tooltip = {
+			#King hussein becomes leader of Jordan, but is he even a character ? we may need to make him
+			add_national_unity = -0.5 #Lose -5% national unity
+			add_political_power = 120
+		}
+
+		completion_reward = {
+			add_national_unity = -0.5 #Lose -5% national unity
+			add_political_power = 120
+		}
+	}
+
+
+	focus = {
+		id = JOR_reject_baghdad_pact
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = JOR_death_king_abdullah }
+		mutually_exclusive = { focus = JOR_accept_baghdad_pact }
+		x = 1
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_tooltip = {
+			#Missing effect about dealing with acceptance coming from this event, please refer to the pastebin of Jordan
+			SOV = {
+				add_opinion_modifier = { target = JOR modifier = democratic_leanings_good }
+			}
+			USA = {
+				add_opinion_modifier = { target = JOR modifier = democratic_leanings_bad }
+			}
+			TUR = {
+				add_opinion_modifier = { target = JOR modifier = democratic_leanings_bad }
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.02 #add %2 communist support
+			}
+		}
+
+		completion_reward = {
+			SOV = {
+				add_opinion_modifier = { target = JOR modifier = democratic_leanings_good }
+			}
+			USA = {
+				add_opinion_modifier = { target = JOR modifier = democratic_leanings_bad }
+			}
+			TUR = {
+				add_opinion_modifier = { target = JOR modifier = democratic_leanings_bad }
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.02 #add %2 communist support
+			}
+		}
+	}
+
+	focus = {
+		id = JOR_accept_baghdad_pact
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = JOR_death_king_abdullah }
+		mutually_exclusive = { focus = JOR_reject_baghdad_pact }
+		x = 3
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_tooltip = {
+			#Missing effect about dealing with acceptance coming from this event, please refer to the pastebin of Jordan
+			#Missing effect, forming a NAP with Turkey, Iraq and Iraq and grants military access is this possible? 
+			IRQ = {
+				add_opinion_modifier = { target = JOR modifier = democratic_leanings_good }
+			}
+			PER = {
+				add_opinion_modifier = { target = JOR modifier = democratic_leanings_good }
+			}
+			TUR = {
+				add_opinion_modifier = { target = JOR modifier = democratic_leanings_good }
+			}
+			SOV = {
+				add_opinion_modifier = { target = JOR modifier = democratic_leanings_bad }
+			}
+			SYR = {
+				add_opinion_modifier = { target = JOR modifier = democratic_leanings_bad }
+			}
+			add_national_unity = -0.05 #Decrease national unity by %5
+		}
+
+		completion_reward = {
+			IRQ = {
+				add_opinion_modifier = { target = JOR modifier = democratic_leanings_good }
+			}
+			PER = {
+				add_opinion_modifier = { target = JOR modifier = democratic_leanings_good }
+			}
+			TUR = {
+				add_opinion_modifier = { target = JOR modifier = democratic_leanings_good }
+			}
+			SOV = {
+				add_opinion_modifier = { target = JOR modifier = democratic_leanings_bad }
+			}
+			SYR = {
+				add_opinion_modifier = { target = JOR modifier = democratic_leanings_bad }
+			}
+			add_national_unity = -0.05 #Decrease national unity by %5
+		}
+	}
+
+	focus = {
+		id = JOR_make_arab_legion
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = JOR_accept_baghdad_pact focus = JOR_reject_baghdad_pact }
+		x = 2
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_tooltip = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			add_national_unity = 0.05 #add %5 national unity
+			army_experience = -5
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			add_national_unity = 0.05 #add %5 national unity
+			army_experience = -5
+		}
+	}
+
+	#### RESEARCH NATIONAL FOCUS / NON COMBAT #####
+
+	focus = {
+		id = JOR_university_jordan
+		icon = GFX_focus_research
+		x = 4
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_tooltip = {
+			add_research_slot = 1
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	##Missing event  "Surprise attack", refer to pastebin but I do not know how to implement that specific idea
+
+
+	### AGGRESSIVE NATIONAL FOCUSES ####
+
+	focus = {
+		id = JOR_enemy_enemy_friend
+		icon = GFX_goal_generic_improve_relations
+		x = 6
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_tooltip = {
+			add_national_unity = -0.10 #-%10 nat unity
+			USA = {
+				add_opinion_modifier = { target = JOR modifier = democratic_leanings_good }
+			}
+			SAU = {
+				add_opinion_modifier = { target = JOR modifier = democratic_leanings_bad }
+			}
+		}
+
+		completion_reward = {
+			add_national_unity = -0.10 #-%10 nat unity
+			USA = {
+				add_opinion_modifier = { target = JOR modifier = democratic_leanings_good }
+			}
+			SAU = {
+				add_opinion_modifier = { target = JOR modifier = democratic_leanings_bad }
+			}
+		}
+	}
+
+	##MIssing event 'second plaestinian refugee influx' it states to add population, is there a trigger to add population?
+	focus = {
+		id = JOR_black_september
+		icon = GFX_goal_generic_attack_allies
+		x = 6
+		y = 1
+		prerequisite = { focus = JOR_enemy_enemy_friend }
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+
+
+		complete_tooltip = {
+			add_national_unity = 0.1 #add %10 national unity
+			ISR = {
+				add_opinion_modifier = { target = JOR modifier = democratic_leanings_good }
+			}
+		}
+
+		completion_reward = {
+			add_national_unity = 0.1 #add %10 national unity
+			ISR = {
+				add_opinion_modifier = { target = JOR modifier = democratic_leanings_good }
+			}
+		}
+	}
+
+	###### JORDAN INDUSTRIAL ######
+
+	focus = {
+		id = JOR_abdullah_mosque
+		icon = GFX_goal_generic_construct_military
+		x = 8
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+
+
+		complete_tooltip = {
+			add_national_unity = 0.1 #add %10 national unity
+			ISR = {
+				add_opinion_modifier = { target = JOR modifier = democratic_leanings_good }
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+			SAU = {
+				add_opinion_modifier = { target = JOR modifier = democratic_leanings_good }
+			}
+		}
+
+		completion_reward = {
+			add_national_unity = 0.1 #add %10 national unity
+			ISR = {
+				add_opinion_modifier = { target = JOR modifier = democratic_leanings_good }
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+			SAU = {
+				add_opinion_modifier = { target = JOR modifier = democratic_leanings_good }
+			}
+		}
+	}
+
+	focus = {
+		id = JOR_amman_zarqa_highway
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = JOR_abdullah_mosque }
+		x = 8
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 5
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = JOR_british_imports
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = JOR_amman_zarqa_highway }
+		x = 8
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = JOR_military_effort
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = JOR_british_imports }
+		x = 8
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = JOR_industrial_technologies
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = JOR_military_effort }
+		x = 8
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+
+
+		complete_tooltip = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}	
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+		}	
+	}
+
+	focus = {
+		id = JOR_industrial_revamp
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = JOR_industrial_technologies }
+		x = 8
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = JOR_us_military_aid
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = JOR_industrial_revamp }
+		x = 8
+		y = 6
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+
+	########## ARMY FOCUS ###################
+
+	focus = {
+		id = JOR_arab_legion_retraining
+		icon = GFX_goal_generic_axis_build_infantry
+		x = 10
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_tooltip = {
+			army_experience = 50
+		}
+
+		completion_reward = {
+			army_experience = 50
+		}
+	}
+
+	focus = {
+		id = JOR_tank_reinforcements
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = JOR_arab_legion_retraining }
+		x = 10
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_tooltip = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 0.25
+				uses = 2
+				category = armor
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 0.25
+				uses = 2
+				category = armor
+			}
+		}
+	}
+
+	focus = {
+		id = JOR_for_king
+		icon = GFX_goal_generic_demand_territory
+		prerequisite  = { focus = JOR_tank_reinforcements }
+		x = 10
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_tooltip = {
+			add_ideas = rehabilitated_military_focus #This is using a Vanilla modifier to allow division recovery to be increased by %2. Look in Soviet.txt ideas
+		}
+
+		completion_reward = {
+			add_ideas = rehabilitated_military_focus #This is using a Vanilla modifier to allow division recovery to be increased by %2. Look in Soviet.txt ideas
+		}
+	}
+
+	focus = {
+		id = JOR_us_equipment
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = JOR_for_king }
+		x = 10
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_tooltip = {
+			#Original idea was to give unit army attrition to be lowered, so far you can't mix technological advances with a national focus, doing placeholder instead
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	###### JORDAN AIR FORCE ######
+
+	focus = {
+		id = JOR_british_jet_imports
+		icon = GFX_goal_generic_build_airforce
+		x = 12
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_tooltip = {
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = JOR_arab_air_force
+		icon = GFX_goal_generic_build_airforce
+		prerequisite = { focus = JOR_british_jet_imports }
+		x = 12
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_tooltip = {
+			air_experience = 25
+			add_national_unity = 0.05
+		}
+
+		completion_reward = {
+			air_experience = 25
+			add_national_unity = 0.05
+		}
+	}
+
+	focus = {
+		id = JOR_tigers_jordan
+		icon = GFX_focus_rocketry
+		prerequisite = { focus = JOR_arab_air_force }
+		x = 12
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		#Original idea was to give ace generation chance and air superiority mission efficency, again is it possible to add standard tech advances with national focus?
+		complete_tooltip = {
+			air_experience = 25
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+
+		completion_reward = {
+			air_experience = 25
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = JOR_dassault_mirage #named after a cold-war jet plane
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = JOR_tigers_jordan }
+		x = 12
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		#Original idea was to give CAS efficiency increase and add tech research for a specific fighter, again is it possible to add standard tech advances with national focus?
+		complete_tooltip = {
+			air_experience = 25
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+
+		completion_reward = {
+			air_experience = 25
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+
+	###### JORDAN NAVY ###########
+
+	focus = {
+		id = JOR_aqaba_port
+		icon = GFX_goal_generic_build_navy
+		cost = 10
+		x = 15
+		y = 0
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 4
+			add_building_construction = {
+				type = dockyard
+				level = 4
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					dockyard > 0
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = dockyard
+					level = 4
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					dockyard > 0
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = dockyard
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = JOR_expand_port_aqaba
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = JOR_aqaba_port }
+		cost = 10
+		x = 15
+		y = 1
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		complete_tooltip = {
+			navy_experience = 25
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			random_owned_state = {
+				limit = {
+					dockyard > 0
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					dockyard > 0
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}			
+		}
+	}
+
+	focus = {
+		id = JOR_naval_defense
+		icon = GFX_goal_generic_build_navy
+		cost = 10
+		x = 15
+		y = 2
+		prerequisite = { focus = JOR_expand_port_aqaba }
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = dockyard
+				level = 2
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					dockyard > 0
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					dockyard > 0
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = JOR_british_ships
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = JOR_naval_defense }
+		mutually_exclusive = { focus = JOR_us_submarines }
+		x = 14
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_tooltip = {
+			ENG = {
+				add_opinion_modifier = { target = JOR modifier = democratic_leanings_good }
+			}
+			JOR = {
+				add_opinion_modifier = { target = ENG modifier = democratic_leanings_good }
+			}
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				technology = improved_light_cruiser
+				technology = advanced_light_cruiser
+				
+				
+			}
+		}
+
+		completion_reward = {
+			ENG = {
+				add_opinion_modifier = { target = JOR modifier = democratic_leanings_good }
+			}
+			JOR = {
+				add_opinion_modifier = { target = ENG modifier = democratic_leanings_good }
+			}
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				technology = improved_light_cruiser
+				technology = advanced_light_cruiser
+				
+				
+			}
+		}
+	}
+
+	focus = {
+		id = JOR_us_submarines
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = JOR_naval_defense }
+		mutually_exclusive = { focus = JOR_british_ships }
+		x = 16
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_tooltip = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 0.5
+				uses = 2
+				technology = early_submarine
+				technology = basic_submarine
+				technology = improved_submarine
+				technology = advanced_submarine
+			}
+		}
+
+		completion_reward = {
+			USA = {
+				add_opinion_modifier = { target = JOR modifier = democratic_leanings_good }
+			}
+			JOR = {
+				add_opinion_modifier = { target = USA modifier = democratic_leanings_good }
+			}
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 0.5
+				uses = 2
+				technology = early_submarine
+				technology = basic_submarine
+				technology = improved_submarine
+				technology = advanced_submarine
+			}
+		}
+	}
+	focus = {
+		id = JOR_seek_autonomy_from_overlord
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = JOR_political_effort
+		}
+		mutually_exclusive = {
+			focus = JOR_agitate_for_freedom
+		}
+		x = 26
+		y = 1
+			available = {
+					OR = {
+							has_government = democratic
+							has_government = neutrality
+						}
+				}
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 95
+					modifier = {
+							factor = 0.1
+							any_neighbor_country = {
+									is_major = yes
+									OR = {
+											has_government = communism
+											has_government = fascism
+										}
+								}
+							NOT = {
+									any_neighbor_country = {
+											is_major = yes
+											has_government = democratic
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_ideas = liberty_ethos_focus
+				}
+			completion_reward = {
+				add_ideas = liberty_ethos_focus
+				country_event = JOR.201
+		}
+	}
+	focus = {
+		id = JOR_emulate_overlord_government
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = JOR_seek_autonomy_from_overlord
+		}
+		mutually_exclusive = {
+			focus = JOR_neutrality
+		}
+		x = 24
+		y = 2
+			available_if_capitulated = yes
+			completion_reward = {
+					if = {
+							limit = {
+									NOT = {
+											has_idea = communism_banned
+										}
+								}
+							add_ideas = communism_banned
+						}
+					add_political_power = 150
+				}
+
+	}
+	focus = {
+		id = JOR_seek_closer_ties_to_west
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = JOR_emulate_overlord_government
+		}
+		x = 24
+		y = 3
+			completion_reward = {
+					add_opinion_modifier = {
+							target = ENG
+							modifier = large_increase
+						}
+					add_opinion_modifier = {
+							target = FRA
+							modifier = large_increase
+						}
+					add_opinion_modifier = {
+							target = USA
+							modifier = large_increase
+						}
+					ENG = {
+							add_opinion_modifier = {
+									target = ROOT
+									modifier = large_increase
+								}
+						}
+					USA = {
+							add_opinion_modifier = {
+									target = ROOT
+									modifier = large_increase
+								}
+						}
+					FRA = {
+							add_opinion_modifier = {
+									target = ROOT
+									modifier = large_increase
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JOR_seek_foriegn_investments
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = JOR_seek_closer_ties_to_west
+		}
+		x = 24
+		y = 4
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = construction_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = industrial_complex
+											size < 1
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JOR_free_markets
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10.00
+		prerequisite = {
+			focus = JOR_seek_foriegn_investments
+		}
+		x = 24
+		y = 5
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = construction_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = industrial_complex
+											size < 1
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					add_national_unity = 0.15
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JOR_interventionism_focus
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = JOR_free_markets
+		}
+		x = 24
+		y = 6
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0
+							has_idea = neutrality_idea
+						}
+				}
+			completion_reward = {
+					if = {
+							limit = {
+									has_idea = neutrality_idea
+								}
+							remove_ideas = neutrality_idea
+						}
+					set_rule = {
+							can_send_volunteers = yes
+						}
+					add_political_power = 150
+				}
+
+	}
+	focus = {
+		id = JOR_volunteer_corps
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = JOR_interventionism_focus
+		}
+		x = 24
+		y = 7
+			available_if_capitulated = yes
+			completion_reward = {
+					add_ideas = volunteer_corps_focus
+				}
+
+	}
+	focus = {
+		id = JOR_foreign_expeditions
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 10.00
+		prerequisite = {
+			focus = JOR_volunteer_corps
+		}
+		x = 24
+		y = 8
+			available_if_capitulated = yes
+			completion_reward = {
+					add_ideas = foreign_expeditions_focus
+				}
+
+	}
+	focus = {
+		id = JOR_why_we_fight
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = JOR_foreign_expeditions
+		}
+		x = 24
+		y = 9
+			available = {
+					OR = {
+							threat > 0.75
+							has_defensive_war = yes
+						}
+				}
+			continue_if_invalid = yes
+			available_if_capitulated = yes
+			completion_reward = {
+					add_ideas = why_we_fight_focus
+					custom_effect_tooltip = why_we_fight_effect
+					hidden_effect = {
+							if = {
+									limit = {
+											NOT = {
+													has_idea = neutrality_idea
+												}
+										}
+									set_rule = {
+											can_create_factions = yes
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JOR_capitalist_economy
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = JOR_why_we_fight
+		}
+		x = 24
+		y = 10
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = construction_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = industrial_complex
+											size < 1
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JOR_foriegn_military_aid
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = JOR_capitalist_economy
+		}
+		x = 25
+		y = 11
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = production_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = arms_factory
+											size < 1
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JOR_neutrality
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10.00
+		prerequisite = {
+			focus = JOR_seek_autonomy_from_overlord
+		}
+		mutually_exclusive = {
+			focus = JOR_emulate_overlord_government
+		}
+		x = 28
+		y = 2
+			available_if_capitulated = yes
+			completion_reward = {
+					if = {
+							limit = {
+									NOT = {
+											has_idea = chinese_advisors
+										}
+								}
+							add_ideas = chinese_advisors
+						}
+					add_political_power = 150
+				}
+
+	}
+	focus = {
+		id = JOR_deterrence
+		icon = GFX_goal_generic_defence
+		cost = 10.00
+		prerequisite = {
+			focus = JOR_neutrality
+		}
+		x = 28
+		y = 3
+			available_if_capitulated = yes
+			completion_reward = {
+					add_ideas = deterrence
+				}
+
+	}
+	focus = {
+		id = JOR_ban_the_opposition
+		icon = GFX_goal_continuous_suppression
+		cost = 10.00
+		prerequisite = {
+			focus = JOR_deterrence
+		}
+		x = 27
+		y = 4
+			completion_reward = {
+					add_ideas = nationalism
+					set_politics = {
+							ruling_party = democratic
+							elections_allowed = no
+					}
+				}
+
+	}
+	focus = {
+		id = JOR_military_coup
+		icon = GFX_goal_continuous_suppression
+		cost = 10.00
+		prerequisite = {
+			focus = JOR_deterrence
+		}
+		x = 29
+		y = 4
+			completion_reward = {
+					set_politics = {
+							ruling_party = neutrality
+							elections_allowed = no
+						}
+					add_popularity = { ideology = neutrality popularity = 0.6 }	
+				}
+
+	}
+	focus = {
+		id = JOR_agitate_for_freedom
+		icon = GFX_focus_generic_strike_at_democracy2
+		cost = 10.00
+		prerequisite = {
+			focus = JOR_political_effort
+		}
+		mutually_exclusive = {
+			focus = JOR_seek_autonomy_from_overlord
+		}
+		x = 33
+		y = 1
+			available = {
+			}
+
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 5
+					modifier = {
+							factor = 0
+							OR = {
+									AND = {
+											is_historical_focus_on = yes
+											has_government = neutrality
+										}
+									has_idea = neutrality_idea
+								}
+						}
+				}
+			complete_tooltip = {
+					add_ideas = collectivist_ethos_focus
+				}
+			completion_reward = {
+					add_ideas = collectivist_ethos_focus
+					country_event = JOR.201
+		
+				}
+
+	}
+	focus = {
+		id = JOR_nationalism_focus
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = JOR_agitate_for_freedom
+		}
+		mutually_exclusive = {
+			focus = JOR_internationalism_focus
+		}
+		x = 30
+		y = 2
+			available = {
+				}
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 5
+					modifier = {
+							factor = 2
+							any_neighbor_country = {
+									is_major = yes
+									has_government = fascism
+								}
+						}
+					modifier = {
+							factor = 0
+							AND = {
+									is_historical_focus_on = yes
+									NOT = {
+											has_government = fascism
+										}
+								}
+						}
+				}
+			completion_reward = {
+					add_ideas = nationalism
+					set_politics = {
+							ruling_party = fascism
+							elections_allowed = no
+						}
+				}
+
+	}
+	focus = {
+		id = JOR_internationalism_focus
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = JOR_agitate_for_freedom
+		}
+		mutually_exclusive = {
+			focus = JOR_militarism
+			focus = JOR_nationalism_focus
+		}
+		x = 36
+		y = 2
+			available = {
+
+				}
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 5
+					modifier = {
+							factor = 2
+							any_neighbor_country = {
+									is_major = yes
+									has_government = communism
+								}
+						}
+					modifier = {
+							factor = 0
+							AND = {
+									is_historical_focus_on = yes
+									NOT = {
+											has_government = communism
+										}
+								}
+						}
+				}
+			completion_reward = {
+					add_ideas = internationalism
+					set_politics = {
+							ruling_party = communism
+							elections_allowed = no
+						}
+				}
+
+	}
+	focus = {
+		id = JOR_condemn_colonialism
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10.00
+		prerequisite = {
+			focus = JOR_nationalism_focus
+			focus = JOR_internationalism_focus
+		}
+		x = 33
+		y = 3
+
+	}
+	focus = {
+		id = JOR_aid_anti_colonialist_struggles
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 10.00
+		prerequisite = {
+			focus = JOR_condemn_colonialism
+		}
+		x = 33
+		y = 4
+			available_if_capitulated = yes
+			completion_reward = {
+					add_ideas = foreign_expeditions_focus
+				}
+
+	}
+	focus = {
+		id = JOR_militarism
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = JOR_aid_anti_colonialist_struggles
+			focus = JOR_military_coup
+			focus = JOR_ban_the_opposition
+		}
+		mutually_exclusive = {
+			focus = JOR_internationalism_focus
+		}
+		x = 29
+		y = 5
+			available_if_capitulated = yes
+			completion_reward = {
+					if = {
+							limit = {
+									has_idea = neutrality_idea
+								}
+							remove_ideas = neutrality_idea
+						}
+					add_ideas = militarism_focus
+					army_experience = 20
+					set_rule = {
+							can_send_volunteers = yes
+						}
+				}
+
+	}
+	focus = {
+		id = JOR_soviet_aid
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = JOR_aid_anti_colonialist_struggles
+		}
+		prerequisite = {
+			focus = JOR_internationalism_focus
+		}
+		mutually_exclusive = {
+			focus = JOR_maoist_aid
+		}
+		x = 34
+		y = 5
+			completion_reward = {
+					add_opinion_modifier = {
+							target = SOV
+							modifier = large_increase
+						}
+					SOV = {
+							add_opinion_modifier = {
+									target = ROOT
+									modifier = large_increase
+								}
+						}
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 1
+							category = industry
+						}
+					add_tech_bonus = {
+							name = armor_bonus
+							bonus = 0.5
+							uses = 1
+							category = armor
+						}
+				}
+
+	}
+	focus = {
+		id = JOR_maoist_aid
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = JOR_aid_anti_colonialist_struggles
+		}
+		prerequisite = {
+			focus = JOR_internationalism_focus
+		}
+		mutually_exclusive = {
+			focus = JOR_soviet_aid
+		}
+		x = 38
+		y = 5
+			completion_reward = {
+					add_opinion_modifier = {
+							target = PRC
+							modifier = large_increase
+						}
+					PRC = {
+							add_opinion_modifier = {
+									target = ROOT
+									modifier = large_increase
+								}
+						}
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 2
+							category = infantry_weapons
+							category = artillery
+						}
+				}
+
+	}
+	focus = {
+		id = JOR_five_year_plan
+		icon = GFX_goal_continuous_repairments
+		cost = 10.00
+		prerequisite = {
+			focus = JOR_soviet_aid
+			focus = JOR_maoist_aid
+		}
+		x = 36
+		y = 6
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = construction_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = industrial_complex
+											size < 1
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					add_national_unity = 0.15
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JOR_political_correctness
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10.00
+		prerequisite = {
+			focus = JOR_soviet_aid
+		}
+		prerequisite = {
+			focus = JOR_five_year_plan
+		}
+		x = 34
+		y = 7
+			available_if_capitulated = yes
+			completion_reward = {
+					if = {
+							limit = {
+									has_idea = neutrality_idea
+								}
+							remove_ideas = neutrality_idea
+						}
+					add_political_power = 200
+					add_ideas = idea_political_correctness
+				}
+
+	}
+	focus = {
+		id = JOR_paramilitarism
+		icon = GFX_goal_generic_military_sphere
+		cost = 10.00
+		prerequisite = {
+			focus = JOR_military_youth
+		}
+		x = 29
+		y = 7
+			available_if_capitulated = yes
+			completion_reward = {
+					add_ideas = paramilitarism_focus
+				}
+
+	}
+	focus = {
+		id = JOR_indoctrination_focus
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = JOR_political_correctness
+		}
+		x = 34
+		y = 8
+			available_if_capitulated = yes
+			completion_reward = {
+					add_ideas = indoctrination_focus
+					add_political_power = 150
+				}
+
+	}
+	focus = {
+		id = JOR_political_commissars
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = JOR_indoctrination_focus
+		}
+		x = 34
+		y = 9
+			available = {
+
+}
+			available_if_capitulated = yes
+			completion_reward = {
+					add_to_faction = SOV
+				}
+
+	}
+	focus = {
+		id = JOR_ideological_fanaticism
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = JOR_anti_communism
+			focus = JOR_join_warsaw_pact
+			focus = JOR_chinese_investment
+		}
+		x = 33
+		y = 11
+			available_if_capitulated = yes
+			completion_reward = {
+					add_ideas = ideological_fanaticism_focus
+					set_rule = {
+							can_create_factions = yes
+						}
+					hidden_effect = {
+							set_rule = {
+									can_use_kamikaze_pilots = yes
+								}
+						}
+					custom_effect_tooltip = kamikaze_focus_tooltip
+				}
+
+	}
+	focus = {
+		id = JOR_technology_sharing
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = JOR_foriegn_military_aid
+			focus = JOR_ideological_fanaticism
+		}
+		x = 33
+		y = 12
+			available = {
+					has_war = yes
+					is_in_faction = yes
+					OR = {
+							num_of_factories > 50
+							any_other_country = {
+									is_in_faction_with = ROOT
+									num_of_factories > 50
+								}
+						}
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+					if = {
+							limit = {
+									original_research_slots < 3
+								}
+							add_research_slot = 1
+						}
+					if = {
+							limit = {
+									original_research_slots > 2
+								}
+							add_tech_bonus = {
+									name = electronics_bonus
+									bonus = 0.5
+									uses = 1
+									category = electronics
+								}
+							add_tech_bonus = {
+									name = industrial_bonus
+									bonus = 0.5
+									uses = 1
+									category = industry
+								}
+							add_tech_bonus = {
+									name = infantry_weapons_bonus
+									bonus = 0.5
+									uses = 1
+									category = infantry_weapons
+									category = artillery
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JOR_military_youth
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 10.00
+		prerequisite = {
+			focus = JOR_militarism
+		}
+		x = 29
+		y = 6
+			available_if_capitulated = yes
+			completion_reward = {
+					add_ideas = military_youth_focus
+					if = {
+							limit = {
+									has_government = fascism
+								}
+							add_popularity = {
+									ideology = fascism
+									popularity = 0.2
+								}
+						}
+					if = {
+							limit = {
+									has_government = communism
+								}
+							add_popularity = {
+									ideology = communism
+									popularity = 0.2
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JOR_imperial_ambitions
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = JOR_paramilitarism
+		}
+		prerequisite = {
+			focus = JOR_nationalism_focus
+		}
+		x = 30
+		y = 8
+
+		completion_reward = {
+			every_neighbor_country = {
+				limit = {
+					OR = {
+						NOT = { tag = ENG }
+						NOT = { tag = FRA }
+						NOT = { tag = BEL }
+						NOT = { tag = POR }
+					}
+				}
+				save_event_target_as = war_target_imperial	
+			}
+			create_wargoal = { type = annex_everything target = event_target:war_target_imperial }
+		}
+			
+	}
+	focus = {
+		id = JOR_strengthen_the_regime
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = JOR_paramilitarism
+		}
+		prerequisite = {
+			focus = JOR_deterrence
+		}
+		x = 28
+		y = 8
+			available_if_capitulated = yes
+			completion_reward = {
+					add_national_unity = 0.15
+				}
+
+	}
+	focus = {
+		id = JOR_join_warsaw_pact
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = JOR_political_commissars
+		}
+		x = 34
+		y = 10
+			available = {
+
+}
+			available_if_capitulated = yes
+			completion_reward = {
+					SOV = { add_to_faction = ROOT }
+			}
+
+	}
+	focus = {
+		id = JOR_chinese_advisors
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = JOR_maoist_aid
+		}
+		prerequisite = {
+			focus = JOR_five_year_plan
+		}
+		x = 38
+		y = 7
+			available_if_capitulated = yes
+			completion_reward = {
+					if = {
+							limit = {
+									NOT = {
+											has_idea = chinese_advisors
+										}
+								}
+							add_ideas = chinese_advisors
+						}
+					add_political_power = 150
+				}
+
+	}
+	focus = {
+		id = JOR_cultural_revolution
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = JOR_chinese_advisors
+		}
+		x = 38
+		y = 8
+			available_if_capitulated = yes
+			completion_reward = {
+					add_national_unity = -0.10
+					add_political_power = 300
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 1
+							category = industry
+						}
+				}
+
+	}
+	focus = {
+		id = JOR_crush_dissent
+		icon = GFX_focus_generic_strike_at_democracy2
+		cost = 10.00
+		prerequisite = {
+			focus = JOR_imperial_ambitions
+			focus = JOR_strengthen_the_regime
+		}
+		x = 29
+		y = 9
+			available_if_capitulated = yes
+			completion_reward = {
+					add_national_unity = 0.15
+				}
+
+	}
+	focus = {
+		id = JOR_anti_communism
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10.00
+		prerequisite = {
+			focus = JOR_crush_dissent
+		}
+		x = 29
+		y = 10
+			available_if_capitulated = yes
+			completion_reward = {
+					if = {
+							limit = {
+									NOT = {
+											has_idea = communism_banned
+										}
+								}
+							add_ideas = communism_banned
+						}
+					add_political_power = 150
+				}
+
+	}
+	focus = {
+		id = JOR_spread_maoism
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = JOR_cultural_revolution
+		}
+		x = 38
+		y = 9
+			available_if_capitulated = yes
+			completion_reward = {
+					every_neighbor_country = {
+							add_ideas = communist_pressure
+						}
+				}
+
+	}
+	focus = {
+		id = JOR_chinese_investment
+		icon = GFX_goal_generic_air_production
+		cost = 10.00
+		prerequisite = {
+			focus = JOR_spread_maoism
+		}
+		x = 38
+		y = 10
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = construction_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = industrial_complex
+											size < 1
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					add_national_unity = 0.15
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+}

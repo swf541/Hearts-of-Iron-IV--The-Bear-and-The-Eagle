@@ -1,0 +1,5155 @@
+focus_tree = {
+	id = EGY_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = EGY
+		}
+		modifier = {
+			add = 10
+			tag = UAR
+		}
+	}
+	default = no
+	focus = {
+		id = EGY_naval_effort
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		x = 34
+		y = 0
+			available_if_capitulated = yes
+			available = {
+					any_state = {
+							is_coastal = yes
+							is_controlled_by = ROOT
+						}
+				}
+			complete_tooltip = {
+					navy_experience = 25
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+							type = dockyard
+							level = 3
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					navy_experience = 25
+					if = {
+							limit = {
+									NOT = {
+											any_owned_state = {
+													dockyard > 0
+													free_building_slots = {
+															building = dockyard
+															size > 2
+															include_locked = yes
+														}
+												}
+										}
+									any_owned_state = {
+											is_coastal = yes
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											is_coastal = yes
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+							set_country_flag = naval_effort_built
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_country_flag = naval_effort_built
+										}
+									any_owned_state = {
+											dockyard > 0
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											dockyard > 0
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+							set_country_flag = naval_effort_built
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_country_flag = naval_effort_built
+										}
+									NOT = {
+											any_owned_state = {
+													free_building_slots = {
+															building = dockyard
+															size > 2
+															include_locked = yes
+														}
+												}
+										}
+								}
+							random_state = {
+									limit = {
+											controller = {
+													tag = ROOT
+												}
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_industrial_effort
+		icon = GFX_goal_generic_production
+		cost = 10.00
+		x = 4
+		y = 0
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = industrial_bonus
+							bonus = 0.5
+							uses = 1
+							category = industry
+						}
+				}
+			ai_will_do = {
+					factor = 3
+					modifier = {
+							factor = 0
+							date < 1939.1.1
+							OR = {
+									tag = GXC
+									tag = YUN
+									tag = SHX
+									tag = XSM
+									tag = BEL
+									tag = LUX
+									tag = HOL
+									tag = DEN
+									num_of_controlled_states < 2
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_non_aligned
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10.00
+		mutually_exclusive = {
+			focus = EGY_soviet_alignment
+		}
+		x = 12
+		y = 0
+			completion_reward = {
+					add_political_power = 120
+					add_national_unity = 0.10
+				}
+
+	}
+	focus = {
+		id = EGY_soviet_alignment
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		mutually_exclusive = {
+			focus = EGY_non_aligned
+			focus = EGY_american_alignment
+		}
+		x = 20
+		y = 0
+			completion_reward = {
+					EGY = {
+							add_opinion_modifier = {
+									target = SOV
+									modifier = large_increase
+								}
+						}
+					SOV = {
+							add_opinion_modifier = {
+									target = EGY
+									modifier = large_increase
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_the_israeli_question
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10.00
+		x = 34
+		y = 4
+			completion_reward = {
+					add_political_power = 150
+				}
+
+	}
+	focus = {
+		id = EGY_american_alignment
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		mutually_exclusive = {
+			focus = EGY_soviet_alignment
+		}
+		x = 28
+		y = 0
+			completion_reward = {
+					EGY = {
+							add_opinion_modifier = {
+									target = USA
+									modifier = large_increase
+								}
+						}
+					USA = {
+							add_opinion_modifier = {
+									target = EGY
+									modifier = large_increase
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_arab_cold_war
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10.00
+		bypass = { 
+			tag = UAR
+		}
+		x = 45
+		y = 0
+
+			completion_reward = {
+					add_political_power = 150
+				}
+
+	}
+	focus = {
+		id = EGY_construction_effort
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_industrial_effort
+		}
+		x = 2
+		y = 1
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = construction_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = industrial_complex
+											size < 1
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_construction_effort_2
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_construction_effort
+		}
+		x = 2
+		y = 2
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = construction_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = industrial_complex
+											size < 1
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_infrastructure_effort
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_construction_effort_2
+		}
+		x = 2
+		y = 3
+			available_if_capitulated = yes
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = infrastructure_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = infrastructure
+											size < 1
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 0
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 0
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 1
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 1
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_construction_effort_3
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_infrastructure_effort
+		}
+		x = 2
+		y = 4
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = construction_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = industrial_complex
+											size < 2
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 1
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 1
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_production_effort
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_industrial_effort
+		}
+		x = 4
+		y = 1
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = production_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = arms_factory
+											size < 1
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_production_effort_2
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_production_effort
+		}
+		x = 4
+		y = 2
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = production_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = arms_factory
+											size < 1
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_production_effort_3
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_production_effort_2
+		}
+		x = 4
+		y = 3
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = production_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = arms_factory
+											size < 1
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_infrastructure_effort_2
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_infrastructure_effort
+		}
+		prerequisite = {
+			focus = EGY_production_effort_3
+		}
+		x = 4
+		y = 4
+			available_if_capitulated = yes
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = infrastructure_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = infrastructure
+											size < 1
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 0
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 0
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 1
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 1
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_secret_weapons
+		icon = GFX_goal_generic_secret_weapon
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_infrastructure_effort_2
+		}
+		prerequisite = {
+			focus = EGY_construction_effort_3
+		}
+		x = 1
+		y = 5
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = secret_bonus
+							bonus = 0.5
+							uses = 4
+							category = electronics
+							category = nuclear
+							category = rocketry
+						}
+				}
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0.25
+							always = yes
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_nuclear_effort
+		icon = GFX_focus_wonderweapons
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_infrastructure_effort_2
+		}
+		prerequisite = {
+			focus = EGY_construction_effort_3
+		}
+		x = 3
+		y = 5
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = nuclear_bonus
+							ahead_reduction = 0.5
+							category = nuclear
+						}
+				}
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0.25
+							always = yes
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_extra_tech_slot
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_infrastructure_effort_2
+		}
+		prerequisite = {
+			focus = EGY_construction_effort_3
+		}
+		x = 5
+		y = 5
+			available_if_capitulated = yes
+			completion_reward = {
+					add_research_slot = 1
+				}
+
+	}
+	focus = {
+		id = EGY_oil_development
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_industrial_effort
+		}
+		x = 6
+		y = 1
+			completion_reward = {
+					random_owned_state = {
+							add_resource = {
+									type = oil
+									amount = 50
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_oil_development_II
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_oil_development
+		}
+		x = 6
+		y = 2
+			completion_reward = {
+					random_owned_state = {
+							add_resource = {
+									type = oil
+									amount = 50
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_oil_development_III
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_oil_development_II
+		}
+		x = 6
+		y = 3
+			completion_reward = {
+					random_owned_state = {
+							add_resource = {
+									type = oil
+									amount = 25
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_oil_extraction_efficiency
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_oil_development_III
+		}
+		x = 6
+		y = 4
+			completion_reward = {
+					random_owned_state = {
+							add_resource = {
+									type = oil
+									amount = 25
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_army_effort
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_non_aligned
+		}
+		x = 10
+		y = 1
+			available_if_capitulated = yes
+			completion_reward = {
+					army_experience = 5
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_equipment_effort
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_army_effort
+		}
+		x = 9
+		y = 2
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 1
+							category = infantry_weapons
+							category = artillery
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_equipment_effort_2
+		icon = GFX_goal_generic_army_artillery
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_equipment_effort
+		}
+		x = 9
+		y = 4
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = infantry_artillery_bonus
+							bonus = 0.5
+							uses = 1
+							category = infantry_weapons
+							category = artillery
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_equipment_effort_3
+		icon = GFX_goal_generic_army_artillery2
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_equipment_effort_2
+		}
+		x = 9
+		y = 6
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = infantry_artillery_bonus
+							ahead_reduction = 1
+							uses = 1
+							category = infantry_weapons
+							category = artillery
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_doctrine_effort
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_army_effort
+		}
+		x = 10
+		y = 3
+			available_if_capitulated = yes
+			completion_reward = {
+					army_experience = 5
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_doctrine_effort_2
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_doctrine_effort
+		}
+		x = 10
+		y = 5
+			available_if_capitulated = yes
+			completion_reward = {
+					army_experience = 5
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_motorization_effort
+		icon = GFX_goal_generic_army_motorized
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_army_effort
+		}
+		x = 11
+		y = 2
+			bypass = {
+					has_tech = motorised_infantry
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = motorized_bonus
+							bonus = 0.75
+							technology = motorised_infantry
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_mechanization_effort
+		icon = GFX_goal_generic_build_tank
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_motorization_effort
+		}
+		x = 11
+		y = 4
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = motorized_bonus
+							ahead_reduction = 0.5
+							uses = 1
+							category = motorized_equipment
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_armor_effort
+		icon = GFX_goal_generic_army_tanks
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_mechanization_effort
+		}
+		x = 11
+		y = 6
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = armor_bonus
+							bonus = 0.5
+							uses = 2
+							category = armor
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_special_forces
+		icon = GFX_goal_generic_special_forces
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_equipment_effort_3
+		}
+		prerequisite = {
+			focus = EGY_doctrine_effort_2
+		}
+		prerequisite = {
+			focus = EGY_armor_effort
+		}
+		x = 10
+		y = 7
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = special_forces_bonus
+							bonus = 0.5
+							uses = 1
+							technology = paratroopers
+							technology = paratroopers2
+							technology = marines
+							technology = marines2
+							technology = tech_mountaineers
+							technology = tech_mountaineers2
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_aviation_effort
+		icon = GFX_goal_generic_build_airforce
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_non_aligned
+		}
+		x = 14
+		y = 1
+			available_if_capitulated = yes
+			complete_tooltip = {
+					air_experience = 25
+					if = {
+							limit = {
+									has_country_flag = aviation_effort_AB
+								}
+							add_building_construction = {
+									type = air_base
+									level = 2
+									instant_build = yes
+								}
+						}
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = air_doctrine
+						}
+				}
+			completion_reward = {
+					air_experience = 25
+					if = {
+							limit = {
+									capital_scope = {
+											NOT = {
+													free_building_slots = {
+															building = air_base
+															size > 1
+														}
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+									add_building_construction = {
+											type = air_base
+											level = 2
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_AB
+										}
+								}
+						}
+					if = {
+							limit = {
+									capital_scope = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+								}
+							capital_scope = {
+									add_building_construction = {
+											type = air_base
+											level = 2
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_AB
+										}
+								}
+						}
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = air_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_fighter_focus
+		icon = GFX_goal_generic_air_fighter
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_aviation_effort
+		}
+		mutually_exclusive = {
+			focus = EGY_bomber_focus
+		}
+		x = 13
+		y = 2
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = fighter_bonus
+							bonus = 0.5
+							uses = 2
+							technology = early_fighter
+							technology = fighter1
+							technology = fighter2
+							technology = fighter3
+							technology = heavy_fighter1
+							technology = heavy_fighter2
+							technology = heavy_fighter3
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_bomber_focus
+		icon = GFX_goal_generic_air_bomber
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_aviation_effort
+		}
+		mutually_exclusive = {
+			focus = EGY_fighter_focus
+		}
+		x = 15
+		y = 2
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = bomber_bonus
+							bonus = 0.5
+							uses = 2
+							technology = strategic_bomber1
+							technology = strategic_bomber2
+							technology = strategic_bomber3
+							category = tactical_bomber
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_aviation_effort_2
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_bomber_focus
+			focus = EGY_fighter_focus
+		}
+		x = 14
+		y = 3
+			available_if_capitulated = yes
+			complete_tooltip = {
+					air_experience = 25
+					if = {
+							limit = {
+									has_country_flag = aviation_effort_2_AB
+								}
+							add_building_construction = {
+									type = air_base
+									level = 2
+									instant_build = yes
+								}
+						}
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = air_doctrine
+						}
+				}
+			completion_reward = {
+					air_experience = 25
+					if = {
+							limit = {
+									capital_scope = {
+											OR = {
+													NOT = {
+															is_controlled_by = ROOT
+														}
+													NOT = {
+															free_building_slots = {
+																	building = air_base
+																	size > 1
+																}
+														}
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+									add_building_construction = {
+											type = air_base
+											level = 2
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_2_AB
+										}
+								}
+						}
+					if = {
+							limit = {
+									capital_scope = {
+											is_controlled_by = ROOT
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+								}
+							capital_scope = {
+									add_building_construction = {
+											type = air_base
+											level = 2
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_2_AB
+										}
+								}
+						}
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = air_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_CAS_effort
+		icon = GFX_goal_generic_CAS
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_aviation_effort_2
+		}
+		x = 13
+		y = 4
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = CAS_bonus
+							bonus = 0.5
+							ahead_reduction = 1
+							uses = 1
+							category = cas_bomber
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_NAV_effort
+		icon = GFX_goal_generic_air_naval_bomber
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_aviation_effort_2
+		}
+		x = 15
+		y = 4
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = nav_bomber_bonus
+							bonus = 0.5
+							ahead_reduction = 1
+							uses = 1
+							category = naval_bomber
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_rocket_effort
+		icon = GFX_focus_rocketry
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_CAS_effort
+		}
+		prerequisite = {
+			focus = EGY_NAV_effort
+		}
+		x = 14
+		y = 5
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = jet_rocket_bonus
+							ahead_reduction = 0.5
+							uses = 2
+							category = rocketry
+							category = jet_technology
+						}
+				}
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0.25
+							always = yes
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_reform_officer_corps_2
+		icon = GFX_goal_generic_special_forces
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_special_forces
+		}
+		prerequisite = {
+			focus = EGY_rocket_effort
+		}
+		prerequisite = {
+			focus = EGY_special_forces
+		}
+		prerequisite = {
+			focus = EGY_rocket_effort
+		}
+		prerequisite = {
+			focus = EGY_special_forces
+		}
+		prerequisite = {
+			focus = EGY_rocket_effort
+		}
+		prerequisite = {
+			focus = EGY_special_forces
+		}
+		prerequisite = {
+			focus = EGY_rocket_effort
+		}
+		x = 12
+		y = 8
+			completion_reward = {
+					remove_ideas = incompetent_officer_corps
+				}
+
+	}
+	focus = {
+		id = EGY_soviet_advisors
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_soviet_alignment
+		}
+		x = 18
+		y = 1
+			completion_reward = {
+					add_ideas = soviet_advisors
+				}
+
+	}
+	focus = {
+		id = EGY_surplus_soviet_equipment
+		icon = GFX_goal_continuous_reduce_training_time
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_soviet_advisors
+		}
+		x = 17
+		y = 2
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = assault_rifle_equipment_1
+							amount = 2000
+							producer = SOV
+						}
+					add_equipment_to_stockpile = {
+							type = main_battle_tanks_2
+							amount = 150
+							producer = SOV
+						}
+					add_equipment_to_stockpile = {
+							type = lt_equipment_1
+							amount = 300
+							producer = SOV
+						}
+					add_equipment_to_stockpile = {
+							type = ht_equipment_2
+							amount = 100
+							producer = SOV
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_soviet_armed_divisions
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_surplus_soviet_equipment
+		}
+		x = 17
+		y = 3
+			completion_reward = {
+					load_oob = EGY_soviet_armed_division
+				}
+
+	}
+	focus = {
+		id = EGY_soviet_trainer_pilots
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_soviet_alignment
+		}
+		x = 22
+		y = 1
+			completion_reward = {
+					air_experience = 25
+				}
+
+	}
+	focus = {
+		id = EGY_personel_exchanges
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_soviet_trainer_pilots
+		}
+		prerequisite = {
+			focus = EGY_soviet_advisors
+		}
+		x = 20
+		y = 2
+			completion_reward = {
+					add_manpower = 50000
+					army_experience = 5
+				}
+
+	}
+	focus = {
+		id = EGY_soviet_army_doctrine
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_personel_exchanges
+		}
+		prerequisite = {
+			focus = EGY_surplus_soviet_equipment
+		}
+		x = 19
+		y = 3
+			completion_reward = {
+					army_experience = 5
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.75
+							uses = 2
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_more_surplus_equipment
+		icon = GFX_focus_secret_rearmament
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_soviet_armed_divisions
+		}
+		prerequisite = {
+			focus = EGY_soviet_army_doctrine
+		}
+		x = 17
+		y = 4
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = assault_rifle_equipment_1
+							amount = 2000
+							producer = SOV
+						}
+					add_equipment_to_stockpile = {
+							type = main_battle_tanks_2
+							amount = 150
+							producer = SOV
+						}
+					add_equipment_to_stockpile = {
+							type = lt_equipment_1
+							amount = 300
+							producer = SOV
+						}
+					add_equipment_to_stockpile = {
+							type = ht_equipment_2
+							amount = 100
+							producer = SOV
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_soviet_fighters
+		icon = GFX_goal_generic_air_fighter
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_soviet_trainer_pilots
+		}
+		x = 23
+		y = 2
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = CAS_equipment_4
+							amount = 200
+							producer = SOV
+						}
+					add_equipment_to_stockpile = {
+							type = jet_fighter_equipment_2
+							amount = 800
+							producer = SOV
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_soviet_bombers
+		icon = GFX_goal_generic_air_bomber
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_soviet_fighters
+		}
+		prerequisite = {
+			focus = EGY_personel_exchanges
+		}
+		x = 21
+		y = 3
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = jet_strat_bomber_equipment_2
+							amount = 200
+							producer = SOV
+						}
+					add_equipment_to_stockpile = {
+							type = jet_tac_bomber_equipment_2
+							amount = 800
+							producer = SOV
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_soviet_air_doctrine
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_soviet_fighters
+		}
+		prerequisite = {
+			focus = EGY_personel_exchanges
+		}
+		x = 23
+		y = 3
+			completion_reward = {
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.5
+							uses = 3
+							category = air_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_soviet_airfield_development
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_soviet_air_doctrine
+		}
+		prerequisite = {
+			focus = EGY_soviet_bombers
+		}
+		x = 21
+		y = 4
+			completion_reward = {
+					air_experience = 25
+					if = {
+							limit = {
+									capital_scope = {
+											OR = {
+													NOT = {
+															is_controlled_by = ROOT
+														}
+													NOT = {
+															free_building_slots = {
+																	building = air_base
+																	size > 1
+																}
+														}
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+									add_building_construction = {
+											type = air_base
+											level = 5
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_2_AB
+										}
+								}
+						}
+					if = {
+							limit = {
+									capital_scope = {
+											is_controlled_by = ROOT
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+								}
+							capital_scope = {
+									add_building_construction = {
+											type = air_base
+											level = 5
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_2_AB
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_soviet_anti_air_defenses
+		icon = GFX_focus_generic_air_defense
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_soviet_air_doctrine
+		}
+		prerequisite = {
+			focus = EGY_soviet_bombers
+		}
+		x = 23
+		y = 4
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = anti_air_building
+											size > 3
+										}
+								}
+							add_building_construction = {
+									type = anti_air_building
+									level = 2
+									instant_build = yes
+								}
+							ROOT = {
+									set_country_flag = aviation_effort_2_AB
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = anti_air_building
+											size > 3
+										}
+								}
+							add_building_construction = {
+									type = anti_air_building
+									level = 2
+									instant_build = yes
+								}
+							ROOT = {
+									set_country_flag = aviation_effort_2_AB
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_research_advances_air
+		icon = GFX_goal_continuous_air_production
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_soviet_airfield_development
+		}
+		prerequisite = {
+			focus = EGY_soviet_anti_air_defenses
+		}
+		x = 22
+		y = 5
+		completion_reward = {
+			add_tech_bonus = {
+				name = TUR_fighter_modernisation
+				bonus = 0.5
+				uses = 2
+				category = light_fighter
+			}
+		}
+	}
+	focus = {
+		id = EGY_soviet_scuds
+		icon = GFX_focus_rocketry
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_research_advances_air
+		}
+		x = 22
+		y = 6
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = cruisemissile_1
+							amount = 400
+							producer = SOV
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_american_advisors
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_american_alignment
+		}
+		x = 26
+		y = 1
+			completion_reward = {
+					add_ideas = american_advisors
+				}
+
+	}
+	focus = {
+		id = EGY_american_surplus_equipment
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_american_advisors
+		}
+		x = 25
+		y = 2
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = assault_rifle_equipment_1
+							amount = 2000
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = main_battle_tanks_2
+							amount = 150
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = lt_equipment_1
+							amount = 300
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = ht_equipment_2
+							amount = 100
+							producer = USA
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_american_armed_divisions
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_american_surplus_equipment
+		}
+		x = 25
+		y = 3
+			completion_reward = {
+					load_oob = EGY_american_armed_division
+				}
+
+	}
+	focus = {
+		id = EGY_american_aircraft_training
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_american_alignment
+		}
+		x = 30
+		y = 1
+			completion_reward = {
+					air_experience = 25
+				}
+
+	}
+	focus = {
+		id = EGY_american_weapon_sale
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_american_aircraft_training
+		}
+		prerequisite = {
+			focus = EGY_american_advisors
+		}
+		x = 28
+		y = 2
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = assault_rifle_equipment_1
+							amount = 2000
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = main_battle_tanks_2
+							amount = 150
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = lt_equipment_1
+							amount = 300
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = ht_equipment_2
+							amount = 100
+							producer = USA
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_american_doctrine
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_american_weapon_sale
+		}
+		prerequisite = {
+			focus = EGY_american_surplus_equipment
+		}
+		x = 27
+		y = 3
+			completion_reward = {
+					army_experience = 5
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.75
+							uses = 2
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_american_intelligence_aid
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_american_doctrine
+		}
+		prerequisite = {
+			focus = EGY_american_armed_divisions
+		}
+		x = 26
+		y = 4
+			completion_reward = {
+					add_ideas = american_intel_sharing
+				}
+
+	}
+	focus = {
+		id = EGY_american_tanks
+		icon = GFX_goal_generic_army_tanks
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_american_intelligence_aid
+		}
+		x = 25
+		y = 5
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = main_battle_tanks_2
+							amount = 150
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = lt_equipment_1
+							amount = 300
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = ht_equipment_2
+							amount = 100
+							producer = USA
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_american_weapon_sale_Copy
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_american_weapon_sale
+		}
+		x = 28
+		y = 4
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = assault_rifle_equipment_1
+							amount = 2000
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = main_battle_tanks_2
+							amount = 150
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = lt_equipment_1
+							amount = 300
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = ht_equipment_2
+							amount = 100
+							producer = USA
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_american_weapon_sale_Copy_Copy
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_american_weapon_sale_Copy
+		}
+		x = 28
+		y = 6
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = assault_rifle_equipment_1
+							amount = 2000
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = main_battle_tanks_2
+							amount = 150
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = lt_equipment_1
+							amount = 300
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = ht_equipment_2
+							amount = 100
+							producer = USA
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_reform_officer_corps
+		icon = GFX_goal_generic_special_forces
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_american_mic_contracts
+		}
+
+		x = 28
+		y = 7
+			completion_reward = {
+					remove_ideas = incompetent_officer_corps
+				}
+
+	}
+	focus = {
+		id = EGY_american_fighters
+		icon = GFX_goal_generic_air_fighter
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_american_aircraft_training
+		}
+		x = 31
+		y = 2
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = CAS_equipment_4
+							amount = 200
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = jet_fighter_equipment_2
+							amount = 800
+							producer = USA
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_american_bombers
+		icon = GFX_goal_generic_air_bomber
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_american_weapon_sale
+		}
+		prerequisite = {
+			focus = EGY_american_fighters
+		}
+		x = 29
+		y = 3
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = jet_strat_bomber_equipment_2
+							amount = 200
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = jet_tac_bomber_equipment_2
+							amount = 800
+							producer = USA
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_american_doctrine_air
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_american_fighters
+		}
+		x = 31
+		y = 3
+			completion_reward = {
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.5
+							uses = 3
+							category = air_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_american_anti_air_defences
+		icon = GFX_focus_generic_air_defense
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_american_bombers
+		}
+		prerequisite = {
+			focus = EGY_american_doctrine_air
+		}
+		x = 30
+		y = 4
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = anti_air_building
+											size > 3
+										}
+								}
+							add_building_construction = {
+									type = anti_air_building
+									level = 2
+									instant_build = yes
+								}
+							ROOT = {
+									set_country_flag = aviation_effort_2_AB
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = anti_air_building
+											size > 3
+										}
+								}
+							add_building_construction = {
+									type = anti_air_building
+									level = 2
+									instant_build = yes
+								}
+							ROOT = {
+									set_country_flag = aviation_effort_2_AB
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_american_rocket_tech
+		icon = GFX_focus_rocketry
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_american_anti_air_defences
+		}
+		x = 29
+		y = 5
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = cruisemissile_1
+							amount = 400
+							producer = USA
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_american_airfield_development
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_american_anti_air_defences
+		}
+		x = 31
+		y = 5
+			completion_reward = {
+					air_experience = 25
+					if = {
+							limit = {
+									capital_scope = {
+											OR = {
+													NOT = {
+															is_controlled_by = ROOT
+														}
+													NOT = {
+															free_building_slots = {
+																	building = air_base
+																	size > 1
+																}
+														}
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+									add_building_construction = {
+											type = air_base
+											level = 5
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_2_AB
+										}
+								}
+						}
+					if = {
+							limit = {
+									capital_scope = {
+											is_controlled_by = ROOT
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+								}
+							capital_scope = {
+									add_building_construction = {
+											type = air_base
+											level = 5
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_2_AB
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_american_mic_contracts
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_american_rocket_tech
+		}
+		prerequisite = {
+			focus = EGY_american_airfield_development
+		}
+		x = 30
+		y = 6
+			completion_reward = {
+					add_ideas = american_mic_advisors
+				}
+
+	}
+	focus = {
+		id = EGY_flexible_navy
+		icon = GFX_goal_generic_build_navy
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_naval_effort
+		}
+		mutually_exclusive = {
+			focus = EGY_large_navy
+		}
+		x = 33
+		y = 1
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0
+							all_owned_state = {
+									OR = {
+											is_coastal = no
+											dockyard < 1
+										}
+								}
+						}
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = sub_op_bonus
+							bonus = 0.5
+							uses = 2
+							technology = convoy_interdiction_ti
+							technology = unrestricted_submarine_warfare
+							technology = wolfpacks
+							technology = advanced_submarine_warfare
+							technology = combined_operations_raiding
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_large_navy
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_naval_effort
+		}
+		mutually_exclusive = {
+			focus = EGY_flexible_navy
+		}
+		x = 35
+		y = 1
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0
+							all_owned_state = {
+									OR = {
+											is_coastal = no
+											dockyard < 1
+										}
+								}
+						}
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = fleet_in_being_bonus
+							bonus = 0.5
+							uses = 2
+							category = fleet_in_being_tree
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_submarine_effort
+		icon = GFX_goal_generic_navy_submarine
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_flexible_navy
+			focus = EGY_large_navy
+		}
+		x = 33
+		y = 2
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0
+							all_owned_state = {
+									OR = {
+											is_coastal = no
+											dockyard < 1
+										}
+								}
+						}
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = ss_bonus
+							bonus = 0.5
+							ahead_reduction = 1
+							uses = 1
+							technology = early_submarine
+							technology = basic_submarine
+							technology = improved_submarine
+							technology = advanced_submarine
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_destroyer_effort
+		icon = GFX_goal_generic_wolf_pack
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_submarine_effort
+		}
+		x = 33
+		y = 3
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0
+							all_owned_state = {
+									OR = {
+											is_coastal = no
+											dockyard < 1
+										}
+								}
+						}
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = dd_bonus
+							bonus = 0.5
+							ahead_reduction = 1
+							uses = 1
+							technology = early_destroyer
+							technology = basic_destroyer
+							technology = improved_destroyer
+							technology = advanced_destroyer
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_recognize_israel
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_the_israeli_question
+		}
+		mutually_exclusive = {
+			focus = EGY_condemn_israeli_agression
+		}
+		x = 33
+		y = 5
+			completion_reward = {
+					ISR = {
+							add_opinion_modifier = {
+									target = EGY
+									modifier = small_increase
+								}
+						}
+					EGY = {
+							add_opinion_modifier = {
+									target = ISR
+									modifier = small_increase
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_align_with_israel
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_recognize_israel
+		}
+		x = 33
+		y = 6
+			completion_reward = {
+					ISR = {
+							add_opinion_modifier = {
+									target = EGY
+									modifier = large_increase
+								}
+						}
+					EGY = {
+							add_opinion_modifier = {
+									target = ISR
+									modifier = large_increase
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_cruiser_effort
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_large_navy
+			focus = EGY_flexible_navy
+		}
+		x = 35
+		y = 2
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0
+							all_owned_state = {
+									OR = {
+											is_coastal = no
+											dockyard < 1
+										}
+								}
+						}
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = cr_bonus
+							bonus = 0.5
+							ahead_reduction = 1
+							uses = 1
+							technology = improved_light_cruiser
+							technology = advanced_light_cruiser
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_capital_ships_effort
+		icon = GFX_goal_generic_navy_battleship
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_cruiser_effort
+		}
+		x = 35
+		y = 3
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0
+							all_owned_state = {
+									OR = {
+											is_coastal = no
+											dockyard < 1
+										}
+								}
+						}
+				}
+			completion_reward = {
+					navy_experience = 25
+					add_tech_bonus = {
+							name = capital_ships_bonus
+							bonus = 0.5
+							ahead_reduction = 1
+							uses = 1
+							technology = battle_cruiser_1
+							technology = early_battleship
+							technology = battleship_2
+							technology = battleship_3
+							technology = early_carrier
+							technology = basic_carrier
+							technology = improved_carrier
+							technology = advanced_carrier
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_condemn_israeli_agression
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_the_israeli_question
+		}
+		mutually_exclusive = {
+			focus = EGY_recognize_israel
+		}
+		x = 35
+		y = 5
+			completion_reward = {
+					ISR = {
+							add_opinion_modifier = {
+									target = EGY
+									modifier = small_decrease
+								}
+						}
+					EGY = {
+							add_opinion_modifier = {
+									target = ISR
+									modifier = small_decrease
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_recognize_palestine
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_condemn_israeli_agression
+		}
+		x = 35
+		y = 6
+			completion_reward = {
+					ISR = {
+							add_opinion_modifier = {
+									target = EGY
+									modifier = large_decrease
+								}
+						}
+					EGY = {
+							add_opinion_modifier = {
+									target = ISR
+									modifier = large_decrease
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_new_path
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		available = {
+			EGY = {  has_autonomy_state = autonomy_free }
+		}
+		prerequisite = {
+			focus = EGY_arab_cold_war
+		}
+		mutually_exclusive = {
+			focus = EGY_traditionalist_values
+		}
+		bypass = { 
+			tag = UAR
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 1
+			}
+		}
+		x = 41
+		y = 1
+			ai_will_do = {
+					factor = 10
+				}
+			complete_tooltip = {
+					add_popularity = {
+							ideology = pan_arabism
+							popularity = 0.2
+						}
+					set_politics = {
+							ruling_party = pan_arabism
+							elections_allowed = no
+						}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_democratic_government
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_new_path
+		}
+		mutually_exclusive = {
+			focus = EGY_embrace_internationalism
+		}
+		x = 40
+		y = 2
+			available = {
+					OR = {
+							has_government = democratic
+							has_government = neutrality
+						}
+				}
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 95
+					modifier = {
+							factor = 0.1
+							any_neighbor_country = {
+									is_major = yes
+									OR = {
+											has_government = communism
+											has_government = fascism
+										}
+								}
+							NOT = {
+									any_neighbor_country = {
+											is_major = yes
+											has_government = democratic
+										}
+								}
+						}
+				}
+			completion_reward = {
+					add_ideas = liberty_ethos_focus
+				}
+
+	}
+	focus = {
+		id = EGY_capitalist_reforms
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_democratic_government
+		}
+		x = 40
+		y = 3
+			available = {
+					OR = {
+							has_government = democratic
+							has_government = neutrality
+						}
+				}
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 95
+					modifier = {
+							factor = 0.1
+							any_neighbor_country = {
+									is_major = yes
+									OR = {
+											has_government = communism
+											has_government = fascism
+										}
+								}
+							NOT = {
+									any_neighbor_country = {
+											is_major = yes
+											has_government = democratic
+										}
+								}
+						}
+				}
+			completion_reward = {
+					add_ideas = liberty_ethos_focus
+				}
+
+	}
+	focus = {
+		id = EGY_embrace_neutrality
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_capitalist_reforms
+		}
+		x = 38
+		y = 4
+
+	}
+	focus = {
+		id = EGY_american_training
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_capitalist_reforms
+		}
+		mutually_exclusive = {
+			focus = EGY_embrace_neutrality
+		}
+		x = 40
+		y = 4
+			ai_will_do = {
+					factor = 10
+				}
+			complete_tooltip = {
+					army_experience = 25
+				}
+			completion_reward = {
+					army_experience = 25
+				}
+
+	}
+	focus = {
+		id = EGY_american_aid
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_american_training
+		}
+		x = 40
+		y = 5
+			ai_will_do = {
+					factor = 10
+				}
+			complete_tooltip = {
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 1
+							category = infantry_weapons
+							category = artillery
+						}
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 1
+							category = infantry_weapons
+							category = artillery
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_encourage_capitalism
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_american_aid
+		}
+		x = 40
+		y = 6
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = construction_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = industrial_complex
+											size < 1
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_american_military_tech
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_encourage_capitalism
+		}
+		x = 40
+		y = 7
+			available = {
+					num_of_factories > 30
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+					if = {
+							limit = {
+									original_research_slots < 3
+								}
+							add_research_slot = 1
+						}
+					if = {
+							limit = {
+									original_research_slots > 2
+								}
+							add_tech_bonus = {
+									name = electronics_bonus
+									bonus = 0.5
+									uses = 1
+									category = electronics
+								}
+							add_tech_bonus = {
+									name = industrial_bonus
+									bonus = 0.5
+									uses = 1
+									category = industry
+								}
+							add_tech_bonus = {
+									name = infantry_weapons_bonus
+									bonus = 0.5
+									uses = 1
+									category = infantry_weapons
+									category = artillery
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_embrace_internationalism
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		available = {
+			EGY = {  has_autonomy_state = autonomy_free }
+		}
+		prerequisite = {
+			focus = EGY_new_path
+		}
+		mutually_exclusive = {
+			focus = EGY_democratic_government
+		}
+		bypass = { 
+			tag = UAR
+		}
+		x = 42
+		y = 2
+			ai_will_do = {
+					factor = 10
+				}
+			complete_tooltip = {
+					add_popularity = {
+							ideology = pan_arabism
+							popularity = 0.2
+						}
+					set_politics = {
+							ruling_party = pan_arabism
+							elections_allowed = no
+						}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					add_ideas = idea_EGY_Trump_Panarabismo
+					add_popularity = {
+							ideology = pan_arabism
+							popularity = 0.2
+						}
+					set_politics = {
+							ruling_party = pan_arabism
+							elections_allowed = no
+						}
+					random_owned_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_nationalize_suez_canal
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_embrace_internationalism
+		}
+		bypass = { 
+			tag = UAR
+		}
+		x = 42
+		y = 3
+			ai_will_do = {
+					factor = 10
+				}
+			complete_tooltip = {
+					create_wargoal = {
+							type = take_state_focus
+							target = ENG
+						}
+					447 = {
+							add_claim_by = ENG
+							add_claim_by = EGY
+						}
+					add_popularity = {
+							ideology = pan_arabism
+							popularity = 0.2
+						}
+				}
+			completion_reward = {
+					743 = {
+							add_claim_by = ENG
+							add_claim_by = EGY
+						}
+					EGY = {
+							transfer_state = 743
+						}
+					add_popularity = {
+							ideology = pan_arabism
+							popularity = 0.2
+						}
+					ENG = {
+							country_event = {
+									id = egypt.60
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_united_arab_republic
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_nationalize_suez_canal
+		}
+		mutually_exclusive = {
+			focus = EGY_communist_reforms
+		}
+		bypass = { 
+			tag = UAR
+		}
+		x = 42
+		y = 4
+			ai_will_do = {
+					factor = 10
+				}
+			complete_tooltip = {
+					554 = {
+							add_claim_by = EGY
+						}
+					677 = {
+							add_claim_by = EGY
+						}
+					680 = {
+							add_claim_by = EGY
+						}
+				}
+				available = {
+					SYR = { has_completed_focus = SYR_Pro_UAR_Sentiments }
+				}
+			completion_reward = {
+						set_cosmetic_tag = UAR_EGY
+						SYR = {
+							every_owned_state = {
+								add_core_of = EGY 
+							}
+						}
+						annex_country = { target = SYR } 
+						create_faction = "The United Arab Republics"	
+				}
+		
+	}
+	focus = {
+		id = EGY_recognize_comm_china
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_united_arab_republic
+		}
+		x = 42
+		y = 5
+			ai_will_do = {
+					factor = 10
+				}
+			complete_tooltip = {
+					add_political_power = 150
+					PRC = {
+							add_opinion_modifier = {
+									target = EGY
+									modifier = democratic_leanings_good
+								}
+						}
+					EGY = {
+							add_opinion_modifier = {
+									target = PRC
+									modifier = democratic_leanings_good
+								}
+						}
+				}
+			completion_reward = {
+					add_political_power = 150
+					PRC = {
+							add_opinion_modifier = {
+									target = EGY
+									modifier = democratic_leanings_good
+								}
+						}
+					EGY = {
+							add_opinion_modifier = {
+									target = PRC
+									modifier = democratic_leanings_good
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_stay_neutral
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_recognize_comm_china
+		}
+		x = 42
+		y = 6
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_national_unity = 0.10
+				}
+
+	}
+	focus = {
+		id = EGY_support_anti_colonial_movements
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_stay_neutral
+		}
+		x = 42
+		y = 7
+			ai_will_do = {
+					factor = 10
+				}
+			complete_tooltip = {
+					add_political_power = 150
+				}
+			completion_reward = {
+					add_political_power = 150
+				}
+
+	}
+	focus = {
+		id = EGY_state_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_support_anti_colonial_movements
+		}
+		x = 42
+		y = 8
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = construction_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = industrial_complex
+											size < 1
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_communist_reforms
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_nationalize_suez_canal
+		}
+		mutually_exclusive = {
+			focus = EGY_united_arab_republic
+		}
+		x = 44
+		y = 4
+			available = {
+					if = {
+							limit = {
+									original_tag = CHI
+								}
+							has_government = communism
+							else = {
+									OR = {
+											has_government = communism
+											has_government = neutrality
+										}
+								}
+						}
+				}
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 5
+					modifier = {
+							factor = 2
+							any_neighbor_country = {
+									is_major = yes
+									has_government = communism
+								}
+						}
+					modifier = {
+							factor = 0
+							AND = {
+									is_historical_focus_on = yes
+									NOT = {
+											has_government = communism
+										}
+								}
+						}
+				}
+			completion_reward = {
+					add_ideas = internationalism
+				}
+
+	}
+	focus = {
+		id = EGY_soviet_training
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_communist_reforms
+		}
+		x = 44
+		y = 5
+			ai_will_do = {
+					factor = 10
+				}
+			complete_tooltip = {
+					army_experience = 25
+				}
+			completion_reward = {
+					army_experience = 25
+				}
+
+	}
+	focus = {
+		id = EGY_soviet_aid
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_soviet_training
+		}
+		x = 44
+		y = 6
+			ai_will_do = {
+					factor = 10
+				}
+			complete_tooltip = {
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 1
+							category = infantry_weapons
+							category = artillery
+						}
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 1
+							category = infantry_weapons
+							category = artillery
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_five_year_plan
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_soviet_aid
+		}
+		x = 44
+		y = 7
+			ai_will_do = {
+					factor = 5
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									industrial_complex > 0
+									free_building_slots = {
+											building = industrial_complex
+											size > 1
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									industrial_complex > 0
+									free_building_slots = {
+											building = industrial_complex
+											size > 1
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_second_five_year_plan
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_five_year_plan
+		}
+		x = 44
+		y = 8
+			ai_will_do = {
+					factor = 5
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									industrial_complex > 0
+									free_building_slots = {
+											building = industrial_complex
+											size > 1
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									industrial_complex > 0
+									free_building_slots = {
+											building = industrial_complex
+											size > 1
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_traditionalist_values
+		icon = GFX_goal_anschluss
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_arab_cold_war
+		}
+		mutually_exclusive = {
+			focus = EGY_new_path
+		}
+		x = 50
+		y = 1
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+			completion_reward = {
+					set_political_power = 300
+				}
+
+	}
+	focus = {
+		id = EGY_coptic_military_cliques
+		icon = GFX_focus_RAJ_indian_gurkhas
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_traditionalist_values
+		}
+		mutually_exclusive = {
+			focus = EGY_islamist_revolution
+			focus = EGY_strengthen_the_monarchy
+		}
+		x = 47
+		y = 2
+
+		completion_reward = {
+			add_ideas = minority_recruitment
+		}
+
+	}
+	focus = {
+		id = EGY_coptic_coup
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		available = {
+			EGY = {  has_autonomy_state = autonomy_free }
+		}
+		prerequisite = {
+			focus = EGY_coptic_military_cliques
+		}
+		x = 47
+		y = 3
+		completion_reward = {
+			set_politics = { ruling_party = nationalism elections_allowed = no }
+		}
+	}
+	focus = {
+		id = EGY_nazi_advisors
+		icon = GFX_focus_RAJ_seek_help_from_germany
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_coptic_coup
+		}
+		x = 47
+		y = 4
+			available_if_capitulated = yes
+			completion_reward = {
+					add_ideas = paramilitarism_focus
+					army_experience = 25
+				}
+
+	}
+	focus = {
+		id = EGY_revive_coptic_language
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_nazi_advisors
+		}
+		x = 47
+		y = 5
+			available = {
+					num_of_factories > 25
+				}
+			cancel_if_invalid = no
+			continue_if_invalid = yes
+			available_if_capitulated = yes
+			completion_reward = {
+					add_research_slot = 1
+					add_ideas = nationalism
+				}
+
+	}
+	focus = {
+		id = EGY_restoration_of_the_empire
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_revive_coptic_language
+		}
+		x = 47
+		y = 6
+		completion_reward = {
+			add_ideas = ideological_fanaticism_focus
+		}
+
+	}
+	focus = {
+		id = EGY_islamist_revolution
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_traditionalist_values
+		}
+		mutually_exclusive = {
+			focus = EGY_strengthen_the_monarchy
+			focus = EGY_coptic_military_cliques
+		}
+		available = {
+			EGY = {  has_autonomy_state = autonomy_free }
+		}
+		x = 50
+		y = 2
+		completion_reward = {
+			set_politics = { ruling_party = islamism elections_allowed = no }
+			set_cosmetic_tag = TUR_caliphate
+			 add_timed_idea = { idea = islamism_drift days = 365 }
+		}
+
+	}
+	focus = {
+		id = EGY_army_of_the_faithful
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_islamist_revolution
+		}
+		x = 50
+		y = 3
+		completion_reward = {
+			add_ideas = militarism_focus
+		}
+	}
+	focus = {
+		id = EGY_spread_islamism
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_army_of_the_faithful
+		}
+		x = 50
+		y = 4
+		completion_reward = {
+			SUD = { add_timed_idea = { idea = islamism_drift days = 365 }  }
+			LBA = { add_timed_idea = { idea = islamism_drift days = 365 }  }
+			JOR = { add_timed_idea = { idea = islamism_drift days = 365 }  }
+			IRQ = { add_timed_idea = { idea = islamism_drift days = 365 }  }
+			SYR = { add_timed_idea = { idea = islamism_drift days = 365 }  }
+		}
+	}
+	focus = {
+		id = EGY_align_with_saudi_arabia
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_spread_islamism
+		}
+		x = 50
+		y = 5
+		completion_reward = {
+					SAU = {
+							add_opinion_modifier = {
+									target = EGY
+									modifier = large_increase
+								}
+						}
+					EGY = {
+							add_opinion_modifier = {
+									target = SAU
+									modifier = large_increase
+								}
+						}			
+		}
+	}
+	focus = {
+		id = EGY_declare_a_caliphate
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_align_with_saudi_arabia
+		}
+		x = 50
+		y = 6
+			ai_will_do = {
+					factor = 10
+				}
+		completion_reward = {
+			add_ideas = ideological_fanaticism_focus
+		}
+	}
+	focus = {
+		id = EGY_extra_tech_slot_2
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_extra_tech_slot
+		}
+		prerequisite = {
+			focus = EGY_nuclear_effort
+		}
+		prerequisite = {
+			focus = EGY_secret_weapons
+		}
+		x = 3
+		y = 6
+			available = {
+					num_of_factories > 50
+				}
+			cancel_if_invalid = no
+			continue_if_invalid = yes
+			available_if_capitulated = yes
+			completion_reward = {
+					add_research_slot = 1
+				}
+
+	}
+	focus = {
+		id = EGY_soviet_motorization_aid
+		icon = GFX_goal_generic_army_motorized
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_soviet_army_doctrine
+		}
+		prerequisite = {
+			focus = EGY_soviet_armed_divisions
+		}
+		x = 19
+		y = 4
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = motorized_equipment_2
+							amount = 500
+							producer = SOV
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_soviet_tanks
+		icon = GFX_goal_generic_army_tanks
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_soviet_motorization_aid
+		}
+		prerequisite = {
+			focus = EGY_more_surplus_equipment
+		}
+		x = 17
+		y = 5
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = main_battle_tanks_2
+							amount = 150
+							producer = SOV
+						}
+					add_equipment_to_stockpile = {
+							type = lt_equipment_1
+							amount = 300
+							producer = SOV
+						}
+					add_equipment_to_stockpile = {
+							type = ht_equipment_2
+							amount = 100
+							producer = SOV
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_soviet_mechanized_equipment
+		icon = GFX_goal_generic_build_tank
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_more_surplus_equipment
+		}
+		prerequisite = {
+			focus = EGY_soviet_motorization_aid
+		}
+		x = 19
+		y = 5
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = mechanized_equipment_3
+							amount = 500
+							producer = SOV
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_backwards_engineer_soviet_designs
+		icon = GFX_focus_secret_rearmament
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_soviet_mechanized_equipment
+		}
+		prerequisite = {
+			focus = EGY_soviet_tanks
+		}
+		x = 18
+		y = 6
+			completion_reward = {
+					add_ideas = soviet_military_desgins
+				}
+
+	}
+	focus = {
+		id = EGY_purge_officer_corps
+		icon = GFX_goal_generic_special_forces
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_backwards_engineer_soviet_designs
+		}
+		prerequisite = {
+			focus = EGY_soviet_scuds
+		}
+		x = 20
+		y = 7
+			completion_reward = {
+					remove_ideas = incompetent_officer_corps
+				}
+
+	}
+	focus = {
+		id = EGY_american_mechanized_equipment
+		icon = GFX_goal_generic_build_tank
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_american_intelligence_aid
+		}
+		x = 27
+		y = 5
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = mechanized_equipment_3
+							amount = 500
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = motorized_equipment_2
+							amount = 500
+							producer = SOV
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_american_license_agreements
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_american_mechanized_equipment
+		}
+		prerequisite = {
+			focus = EGY_american_tanks
+		}
+		x = 26
+		y = 6
+			completion_reward = {
+					create_production_license = {
+							target = USA
+							cost_factor = 1.0
+							equipment = {
+									type = motorized_equipment_2
+									version = 0
+								}
+						}
+					create_production_license = {
+							target = USA
+							cost_factor = 1.0
+							equipment = {
+									type = mechanized_equipment_3
+									version = 0
+								}
+						}
+					create_production_license = {
+							target = USA
+							cost_factor = 1.0
+							equipment = {
+									type = main_battle_tanks_2
+									version = 0
+								}
+						}
+					create_production_license = {
+							target = USA
+							cost_factor = 1.0
+							equipment = {
+									type = lt_equipment_1
+									version = 0
+								}
+						}
+					create_production_license = {
+							target = USA
+							cost_factor = 1.0
+							equipment = {
+									type = ht_equipment_2
+									version = 0
+								}
+						}
+					create_production_license = {
+							target = USA
+							cost_factor = 1.0
+							equipment = {
+									type = assault_rifle_equipment_1
+									version = 0
+								}
+						}
+					create_production_license = {
+							target = USA
+							cost_factor = 1.0
+							equipment = {
+									type = CAS_equipment_4
+									version = 0
+								}
+						}
+					create_production_license = {
+							target = USA
+							cost_factor = 1.0
+							equipment = {
+									type = jet_fighter_equipment_2
+									version = 0
+								}
+						}
+					create_production_license = {
+							target = USA
+							cost_factor = 1.0
+							equipment = {
+									type = jet_tac_bomber_equipment_2
+									version = 0
+								}
+						}
+					create_production_license = {
+							target = USA
+							cost_factor = 1.0
+							equipment = {
+									type = jet_strat_bomber_equipment_2
+									version = 0
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_Create_League_Arabe
+		icon = GFX_goal_generic_military_deal
+		cost = 1.00
+		prerequisite = {
+			focus = EGY_state_industry
+		}
+		x = 42
+		y = 9
+			available = {
+					has_war = yes
+					is_in_faction = no
+				}
+			complete_tooltip = {
+					SYR = {
+							add_opinion_modifier = {
+									target = EGY
+									modifier = democratic_leanings_good
+								}
+						}
+					EGY = {
+							add_opinion_modifier = {
+									target = EGY
+									modifier = democratic_leanings_good
+								}
+						}
+					PAL = {
+							add_opinion_modifier = {
+									target = EGY
+									modifier = democratic_leanings_good
+								}
+						}
+					JOR = {
+							add_opinion_modifier = {
+									target = EGY
+									modifier = democratic_leanings_good
+								}
+						}
+					LEB = {
+							add_opinion_modifier = {
+									target = EGY
+									modifier = democratic_leanings_good
+								}
+						}
+					SAU = {
+							add_opinion_modifier = {
+									target = EGY
+									modifier = democratic_leanings_good
+								}
+						}
+					IRQ = {
+							add_opinion_modifier = {
+									target = EGY
+									modifier = democratic_leanings_good
+								}
+						}
+				}
+			completion_reward = {
+					set_rule = {
+							can_create_factions = yes
+						}
+					create_faction = "League_Arabe"
+					SYR = {
+							add_opinion_modifier = {
+									target = EGY
+									modifier = democratic_leanings_good
+								}
+						}
+					EGY = {
+							add_opinion_modifier = {
+									target = EGY
+									modifier = democratic_leanings_good
+								}
+						}
+					PAL = {
+							add_opinion_modifier = {
+									target = EGY
+									modifier = democratic_leanings_good
+								}
+						}
+					JOR = {
+							add_opinion_modifier = {
+									target = EGY
+									modifier = democratic_leanings_good
+								}
+						}
+					LEB = {
+							add_opinion_modifier = {
+									target = EGY
+									modifier = democratic_leanings_good
+								}
+						}
+					SAU = {
+							add_opinion_modifier = {
+									target = EGY
+									modifier = democratic_leanings_good
+								}
+						}
+					IRQ = {
+							add_opinion_modifier = {
+									target = EGY
+									modifier = democratic_leanings_good
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_czech_arms_deal
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_align_with_yugoslavia
+		}
+		x = 38
+		y = 7
+			ai_will_do = {
+					factor = 10
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+							type = arms_factory
+							level = 3
+							instant_build = yes
+						}
+					add_tech_bonus = {
+							name = armor_bonus
+							bonus = 0.5
+							uses = 2
+							category = armor
+						}
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = armor_bonus
+							bonus = 0.5
+							uses = 2
+							category = armor
+						}
+					random_owned_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 3
+							add_building_construction = {
+									type = arms_factory
+									level = 3
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_join_nato
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_negotiate_for_suez_canal
+		}
+		prerequisite = {
+			focus = EGY_american_military_tech
+		}
+		x = 40
+		y = 9
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					USA = { add_to_faction = ROOT }
+					add_ideas = nato_member
+				}
+
+	}
+	focus = {
+		id = EGY_join_warsaw_pact
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_second_five_year_plan
+		}
+		x = 44
+		y = 9
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					SOV = {
+							add_to_faction = EGY
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_war_preperations
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_restoration_of_the_empire
+			focus = EGY_declare_a_caliphate
+			focus = EGY_restore_the_empire
+		}
+		x = 50
+		y = 7
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_national_unity = 0.15
+					army_experience = 5
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_invade_sudan
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_war_preperations
+		}
+		x = 47
+		y = 8
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					549 = {
+							add_core_of = EGY
+						}
+					551 = {
+							add_core_of = EGY
+						}
+					781 = {
+							add_core_of = EGY
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_invade_libya
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_war_preperations
+		}
+		x = 49
+		y = 8
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					273 = {
+							add_core_of = EGY
+						}
+					448 = {
+							add_core_of = EGY
+						}
+					449 = {
+							add_core_of = EGY
+						}
+					450 = {
+							add_core_of = EGY
+						}
+					451 = {
+							add_core_of = EGY
+						}
+					661 = {
+							add_core_of = EGY
+						}
+					662 = {
+							add_core_of = EGY
+						}
+					663 = {
+							add_core_of = EGY
+						}
+					775 = {
+							add_core_of = EGY
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_invade_cyprus
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_invade_libya
+		}
+		x = 49
+		y = 9
+			ai_will_do = {
+					factor = 10
+				}
+			bypass = {
+					OR = {
+							owns_state = 183
+							183 = {
+									is_claimed_by = ROOT
+								}
+						}
+				}
+			completion_reward = {
+					add_state_claim = 183
+				}
+
+	}
+	focus = {
+		id = EGY_invade_israel
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_war_preperations
+		}
+		x = 51
+		y = 8
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					454 = {
+							add_core_of = EGY
+						}
+					759 = {
+							add_core_of = EGY
+						}
+					781 = {
+							add_core_of = EGY
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_invade_lebanon
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_invade_israel
+		}
+		x = 51
+		y = 9
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					553 = {
+							add_core_of = EGY
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_invade_jordan
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_war_preperations
+		}
+		x = 53
+		y = 8
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					332 = {
+							add_core_of = EGY
+						}
+					455 = {
+							add_core_of = EGY
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_invade_syria
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_invade_jordan
+		}
+		x = 53
+		y = 9
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					554 = {
+							add_core_of = EGY
+						}
+					677 = {
+							add_core_of = EGY
+						}
+					680 = {
+							add_core_of = EGY
+						}
+					759 = {
+							add_core_of = EGY
+						}
+					777 = {
+							add_core_of = EGY
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_invade_ethiopia
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_invade_sudan
+		}
+		x = 47
+		y = 9
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					271 = {
+							add_core_of = EGY
+						}
+					550 = {
+							add_core_of = EGY
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_strengthen_the_monarchy
+		icon = GFX_focus_rom_abdicate
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_traditionalist_values
+		}
+		mutually_exclusive = {
+			focus = EGY_islamist_revolution
+			focus = EGY_coptic_military_cliques
+		}
+		x = 53
+		y = 2
+		completion_reward = {
+			add_timed_idea = { idea = monarchist_influence days = 365 }	
+		}
+	}
+	focus = {
+		id = EGY_restore_the_empire
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_embrace_western_education
+		}
+		x = 53
+		y = 6
+		completion_reward = {
+			add_ideas = ideological_fanaticism_focus
+		}
+	}
+	focus = {
+		id = EGY_negotiate_for_suez_canal
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_czech_arms_deal
+			focus = EGY_american_military_tech
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				date < 1956.10.1
+				factor = 0
+			}
+			modifier = {
+				date > 1956.10.1
+				factor = 100
+			}
+		}
+		x = 39
+		y = 8
+		completion_reward = {
+			EGY = {
+				transfer_state = 743
+			}
+			hidden_effect = {
+				ENG = { country_event = { id = egypt.60 days = 1 } }
+			}
+		}
+
+	}
+	focus = {
+		id = EGY_embrace_market_socialism
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_embrace_neutrality
+		}
+		x = 38
+		y = 5
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = construction_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = industrial_complex
+											size < 1
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_economic_development
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_negotiate_for_suez_canal
+		}
+		prerequisite = {
+			focus = EGY_czech_arms_deal
+		}
+		x = 38
+		y = 9
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = construction_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = industrial_complex
+											size < 1
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = EGY_align_with_yugoslavia
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_embrace_market_socialism
+		}
+		x = 38
+		y = 6
+		completion_reward = {
+					EGY = {
+							add_opinion_modifier = {
+									target = YUG
+									modifier = large_increase
+								}
+						}
+					YUG = {
+							add_opinion_modifier = {
+									target = EGY
+									modifier = large_increase
+								}
+						}						
+		}
+	}
+	focus = {
+		id = EGY_militarism
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_strengthen_the_monarchy
+		}
+		x = 53
+		y = 3
+		completion_reward = {
+			add_ideas = militarism_focus
+		}
+	}
+	focus = {
+		id = EGY_royal_guard
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_militarism
+		}
+		x = 53
+		y = 4
+		completion_reward = {
+			load_oob = EGY_royal_guard_divisions
+		}
+	}
+	focus = {
+		id = EGY_embrace_western_education
+		icon = GFX_goal_continuous_research
+		cost = 10.00
+		prerequisite = {
+			focus = EGY_royal_guard
+		}
+		x = 53
+		y = 5
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+}

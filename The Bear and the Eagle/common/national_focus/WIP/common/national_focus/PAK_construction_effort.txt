@@ -1,0 +1,3780 @@
+focus_tree = {
+	id = PAK_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = PAK
+		}
+	}
+	default = no
+	focus = {
+		id = PAK_industrial_effort
+		icon = GFX_goal_continuous_repairments
+		cost = 10.00
+		x = 12
+		y = 0
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = industrial_bonus
+							bonus = 0.5
+							uses = 2
+							category = industry
+						}
+				}
+			ai_will_do = {
+					factor = 3
+				}
+
+	}
+	focus = {
+		id = PAK_political_reforms
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		x = 20
+		y = 0
+
+	}
+	focus = {
+		id = PAK_lessons_from_the_last_war
+		icon = GFX_goal_generic_military_sphere
+		cost = 10.00
+		x = 4
+		y = 0
+			available_if_capitulated = yes
+			completion_reward = {
+					army_experience = 5
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.5
+							uses = 2
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_indian_ocean_navy
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		x = 30
+		y = 0
+			available_if_capitulated = yes
+			available = {
+					any_state = {
+							is_coastal = yes
+							is_controlled_by = ROOT
+						}
+				}
+			complete_tooltip = {
+					navy_experience = 25
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+							type = dockyard
+							level = 3
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					navy_experience = 25
+					if = {
+							limit = {
+									NOT = {
+											any_owned_state = {
+													dockyard > 0
+													free_building_slots = {
+															building = dockyard
+															size > 2
+															include_locked = yes
+														}
+												}
+										}
+									any_owned_state = {
+											is_coastal = yes
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											is_coastal = yes
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+							set_country_flag = naval_effort_built
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_country_flag = naval_effort_built
+										}
+									any_owned_state = {
+											dockyard > 0
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											dockyard > 0
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+							set_country_flag = naval_effort_built
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_country_flag = naval_effort_built
+										}
+									NOT = {
+											any_owned_state = {
+													free_building_slots = {
+															building = dockyard
+															size > 2
+															include_locked = yes
+														}
+												}
+										}
+								}
+							random_state = {
+									limit = {
+											controller = {
+													tag = ROOT
+												}
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_infantry_effort
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_lessons_from_the_last_war
+		}
+		x = 0
+		y = 1
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 1
+							category = infantry_weapons
+							category = artillery
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_equipment_effort
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_infantry_effort
+		}
+		x = 0
+		y = 2
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 1
+							category = infantry_weapons
+							category = artillery
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_equipment_effort_2
+		icon = GFX_goal_generic_army_artillery2
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_equipment_effort
+		}
+		x = 0
+		y = 3
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 1
+							category = infantry_weapons
+							category = artillery
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_equipment_effort_3
+		icon = GFX_goal_generic_army_artillery
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_equipment_effort_2
+		}
+		x = 0
+		y = 4
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 1
+							category = infantry_weapons
+							category = artillery
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_equipment_effort_4
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_equipment_effort_3
+		}
+		x = 0
+		y = 5
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 1
+							category = infantry_weapons
+							category = artillery
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_equipment_effort_5
+		icon = GFX_goal_continuous_reduce_training_time
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_equipment_effort_4
+		}
+		x = 0
+		y = 6
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 2
+							category = infantry_weapons
+							category = artillery
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_motorization_effort
+		icon = GFX_goal_generic_army_motorized
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_lessons_from_the_last_war
+		}
+		x = 2
+		y = 1
+			bypass = {
+					has_tech = motorised_infantry
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = motorized_bonus
+							bonus = 0.75
+							technology = motorised_infantry
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_motorization_effort_Copy
+		icon = GFX_goal_generic_army_motorized
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_motorization_effort
+		}
+		x = 2
+		y = 2
+			bypass = {
+					has_tech = motorised_infantry
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = motorized_bonus
+							bonus = 0.75
+							technology = motorised_infantry
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_mechanization_effort
+		icon = GFX_goal_generic_army_motorized
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_motorization_effort_Copy
+		}
+		x = 2
+		y = 3
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = motorized_bonus
+							ahead_reduction = 0.5
+							uses = 1
+							category = motorized_equipment
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_mechanization_effort_2
+		icon = GFX_goal_generic_army_motorized
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_mechanization_effort
+		}
+		x = 2
+		y = 4
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = motorized_bonus
+							ahead_reduction = 0.5
+							uses = 1
+							category = motorized_equipment
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_doctrine_effort
+		icon = GFX_goal_generic_military_deal
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_lessons_from_the_last_war
+		}
+		x = 4
+		y = 1
+			available_if_capitulated = yes
+			completion_reward = {
+					army_experience = 5
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_doctrine_effort_2
+		icon = GFX_goal_generic_military_deal
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_doctrine_effort
+		}
+		x = 4
+		y = 2
+			available_if_capitulated = yes
+			completion_reward = {
+					army_experience = 5
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_doctrine_effort_3
+		icon = GFX_goal_generic_military_deal
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_doctrine_effort_2
+		}
+		x = 4
+		y = 3
+			available_if_capitulated = yes
+			completion_reward = {
+					army_experience = 5
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_doctrine_effort_4
+		icon = GFX_goal_generic_military_deal
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_doctrine_effort_3
+		}
+		x = 4
+		y = 4
+			available_if_capitulated = yes
+			completion_reward = {
+					army_experience = 5
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_special_forces
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_doctrine_effort_4
+		}
+		x = 4
+		y = 5
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = special_forces_bonus
+							bonus = 0.5
+							uses = 2
+							technology = paratroopers
+							technology = paratroopers2
+							technology = marines
+							technology = marines2
+							technology = tech_mountaineers
+							technology = tech_mountaineers2
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_special_forces_2
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_special_forces
+		}
+		x = 4
+		y = 6
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = special_forces_bonus
+							bonus = 0.5
+							uses = 3
+							technology = paratroopers
+							technology = paratroopers2
+							technology = marines
+							technology = marines2
+							technology = tech_mountaineers
+							technology = tech_mountaineers2
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_armored_effort
+		icon = GFX_goal_generic_army_tanks
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_lessons_from_the_last_war
+		}
+		x = 6
+		y = 1
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = armor_bonus
+							bonus = 0.5
+							uses = 2
+							category = armor
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_armored_effort_2
+		icon = GFX_goal_generic_army_tanks
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_armored_effort
+		}
+		x = 6
+		y = 2
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = armor_bonus
+							bonus = 0.5
+							uses = 1
+							category = armor
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_armored_effort_3
+		icon = GFX_goal_generic_army_tanks
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_armored_effort_2
+		}
+		x = 6
+		y = 3
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = armor_bonus
+							bonus = 0.5
+							uses = 1
+							category = armor
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_armored_effort_4
+		icon = GFX_goal_generic_army_tanks
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_armored_effort_3
+		}
+		x = 6
+		y = 4
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = armor_bonus
+							bonus = 0.5
+							uses = 2
+							category = armor
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_airforce_effort
+		icon = GFX_goal_generic_build_airforce
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_lessons_from_the_last_war
+		}
+		x = 8
+		y = 1
+			available_if_capitulated = yes
+			complete_tooltip = {
+					air_experience = 25
+					if = {
+							limit = {
+									has_country_flag = aviation_effort_AB
+								}
+							add_building_construction = {
+									type = air_base
+									level = 2
+									instant_build = yes
+								}
+						}
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = air_doctrine
+						}
+				}
+			completion_reward = {
+					air_experience = 25
+					if = {
+							limit = {
+									capital_scope = {
+											NOT = {
+													free_building_slots = {
+															building = air_base
+															size > 1
+														}
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+									add_building_construction = {
+											type = air_base
+											level = 2
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_AB
+										}
+								}
+						}
+					if = {
+							limit = {
+									capital_scope = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+								}
+							capital_scope = {
+									add_building_construction = {
+											type = air_base
+											level = 2
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_AB
+										}
+								}
+						}
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = air_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_air_effort_2
+		icon = GFX_goal_generic_air_bomber
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_airforce_effort
+		}
+		x = 8
+		y = 2
+			available_if_capitulated = yes
+			complete_tooltip = {
+					air_experience = 25
+					if = {
+							limit = {
+									has_country_flag = aviation_effort_AB
+								}
+							add_building_construction = {
+									type = air_base
+									level = 2
+									instant_build = yes
+								}
+						}
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = air_doctrine
+						}
+					add_tech_bonus = {
+							name = bomber_bonus
+							bonus = 0.5
+							uses = 2
+							technology = strategic_bomber1
+							technology = strategic_bomber2
+							technology = strategic_bomber3
+							category = tactical_bomber
+						}
+				}
+			completion_reward = {
+					air_experience = 25
+					if = {
+							limit = {
+									capital_scope = {
+											NOT = {
+													free_building_slots = {
+															building = air_base
+															size > 1
+														}
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+									add_building_construction = {
+											type = air_base
+											level = 2
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_AB
+										}
+								}
+						}
+					if = {
+							limit = {
+									capital_scope = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+								}
+							capital_scope = {
+									add_building_construction = {
+											type = air_base
+											level = 2
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_AB
+										}
+								}
+						}
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = air_doctrine
+						}
+					add_tech_bonus = {
+							name = bomber_bonus
+							bonus = 0.5
+							uses = 2
+							technology = strategic_bomber1
+							technology = strategic_bomber2
+							technology = strategic_bomber3
+							category = tactical_bomber
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_air_effort_3
+		icon = GFX_goal_generic_air_fighter
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_air_effort_2
+		}
+		x = 8
+		y = 3
+			available_if_capitulated = yes
+			complete_tooltip = {
+					air_experience = 25
+					if = {
+							limit = {
+									has_country_flag = aviation_effort_AB
+								}
+							add_building_construction = {
+									type = air_base
+									level = 2
+									instant_build = yes
+								}
+						}
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = air_doctrine
+						}
+					add_tech_bonus = {
+							name = bomber_bonus
+							bonus = 0.5
+							uses = 2
+							technology = strategic_bomber1
+							technology = strategic_bomber2
+							technology = strategic_bomber3
+							category = tactical_bomber
+						}
+				}
+			completion_reward = {
+					air_experience = 25
+					if = {
+							limit = {
+									capital_scope = {
+											NOT = {
+													free_building_slots = {
+															building = air_base
+															size > 1
+														}
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+									add_building_construction = {
+											type = air_base
+											level = 2
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_AB
+										}
+								}
+						}
+					if = {
+							limit = {
+									capital_scope = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+								}
+							capital_scope = {
+									add_building_construction = {
+											type = air_base
+											level = 2
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_AB
+										}
+								}
+						}
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = air_doctrine
+						}
+					add_tech_bonus = {
+							name = bomber_bonus
+							bonus = 0.5
+							uses = 2
+							technology = strategic_bomber1
+							technology = strategic_bomber2
+							technology = strategic_bomber3
+							category = tactical_bomber
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_air_effort_4
+		icon = GFX_goal_generic_air_bomber
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_air_effort_3
+		}
+		x = 8
+		y = 4
+			available_if_capitulated = yes
+			complete_tooltip = {
+					air_experience = 25
+					if = {
+							limit = {
+									has_country_flag = aviation_effort_2_AB
+								}
+							add_building_construction = {
+									type = air_base
+									level = 2
+									instant_build = yes
+								}
+						}
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = air_doctrine
+						}
+					add_tech_bonus = {
+							name = CAS_bonus
+							bonus = 0.5
+							ahead_reduction = 1
+							uses = 1
+							category = cas_bomber
+						}
+				}
+			completion_reward = {
+					air_experience = 25
+					if = {
+							limit = {
+									capital_scope = {
+											OR = {
+													NOT = {
+															is_controlled_by = ROOT
+														}
+													NOT = {
+															free_building_slots = {
+																	building = air_base
+																	size > 1
+																}
+														}
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+									add_building_construction = {
+											type = air_base
+											level = 2
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_2_AB
+										}
+								}
+						}
+					if = {
+							limit = {
+									capital_scope = {
+											is_controlled_by = ROOT
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+								}
+							capital_scope = {
+									add_building_construction = {
+											type = air_base
+											level = 2
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_2_AB
+										}
+								}
+						}
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = air_doctrine
+						}
+					add_tech_bonus = {
+							name = CAS_bonus
+							bonus = 0.5
+							ahead_reduction = 1
+							uses = 1
+							category = cas_bomber
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_infrastructure_effort
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_industrial_effort
+		}
+		x = 10
+		y = 1
+			available_if_capitulated = yes
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = infrastructure_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = infrastructure
+											size < 1
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 0
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 0
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 0
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 0
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_infrastructure_effort_2
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_infrastructure_effort
+		}
+		x = 10
+		y = 2
+			available_if_capitulated = yes
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = infrastructure_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = infrastructure
+											size < 1
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 0
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 0
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 0
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 0
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_infrastructure_effort_3
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_infrastructure_effort_2
+		}
+		x = 10
+		y = 3
+			available_if_capitulated = yes
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = infrastructure_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = infrastructure
+											size < 1
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 0
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 0
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 0
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 0
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_infrastructure_effort_4
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_infrastructure_effort_3
+		}
+		x = 10
+		y = 4
+			available_if_capitulated = yes
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = infrastructure_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = infrastructure
+											size < 1
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 0
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 0
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 0
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 0
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_increase_steel_production
+		icon = GFX_goal_generic_production2
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_infrastructure_effort_4
+		}
+		x = 9
+		y = 5
+			completion_reward = {
+					add_resource = {
+							type = steel
+							amount = 8
+							state = 440
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_construction_effort
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_industrial_effort
+		}
+		x = 12
+		y = 1
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = construction_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = industrial_complex
+											size < 1
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					all_owned_state = {
+							add_extra_state_shared_building_slots = 1
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_construction_effort_2
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_construction_effort
+		}
+		x = 12
+		y = 2
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = construction_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = industrial_complex
+											size < 1
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					all_owned_state = {
+							add_extra_state_shared_building_slots = 1
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_construction_effort_3
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_construction_effort_2
+		}
+		x = 12
+		y = 3
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = construction_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = industrial_complex
+											size < 2
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					all_owned_state = {
+							add_extra_state_shared_building_slots = 1
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 1
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 1
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_construction_effort_4
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_construction_effort_3
+		}
+		x = 12
+		y = 4
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = construction_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = industrial_complex
+											size < 2
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					all_owned_state = {
+							add_extra_state_shared_building_slots = 1
+						}
+					all_owned_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 1
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 1
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_production_effort
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_industrial_effort
+		}
+		x = 14
+		y = 1
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = production_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = arms_factory
+											size < 1
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					all_owned_state = {
+							add_extra_state_shared_building_slots = 1
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_production_effort_2
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_production_effort
+		}
+		x = 14
+		y = 2
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = production_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = arms_factory
+											size < 1
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					all_owned_state = {
+							add_extra_state_shared_building_slots = 1
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_production_effort_3
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_production_effort_2
+		}
+		x = 14
+		y = 3
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = production_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = arms_factory
+											size < 1
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					all_owned_state = {
+							add_extra_state_shared_building_slots = 1
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_production_effort_4
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_production_effort_3
+		}
+		x = 14
+		y = 4
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = production_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = arms_factory
+											size < 1
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					all_owned_state = {
+							add_extra_state_shared_building_slots = 1
+						}
+					all_owned_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_extra_tech_slot
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_infrastructure_effort_4
+		}
+		prerequisite = {
+			focus = PAK_construction_effort_4
+		}
+		prerequisite = {
+			focus = PAK_production_effort_4
+		}
+		x = 12
+		y = 6
+			available_if_capitulated = yes
+			completion_reward = {
+					add_research_slot = 1
+				}
+
+	}
+	focus = {
+		id = PAK_establish_pakistan_atomic_energy_commission
+		icon = GFX_focus_wonderweapons
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_extra_tech_slot
+		}
+		x = 10
+		y = 7
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = nuclear_bonus
+							ahead_reduction = 0.5
+							category = nuclear
+						}
+				}
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0.25
+							always = yes
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_minimum_credible_deterrence
+		icon = GFX_goal_generic_secret_weapon
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_extra_tech_slot
+		}
+		x = 14
+		y = 7
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = secret_bonus
+							bonus = 0.5
+							uses = 4
+							category = electronics
+							category = nuclear
+							category = rocketry
+						}
+				}
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0.25
+							always = yes
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_democratic_republic
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_political_reforms
+		}
+		mutually_exclusive = {
+			focus = PAK_socialist_republic
+			focus = PAK_military_coup
+			focus = PAK_islamic_republic
+			focus = PAK_socialist_republic
+		}
+		x = 17
+		y = 1
+			available = {
+					OR = {
+							has_government = democratic
+							has_government = neutrality
+						}
+				}
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 95
+					modifier = {
+							factor = 0.1
+							any_neighbor_country = {
+									is_major = yes
+									OR = {
+											has_government = communism
+											has_government = fascism
+										}
+								}
+							NOT = {
+									any_neighbor_country = {
+											is_major = yes
+											has_government = democratic
+										}
+								}
+						}
+				}
+			completion_reward = {
+					add_ideas = liberty_ethos_focus
+				}
+
+	}
+	focus = {
+		id = PAK_socialist_republic
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_political_reforms
+		}
+		mutually_exclusive = {
+			focus = PAK_democratic_republic
+			focus = PAK_islamic_republic
+			focus = PAK_military_coup
+			focus = PAK_islamic_republic
+			focus = PAK_democratic_republic
+			focus = PAK_military_coup
+		}
+		x = 19
+		y = 1
+			completion_reward = {
+					set_politics = {
+							ruling_party = communism
+							elections_allowed = no
+						}
+					add_popularity = {
+							ideology = communism
+							popularity = 0.6
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_islamic_republic
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_political_reforms
+		}
+		mutually_exclusive = {
+			focus = PAK_democratic_republic
+			focus = PAK_military_coup
+			focus = PAK_socialist_republic
+			focus = PAK_socialist_republic
+		}
+		x = 23
+		y = 1
+			completion_reward = {
+					set_politics = {
+							ruling_party = conservative
+						}
+					add_popularity = {
+							ideology = conservative
+							popularity = 0.5
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_military_coup
+		icon = GFX_goal_continuous_suppression
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_political_reforms
+		}
+		mutually_exclusive = {
+			focus = PAK_democratic_republic
+			focus = PAK_islamic_republic
+			focus = PAK_socialist_republic
+			focus = PAK_socialist_republic
+		}
+		x = 21
+		y = 1
+			completion_reward = {
+					set_politics = {
+							ruling_party = neutrality
+							elections_allowed = no
+						}
+					add_popularity = {
+							ideology = neutrality
+							popularity = 0.6
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_open_relations_with_india
+		icon = GFX_goal_generic_major_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_democratic_republic
+			focus = PAK_socialist_republic
+			focus = PAK_islamic_republic
+			focus = PAK_military_coup
+		}
+		mutually_exclusive = {
+			focus = PAK_condemn_indian_occupation_of_kashmir
+		}
+		x = 17
+		y = 3
+			completion_reward = {
+					PAK = {
+							add_opinion_modifier = {
+									target = RAJ
+									modifier = small_increase
+								}
+						}
+					RAJ = {
+							add_opinion_modifier = {
+									target = PAK
+									modifier = small_increase
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_drop_claim_to_indian_kashmir_Copy
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_open_relations_with_india
+		}
+		mutually_exclusive = {
+			focus = PAK_open_relations_with_india
+			focus = PAK_the_dixon_plan
+		}
+		x = 16
+		y = 4
+			completion_reward = {
+					remove_state_core = 441
+				}
+
+	}
+	focus = {
+		id = PAK_the_dixon_plan
+		icon = GFX_goal_anschluss
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_open_relations_with_india
+		}
+		mutually_exclusive = {
+			focus = PAK_drop_claim_to_indian_kashmir_Copy
+		}
+		x = 18
+		y = 4
+
+	}
+	focus = {
+		id = PAK_friendship_with_india
+		icon = GFX_goal_tripartite_pact
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_drop_claim_to_indian_kashmir_Copy
+			focus = PAK_the_dixon_plan
+		}
+		x = 17
+		y = 5
+			completion_reward = {
+					PAK = {
+							add_opinion_modifier = {
+									target = RAJ
+									modifier = large_increase
+								}
+						}
+					RAJ = {
+							add_opinion_modifier = {
+									target = PAK
+									modifier = large_increase
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_condemn_indian_occupation_of_kashmir
+		icon = GFX_goal_generic_territory_or_war
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_democratic_republic
+			focus = PAK_socialist_republic
+			focus = PAK_islamic_republic
+			focus = PAK_military_coup
+		}
+		mutually_exclusive = {
+			focus = PAK_open_relations_with_india
+		}
+		x = 22
+		y = 3
+			completion_reward = {
+					PAK = {
+							add_opinion_modifier = {
+									target = RAJ
+									modifier = large_decrease
+								}
+						}
+					RAJ = {
+							add_opinion_modifier = {
+									target = PAK
+									modifier = large_decrease
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_support_kashmiri_independence
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_condemn_indian_occupation_of_kashmir
+		}
+		mutually_exclusive = {
+			focus = PAK_invade_for_kashmir
+		}
+		x = 20
+		y = 4
+			completion_reward = {
+					RAJ = {
+							release = KAS
+							declare_war_on = {
+									target = KAS
+									type = annex_everything
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_invade_for_kashmir
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_condemn_indian_occupation_of_kashmir
+		}
+		mutually_exclusive = {
+			focus = PAK_support_kashmiri_independence
+		}
+		x = 24
+		y = 4
+			completion_reward = {
+					create_wargoal = {
+							type = annex_everything
+							target = RAJ
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_rival_india
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_support_kashmiri_independence
+			focus = PAK_invade_for_kashmir
+		}
+		x = 22
+		y = 5
+			completion_reward = {
+					PAK = {
+							add_opinion_modifier = {
+									target = RAJ
+									modifier = large_decrease
+								}
+						}
+					RAJ = {
+							add_opinion_modifier = {
+									target = PAK
+									modifier = large_decrease
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_claim_assam_and_west_bengal
+		icon = GFX_goal_generic_territory_or_war
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_rival_india
+		}
+		x = 20
+		y = 6
+			completion_reward = {
+					add_state_core = 432
+					add_state_core = 435
+				}
+
+	}
+	focus = {
+		id = PAK_support_indian_seperatist_movements
+		icon = GFX_goal_generic_territory_or_war
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_rival_india
+		}
+		mutually_exclusive = {
+			focus = PAK_claim_assam_and_west_bengal
+		}
+		x = 24
+		y = 6
+			completion_reward = {
+					RAJ = {
+							add_national_unity = -0.10
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_incite_khalistan_rebellion
+		icon = GFX_focus_generic_strike_at_democracy2
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_support_indian_seperatist_movements
+		}
+		x = 23
+		y = 7
+			completion_reward = {
+					RAJ = {
+							release = KHA
+							declare_war_on = {
+									target = KHA
+									type = annex_everything
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_submarine_effort_1
+		icon = GFX_goal_generic_navy_submarine
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_indian_ocean_navy
+		}
+		x = 25
+		y = 1
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0
+							all_owned_state = {
+									OR = {
+											is_coastal = no
+											dockyard < 1
+										}
+								}
+						}
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = ss_bonus
+							bonus = 0.5
+							ahead_reduction = 1
+							uses = 1
+							technology = early_submarine
+							technology = basic_submarine
+							technology = improved_submarine
+							technology = advanced_submarine
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_submarine_effort_2
+		icon = GFX_goal_generic_navy_submarine
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_submarine_effort_1
+		}
+		x = 25
+		y = 2
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0
+							all_owned_state = {
+									OR = {
+											is_coastal = no
+											dockyard < 1
+										}
+								}
+						}
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = ss_bonus
+							bonus = 0.5
+							ahead_reduction = 1
+							uses = 1
+							technology = early_submarine
+							technology = basic_submarine
+							technology = improved_submarine
+							technology = advanced_submarine
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_incite_assam_rebellion
+		icon = GFX_focus_generic_strike_at_democracy2
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_support_indian_seperatist_movements
+		}
+		x = 25
+		y = 7
+			completion_reward = {
+					RAJ = {
+							release = ASA
+							declare_war_on = {
+									target = ASA
+									type = annex_everything
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_open_relations_with_afghanistan
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_democratic_republic
+			focus = PAK_socialist_republic
+			focus = PAK_islamic_republic
+			focus = PAK_military_coup
+		}
+		mutually_exclusive = {
+			focus = PAK_open_relations_with_india
+		}
+		x = 28
+		y = 3
+			completion_reward = {
+					PAK = {
+							add_opinion_modifier = {
+									target = AFG
+									modifier = small_increase
+								}
+						}
+					AFG = {
+							add_opinion_modifier = {
+									target = PAK
+									modifier = small_increase
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_border_dispute_afg
+		icon = GFX_goal_generic_territory_or_war
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_open_relations_with_afghanistan
+		}
+		mutually_exclusive = {
+			focus = PAK_claim_assam_and_west_bengal
+			focus = PAK_befriend_afghanistan
+		}
+		x = 26
+		y = 4
+			completion_reward = {
+					add_state_core = 267
+					add_state_core = 415
+				}
+
+	}
+	focus = {
+		id = PAK_invade_afghanistan
+		icon = GFX_goal_anschluss
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_border_dispute_afg
+		}
+		x = 26
+		y = 5
+			completion_reward = {
+					create_wargoal = {
+							type = annex_everything
+							target = AFG
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_destroyer_effort_1
+		icon = GFX_goal_generic_wolf_pack
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_indian_ocean_navy
+		}
+		x = 27
+		y = 1
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0
+							all_owned_state = {
+									OR = {
+											is_coastal = no
+											dockyard < 1
+										}
+								}
+						}
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = dd_bonus
+							bonus = 0.5
+							ahead_reduction = 1
+							uses = 1
+							technology = early_destroyer
+							technology = basic_destroyer
+							technology = improved_destroyer
+							technology = advanced_destroyer
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_destroyer_effort_2
+		icon = GFX_goal_continuous_naval_production
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_destroyer_effort_1
+		}
+		x = 27
+		y = 2
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0
+							all_owned_state = {
+									OR = {
+											is_coastal = no
+											dockyard < 1
+										}
+								}
+						}
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = dd_bonus
+							bonus = 0.5
+							ahead_reduction = 1
+							uses = 1
+							technology = early_destroyer
+							technology = basic_destroyer
+							technology = improved_destroyer
+							technology = advanced_destroyer
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_cruiser_effort_1
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_indian_ocean_navy
+		}
+		x = 29
+		y = 1
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0
+							all_owned_state = {
+									OR = {
+											is_coastal = no
+											dockyard < 1
+										}
+								}
+						}
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = cr_bonus
+							bonus = 0.5
+							ahead_reduction = 1
+							uses = 1
+							technology = improved_light_cruiser
+							technology = advanced_light_cruiser
+							
+							
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_cruiser_effort_2
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_cruiser_effort_1
+		}
+		x = 29
+		y = 2
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0
+							all_owned_state = {
+									OR = {
+											is_coastal = no
+											dockyard < 1
+										}
+								}
+						}
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = cr_bonus
+							bonus = 0.5
+							ahead_reduction = 1
+							uses = 1
+							technology = improved_light_cruiser
+							technology = advanced_light_cruiser
+							
+							
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_befriend_afghanistan
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_open_relations_with_afghanistan
+		}
+		mutually_exclusive = {
+			focus = PAK_border_dispute_afg
+		}
+		x = 30
+		y = 4
+			completion_reward = {
+					PAK = {
+							add_opinion_modifier = {
+									target = AFG
+									modifier = large_increase
+								}
+						}
+					AFG = {
+							add_opinion_modifier = {
+									target = PAK
+									modifier = large_increase
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_afg_puppet_coup
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_befriend_afghanistan
+		}
+		x = 30
+		y = 5
+			completion_reward = {
+					puppet = AFG
+				}
+
+	}
+	focus = {
+		id = PAK_carrier_effort_1
+		icon = GFX_goal_generic_navy_carrier
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_indian_ocean_navy
+		}
+		x = 31
+		y = 1
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0
+							all_owned_state = {
+									OR = {
+											is_coastal = no
+											dockyard < 1
+										}
+								}
+						}
+				}
+			completion_reward = {
+					navy_experience = 25
+					add_tech_bonus = {
+							name = capital_ships_bonus
+							bonus = 0.5
+							ahead_reduction = 1
+							technology = early_carrier
+							technology = basic_carrier
+							technology = improved_carrier
+							technology = advanced_carrier
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_carrier_effort_2
+		icon = GFX_goal_generic_navy_carrier
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_carrier_effort_1
+		}
+		x = 31
+		y = 2
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0
+							all_owned_state = {
+									OR = {
+											is_coastal = no
+											dockyard < 1
+										}
+								}
+						}
+				}
+			completion_reward = {
+					navy_experience = 25
+					add_tech_bonus = {
+							name = capital_ships_bonus
+							bonus = 0.5
+							ahead_reduction = 1
+							technology = early_carrier
+							technology = basic_carrier
+							technology = improved_carrier
+							technology = advanced_carrier
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_open_relations_with_iran
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_democratic_republic
+			focus = PAK_socialist_republic
+			focus = PAK_islamic_republic
+			focus = PAK_military_coup
+		}
+		x = 34
+		y = 3
+			completion_reward = {
+					PAK = {
+							add_opinion_modifier = {
+									target = PER
+									modifier = small_increase
+								}
+						}
+					PER = {
+							add_opinion_modifier = {
+									target = PAK
+									modifier = small_increase
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_claim_sistan_and_iranian_baluchistan
+		icon = GFX_goal_generic_territory_or_war
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_open_relations_with_iran
+		}
+		mutually_exclusive = {
+			focus = PAK_border_dispute_afg
+			focus = PAK_befriend_iran
+		}
+		x = 32
+		y = 4
+			completion_reward = {
+					add_state_core = 105
+				}
+
+	}
+	focus = {
+		id = PAK_invade_iran
+		icon = GFX_goal_anschluss
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_claim_sistan_and_iranian_baluchistan
+		}
+		x = 32
+		y = 5
+			completion_reward = {
+					create_wargoal = {
+							type = annex_everything
+							target = PER
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_capital_ship_effort_1
+		icon = GFX_goal_generic_navy_battleship
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_indian_ocean_navy
+		}
+		x = 33
+		y = 1
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0
+							all_owned_state = {
+									OR = {
+											is_coastal = no
+											dockyard < 1
+										}
+								}
+						}
+				}
+			completion_reward = {
+					navy_experience = 25
+					add_tech_bonus = {
+							name = capital_ships_bonus
+							bonus = 0.5
+							ahead_reduction = 1
+							uses = 1
+							technology = battle_cruiser_2
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_capital_ship_effort_2
+		icon = GFX_goal_generic_navy_battleship
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_capital_ship_effort_1
+		}
+		x = 33
+		y = 2
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0
+							all_owned_state = {
+									OR = {
+											is_coastal = no
+											dockyard < 1
+										}
+								}
+						}
+				}
+			completion_reward = {
+					navy_experience = 25
+					add_tech_bonus = {
+							name = capital_ships_bonus
+							bonus = 0.5
+							ahead_reduction = 1
+							uses = 1
+							technology = battle_cruiser_2
+			
+			
+			
+			
+			2
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_marines_effort_1
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_indian_ocean_navy
+		}
+		x = 35
+		y = 1
+
+	}
+	focus = {
+		id = PAK_marines_effort_2
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_marines_effort_1
+		}
+		x = 35
+		y = 2
+
+	}
+	focus = {
+		id = PAK_befriend_iran
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_open_relations_with_iran
+		}
+		mutually_exclusive = {
+			focus = PAK_border_dispute_afg
+			focus = PAK_claim_sistan_and_iranian_baluchistan
+		}
+		x = 36
+		y = 4
+			completion_reward = {
+					PAK = {
+							add_opinion_modifier = {
+									target = PER
+									modifier = large_increase
+								}
+						}
+					PER = {
+							add_opinion_modifier = {
+									target = PAK
+									modifier = large_increase
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_east_pakistani_problem
+		icon = GFX_goal_continuous_suppression
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_democratic_republic
+			focus = PAK_socialist_republic
+			focus = PAK_islamic_republic
+			focus = PAK_military_coup
+		}
+		x = 41
+		y = 3
+			available_if_capitulated = yes
+			completion_reward = {
+					add_political_power = 120
+				}
+
+	}
+	focus = {
+		id = PAK_militarize_east_pakistan
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_east_pakistani_problem
+		}
+		x = 40
+		y = 4
+			completion_reward = {
+					add_political_power = 120
+					add_national_unity = -0.1
+				}
+
+	}
+	focus = {
+		id = PAK_crush_bengali_indepedence
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_militarize_east_pakistan
+		}
+		x = 40
+		y = 5
+			completion_reward = {
+					release = BAN
+					declare_war_on = {
+							target = BAN
+							type = annex_everything
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_release_bangladesh
+		icon = GFX_focus_renounce_the_treaty_of_triannon
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_east_pakistani_problem
+		}
+		x = 42
+		y = 4
+			completion_reward = {
+					release = BAN
+				}
+
+	}
+	focus = {
+		id = PAK_befriend_bangladesh
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_release_bangladesh
+		}
+		mutually_exclusive = {
+			focus = PAK_claim_sistan_and_iranian_baluchistan
+		}
+		x = 42
+		y = 5
+			completion_reward = {
+					PAK = {
+							add_opinion_modifier = {
+									target = BAN
+									modifier = large_increase
+								}
+						}
+					BAN = {
+							add_opinion_modifier = {
+									target = PAK
+									modifier = large_increase
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_the_cold_war
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_democratic_republic
+			focus = PAK_socialist_republic
+			focus = PAK_islamic_republic
+			focus = PAK_military_coup
+		}
+		x = 49
+		y = 3
+
+	}
+	focus = {
+		id = PAK_align_with_the_soviets
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_the_cold_war
+		}
+		mutually_exclusive = {
+			focus = PAK_align_usa
+			focus = PAK_our_own_destiny
+		}
+		x = 47
+		y = 4
+			completion_reward = {
+					PAK = {
+							add_opinion_modifier = {
+									target = SOV
+									modifier = large_increase
+								}
+						}
+					SOV = {
+							add_opinion_modifier = {
+									target = PAK
+									modifier = large_increase
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_Soviet_Pakistan_Mutual_Defence_Pact
+		icon = GFX_focus_secret_rearmament
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_align_with_the_soviets
+		}
+		x = 47
+		y = 5
+			completion_reward = {
+					add_opinion_modifier = {
+							target = SOV
+							modifier = large_increase
+						}
+					SOV = {
+							add_opinion_modifier = {
+									target = ROOT
+									modifier = large_increase
+								}
+						}
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 1
+							category = industry
+						}
+					add_tech_bonus = {
+							name = armor_bonus
+							bonus = 0.5
+							uses = 1
+							category = armor
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_join_warsaw_pact
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_Soviet_Pakistan_Mutual_Defence_Pact
+		}
+		mutually_exclusive = {
+			focus = PAK_the_anti_imperialist_league
+		}
+		x = 47
+		y = 6
+			completion_reward = {
+					add_to_faction = SOV
+				}
+
+	}
+	focus = {
+		id = PAK_align_usa
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_the_cold_war
+		}
+		mutually_exclusive = {
+			focus = PAK_align_with_the_soviets
+		}
+		x = 49
+		y = 4
+			completion_reward = {
+					PAK = {
+							add_opinion_modifier = {
+									target = USA
+									modifier = large_increase
+								}
+						}
+					USA = {
+							add_opinion_modifier = {
+									target = PAK
+									modifier = large_increase
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_US_Pakistan_Mutual_Defence_Pact
+		icon = GFX_focus_secret_rearmament
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_align_usa
+		}
+		x = 49
+		y = 5
+			completion_reward = {
+					add_opinion_modifier = {
+							target = USA
+							modifier = large_increase
+						}
+					USA = {
+							add_opinion_modifier = {
+									target = ROOT
+									modifier = large_increase
+								}
+						}
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 1
+							category = industry
+						}
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = air_doctrine
+						}
+					add_tech_bonus = {
+							name = bomber_bonus
+							bonus = 0.5
+							uses = 2
+							technology = strategic_bomber1
+							technology = strategic_bomber2
+							technology = strategic_bomber3
+							category = tactical_bomber
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_join_nato
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_US_Pakistan_Mutual_Defence_Pact
+		}
+		mutually_exclusive = {
+			focus = PAK_the_anti_imperialist_league
+			focus = PAK_the_central_asian_alliance
+		}
+		x = 49
+		y = 6
+			completion_reward = {
+					USA = { add_to_faction = ROOT }
+					add_ideas = nato_member
+				}
+
+	}
+	focus = {
+		id = PAK_align_china
+		icon = GFX_focus_SAF_colonialist_crusade
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_the_cold_war
+		}
+		mutually_exclusive = {
+			focus = PAK_our_own_destiny
+		}
+		x = 51
+		y = 4
+			completion_reward = {
+					PAK = {
+							add_opinion_modifier = {
+									target = PRC
+									modifier = large_increase
+								}
+						}
+					PRC = {
+							add_opinion_modifier = {
+									target = PAK
+									modifier = large_increase
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_PRC_co_operation
+		icon = GFX_focus_renounce_the_treaty_of_triannon
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_align_china
+		}
+		x = 51
+		y = 5
+			completion_reward = {
+					add_opinion_modifier = {
+							target = PRC
+							modifier = large_increase
+						}
+					PRC = {
+							add_opinion_modifier = {
+									target = ROOT
+									modifier = large_increase
+								}
+						}
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 2
+							category = infantry_weapons
+							category = artillery
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_idea = chinese_advisors
+										}
+								}
+							add_ideas = chinese_advisors
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_the_anti_imperialist_league
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_PRC_co_operation
+		}
+		mutually_exclusive = {
+			focus = PAK_join_nato
+			focus = PAK_join_warsaw_pact
+		}
+		x = 51
+		y = 6
+			available = {
+					has_opinion = {
+							target = PRC
+							value > 50
+						}
+					PRC = {
+							has_opinion = {
+									target = PAK
+									value > 50
+								}
+						}
+					is_in_faction = no
+					PRC = {
+							is_in_faction = no
+						}
+				}
+			completion_reward = {
+					PRC = {
+							create_faction = "Anti-Imperialist League"
+						}
+					add_to_faction = PRC
+				}
+
+	}
+	focus = {
+		id = PAK_aid_maoist_rebels
+		icon = GFX_goal_continuous_reduce_training_time
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_the_anti_imperialist_league
+		}
+		x = 51
+		y = 7
+			completion_reward = {
+					RAJ = {
+							start_civil_war = {
+									ideology = communism
+									size = 0.5
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_our_own_destiny
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_the_cold_war
+		}
+		mutually_exclusive = {
+			focus = PAK_align_china
+			focus = PAK_align_with_the_soviets
+		}
+		x = 56
+		y = 4
+			completion_reward = {
+					add_national_unity = 0.10
+				}
+
+	}
+	focus = {
+		id = PAK_the_central_asian_alliance
+		icon = GFX_focus_renounce_the_treaty_of_triannon
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_our_own_destiny
+		}
+		mutually_exclusive = {
+			focus = PAK_join_nato
+		}
+		x = 56
+		y = 5
+			available = {
+					is_in_faction = no
+				}
+			completion_reward = {
+					create_faction = "Central Asian Alliance"
+					add_to_faction = PRC
+				}
+
+	}
+	focus = {
+		id = PAK_invite_afghanistan
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_the_central_asian_alliance
+		}
+		mutually_exclusive = {
+			focus = PAK_border_dispute_afg
+		}
+		x = 53
+		y = 6
+			available = {
+					has_opinion = {
+							target = AFG
+							value > 50
+						}
+					AFG = {
+							has_opinion = {
+									target = PAK
+									value > 50
+								}
+						}
+					is_in_faction = no
+				}
+			completion_reward = {
+					AFG = {
+							add_to_faction = PAK
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_invite_iran
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_the_central_asian_alliance
+		}
+		x = 55
+		y = 6
+			available = {
+					has_opinion = {
+							target = PER
+							value > 50
+						}
+					PER = {
+							has_opinion = {
+									target = PAK
+									value > 50
+								}
+						}
+					is_in_faction = no
+				}
+			completion_reward = {
+					PER = {
+							add_to_faction = PAK
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_invite_iraq
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_the_central_asian_alliance
+		}
+		x = 57
+		y = 6
+			available = {
+					has_opinion = {
+							target = IRQ
+							value > 50
+						}
+					IRQ = {
+							has_opinion = {
+									target = PAK
+									value > 50
+								}
+						}
+					is_in_faction = no
+				}
+			completion_reward = {
+					IRQ = {
+							add_to_faction = PAK
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_the_baluchistan_insurgency
+		icon = GFX_goal_continuous_suppression
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_democratic_republic
+			focus = PAK_socialist_republic
+			focus = PAK_islamic_republic
+			focus = PAK_military_coup
+		}
+		x = 59
+		y = 3
+			available_if_capitulated = yes
+			completion_reward = {
+					add_political_power = 120
+				}
+
+	}
+	focus = {
+		id = PAK_crush_insurgents
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_the_baluchistan_insurgency
+		}
+		mutually_exclusive = {
+			focus = PAK_release_baluchistan
+		}
+		x = 58
+		y = 4
+			completion_reward = {
+					release = BAL
+					declare_war_on = {
+							target = BAL
+							type = annex_everything
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_release_baluchistan
+		icon = GFX_focus_renounce_the_treaty_of_triannon
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_the_baluchistan_insurgency
+		}
+		mutually_exclusive = {
+			focus = PAK_join_nato
+			focus = PAK_crush_insurgents
+		}
+		x = 60
+		y = 4
+			completion_reward = {
+					release = BAL
+				}
+
+	}
+	focus = {
+		id = PAK_baluchistan_oil
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_release_baluchistan
+			focus = PAK_crush_insurgents
+		}
+		x = 59
+		y = 5
+			completion_reward = {
+					add_resource = {
+							type = oil
+							amount = 8
+							state = 444
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_support_uyghur_insurgency
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_the_central_asian_alliance
+		}
+		x = 59
+		y = 6
+			completion_reward = {
+					PAK = {
+							add_opinion_modifier = {
+									target = PRC
+									modifier = large_decrease
+								}
+						}
+					PRC = {
+							add_opinion_modifier = {
+									target = PAK
+									modifier = large_decrease
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_uyghur_uprising
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_support_uyghur_insurgency
+		}
+		x = 59
+		y = 7
+			completion_reward = {
+					PRC = {
+							release = ETR
+							declare_war_on = {
+									target = ETR
+									type = annex_everything
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_rocket_effort
+		icon = GFX_focus_rocketry
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_extra_tech_slot
+		}
+		x = 12
+		y = 7
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = jet_rocket_bonus
+							ahead_reduction = 0.5
+							uses = 2
+							category = rocketry
+							category = jet_technology
+						}
+				}
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0.25
+							always = yes
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_establish_theoretical_physic_group
+		icon = GFX_focus_wonderweapons
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_establish_pakistan_atomic_energy_commission
+		}
+		x = 10
+		y = 8
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = nuclear_bonus
+							ahead_reduction = 0.5
+							category = nuclear
+						}
+				}
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0.25
+							always = yes
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_PRC_dismantle_india
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_aid_maoist_rebels
+		}
+		x = 51
+		y = 8
+			completion_reward = {
+					RAJ = {
+							release = ASA
+							declare_war_on = {
+									target = ASA
+									type = annex_everything
+								}
+						}
+					RAJ = {
+							release = KHA
+							declare_war_on = {
+									target = KHA
+									type = annex_everything
+								}
+						}
+					declare_war_on = {
+							target = RAJ
+							type = take_core_state
+						}
+					PRC = {
+							declare_war_on = {
+									target = RAJ
+									type = puppet_wargoal_focus
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PAK_invite_eastern_turkestan_republic
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = PAK_uyghur_uprising
+		}
+		x = 59
+		y = 8
+			available = {
+					has_opinion = {
+							target = ETR
+							value > 50
+						}
+					ETR = {
+							has_opinion = {
+									target = PAK
+									value > 50
+								}
+						}
+					is_in_faction = no
+				}
+			completion_reward = {
+					ETR = {
+							add_to_faction = PAK
+						}
+				}
+
+	}
+}

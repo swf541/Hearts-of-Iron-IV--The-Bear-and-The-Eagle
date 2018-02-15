@@ -1,0 +1,82 @@
+USA_foriegn_policy = {
+	
+	enable = {		
+		tag = USA
+	}
+	
+	abort = {
+	}
+	
+	ai_strategy = {
+		type = protect
+		id = "WGR"			
+		value = 200
+	}
+	ai_strategy = {
+		type = garrison
+		id = "WGR"			
+		value = 400
+	}
+	ai_strategy = {
+		type = contain
+		id = "KPA"			
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "KPA"			
+		value = 400
+	}
+	ai_strategy = {
+		type = protect
+		id = "KOR"			
+		value = 200
+	}
+	ai_strategy = {
+		type = garrison
+		id = "KOR"		
+		value = 400
+	}	
+	ai_strategy = {
+		type = alliance
+		id = "KOR"			
+		value = 400
+	}
+	ai_strategy = {
+		type = protect
+		id = "JAP"			
+		value = 200
+	}
+	ai_strategy = {
+		type = garrison
+		id = "JAP"			
+		value = 400
+	}	
+	ai_strategy = {
+		type = alliance
+		id = "JAP"			
+		value = 400
+	}	
+}
+stay_in_alliance_NATO = {
+    enable = {
+        AND = {
+            is_in_faction = yes
+            any_allied_country = {
+                tag = USA
+                is_faction_leader = yes
+            }
+        }
+    }
+ 
+    abort = {
+        NOT = { country_exists = USA }
+    }
+   
+    ai_strategy = {
+        type = alliance
+        id = "USA"            
+        value = 500
+    }
+}
+ 

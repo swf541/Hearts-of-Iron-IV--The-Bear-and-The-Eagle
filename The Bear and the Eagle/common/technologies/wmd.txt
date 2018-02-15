@@ -1,0 +1,2168 @@
+@1945 = 12
+@1950 = 14
+@1952 = 16
+@1955 = 18
+@1958 = 20
+@1961 = 22
+@1964 = 24
+@1967 = 26
+@1970 = 28
+@1973 = 30
+@1976 = 32
+@1979 = 34
+@1982 = 36
+@1985 = 38
+@1988 = 40
+@1991 = 42
+
+technologies = {
+	experimental_rockets = {
+
+		enable_building = {
+			building = rocket_site
+			level = 2
+		}
+		
+		path = {
+			leads_to_tech = rocket_engines 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+		start_year = 1943
+		
+		folder = {
+			name = wmd_folder
+			position = { x = 0 y = 0 }
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			rocketry
+		}
+	}
+	
+	rocket_engines = {
+
+		show_equipment_icon = yes
+
+		# can build v1s/rocket planes
+		#enable_equipments = {
+		#	rocket_interceptor_equipment_1
+		#	guided_missile_equipment_1
+		#}
+		
+		rocket_artillery = {
+			soft_attack = 0.05
+		}
+		rocket_artillery_brigade = {
+			soft_attack = 0.05
+		}
+		motorized_rocket_brigade = {
+			soft_attack = 0.05
+		}
+		
+		path = {
+			leads_to_tech = improved_rocket_engines 
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = jet_engines 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1944
+		
+		folder = {
+			name = wmd_folder
+			position = { x = 0 y = 2 }
+		}
+			folder = {
+			name = secret_weapons_folder
+			position = { x = 10 y = 0 }
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			rocketry
+		}		
+	}
+	
+	improved_rocket_engines = {
+
+		show_equipment_icon = yes
+		
+		# can build v2s
+		
+		#enable_equipments = {
+		#	rocket_interceptor_equipment_2
+		#	guided_missile_equipment_2
+		#}
+		
+		rocket_artillery = {
+			soft_attack = 0.05
+		}
+		rocket_artillery_brigade = {
+			soft_attack = 0.05
+		}
+		motorized_rocket_brigade = {
+			soft_attack = 0.05
+		}
+		
+		path = {
+			leads_to_tech = advanced_rocket_engines 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+		start_year = 1945
+		
+		folder = {
+			name = wmd_folder
+			position = { x = 0 y = 4 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			rocketry
+		}
+	}
+	
+	advanced_rocket_engines = {
+
+		show_equipment_icon = yes
+
+		# can build ICBMs?
+		path = {
+			leads_to_tech = srbm1 
+			research_cost_coeff = 1
+		}		
+		path = {
+			leads_to_tech = surface_cruise_missles1949
+			research_cost_coeff = 1
+		}		
+		path = {
+			leads_to_tech = naval_cruise_missle1955
+			research_cost_coeff = 1
+		}				
+		path = {
+			leads_to_tech = anti_ship_missle1949
+			research_cost_coeff = 1
+		}			
+		#enable_equipments = {
+		#	rocket_interceptor_equipment_3
+		#	guided_missile_equipment_3
+		#}
+		
+		rocket_artillery = {
+			soft_attack = 0.05
+		}
+		rocket_artillery_brigade = {
+			soft_attack = 0.05
+		}
+		motorized_rocket_brigade = {
+			soft_attack = 0.05
+		}
+		
+		research_cost = 1.5
+		start_year = 1946
+		
+		folder = {
+			name = wmd_folder
+			position = { x = 0 y = 6 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			rocketry
+		}
+	}
+	
+	jet_engines = {
+	
+		folder = {
+			name = wmd_folder
+			position = { x = -4 y = 2 }
+		}
+		
+		start_year = 1944
+		research_cost = 2
+		
+		desc = "JET_ENGINES_SPECIAL"
+
+		on_research_complete = {
+			custom_effect_tooltip = JET_ENGINES_RESEARCHED
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			rocketry
+			jet_technology
+		}
+	}
+	
+	atomic_research = {
+
+		research_time_factor = -0.015
+		
+		path = {
+			leads_to_tech = nuclear_reactor 
+			research_cost_coeff = 1
+		}
+		
+		start_year = 1940
+		research_cost = 5
+		
+		folder = {
+			name = wmd_folder
+			position = { x = 0 y = 0 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.2
+				date > "1941.1.1"
+			}
+			
+			modifier = {
+				factor = 1.2
+				date > "1942.1.1"
+			}
+			
+			modifier = {
+				factor = 1.2
+				date > "1943.1.1"
+			}
+			
+			modifier = {
+				factor = 2
+				tag = USA
+			}
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+
+	}
+	
+	nuclear_reactor = {
+
+		# can build reactors
+		
+		start_year = 1943
+		research_cost = 5
+		
+		folder = {
+			name = wmd_folder
+			position = { x = 0 y = 2 }
+		}
+
+		path = {
+			leads_to_tech = nukes 
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = naval_reactor 
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 3
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		enable_building = {
+			building = nuclear_reactor
+			level = 1
+		}
+	}
+
+	naval_reactor = {
+
+		# can build reactors
+		
+		start_year = 1953
+		research_cost = 5
+		
+		folder = {
+			name = wmd_folder
+			position = { x = 8 y = 12 }
+		}
+		
+		path = {
+			leads_to_tech = nuclear_energy 
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 3
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+	}
+	
+	nukes = {
+	
+		start_year = 1945
+		research_cost = 5
+		
+		folder = {
+			name = wmd_folder
+			position = { x = 0 y = 4 }
+		}
+		path = {
+			leads_to_tech = fission1949
+			research_cost_coeff = 1
+		}		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		nuclear_production = 1
+		
+		categories = {
+			nuclear
+		}
+		enable_building = {
+			building = nuclear_reactor
+			level = 2
+		}
+	}
+	fission1949 = {
+	
+		start_year = 1949
+		research_cost = 5
+		
+		folder = {
+			name = wmd_folder
+			position = { x = 0 y = 6 }
+		}
+		path = {
+			leads_to_tech = fission1951
+			research_cost_coeff = 1
+		}	
+		path = {
+			leads_to_tech = fusion1952
+			research_cost_coeff = 1
+		}			
+		ai_will_do = {
+			factor = 10
+		}
+		
+		categories = {
+			nuclear
+		}
+		enable_building = {
+			building = nuclear_reactor
+			level = 3
+		}
+		on_research_complete = {
+			custom_effect_tooltip = wmd_fission_1949_tt
+		}
+	}	
+	fission1951 = {
+	
+		start_year = 1951
+		research_cost = 5
+		
+		folder = {
+			name = wmd_folder
+			position = { x = 0 y = 8 }
+		}
+		path = {
+			leads_to_tech = fission1952 
+			research_cost_coeff = 1
+		}			
+		ai_will_do = {
+			factor = 10
+		}
+		
+		categories = {
+			nuclear
+		}
+		enable_building = {
+			building = nuclear_reactor
+			level = 4
+		}
+		on_research_complete = {
+			custom_effect_tooltip = wmd_fission_1951_tt
+		}
+	}	
+	fission1952 = {
+	
+		start_year = 1952
+		research_cost = 5
+		
+		folder = {
+			name = wmd_folder
+			position = { x = 0 y = 10 }
+		}
+		path = {
+			leads_to_tech = fission1953 
+			research_cost_coeff = 1
+		}			
+		ai_will_do = {
+			factor = 10
+		}
+		
+		categories = {
+			nuclear
+		}
+		enable_building = {
+			building = nuclear_reactor
+			level = 5
+		}
+		on_research_complete = {
+			custom_effect_tooltip = wmd_fission_1952_tt
+		}
+	}	
+	fission1953 = {
+	
+		start_year = 1953
+		research_cost = 5
+		
+		folder = {
+			name = wmd_folder
+			position = { x = 0 y = 12 }
+		}
+		path = {
+			leads_to_tech = fission1954
+			research_cost_coeff = 1
+		}			
+		ai_will_do = {
+			factor = 10
+		}
+		
+		categories = {
+			nuclear
+		}
+		enable_building = {
+			building = nuclear_reactor
+			level = 6
+		}
+		on_research_complete = {
+			custom_effect_tooltip = wmd_fission_1953_tt
+		}
+	}
+	fission1954 = {
+	
+		start_year = 1954
+		research_cost = 5
+		
+		folder = {
+			name = wmd_folder
+			position = { x = 0 y = 14 }
+		}
+		path = {
+			leads_to_tech = fission1955
+			research_cost_coeff = 1
+		}				
+		ai_will_do = {
+			factor = 10
+		}
+		
+		categories = {
+			nuclear
+		}
+		enable_building = {
+			building = nuclear_reactor
+			level = 7
+		}
+		on_research_complete = {
+			custom_effect_tooltip = wmd_fission_1954_tt
+		}
+	}	
+	fission1955 = {
+	
+		start_year = 1955
+		research_cost = 5
+		
+		folder = {
+			name = wmd_folder
+			position = { x = 0 y = 16 }
+		}
+		path = {
+			leads_to_tech = fission1956 
+			research_cost_coeff = 1
+		}				
+		ai_will_do = {
+			factor = 10
+		}
+		
+		categories = {
+			nuclear
+		}
+		enable_building = {
+			building = nuclear_reactor
+			level = 8
+		}
+		on_research_complete = {
+			custom_effect_tooltip = wmd_fission_1955_tt
+		}
+	}
+	fission1956 = {
+	
+		start_year = 1956
+		research_cost = 5
+		
+		folder = {
+			name = wmd_folder
+			position = { x = 0 y = 18 }
+		}
+		path = {
+			leads_to_tech = fission1958 
+			research_cost_coeff = 1
+		}				
+		ai_will_do = {
+			factor = 10
+		}
+		
+		categories = {
+			nuclear
+		}
+		enable_building = {
+			building = nuclear_reactor
+			level = 9
+		}
+		on_research_complete = {
+			custom_effect_tooltip = wmd_fission_1956_tt
+		}
+	}	
+	fission1958 = {
+	
+		start_year = 1958
+		research_cost = 5
+		
+		folder = {
+			name = wmd_folder
+			position = { x = 0 y = 22 }
+		}
+		path = {
+			leads_to_tech = fission1961 
+			research_cost_coeff = 1
+		}				
+		ai_will_do = {
+			factor = 10
+		}
+		
+		categories = {
+			nuclear
+		}
+		enable_building = {
+			building = nuclear_reactor
+			level = 10
+		}
+		on_research_complete = {
+			custom_effect_tooltip = wmd_fission_1958_tt
+		}
+	}	
+	fission1961 = {
+	
+		start_year = 1961
+		research_cost = 5
+		
+		folder = {
+			name = wmd_folder
+			position = { x = 0 y = 26 }
+		}	
+		path = {
+			leads_to_tech = fission1964
+			research_cost_coeff = 1
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		
+		categories = {
+			nuclear
+		}
+		enable_building = {
+			building = nuclear_reactor
+			level = 11
+		}
+		on_research_complete = {
+			custom_effect_tooltip = wmd_fission_1961_tt
+		}
+	}	
+	fission1964 = {
+	
+		start_year = 1964
+		research_cost = 5
+		
+		folder = {
+			name = wmd_folder
+			position = { x = 0 y = 30 }
+		}		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		categories = {
+			nuclear
+		}
+		enable_building = {
+			building = nuclear_reactor
+			level = 12
+		}
+		on_research_complete = {
+			custom_effect_tooltip = wmd_fission_1964_tt
+		}
+	}	
+	fusion1952 = {
+	
+		start_year = 1952
+		research_cost = 5
+		
+		folder = {
+			name = wmd_folder
+			position = { x = 4 y = 10 }
+		}
+		path = {
+			leads_to_tech = fusion1954
+			research_cost_coeff = 1
+		}			
+		ai_will_do = {
+			factor = 10
+		}
+		
+		categories = {
+			nuclear
+		}
+		on_research_complete = {
+			custom_effect_tooltip = wmd_fusion_1952_tt
+		}
+	}		
+	fusion1954 = {
+	
+		start_year = 1954
+		research_cost = 5
+		
+		folder = {
+			name = wmd_folder
+			position = { x = 4 y = 14 }
+		}
+		path = {
+			leads_to_tech = fusion1955
+			research_cost_coeff = 1
+		}			
+		ai_will_do = {
+			factor = 10
+		}
+		
+		categories = {
+			nuclear
+		}
+		on_research_complete = {
+			custom_effect_tooltip = wmd_fusion_1954_tt
+		}
+	}
+	fusion1955 = {
+	
+		start_year = 1955
+		research_cost = 5
+		
+		folder = {
+			name = wmd_folder
+			position = { x = 4 y = 16 }
+		}
+		path = {
+			leads_to_tech = fusion1956
+			research_cost_coeff = 1
+		}			
+		ai_will_do = {
+			factor = 10
+		}
+		
+		categories = {
+			nuclear
+		}
+		on_research_complete = {
+			custom_effect_tooltip = wmd_fusion_1955_tt
+		}
+	}	
+	fusion1956 = {
+	
+		start_year = 1956
+		research_cost = 5
+		
+		folder = {
+			name = wmd_folder
+			position = { x = 4 y = 18 }
+		}
+		path = {
+			leads_to_tech = fusion1957
+			research_cost_coeff = 1
+		}			
+		ai_will_do = {
+			factor = 10
+		}
+		
+		categories = {
+			nuclear
+		}
+		on_research_complete = {
+			custom_effect_tooltip = wmd_fusion_1956_tt
+		}
+	}		
+	fusion1957 = {
+	
+		start_year = 1957
+		research_cost = 5
+		
+		folder = {
+			name = wmd_folder
+			position = { x = 4 y = 20 }
+		}
+		path = {
+			leads_to_tech = fusion1958
+			research_cost_coeff = 1
+		}			
+		ai_will_do = {
+			factor = 10
+		}
+		
+		categories = {
+			nuclear
+		}
+		on_research_complete = {
+			custom_effect_tooltip = wmd_fusion_1957_tt
+		}
+	}		
+	fusion1958 = {
+	
+		start_year = 1958
+		research_cost = 5
+		
+		folder = {
+			name = wmd_folder
+			position = { x = 4 y = 22 }
+		}
+		path = {
+			leads_to_tech = fusion1960
+			research_cost_coeff = 1
+		}			
+		ai_will_do = {
+			factor = 10
+		}
+		
+		nuclear_production = 1
+		
+		categories = {
+			nuclear
+		}
+		on_research_complete = {
+			custom_effect_tooltip = wmd_fusion_1958_tt
+		}
+	}	
+	fusion1960 = {
+	
+		start_year = 1960
+		research_cost = 5
+		
+		folder = {
+			name = wmd_folder
+			position = { x = 4 y = 24 }
+		}
+		path = {
+			leads_to_tech = fusion1961
+			research_cost_coeff = 1
+		}			
+		ai_will_do = {
+			factor = 10
+		}
+		
+		nuclear_production = 1
+		
+		categories = {
+			nuclear
+		}
+		on_research_complete = {
+			custom_effect_tooltip = wmd_fusion_1960_tt
+		}
+	}	
+	fusion1961 = {
+	
+		start_year = 1961
+		research_cost = 5
+		
+		folder = {
+			name = wmd_folder
+			position = { x = 4 y = 26 }
+		}
+		path = {
+			leads_to_tech = fusion1963
+			research_cost_coeff = 1
+		}			
+		ai_will_do = {
+			factor = 10
+		}
+		
+		nuclear_production = 1
+		
+		categories = {
+			nuclear
+		}
+		on_research_complete = {
+			custom_effect_tooltip = wmd_fusion_1961_tt
+		}
+	}	
+	fusion1963 = {
+	
+		start_year = 1963
+		research_cost = 5
+		
+		folder = {
+			name = wmd_folder
+			position = { x = 4 y = 28 }
+		}
+		path = {
+			leads_to_tech = fusion1964
+			research_cost_coeff = 1
+		}			
+		ai_will_do = {
+			factor = 10
+		}
+		
+		nuclear_production = 1
+		
+		categories = {
+			nuclear
+		}
+		on_research_complete = {
+			custom_effect_tooltip = wmd_fusion_1963_tt
+		}
+	}	
+	fusion1964 = {
+	
+		start_year = 1964
+		research_cost = 5
+		
+		folder = {
+			name = wmd_folder
+			position = { x = 4 y = 30 }
+		}
+		path = {
+			leads_to_tech = fusion1966
+			research_cost_coeff = 1
+		}			
+		ai_will_do = {
+			factor = 10
+		}
+		
+		nuclear_production = 1
+		
+		categories = {
+			nuclear
+		}
+		on_research_complete = {
+			custom_effect_tooltip = wmd_fusion_1964_tt
+		}
+	}	
+	fusion1966 = {
+	
+		start_year = 1966
+		research_cost = 5
+		
+		folder = {
+			name = wmd_folder
+			position = { x = 4 y = 32 }
+		}
+		path = {
+			leads_to_tech = fusion1983
+			research_cost_coeff = 1
+		}			
+		ai_will_do = {
+			factor = 10
+		}
+		
+		nuclear_production = 1
+		
+		categories = {
+			nuclear
+		}
+		on_research_complete = {
+			custom_effect_tooltip = wmd_fusion_1966_tt
+		}
+	}	
+	fusion1983 = {
+	
+		start_year = 1983
+		research_cost = 5
+		
+		folder = {
+			name = wmd_folder
+			position = { x = 4 y = 34 }
+		}
+				
+		ai_will_do = {
+			factor = 10
+		}
+		
+		nuclear_production = 1
+		
+		categories = {
+			nuclear
+		}
+		on_research_complete = {
+			custom_effect_tooltip = wmd_fusion_1983_tt
+		}
+	}	
+#SRBMS	
+	srbm1 = {
+
+		enable_equipments = {
+			srbm_equipment_1
+		}
+	
+		path = {
+			leads_to_tech = slbm1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = srbm2
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		start_year = 1947
+		folder = {
+			name = wmd_folder
+			position = { x = 0 y = 8 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+	
+	srbm2 = {
+	
+		enable_equipments = {
+			srbm_equipment_2
+		}
+
+		path = {
+			leads_to_tech = irbm1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = srbm3
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		start_year = 1955
+		folder = {
+			name = wmd_folder
+			position = { x = 0 y = 10 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+	
+	srbm3 = {
+
+		enable_equipments = {
+			srbm_equipment_3
+		}
+	
+		path = {
+			leads_to_tech = srbm4
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		start_year = 1958
+		folder = {
+			name = wmd_folder
+			position = { x = 0 y = 14 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+	
+	srbm4 = {
+
+		enable_equipments = {
+			srbm_equipment_4
+		}
+	
+		path = {
+			leads_to_tech = srbm5
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		start_year = 1959
+		folder = {
+			name = wmd_folder
+			position = { x = 0 y = 16 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+	
+	srbm5 = {
+
+		enable_equipments = {
+			srbm_equipment_5
+		}
+	
+		path = {
+			leads_to_tech = srbm6
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		start_year = 1961
+		folder = {
+			name = wmd_folder
+			position = { x = 0 y = 20 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+	
+	srbm6 = {
+
+		enable_equipments = {
+			srbm_equipment_6
+		}
+	
+		path = {
+			leads_to_tech = srbm7
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		start_year = 1964
+		folder = {
+			name = wmd_folder
+			position = { x = 0 y = 26 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+	
+	srbm7 = {
+
+		enable_equipments = {
+			srbm_equipment_7
+		}
+	
+		path = {
+			leads_to_tech = srbm8
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		start_year = 1967
+		folder = {
+			name = wmd_folder
+			position = { x = 0 y = 30 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+	
+	srbm8 = {
+
+		enable_equipments = {
+			srbm_equipment_8
+		}
+	
+		path = {
+			leads_to_tech = srbm9
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		start_year = 1972
+		folder = {
+			name = wmd_folder
+			position = { x = 0 y = 38 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+	
+	srbm9 = {
+
+		enable_equipments = {
+			srbm_equipment_9
+		}
+	
+		path = {
+			leads_to_tech = srbm10
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1976
+		folder = {
+			name = wmd_folder
+			position = { x = 0 y = 42 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+	
+	srbm10 = {
+
+		enable_equipments = {
+			srbm_equipment_10
+		}
+	
+		path = {
+			leads_to_tech = srbm11
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		start_year = 1982
+		folder = {
+			name = wmd_folder
+			position = { x = 0 y = 46 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+	
+	srbm11 = {
+
+		enable_equipments = {
+			srbm_equipment_11
+		}
+	
+		path = {
+			leads_to_tech = srbm12
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		start_year = 1985
+		folder = {
+			name = wmd_folder
+			position = { x = 0 y = 48 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+	
+	srbm12 = {
+
+		enable_equipments = {
+			srbm_equipment_12
+		}
+				
+		path = {
+			leads_to_tech = srbm13
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1988
+		folder = {
+			name = wmd_folder
+			position = { x = 0 y = 52 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+	
+	srbm13 = {
+
+		enable_equipments = {
+			srbm_equipment_13
+		}
+			
+		research_cost = 2
+		start_year = 1991
+		folder = {
+			name = wmd_folder
+			position = { x = 0 y = 56 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+	
+	slbm1 = {
+
+		enable_equipments = {
+			slbm_equipment_1
+		}
+		
+		path = {
+			leads_to_tech = slbm2
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1955
+		folder = {
+			name = wmd_folder
+			position = { x = -4 y = 10 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+	
+	slbm2 = {
+
+		enable_equipments = {
+			slbm_equipment_2
+		}
+		
+		path = {
+			leads_to_tech = slbm3
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1960
+		folder = {
+			name = wmd_folder
+			position = { x = -4 y = 18 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+	
+	slbm3 = {
+
+		enable_equipments = {
+			slbm_equipment_3
+		}
+		
+		path = {
+			leads_to_tech = slbm4
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1963
+		folder = {
+			name = wmd_folder
+			position = { x = -4 y = 24 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+	
+	slbm4 = {
+
+		enable_equipments = {
+			slbm_equipment_4
+		}
+	
+		path = {
+			leads_to_tech = slbm5
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1968
+		folder = {
+			name = wmd_folder
+			position = { x = -4 y = 32 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+	
+	slbm5 = {
+
+		enable_equipments = {
+			slbm_equipment_5
+		}
+	
+		path = {
+			leads_to_tech = slbm6
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		start_year = 1971
+		folder = {
+			name = wmd_folder
+			position = { x = -4 y = 36 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+	
+	slbm6 = {
+
+		enable_equipments = {
+			slbm_equipment_6
+		}
+		
+		path = {
+			leads_to_tech = slbm7
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1979
+		folder = {
+			name = wmd_folder
+			position = { x = -4 y = 44 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+	
+	slbm7 = {
+
+		enable_equipments = {
+			slbm_equipment_7
+		}
+		
+		path = {
+			leads_to_tech = slbm8
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1982
+		folder = {
+			name = wmd_folder
+			position = { x = -4 y = 46 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+	
+	slbm8 = {
+
+		enable_equipments = {
+			slbm_equipment_8
+		}
+		
+		path = {
+			leads_to_tech = slbm9
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1986
+		folder = {
+			name = wmd_folder
+			position = { x = -4 y = 50 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+	
+	slbm9 = {
+
+		enable_equipments = {
+			slbm_equipment_9
+		}
+		
+		research_cost = 2
+		start_year = 1990
+		folder = {
+			name = wmd_folder
+			position = { x = -4 y = 54 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+	
+	irbm1 = {
+
+		enable_equipments = {
+			irbm_equipment_1
+		}
+		
+		path = {
+			leads_to_tech = irbm2
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1956
+		folder = {
+			name = wmd_folder
+			position = { x = 4 y = 12 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+	
+	irbm2 = {
+
+		enable_equipments = {
+			irbm_equipment_2
+		}
+		
+		path = {
+			leads_to_tech = irbm3
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = icbm1
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1958
+		folder = {
+			name = wmd_folder
+			position = { x = 4 y = 14 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+	
+	irbm3 = {
+
+		enable_equipments = {
+			irbm_equipment_3
+		}
+		
+		path = {
+			leads_to_tech = irbm4
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1961
+		folder = {
+			name = wmd_folder
+			position = { x = 4 y = 20 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+	
+	irbm4 = {
+
+		enable_equipments = {
+			irbm_equipment_4
+		}
+	
+		path = {
+			leads_to_tech = irbm5
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1965
+		folder = {
+			name = wmd_folder
+			position = { x = 4 y = 28 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+	
+	irbm5 = {
+
+		enable_equipments = {
+			irbm_equipment_5
+		}
+	
+		path = {
+			leads_to_tech = irbm6
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		start_year = 1974
+		folder = {
+			name = wmd_folder
+			position = { x = 4 y = 40 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+	
+	irbm6 = {
+
+		enable_equipments = {
+			irbm_equipment_6
+		}
+		
+		research_cost = 2
+		start_year = 1985
+		folder = {
+			name = wmd_folder
+			position = { x = 4 y = 48 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+	
+	icbm1 = {
+
+#		enable_equipments = {
+#			icbm_equipment_1
+#		}
+		
+		path = {
+			leads_to_tech = icbm2
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		start_year = 1959
+		folder = {
+			name = wmd_folder
+			position = { x = 8 y = 16 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+	
+	icbm2 = {
+	
+#		enable_equipments = {
+#			icbm_equipment_2
+#		}
+		path = {
+			leads_to_tech = icbm3
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		start_year = 1960
+		folder = {
+			name = wmd_folder
+			position = { x = 8 y = 18 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+	
+	icbm3 = {
+
+#		enable_equipments = {
+#			icbm_equipment_3
+#		}
+	
+		path = {
+			leads_to_tech = icbm4
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		start_year = 1961
+		folder = {
+			name = wmd_folder
+			position = { x = 8 y = 20 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+	
+	icbm4 = {
+
+#		enable_equipments = {
+#			icbm_equipment_4
+#		}
+	
+		path = {
+			leads_to_tech = icbm5
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		start_year = 1962
+		folder = {
+			name = wmd_folder
+			position = { x = 8 y = 22 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+	
+	icbm5 = {
+
+#		enable_equipments = {
+#			icbm_equipment_5
+#		}
+	
+		path = {
+			leads_to_tech = icbm6
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		start_year = 1965
+		folder = {
+			name = wmd_folder
+			position = { x = 8 y = 28 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+	
+	icbm6 = {
+
+		enable_equipments = {
+			icbm_equipment_6
+		}
+	
+		path = {
+			leads_to_tech = icbm7
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		start_year = 1970
+		folder = {
+			name = wmd_folder
+			position = { x = 8 y = 34 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+	
+	icbm7 = {
+
+		enable_equipments = {
+			icbm_equipment_7
+		}
+	
+		path = {
+			leads_to_tech = icbm8
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		start_year = 1976
+		folder = {
+			name = wmd_folder
+			position = { x = 8 y = 42 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+	
+	icbm8 = {
+
+		enable_equipments = {
+			icbm_equipment_8
+		}
+	
+		path = {
+			leads_to_tech = icbm9
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		start_year = 1979
+		folder = {
+			name = wmd_folder
+			position = { x = 8 y = 44 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+	
+	icbm9 = {
+
+		enable_equipments = {
+			icbm_equipment_9
+		}
+	
+		path = {
+			leads_to_tech = icbm10
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1982
+		folder = {
+			name = wmd_folder
+			position = { x = 8 y = 46 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+	
+	icbm10 = {
+
+		enable_equipments = {
+			icbm_equipment_10
+		}
+	
+		path = {
+			leads_to_tech = icbm11
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		start_year = 1991
+		folder = {
+			name = wmd_folder
+			position = { x = 8 y = 56 }
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+}

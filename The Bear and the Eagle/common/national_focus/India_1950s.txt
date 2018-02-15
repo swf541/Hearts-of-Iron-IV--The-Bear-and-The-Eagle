@@ -1,0 +1,4628 @@
+focus_tree = {
+	id = India_1950s
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = RAJ
+		}
+	}
+	default = no
+	focus = {
+		id = RAJ_naval_effort
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		x = 34
+		y = 0
+			available_if_capitulated = yes
+			available = {
+					any_state = {
+							is_coastal = yes
+							is_controlled_by = ROOT
+						}
+				}
+			complete_tooltip = {
+					navy_experience = 25
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+							type = dockyard
+							level = 3
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					navy_experience = 25
+					if = {
+							limit = {
+									NOT = {
+											any_owned_state = {
+													dockyard > 0
+													free_building_slots = {
+															building = dockyard
+															size > 2
+															include_locked = yes
+														}
+												}
+										}
+									any_owned_state = {
+											is_coastal = yes
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											is_coastal = yes
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+							set_country_flag = naval_effort_built
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_country_flag = naval_effort_built
+										}
+									any_owned_state = {
+											dockyard > 0
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											dockyard > 0
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+							set_country_flag = naval_effort_built
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_country_flag = naval_effort_built
+										}
+									NOT = {
+											any_owned_state = {
+													free_building_slots = {
+															building = dockyard
+															size > 2
+															include_locked = yes
+														}
+												}
+										}
+								}
+							random_state = {
+									limit = {
+											controller = {
+													tag = ROOT
+												}
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_industrial_effort
+		icon = GFX_goal_generic_production
+		cost = 10.00
+		x = 4
+		y = 0
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = industrial_bonus
+							bonus = 0.5
+							uses = 1
+							category = industry
+						}
+				}
+			ai_will_do = {
+					factor = 3
+					modifier = {
+							factor = 0
+							date < 1939.1.1
+							OR = {
+									tag = GXC
+									tag = YUN
+									tag = SHX
+									tag = XSM
+									tag = BEL
+									tag = LUX
+									tag = HOL
+									tag = DEN
+									num_of_controlled_states < 2
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_non_aligned
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10.00
+		mutually_exclusive = {
+			focus = RAJ_soviet_alignment
+		}
+		x = 12
+		y = 0
+			completion_reward = {
+					add_political_power = 120
+					add_national_unity = 0.10
+				}
+
+	}
+	focus = {
+		id = RAJ_soviet_alignment
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		mutually_exclusive = {
+			focus = RAJ_non_aligned
+			focus = RAJ_american_alignment
+		}
+		x = 20
+		y = 0
+			completion_reward = {
+					RAJ = {
+							add_opinion_modifier = {
+									target = SOV
+									modifier = large_increase
+								}
+						}
+					SOV = {
+							add_opinion_modifier = {
+									target = RAJ
+									modifier = large_increase
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_american_alignment
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		mutually_exclusive = {
+			focus = RAJ_soviet_alignment
+		}
+		x = 28
+		y = 0
+			completion_reward = {
+					RAJ = {
+							add_opinion_modifier = {
+									target = USA
+									modifier = large_increase
+								}
+						}
+					USA = {
+							add_opinion_modifier = {
+									target = RAJ
+									modifier = large_increase
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_equipment_effort
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		x = 9
+		y = 2
+		prerequisite = {
+			focus = RAJ_army_effort
+		}
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 1
+							category = infantry_weapons
+							category = artillery
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_construction_effort
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_industrial_effort
+		}
+		x = 2
+		y = 1
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = construction_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = industrial_complex
+											size < 1
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_construction_effort_2
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_construction_effort
+		}
+		x = 2
+		y = 2
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = construction_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = industrial_complex
+											size < 1
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_infrastructure_effort
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_construction_effort_2
+		}
+		x = 2
+		y = 3
+			available_if_capitulated = yes
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = infrastructure_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = infrastructure
+											size < 1
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 0
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 0
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 1
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 1
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_construction_effort_3
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_infrastructure_effort
+		}
+		x = 2
+		y = 4
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = construction_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = industrial_complex
+											size < 2
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 1
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 1
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_production_effort
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_industrial_effort
+		}
+		x = 4
+		y = 1
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = production_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = arms_factory
+											size < 1
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_production_effort_2
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_production_effort
+		}
+		x = 4
+		y = 2
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = production_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = arms_factory
+											size < 1
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_production_effort_3
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_production_effort_2
+		}
+		x = 4
+		y = 3
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = production_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = arms_factory
+											size < 1
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_infrastructure_effort_2
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_infrastructure_effort
+		}
+		prerequisite = {
+			focus = RAJ_production_effort_3
+		}
+		x = 4
+		y = 4
+			available_if_capitulated = yes
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = infrastructure_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = infrastructure
+											size < 1
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 0
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 0
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 1
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 1
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_secret_weapons
+		icon = GFX_goal_generic_secret_weapon
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_infrastructure_effort_2
+		}
+		prerequisite = {
+			focus = RAJ_construction_effort_3
+		}
+		x = 1
+		y = 5
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = secret_bonus
+							bonus = 0.5
+							uses = 4
+							category = electronics
+							category = nuclear
+							category = rocketry
+						}
+				}
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0.25
+							always = yes
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_nuclear_effort
+		icon = GFX_focus_wonderweapons
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_infrastructure_effort_2
+		}
+		prerequisite = {
+			focus = RAJ_construction_effort_3
+		}
+		x = 3
+		y = 5
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = nuclear_bonus
+							ahead_reduction = 0.5
+							category = nuclear
+						}
+				}
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0.25
+							always = yes
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_extra_tech_slot
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_infrastructure_effort_2
+		}
+		prerequisite = {
+			focus = RAJ_construction_effort_3
+		}
+		x = 5
+		y = 5
+			available_if_capitulated = yes
+			completion_reward = {
+					add_research_slot = 1
+				}
+
+	}
+	focus = {
+		id = RAJ_mining_development
+		icon = GFX_goal_generic_construction2
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_industrial_effort
+		}
+		x = 6
+		y = 1
+			completion_reward = {
+					random_owned_state = {
+							add_resource = {
+									type = chromium
+									amount = 25
+								}
+						}
+					random_owned_state = {
+							add_resource = {
+									type = steel
+									amount = 25
+								}
+						}
+				}
+	}
+	focus = {
+		id = RAJ_steel_industry
+		icon = GFX_goal_generic_construction2
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_mining_development
+		}
+		x = 6
+		y = 2
+		completion_reward = {
+					random_owned_state = {
+							add_resource = {
+									type = steel
+									amount = 50
+								}
+						}
+						
+		}
+	}
+	focus = {
+		id = RAJ_oil_development
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_steel_industry
+		}
+		x = 6
+		y = 3
+			completion_reward = {
+					random_owned_state = {
+							add_resource = {
+									type = oil
+									amount = 50
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_chromium_development
+		icon = GFX_goal_generic_construction2
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_oil_development
+		}
+		x = 6
+		y = 4
+			completion_reward = {
+					random_owned_state = {
+							add_resource = {
+									type = chromium
+									amount = 50
+								}
+						}
+					}
+	}
+	focus = {
+		id = RAJ_equipment_effort_2
+		icon = GFX_goal_generic_army_artillery
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_equipment_effort
+		}
+		x = 9
+		y = 4
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = infantry_artillery_bonus
+							bonus = 0.5
+							uses = 1
+							category = infantry_weapons
+							category = artillery
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_equipment_effort_3
+		icon = GFX_goal_generic_army_artillery2
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_equipment_effort_2
+		}
+		x = 9
+		y = 6
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = infantry_artillery_bonus
+							ahead_reduction = 1
+							uses = 1
+							category = infantry_weapons
+							category = artillery
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_army_effort
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_non_aligned
+		}
+		x = 10
+		y = 1
+			available_if_capitulated = yes
+			completion_reward = {
+					army_experience = 5
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_doctrine_effort
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_army_effort
+		}
+		x = 10
+		y = 3
+			available_if_capitulated = yes
+			completion_reward = {
+					army_experience = 5
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_doctrine_effort_2
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_doctrine_effort
+		}
+		x = 10
+		y = 5
+			available_if_capitulated = yes
+			completion_reward = {
+					army_experience = 5
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_motorization_effort
+		icon = GFX_goal_generic_army_motorized
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_army_effort
+		}
+		x = 11
+		y = 2
+			bypass = {
+					has_tech = motorised_infantry
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = motorized_bonus
+							bonus = 0.75
+							technology = motorised_infantry
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_mechanization_effort
+		icon = GFX_goal_generic_build_tank
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_motorization_effort
+		}
+		x = 11
+		y = 4
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = motorized_bonus
+							ahead_reduction = 0.5
+							uses = 1
+							category = motorized_equipment
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_armor_effort
+		icon = GFX_goal_generic_army_tanks
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_mechanization_effort
+		}
+		x = 11
+		y = 6
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = armor_bonus
+							bonus = 0.5
+							uses = 2
+							category = armor
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_special_forces
+		icon = GFX_goal_generic_special_forces
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_equipment_effort_3
+		}
+		prerequisite = {
+			focus = RAJ_doctrine_effort_2
+		}
+		prerequisite = {
+			focus = RAJ_armor_effort
+		}
+		x = 10
+		y = 7
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = special_forces_bonus
+							bonus = 0.5
+							uses = 1
+							technology = paratroopers
+							technology = paratroopers2
+							technology = marines
+							technology = marines2
+							technology = tech_mountaineers
+							technology = tech_mountaineers2
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_aviation_effort
+		icon = GFX_goal_generic_build_airforce
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_non_aligned
+		}
+		x = 14
+		y = 1
+			available_if_capitulated = yes
+			complete_tooltip = {
+					air_experience = 25
+					if = {
+							limit = {
+									has_country_flag = aviation_effort_AB
+								}
+							add_building_construction = {
+									type = air_base
+									level = 2
+									instant_build = yes
+								}
+						}
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = air_doctrine
+						}
+				}
+			completion_reward = {
+					air_experience = 25
+					if = {
+							limit = {
+									capital_scope = {
+											NOT = {
+													free_building_slots = {
+															building = air_base
+															size > 1
+														}
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+									add_building_construction = {
+											type = air_base
+											level = 2
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_AB
+										}
+								}
+						}
+					if = {
+							limit = {
+									capital_scope = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+								}
+							capital_scope = {
+									add_building_construction = {
+											type = air_base
+											level = 2
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_AB
+										}
+								}
+						}
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = air_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_fighter_focus
+		icon = GFX_goal_generic_air_fighter
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_aviation_effort
+		}
+		mutually_exclusive = {
+			focus = RAJ_bomber_focus
+		}
+		x = 13
+		y = 2
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = fighter_bonus
+							bonus = 0.5
+							uses = 2
+							technology = early_fighter
+							technology = fighter1
+							technology = fighter2
+							technology = fighter3
+							technology = heavy_fighter1
+							technology = heavy_fighter2
+							technology = heavy_fighter3
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_bomber_focus
+		icon = GFX_goal_generic_air_bomber
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_aviation_effort
+		}
+		mutually_exclusive = {
+			focus = RAJ_fighter_focus
+		}
+		x = 15
+		y = 2
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = bomber_bonus
+							bonus = 0.5
+							uses = 2
+							technology = strategic_bomber1
+							technology = strategic_bomber2
+							technology = strategic_bomber3
+							category = tactical_bomber
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_aviation_effort_2
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_bomber_focus
+			focus = RAJ_fighter_focus
+		}
+		x = 14
+		y = 3
+			available_if_capitulated = yes
+			complete_tooltip = {
+					air_experience = 25
+					if = {
+							limit = {
+									has_country_flag = aviation_effort_2_AB
+								}
+							add_building_construction = {
+									type = air_base
+									level = 2
+									instant_build = yes
+								}
+						}
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = air_doctrine
+						}
+				}
+			completion_reward = {
+					air_experience = 25
+					if = {
+							limit = {
+									capital_scope = {
+											OR = {
+													NOT = {
+															is_controlled_by = ROOT
+														}
+													NOT = {
+															free_building_slots = {
+																	building = air_base
+																	size > 1
+																}
+														}
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+									add_building_construction = {
+											type = air_base
+											level = 2
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_2_AB
+										}
+								}
+						}
+					if = {
+							limit = {
+									capital_scope = {
+											is_controlled_by = ROOT
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+								}
+							capital_scope = {
+									add_building_construction = {
+											type = air_base
+											level = 2
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_2_AB
+										}
+								}
+						}
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = air_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_CAS_effort
+		icon = GFX_goal_generic_CAS
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_aviation_effort_2
+		}
+		x = 13
+		y = 4
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = CAS_bonus
+							bonus = 0.5
+							ahead_reduction = 1
+							uses = 1
+							category = cas_bomber
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_NAV_effort
+		icon = GFX_goal_generic_air_naval_bomber
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_aviation_effort_2
+		}
+		x = 15
+		y = 4
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = nav_bomber_bonus
+							bonus = 0.5
+							ahead_reduction = 1
+							uses = 1
+							category = naval_bomber
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_rocket_effort
+		icon = GFX_focus_rocketry
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_CAS_effort
+		}
+		prerequisite = {
+			focus = RAJ_NAV_effort
+		}
+		x = 14
+		y = 5
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = jet_rocket_bonus
+							ahead_reduction = 0.5
+							uses = 2
+							category = rocketry
+							category = jet_technology
+						}
+				}
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0.25
+							always = yes
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_soviet_advisors
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_soviet_alignment
+		}
+		x = 18
+		y = 1
+			completion_reward = {
+					add_ideas = soviet_advisors
+				}
+
+	}
+	focus = {
+		id = RAJ_surplus_soviet_equipment
+		icon = GFX_goal_continuous_reduce_training_time
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_soviet_advisors
+		}
+		x = 17
+		y = 2
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = assault_rifle_equipment_1
+							amount = 2000
+							producer = SOV
+						}
+					add_equipment_to_stockpile = {
+							type = main_battle_tanks_2
+							amount = 150
+							producer = SOV
+						}
+					add_equipment_to_stockpile = {
+							type = lt_equipment_1
+							amount = 300
+							producer = SOV
+						}
+					add_equipment_to_stockpile = {
+							type = ht_equipment_2
+							amount = 100
+							producer = SOV
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_soviet_armed_divisions
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_surplus_soviet_equipment
+		}
+		x = 17
+		y = 3
+			completion_reward = {
+					load_oob = RAJ_soviet_armed_division
+				}
+
+	}
+	focus = {
+		id = RAJ_soviet_trainer_pilots
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_soviet_alignment
+		}
+		x = 22
+		y = 1
+			completion_reward = {
+					air_experience = 25
+				}
+
+	}
+	focus = {
+		id = RAJ_personel_exchanges
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_soviet_trainer_pilots
+		}
+		prerequisite = {
+			focus = RAJ_soviet_advisors
+		}
+		x = 20
+		y = 2
+			completion_reward = {
+					add_manpower = 50000
+					army_experience = 5
+				}
+
+	}
+	focus = {
+		id = RAJ_soviet_army_doctrine
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_personel_exchanges
+		}
+		prerequisite = {
+			focus = RAJ_surplus_soviet_equipment
+		}
+		x = 19
+		y = 3
+			completion_reward = {
+					army_experience = 5
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.75
+							uses = 2
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_more_surplus_equipment
+		icon = GFX_focus_secret_rearmament
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_soviet_armed_divisions
+		}
+		prerequisite = {
+			focus = RAJ_soviet_army_doctrine
+		}
+		x = 17
+		y = 4
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = assault_rifle_equipment_1
+							amount = 2000
+							producer = SOV
+						}
+					add_equipment_to_stockpile = {
+							type = main_battle_tanks_2
+							amount = 150
+							producer = SOV
+						}
+					add_equipment_to_stockpile = {
+							type = lt_equipment_1
+							amount = 300
+							producer = SOV
+						}
+					add_equipment_to_stockpile = {
+							type = ht_equipment_2
+							amount = 100
+							producer = SOV
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_soviet_fighters
+		icon = GFX_goal_generic_air_fighter
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_soviet_trainer_pilots
+		}
+		x = 23
+		y = 2
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = CAS_equipment_4
+							amount = 200
+							producer = SOV
+						}
+					add_equipment_to_stockpile = {
+							type = jet_fighter_equipment_2
+							amount = 800
+							producer = SOV
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_soviet_bombers
+		icon = GFX_goal_generic_air_bomber
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_soviet_fighters
+		}
+		prerequisite = {
+			focus = RAJ_personel_exchanges
+		}
+		x = 21
+		y = 3
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = jet_strat_bomber_equipment_2
+							amount = 200
+							producer = SOV
+						}
+					add_equipment_to_stockpile = {
+							type = jet_tac_bomber_equipment_2
+							amount = 800
+							producer = SOV
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_soviet_air_doctrine
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_soviet_fighters
+		}
+		prerequisite = {
+			focus = RAJ_personel_exchanges
+		}
+		x = 23
+		y = 3
+			completion_reward = {
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.5
+							uses = 3
+							category = air_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_soviet_airfield_development
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_soviet_air_doctrine
+		}
+		prerequisite = {
+			focus = RAJ_soviet_bombers
+		}
+		x = 21
+		y = 4
+			completion_reward = {
+					air_experience = 25
+					if = {
+							limit = {
+									capital_scope = {
+											OR = {
+													NOT = {
+															is_controlled_by = ROOT
+														}
+													NOT = {
+															free_building_slots = {
+																	building = air_base
+																	size > 1
+																}
+														}
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+									add_building_construction = {
+											type = air_base
+											level = 5
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_2_AB
+										}
+								}
+						}
+					if = {
+							limit = {
+									capital_scope = {
+											is_controlled_by = ROOT
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+								}
+							capital_scope = {
+									add_building_construction = {
+											type = air_base
+											level = 5
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_2_AB
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_soviet_anti_air_defenses
+		icon = GFX_focus_generic_air_defense
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_soviet_air_doctrine
+		}
+		prerequisite = {
+			focus = RAJ_soviet_bombers
+		}
+		x = 23
+		y = 4
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = anti_air_building
+											size > 3
+										}
+								}
+							add_building_construction = {
+									type = anti_air_building
+									level = 2
+									instant_build = yes
+								}
+							ROOT = {
+									set_country_flag = aviation_effort_2_AB
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = anti_air_building
+											size > 3
+										}
+								}
+							add_building_construction = {
+									type = anti_air_building
+									level = 2
+									instant_build = yes
+								}
+							ROOT = {
+									set_country_flag = aviation_effort_2_AB
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_research_advances_air
+		icon = GFX_goal_continuous_air_production
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_soviet_airfield_development
+		}
+		prerequisite = {
+			focus = RAJ_soviet_anti_air_defenses
+		}
+		x = 22
+		y = 5
+			completion_reward = {
+					add_tech_bonus = {
+							name = TUR_fighter_modernisation
+							bonus = 0.5
+							uses = 2
+							category = light_fighter
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_soviet_scuds
+		icon = GFX_focus_rocketry
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_research_advances_air
+		}
+		x = 22
+		y = 6
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = cruisemissile_1
+							amount = 400
+							producer = SOV
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_american_advisors
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_american_alignment
+		}
+		x = 26
+		y = 1
+			completion_reward = {
+					add_ideas = american_advisors
+				}
+
+	}
+	focus = {
+		id = RAJ_american_surplus_equipment
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_american_advisors
+		}
+		x = 25
+		y = 2
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = assault_rifle_equipment_1
+							amount = 2000
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = main_battle_tanks_2
+							amount = 150
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = lt_equipment_1
+							amount = 300
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = ht_equipment_2
+							amount = 100
+							producer = USA
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_american_armed_divisions
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_american_surplus_equipment
+		}
+		x = 25
+		y = 3
+			completion_reward = {
+					load_oob = RAJ_american_armed_division
+				}
+
+	}
+	focus = {
+		id = RAJ_american_aircraft_training
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_american_alignment
+		}
+		x = 30
+		y = 1
+			completion_reward = {
+					air_experience = 25
+				}
+
+	}
+	focus = {
+		id = RAJ_american_weapon_sale
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_american_aircraft_training
+		}
+		prerequisite = {
+			focus = RAJ_american_advisors
+		}
+		x = 28
+		y = 2
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = assault_rifle_equipment_1
+							amount = 2000
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = main_battle_tanks_2
+							amount = 150
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = lt_equipment_1
+							amount = 300
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = ht_equipment_2
+							amount = 100
+							producer = USA
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_american_doctrine
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_american_weapon_sale
+		}
+		prerequisite = {
+			focus = RAJ_american_surplus_equipment
+		}
+		x = 27
+		y = 3
+			completion_reward = {
+					army_experience = 5
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.75
+							uses = 2
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_american_intelligence_aid
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_american_doctrine
+		}
+		prerequisite = {
+			focus = RAJ_american_armed_divisions
+		}
+		x = 26
+		y = 4
+			completion_reward = {
+					add_ideas = american_intel_sharing
+				}
+
+	}
+	focus = {
+		id = RAJ_american_tanks
+		icon = GFX_goal_generic_army_tanks
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_american_intelligence_aid
+		}
+		x = 25
+		y = 5
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = main_battle_tanks_2
+							amount = 150
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = lt_equipment_1
+							amount = 300
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = ht_equipment_2
+							amount = 100
+							producer = USA
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_american_weapon_sale_Copy
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_american_weapon_sale
+		}
+		x = 28
+		y = 4
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = assault_rifle_equipment_1
+							amount = 2000
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = main_battle_tanks_2
+							amount = 150
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = lt_equipment_1
+							amount = 300
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = ht_equipment_2
+							amount = 100
+							producer = USA
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_american_weapon_sale_Copy_Copy
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_american_weapon_sale_Copy
+		}
+		x = 28
+		y = 6
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = assault_rifle_equipment_1
+							amount = 2000
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = main_battle_tanks_2
+							amount = 150
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = lt_equipment_1
+							amount = 300
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = ht_equipment_2
+							amount = 100
+							producer = USA
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_american_fighters
+		icon = GFX_goal_generic_air_fighter
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_american_aircraft_training
+		}
+		x = 31
+		y = 2
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = CAS_equipment_4
+							amount = 200
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = jet_fighter_equipment_2
+							amount = 800
+							producer = USA
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_american_bombers
+		icon = GFX_goal_generic_air_bomber
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_american_weapon_sale
+		}
+		prerequisite = {
+			focus = RAJ_american_fighters
+		}
+		x = 29
+		y = 3
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = jet_strat_bomber_equipment_2
+							amount = 200
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = jet_tac_bomber_equipment_2
+							amount = 800
+							producer = USA
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_american_doctrine_air
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_american_fighters
+		}
+		x = 31
+		y = 3
+			completion_reward = {
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.5
+							uses = 3
+							category = air_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_american_anti_air_defences
+		icon = GFX_focus_generic_air_defense
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_american_bombers
+		}
+		prerequisite = {
+			focus = RAJ_american_doctrine_air
+		}
+		x = 30
+		y = 4
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = anti_air_building
+											size > 3
+										}
+								}
+							add_building_construction = {
+									type = anti_air_building
+									level = 2
+									instant_build = yes
+								}
+							ROOT = {
+									set_country_flag = aviation_effort_2_AB
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = anti_air_building
+											size > 3
+										}
+								}
+							add_building_construction = {
+									type = anti_air_building
+									level = 2
+									instant_build = yes
+								}
+							ROOT = {
+									set_country_flag = aviation_effort_2_AB
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_american_rocket_tech
+		icon = GFX_focus_rocketry
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_american_anti_air_defences
+		}
+		x = 29
+		y = 5
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = cruisemissile_1
+							amount = 400
+							producer = USA
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_american_airfield_development
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_american_anti_air_defences
+		}
+		x = 31
+		y = 5
+			completion_reward = {
+					air_experience = 25
+					if = {
+							limit = {
+									capital_scope = {
+											OR = {
+													NOT = {
+															is_controlled_by = ROOT
+														}
+													NOT = {
+															free_building_slots = {
+																	building = air_base
+																	size > 1
+																}
+														}
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+									add_building_construction = {
+											type = air_base
+											level = 5
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_2_AB
+										}
+								}
+						}
+					if = {
+							limit = {
+									capital_scope = {
+											is_controlled_by = ROOT
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+								}
+							capital_scope = {
+									add_building_construction = {
+											type = air_base
+											level = 5
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_2_AB
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_american_mic_contracts
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_american_rocket_tech
+		}
+		prerequisite = {
+			focus = RAJ_american_airfield_development
+		}
+		x = 30
+		y = 6
+			completion_reward = {
+					add_ideas = american_mic_advisors
+				}
+
+	}
+	focus = {
+		id = RAJ_reform_officer_corps
+		icon = GFX_goal_generic_special_forces
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_american_mic_contracts
+		}
+		x = 28
+		y = 7
+			completion_reward = {
+					army_experience = 50
+				}
+
+	}
+	focus = {
+		id = RAJ_flexible_navy
+		icon = GFX_goal_generic_build_navy
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_naval_effort
+		}
+		mutually_exclusive = {
+			focus = RAJ_large_navy
+		}
+		x = 33
+		y = 1
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0
+							all_owned_state = {
+									OR = {
+											is_coastal = no
+											dockyard < 1
+										}
+								}
+						}
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = sub_op_bonus
+							bonus = 0.5
+							uses = 2
+							technology = convoy_interdiction_ti
+							technology = unrestricted_submarine_warfare
+							technology = wolfpacks
+							technology = advanced_submarine_warfare
+							technology = combined_operations_raiding
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_large_navy
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_naval_effort
+		}
+		mutually_exclusive = {
+			focus = RAJ_flexible_navy
+		}
+		x = 35
+		y = 1
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0
+							all_owned_state = {
+									OR = {
+											is_coastal = no
+											dockyard < 1
+										}
+								}
+						}
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = fleet_in_being_bonus
+							bonus = 0.5
+							uses = 2
+							category = fleet_in_being_tree
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_submarine_effort
+		icon = GFX_goal_generic_navy_submarine
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_flexible_navy
+			focus = RAJ_large_navy
+		}
+		x = 33
+		y = 2
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0
+							all_owned_state = {
+									OR = {
+											is_coastal = no
+											dockyard < 1
+										}
+								}
+						}
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = ss_bonus
+							bonus = 0.5
+							ahead_reduction = 1
+							uses = 1
+							technology = early_submarine
+							technology = basic_submarine
+							technology = improved_submarine
+							technology = advanced_submarine
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_destroyer_effort
+		icon = GFX_goal_generic_wolf_pack
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_submarine_effort
+		}
+		x = 33
+		y = 3
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0
+							all_owned_state = {
+									OR = {
+											is_coastal = no
+											dockyard < 1
+										}
+								}
+						}
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = dd_bonus
+							bonus = 0.5
+							ahead_reduction = 1
+							uses = 1
+							technology = early_destroyer
+							technology = basic_destroyer
+							technology = improved_destroyer
+							technology = advanced_destroyer
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_reform_officer_corps_2
+		icon = GFX_goal_generic_special_forces
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_special_forces
+		}
+		prerequisite = {
+			focus = RAJ_rocket_effort
+		}
+		prerequisite = {
+			focus = RAJ_special_forces
+		}
+		prerequisite = {
+			focus = RAJ_rocket_effort
+		}
+		prerequisite = {
+			focus = RAJ_special_forces
+		}
+		prerequisite = {
+			focus = RAJ_rocket_effort
+		}
+		prerequisite = {
+			focus = RAJ_special_forces
+		}
+		prerequisite = {
+			focus = RAJ_rocket_effort
+		}
+		x = 12
+		y = 8
+			completion_reward = {
+				army_experience = 50
+					
+				}
+
+	}
+	focus = {
+		id = RAJ_cruiser_effort
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_large_navy
+			focus = RAJ_flexible_navy
+		}
+		x = 35
+		y = 2
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0
+							all_owned_state = {
+									OR = {
+											is_coastal = no
+											dockyard < 1
+										}
+								}
+						}
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = cr_bonus
+							bonus = 0.5
+							ahead_reduction = 1
+							uses = 1
+							technology = improved_light_cruiser
+							technology = advanced_light_cruiser
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_capital_ships_effort
+		icon = GFX_goal_generic_navy_battleship
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_cruiser_effort
+		}
+		x = 35
+		y = 3
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0
+							all_owned_state = {
+									OR = {
+											is_coastal = no
+											dockyard < 1
+										}
+								}
+						}
+				}
+			completion_reward = {
+					navy_experience = 25
+					add_tech_bonus = {
+							name = capital_ships_bonus
+							bonus = 0.5
+							ahead_reduction = 1
+							uses = 1
+							technology = battle_cruiser_1
+							technology = early_battleship
+							technology = battleship_2
+							technology = battleship_3
+							technology = early_carrier
+							technology = basic_carrier
+							technology = improved_carrier
+							technology = advanced_carrier
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_extra_tech_slot_2
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_extra_tech_slot
+		}
+		prerequisite = {
+			focus = RAJ_nuclear_effort
+		}
+		prerequisite = {
+			focus = RAJ_secret_weapons
+		}
+		x = 3
+		y = 6
+			available = {
+					num_of_factories > 50
+				}
+			cancel_if_invalid = no
+			continue_if_invalid = yes
+			available_if_capitulated = yes
+			completion_reward = {
+					add_research_slot = 1
+				}
+
+	}
+	focus = {
+		id = RAJ_soviet_motorization_aid
+		icon = GFX_goal_generic_army_motorized
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_soviet_army_doctrine
+		}
+		prerequisite = {
+			focus = RAJ_soviet_armed_divisions
+		}
+		x = 19
+		y = 4
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = motorized_equipment_2
+							amount = 500
+							producer = SOV
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_soviet_tanks
+		icon = GFX_goal_generic_army_tanks
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_soviet_motorization_aid
+		}
+		prerequisite = {
+			focus = RAJ_more_surplus_equipment
+		}
+		x = 17
+		y = 5
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = main_battle_tanks_2
+							amount = 150
+							producer = SOV
+						}
+					add_equipment_to_stockpile = {
+							type = lt_equipment_1
+							amount = 300
+							producer = SOV
+						}
+					add_equipment_to_stockpile = {
+							type = ht_equipment_2
+							amount = 100
+							producer = SOV
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_soviet_mechanized_equipment
+		icon = GFX_goal_generic_build_tank
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_more_surplus_equipment
+		}
+		prerequisite = {
+			focus = RAJ_soviet_motorization_aid
+		}
+		x = 19
+		y = 5
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = mechanized_equipment_3
+							amount = 500
+							producer = SOV
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_backwards_engineer_soviet_designs
+		icon = GFX_focus_secret_rearmament
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_soviet_mechanized_equipment
+		}
+		prerequisite = {
+			focus = RAJ_soviet_tanks
+		}
+		x = 18
+		y = 6
+			completion_reward = {
+					add_ideas = soviet_military_desgins
+				}
+
+	}
+	focus = {
+		id = RAJ_purge_officer_corps
+		icon = GFX_goal_generic_special_forces
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_backwards_engineer_soviet_designs
+		}
+		prerequisite = {
+			focus = RAJ_soviet_scuds
+		}
+		x = 20
+		y = 7
+			completion_reward = {
+					army_experience = 50
+				}
+
+	}
+	focus = {
+		id = RAJ_american_mechanized_equipment
+		icon = GFX_goal_generic_build_tank
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_american_intelligence_aid
+		}
+		x = 27
+		y = 5
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = mechanized_equipment_3
+							amount = 500
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = motorized_equipment_2
+							amount = 500
+							producer = SOV
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_american_license_agreements
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_american_mechanized_equipment
+		}
+		prerequisite = {
+			focus = RAJ_american_tanks
+		}
+		x = 26
+		y = 6
+			completion_reward = {
+					create_production_license = {
+							target = USA
+							cost_factor = 1.0
+							equipment = {
+									type = motorized_equipment_2
+									version = 0
+								}
+						}
+					create_production_license = {
+							target = USA
+							cost_factor = 1.0
+							equipment = {
+									type = mechanized_equipment_3
+									version = 0
+								}
+						}
+					create_production_license = {
+							target = USA
+							cost_factor = 1.0
+							equipment = {
+									type = main_battle_tanks_2
+									version = 0
+								}
+						}
+					create_production_license = {
+							target = USA
+							cost_factor = 1.0
+							equipment = {
+									type = lt_equipment_1
+									version = 0
+								}
+						}
+					create_production_license = {
+							target = USA
+							cost_factor = 1.0
+							equipment = {
+									type = ht_equipment_2
+									version = 0
+								}
+						}
+					create_production_license = {
+							target = USA
+							cost_factor = 1.0
+							equipment = {
+									type = assault_rifle_equipment_1
+									version = 0
+								}
+						}
+					create_production_license = {
+							target = USA
+							cost_factor = 1.0
+							equipment = {
+									type = CAS_equipment_4
+									version = 0
+								}
+						}
+					create_production_license = {
+							target = USA
+							cost_factor = 1.0
+							equipment = {
+									type = jet_fighter_equipment_2
+									version = 0
+								}
+						}
+					create_production_license = {
+							target = USA
+							cost_factor = 1.0
+							equipment = {
+									type = jet_tac_bomber_equipment_2
+									version = 0
+								}
+						}
+					create_production_license = {
+							target = USA
+							cost_factor = 1.0
+							equipment = {
+									type = jet_strat_bomber_equipment_2
+									version = 0
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = RAJ_draft_a_constitution
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		x = 39
+		y = 0
+		completion_reward = {
+			add_political_power = 300
+		}
+	}
+	focus = {
+		id = RAJ_declare_the_republic_of_india
+		icon = GFX_goal_anschluss
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_draft_a_constitution
+		}
+		x = 39
+		y = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			
+			set_autonomy = { target = RAJ autonomy_state = autonomy_free }
+			USA = { remove_from_faction = RAJ}
+			remove_ideas = NATO_member
+		}
+	}
+	focus = {
+		id = RAJ_education_reform
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_declare_the_republic_of_india
+		}
+		x = 39
+		y = 2
+			completion_reward = {
+					add_ideas = KOR_education_reform
+					add_research_slot = 1
+				}
+	}
+	focus = {
+		id = RAJ_lift_the_ban_on_rss
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_education_reform
+		}
+		mutually_exclusive = {
+			focus = RAJ_continue_the_ban_on_the_rss
+		}
+		x = 37
+		y = 3
+		completion_reward = {
+			remove_ideas = ban_on_rss
+		}
+	}
+	focus = {
+		id = RAJ_promote_hindutva
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_lift_the_ban_on_rss
+		}
+		mutually_exclusive = {
+			focus = RAJ_embrace_social_democracy
+		}
+		x = 35
+		y = 4
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+		completion_reward = {
+			add_timed_idea = { idea = promote_hindutva days = 300 }	
+		}
+	}
+	focus = {
+		id = RAJ_continue_the_ban_on_the_rss
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_education_reform
+		}
+		mutually_exclusive = {
+			focus = RAJ_lift_the_ban_on_rss
+		}
+		x = 41
+		y = 3
+		completion_reward = {
+			swap_ideas = { remove_idea = ban_on_rss add_idea = ban_on_rss_perm }	
+		}
+	}
+	focus = {
+		id = RAJ_embrace_social_democracy
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_lift_the_ban_on_rss
+			focus = RAJ_continue_the_ban_on_the_rss
+		}
+		mutually_exclusive = {
+			focus = RAJ_lift_the_ban_on_rss
+			focus = RAJ_promote_hindutva
+			focus = RAJ_lift_ban_on_communist_party_of_india
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 1
+			}
+		}
+		x = 39
+		y = 4
+		completion_reward = {
+			add_timed_idea = { idea = social_democracy_drift days = 300 }	
+		}
+	}
+	focus = {
+		id = RAJ_embrace_the_non_aligned_movement
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_embrace_social_democracy
+		}
+		x = 39
+		y = 5
+		completion_reward = {
+					YUG = {
+							add_opinion_modifier = {
+									target = RAJ
+									modifier = large_increase
+								}
+						}
+					RAJ = {
+							add_opinion_modifier = {
+									target = YUG
+									modifier = large_increase
+								}
+						}		
+		}
+	}
+	focus = {
+		id = RAJ_legislate_against_caste_discrimination
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_embrace_the_non_aligned_movement
+		}
+		x = 39
+		y = 6
+		completion_reward = {
+			remove_ideas = caste_discrimination
+		}
+	}
+	focus = {
+		id = RAJ_state_organization_act
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_legislate_against_caste_discrimination
+		}
+		x = 39
+		y = 7
+		completion_reward = {
+			add_national_unity = 0.15
+		}
+	}
+	focus = {
+		id = RAJ_lift_ban_on_communist_party_of_india
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_continue_the_ban_on_the_rss
+		}
+		mutually_exclusive = {
+			focus = RAJ_embrace_social_democracy
+		}
+		x = 43
+		y = 4
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+		completion_reward = {
+			add_timed_idea = { idea = communist_pressure days = 1300 }	
+		}
+	}
+	focus = {
+		id = RAJ_collectivization_of_the_peasents
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_lift_ban_on_communist_party_of_india
+		}
+		mutually_exclusive = {
+			focus = RAJ_embrace_social_democracy
+		}
+		x = 43
+		y = 5
+		completion_reward = {
+			add_ideas = KOR_revolution_in_the_rice_paddies_focus
+		}
+	}
+	focus = {
+		id = RAJ_first_five_year_plan
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_collectivization_of_the_peasents
+		}
+		x = 43
+		y = 6
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+	}
+	focus = {
+		id = RAJ_stick_with_the_communist_party_of_india
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_first_five_year_plan
+		}
+		mutually_exclusive = {
+			focus = RAJ_naxalite_revolution
+		}
+		x = 41
+		y = 7
+		completion_reward = {
+					RAJ = {
+							add_opinion_modifier = {
+									target = SOV
+									modifier = large_increase
+								}
+						}
+					SOV = {
+							add_opinion_modifier = {
+									target = RAJ
+									modifier = large_increase
+								}
+						}		
+		}
+	}
+	focus = {
+		id = RAJ_finish_unification
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_draft_a_constitution
+		}
+		x = 48
+		y = 1
+		completion_reward = {
+			add_political_power = 300
+		}
+	}
+	focus = {
+		id = RAJ_accension_of_manipur
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_finish_unification
+		}
+		x = 45
+		y = 2
+		completion_reward = {
+			annex_country = { target = MNI }	
+		}
+	}
+	focus = {
+		id = RAJ_accension_of_tripura
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_finish_unification
+		}
+		x = 48
+		y = 2
+		completion_reward = {
+			annex_country = { target = TRP }	
+		}
+	}
+	focus = {
+		id = RAJ_accension_of_sikkim
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_finish_unification
+		}
+		x = 51
+		y = 2
+		completion_reward = {
+			annex_country = { target = SKK }	
+		}
+	}
+	focus = {
+		id = RAJ_relations_with_nepal
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_accension_of_tripura
+		}
+		prerequisite = {
+			focus = RAJ_accension_of_manipur
+		}
+		prerequisite = {
+			focus = RAJ_accension_of_sikkim
+		}
+		x = 46
+		y = 3
+		completion_reward = {
+					RAJ = {
+							add_opinion_modifier = {
+									target = NEP
+									modifier = large_increase
+								}
+						}
+					NEP = {
+							add_opinion_modifier = {
+									target = RAJ
+									modifier = large_increase
+								}
+						}
+					}
+	}
+	focus = {
+		id = RAJ_influence_nepal
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_relations_with_nepal
+		}
+		mutually_exclusive = {
+			focus = RAJ_Accension_of_nepal
+		}
+		x = 45
+		y = 4
+		completion_reward = { 
+			puppet = NEP 
+		}
+	}
+	focus = {
+		id = RAJ_Accension_of_nepal
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_relations_with_nepal
+		}
+		mutually_exclusive = {
+			focus = RAJ_influence_nepal
+		}
+		x = 47
+		y = 4
+		completion_reward = {
+			annex_country = { target = NEP }	
+		}
+	}
+	focus = {
+		id = RAJ_relations_with_bhutan
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_accension_of_sikkim
+		}
+		prerequisite = {
+			focus = RAJ_accension_of_tripura
+		}
+		prerequisite = {
+			focus = RAJ_accension_of_manipur
+		}
+		x = 50
+		y = 3
+		completion_reward = {
+					RAJ = {
+							add_opinion_modifier = {
+									target = BHU
+									modifier = large_increase
+								}
+						}
+					BHU = {
+							add_opinion_modifier = {
+									target = RAJ
+									modifier = large_increase
+								}
+						}
+					}
+	}
+	focus = {
+		id = RAJ_demand_ceylon
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_relations_with_bhutan
+		}
+		prerequisite = {
+			focus = RAJ_relations_with_nepal
+		}
+		x = 47
+		y = 5
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = CEY }
+		}
+	}
+	focus = {
+		id = RAJ_the_tibet_situation
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_relations_with_nepal
+		}
+		prerequisite = {
+			focus = RAJ_relations_with_bhutan
+		}
+		x = 49
+		y = 5
+		completion_reward = {
+					RAJ = {
+							add_opinion_modifier = {
+									target = TIB
+									modifier = large_increase
+								}
+						}
+					TIB = {
+							add_opinion_modifier = {
+									target = RAJ
+									modifier = large_increase
+								}
+						}
+					}
+	}
+	focus = {
+		id = RAJ_safeguard_tibet
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_the_tibet_situation
+		}
+		mutually_exclusive = {
+			focus = RAJ_influence_nepal
+			focus = RAJ_Accension_of_tibet
+		}
+		x = 48
+		y = 6
+		completion_reward = {
+			puppet = TIB
+		}
+	}
+	focus = {
+		id = RAJ_protect_bhutan
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_relations_with_bhutan
+		}
+		mutually_exclusive = {
+			focus = RAJ_Accension_of_bhutan
+		}
+		x = 49
+		y = 4
+		completion_reward = {
+			puppet = BHU
+		}
+	}
+	focus = {
+		id = RAJ_Accension_of_tibet
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_the_tibet_situation
+		}
+		mutually_exclusive = {
+			focus = RAJ_protect_bhutan
+			focus = RAJ_safeguard_tibet
+		}
+		x = 50
+		y = 6
+		completion_reward = {
+			annex_country = { target = TIB }	
+		}
+	}
+	focus = {
+		id = RAJ_hinduism_not_socialism
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_embrace_the_RSS_paramilitary
+		}
+		x = 35
+		y = 6
+		completion_reward = {
+			add_ideas = anti_democracy_drift
+		}
+	}
+	focus = {
+		id = RAJ_religous_fanaticism
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_hinduism_not_socialism
+		}
+		x = 35
+		y = 7
+		completion_reward = {
+			add_ideas = militarism_focus
+		}
+	}
+	focus = {
+		id = RAJ_embrace_capitalism
+		icon = GFX_goal_continuous_non_factory_construct
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_religous_fanaticism
+		}
+		x = 35
+		y = 8
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+	}
+	focus = {
+		id = RAJ_naxalite_revolution
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_first_five_year_plan
+		}
+		mutually_exclusive = {
+			focus = RAJ_stick_with_the_communist_party_of_india
+		}
+		x = 45
+		y = 7
+		completion_reward = {
+			add_ideas = maoist_drift
+			set_politics = { ruling_party = maoism elections_allowed = no }	
+		}
+	}
+	focus = {
+		id = RAJ_join_the_warsaw_pact
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_stick_with_the_communist_party_of_india
+		}
+		x = 41
+		y = 8
+		completion_reward = {
+			SOV = { add_to_faction = RAJ }
+		}
+	}
+	focus = {
+		id = RAJ_Accension_of_bhutan
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_relations_with_bhutan
+		}
+		mutually_exclusive = {
+			focus = RAJ_protect_bhutan
+		}
+		x = 51
+		y = 4
+		completion_reward = {
+			annex_country = { target = BHU }	
+		}
+	}
+	focus = {
+		id = RAJ_join_NATO
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_western_education
+		}
+		mutually_exclusive = {
+			focus = RAJ_protect_bhutan
+		}
+		x = 35
+		y = 10
+			completion_reward = {
+					USA = { add_to_faction = ROOT }
+					add_ideas = nato_member
+				}
+	}
+	focus = {
+		id = RAJ_nationalize_heavy_industry
+		icon = GFX_goal_continuous_non_factory_construct
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_stick_with_the_communist_party_of_india
+			focus = RAJ_naxalite_revolution
+		}
+		prerequisite = {
+			focus = RAJ_state_organization_act
+		}
+		x = 39
+		y = 8
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+				
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+	}
+	focus = {
+		id = RAJ_land_reform
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_nationalize_heavy_industry
+		}
+		x = 39
+		y = 9
+		completion_reward = {
+			add_national_unity = 0.05
+			add_ideas = land_reform
+		}
+	}
+	focus = {
+		id = RAJ_rights_for_females
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_land_reform
+		}
+		x = 39
+		y = 10
+		completion_reward = {
+			add_national_unity = 0.10
+			add_political_power = 300
+		}
+	}
+	focus = {
+		id = RAJ_industrialization_and_infrastructure_effort
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_rights_for_females
+		}
+		x = 39
+		y = 11
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+	}
+	focus = {
+		id = RAJ_indian_institutes_of_technology
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_industrialization_and_infrastructure_effort
+		}
+		x = 39
+		y = 12
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = RAJ_western_education
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_embrace_capitalism
+		}
+		x = 35
+		y = 9
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = RAJ_american_development_aid
+		icon = GFX_goal_generic_production
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_join_NATO
+		}
+		x = 35
+		y = 11
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+	}
+	focus = {
+		id = RAJ_restore_old_borders
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_crush_naxalite_insurgents
+		}
+		prerequisite = {
+			focus = RAJ_crush_islamist_insurgents
+		}
+		x = 35
+		y = 13
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = PAK }
+			create_wargoal = { type = annex_everything target = BAN }
+			create_wargoal = { type = annex_everything target = CEY }
+		}
+	}
+	focus = {
+		id = RAJ_soviet_advisors_2
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_join_the_warsaw_pact
+		}
+		x = 41
+		y = 9
+		completion_reward = {
+			add_ideas = militarized_schools
+		}
+	}
+	focus = {
+		id = RAJ_crush_the_reactionaries
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_cultural_revolution
+			focus = RAJ_subvert_religion
+		}
+		x = 43
+		y = 11
+		completion_reward = {
+							start_civil_war = {
+									ideology = fascism
+									size = 0.30
+								}
+							}
+	}
+	focus = {
+		id = RAJ_subvert_religion
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_soviet_advisors_2
+		}
+		x = 41
+		y = 10
+		completion_reward = {
+			add_political_power = 300
+		}
+	}
+	focus = {
+		id = RAJ_cultural_revolution
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_chinese_advisors
+		}
+		x = 45
+		y = 10
+		completion_reward = {
+			add_ideas = PRC_cultural_revolution
+		}
+	}
+	focus = {
+		id = RAJ_peoples_liberation_army
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_naxalite_revolution
+		}
+		x = 45
+		y = 8
+		completion_reward = {
+			add_ideas = PRC_peoples_army
+		}
+	}
+	focus = {
+		id = RAJ_chinese_advisors
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_peoples_liberation_army
+		}
+		x = 45
+		y = 9
+		completion_reward = {
+			add_ideas = chinese_advisors
+		}
+	}
+	focus = {
+		id = RAJ_crush_islamist_insurgents
+		icon = GFX_focus_RAJ_indian_gurkhas
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_american_development_aid
+		}
+		x = 34
+		y = 12
+		completion_reward = {
+			start_civil_war = {
+				ruling_party = fascism
+				ideology = islamism
+				size = 0.3
+				states = { 441 }
+			}
+		}
+	}
+	focus = {
+		id = RAJ_crush_naxalite_insurgents
+		icon = GFX_focus_RAJ_indian_gurkhas
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_american_development_aid
+		}
+		x = 36
+		y = 12
+		completion_reward = {
+			start_civil_war = {
+				ruling_party = fascism
+				ideology = maoism
+				size = 0.45
+			}
+		}
+	}
+	focus = {
+		id = RAJ_embrace_the_RSS_paramilitary
+		icon = GFX_focus_RAJ_indian_gurkhas
+		cost = 10.00
+		prerequisite = {
+			focus = RAJ_promote_hindutva
+		}
+		x = 35
+		y = 5
+		completion_reward = {
+			add_ideas = military_youth_focus
+		}
+	}
+}

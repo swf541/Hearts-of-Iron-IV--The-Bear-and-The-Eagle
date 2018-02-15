@@ -1,0 +1,6552 @@
+focus_tree = {
+	id = japan_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 100
+			tag = JAP
+		}
+	}
+	default = no
+	focus = {
+		id = JAP_jsdf
+		icon = GFX_goal_generic_defence
+		cost = 10.00
+		x = 9
+		y = 0
+			completion_reward = {
+					army_experience = 10
+					remove_ideas = JAP_Article9_Restrictions
+				}
+
+	}
+	focus = {
+		id = JAP_army
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10.00
+		x = 4
+		y = 1
+		prerequisite = {
+			focus = JAP_jsdf
+		}
+			completion_reward = {
+					army_experience = 10
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = land_doctrine
+						}
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 2
+							category = infantry_weapons
+							category = artillery
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_airforce
+		icon = GFX_goal_generic_build_airforce
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_jsdf
+		}
+		x = 11
+		y = 1
+			complete_tooltip = {
+					air_experience = 25
+					if = {
+							limit = {
+									has_country_flag = aviation_effort_AB
+								}
+							add_building_construction = {
+									type = air_base
+									level = 2
+									instant_build = yes
+								}
+						}
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = air_doctrine
+						}
+				}
+			completion_reward = {
+					air_experience = 25
+					if = {
+							limit = {
+									capital_scope = {
+											NOT = {
+													free_building_slots = {
+															building = air_base
+															size > 1
+														}
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+									add_building_construction = {
+											type = air_base
+											level = 2
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_AB
+										}
+								}
+						}
+					if = {
+							limit = {
+									capital_scope = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+								}
+							capital_scope = {
+									add_building_construction = {
+											type = air_base
+											level = 2
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_AB
+										}
+								}
+						}
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = air_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_navy
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		x = 17
+		y = 1
+		prerequisite = {
+			focus = JAP_jsdf
+		}
+			available = {
+					any_state = {
+							is_coastal = yes
+							is_controlled_by = ROOT
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+							type = dockyard
+							level = 3
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					if = {
+							limit = {
+									NOT = {
+											any_owned_state = {
+													dockyard > 0
+													free_building_slots = {
+															building = dockyard
+															size > 2
+															include_locked = yes
+														}
+												}
+										}
+									any_owned_state = {
+											is_coastal = yes
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											is_coastal = yes
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+							set_country_flag = naval_effort_built
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_country_flag = naval_effort_built
+										}
+									any_owned_state = {
+											dockyard > 0
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											dockyard > 0
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+							set_country_flag = naval_effort_built
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_country_flag = naval_effort_built
+										}
+									NOT = {
+											any_owned_state = {
+													free_building_slots = {
+															building = dockyard
+															size > 2
+															include_locked = yes
+														}
+												}
+										}
+								}
+							random_state = {
+									limit = {
+											controller = {
+													tag = ROOT
+												}
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_firebombing
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10.00
+		x = 46
+		y = 0
+		available = {
+			JAP = {
+				num_of_factories > 50
+			}
+		}
+		completion_reward = {
+			remove_ideas = firebombing
+		}
+
+	}
+	focus = {
+		id = JAP_Divisions_in_SCAP
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		x = 29
+		y = 0
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 1
+			}
+		}
+		completion_reward = {
+			add_political_power = 300
+		}	
+	}
+	focus = {
+		id = JAP_jgsdf
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_jsdf
+		}
+		x = 0
+		y = 1
+			completion_reward = {
+					army_experience = 10
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = land_doctrine
+						}
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 2
+							category = infantry_weapons
+							category = artillery
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_fortify
+		icon = GFX_goal_generic_construct_military
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_jgsdf
+		}
+		x = 0
+		y = 2
+			completion_reward = {
+					add_ideas = deterrence
+					hidden_effect = {
+							530 = {
+									if = {
+											limit = {
+													is_controlled_by = ROOT
+												}
+											add_building_construction = {
+													type = bunker
+													level = 3
+													province = 7197
+													instant_build = yes
+												}
+										}
+								}
+							533 = {
+									if = {
+											limit = {
+													is_controlled_by = ROOT
+												}
+											add_building_construction = {
+													type = bunker
+													level = 3
+													province = 7169
+													instant_build = yes
+												}
+										}
+								}
+							535 = {
+									if = {
+											limit = {
+													is_controlled_by = ROOT
+												}
+											add_building_construction = {
+													type = bunker
+													level = 3
+													province = 10032
+													instant_build = yes
+												}
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_cfortify
+		icon = GFX_goal_generic_fortify_city
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_fortify
+		}
+		x = 0
+		y = 3
+			completion_reward = {
+					282 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_building_construction = {
+											type = bunker
+											level = 3
+											province = 1182
+											instant_build = yes
+										}
+								}
+						}
+					532 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_building_construction = {
+											type = bunker
+											level = 3
+											province = 10125
+											instant_build = yes
+										}
+								}
+						}
+					531 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_building_construction = {
+											type = bunker
+											level = 3
+											province = 7072
+											instant_build = yes
+										}
+								}
+						}
+					529 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_building_construction = {
+											type = bunker
+											level = 3
+											province = 1092
+											instant_build = yes
+										}
+								}
+						}
+					528 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_building_construction = {
+											type = bunker
+											level = 3
+											province = 9950
+											instant_build = yes
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_offensive
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_army
+		}
+		x = 3
+		y = 2
+			completion_reward = {
+					army_experience = 5
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_infantry
+		icon = GFX_goal_continuous_reduce_training_time
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_offensive
+		}
+
+		x = 2
+		y = 3
+			completion_reward = {
+					add_tech_bonus = {
+							name = infantry_artillery_bonus
+							bonus = 0.65
+							uses = 3
+							category = infantry_weapons
+							category = artillery
+						}
+				}
+
+	}
+	focus = {
+		id = jap_motorized
+		icon = GFX_goal_generic_army_motorized
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_infantry
+		}
+		x = 2
+		y = 4
+			completion_reward = {
+					add_tech_bonus = {
+							name = motorized_bonus
+							bonus = 0.75
+							technology = motorised_infantry
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_armor
+		icon = GFX_goal_continuous_armor_production
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_offensive
+		}
+
+		x = 4
+		y = 3
+			completion_reward = {
+					add_tech_bonus = {
+							name = armor_bonus
+							bonus = 0.5
+							uses = 2
+							category = armor
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_mechanized
+		icon = GFX_goal_generic_army_tanks
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_armor
+		}
+		x = 4
+		y = 4
+			completion_reward = {
+					add_tech_bonus = {
+							name = motorized_bonus
+							ahead_reduction = 0.5
+							uses = 1
+							category = motorized_equipment
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_jasdf
+		icon = GFX_goal_generic_build_airforce
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_jsdf
+		}
+
+		x = 7
+		y = 1
+			complete_tooltip = {
+					air_experience = 25
+					if = {
+							limit = {
+									has_country_flag = aviation_effort_AB
+								}
+							add_building_construction = {
+									type = air_base
+									level = 2
+									instant_build = yes
+								}
+						}
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = air_doctrine
+						}
+				}
+			completion_reward = {
+					air_experience = 25
+					if = {
+							limit = {
+									capital_scope = {
+											NOT = {
+													free_building_slots = {
+															building = air_base
+															size > 1
+														}
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+									add_building_construction = {
+											type = air_base
+											level = 2
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_AB
+										}
+								}
+						}
+					if = {
+							limit = {
+									capital_scope = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+								}
+							capital_scope = {
+									add_building_construction = {
+											type = air_base
+											level = 2
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_AB
+										}
+								}
+						}
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = air_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_interceptor
+		icon = GFX_goal_generic_air_fighter2
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_jasdf
+		}
+		x = 6
+		y = 2
+			completion_reward = {
+					add_tech_bonus = {
+							name = fighter_bonus
+							bonus = 0.5
+							uses = 2
+							technology = early_fighter
+							technology = fighter1
+							technology = fighter2
+							technology = fighter3
+							technology = heavy_fighter1
+							technology = heavy_fighter2
+							technology = heavy_fighter3
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_cas
+		icon = GFX_goal_generic_air_fighter
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_airforce
+		}
+
+		x = 8
+		y = 2
+			completion_reward = {
+					add_tech_bonus = {
+							name = CAS_bonus
+							bonus = 0.5
+							ahead_reduction = 1
+							uses = 1
+							category = cas_bomber
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_bomber
+		icon = GFX_goal_generic_air_bomber
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_airforce
+		}
+
+		x = 10
+		y = 2
+			completion_reward = {
+					add_tech_bonus = {
+							name = nav_bomber_bonus
+							bonus = 0.5
+							ahead_reduction = 1
+							uses = 1
+							category = naval_bomber
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_tactical
+		icon = GFX_goal_generic_air_fighter2
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_cas
+			focus = JAP_bomber
+		}
+		x = 9
+		y = 3
+			completion_reward = {
+					add_tech_bonus = {
+							name = bomber_bonus
+							bonus = 0.5
+							uses = 2
+							technology = strategic_bomber1
+							technology = strategic_bomber2
+							technology = strategic_bomber3
+							category = tactical_bomber
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_jmsdf
+		icon = GFX_goal_generic_build_navy
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_jsdf
+		}
+
+		x = 14
+		y = 1
+			complete_tooltip = {
+					navy_experience = 25
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+							type = dockyard
+							level = 3
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					navy_experience = 25
+					if = {
+							limit = {
+									NOT = {
+											any_owned_state = {
+													dockyard > 0
+													free_building_slots = {
+															building = dockyard
+															size > 2
+															include_locked = yes
+														}
+												}
+										}
+									any_owned_state = {
+											is_coastal = yes
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											is_coastal = yes
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+							set_country_flag = naval_effort_built
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_country_flag = naval_effort_built
+										}
+									any_owned_state = {
+											dockyard > 0
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											dockyard > 0
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+							set_country_flag = naval_effort_built
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_country_flag = naval_effort_built
+										}
+									NOT = {
+											any_owned_state = {
+													free_building_slots = {
+															building = dockyard
+															size > 2
+															include_locked = yes
+														}
+												}
+										}
+								}
+							random_state = {
+									limit = {
+											controller = {
+													tag = ROOT
+												}
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_destroyer
+		icon = GFX_goal_generic_wolf_pack
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_jmsdf
+		}
+		x = 13
+		y = 2
+			completion_reward = {
+					add_tech_bonus = {
+							name = dd_bonus
+							bonus = 0.5
+							ahead_reduction = 1
+							uses = 1
+							technology = early_destroyer
+							technology = basic_destroyer
+							technology = improved_destroyer
+							technology = advanced_destroyer
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_cruiser
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_jmsdf
+		}
+
+		x = 15
+		y = 2
+			completion_reward = {
+					add_tech_bonus = {
+							name = cr_bonus
+							bonus = 0.5
+							ahead_reduction = 1
+							uses = 1
+							technology = improved_light_cruiser
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_ndoctrine
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_navy
+		}
+		x = 17
+		y = 2
+			completion_reward = {
+					navy_experience = 25
+				}
+
+	}
+	focus = {
+		id = JAP_battleship
+		icon = GFX_goal_generic_navy_battleship
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_ndoctrine
+		}
+
+		x = 15
+		y = 3
+			completion_reward = {
+					add_tech_bonus = {
+							name = capital_ships_bonus
+							bonus = 0.5
+							ahead_reduction = 1
+							uses = 1
+							technology = battle_cruiser_2
+							technology = early_carrier
+							technology = basic_carrier
+							technology = improved_carrier
+							technology = advanced_carrier
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_carrier
+		icon = GFX_goal_generic_navy_carrier
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_ndoctrine
+		}
+
+		x = 17
+		y = 3
+			completion_reward = {
+					add_tech_bonus = {
+							name = cv_bonus
+							bonus = 0.5
+							uses = 1
+							technology = early_carrier
+							technology = basic_carrier
+							technology = improved_carrier
+							technology = advanced_carrier
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_rebuild_navyI
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_jsdf
+		}
+		x = 19
+		y = 1
+			available = {
+					any_state = {
+							is_coastal = yes
+							is_controlled_by = ROOT
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+							type = dockyard
+							level = 3
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					if = {
+							limit = {
+									NOT = {
+											any_owned_state = {
+													dockyard > 0
+													free_building_slots = {
+															building = dockyard
+															size > 2
+															include_locked = yes
+														}
+												}
+										}
+									any_owned_state = {
+											is_coastal = yes
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											is_coastal = yes
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+							
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_country_flag = naval_effort_built
+										}
+									any_owned_state = {
+											dockyard > 0
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											dockyard > 0
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+							
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_country_flag = naval_effort_built
+										}
+									NOT = {
+											any_owned_state = {
+													free_building_slots = {
+															building = dockyard
+															size > 2
+															include_locked = yes
+														}
+												}
+										}
+								}
+							random_state = {
+									limit = {
+											controller = {
+													tag = ROOT
+												}
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_rebuild_navyII
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_jsdf
+		}
+		x = 19
+		y = 2
+			available = {
+					any_state = {
+							is_coastal = yes
+							is_controlled_by = ROOT
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+							type = dockyard
+							level = 3
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					if = {
+							limit = {
+									NOT = {
+											any_owned_state = {
+													dockyard > 0
+													free_building_slots = {
+															building = dockyard
+															size > 2
+															include_locked = yes
+														}
+												}
+										}
+									any_owned_state = {
+											is_coastal = yes
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											is_coastal = yes
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+							set_country_flag = naval_effort_built
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_country_flag = naval_effort_built
+										}
+									any_owned_state = {
+											dockyard > 0
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											dockyard > 0
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+							set_country_flag = naval_effort_built
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_country_flag = naval_effort_built
+										}
+									NOT = {
+											any_owned_state = {
+													free_building_slots = {
+															building = dockyard
+															size > 2
+															include_locked = yes
+														}
+												}
+										}
+								}
+							random_state = {
+									limit = {
+											controller = {
+													tag = ROOT
+												}
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_rebuild_navyIII
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_jsdf
+		}
+		x = 19
+		y = 3
+			available = {
+					any_state = {
+							is_coastal = yes
+							is_controlled_by = ROOT
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+							type = dockyard
+							level = 3
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					if = {
+							limit = {
+									NOT = {
+											any_owned_state = {
+													dockyard > 0
+													free_building_slots = {
+															building = dockyard
+															size > 2
+															include_locked = yes
+														}
+												}
+										}
+									any_owned_state = {
+											is_coastal = yes
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											is_coastal = yes
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+							set_country_flag = naval_effort_built
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_country_flag = naval_effort_built
+										}
+									any_owned_state = {
+											dockyard > 0
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											dockyard > 0
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+							set_country_flag = naval_effort_built
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_country_flag = naval_effort_built
+										}
+									NOT = {
+											any_owned_state = {
+													free_building_slots = {
+															building = dockyard
+															size > 2
+															include_locked = yes
+														}
+												}
+										}
+								}
+							random_state = {
+									limit = {
+											controller = {
+													tag = ROOT
+												}
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_rebuild_navyIV
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_jsdf
+		}
+		x = 19
+		y = 4
+			available = {
+					any_state = {
+							is_coastal = yes
+							is_controlled_by = ROOT
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+							type = dockyard
+							level = 3
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					if = {
+							limit = {
+									NOT = {
+											any_owned_state = {
+													dockyard > 0
+													free_building_slots = {
+															building = dockyard
+															size > 2
+															include_locked = yes
+														}
+												}
+										}
+									any_owned_state = {
+											is_coastal = yes
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											is_coastal = yes
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+							set_country_flag = naval_effort_built
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_country_flag = naval_effort_built
+										}
+									any_owned_state = {
+											dockyard > 0
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											dockyard > 0
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+							set_country_flag = naval_effort_built
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_country_flag = naval_effort_built
+										}
+									NOT = {
+											any_owned_state = {
+													free_building_slots = {
+															building = dockyard
+															size > 2
+															include_locked = yes
+														}
+												}
+										}
+								}
+							random_state = {
+									limit = {
+											controller = {
+													tag = ROOT
+												}
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_rebuild_navyV
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_jsdf
+		}
+		x = 19
+		y = 5
+			available = {
+					any_state = {
+							is_coastal = yes
+							is_controlled_by = ROOT
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+							type = dockyard
+							level = 3
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					if = {
+							limit = {
+									NOT = {
+											any_owned_state = {
+													dockyard > 0
+													free_building_slots = {
+															building = dockyard
+															size > 2
+															include_locked = yes
+														}
+												}
+										}
+									any_owned_state = {
+											is_coastal = yes
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											is_coastal = yes
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+							set_country_flag = naval_effort_built
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_country_flag = naval_effort_built
+										}
+									any_owned_state = {
+											dockyard > 0
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											dockyard > 0
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+							set_country_flag = naval_effort_built
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_country_flag = naval_effort_built
+										}
+									NOT = {
+											any_owned_state = {
+													free_building_slots = {
+															building = dockyard
+															size > 2
+															include_locked = yes
+														}
+												}
+										}
+								}
+							random_state = {
+									limit = {
+											controller = {
+													tag = ROOT
+												}
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_Continue_Democratic_Reforms
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Divisions_in_SCAP
+		}
+		mutually_exclusive = {
+			focus = JAP_Embrace_Anti_Communist_Reforms
+		}
+		x = 22
+		y = 1
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 1
+			}
+		}
+		completion_reward = {
+			add_national_unity = 0.15
+			add_timed_idea = { idea = social_democracy_drift days = 365 }
+		}
+	}
+	focus = {
+		id = JAP_Spread_Christianity
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Continue_Democratic_Reforms
+		}
+		x = 22
+		y = 2
+		completion_reward = {
+			add_timed_idea = { idea = Spread_Christianity days = 1350 }	
+		}
+	}
+	focus = {
+		id = JAP_End_of_the_Zaibatsu
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Spread_Christianity
+		}
+		x = 21
+		y = 3
+		completion_reward = {
+			add_political_power = 300
+			add_national_unity = 0.15
+		}
+	}
+	focus = {
+		id = JAP_Protections_for_Labor_Unions
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Spread_Christianity
+		}
+
+		x = 23
+		y = 3
+		completion_reward = {
+			add_ideas = strengthened_labor_unions
+		}
+	}
+	focus = {
+		id = JAP_New_Deal_Economics
+		icon = GFX_goal_continuous_increase_nu
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_End_of_the_Zaibatsu
+		}
+		prerequisite = {
+			focus = JAP_Protections_for_Labor_Unions
+		}
+		x = 22
+		y = 4
+		completion_reward = {
+				random_owned_controlled_state = {
+					limit = {
+						industrial_complex > 0
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					
+				}
+				random_owned_controlled_state = {
+					limit = {
+						industrial_complex > 0
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					
+				}				
+		}
+	}
+	focus = {
+		id = JAP_General_Strike
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_New_Deal_Economics
+		}
+		x = 22
+		y = 5
+		completion_reward = {
+			add_timed_idea = { idea = FRA_factory_strikes days = 365 }	
+		}
+	}
+	focus = {
+		id = JAP_Ultrantionalist_Plot
+		icon = GFX_focus_generic_japanese_imperial_glory
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_General_Strike
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+		x = 8
+		y = 6
+		completion_reward = {
+			add_timed_idea = { idea = Ultrantionalist_Plot days = 750 }	
+		}
+	}
+	focus = {
+		id = JAP_Snap_Elections
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_General_Strike
+		}
+		mutually_exclusive = {
+			focus = JAP_Ultrantionalist_Plot
+		}
+		x = 22
+		y = 6
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 1
+			}
+		}
+		completion_reward = {
+			add_political_power = 300
+		}
+	}
+	focus = {
+		id = JAP_Workers_and_Farmers_Party
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Snap_Elections
+		}
+		mutually_exclusive = {
+			focus = JAP_Socialist_Victory
+			focus = JAP_Japanese_Communist_Victory
+			focus = JAP_Leftist_Socialist_Party_Victory
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+		x = 19
+		y = 7
+		completion_reward = {
+					add_ideas = maoist_drift
+					set_politics = {
+							ruling_party = maoism
+							elections_allowed = no
+					}
+			}
+	}
+	focus = {
+		id = JAP_Leftist_Socialist_Party_Victory
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Snap_Elections
+		}
+		mutually_exclusive = {
+			focus = JAP_Socialist_Victory
+			focus = JAP_Japanese_Communist_Victory
+			focus = JAP_Workers_and_Farmers_Party
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+		x = 25
+		y = 7
+		completion_reward = {
+					add_ideas = internationalism
+					set_politics = {
+							ruling_party = communism
+							elections_allowed = no
+					}
+			}
+	}
+	focus = {
+		id = JAP_Expel_America_from_Japan
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Workers_and_Farmers_Party
+			focus = JAP_Leftist_Socialist_Party_Victory
+		}
+		x = 22
+		y = 8
+			completion_reward = {
+					set_autonomy = {
+							target = JAP
+							autonomy_state = autonomy_free
+						}
+					}
+	}
+	focus = {
+		id = JAP_First_Five_Year_Plan
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Expel_America_from_Japan
+		}
+		x = 22
+		y = 9
+			completion_reward = {
+					every_owned_state = {
+							add_extra_state_shared_building_slots = 1
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+	}
+	focus = {
+		id = JAP_Agrarian_Reform
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_First_Five_Year_Plan
+		}
+		x = 22
+		y = 10
+		completion_reward = {
+			add_ideas = agrarian_reform
+		}	
+	}
+	focus = {
+		id = JAP_Second_Five_Year_Plan
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Agrarian_Reform
+		}
+		x = 22
+		y = 11
+			completion_reward = {
+					every_owned_state = {
+							add_extra_state_shared_building_slots = 1
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+	}
+	focus = {
+		id = JAP_Third_Five_Year_Plan_Copy
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Second_Five_Year_Plan
+		}
+		x = 22
+		y = 12
+			completion_reward = {
+					every_owned_state = {
+							add_extra_state_shared_building_slots = 1
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+	}
+	focus = {
+		id = JAP_Exile_the_Emperor
+		icon = GFX_goal_tfv_burn_the_royal_portraits
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Expel_America_from_Japan
+		}
+		prerequisite = {
+			focus = JAP_Leftist_Socialist_Party_Victory
+		}
+		x = 25
+		y = 9
+		completion_reward = {
+			news_event = royal.1
+		}
+	}
+	focus = {
+		id = JAP_Consolidate_Lefitst_Parties
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Exile_the_Emperor
+		}
+		x = 24
+		y = 10
+		completion_reward = {
+			add_popularity = { ideology = communism popularity = 0.25 }	
+			add_political_power = 300
+		}
+	}
+	focus = {
+		id = JAP_Soviet_Advisors
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Exile_the_Emperor
+		}
+		x = 26
+		y = 10
+		completion_reward = {
+			add_ideas = soviet_advisors
+		}
+	}
+	focus = {
+		id = JAP_The_Eastern_Curtain
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Soviet_Advisors
+		}
+		prerequisite = {
+			focus = JAP_Consolidate_Lefitst_Parties
+		}
+		x = 25
+		y = 11
+		completion_reward = {
+			add_ideas = iron_curtain
+		}
+	}
+	focus = {
+		id = JAP_Return_of_the_Kuril_Islands
+		icon = GFX_goal_generic_soviet_construction
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_The_Eastern_Curtain
+		}
+		x = 24
+		y = 12
+		completion_reward = {
+			transfer_state = 555
+			transfer_state = 537 
+		}
+	}
+	focus = {
+		id = JAP_Cultural_Reforms
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_The_Eastern_Curtain
+		}
+		x = 26
+		y = 12
+		completion_reward = {
+			add_ideas = city_economies
+			add_ideas = urban_planning
+		}
+	}
+	focus = {
+		id = JAP_Join_the_Warsaw_Pact
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Return_of_the_Kuril_Islands
+		}
+		prerequisite = {
+			focus = JAP_Cultural_Reforms
+		}
+		x = 25
+		y = 13
+		completion_reward = {
+			SOV = { add_to_faction = JAP }
+		}
+	}
+	focus = {
+		id = JAP_Japanese_Communist_Victory
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Snap_Elections
+		}
+		mutually_exclusive = {
+			focus = JAP_Socialist_Victory
+			focus = JAP_Leftist_Socialist_Party_Victory
+			focus = JAP_Workers_and_Farmers_Party
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+		x = 31
+		y = 7
+		completion_reward = {
+					add_political_power = 100
+					add_popularity = { ideology = Social_Democratic popularity = 0.50 }	
+					set_politics = {
+							ruling_party = Social_Democratic
+							elections_allowed = yes
+					}
+			}
+	}
+	focus = {
+		id = JAP_Emperor_Akhito
+		icon = GFX_focus_rom_abdicate
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Japanese_Communist_Victory
+		}
+		x = 31
+		y = 8
+		completion_reward = {
+			news_event = royal.3
+		}
+	}
+	focus = {
+		id = JAP_Preserve_Democratic_Process
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Emperor_Akhito
+		}
+		x = 30
+		y = 9
+		completion_reward = {
+			add_political_power = 500
+			add_national_unity = 0.25
+		}
+	}
+	focus = {
+		id = JAP_Peaceful_Revolution
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Emperor_Akhito
+		}
+		x = 32
+		y = 9
+		completion_reward = {
+			add_political_power = 300
+			add_ideas = peaceful_revolution
+		}
+	}
+	focus = {
+		id = JAP_Dissolution_of_the_Zaibatsu
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Peaceful_Revolution
+		}
+		prerequisite = {
+			focus = JAP_Preserve_Democratic_Process
+		}
+		x = 31
+		y = 10
+			completion_reward = {
+					every_owned_state = {
+							add_extra_state_shared_building_slots = 1
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+	}
+	focus = {
+		id = JAP_Socialist_Victory
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Snap_Elections
+		}
+		mutually_exclusive = {
+			focus = JAP_Japanese_Communist_Victory
+			focus = JAP_Leftist_Socialist_Party_Victory
+			focus = JAP_Workers_and_Farmers_Party
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 1
+			}
+		}
+		x = 34
+		y = 7
+		completion_reward = {
+					add_political_power = 100
+			}
+	}
+	focus = {
+		id = JAP_Embrace_Anti_Communist_Reforms
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Divisions_in_SCAP
+		}
+		mutually_exclusive = {
+			focus = JAP_Continue_Democratic_Reforms
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+		x = 36
+		y = 1
+		ai_will_do = {
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 10
+			}
+		}
+		completion_reward = {	
+			add_ideas = liberal_conservative_drifting
+		}	
+	}
+	focus = {
+		id = JAP_The_Reverse_Course
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Embrace_Anti_Communist_Reforms
+		}
+		x = 36
+		y = 2
+		completion_reward = {
+			add_political_power = 300
+		}
+	}
+	focus = {
+		id = JAP_Return_of_the_Zaibatsu
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_The_Reverse_Course
+		}
+		x = 35
+		y = 3
+		completion_reward = {
+			add_ideas = national_corporations
+		}
+	}
+	focus = {
+		id = JAP_The_Red_Purge
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_The_Reverse_Course
+		}
+
+		x = 37
+		y = 3
+		completion_reward = {
+			add_timed_idea = { idea = repression days = 365 }
+			add_popularity = { ideology = communism popularity = -0.1 }	
+			add_popularity = { ideology = conservative popularity = 0.1 }	
+		}	
+	}
+	focus = {
+		id = JAP_The_Dodge_Line
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Return_of_the_Zaibatsu
+		}
+		prerequisite = {
+			focus = JAP_The_Red_Purge
+		}
+		x = 36
+		y = 4
+		completion_reward = {
+			add_ideas = dodge_line
+		}
+	}
+	focus = {
+		id = JAP_End_Industrial_Subsidies
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_The_Dodge_Line
+		}
+		x = 36
+		y = 5
+		completion_reward = {
+			add_political_power = -300
+			add_national_unity = -0.15
+		}	
+	}
+	focus = {
+		id = JAP_Combat_Inflation
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_End_Industrial_Subsidies
+		}
+		x = 36
+		y = 6
+		ai_will_do = {
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 10
+			}
+		}
+		completion_reward = {
+			add_timed_idea = { idea = combat_inflation days = 1020 }
+		}
+	}
+	focus = {
+		id = JAP_reconstruction_begins
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_firebombing
+		}
+		x = 46
+		y = 1
+			completion_reward = {
+					add_ideas = idea_JAP_Reconstruction_begins
+				}
+
+	}
+	focus = {
+		id = JAP_economy
+		icon = GFX_goal_continuous_repairments
+		cost = 20.00
+		prerequisite = {
+			focus = JAP_reconstruction_begins
+		}
+		x = 46
+		y = 2
+			completion_reward = {
+					remove_ideas = unstable_economy
+					add_ideas = idea_JAP_Industrial
+				}
+
+	}
+	focus = {
+		id = JAP_mrestore
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_economy
+		}
+		x = 40
+		y = 3
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 1
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_private
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_economy
+		}
+		x = 44
+		y = 3
+			complete_tooltip = {
+					every_owned_state = {
+							limit = {
+									has_state_flag = JAP_industrial_effort_2IC
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 1
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+							set_state_flag = JAP_industrial_effort_2IC
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 1
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+							set_state_flag = JAP_industrial_effort_2IC
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_public
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_economy
+		}
+		x = 48
+		y = 3
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = infrastructure_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = infrastructure
+											size < 1
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_building_construction = {
+							type = infrastructure
+							level = 4
+							instant_build = yes
+						}
+					add_building_construction = {
+							type = infrastructure
+							level = 4
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 0
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 0
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 4
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 1
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 1
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 4
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_ione
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_public
+		}
+		x = 48
+		y = 4
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = infrastructure_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = infrastructure
+											size < 1
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_building_construction = {
+							type = infrastructure
+							level = 4
+							instant_build = yes
+						}
+					add_building_construction = {
+							type = infrastructure
+							level = 4
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 0
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 0
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 4
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 1
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 1
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 4
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_itwo
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_ione
+		}
+		x = 48
+		y = 5
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = infrastructure_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = infrastructure
+											size < 1
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_building_construction = {
+							type = infrastructure
+							level = 4
+							instant_build = yes
+						}
+					add_building_construction = {
+							type = infrastructure
+							level = 4
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 0
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 0
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 4
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 1
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 1
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 4
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_ithree
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_itwo
+		}
+		x = 48
+		y = 6
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = infrastructure_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = infrastructure
+											size < 1
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_building_construction = {
+							type = infrastructure
+							level = 4
+							instant_build = yes
+						}
+					add_building_construction = {
+							type = infrastructure
+							level = 4
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 0
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 0
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 4
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 1
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 1
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 4
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_highway
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_ithree
+		}
+		x = 47
+		y = 7
+			completion_reward = {
+					hidden_effect = {
+							536 = {
+									if = {
+											limit = {
+													is_controlled_by = ROOT
+												}
+											add_building_construction = {
+													type = infrastructure
+													level = 9
+													instant_build = yes
+												}
+										}
+								}
+							533 = {
+									if = {
+											limit = {
+													is_controlled_by = ROOT
+												}
+											add_building_construction = {
+													type = infrastructure
+													level = 9
+													instant_build = yes
+												}
+										}
+								}
+							534 = {
+									if = {
+											limit = {
+													is_controlled_by = ROOT
+												}
+											add_building_construction = {
+													type = infrastructure
+													level = 9
+													instant_build = yes
+												}
+										}
+								}
+							282 = {
+									if = {
+											limit = {
+													is_controlled_by = ROOT
+												}
+											add_building_construction = {
+													type = infrastructure
+													level = 9
+													instant_build = yes
+												}
+										}
+								}
+							532 = {
+									if = {
+											limit = {
+													is_controlled_by = ROOT
+												}
+											add_building_construction = {
+													type = infrastructure
+													level = 9
+													instant_build = yes
+												}
+										}
+								}
+							535 = {
+									if = {
+											limit = {
+													is_controlled_by = ROOT
+												}
+											add_building_construction = {
+													type = infrastructure
+													level = 9
+													instant_build = yes
+												}
+										}
+								}
+							531 = {
+									if = {
+											limit = {
+													is_controlled_by = ROOT
+												}
+											add_building_construction = {
+													type = infrastructure
+													level = 9
+													instant_build = yes
+												}
+										}
+								}
+							529 = {
+									if = {
+											limit = {
+													is_controlled_by = ROOT
+												}
+											add_building_construction = {
+													type = infrastructure
+													level = 9
+													instant_build = yes
+												}
+										}
+								}
+							530 = {
+									if = {
+											limit = {
+													is_controlled_by = ROOT
+												}
+											add_building_construction = {
+													type = infrastructure
+													level = 9
+													instant_build = yes
+												}
+										}
+								}
+							528 = {
+									if = {
+											limit = {
+													is_controlled_by = ROOT
+												}
+											add_building_construction = {
+													type = infrastructure
+													level = 9
+													instant_build = yes
+												}
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_face
+		icon = GFX_goal_generic_production
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_ithree
+		}
+		x = 49
+		y = 7
+			completion_reward = {
+					add_tech_bonus = {
+							name = concentrated_industry_tech_bonus
+							bonus = 0.5
+							uses = 1
+							category = construction_tech
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_cities
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_economy
+		}
+		x = 52
+		y = 3
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_tokyo
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_cities
+		}
+		x = 52
+		y = 4
+			completion_reward = {
+					282 = {
+							add_extra_state_shared_building_slots = 4
+							add_building_construction = {
+									type = industrial_complex
+									level = 4
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_nagoya
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_tokyo
+		}
+		x = 52
+		y = 5
+			completion_reward = {
+					532 = {
+							add_extra_state_shared_building_slots = 4
+							add_building_construction = {
+									type = industrial_complex
+									level = 3
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_osaka
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_nagoya
+		}
+		x = 52
+		y = 6
+			completion_reward = {
+					531 = {
+							add_extra_state_shared_building_slots = 4
+							add_building_construction = {
+									type = industrial_complex
+									level = 4
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_hiroshima
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 30.00
+		prerequisite = {
+			focus = JAP_osaka
+		}
+		x = 51
+		y = 7
+			completion_reward = {
+					529 = {
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_Embrace_The_New_Look_Policy
+		icon = GFX_focus_renounce_the_treaty_of_triannon
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Treaty_of_San_Francisco
+		}
+		mutually_exclusive = {
+			focus = JAP_Refrain_from_major_remilitirization
+		}
+		x = 36
+		y = 12
+			ai_will_do = {
+					factor = 50
+					modifier = {
+							factor = 0
+							is_historical_focus_on = yes
+						}
+				}
+			completion_reward = {
+					remove_ideas = JAP_Article9_Restrictions
+					add_ideas = military_expansion
+				}
+
+	}
+	focus = {
+		id = JAP_Refrain_from_major_remilitirization
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Treaty_of_San_Francisco
+		}
+		mutually_exclusive = {
+			focus = JAP_Embrace_The_New_Look_Policy
+		}
+		x = 34
+		y = 12
+			ai_will_do = {
+					factor = 50
+					modifier = {
+							factor = 100
+							is_historical_focus_on = yes
+						}
+				}
+			completion_reward = {
+					add_national_unity = 0.10
+				}
+
+	}
+	focus = {
+		id = JAP_bushido
+		icon = GFX_focus_generic_japanese_imperial_glory
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Repeal_Article_Nine
+		}
+		x = 8
+		y = 9
+			ai_will_do = {
+					factor = 33
+					modifier = {
+							factor = 0
+							is_historical_focus_on = yes
+						}
+				}
+			completion_reward = {
+					set_autonomy = {
+							target = JAP
+							autonomy_state = autonomy_free
+						}
+					add_popularity = {
+							ideology = fascism
+							popularity = 0.25
+						}
+						add_popularity = {
+							ideology = monarchism
+							popularity = 0.25
+						}
+					remove_ideas = us_intervention
+				}
+
+	}
+	focus = {
+		id = JAP_Revive_the_Empire
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_bushido
+		}
+		mutually_exclusive = {
+			focus = JAP_Salvation_of_Japan
+		}
+		x = 3
+		y = 10
+			completion_reward = {
+					set_politics = {
+							ruling_party = monarchism
+							elections_allowed = no
+						}
+					add_popularity = {
+							ideology = monarchism
+							popularity = 0.35
+						}
+					add_ideas = state_shintoism
+					add_ideas = ideological_fanaticism_focus
+					add_ideas = monarchist_influence
+				}
+
+	}
+	focus = {
+		id = JAP_korea
+		icon = GFX_goal_generic_military_deal
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Revive_the_Empire
+		}
+		x = 1
+		y = 11
+			completion_reward = {
+					country_event = japan.101
+				}
+
+	}
+	focus = {
+		id = JAP_pacific
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Revive_the_Empire
+		}
+		x = 5
+		y = 11
+			completion_reward = {
+					country_event = japan.100
+				}
+
+	}
+	focus = {
+		id = JAP_taiwan
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_pacific
+		}
+		x = 5
+		y = 12
+			completion_reward = {
+					if = {
+							limit = {
+									CHI = {
+											controls_state = 524
+										}
+								}
+							CHI = {
+									country_event = japan.102
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_Salvation_of_Japan
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_bushido
+		}
+		mutually_exclusive = {
+			focus = JAP_Revive_the_Empire
+		}
+		x = 13
+		y = 10
+			completion_reward = {
+					add_ideas = paramilitarism_focus
+					set_politics = {
+							ruling_party = fascism
+							elections_allowed = no
+						}
+					add_popularity = {
+							ideology = fascism
+							popularity = 0.20
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_subkor
+		icon = GFX_goal_generic_major_war
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Salvation_of_Japan
+		}
+		x = 11
+		y = 11
+			completion_reward = {
+					create_wargoal = {
+							type = puppet_wargoal_focus
+							target = KOR
+						}
+					create_wargoal = {
+							type = puppet_wargoal_focus
+							target = KPA
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_subchi
+		icon = GFX_goal_generic_major_war
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_subkor
+		}
+		x = 11
+		y = 12
+			completion_reward = {
+					create_wargoal = {
+							type = puppet_wargoal_focus
+							target = PRC
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_supremacy
+		icon = GFX_focus_SAF_support_ossewabrandwag
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_American_Backed_Rearmament
+		}
+		x = 15
+		y = 12
+			completion_reward = {
+					add_ideas = military_youth_focus
+				}
+
+	}
+	focus = {
+		id = JAP_militarize
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_bushido
+		}
+		x = 7
+		y = 10
+			completion_reward = {
+					add_ideas = militarism_focus
+				}
+
+	}
+	focus = {
+		id = JAP_alone
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Independent_Foriegn_Policy
+		}
+		mutually_exclusive = {
+			focus = JAP_nato
+		}
+		x = 39
+		y = 15
+			completion_reward = {
+					set_autonomy = {
+							target = JAP
+							autonomy_state = autonomy_free
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_union
+		icon = GFX_goal_generic_major_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_alone
+		}
+		x = 39
+		y = 16
+			completion_reward = {
+					create_faction = "The Asian Union"
+					KOR = {
+							country_event = japan.115
+						}
+					CHI = {
+							country_event = japan.116
+						}
+					VIE = {
+							country_event = japan.117
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_nato
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Independent_Foriegn_Policy
+		}
+		mutually_exclusive = {
+			focus = JAP_alone
+		}
+		x = 41
+		y = 15
+			completion_reward = {
+					USA = { add_to_faction = ROOT }
+					add_ideas = nato_member
+				}
+
+	}
+	focus = {
+		id = JAP_kuril
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Exports_to_America
+			focus = JAP_nato
+		}
+		x = 39
+		y = 17
+			completion_reward = {
+					SOV = {
+							country_event = japan.127
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_contain
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_kuril
+		}
+		x = 39
+		y = 18
+			completion_reward = {
+					add_popularity = {
+							ideology = communism
+							popularity = -0.25
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_gohot
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 50.00
+		prerequisite = {
+			focus = JAP_contain
+		}
+		x = 39
+		y = 19
+			completion_reward = {
+					USA = {
+							country_event = japan.131
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_mone
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_mrestore
+		}
+		x = 40
+		y = 4
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = arms_factory
+							level = 2
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 1
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+							set_state_flag = JAP_industrial_effort_2IC
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 1
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+							set_state_flag = JAP_industrial_effort_2IC
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_mtwo
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_mone
+		}
+		x = 40
+		y = 5
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = arms_factory
+							level = 2
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 1
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+							set_state_flag = JAP_industrial_effort_2IC
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_mthree
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_mtwo
+		}
+		x = 40
+		y = 6
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = arms_factory
+							level = 2
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 1
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+							set_state_flag = JAP_industrial_effort_2IC
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_mfour
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_mthree
+		}
+		x = 39
+		y = 7
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = arms_factory
+							level = 2
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 1
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+							set_state_flag = JAP_industrial_effort_2IC
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_nuclear
+		icon = GFX_focus_wonderweapons
+		cost = 40.00
+		prerequisite = {
+			focus = JAP_mthree
+		}
+		x = 41
+		y = 7
+			completion_reward = {
+					add_tech_bonus = {
+							name = secret_bonus
+							bonus = 0.5
+							uses = 1
+							category = nuclear
+							category = rocketry
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_cone
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_private
+		}
+		x = 44
+		y = 4
+			complete_tooltip = {
+					every_owned_state = {
+							limit = {
+									has_state_flag = JAP_industrial_effort_2IC
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 1
+											include_locked = yes
+										}
+								}
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_ctwo
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_cone
+		}
+		x = 44
+		y = 5
+			complete_tooltip = {
+					every_owned_state = {
+							limit = {
+									has_state_flag = JAP_industrial_effort_2IC
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 1
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+							set_state_flag = JAP_industrial_effort_2IC
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_cthree
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_ctwo
+		}
+		x = 44
+		y = 6
+			complete_tooltip = {
+					every_owned_state = {
+							limit = {
+									has_state_flag = JAP_industrial_effort_2IC
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 1
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+							set_state_flag = JAP_industrial_effort_2IC
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_cfour
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_cthree
+		}
+		x = 43
+		y = 7
+			complete_tooltip = {
+					every_owned_state = {
+							limit = {
+									has_state_flag = JAP_industrial_effort_2IC
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 1
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_conse
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_cthree
+		}
+		x = 45
+		y = 7
+			complete_tooltip = {
+					add_tech_bonus = {
+							name = construction_tech_bonus
+							bonus = 0.5
+							uses = 1
+							category = construction_tech
+						}
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = construction_tech_bonus
+							bonus = 0.5
+							uses = 1
+							category = construction_tech
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_nagasaki
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 30.00
+		prerequisite = {
+			focus = JAP_osaka
+		}
+		x = 53
+		y = 7
+			completion_reward = {
+					528 = {
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_manchuria
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_korea
+		}
+		x = 1
+		y = 12
+			completion_reward = {
+					PRC = {
+							country_event = japan.134
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_china
+		icon = GFX_goal_generic_military_sphere
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_manchuria
+		}
+		prerequisite = {
+			focus = JAP_taiwan
+		}
+		prerequisite = {
+			focus = JAP_Ally_With_Indonesia
+		}
+		x = 3
+		y = 13
+			completion_reward = {
+					create_wargoal = {
+							type = annex_everything
+							target = PRC
+						}
+					create_wargoal = {
+							type = annex_everything
+							target = CHI
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_axis
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_china
+		}
+		x = 3
+		y = 14
+			available = {
+					WGR = {
+							is_puppet = no
+							has_government = fascism
+						}
+					OR = {
+							DDR = {
+									is_puppet = no
+									has_government = fascism
+								}
+						}
+				}
+			completion_reward = {
+					if = {
+							limit = {
+									WGR = {
+											is_puppet = no
+											has_government = fascism
+										}
+								}
+							WGR = {
+									country_event = japan.136
+								}
+						}
+					if = {
+							limit = {
+									DDR = {
+											is_puppet = no
+											has_government = fascism
+										}
+								}
+							DDR = {
+									country_event = japan.137
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_new
+		icon = GFX_goal_continuous_increase_nu
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_mfour
+			focus = JAP_nuclear
+			focus = JAP_cfour
+			focus = JAP_conse
+			focus = JAP_highway
+			focus = JAP_face
+		}
+		prerequisite = {
+			focus = JAP_hiroshima
+		}
+		prerequisite = {
+			focus = JAP_nagasaki
+		}
+		x = 46
+		y = 8
+			completion_reward = {
+					add_ideas = a_new_japan
+				}
+
+	}
+	focus = {
+		id = JAP_increase_production
+		icon = GFX_goal_continuous_reduce_training_time
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_new
+		}
+		x = 46
+		y = 9
+			completion_reward = {
+					add_ideas = idea_JAP_Infantery_equipment
+					add_ideas = idea_JAP_Motorized_Equipment
+				}
+
+	}
+	focus = {
+		id = JAP_reworked_our_army
+		icon = GFX_goal_continuous_reduce_training_time
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_increase_production
+		}
+		x = 46
+		y = 10
+			completion_reward = {
+					add_ideas = idea_JAP_Reworked_our_Army
+				}
+
+	}
+	focus = {
+		id = JAP_MiningI
+		icon = GFX_goal_generic_construction2
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_reworked_our_army
+		}
+		x = 44
+		y = 11
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					if = {
+							limit = {
+									OR = {
+											owns_state = 282
+											any_country = {
+													is_puppet_of = JAP
+													owns_state = 282
+												}
+										}
+								}
+							add_resource = {
+									type = oil
+									amount = 15
+									state = 282
+								}
+							add_resource = {
+									type = steel
+									amount = 30
+									state = 282
+								}
+						}
+					if = {
+							limit = {
+									OR = {
+											owns_state = 532
+											any_country = {
+													is_puppet_of = JAP
+													owns_state = 532
+												}
+										}
+								}
+							add_resource = {
+									type = oil
+									amount = 15
+									state = 532
+								}
+							add_resource = {
+									type = steel
+									amount = 30
+									state = 532
+								}
+						}
+					if = {
+							limit = {
+									OR = {
+											owns_state = 531
+											any_country = {
+													is_puppet_of = JAP
+													owns_state = 531
+												}
+										}
+								}
+							add_resource = {
+									type = oil
+									amount = 15
+									state = 531
+								}
+							add_resource = {
+									type = steel
+									amount = 30
+									state = 531
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_MiningII
+		icon = GFX_goal_generic_construction2
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_reworked_our_army
+		}
+		x = 46
+		y = 11
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					if = {
+							limit = {
+									OR = {
+											owns_state = 529
+											any_country = {
+													is_puppet_of = JAP
+													owns_state = 529
+												}
+										}
+								}
+							add_resource = {
+									type = chromium
+									amount = 15
+									state = 529
+								}
+							add_resource = {
+									type = rubber
+									amount = 30
+									state = 529
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_MiningIII
+		icon = GFX_goal_generic_construction2
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_reworked_our_army
+		}
+		x = 48
+		y = 11
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					if = {
+							limit = {
+									OR = {
+											owns_state = 528
+											any_country = {
+													is_puppet_of = JAP
+													owns_state = 528
+												}
+										}
+								}
+							add_resource = {
+									type = tungsten
+									amount = 15
+									state = 528
+								}
+							add_resource = {
+									type = aluminium
+									amount = 30
+									state = 528
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_The_Korean_War
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Socialist_Victory
+			focus = JAP_Combat_Inflation
+			focus = JAP_Japanese_Communist_Victory
+		}
+		x = 35
+		y = 8
+		completion_reward = {
+			add_political_power = 300
+			add_national_unity = 0.15
+		}
+	}
+	focus = {
+		id = JAP_Procurement_Boom
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Korean_War_Economic_Boom
+		}
+		x = 35
+		y = 10
+			completion_reward = {
+					every_owned_state = {
+							add_extra_state_shared_building_slots = 1
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+	}
+	focus = {
+		id = JAP_Treaty_of_San_Francisco
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Procurement_Boom
+		}
+		x = 35
+		y = 11
+		ai_will_do = {
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 10
+			}
+		}
+		completion_reward = {
+			news_event = treaty_san_francisco.1
+		}
+	}
+	focus = {
+		id = JAP_Korean_War_Economic_Boom
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_The_Korean_War
+		}
+		x = 35
+		y = 9
+			completion_reward = {
+					every_owned_state = {
+							add_extra_state_shared_building_slots = 1
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+	}
+	focus = {
+		id = JAP_The_Yoshida_Doctrine
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_The_Yoshida_Years
+		}
+		mutually_exclusive = {
+			focus = JAP_Independent_Foriegn_Policy
+		}
+		x = 36
+		y = 14
+		completion_reward = {
+			add_ideas = Yoshida_Doctrine
+		}
+	}
+	focus = {
+		id = JAP_The_Yoshida_Years
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Refrain_from_major_remilitirization
+			focus = JAP_Embrace_The_New_Look_Policy
+		}
+		prerequisite = {
+			focus = JAP_Combat_Inflation
+		}
+		x = 37
+		y = 13
+		completion_reward = {
+			add_political_power = 300
+			add_national_unity = 0.15
+		}
+	}
+	focus = {
+		id = JAP_Independent_Foriegn_Policy
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_The_Yoshida_Years
+		}
+		mutually_exclusive = {
+			focus = JAP_The_Yoshida_Doctrine
+		}
+		x = 38
+		y = 14
+		completion_reward = {
+			add_national_unity = 0.05
+			add_political_power = 200
+		}
+	}
+	focus = {
+		id = JAP_American_Protection
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_The_Yoshida_Doctrine
+			focus = JAP_The_Katayama_Doctrine
+		}
+		mutually_exclusive = {
+			focus = JAP_alone
+		}
+		x = 34
+		y = 15
+			completion_reward = {
+					every_owned_state = {
+							add_extra_state_shared_building_slots = 1
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_American_Military_Sales
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_American_Protection
+		}
+		x = 34
+		y = 16
+			completion_reward = {
+					every_owned_state = {
+							add_extra_state_shared_building_slots = 1
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_Unrestrained_Economic_Growth
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_The_Yoshida_Doctrine
+			focus = JAP_Independent_Foriegn_Policy
+		}
+		x = 37
+		y = 15
+			completion_reward = {
+					every_owned_state = {
+							add_extra_state_shared_building_slots = 1
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+	}
+	focus = {
+		id = JAP_Reform_the_Imperial_Japanese_Army
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_militarize
+		}
+		x = 7
+		y = 11
+		completion_reward = {
+			add_ideas = imperial_army
+			add_ideas = militarized_schools
+			add_ideas = ideological_fanaticism_focus
+		}
+
+	}
+	focus = {
+		id = JAP_American_Backed_Rearmament
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Salvation_of_Japan
+		}
+		x = 15
+		y = 11
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+						}
+						random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_Reform_the_Imperial_Japanese_Navy
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Reform_the_Imperial_Japanese_Army
+		}
+		x = 7
+		y = 12
+			available = {
+					any_state = {
+							is_coastal = yes
+							is_controlled_by = ROOT
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+							type = dockyard
+							level = 3
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+				navy_experience = 50
+					if = {
+							limit = {
+									NOT = {
+											any_owned_state = {
+													dockyard > 0
+													free_building_slots = {
+															building = dockyard
+															size > 2
+															include_locked = yes
+														}
+												}
+										}
+									any_owned_state = {
+											is_coastal = yes
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											is_coastal = yes
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+							set_country_flag = naval_effort_built
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_country_flag = naval_effort_built
+										}
+									any_owned_state = {
+											dockyard > 0
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											dockyard > 0
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+							set_country_flag = naval_effort_built
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_country_flag = naval_effort_built
+										}
+									NOT = {
+											any_owned_state = {
+													free_building_slots = {
+															building = dockyard
+															size > 2
+															include_locked = yes
+														}
+												}
+										}
+								}
+							random_state = {
+									limit = {
+											controller = {
+													tag = ROOT
+												}
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_Ally_With_Indonesia
+		icon = GFX_goal_generic_military_deal
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_The_Greater_Co_Prosperity_Sphere
+		}
+		x = 3
+		y = 12
+		
+		available = {
+			INO = { 
+				OR = {
+					has_government = socialist
+					has_government = nationalism
+				}
+			}
+		}
+		bypass = {
+			NOT = {
+				INO = { 
+					OR = {
+						has_government = socialist
+						has_government = nationalism
+					}
+				}
+			}
+		}
+		
+		completion_reward = {
+			add_to_faction = INO
+		}
+
+	}
+	focus = {
+		id = JAP_The_Greater_Co_Prosperity_Sphere
+		icon = GFX_focus_generic_japanese_imperial_glory
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Revive_the_Empire
+		}
+		x = 3
+		y = 11
+		completion_reward = {
+			create_faction = "The Greater Asian Co-Prosperity Sphere"
+		}
+	}
+	focus = {
+		id = JAP_Takushiro_Hattori_Coup
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Ultrantionalist_Plot
+		}
+		x = 8
+		y = 7
+			completion_reward = {
+					set_politics = {
+							ruling_party = fascism
+							elections_allowed = no
+						}
+					add_popularity = {
+							ideology = fascism
+							popularity = 0.20
+						}
+				}
+	}
+	focus = {
+		id = JAP_Rehabilitation_of_Hideki_Tojo
+		icon = GFX_focus_generic_japanese_imperial_glory
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Salvation_of_Japan
+		}
+		x = 13
+		y = 11
+			completion_reward = {
+					add_ideas = paramilitarism_focus
+					add_popularity = {
+							ideology = fascism
+							popularity = 0.10
+						}
+					add_political_power = 300
+				}
+	}
+	focus = {
+		id = JAP_Repeal_Article_Nine
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Takushiro_Hattori_Coup
+		}
+		x = 8
+		y = 8
+			completion_reward = {
+				remove_ideas = article_nine 
+			}
+
+	}
+	focus = {
+		id = JAP_Emphasize_Traditional_Japanese_Culture
+		icon = GFX_focus_generic_japanese_imperial_glory
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_bushido
+		}
+		x = 9
+		y = 10
+		completion_reward = {
+			add_ideas = traditional_culture
+		}
+	}
+	focus = {
+		id = JAP_The_Old_Order
+		icon = GFX_focus_generic_japanese_imperial_glory
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Reform_the_Imperial_Japanese_Navy
+		}
+		prerequisite = {
+			focus = JAP_Zaibatsu_Dominance
+		}
+		x = 8
+		y = 13
+		completion_reward = {
+			add_ideas = The_Old_Order
+		}
+	}
+	focus = {
+		id = JAP_Subjugation_of_the_Labour_Unions
+		icon = GFX_goal_generic_military_deal
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Emphasize_Traditional_Japanese_Culture
+		}
+		x = 9
+		y = 11
+		completion_reward = {
+			remove_ideas = strengthened_labor_unions
+			add_ideas = Subjugation_of_the_Labour_Unions
+		}
+	}
+	focus = {
+		id = JAP_Zaibatsu_Dominance
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Subjugation_of_the_Labour_Unions
+		}
+		x = 9
+		y = 12
+		completion_reward = {
+			add_ideas = national_corporations
+		}
+	}
+	focus = {
+		id = JAP_Demand_Return_of_Stolen_Land
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Rehabilitation_of_Hideki_Tojo
+		}
+		x = 13
+		y = 12
+			completion_reward = {
+					SOV = {
+							country_event = japan.127
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_Save_Taiwan
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_subchi
+		}
+		prerequisite = {
+			focus = JAP_Demand_Return_of_Stolen_Land
+		}
+		prerequisite = {
+			focus = JAP_supremacy
+		}
+		x = 13
+		y = 13
+			completion_reward = {
+					if = {
+							limit = {
+									CHI = {
+											controls_state = 524
+										}
+								}
+							CHI = {
+									country_event = japan.102
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_Struggle_for_Indochina
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Save_Taiwan
+		}
+		x = 13
+		y = 14
+		available = {
+			VIE = { has_war_with = VIN }
+		}
+		completion_reward = {
+			add_to_war = { targeted_alliance = VIE enemy = VIN }	
+		}
+	}
+	focus = {
+		id = JAP_Exports_to_America
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Unrestrained_Economic_Growth
+		}
+		x = 37
+		y = 16
+			completion_reward = {
+					every_owned_state = {
+							add_extra_state_shared_building_slots = 1
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+	}
+	focus = {
+		id = JAP_The_Katayama_Doctrine
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_The_Katayama_Years
+		}
+		x = 32
+		y = 14
+		completion_reward = {
+			add_ideas = Katayama_Doctrine
+		}
+	}
+	focus = {
+		id = JAP_The_Katayama_Years
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Refrain_from_major_remilitirization
+		}
+		x = 31
+		y = 13
+		completion_reward = {
+			add_political_power = 300
+		}
+	}
+	focus = {
+		id = JAP_Government_Directed_Growth
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_The_Katayama_Years
+		}
+		x = 30
+		y = 14
+			completion_reward = {
+					every_owned_state = {
+							add_extra_state_shared_building_slots = 1
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+	}
+	focus = {
+		id = JAP_Strenghten_Labor_Unions
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_The_Katayama_Doctrine
+		}
+		prerequisite = {
+			focus = JAP_Government_Directed_Growth
+		}
+		x = 31
+		y = 15
+		completion_reward = {
+			remove_ideas = strengthened_labor_unions
+			add_ideas = strengthened_labor_unions_2
+		}
+	}
+	focus = {
+		id = JAP_Socialized_Health_Care
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Strenghten_Labor_Unions
+		}
+		x = 31
+		y = 16
+		completion_reward = {
+			add_ideas = socialized_health_care
+		}
+	}
+	focus = {
+		id = JAP_Develop_Heavy_Industy
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Exports_to_America
+			focus = JAP_Socialized_Health_Care
+			focus = JAP_Free_Neutral_Pacifistic
+		}
+		x = 34
+		y = 17
+			completion_reward = {
+					every_owned_state = {
+							add_extra_state_shared_building_slots = 1
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+	}
+	focus = {
+		id = JAP_Continued_Land_Reform
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Strenghten_Labor_Unions
+			focus = JAP_Free_Neutral_Pacifistic
+		}
+		x = 29
+		y = 16
+			completion_reward = {
+					add_ideas = land_reform
+				}
+
+	}
+	focus = {
+		id = JAP_Construct_Steel_Mills
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Develop_Heavy_Industy
+		}
+		x = 34
+		y = 18
+			completion_reward = {
+					every_owned_state = {
+							add_extra_state_shared_building_slots = 1
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_state = {
+							add_resource = {
+									type = steel
+									amount = 50
+								}
+						}
+					random_owned_state = {
+							add_resource = {
+									type = steel
+									amount = 50
+								}
+						}
+				}
+	}
+	focus = {
+		id = JAP_Industrial_Technology_Emphasis
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Construct_Steel_Mills
+		}
+		x = 33
+		y = 19
+			completion_reward = {
+					every_owned_state = {
+							add_extra_state_shared_building_slots = 1
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = JAP_Electronics_Industry
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Construct_Steel_Mills
+		}
+		x = 35
+		y = 19
+			completion_reward = {
+					every_owned_state = {
+							add_extra_state_shared_building_slots = 1
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+	}
+	focus = {
+		id = JAP_Japanese_Economic_Growth
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Industrial_Technology_Emphasis
+		}
+		prerequisite = {
+			focus = JAP_Electronics_Industry
+		}
+		x = 34
+		y = 20
+			completion_reward = {
+					every_owned_state = {
+							add_extra_state_shared_building_slots = 1
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+	}
+	focus = {
+		id = JAP_The_Japanese_Welfare_State
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Continued_Land_Reform
+		}
+		prerequisite = {
+			focus = JAP_Socialized_Health_Care
+		}
+		x = 30
+		y = 17
+			completion_reward = {
+					add_ideas = the_american_welfare_state
+				}
+
+	}
+	focus = {
+		id = JAP_Social_Welfare
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Dissolution_of_the_Zaibatsu
+			focus = JAP_The_Eastern_Curtain
+			focus = JAP_Cultural_Revolution
+			focus = JAP_Cultural_Revolution
+		}
+		x = 30
+		y = 11
+		completion_reward = {
+			add_ideas = the_american_welfare_state 
+		}
+	}
+	focus = {
+		id = JAP_Socialist_Health_Care
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Dissolution_of_the_Zaibatsu
+			focus = JAP_The_Eastern_Curtain
+			focus = JAP_Cultural_Revolution
+		}
+		x = 32
+		y = 11
+		completion_reward = {
+			add_ideas = socialized_health_care
+		}
+	}
+	focus = {
+		id = JAP_Free_Neutral_Pacifistic
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Socialist_Health_Care
+			focus = JAP_Social_Welfare
+		}
+		x = 31
+		y = 12
+		completion_reward = {
+			add_ideas = neutrality_idea
+			add_political_power = 300
+			add_national_unity = 0.15
+		}
+	}
+	focus = {
+		id = JAP_Chinese_Advisors
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_End_of_the_Royal_Family
+		}
+		x = 20
+		y = 10
+		completion_reward = {
+			add_ideas = chinese_advisors
+		}
+	}
+	focus = {
+		id = JAP_Cultural_Revolution
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Chinese_Advisors
+		}
+		prerequisite = {
+			focus = JAP_End_of_the_Capitalist_Class
+		}
+		x = 19
+		y = 11
+		completion_reward = {
+			add_ideas = PRC_cultural_revolution
+		}
+	}
+	focus = {
+		id = JAP_End_of_the_Royal_Family
+		icon = GFX_goal_tfv_burn_the_royal_portraits
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Expel_America_from_Japan
+		}
+		prerequisite = {
+			focus = JAP_Workers_and_Farmers_Party
+		}
+		x = 19
+		y = 9
+		completion_reward = {
+			country_event = royal.2
+		}
+	}
+	focus = {
+		id = JAP_End_of_the_Capitalist_Class
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_End_of_the_Royal_Family
+		}
+		x = 18
+		y = 10
+		completion_reward = {
+			add_manpower = -50000
+			add_national_unity = -0.15
+			add_political_power = 400
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = JAP_Great_Leap_Forward
+		icon = GFX_goal_generic_soviet_construction
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Cultural_Revolution
+		}
+		x = 20
+		y = 12
+		completion_reward = {
+			add_manpower = -50000
+			add_national_unity = -0.15
+			add_political_power = 400
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = JAP_Three_Worlds_Theory
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Peoples_War
+		}
+		prerequisite = {
+			focus = JAP_Great_Leap_Forward
+		}
+		x = 19
+		y = 13
+		completion_reward = {
+			create_faction = "Anti Imperialist League"	
+			add_ideas = ideological_fanaticism_focus
+		}
+	}
+	focus = {
+		id = JAP_Peoples_War
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_Cultural_Revolution
+		}
+		x = 18
+		y = 12
+			completion_reward = {
+					add_ideas = TUR_mobilization_of_the_masses
+				}
+	}
+}

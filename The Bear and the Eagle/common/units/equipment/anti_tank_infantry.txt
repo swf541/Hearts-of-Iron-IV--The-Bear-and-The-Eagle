@@ -1,0 +1,167 @@
+equipments = {
+
+	anti_tank_infantry_equipment = {
+		year = 1941
+
+		is_archetype = yes
+		picture = archetype_anti_tank_infantry_equipment		
+		type = { 
+			infantry #adding infantry type
+		}
+		group_by = archetype
+		
+		interface_category = interface_category_land
+
+		#Misc Abilities
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 0
+		hardness = 0
+		armor_value = 0
+
+		#Offensive Abilities
+		soft_attack = 5
+		hard_attack = 3
+		ap_attack = 30
+		air_attack = 0
+
+		#Space taken in convoy
+		lend_lease_cost = 3
+				
+		build_cost_ic = 0.06
+		resources = {
+			tungsten = 2
+			steel = 2
+		}
+	}
+
+	anti_tank_infantry_equipment_1 = {
+		year = 1941
+
+		archetype = anti_tank_infantry_equipment
+		priority = 90
+		visual_level = 0
+	}
+		
+	anti_tank_infantry_equipment_2 = {
+		year = 1950
+
+		archetype = anti_tank_infantry_equipment
+		parent = anti_tank_infantry_equipment_1
+		priority = 90
+		visual_level = 2
+		
+		hard_attack = 7
+		ap_attack = 35
+		
+		build_cost_ic = 0.06
+		resources = {
+			tungsten = 2
+			steel = 3
+		}
+	}
+	anti_tank_infantry_equipment_3 = {
+		year = 1960
+
+		archetype = anti_tank_infantry_equipment
+		parent = anti_tank_infantry_equipment_2
+		priority = 90
+		visual_level = 2
+		
+		hard_attack = 9
+		ap_attack = 38
+		
+		build_cost_ic = 0.07
+		resources = {
+			tungsten = 2
+			steel = 3
+		}
+	}
+	anti_tank_infantry_equipment_4 = {
+		year = 1970
+
+		archetype = anti_tank_infantry_equipment
+		parent = anti_tank_infantry_equipment_3
+		priority = 90
+		visual_level = 2
+		
+		hard_attack = 11
+		ap_attack = 40
+		
+		build_cost_ic = 0.07
+		resources = {
+			tungsten = 2
+			steel = 3
+		}
+	}
+	anti_tank_infantry_equipment_5 = {
+		year = 1975
+
+		archetype = anti_tank_infantry_equipment
+		parent = anti_tank_infantry_equipment_4
+		priority = 90
+		visual_level = 2
+		
+		hard_attack = 13
+		ap_attack = 44
+		
+		build_cost_ic = 0.08
+		resources = {
+			tungsten = 2
+			steel = 3
+		}
+	}
+	anti_tank_infantry_equipment_6 = {
+		year = 1985
+
+		archetype = anti_tank_infantry_equipment
+		parent = anti_tank_infantry_equipment_5
+		priority = 90
+		visual_level = 2
+		
+		hard_attack = 15
+		ap_attack = 47
+		
+		build_cost_ic = 0.08
+		resources = {
+			tungsten = 2
+			steel = 3
+		}
+	}
+	anti_tank_infantry_equipment_7 = {
+		year = 1989
+
+		archetype = anti_tank_infantry_equipment
+		parent = anti_tank_infantry_equipment_6
+		priority = 90
+		visual_level = 2
+		
+		hard_attack = 16
+		ap_attack = 49
+		
+		build_cost_ic = 0.09
+		resources = {
+			tungsten = 2
+			steel = 3
+		}
+	}
+	anti_tank_infantry_equipment_8 = {
+		year = 1991
+
+		archetype = anti_tank_infantry_equipment
+		parent = anti_tank_infantry_equipment_7
+		priority = 90
+		visual_level = 2
+		
+		hard_attack = 17
+		ap_attack = 51
+		
+		build_cost_ic = 0.09
+		resources = {
+			tungsten = 2
+			steel = 3
+		}
+	}
+}

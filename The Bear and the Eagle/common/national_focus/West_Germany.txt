@@ -1,0 +1,3357 @@
+focus_tree = {
+	id = West_Germany
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = WGR
+		}
+	}
+	default = no
+	focus = {
+		id = WGR_Political_Sovereignty
+		icon = GFX_goal_anschluss
+		cost = 20.00
+		x = 12
+		y = 0
+			completion_reward = {
+					add_national_unity = 0.1
+					remove_ideas = Occupation
+					add_timed_idea = {
+							idea = Newfound_Sovereignty
+							days = 350
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Founding_the_Bundeswhr
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 20.00
+		x = 28
+		y = 0
+			available = {
+					date > 1950.06.01
+				}
+			completion_reward = {
+					remove_ideas = NATO_Military_Restrictions
+					add_timed_idea = {
+							idea = Founding_the_Bundeswehr
+							days = 728
+						}
+				}
+			ai_will_do = {
+					factor = 5
+				}
+
+	}
+	focus = {
+		id = WGR_Accept_the_Marshall_Plan
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 5.00
+		x = 35
+		y = 0
+			completion_reward = {
+					USA = {
+							add_opinion_modifier = {
+									target = ROOT
+									modifier = WGR_Marshall_Plan_opinion
+								}
+						}
+					ROOT = {
+							add_opinion_modifier = {
+									target = USA
+									modifier = WGR_Marshall_Plan_opinion
+								}
+						}
+					51 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_extra_state_shared_building_slots = 2
+									add_building_construction = {
+											type = industrial_complex
+											level = 2
+											instant_build = yes
+										}
+								}
+						}
+					42 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_extra_state_shared_building_slots = 1
+									add_building_construction = {
+											type = industrial_complex
+											level = 1
+											instant_build = yes
+										}
+								}
+						}
+				}
+			ai_will_do = {
+					factor = 2
+				}
+
+	}
+	focus = {
+		id = WGR_Formation_of_the_Luftwaffe
+		icon = GFX_goal_generic_air_production
+		cost = 10.00
+		x = 42
+		y = 0
+			completion_reward = {
+					air_experience = 25
+					add_ideas = Starfighter_Crisis
+					add_political_power = 150
+				}
+
+	}
+	focus = {
+		id = WGR_Disband_the_German_Mine_Sweeping_Administration
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10.00
+		x = 49
+		y = 0
+			completion_reward = {
+					add_ideas = Disorganized_Navy
+				}
+
+	}
+	focus = {
+		id = WGR_True_Democracy
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Political_Sovereignty
+		}
+		mutually_exclusive = {
+			focus = WGR_Ridding_the_Fascists
+		}
+		x = 10
+		y = 1
+			completion_reward = {
+					add_popularity = {
+							ideology = conservative
+							popularity = 0.05
+						}
+					add_popularity = {
+							ideology = socialist
+							popularity = 0.05
+						}
+					add_popularity = {
+							ideology = centrist
+							popularity = 0.05
+						}
+					every_other_country = {
+							limit = {
+									is_in_faction_with = ENG
+								}
+							add_opinion_modifier = {
+									target = WGR
+									modifier = WGR_True_Democracy_opinion
+								}
+						}
+					add_timed_idea = {
+							idea = True_Democracy_Idea
+							days = 728
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Ridding_the_Fascists
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Political_Sovereignty
+		}
+		mutually_exclusive = {
+			focus = WGR_True_Democracy
+		}
+		x = 12
+		y = 1
+			completion_reward = {
+					every_other_country = {
+							limit = {
+									is_in_faction_with = ENG
+								}
+							add_opinion_modifier = {
+									target = ROOT
+									modifier = WGR_Ridding_the_Fascists_Opinion
+								}
+						}
+					every_other_country = {
+							limit = {
+									is_in_faction_with = SOV
+								}
+							add_opinion_modifier = {
+									target = ROOT
+									modifier = WGR_Ridding_the_Fascists_Opinion
+								}
+						}
+					add_popularity = {
+							ideology = fascism
+							popularity = -0.25
+						}
+				}
+			ai_will_do = {
+					factor = 0
+				}
+
+	}
+	focus = {
+		id = WGR_Ban_the_Communist
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Political_Sovereignty
+		}
+		x = 14
+		y = 1
+			completion_reward = {
+					every_other_country = {
+							limit = {
+									is_in_faction_with = ENG
+								}
+							add_opinion_modifier = {
+									target = ROOT
+									modifier = WGR_Side_with_democracy_opinion
+								}
+						}
+					every_other_country = {
+							limit = {
+									is_in_faction_with = SOV
+								}
+							add_opinion_modifier = {
+									target = ROOT
+									modifier = WGR_Side_with_democracy_east_opinion
+								}
+						}
+					add_popularity = {
+							ideology = communism
+							popularity = -0.25
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Sign_the_Pleven_Plan
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_True_Democracy
+			focus = WGR_Ridding_the_Fascists
+			focus = WGR_Ban_the_Communist
+		}
+		bypass {
+			FRA = { has_completed_focus = FRA_pleven_plan }
+		}
+		x = 8
+		y = 2
+		complete_tooltip = {
+			BEL = {
+				add_ideas = Pleven_Plan
+			}
+			FRA = {
+				add_ideas = Pleven_Plan
+			}
+			LUX = {
+				add_ideas = Pleven_Plan
+			}
+			HOL = {
+				add_ideas = Pleven_Plan
+			}
+			ITA = {
+				add_ideas = Pleven_Plan
+			}
+			add_ideas = Pleven_Plan
+		}
+		completion_reward = {
+			BEL = { country_event = fra.12 }
+			FRA = { country_event = fra.12 }
+			LUX = { country_event = fra.12 }
+			HOL = { country_event = fra.12 }
+			ITA = { country_event = fra.12 }
+			news_event = { id = fra.14 days = 2 }
+			add_ideas = Pleven_Plan
+		}
+	}
+	focus = {
+		id = WGR_Join_the_European_Defense_Community
+		icon = GFX_goal_generic_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Sign_the_Pleven_Plan
+		}
+		x = 8
+		y = 3
+		complete_tooltip = {
+			ENG = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_Joining_the_EDC_opinion
+				}
+			}
+			BEL = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_Joining_the_EDC_opinion
+				}
+			}
+			HOL = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_Joining_the_EDC_opinion
+				}
+			}
+			ITA = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_Joining_the_EDC_opinion
+				}
+			}
+			LUX = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_Joining_the_EDC_opinion
+				}
+			}
+			FRA = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_Joining_the_EDC_opinion
+				}
+			}
+			remove_ideas = Pleven_Plan
+			add_ideas = Member_of_European_Defense_Community
+		}
+		completion_reward = {
+			BEL = { country_event = wgr.6 }
+			FRA = { country_event = wgr.6 }
+			LUX = { country_event = wgr.6 }
+			HOL = { country_event = wgr.6 }
+			ITA = { country_event = wgr.6 }
+			news_event = { id = wgr.8 days = 2 }
+			remove_ideas = Pleven_Plan
+			add_ideas = Member_of_European_Defense_Community
+		}
+	}
+	focus = {
+		id = WGR_Cooparate_with_Warsaw_pact
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Join_the_European_Defense_Community
+		}
+		mutually_exclusive = {
+			focus = WGR_Stay_Neutral
+			focus = WGR_Cooperate_with_NATO
+		}
+		x = 4
+		y = 4
+			completion_reward = {
+					every_other_country = {
+							limit = {
+									is_in_faction_with = ENG
+								}
+							add_opinion_modifier = {
+									target = WGR
+									modifier = WGR_Cooperate_with_Warsaw_opinion
+								}
+						}
+					FRA = {
+							add_ideas = communist_pressure
+						}
+					add_ideas = communist_pressure
+				}
+			ai_will_do = {
+					factor = 0
+					modifier = {
+							is_historical_focus_on = no
+							factor = 1
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Stay_Neutral
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Join_the_European_Defense_Community
+		}
+		mutually_exclusive = {
+			focus = WGR_Cooparate_with_Warsaw_pact
+			focus = WGR_Cooperate_with_NATO
+		}
+		x = 6
+		y = 4
+			completion_reward = {
+					every_other_country = {
+							limit = {
+									is_in_faction_with = ENG
+								}
+							add_opinion_modifier = {
+									target = WGR
+									modifier = WGR_Staying_Neutral_opinion
+								}
+						}
+					every_other_country = {
+							limit = {
+									has_idea = Member_of_European_Defense_Community
+								}
+							add_ideas = Unity_in_the_EDC
+						}
+					add_political_power = 120
+				}
+
+	}
+	focus = {
+		id = WGR_Cooperate_with_NATO
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Join_the_European_Defense_Community
+		}
+		mutually_exclusive = {
+			focus = WGR_Cooparate_with_Warsaw_pact
+			focus = WGR_Stay_Neutral
+		}
+		x = 8
+		y = 4
+			completion_reward = {
+					every_other_country = {
+							limit = {
+									has_idea = Member_of_European_Defense_Community
+								}
+							add_ideas = democracy_idea
+						}
+					every_other_country = {
+							limit = {
+									is_in_faction_with = ENG
+								}
+							add_opinion_modifier = {
+									target = WGR
+									modifier = WGR_Cooperate_with_NATO_opinion
+								}
+						}
+					every_other_country = {
+							limit = {
+									is_in_faction_with = SOV
+								}
+							add_opinion_modifier = {
+									target = WGR
+									modifier = WGR_Siding_with_NATO_opinion
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_West_German_Army_controll
+		icon = GFX_goal_generic_military_sphere
+		cost = 0.00
+		prerequisite = {
+			focus = WGR_Cooperate_with_NATO
+			focus = WGR_Stay_Neutral
+			focus = WGR_Cooparate_with_Warsaw_pact
+		}
+		x = 8
+		y = 6
+			completion_reward = {
+					army_experience = 25
+				}
+
+	}
+	focus = {
+		id = WGR_Reactionary_Stance
+		icon = GFX_goal_generic_military_deal
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_True_Democracy
+			focus = WGR_Ridding_the_Fascists
+			focus = WGR_Ban_the_Communist
+		}
+		x = 10
+		y = 2
+			available = {
+					threat > 0.3
+				}
+			completion_reward = {
+					set_rule = {
+							can_send_volunteers = yes
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Economic_Cooperation_with_Eastern_Block
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Reactionary_Stance
+		}
+		x = 10
+		y = 3
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Gastarbeiters
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Economic_Cooperation_with_Eastern_Block
+		}
+		x = 10
+		y = 4
+			completion_reward = {
+					add_ideas = Gastarbeisters
+					ITA = {
+							add_opinion_modifier = {
+									target = WGR
+									modifier = WGR_Gastarbeiters_Opinion
+								}
+						}
+					TUR = {
+							add_opinion_modifier = {
+									target = WGR
+									modifier = WGR_Gastarbeiters_Opinion
+								}
+						}
+					YUG = {
+							add_opinion_modifier = {
+									target = WGR
+									modifier = WGR_Gastarbeiters_Opinion
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_War_Reparations
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_True_Democracy
+			focus = WGR_Ridding_the_Fascists
+			focus = WGR_Ban_the_Communist
+		}
+		x = 14
+		y = 2
+			completion_reward = {
+					ENG = {
+							add_opinion_modifier = {
+									target = WGR
+									modifier = WGR_War_Reparations_Opinion
+								}
+						}
+					FRA = {
+							add_opinion_modifier = {
+									target = WGR
+									modifier = WGR_War_Reparations_Opinion
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Reinforcing_Democracy
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_War_Reparations
+		}
+		mutually_exclusive = {
+			focus = WGR_Operation_Xavier
+			focus = WGR_traditionalism
+		}
+		x = 14
+		y = 3
+			completion_reward = {
+					add_political_power = 150
+				}
+
+	}
+	focus = {
+		id = WGR_Operation_Xavier
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_War_Reparations
+		}
+		mutually_exclusive = {
+			focus = WGR_Reinforcing_Democracy
+			focus = WGR_traditionalism
+		}
+		x = 16
+		y = 3
+			completion_reward = {
+					add_popularity = {
+							ideology = fascism
+							popularity = 0.10
+						}
+				}
+			ai_will_do = {
+					factor = 0
+					modifier = {
+							is_historical_focus_on = no
+							factor = 1
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_ODESSA
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Operation_Xavier
+		}
+		x = 16
+		y = 4
+			completion_reward = {
+					every_other_country = {
+							limit = {
+									NOT = {
+											has_government = fascism
+										}
+								}
+							add_opinion_modifier = {
+									target = WGR
+									modifier = WGR_ODESSA_Opinion
+								}
+						}
+					WGR = {
+							add_ideas = ODESSA
+						}
+					BRA = {
+							add_ideas = ODESSA
+						}
+					ARG = {
+							add_ideas = ODESSA
+						}
+					JAP = {
+							add_ideas = ODESSA
+						}
+					SPR = {
+							add_ideas = ODESSA
+						}
+					CRO = {
+							add_ideas = ODESSA
+						}
+				}
+			ai_will_do = {
+					factor = 0
+					modifier = {
+							is_historical_focus_on = no
+							factor = 1
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_The_Ratlines
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_ODESSA
+		}
+		x = 16
+		y = 5
+			completion_reward = {
+					WGR = {
+							add_ideas = Ratlines
+						}
+					BRA = {
+							add_ideas = Ratlines
+						}
+					ARG = {
+							add_ideas = Ratlines
+						}
+					JAP = {
+							add_ideas = Ratlines
+						}
+					SPR = {
+							add_ideas = Ratlines
+						}
+					PRC = {
+							add_ideas = Ratlines
+						}
+				}
+			ai_will_do = {
+					factor = 0
+					modifier = {
+							is_historical_focus_on = no
+							factor = 1
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_HIAG
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_The_Ratlines
+		}
+		x = 16
+		y = 6
+			completion_reward = {
+					WGR = {
+							add_ideas = HIAG
+						}
+					army_experience = 5
+				}
+			ai_will_do = {
+					factor = 0
+					modifier = {
+							is_historical_focus_on = no
+							factor = 1
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Berlin_Conferences
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 5.00
+		prerequisite = {
+			focus = WGR_HIAG
+		}
+		x = 16
+		y = 7
+			available = {
+					if = {
+							NOT = {
+									has_idea = Radicaliztion
+								}
+						}
+				}
+			completion_reward = {
+					every_other_country = {
+							limit = {
+									has_government = fascism
+								}
+							add_opinion_modifier = {
+									target = WGR
+									modifier = WGR_Berlin_Conference_Opinion
+								}
+						}
+				}
+			ai_will_do = {
+					factor = 0
+					modifier = {
+							is_historical_focus_on = no
+							factor = 1
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Embrace_Nationalism
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Berlin_Conferences
+		}
+		x = 16
+		y = 8
+			completion_reward = {
+					every_other_country = {
+							limit = {
+									OR = {
+											has_government = fascism
+											has_government = nationalism
+										}
+								}
+							add_opinion_modifier = {
+									target = WGR
+									modifier = WGR_Embracing_Nationalism_Opinion
+								}
+						}
+					add_political_power = 140
+					add_ideas = nationalism
+				}
+			ai_will_do = {
+					factor = 0
+					modifier = {
+							is_historical_focus_on = no
+							factor = 1
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_East_German_Revolution
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Embrace_Nationalism
+		}
+		x = 16
+		y = 10
+		completion_reward = {
+			DDR = { country_event = kaiser.1 }
+		}
+	}
+	focus = {
+		id = WGR_traditionalism
+		icon = GFX_focus_rom_abdicate
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_War_Reparations
+		}
+		mutually_exclusive = {
+			focus = WGR_Operation_Xavier
+			focus = WGR_Reinforcing_Democracy
+		}
+		x = 21
+		y = 3
+		completion_reward = {
+			add_ideas = monarchist_influence
+		}
+	}
+	focus = {
+		id = WGR_Imperial_Legacy
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_traditionalism
+		}
+		x = 20
+		y = 4
+		completion_reward = {
+			add_ideas = ideological_fanaticism_focus
+		}
+	}
+	focus = {
+		id = WGR_christianity_not_socialism
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_traditionalism
+		}
+		x = 22
+		y = 4
+		completion_reward = {
+			add_political_power = 300
+			add_ideas = communism_banned
+		}
+
+	}
+	focus = {
+		id = WGR_A_New_Kaiser
+		icon = GFX_focus_hun_elect_a_king
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_christianity_not_socialism
+		}
+		prerequisite = {
+			focus = WGR_Imperial_Legacy
+		}
+		x = 21
+		y = 5
+		completion_reward = {
+			WGR = { country_event = wgr.9 }
+		}
+	}
+	focus = {
+		id = WGR_Reform_the_Central_Powers
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_A_New_Kaiser
+		}
+		mutually_exclusive = {
+			focus = WGR_stay_with_NATO
+		}
+		x = 20
+		y = 6
+		completion_reward = {
+			create_faction = "The Central Powers"
+		}
+	}
+	focus = {
+		id = WGR_stay_with_NATO
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_A_New_Kaiser
+		}
+		mutually_exclusive = {
+			focus = WGR_Reform_the_Central_Powers
+		}
+		x = 2
+		y = 3
+		relative_position_id = WGR_traditionalism
+			completion_reward = {
+					every_other_country = {
+							limit = {
+									is_in_faction_with = USA
+								}
+							add_opinion_modifier = {
+									target = ROOT
+									modifier = large_increase
+								}
+						}
+				}
+	}
+	focus = {
+		id = WGR_Ties_with_NATO
+		icon = GFX_goal_generic_major_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_True_Democracy
+			focus = WGR_Ban_the_Communist
+			focus = WGR_Ridding_the_Fascists
+		}
+		x = 12
+		y = 2
+			completion_reward = {
+					every_other_country = {
+							limit = {
+									is_in_faction_with = USA
+								}
+							add_opinion_modifier = {
+									target = ROOT
+									modifier = WGR_Ties_with_NATO_Opinion
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Bonn_Paris_Conventions
+		icon = GFX_goal_generic_major_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Reinforcing_Democracy
+			focus = WGR_stay_with_NATO
+		}
+		x = 14
+		y = 4
+			completion_reward = {
+					every_other_country = {
+							limit = {
+									is_in_faction_with = ENG
+								}
+							add_opinion_modifier = {
+									target = WGR
+									modifier = WGR_Bonn_Paris_Opinion
+								}
+						}
+					add_ideas = Bonn_Paris_Convetions
+				}
+
+	}
+	focus = {
+		id = WGR_Ressurection_of_Habsburg_Austria
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Reform_the_Central_Powers
+		}
+		mutually_exclusive = {
+			focus = WGR_stay_with_NATO
+		}
+		x = 18
+		y = 7
+		available = {
+			country_exists = AUS
+		}	
+		completion_reward = {
+			AUS = { add_ideas = monarchist_influence }
+		}
+	}
+	focus = {
+		id = WGR_Encourage_Monarchism_in_Italy
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Reform_the_Central_Powers
+		}
+		x = 20
+		y = 7
+		completion_reward = {
+			ITA = { add_ideas = monarchist_influence }
+		}
+	}
+	focus = {
+		id = WGR_Reform_the_Imperial_German_Army
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Reform_the_Central_Powers
+		}
+		x = 22
+		y = 7
+		completion_reward = {
+			add_ideas = militarism_focus
+		}
+	}
+	focus = {
+		id = WGR_Military_Expansion
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Encourage_Monarchism_in_Italy
+		}
+		prerequisite = {
+			focus = WGR_Reform_the_Imperial_German_Army
+		}
+		prerequisite = {
+			focus = WGR_Ressurection_of_Habsburg_Austria
+		}
+		x = 20
+		y = 8
+		completion_reward = {
+			add_ideas = military_expansion
+		}
+	}
+	focus = {
+		id = WGR_Fund_Insurgeny_in_Occupied_Germany
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Military_Expansion
+		}
+		x = 20
+		y = 9
+		completion_reward = {
+			DDR = { country_event = kaiser.1 }
+		}
+	}
+	focus = {
+		id = WGR_The_New_Kaiserreich
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Fund_Insurgeny_in_Occupied_Germany
+		}
+		x = 20
+		y = 10
+		completion_reward = {
+			set_cosmetic_tag = GER_IMP
+		}
+	}
+	focus = {
+		id = WGR_Demand_Return_of_land_from_Poland
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_The_New_Kaiserreich
+		}
+		x = 19
+		y = 11
+		completion_reward = {
+			POL = { country_event = kaiser.2 }
+		}
+	}
+	focus = {
+		id = WGR_Demand_Return_of_Alscae_Lorraine
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_The_New_Kaiserreich
+		}
+		x = 21
+		y = 11
+		completion_reward = {
+			FRA = { country_event = kaiser.3 }
+		}
+	}
+	focus = {
+		id = WGR_Konigsberg_or_War
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Demand_Return_of_Alscae_Lorraine
+		}
+		prerequisite = {
+			focus = WGR_Demand_Return_of_land_from_Poland
+		}
+		x = 20
+		y = 12
+		completion_reward = {
+			SOV = { country_event = kaiser.4 }
+		}
+	}
+	focus = {
+		id = WGR_Foreign_Tank_Requests
+		icon = GFX_goal_generic_army_tanks
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Founding_the_Bundeswhr
+		}
+		x = 22
+		y = 1
+			completion_reward = {
+					USA = {
+							send_equipment = {
+									target = WGR
+									type = heavy_tanks_1
+									amount = 150
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Armoured_Use
+		icon = GFX_goal_generic_build_tank
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Foreign_Tank_Requests
+		}
+		x = 22
+		y = 2
+			completion_reward = {
+					add_ideas = Armoured_Use
+				}
+
+	}
+	focus = {
+		id = WGR_Return_of_Colonies
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_The_New_Kaiserreich
+		}
+		x = 23
+		y = 11
+		completion_reward = {
+			ENG = { country_event = kaiser.5 }
+		}
+	}
+	focus = {
+		id = WGR_Demand_Eupen
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Demand_Return_of_Alscae_Lorraine
+		}
+		x = 22
+		y = 12
+		completion_reward = {
+			BEL = { country_event = kaiser.6 }
+		}
+	}
+	focus = {
+		id = WGR_Foreign_APC_Request
+		icon = GFX_goal_generic_army_tanks
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Founding_the_Bundeswhr
+		}
+		x = 24
+		y = 1
+			completion_reward = {
+					USA = {
+							send_equipment = {
+									target = WGR
+									type = light_tanks_1
+									amount = 150
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Focus_on_ATGMs
+		icon = GFX_goal_generic_build_tank
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Foreign_APC_Request
+		}
+		x = 24
+		y = 2
+			completion_reward = {
+					add_tech_bonus = {
+							name = ATGMs
+							uses = 1
+							bonus = 0.5
+							category = cat_anti_tank
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_American_German_Tank_Cooperation
+		icon = GFX_goal_generic_build_tank
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Focus_on_ATGMs
+		}
+		x = 24
+		y = 3
+			completion_reward = {
+					add_tech_bonus = {
+							name = "American-German Tank Cooperation"
+							uses = 1
+							bonus = 0.5
+							category = cat_light_armor
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Training_of_the_Elites
+		icon = GFX_goal_generic_defence
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_The_New_Kaiserreich
+		}
+		mutually_exclusive = {
+			focus = WGR_Modern_Blitzkrieg
+		}
+		x = 24
+		y = 13
+			completion_reward = {
+					army_experience = 25
+				}
+
+	}
+	focus = {
+		id = WGR_Foreign_Light_Tank_Requests
+		icon = GFX_goal_generic_army_tanks
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Founding_the_Bundeswhr
+		}
+		x = 26
+		y = 1
+			completion_reward = {
+					USA = {
+							send_equipment = {
+									target = WGR
+									type = light_tanks_1
+									amount = 150
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Agility_over_Protection
+		icon = GFX_goal_generic_army_tanks
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Foreign_Light_Tank_Requests
+		}
+		x = 26
+		y = 2
+			completion_reward = {
+					add_tech_bonus = {
+							name = Agility
+							uses = 1
+							bonus = 0.5
+							category = cat_light_armor
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Franco_German_Tank_Cooperation
+		icon = GFX_goal_generic_build_tank
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Agility_over_Protection
+		}
+		x = 26
+		y = 3
+			completion_reward = {
+					FRA = {
+							add_opinion_modifier = {
+									target = ROOT
+									modifier = WGR_Tank_Cooperation_opinion
+								}
+							add_tech_bonus = {
+									name = "Franco-German Tank Cooperation"
+									uses = 1
+									bonus = 0.5
+									category = cat_heavy_armor
+								}
+						}
+					ROOT = {
+							add_opinion_modifier = {
+									target = FRA
+									modifier = WGR_Tank_Cooperation_opinion
+								}
+							add_tech_bonus = {
+									name = "Franco-German Tank Cooperation"
+									uses = 1
+									bonus = 0.5
+									category = cat_heavy_armor
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Funding_the_Bundeswehr
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Founding_the_Bundeswhr
+		}
+		x = 28
+		y = 1
+			completion_reward = {
+					add_tech_bonus = {
+							name = Funding_the_Bundeswehr
+							uses = 2
+							bonus = 0.5
+							category = support_tech
+						}
+					add_tech_bonus = {
+							name = Funding_the_Bundeswehr
+							uses = 1
+							bonus = 0.5
+							category = infantry_weapons
+						}
+				}
+			ai_will_do = {
+					factor = 2
+				}
+
+	}
+	focus = {
+		id = WGR_Build_Military_Bases
+		icon = GFX_goal_generic_construct_military
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Funding_the_Bundeswehr
+		}
+		x = 28
+		y = 2
+			completion_reward = {
+					add_ideas = Military_Bases
+				}
+
+	}
+	focus = {
+		id = WGR_Expanding_the_Bundeswehr
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Build_Military_Bases
+		}
+		x = 28
+		y = 3
+			completion_reward = {
+					army_experience = 100
+				}
+
+	}
+	focus = {
+		id = WGR_Mechanized_Warfare
+		icon = GFX_goal_generic_army_motorized
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Expanding_the_Bundeswehr
+		}
+		x = 28
+		y = 4
+			completion_reward = {
+					add_tech_bonus = {
+							name = Leadership_Reforms
+							uses = 1
+							bonus = 0.5
+							category = land_doctrine
+							category = cat_mechanized_equipment
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Duty_to_Country
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Mechanized_Warfare
+		}
+		x = 27
+		y = 5
+			completion_reward = {
+					add_national_unity = 0.05
+				}
+
+	}
+	focus = {
+		id = WGR_Volks_Oath
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Duty_to_Country
+		}
+		mutually_exclusive = {
+			focus = WGR_Gelobnis
+		}
+		x = 26
+		y = 6
+			completion_reward = {
+					add_national_unity = -0.05
+				}
+
+	}
+	focus = {
+		id = WGR_Gelobnis
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Duty_to_Country
+		}
+		mutually_exclusive = {
+			focus = WGR_Volks_Oath
+		}
+		x = 28
+		y = 6
+			completion_reward = {
+					add_national_unity = 0.05
+					add_manpower = 50000
+				}
+
+	}
+	focus = {
+		id = WGR_Duty_to_Serve
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Gelobnis
+		}
+		x = 28
+		y = 7
+			completion_reward = {
+					add_ideas = West_German_Army
+				}
+
+	}
+	focus = {
+		id = WGR_Peoples_Army
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Duty_to_Serve
+		}
+		x = 28
+		y = 8
+			completion_reward = {
+					add_ideas = West_German_Army
+				}
+
+	}
+	focus = {
+		id = WGR_Leadership_Reforms
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Founding_the_Bundeswhr
+		}
+		x = 30
+		y = 1
+			completion_reward = {
+					add_tech_bonus = {
+							name = Leadership_Reforms
+							uses = 2
+							bonus = 0.5
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Lessons_From_WWII
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Leadership_Reforms
+		}
+		x = 30
+		y = 2
+			completion_reward = {
+					army_experience = 25
+					add_tech_bonus = {
+							name = Leadership_Reforms
+							uses = 1
+							bonus = 0.5
+							category = cat_mobile_warfare
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Bundeswehr_Exercises
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Lessons_From_WWII
+		}
+		x = 30
+		y = 3
+			completion_reward = {
+					army_experience = 50
+					add_named_threat = {
+							threat = 2
+							name = Bundeswehr_Exercises
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Research_Teams
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Bundeswehr_Exercises
+		}
+		x = 30
+		y = 4
+			completion_reward = {
+					add_research_slot = 1
+				}
+
+	}
+	focus = {
+		id = WGR_Heckler_Koch
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Founding_the_Bundeswhr
+		}
+		x = 32
+		y = 1
+			completion_reward = {
+					add_tech_bonus = {
+							name = Heckler_&_Koch
+							uses = 1
+							bonus = 0.5
+							category = infantry_tech
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_G3_Rifle
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Heckler_Koch
+		}
+		x = 32
+		y = 2
+			completion_reward = {
+					add_tech_bonus = {
+							name = "G3 Rifle"
+							uses = 1
+							bonus = 0.5
+							category = infantry_weapons
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_PzF_44
+		icon = GFX_goal_generic_army_artillery
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_G3_Rifle
+		}
+		x = 32
+		y = 3
+			completion_reward = {
+					add_tech_bonus = {
+							name = PzF_44
+							uses = 1
+							bonus = 0.5
+							category = cat_anti_tank
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Continued_Reconstruction
+		icon = GFX_goal_generic_construction
+		cost = 20.00
+		prerequisite = {
+			focus = WGR_Accept_the_Marshall_Plan
+		}
+		x = 34
+		y = 1
+			completion_reward = {
+					add_political_power = 150
+					random_owned_controlled_state = {
+							add_building_construction = {
+									type = infrastructure
+									level = 10
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Expanding_the_Autobahn
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Continued_Reconstruction
+		}
+		x = 34
+		y = 3
+			completion_reward = {
+					57 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_building_construction = {
+											type = infrastructure
+											level = 10
+											instant_build = yes
+										}
+								}
+						}
+					55 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_building_construction = {
+											type = infrastructure
+											level = 10
+											instant_build = yes
+										}
+								}
+						}
+					51 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_building_construction = {
+											type = infrastructure
+											level = 10
+											instant_build = yes
+										}
+								}
+						}
+					42 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_building_construction = {
+											type = infrastructure
+											level = 10
+											instant_build = yes
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_National_Employment_Program
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Expanding_the_Autobahn
+		}
+		x = 32
+		y = 4
+			completion_reward = {
+					add_national_unity = 0.05
+					50 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_extra_state_shared_building_slots = 2
+									add_building_construction = {
+											type = industrial_complex
+											level = 2
+											instant_build = yes
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Fortifying_the_Border
+		icon = GFX_goal_generic_construct_military
+		cost = 30.00
+		prerequisite = {
+			focus = WGR_Mechanized_Warfare
+		}
+		prerequisite = {
+			focus = WGR_Research_Teams
+		}
+		prerequisite = {
+			focus = WGR_National_Employment_Program
+		}
+		x = 30
+		y = 5
+			completion_reward = {
+					59 = {
+							custom_effect_tooltip = WGR_Fortifying_the_Border
+							hidden_effect = {
+									add_building_construction = {
+											type = bunker
+											level = 2
+											province = 6298
+											instant_build = yes
+										}
+								}
+							add_building_construction = {
+									type = bunker
+									level = 2
+									province = 9264
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = bunker
+									level = 2
+									province = 6218
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = bunker
+									level = 2
+									province = 9375
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = bunker
+									level = 2
+									province = 11402
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = bunker
+									level = 2
+									province = 6513
+									instant_build = yes
+								}
+						}
+					55 = {
+							custom_effect_tooltip = WGR_Fortifying_the_Border
+							hidden_effect = {
+									add_building_construction = {
+											type = bunker
+											level = 2
+											province = 564
+											instant_build = yes
+										}
+								}
+							add_building_construction = {
+									type = bunker
+									level = 2
+									province = 9524
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = bunker
+									level = 2
+									province = 11445
+									instant_build = yes
+								}
+						}
+					54 = {
+							custom_effect_tooltip = WGR_Fortifying_the_Border
+							hidden_effect = {
+									add_building_construction = {
+											type = bunker
+											level = 2
+											province = 13116
+											instant_build = yes
+										}
+								}
+							add_building_construction = {
+									type = bunker
+									level = 2
+									province = 6421
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = bunker
+									level = 2
+									province = 3474
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = bunker
+									level = 2
+									province = 11404
+									instant_build = yes
+								}
+						}
+					58 = {
+							custom_effect_tooltip = WGR_Fortifying_the_Border
+							hidden_effect = {
+									add_building_construction = {
+											type = bunker
+											level = 2
+											province = 11331
+											instant_build = yes
+										}
+								}
+							add_building_construction = {
+									type = bunker
+									level = 2
+									province = 9320
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_The_Grand_Autobahn
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Expanding_the_Autobahn
+		}
+		x = 34
+		y = 4
+			completion_reward = {
+					58 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_building_construction = {
+											type = infrastructure
+											level = 10
+											instant_build = yes
+										}
+								}
+						}
+					56 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_building_construction = {
+											type = infrastructure
+											level = 10
+											instant_build = yes
+										}
+								}
+						}
+					59 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_building_construction = {
+											type = infrastructure
+											level = 10
+											instant_build = yes
+										}
+								}
+						}
+					54 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_building_construction = {
+											type = infrastructure
+											level = 10
+											instant_build = yes
+										}
+								}
+						}
+					52 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_building_construction = {
+											type = infrastructure
+											level = 10
+											instant_build = yes
+										}
+								}
+						}
+					53 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_building_construction = {
+											type = infrastructure
+											level = 10
+											instant_build = yes
+										}
+								}
+						}
+					50 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_building_construction = {
+											type = infrastructure
+											level = 10
+											instant_build = yes
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Synthetic_Production_Projects
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_The_Grand_Autobahn
+		}
+		x = 34
+		y = 5
+			completion_reward = {
+					59 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_resource = {
+											type = oil
+											amount = 20
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Expanding_the_Mines
+		icon = GFX_goal_generic_construction2
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Synthetic_Production_Projects
+		}
+		x = 34
+		y = 6
+			completion_reward = {
+					50 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_resource = {
+											type = steel
+											amount = 20
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_More_Industry_in_Nordrhein-Westfalen
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Expanding_the_Mines
+		}
+		x = 34
+		y = 7
+			completion_reward = {
+					57 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_extra_state_shared_building_slots = 4
+									add_building_construction = {
+											type = industrial_complex
+											level = 4
+											instant_build = yes
+										}
+								}
+						}
+					57 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_resource = {
+											type = steel
+											amount = 20
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Computers_in_Industry
+		icon = GFX_goal_generic_production
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Accept_the_Marshall_Plan
+		}
+		x = 37
+		y = 1
+			completion_reward = {
+					55 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_extra_state_shared_building_slots = 2
+									add_building_construction = {
+											type = industrial_complex
+											level = 2
+											instant_build = yes
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Nationalization_of_Noxdorf_Computers_AG
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Computers_in_Industry
+		}
+		x = 36
+		y = 3
+			completion_reward = {
+					add_tech_bonus = {
+							name = Nixdorf_Computers
+							uses = 1
+							bonus = 0.5
+							category = electronics
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Enlistment_of_Noxdorf_Computers_AG
+		icon = GFX_goal_generic_radar
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Nationalization_of_Noxdorf_Computers_AG
+		}
+		x = 36
+		y = 4
+			completion_reward = {
+					53 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_extra_state_shared_building_slots = 2
+									add_building_construction = {
+											type = Radar_Station
+											level = 2
+											instant_build = yes
+										}
+								}
+						}
+					54 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_extra_state_shared_building_slots = 2
+									add_building_construction = {
+											type = Radar_Station
+											level = 2
+											instant_build = yes
+										}
+								}
+						}
+					55 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_extra_state_shared_building_slots = 2
+									add_building_construction = {
+											type = Radar_Station
+											level = 2
+											instant_build = yes
+										}
+								}
+						}
+					59 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_extra_state_shared_building_slots = 2
+									add_building_construction = {
+											type = Radar_Station
+											level = 2
+											instant_build = yes
+										}
+								}
+						}
+					58 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_extra_state_shared_building_slots = 2
+									add_building_construction = {
+											type = Radar_Station
+											level = 2
+											instant_build = yes
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_modern_Programming
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Nationalization_of_Noxdorf_Computers_AG
+		}
+		x = 38
+		y = 4
+			completion_reward = {
+					add_ideas = WGR_Research_Speed_1
+				}
+
+	}
+	focus = {
+		id = WGR_USA_Computers
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Enlistment_of_Noxdorf_Computers_AG
+		}
+		prerequisite = {
+			focus = WGR_modern_Programming
+		}
+		x = 36
+		y = 5
+			completion_reward = {
+					add_tech_bonus = {
+							name = USA_Computers
+							uses = 1
+							bonus = 0.5
+							category = electronics
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Research_Agreements_with_US
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_USA_Computers
+		}
+		x = 36
+		y = 6
+			completion_reward = {
+					remove_ideas = Scientific_Collapse
+					add_ideas = WGR_Research_Speed_3
+				}
+
+	}
+	focus = {
+		id = WGR_Collection_of_Intellects
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Computers_in_Industry
+		}
+		x = 38
+		y = 3
+			completion_reward = {
+					add_research_slot = 1
+				}
+
+	}
+	focus = {
+		id = WGR_Funding_of_New_Academies
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_modern_Programming
+		}
+		x = 38
+		y = 5
+			completion_reward = {
+					add_ideas = WGR_Research_Speed_2
+				}
+
+	}
+	focus = {
+		id = WGR_Department_of_Rocketry
+		icon = GFX_focus_rocketry
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Funding_of_New_Academies
+		}
+		x = 38
+		y = 6
+			completion_reward = {
+					add_tech_bonus = {
+							name = Rocketry
+							bonus = 0.5
+							uses = 1
+							category = rocketry
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Expansion_of_Air_Defense
+		icon = GFX_goal_generic_fortify_city
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Formation_of_the_Luftwaffe
+		}
+		x = 39
+		y = 1
+			completion_reward = {
+					53 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_extra_state_shared_building_slots = 2
+									add_building_construction = {
+											type = anti_air_building
+											level = 1
+											instant_build = yes
+										}
+								}
+						}
+					54 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_extra_state_shared_building_slots = 2
+									add_building_construction = {
+											type = anti_air_building
+											level = 1
+											instant_build = yes
+										}
+								}
+						}
+					55 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_extra_state_shared_building_slots = 2
+									add_building_construction = {
+											type = anti_air_building
+											level = 1
+											instant_build = yes
+										}
+								}
+						}
+					59 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_extra_state_shared_building_slots = 2
+									add_building_construction = {
+											type = anti_air_building
+											level = 1
+											instant_build = yes
+										}
+								}
+						}
+					58 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_extra_state_shared_building_slots = 2
+									add_building_construction = {
+											type = anti_air_building
+											level = 1
+											instant_build = yes
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Refresh_the_Elites
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Formation_of_the_Luftwaffe
+		}
+		x = 45
+		y = 1
+			completion_reward = {
+					add_ace = {
+							name = "Erich"
+							surname = "Hartmann"
+							callsign = "Hartmann"
+							type = fighter_genius
+							is_female = no
+						}
+					add_ace = {
+							name = "Gerhard"
+							surname = "Barkhorn"
+							callsign = "Barkhorn"
+							type = fighter_genius
+							is_female = no
+						}
+					add_ace = {
+							name = "Gunther"
+							surname = "Rall"
+							callsign = "Rall"
+							type = fighter_genius
+							is_female = no
+						}
+					add_ace = {
+							name = "Johannes"
+							surname = "Steinhoff"
+							callsign = "Steinhoff"
+							type = fighter_genius
+							is_female = no
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Reemergence_of_the_Luftwaffe
+		icon = GFX_goal_generic_air_fighter2
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Expansion_of_Air_Defense
+		}
+		prerequisite = {
+			focus = WGR_Refresh_the_Elites
+		}
+		mutually_exclusive = {
+			focus = WGR_Ban_the_Witwenmacher
+		}
+		x = 40
+		y = 2
+			completion_reward = {
+					USA = {
+							add_opinion_modifier = {
+									target = ROOT
+									modifier = WGR_Reemergence_of_the_Luftwaffe_opinion
+								}
+						}
+					ENG = {
+							add_opinion_modifier = {
+									target = ROOT
+									modifier = WGR_Reemergence_of_the_Luftwaffe_opinion
+								}
+						}
+					FRA = {
+							add_opinion_modifier = {
+									target = ROOT
+									modifier = WGR_Reemergence_of_the_Luftwaffe_opinion
+								}
+						}
+					SOV = {
+							add_opinion_modifier = {
+									target = ROOT
+									modifier = WGR_Reemergence_of_the_Luftwaffe_opinion
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Enlist_Dornier
+		icon = GFX_goal_generic_air_naval_bomber
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Reemergence_of_the_Luftwaffe
+		}
+		x = 40
+		y = 3
+			completion_reward = {
+					add_tech_bonus = {
+							name = Dornier
+							uses = 1
+							bonus = 0.5
+							category = naval_bomber
+						}
+					add_ideas = WGR_Enlist_Dornier
+				}
+
+	}
+	focus = {
+		id = WGR_Merge_Dornier_and_Daimler-Benz
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Enlist_Dornier
+		}
+		x = 40
+		y = 4
+			completion_reward = {
+					add_political_power = 50
+				}
+
+	}
+	focus = {
+		id = WGR_Form_the_Aerial_Safety_Administration
+		icon = GFX_goal_generic_air_fighter2
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Merge_Dornier_and_Daimler-Benz
+		}
+		x = 40
+		y = 5
+			completion_reward = {
+					remove_ideas = Starfighter_Crisis
+					add_ideas = WGR_Form_the_ASA
+				}
+
+	}
+	focus = {
+		id = WGR_Ban_the_Witwenmacher
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Refresh_the_Elites
+		}
+		prerequisite = {
+			focus = WGR_Expansion_of_Air_Defense
+		}
+		mutually_exclusive = {
+			focus = WGR_Reemergence_of_the_Luftwaffe
+		}
+		x = 44
+		y = 2
+			completion_reward = {
+					remove_ideas = Starfighter_Crisis
+				}
+
+	}
+	focus = {
+		id = WGR_Request_NATO_CAS
+		icon = GFX_goal_generic_CAS
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Ban_the_Witwenmacher
+		}
+		x = 44
+		y = 3
+			completion_reward = {
+					add_tech_bonus = {
+							name = NATO_CAS
+							uses = 1
+							bonus = 0.5
+							category = cas_bomber
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_US_Production_Licenses
+		icon = GFX_goal_generic_air_production
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Request_NATO_CAS
+		}
+		x = 44
+		y = 4
+			completion_reward = {
+					add_ideas = US_Production_Licenses
+				}
+
+	}
+	focus = {
+		id = WGR_NATO_Air_Defense
+		icon = GFX_goal_generic_fortify_city
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_US_Production_Licenses
+		}
+		x = 44
+		y = 5
+			completion_reward = {
+					53 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_extra_state_shared_building_slots = 2
+									add_building_construction = {
+											type = anti_air_building
+											level = 2
+											instant_build = yes
+										}
+								}
+						}
+					59 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_extra_state_shared_building_slots = 2
+									add_building_construction = {
+											type = anti_air_building
+											level = 2
+											instant_build = yes
+										}
+								}
+						}
+					58 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_extra_state_shared_building_slots = 2
+									add_building_construction = {
+											type = anti_air_building
+											level = 2
+											instant_build = yes
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_F-4_Phantom_Order
+		icon = GFX_goal_generic_air_fighter2
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Form_the_Aerial_Safety_Administration
+			focus = WGR_NATO_Air_Defense
+		}
+		x = 42
+		y = 6
+			completion_reward = {
+					add_tech_bonus = {
+							name = F-4_Phantom_Order
+							bonus = 1
+							uses = 1
+							technology = jet_fighter1
+						}
+					add_ideas = WGR_F-4_Phantom
+				}
+
+	}
+	focus = {
+		id = WGR_Formation_of_the_Bundesmarine
+		icon = GFX_goal_generic_navy_battleship
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Disband_the_German_Mine_Sweeping_Administration
+		}
+		x = 49
+		y = 1
+			completion_reward = {
+					navy_experience = 25
+					SOV = {
+							add_opinion_modifier = {
+									target = ROOT
+									modifier = WGR_Bundesmarine_opinion
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Re_open_the_Dockyards
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Formation_of_the_Bundesmarine
+		}
+		x = 46
+		y = 2
+			completion_reward = {
+					58 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = naval_base
+											level = 3
+											instant_build = yes
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Re_Staff_the_Kiel_Naval_Base
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Formation_of_the_Bundesmarine
+		}
+		x = 51
+		y = 2
+			completion_reward = {
+					add_manpower = -1000
+					add_ideas = WGR_Re-Staffing
+				}
+
+	}
+	focus = {
+		id = WGR_Reorganize_the_Navy
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Re_open_the_Dockyards
+		}
+		prerequisite = {
+			focus = WGR_Re_Staff_the_Kiel_Naval_Base
+		}
+		x = 49
+		y = 3
+			completion_reward = {
+					remove_ideas = Disorganized_Navy
+				}
+
+	}
+	focus = {
+		id = WGR_Submarine_Designs
+		icon = GFX_goal_generic_navy_submarine
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Reorganize_the_Navy
+		}
+		x = 47
+		y = 4
+			completion_reward = {
+					add_tech_bonus = {
+							uses = 1
+							bonus = 0.5
+							category = submarine_doctrine
+						}
+					add_ideas = WGR_Submarine
+				}
+
+	}
+	focus = {
+		id = WGR_Reinforcement_of_Govermment
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Ties_with_NATO
+		}
+		prerequisite = {
+			focus = WGR_War_Reparations
+		}
+		x = 12
+		y = 3
+			completion_reward = {
+					add_political_power = 120
+					add_national_unity = 0.05
+				}
+
+	}
+	focus = {
+		id = WGR_Basic_Law_Reforms
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 20.00
+		prerequisite = {
+			focus = WGR_Reinforcement_of_Govermment
+		}
+		x = 12
+		y = 4
+			completion_reward = {
+					add_ideas = WGR_Reformed_Law
+				}
+
+	}
+	focus = {
+		id = WGR_Anti-Nazi_Sentiment
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Bonn_Paris_Conventions
+		}
+		x = 14
+		y = 5
+			completion_reward = {
+					add_ideas = Anti-Nazi_Sentiment
+					every_other_country = {
+							limit = {
+									has_government = fascism
+								}
+							add_opinion_modifier = {
+									target = ROOT
+									modifier = WGR_Anti-Nazi_Sentiment_opinion
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Build_the_Spangdalhlem_air_base
+		icon = GFX_goal_generic_build_airforce
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Anti-Nazi_Sentiment
+		}
+		x = 14
+		y = 6
+			completion_reward = {
+					42 = {
+							if = {
+									limit = {
+											is_controlled_by = WGR
+										}
+									add_building_construction = {
+											type = air_base
+											level = 10
+											instant_build = yes
+										}
+								}
+						}
+					every_other_country = {
+							limit = {
+									is_in_faction_with = ENG
+								}
+							add_opinion_modifier = {
+									target = WGR
+									modifier = WGR_Air_base_Opinion
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Request_to_Join_NATO
+		icon = GFX_goal_generic_major_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Basic_Law_Reforms
+		}
+		prerequisite = {
+			focus = WGR_Bonn_Paris_Conventions
+		}
+		x = 12
+		y = 5
+			completion_reward = {
+					USA = {
+							country_event = wgr.1
+						}
+				}
+			ai_will_do = {
+					factor = 2
+				}
+
+	}
+	focus = {
+		id = WGR_Saarland_Invitation
+		icon = GFX_goal_anschluss
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Request_to_Join_NATO
+		}
+		x = 10
+		y = 6
+			completion_reward = {
+					SAR = {
+							country_event = wgr.2
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Call_for_Great_Britain_to_Join
+		icon = GFX_goal_generic_major_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_West_German_Army_controll
+		}
+		prerequisite = {
+			focus = WGR_Saarland_Invitation
+		}
+		x = 8
+		y = 7
+			completion_reward = {
+					add_opinion_modifier = {
+							target = ENG
+							modifier = WGR_Britain_Join_opinion
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Protest_Foreign_Troop_Stationing
+		icon = GFX_goal_generic_defence
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Embrace_Nationalism
+			focus = WGR_Reform_the_Central_Powers
+		}
+		x = 18
+		y = 9
+			completion_reward = {
+					USA = {
+							diplomatic_relation = {
+									country = CUB
+									relation = military_access
+									active = no
+								}
+							add_opinion_modifier = {
+									target = WGR
+									modifier = WGR_protest_troop_stationing_opinion
+								}
+						}
+				}
+			ai_will_do = {
+					factor = 0
+					modifier = {
+							is_historical_focus_on = no
+							factor = 1
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Form_the_ECSC
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Request_to_Join_NATO
+		}
+		bypass = {
+			FRA = { has_completed_focus = FRA_ECSC }
+		}
+		x = 12
+		y = 8
+		complete_tooltip = {
+			BEL = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_Formation_of_the_ECSC_opinion
+				}
+				add_ideas = Member_of_ECSC
+			}
+			FRA = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_Formation_of_the_ECSC_opinion
+				}
+				add_ideas = Member_of_ECSC
+			}
+			LUX = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_Formation_of_the_ECSC_opinion
+				}
+				add_ideas = Member_of_ECSC
+			}
+			HOL = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_Formation_of_the_ECSC_opinion
+				}
+				add_ideas = Member_of_ECSC
+			}
+			ITA = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_Formation_of_the_ECSC_opinion
+				}
+				add_ideas = Member_of_ECSC
+			}
+			add_ideas = Member_of_ECSC
+		}
+		completion_reward = {
+			BEL = { country_event = fra.5 }
+			FRA = { country_event = fra.5 }
+			LUX = { country_event = fra.5 }
+			HOL = { country_event = fra.5 }
+			ITA = { country_event = fra.5 }
+			news_event = { id = fra.7 days = 2 }
+			add_ideas = Member_of_ECSC
+		}
+	}
+	focus = {
+		id = WGR_European_Political_Cooperation
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Saarland_Invitation
+		}
+		prerequisite = {
+			focus = WGR_Call_for_Great_Britain_to_Join
+		}
+		x = 10
+		y = 8
+			completion_reward = {
+					every_other_country = {
+							limit = {
+									has_completed_focus = WGR_Cooperate_with_NATO
+								}
+							add_opinion_modifier = {
+									target = ROOT
+									modifier = WGR_Cooperate_with_NATO_opinion
+								}
+						}
+					every_other_country = {
+							limit = {
+									has_completed_focus = WGR_Cooperate_with_Warsaw_pact
+								}
+							add_opinion_modifier = {
+									target = ROOT
+									modifier = WGR_Cooperate_with_Warsaw_opinion
+								}
+						}
+					add_ideas = European_political_Cooperation
+				}
+
+	}
+	focus = {
+		id = WGR_Make_the_European_Economic_community
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Form_the_ECSC
+		}
+		x = 12
+		y = 9
+			completion_reward = {
+					every_other_country = {
+							limit = {
+									has_idea = Member_of_ECSC
+								}
+							remove_ideas = Member_of_ECSC
+							add_ideas = Member_of_EEC
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Common_Foreign_and_Security_Policy
+		icon = GFX_goal_generic_defence
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_European_Political_Cooperation
+		}
+		x = 10
+		y = 9
+			completion_reward = {
+					add_national_unity = -0.05
+					every_other_country = {
+							limit = {
+									has_idea = Member_of_EU
+								}
+							add_opinion_modifier = {
+									target = ROOT
+									modifier = WGR_Common_Security_Policy_opinion
+								}
+						}
+					add_ideas = Common_Security_Policy
+				}
+
+	}
+	focus = {
+		id = WGR_Modern_Blitzkrieg
+		icon = GFX_goal_generic_army_tanks
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_The_New_Kaiserreich
+		}
+		mutually_exclusive = {
+			focus = WGR_Training_of_the_Elites
+		}
+		x = 18
+		y = 13
+			completion_reward = {
+					add_tech_bonus = {
+							name = Modern_Blitzkrieg
+							uses = 1
+							bonus = 0.5
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_War_Plan_P
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Modern_Blitzkrieg
+			focus = WGR_Training_of_the_Elites
+		}
+		x = 20
+		y = 14
+			completion_reward = {
+					create_wargoal = {
+							type = puppet_wargoal_focus
+							target = DDR
+						}
+				}
+			ai_will_do = {
+					factor = 0
+					modifier = {
+							is_historical_focus_on = no
+							factor = 1
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_War_Plan_A
+		icon = GFX_goal_generic_major_war
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Modern_Blitzkrieg
+			focus = WGR_Training_of_the_Elites
+		}
+		x = 22
+		y = 14
+			completion_reward = {
+					create_wargoal = {
+							type = annex_everything
+							target = DDR
+						}
+				}
+			ai_will_do = {
+					factor = 0
+					modifier = {
+							is_historical_focus_on = no
+							factor = 1
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Duty_to_Conscience
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Volks_Oath
+		}
+		x = 26
+		y = 7
+			completion_reward = {
+					add_ideas = Duty_to_Conscience
+					add_political_power = 100
+				}
+
+	}
+	focus = {
+		id = WGR_Why_we_Fight
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Duty_to_Conscience
+		}
+		x = 26
+		y = 8
+			completion_reward = {
+					add_ideas = Why_we_Fight
+					add_manpower = 10000
+				}
+
+	}
+	focus = {
+		id = WGR_Tank_Design_Competition
+		icon = GFX_goal_generic_build_tank
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Fortifying_the_Border
+		}
+		prerequisite = {
+			focus = WGR_Krauss_Maffei_Tank_Factories
+		}
+		x = 30
+		y = 6
+			completion_reward = {
+					add_tech_bonus = {
+							name = Tank_Design_Competition
+							uses = 1
+							bonus = 1
+							category = armor
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Mobilizing_the_Reserves
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Why_we_Fight
+			focus = WGR_Peoples_Army
+		}
+		x = 26
+		y = 9
+			available = {
+					has_war = yes
+				}
+			completion_reward = {
+					add_manpower = 100000
+				}
+
+	}
+	focus = {
+		id = WGR_Forced_Mobilization
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Why_we_Fight
+			focus = WGR_Peoples_Army
+		}
+		x = 28
+		y = 9
+			completion_reward = {
+					add_manpower = 200000
+				}
+
+	}
+	focus = {
+		id = WGR_Krauss_Maffei_Tank_Factories
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_National_Employment_Program
+		}
+		x = 32
+		y = 5
+			completion_reward = {
+					53 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = arms_factory
+											level = 3
+											instant_build = yes
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Industrial_Expansion_Plans
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Krauss_Maffei_Tank_Factories
+		}
+		x = 32
+		y = 6
+			completion_reward = {
+					add_tech_bonus = {
+							name = Industry
+							bonus = 0.5
+							uses = 1
+							category = industry
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Man_Engine_and_Machine
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Industrial_Expansion_Plans
+		}
+		x = 32
+		y = 7
+			completion_reward = {
+					52 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_extra_state_shared_building_slots = 4
+									add_building_construction = {
+											type = industrial_complex
+											level = 4
+											instant_build = yes
+										}
+								}
+						}
+					add_tech_bonus = {
+							name = Man_Machine
+							uses = 1
+							bonus = 0.5
+							category = cv_tech
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Basf
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Man_Engine_and_Machine
+		}
+		prerequisite = {
+			focus = WGR_More_Industry_in_Nordrhein-Westfalen
+		}
+		x = 33
+		y = 8
+			completion_reward = {
+					51 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_extra_state_shared_building_slots = 2
+									add_building_construction = {
+											type = industrial_complex
+											level = 2
+											instant_build = yes
+										}
+								}
+						}
+					51 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_extra_state_shared_building_slots = 2
+									add_building_construction = {
+											type = arms_factory
+											level = 2
+											instant_build = yes
+										}
+								}
+						}
+					51 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_resource = {
+											type = Rubber
+											amount = 16
+										}
+								}
+						}
+					51 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_resource = {
+											type = oil
+											amount = 6
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = WGR_Naval_Leadership_Reforms
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Reorganize_the_Navy
+		}
+		x = 51
+		y = 4
+			completion_reward = {
+					add_ideas = WGR_Leadership_Reforms
+				}
+
+	}
+	focus = {
+		id = WGR_annex_saarland
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_Protest_Foreign_Troop_Stationing
+		}
+		x = 18
+		y = 10
+		completion_reward = {
+			annex_country = { target = SAR }
+		}
+	}
+	focus = {
+		id = WGR_Reunification_of_the_Reich
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = WGR_annex_saarland
+		}
+		prerequisite = {
+			focus = WGR_East_German_Revolution
+		}
+		x = 17
+		y = 11
+		completion_reward = {
+			annex_country = { target = DDR }
+		}
+	}
+	focus = {
+	    id = WGR_A_New_Fuhrer
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = WGR_Reunification_of_the_Reich }
+		mutually_exclusive = {
+			focus = WGR_Expedition_to_South_America
+		}
+		x = 18
+		y = 12
+		cost = 4
+		completion_reward = {
+		    WGR = {
+		        country_event = { days = 1 id = ddr.22 } 
+		    }
+		}
+	}
+	focus = {
+	    id = WGR_Expedition_to_South_America
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = WGR_Reunification_of_the_Reich }
+		mutually_exclusive = {
+			focus = WGR_A_New_Fuhrer
+		}
+		x = 16
+		y = 12
+		cost = 4
+		completion_reward = {
+		    WGR = {
+		        country_event = { days = 1 id = hitler.1 } 
+		    }
+		}
+	}
+}

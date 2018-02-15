@@ -1,0 +1,23 @@
+
+ai_historical_focus_list_KPA = {
+	ai_national_focuses = {
+		# grab as fast as you can if available
+		KPA_Consolidate_Power
+		KPA_Korean_Communism
+		KPA_Empower_the_Guerilas
+		KPA_Initiate_the_Kim_Cult
+		KPA_Songun
+		KPA_Juche
+		KPA_Nationalize_Military_Industry
+		KPA_Korean_Peoples_Army
+		KPA_Ready_for_War
+		KPA_Ask_Soviets_for_Endorsement
+		KPA_Ask_Mao_for_Endorsement
+		KPA_One_Korea_Under_Kim
+		KPA_Push_to_Busan
+		KPA_Chinese_Armed_Divisions
+		KPA_Soviet_Armed_Divisions
+		KPA_Ideological_Fanaticism
+		KPA_Rebuild_the_Nation
+	}
+}

@@ -1,0 +1,44 @@
+ideas = {
+	
+	country = {
+
+		CHI_disorganized_military = {
+			
+			allowed = { always = yes }
+
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = -0.10
+				army_morale_factor = -0.10
+				army_org = -5.00
+			}
+
+			picture = generic_morale_bonus
+		}
+
+		chinese_advisors = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			removal_cost = -1
+			
+			research_bonus = {
+				land_doctrine = 0.07
+			}
+			research_bonus = {
+				infantry_weapons = 0.07
+			}			
+		}
+	}
+}

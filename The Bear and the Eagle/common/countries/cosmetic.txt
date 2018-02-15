@@ -1,0 +1,133 @@
+DDR_Occupation = {
+    color = rgb { 125  13  24 }
+    color_ui = rgb { 255 73 121 }
+}
+WGR_fascist = {
+	color = HSV { 0.1 0.15 0.4 }
+	color_ui = rgb { 138 155 116 }
+}
+DDR_fascist = {
+	color = HSV { 0.1 0.15 0.4 }
+	color_ui = rgb { 138 155 116 }
+}
+YEM_ENG = {
+	color = rgb { 201 56 93 }
+	color_ui = rgb { 255 73 121 }
+}
+ZIM_AGI = {
+	color = rgb { 238 194 141 }
+	color_ui = rgb { 238 194 141 }
+}
+ZIM_MAT = {
+	color = rgb { 255 160 160 }
+	color_ui = rgb { 255 160 160 }
+}
+UGA_ENG = {
+	color = rgb { 201 56 93 }
+	color_ui = rgb { 255 73 121 }
+}
+SUD_ENG = {
+	color = rgb { 201 56 93 }
+	color_ui = rgb { 255 73 121 }
+}
+BEN_FRA = {
+	color = rgb { 57 113 228 }
+	color_ui = rgb { 74 147 255 }
+}
+GUI_FRA = {
+	color = rgb { 57 113 228 }
+	color_ui = rgb { 74 147 255 }
+}
+CSRHO = {
+	color = rgb { 201 56 93 }
+	color_ui = rgb { 255 73 121 }
+}
+ZAM_ENG = {
+	color = rgb { 201 56 93 }
+	color_ui = rgb { 255 73 121 }
+}
+Allows civil war to take cosmetic tag of ZIM
+ZIM = {
+	color = rgb { 255  204  51 }
+	color_ui = rgb { 255  204  51 }
+}
+ZIM_ENG = {
+	color = rgb { 201 56 93 }
+	color_ui = rgb { 255 73 121 }
+}
+FRN = {
+	color = rgb { 201 126 93 }
+	color_ui = rgb { 255 73 121 }
+}
+RHO = {
+	color = rgb { 140 255 94 }
+	color_ui = rgb { 187 255 160 }
+}
+CHA_FRA = {
+	color = rgb { 57 113 228 }
+	color_ui = rgb { 74 147 255 }
+}
+NRH = {
+	color = rgb { 201 56 93 }
+	color_ui = rgb { 255 73 121 }
+}
+SEN_FRA = {
+	color = rgb { 57 113 228 }
+	color_ui = rgb { 74 147 255 }
+}
+TOG_FRA = {
+	color = rgb { 57 113 228 }
+	color_ui = rgb { 74 147 255 }
+}
+NYA_ENG = {
+	color = rgb { 201 56 93 }
+	color_ui = rgb { 255 73 121 }
+}
+NIG_FRA = {
+	color = rgb { 57 113 228 }
+	color_ui = rgb { 74 147 255 }
+}
+NIA_ENG = {
+	color = rgb { 201 56 93 }
+	color_ui = rgb { 255 73 121 }
+}
+MLI_FRA = {
+	color = rgb { 57 113 228 }
+	color_ui = rgb { 74 147 255 }
+}
+MAU_FRA = {
+	color = rgb { 57 113 228 }
+	color_ui = rgb { 74 147 255 }
+}
+KNA_ENG = {
+	color = rgb { 201 56 93 }
+	color_ui = rgb { 255 73 121 }
+}
+CTD_FRA = {
+	color = rgb { 57 113 228 }
+	color_ui = rgb { 74 147 255 }
+}
+BRK_FRA = {
+	color = rgb { 57 113 228 }
+	color_ui = rgb { 74 147 255 }
+}
+ENG_BOT = {
+	color = rgb { 201 56 93 }
+	color_ui = rgb { 255 73 121 }
+}
+INS_HOL = {
+	color = rgb { 203 138 74 }
+	color_ui = rgb { 255 179 96 }
+}
+ENG_FBU = {
+	color = rgb { 201 56 93 }
+	color_ui = rgb { 255 73 121 }
+}
+WGR_Became_Germany = {
+	color = rgb { 128 128 128 }
+	color_ui = rgb { 138 155 116 }
+}
+DDR_Became_Germany = {
+	color = rgb { 128 128 128 }
+	color_ui = rgb { 138 155 116 }
+}

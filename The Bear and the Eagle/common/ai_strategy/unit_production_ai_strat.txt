@@ -1,0 +1,2835 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+# contain
+# area_priority
+
+
+unit_production_rate_china_peace = {
+	enable = {
+ 	has_war = no	
+		OR = {
+			original_tag = PRC
+			original_tag = CHI
+		}
+		AND = {
+			has_army_manpower = { size > 2500000 }
+			num_divisions > 220	
+		}
+	}
+	abort = {
+ 	has_war = yes
+	}
+	ai_strategy = {
+		type = build_army
+		id = paratroopers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 1
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mountaineers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized
+		value = 2
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized
+		value = 3
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_heavy
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_airborne
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_marine
+		value = 1
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_armor
+		value = 2
+	}
+	ai_strategy = {
+		type = build_army
+		id = artillery_brigade
+		value = 1
+	}
+	ai_strategy = {
+		type = build_army
+		id = rocket_artillery_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized_rocket_brigade
+		value = 1
+	}
+	ai_strategy = {
+		type = build_army
+		id = cavalry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = heavy_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_tank_destroyer_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = militia
+		value = 0
+	}	
+}
+unit_production_rate_china_war = {
+	enable = {
+ 	has_war = yes	
+		OR = {
+			original_tag = PRC
+			original_tag = CHI
+		}
+		AND = {
+			has_army_manpower = { size > 25000000 }
+			num_divisions > 650	
+		}
+	}
+	abort = {
+ 	has_war = no
+	}
+	ai_strategy = {
+		type = build_army
+		id = paratroopers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 1
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mountaineers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized
+		value = 2
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized
+		value = 3
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_heavy
+		value = 1
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_airborne
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_marine
+		value = 1
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_armor
+		value = 2
+	}
+	ai_strategy = {
+		type = build_army
+		id = artillery_brigade
+		value = 1
+	}
+	ai_strategy = {
+		type = build_army
+		id = rocket_artillery_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized_rocket_brigade
+		value = 1
+	}
+	ai_strategy = {
+		type = build_army
+		id = cavalry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = heavy_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_tank_destroyer_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = militia
+		value = 0
+	}	
+}
+unit_production_tier_one_peace = {
+	enable = {
+ 	has_war = no	
+		OR = {
+			original_tag = PAK
+			original_tag = KPA
+			original_tag = VIN
+			original_tag = VIE
+			original_tag = BAN
+		}
+		AND = {
+			has_army_manpower = { size > 800000 }
+			num_divisions > 45		
+		}
+	}
+	abort = {
+ 	has_war = yes
+	}
+	ai_strategy = {
+		type = build_army
+		id = paratroopers
+		value = 1
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 1
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mountaineers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized
+		value = 3
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized
+		value = 3
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_heavy
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_airborne
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_armor
+		value = 2
+	}
+	ai_strategy = {
+		type = build_army
+		id = artillery_brigade
+		value = 1
+	}
+	ai_strategy = {
+		type = build_army
+		id = rocket_artillery_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized_rocket_brigade
+		value = 1
+	}
+	ai_strategy = {
+		type = build_army
+		id = cavalry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = heavy_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_tank_destroyer_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = militia
+		value = 0
+	}	
+}
+unit_production_tier_one_war = {
+	enable = {
+ 	has_war = yes	
+		OR = {
+			original_tag = PAK
+			original_tag = KPA
+			original_tag = VIN
+			original_tag = VIE
+			original_tag = BAN
+		}
+		AND = {
+			has_army_manpower = { size > 1800000 }
+			num_divisions > 100		
+		}
+	}
+	abort = {
+ 	has_war = no
+	}
+	ai_strategy = {
+		type = build_army
+		id = paratroopers
+		value = 1
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 1
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mountaineers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized
+		value = 3
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized
+		value = 3
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_heavy
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_airborne
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_armor
+		value = 2
+	}
+	ai_strategy = {
+		type = build_army
+		id = artillery_brigade
+		value = 1
+	}
+	ai_strategy = {
+		type = build_army
+		id = rocket_artillery_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized_rocket_brigade
+		value = 1
+	}
+	ai_strategy = {
+		type = build_army
+		id = cavalry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = heavy_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_tank_destroyer_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = militia
+		value = 0
+	}	
+}
+unit_production_rate_usa_peace = {
+	enable = {
+ 	has_war = no	
+		original_tag = USA
+		AND = {
+			has_army_manpower = { size > 900000 }
+			num_divisions > 60	
+		}
+	}
+	abort = {
+ 	has_war = yes
+	}
+	ai_strategy = {
+		type = build_army
+		id = paratroopers
+		value = 1
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mountaineers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized
+		value = 2
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized
+		value = 3
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_heavy
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_airborne
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_armor
+		value = 2
+	}
+	ai_strategy = {
+		type = build_army
+		id = artillery_brigade
+		value = 1
+	}
+	ai_strategy = {
+		type = build_army
+		id = rocket_artillery_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized_rocket_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = cavalry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = heavy_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_tank_destroyer_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = militia
+		value = 0
+	}	
+}
+unit_production_rate_usa_war = {
+	enable = {
+ 	has_war = yes	
+		original_tag = USA
+		AND = {
+			has_army_manpower = { size > 4500000 }
+			num_divisions > 220	
+		}
+	}
+	abort = {
+ 	has_war = no
+	}
+	ai_strategy = {
+		type = build_army
+		id = paratroopers
+		value = 1
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mountaineers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized
+		value = 2
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized
+		value = 3
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_heavy
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_airborne
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_armor
+		value = 2
+	}
+	ai_strategy = {
+		type = build_army
+		id = artillery_brigade
+		value = 1
+	}
+	ai_strategy = {
+		type = build_army
+		id = rocket_artillery_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized_rocket_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = cavalry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = heavy_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_tank_destroyer_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = militia
+		value = 0
+	}	
+}
+unit_production_rate_sov_peace = {
+	enable = {
+ 	has_war = no	
+		original_tag = SOV
+		AND = {
+			has_army_manpower = { size > 2500000 }
+			num_divisions > 140			
+		}
+	}
+	abort = {
+ 	has_war = yes
+	}
+	ai_strategy = {
+		type = build_army
+		id = paratroopers
+		value = 1
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 1
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = marine
+		value = 1
+	}
+	ai_strategy = {
+		type = build_army
+		id = mountaineers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized
+		value = 2
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized
+		value = 3
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_heavy
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_airborne
+		value = 2
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_marine
+		value = 1
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_armor
+		value = 3
+	}
+	ai_strategy = {
+		type = build_army
+		id = artillery_brigade
+		value = 1
+	}
+	ai_strategy = {
+		type = build_army
+		id = rocket_artillery_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized_rocket_brigade
+		value = 1
+	}
+	ai_strategy = {
+		type = build_army
+		id = cavalry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = heavy_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_tank_destroyer_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = militia
+		value = 0
+	}	
+}
+unit_production_rate_sov_war = {
+	enable = {
+ 	has_war = yes	
+		original_tag = SOV
+		AND = {
+			has_army_manpower = { size > 8000000 }
+			num_divisions > 380		
+		}
+	}
+	abort = {
+ 	has_war = no
+	}
+	ai_strategy = {
+		type = build_army
+		id = paratroopers
+		value = 1
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = marine
+		value = 1
+	}
+	ai_strategy = {
+		type = build_army
+		id = mountaineers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized
+		value = 2
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized
+		value = 3
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_heavy
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_airborne
+		value = 2
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_armor
+		value = 3
+	}
+	ai_strategy = {
+		type = build_army
+		id = artillery_brigade
+		value = 1
+	}
+	ai_strategy = {
+		type = build_army
+		id = rocket_artillery_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized_rocket_brigade
+		value = 1
+	}
+	ai_strategy = {
+		type = build_army
+		id = cavalry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = heavy_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_tank_destroyer_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = militia
+		value = 0
+	}	
+}
+unit_production_rate_indonesia_peace = {
+	enable = {
+ 	has_war = no	
+		OR = {
+			original_tag = INS
+			original_tag = INO
+		}
+		AND = {
+			has_army_manpower = { size > 500000 }
+			num_divisions > 34	
+		}
+	}
+	abort = {
+ 	has_war = yes
+	}
+	ai_strategy = {
+		type = build_army
+		id = paratroopers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mountaineers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_heavy
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_airborne
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = artillery_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = rocket_artillery_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized_rocket_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = cavalry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = heavy_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_tank_destroyer_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = militia
+		value = 0
+	}	
+}
+unit_production_rate_indonesia_war = {
+	enable = {
+ 	has_war = yes	
+		OR = {
+			original_tag = INS
+			original_tag = INO
+		}
+		AND = {
+			has_army_manpower = { size > 2500000 }
+			num_divisions > 160		
+		}
+	}
+	abort = {
+ 	has_war = no
+	}
+	ai_strategy = {
+		type = build_army
+		id = paratroopers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mountaineers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_heavy
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_airborne
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = artillery_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = rocket_artillery_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized_rocket_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = cavalry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = heavy_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_tank_destroyer_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = militia
+		value = 0
+	}	
+}
+unit_production_rate_tier_two_peace = {
+	enable = {
+ 	has_war = no	
+		OR = {
+			original_tag = ENG
+			original_tag = FRA
+			original_tag = KOR
+			original_tag = JAP
+		}
+		AND = {
+			has_army_manpower = { size > 600000 }
+			num_divisions > 40		
+		}
+	}
+	abort = {
+ 	has_war = yes
+	}
+	ai_strategy = {
+		type = build_army
+		id = paratroopers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mountaineers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_heavy
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_airborne
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = artillery_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = rocket_artillery_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized_rocket_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = cavalry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = heavy_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_tank_destroyer_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = militia
+		value = 0
+	}	
+}
+unit_production_rate_tier_two_war = {
+	enable = {
+ 	has_war = yes	
+		OR = {
+			original_tag = ENG
+			original_tag = FRA
+			original_tag = KOR
+			original_tag = JAP
+		}
+		AND = {
+			has_army_manpower = { size > 1800000 }
+			num_divisions > 100		
+		}
+	}
+	abort = {
+ 	has_war = no
+	}
+	ai_strategy = {
+		type = build_army
+		id = paratroopers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mountaineers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_heavy
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_airborne
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = artillery_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = rocket_artillery_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized_rocket_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = cavalry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = heavy_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_tank_destroyer_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = militia
+		value = 0
+	}	
+}
+unit_production_rate_tier_three_peace = {
+	enable = {
+ 	has_war = no	
+		OR = {
+			original_tag = BRA
+			original_tag = MEX
+			original_tag = TUR
+		}
+		AND = {
+			has_army_manpower = { size > 400000 }
+			num_divisions > 30	
+		}
+	}
+	abort = {
+ 	has_war = yes
+	}
+	ai_strategy = {
+		type = build_army
+		id = paratroopers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mountaineers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_heavy
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_airborne
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = artillery_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = rocket_artillery_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized_rocket_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = cavalry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = heavy_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_tank_destroyer_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = militia
+		value = 0
+	}		
+}
+unit_production_rate_tier_three_war = {
+	enable = {
+ 	has_war = yes	
+		OR = {
+			original_tag = BRA
+			original_tag = MEX
+			original_tag = TUR
+		}
+		AND = {
+			has_army_manpower = { size > 1000000 }
+			num_divisions > 75	
+		}
+	}
+	abort = {
+ 	has_war = no
+	}
+	ai_strategy = {
+		type = build_army
+		id = paratroopers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mountaineers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_heavy
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_airborne
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = artillery_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = rocket_artillery_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized_rocket_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = cavalry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = heavy_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_tank_destroyer_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = militia
+		value = 0
+	}		
+}
+unit_production_rate_tier_four_peace = {
+	enable = {
+ 	has_war = no	
+		OR = {
+			original_tag = POL
+			original_tag = SPR
+			original_tag = ITA
+			original_tag = WGR
+			original_tag = ARG
+			original_tag = EGY
+			original_tag = MAL
+			original_tag = MLA
+			original_tag = SAF
+			original_tag = PER
+			original_tag = SUD
+			original_tag = ALG
+			original_tag = SIA
+			original_tag = NIG
+			original_tag = PHI
+			original_tag = YUG
+			original_tag = ISR
+		}
+		AND = {
+			has_army_manpower = { size > 400000 }
+			num_divisions > 25		
+		}
+	}
+	abort = {
+ 	has_war = yes
+	}
+	ai_strategy = {
+		type = build_army
+		id = paratroopers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mountaineers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_heavy
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_airborne
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = artillery_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = rocket_artillery_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized_rocket_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = cavalry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = heavy_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_tank_destroyer_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = militia
+		value = 0
+	}	
+}
+unit_production_rate_tier_four_war = {
+	enable = {
+	 	has_war = yes
+		OR = {
+			original_tag = POL
+			original_tag = SPR
+			original_tag = ITA
+			original_tag = WGR
+			original_tag = ARG
+			original_tag = EGY
+			original_tag = MAL
+			original_tag = MLA
+			original_tag = SAF
+			original_tag = PER
+			original_tag = SUD
+			original_tag = ALG
+			original_tag = SIA
+			original_tag = NIG
+			original_tag = PHI
+			original_tag = YUG
+			original_tag = ISR
+		}
+		AND = {
+			has_army_manpower = { size > 900000 }
+			num_divisions > 50	
+		}
+	}
+	abort = {
+ 	has_war = no
+	}
+	ai_strategy = {
+		type = build_army
+		id = paratroopers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mountaineers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_heavy
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_airborne
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = artillery_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = rocket_artillery_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized_rocket_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = cavalry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = heavy_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_tank_destroyer_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = militia
+		value = 0
+	}	
+}
+unit_production_rate_tier_five_peace = {
+	enable = {
+ 	has_war = no	
+		OR = {
+			original_tag = PDG
+			original_tag = GRE
+			original_tag = CZE
+			original_tag = ROM
+			original_tag = AST
+			original_tag = ARG
+			original_tag = DDR
+			original_tag = FIN
+			original_tag = LBA
+			original_tag = SYR
+			original_tag = LOS
+			original_tag = CMB
+			original_tag = SWI
+			original_tag = TUN
+			original_tag = JOR
+			original_tag = HOL
+			original_tag = COL
+			original_tag = PRU
+			original_tag = VEN
+			original_tag = CHL
+			original_tag = SAU
+			original_tag = MOR
+			original_tag = ANG
+			original_tag = SOR
+			original_tag = DOC
+			original_tag = IRQ
+			original_tag = ETH
+		}
+		AND = {
+			has_army_manpower = { size > 300000 }
+			num_divisions > 18		
+		}
+	}
+	abort = {
+ 	has_war = yes
+	}
+	ai_strategy = {
+		type = build_army
+		id = paratroopers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mountaineers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_heavy
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_airborne
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = artillery_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = rocket_artillery_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized_rocket_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = cavalry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = heavy_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_tank_destroyer_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = militia
+		value = 0
+	}	
+}
+unit_production_rate_tier_five_war = {
+	enable = {
+ 	has_war = yes	
+		OR = {
+			original_tag = PDG
+			original_tag = GRE
+			original_tag = CZE
+			original_tag = ROM
+			original_tag = AST
+			original_tag = ARG
+			original_tag = DDR
+			original_tag = FIN
+			original_tag = LBA
+			original_tag = SYR
+			original_tag = LOS
+			original_tag = CMB
+			original_tag = SWI
+			original_tag = TUN
+			original_tag = JOR
+			original_tag = HOL
+			original_tag = COL
+			original_tag = PRU
+			original_tag = VEN
+			original_tag = CHL
+			original_tag = SAU
+			original_tag = MOR
+			original_tag = ANG
+			original_tag = SOR
+			original_tag = DOC
+			original_tag = IRQ
+			original_tag = ETH
+		}
+		AND = {
+			has_army_manpower = { size > 750000 }
+			num_divisions > 35		
+		}
+	}
+	abort = {
+ 	has_war = no
+	}
+	ai_strategy = {
+		type = build_army
+		id = paratroopers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mountaineers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_heavy
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_airborne
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = artillery_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = rocket_artillery_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized_rocket_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = cavalry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = heavy_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_tank_destroyer_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = militia
+		value = 0
+	}	
+}
+unit_production_rate_tier_six_peace = {
+	enable = {
+ 	has_war = no	
+		OR = {
+			original_tag = HUN
+			original_tag = BUL
+			original_tag = NZL
+			original_tag = SWE
+			original_tag = NOR
+			original_tag = UAE
+			original_tag = BEL
+			original_tag = DEN
+			original_tag = POR
+			original_tag = AFG
+			original_tag = BOL
+			original_tag = AUS
+			original_tag = PAR
+			original_tag = DOM
+			original_tag = GUA
+			original_tag = CUB
+		}
+		AND = {
+			has_army_manpower = { size > 180000 }
+			num_divisions > 10
+		}
+	}
+	abort = {
+ 	has_war = yes
+	}
+	ai_strategy = {
+		type = build_army
+		id = paratroopers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mountaineers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_heavy
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_airborne
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = artillery_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = rocket_artillery_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized_rocket_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = cavalry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = heavy_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_tank_destroyer_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = militia
+		value = 0
+	}	
+}
+unit_production_rate_tier_six_war = {
+	enable = {
+ 	has_war = yes	
+		OR = {
+			original_tag = HUN
+			original_tag = BUL
+			original_tag = NZL
+			original_tag = SWE
+			original_tag = NOR
+			original_tag = UAE
+			original_tag = BEL
+			original_tag = DEN
+			original_tag = POR
+			original_tag = AFG
+			original_tag = BOL
+			original_tag = AUS
+			original_tag = PAR
+			original_tag = DOM
+			original_tag = GUA
+			original_tag = CUB
+		}
+		AND = {
+			has_army_manpower = { size > 475000 }
+			num_divisions > 25	
+		}
+	}
+	abort = {
+ 	has_war = no
+	}
+	ai_strategy = {
+		type = build_army
+		id = paratroopers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mountaineers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_heavy
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_airborne
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = artillery_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = rocket_artillery_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized_rocket_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = cavalry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = heavy_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_tank_destroyer_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = militia
+		value = 0
+	}	
+}
+unit_production_rate_tier_seven_peace = {
+	enable = {
+ 	has_war = no	
+		OR = {
+			original_tag = ALB
+			original_tag = KUW
+			original_tag = IRE
+			original_tag = ELS
+			original_tag = HAI
+			original_tag = HON
+			original_tag = JAM
+			original_tag = NIC
+			original_tag = PAN
+			original_tag = TIB
+			original_tag = YEM
+			original_tag = DRY
+			original_tag = OMA
+			original_tag = CYP
+			original_tag = NEP
+		}
+		AND = {
+			has_army_manpower = { size > 75000 }
+			num_divisions > 6	
+		}
+	}
+	abort = {
+ 	has_war = yes
+	}
+	ai_strategy = {
+		type = build_army
+		id = paratroopers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mountaineers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_heavy
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_airborne
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = artillery_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = rocket_artillery_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized_rocket_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = cavalry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = heavy_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_tank_destroyer_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = militia
+		value = 0
+	}	
+}
+unit_production_rate_tier_seven_war = {
+	enable = {
+ 	has_war = yes	
+		OR = {
+			original_tag = ALB
+			original_tag = KUW
+			original_tag = IRE
+			original_tag = ELS
+			original_tag = HAI
+			original_tag = HON
+			original_tag = JAM
+			original_tag = NIC
+			original_tag = PAN
+			original_tag = TIB
+			original_tag = YEM
+			original_tag = DRY
+			original_tag = OMA
+			original_tag = CYP
+			original_tag = NEP
+		}
+		AND = {
+			has_army_manpower = { size > 165000 }
+			num_divisions > 12		
+		}
+	}
+	abort = {
+ 	has_war = no
+	}
+	ai_strategy = {
+		type = build_army
+		id = paratroopers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mountaineers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_heavy
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_airborne
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = artillery_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = rocket_artillery_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized_rocket_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = cavalry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = heavy_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_tank_destroyer_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = militia
+		value = 0
+	}	
+}
+unit_production_rate_tier_eight_peace = {
+	enable = {
+ 	has_war = no	
+		OR = {
+			original_tag = LUX
+			original_tag = BHU
+			original_tag = ICE
+			original_tag = AND
+			original_tag = TTP
+		}
+		AND = {
+			has_army_manpower = { size > 10000 }
+			num_divisions > 2
+		}
+	}
+	abort = {
+ 	has_war = yes
+	}
+	ai_strategy = {
+		type = build_army
+		id = paratroopers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mountaineers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_heavy
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_airborne
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = artillery_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = rocket_artillery_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized_rocket_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = cavalry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = heavy_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_tank_destroyer_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = militia
+		value = 0
+	}	
+}
+unit_production_rate_tier_eight_war = {
+	enable = {
+ 	has_war = yes	
+		OR = {
+			original_tag = LUX
+			original_tag = BHU
+			original_tag = ICE
+			original_tag = AND
+			original_tag = TTP
+		}
+		AND = {
+			has_army_manpower = { size > 30000 }
+			num_divisions > 4	
+		}
+	}
+	abort = {
+ 	has_war = no
+	}
+	ai_strategy = {
+		type = build_army
+		id = paratroopers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_infantry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mountaineers
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_heavy
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_airborne
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = mechanized_marine
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = light_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = artillery_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = rocket_artillery_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = motorized_rocket_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = cavalry
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = heavy_armor
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = medium_tank_destroyer_brigade
+		value = 0
+	}
+	ai_strategy = {
+		type = build_army
+		id = militia
+		value = 0
+	}	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

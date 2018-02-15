@@ -1,0 +1,1574 @@
+focus_tree = {
+	id = saf_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 100
+			tag = SAF
+		}
+	}
+		continuous_focus_position = { x = 80 y = 1400 }
+	
+			focus = {
+		id = SAF_malan_reform
+		icon = GFX_goal_generic_demand_territory
+		x = 3
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+		available = {
+		always = no
+		}
+		bypass = {
+		has_country_flag = saf_malan
+		}
+
+		completion_reward = {
+		}
+
+	}
+	focus = {
+		id = SAF_implement_apartheid
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		prerequisite = { focus = SAF_malan_reform }
+		x = 3
+		y = 1
+		cost = 30
+
+		available_if_capitulated = yes
+		available = {
+		has_country_flag = saf_malan
+		}
+
+
+		completion_reward = {
+		add_political_power = 200
+		add_ideas = saf_apartheid_1
+		}
+
+	}
+		focus = {
+		id = SAF_ban_communism
+		icon = GFX_goal_anti_comintern_pact
+		prerequisite = { focus = SAF_malan_reform }
+		x = 1
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+		available = {
+		has_country_flag = saf_malan
+		}
+
+
+		completion_reward = {
+		add_political_power = 50
+		add_opinion_modifier = { target = SOV modifier = protest_soviet }
+		SOV = { add_opinion_modifier = { target = SAF modifier = protest_soviet } }
+		}
+
+	}
+			focus = {
+		id = SAF_arrest_opp_leaders
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = { focus = SAF_ban_communism }
+		x = 1
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes
+		available = {
+		has_country_flag = saf_malan
+		}
+
+		completion_reward = {
+		add_political_power = -50
+		add_ideas = saf_arrest_opp_lead
+		}
+
+	}
+	focus = {
+		id = SAF_strijdom
+		icon = GFX_goal_generic_demand_territory
+		x = 2
+		y = 3
+		cost = 10
+
+		available_if_capitulated = yes
+		available = {
+		always = no
+		}
+		bypass = {
+		has_country_flag = saf_strijdom
+		}
+
+		completion_reward = {
+		}
+
+	}
+	focus = {
+		id = SAF_debritishization
+		icon = GFX_focus_AST_never_gallipoli
+		prerequisite = { focus = SAF_strijdom }
+		x = 1
+		y = 4
+		cost = 10
+
+		available_if_capitulated = yes
+		available = {
+		}
+
+		completion_reward = {
+		add_national_unity = 0.1
+		add_political_power = 100
+		}
+
+	}
+	focus = {
+		id = SAF_set_majority_to18
+		icon = GFX_focus_generic_the_giant_wakes
+		prerequisite = { focus = SAF_strijdom }
+		x = 3
+		y = 4
+		cost = 10
+
+		available_if_capitulated = yes
+		available = {
+		}
+
+		completion_reward = {
+		add_popularity = {
+		ideology = neutrality
+		popularity = 0.03
+		}
+		}
+
+	}
+	focus = {
+		id = SAF_verwoerd
+		icon = GFX_goal_generic_demand_territory
+		x = 2
+		y = 5
+		cost = 10
+
+		available_if_capitulated = yes
+		available = {
+		always = no
+		}
+		bypass = {
+		has_country_flag = saf_verwoerd
+		}
+
+		completion_reward = {
+		}
+
+	}
+	focus = {
+		id = SAF_strengthen_apartheid
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = SAF_verwoerd }
+		x = 3
+		y = 6
+		cost = 10
+
+		available_if_capitulated = yes
+		available = {
+		}
+
+		completion_reward = {
+		add_political_power = 100
+		}
+
+	}
+	focus = {
+		id = SAF_proclaim_republic
+		icon = GFX_goal_tfv_sever_ties_with_uk
+		prerequisite = { focus = SAF_verwoerd }
+		x = 1
+		y = 6
+		cost = 10
+
+		available_if_capitulated = yes
+		available = {
+		}
+
+		completion_reward = {
+		add_political_power = -50
+		add_national_unity = -0.05
+		}
+
+	}
+	
+			focus = {
+		id = SAF_ind_one
+		icon = GFX_goal_generic_production
+		x = 8
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_political_power = 50
+		add_timed_idea = { idea = saf_eco_boom days = 400 }
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+		}
+
+	}
+				focus = {
+		id = SAF_apartheid_economics
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite =  { focus = SAF_ind_one }
+		x = 6
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+		available = {
+		has_idea = saf_apartheid_1
+		}
+
+		completion_reward = {
+		add_ideas = saf_apartheid_economics
+		}
+
+	}
+					focus = {
+		id = SAF_expand_rand_mines
+		icon = GFX_goal_generic_construction2
+		prerequisite =  { focus = SAF_ind_one }
+		x = 11
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_ideas = saf_exp_gold
+		add_resource = {
+		type = steel
+		state = 681
+		amount = 16
+		}
+		}
+
+	}
+						focus = {
+		id = SAF_dig_for_chrom
+		icon = GFX_goal_generic_construction2
+		prerequisite =  { focus = SAF_expand_rand_mines }
+		x = 11
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_resource = {
+		type = chromium
+		state = 275
+		amount = 32
+		}
+		}
+
+	}
+						focus = {
+		id = SAF_rare_mat
+		icon = GFX_goal_generic_construction2
+		prerequisite =  { focus = SAF_dig_for_chrom }
+		x = 11
+		y = 3
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_resource = {
+		type = aluminium
+		state = 719
+		amount = 16
+		}
+		add_resource = {
+		type = tungsten
+		state = 719
+		amount = 16
+		}
+		}
+
+	}
+		focus = {
+		id = SAF_synth_oil_expl
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite =  { focus = SAF_rare_mat }
+		x = 11
+		y = 4
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		719 = {
+		add_extra_state_shared_building_slots = 2
+									add_building_construction = {
+									type = synthetic_refinery
+									level = 2
+									instant_build = yes
+								}
+		}
+		}
+
+	}
+		focus = {
+		id = SAF_inf_one
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite =  { focus = SAF_ind_one }
+		x = 8
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		541 = {
+									add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+		}
+		}
+
+	}
+		focus = {
+		id = SAF_cic_one
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite =  { focus = SAF_inf_one }
+		x = 7
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		681 = {
+		add_extra_state_shared_building_slots = 1
+									add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+		}
+		}
+
+	}
+		focus = {
+		id = SAF_mil_one
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite =  { focus = SAF_inf_one }
+		x = 9
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		719 = {
+		add_extra_state_shared_building_slots = 1
+									add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+		}
+		}
+
+	}
+		focus = {
+		id = SAF_pret_cape_rail
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite =  { focus = SAF_mil_one focus = SAF_cic_one }
+		x = 8
+		y = 3
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		275 = {
+									add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+		}
+		681 = {
+									add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+		}
+		}
+
+	}
+		focus = {
+		id = SAF_cic_2
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite =  { focus = SAF_pret_cape_rail }
+		x = 7
+		y = 4
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		719 = {
+		add_extra_state_shared_building_slots = 2
+									add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+		}
+
+		}
+
+	}
+		focus = {
+		id = SAF_mil_2
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite =  { focus = SAF_pret_cape_rail }
+		x = 9
+		y = 4
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		681 = {
+		add_extra_state_shared_building_slots = 2
+									add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+		}
+
+		}
+
+	}
+		focus = {
+		id = SAF_mass_effort
+		icon = GFX_goal_generic_construction
+		prerequisite =  { focus = SAF_mil_2 focus = SAF_cic_2 }
+		x = 8
+		y = 5
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		275 = {
+		add_extra_state_shared_building_slots = 4
+									add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+									add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+		}
+
+		}
+
+	}
+		focus = {
+		id = SAF_resarch_slot
+		icon = GFX_focus_research
+		prerequisite =  { focus = SAF_mass_effort }
+		x = 8
+		y = 6
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_research_slot = 1
+
+		}
+
+	}
+		focus = {
+		id = SAF_uranium_mining
+		icon = GFX_goal_generic_construction2
+		prerequisite =  { focus = SAF_synth_oil_expl }
+		x = 11
+		y = 5
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = nuclear_bonus
+				bonus = 0.5
+				uses = 1
+				category = nuclear
+			}
+		}
+
+	}
+		focus = {
+		id = SAF_nuc_coop_with_fgr
+		icon = GFX_focus_wonderweapons
+		prerequisite =  { focus = SAF_uranium_mining focus = SAF_resarch_slot }
+		x = 10
+		y = 7
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = nuclear_bonus
+				bonus = 0.5
+				uses = 2
+				category = nuclear
+			}
+		}
+
+	}
+		focus = {
+		id = SAF_space_1
+		icon = GFX_focus_rocketry
+		prerequisite =  { focus = SAF_resarch_slot }
+		x = 8
+		y = 7
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = space_bonus
+				bonus = 0.5
+				uses = 2
+				category = space_rockets
+			}
+		}
+
+	}
+				focus = {
+		id = SAF_army_review
+		icon = GFX_goal_generic_military_sphere
+		x = 21
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		army_experience = 10
+		navy_experience = 10
+		air_experience = 10
+		}
+
+	}
+	
+			focus = {
+		id = SAF_army_effort
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = SAF_army_review }
+		x = 16
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = army_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+
+	}
+	focus = {
+		id = SAF_gbp_effort
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = SAF_army_effort }
+		mutually_exclusive = { focus = SAF_masse_effort focus = SAF_sfp_effort focus = SAF_mobw_effort }
+		x = 13
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 0.5
+				uses = 2
+				category = cat_grand_battle_plan
+			}
+		}
+	}
+			focus = {
+		id = SAF_planning_effort
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = SAF_gbp_effort }
+		x = 13
+		y = 3
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 0.5
+				uses = 1
+				category = cat_grand_battle_plan
+			}
+			add_ideas = saf_planning_effort
+		}
+	}
+			focus = {
+		id = SAF_masse_effort
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = SAF_army_effort }
+		mutually_exclusive = { focus = SAF_mobw_effort focus = SAF_sfp_effort focus = SAF_gbp_effort }
+		x = 15
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 0.5
+				uses = 2
+				category = cat_mass_assault
+			}
+		}
+	}
+				focus = {
+		id = SAF_consc_effort
+		icon = GFX_goal_tfv_can_compromise_with_quebec
+		prerequisite = { focus = SAF_masse_effort }
+		x = 15
+		y = 3
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 0.5
+				uses = 1
+				category = cat_mass_assault
+			}
+			add_ideas = saf_conscription_effort
+		}
+	}
+			focus = {
+		id = SAF_sfp_effort
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = SAF_army_effort }
+		mutually_exclusive = { focus = SAF_masse_effort focus = SAF_mobw_effort focus = SAF_gbp_effort }
+		x = 17
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 0.5
+				uses = 2
+				category = cat_superior_firepower
+			}
+		}
+	}
+				focus = {
+		id = SAF_artillery_effort
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = SAF_sfp_effort }
+		x = 17
+		y = 3
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 0.5
+				uses = 1
+				category = cat_superior_firepower
+			}
+						add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.5
+				uses = 2
+				category = artillery
+			}
+			add_ideas = saf_artillery_effort
+		}
+	}
+			focus = {
+		id = SAF_mobw_effort
+		icon = GFX_goal_generic_army_motorized
+		mutually_exclusive = { focus = SAF_masse_effort focus = SAF_sfp_effort focus = SAF_gbp_effort }
+		prerequisite = { focus = SAF_army_effort }
+		x = 19
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 0.5
+				uses = 2
+				category = cat_mobile_warfare
+			}
+		}
+	}
+				focus = {
+		id = SAF_armor_effort
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = SAF_mobw_effort }
+		x = 19
+		y = 3
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 0.5
+				uses = 1
+				category = cat_mobile_warfare
+			}
+			add_ideas = saf_armor_bonus
+		}
+	}
+				focus = {
+		id = SAF_army_reform
+		icon = GFX_goal_generic_army_doctrines
+		x = 16
+		y = 4
+		cost = 10
+	prerequisite = { focus = SAF_armor_effort focus = SAF_artillery_effort focus = SAF_consc_effort focus = SAF_planning_effort }
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 25
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 3
+				category = land_doctrine
+			}
+
+			
+		}
+	}
+		focus = {
+		id = SAF_equipment_effort
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = SAF_armor_effort focus = SAF_artillery_effort focus = SAF_consc_effort focus = SAF_planning_effort }
+		x = 14
+		y = 4
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.5
+				uses = 2
+				category = infantry_weapons
+			}
+		}
+	}
+
+
+		focus = {
+		id = SAF_black_consc_yes
+		icon = GFX_focus_generic_little_entente
+		prerequisite = { focus = SAF_armor_effort focus = SAF_artillery_effort focus = SAF_consc_effort focus = SAF_planning_effort }
+		mutually_exclusive = { focus = SAF_black_consc_no }
+		x = 18
+		y = 4
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_ideas = saf_black_consc_yes
+		add_political_power = -100
+		}
+	}
+		focus = {
+		id = SAF_black_consc_no
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = SAF_armor_effort focus = SAF_artillery_effort focus = SAF_consc_effort focus = SAF_planning_effort }
+		mutually_exclusive = { focus = SAF_black_consc_yes }
+		x = 20
+		y = 4
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_political_power = 200
+		}
+	}
+	focus = {
+		id = SAF_aviation_effort
+		icon = GFX_goal_generic_build_airforce
+		prerequisite = { focus = SAF_army_review }
+		x = 23
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+
+		complete_tooltip = {
+			air_experience = 25
+			if = { limit = { has_country_flag = aviation_effort_AB }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}			
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}			
+		}
+
+		completion_reward = {
+			air_experience = 25
+
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = {
+							free_building_slots = {
+								building = air_base
+								size > 1
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+	focus = {
+		id = SAF_air_quantity
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = SAF_aviation_effort }
+		mutually_exclusive = { focus = SAF_air_quality }
+		x = 22
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_ideas = saf_air_quantity
+		}
+	}
+		focus = {
+		id = SAF_air_quality
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = SAF_aviation_effort }
+		mutually_exclusive = { focus = SAF_air_quantity }
+		x = 24
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_ideas = saf_air_quality
+		}
+	}
+
+	focus = {
+		id = SAF_bomber_focus
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = SAF_air_quality focus = SAF_air_quantity }
+		x = 22
+		y = 3
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 0.5
+				uses = 2
+				technology = strategic_bomber1
+				technology = strategic_bomber2
+				technology = strategic_bomber3
+				category = tactical_bomber
+			}
+		}
+	}
+		focus = {
+		id = SAF_fighter_focus
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = SAF_air_quality focus = SAF_air_quantity }
+		x = 24
+		y = 3
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 0.5
+				uses = 2
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+				technology = heavy_fighter1
+				technology = heavy_fighter2
+				technology = heavy_fighter3
+			}
+		}
+	}
+	focus = {
+		id = SAF_CAS_effort
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = SAF_fighter_focus focus = SAF_bomber_focus }
+		x = 23
+		y = 4
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = SAF_rocket_effort
+		icon = GFX_focus_rocketry
+		prerequisite = { focus = SAF_CAS_effort }
+		x = 24
+		y = 5
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = jet_rocket_bonus
+				ahead_reduction = 0.5
+				uses = 2
+				category = rocketry
+				category = jet_technology
+			}
+		}
+	}
+		focus = {
+		id = SAF_NAV_effort
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = { focus = SAF_CAS_effort }
+		x = 22
+		y = 5
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = nav_bomber_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				category = naval_bomber
+			}
+		}
+	}
+			focus = {
+		id = SAF_naval_effort
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = SAF_army_review }
+		x = 27
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+
+		
+		}
+
+		complete_tooltip = {
+			navy_experience = 25
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = dockyard
+				level = 3
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			navy_experience = 25
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					any_owned_state = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						controller = { tag = ROOT }
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+			}			
+		}
+	}
+		focus = {
+		id = SAF_nav_quantity
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = SAF_naval_effort }
+		mutually_exclusive = { focus = SAF_nav_quality }
+		x = 26
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_ideas = saf_nav_quantity
+		}
+	}
+		focus = {
+		id = SAF_nav_quality
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = SAF_naval_effort }
+		mutually_exclusive = { focus = SAF_nav_quantity }
+		x = 28
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_ideas = saf_nav_quality
+		}
+	}
+	focus = {
+		id = SAF_submarine_effort
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = SAF_nav_quality focus = SAF_nav_quantity }
+		x = 28
+		y = 3
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				technology = early_submarine
+				technology = basic_submarine
+				technology = improved_submarine
+				technology = advanced_submarine
+			}
+		}
+	}
+
+	focus = {
+		id = SAF_cruiser_effort
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = SAF_nav_quality focus = SAF_nav_quantity }
+		x = 26
+		y = 3
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				technology = improved_light_cruiser
+				technology = advanced_light_cruiser
+				
+				
+			}
+		}
+	}
+
+	focus = {
+		id = SAF_destroyer_effort
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = SAF_submarine_effort }
+		x = 28
+		y = 4
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				technology = early_destroyer
+				technology = basic_destroyer
+				technology = improved_destroyer
+				technology = advanced_destroyer
+			}
+		}
+	}
+
+	focus = {
+		id = SAF_capital_ships_effort
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = SAF_cruiser_effort }
+		x = 26
+		y = 4
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				technology = battle_cruiser_2
+				technology = early_carrier
+				technology = basic_carrier
+				technology = improved_carrier
+				technology = advanced_carrier
+			}
+		}
+	}
+	focus = {
+		id = SAF_annex_nam
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+	
+		x = 33
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_state_core = 541
+		add_threat = 1
+		}
+	}
+	focus = {
+		id = SAF_status_of_the_protectorates
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = SAF_annex_nam }
+	
+		x = 30
+		y = 1
+		cost = 10
+		ai_will_do = {
+		factor = 0
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_state_core = 772
+		add_state_core = 773
+		transfer_state = 772
+		transfer_state = 773
+		add_threat = 3
+		}
+	}
+	focus = {
+		id = SAF_support_unita_ang
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = SAF_annex_nam }
+		mutually_exclusive = { focus = SAF_support_mpla_ang }
+		available = {
+		country_exists = ANG 
+		NOT = {
+		OR = {
+		has_government = communism
+		has_government = trotskyism
+		
+		}
+		}
+		}
+		x = 32
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		custom_effect_tooltip = saf_wip
+
+		add_threat = 1
+		}
+	}
+	focus = {
+		id = SAF_support_mpla_ang
+		icon = GFX_goal_support_communism
+		prerequisite = { focus = SAF_annex_nam }
+		mutually_exclusive = { focus = SAF_support_unita_ang }
+		available = {
+		country_exists = ANG
+		OR = {
+		has_government = communism
+		has_government = trotskyism
+		
+		}
+		}
+	
+		x = 34
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		custom_effect_tooltip = saf_wip
+
+		add_threat = 1
+		}
+	}
+	focus = {
+		id = SAF_strategic_fallback
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = SAF_support_mpla_ang focus = SAF_support_unita_ang }
+		mutually_exclusive = { focus = SAF_invade_ang }
+		available = {
+		country_exists = ANG
+
+		}
+	
+		x = 32
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		custom_effect_tooltip = saf_wip
+		add_threat = -1
+		}
+	}
+	focus = {
+		id = SAF_invade_ang
+		icon = GFX_goal_continuous_suppression
+		prerequisite = { focus = SAF_support_mpla_ang focus = SAF_support_unita_ang }
+		mutually_exclusive = { focus = SAF_strategic_fallback }
+		available = {
+		country_exists = ANG
+
+		}
+	
+		x = 34
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		custom_effect_tooltip = saf_wip
+		add_threat = 3
+		}
+	}
+
+	focus = {
+		id = SAF_invade_bechuana
+		icon = GFX_goal_anschluss
+		prerequisite = { focus = SAF_annex_nam }
+		available = {
+
+		}
+	
+		x = 36
+		y = 1
+		cost = 10
+		ai_will_do = {
+		factor = 0
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		USA = { remove_from_faction = ROOT }
+		add_threat = 1
+		add_ideas = saf_dont_call_ally
+		BOT = { add_ideas = saf_dont_call_ally }
+		add_state_core = 542
+		declare_war_on = {
+		target = BOT
+		type = annex_everything
+	}
+		}
+	}
+	
+	focus = {
+		id = SAF_invade_south_rhodesia
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = SAF_invade_bechuana }
+		ai_will_do = {
+		factor = 0
+		}
+		available = {
+
+		}
+	
+		x = 36
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+		add_threat = 1
+		add_ideas = saf_dont_call_ally
+		ZIM = { add_ideas = saf_dont_call_ally }
+		add_state_core = 545 
+		declare_war_on = {
+		target = ZIM
+		type = annex_everything
+		}
+	}
+
+

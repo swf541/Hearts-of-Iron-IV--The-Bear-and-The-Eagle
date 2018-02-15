@@ -1,0 +1,219 @@
+equipments = {
+
+	lmg_infantry_equipment = {
+		year = 1928
+
+		is_archetype = yes
+		picture = archetype_infantry_equipment		
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+		
+		interface_category = interface_category_land
+		
+		active = yes
+		
+		#Misc Abilities
+		reliability = 0.9
+		maximum_speed = 4
+
+		#Defensive Abilities
+		defense = 8
+		breakthrough = 0
+		hardness = 0
+		armor_value = 0
+
+		#Offensive Abilities
+		soft_attack = 8
+		hard_attack = 2
+		ap_attack = 1
+		air_attack = 0
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 0.6
+		resources = {
+			tungsten = 2
+			steel = 3
+		}
+	}
+
+	lmg_infantry_equipment_1 = {
+		year = 1928
+
+		archetype = lmg_infantry_equipment
+		priority = 90
+		visual_level = 0
+	}
+	
+	lmg_infantry_equipment_2 = {
+		year = 1946
+
+		archetype = lmg_infantry_equipment
+		parent = lmg_infantry_equipment_1
+		priority = 90
+		visual_level = 2
+		
+		#Defensive Abilities
+		defense = 10
+		breakthrough = 0
+
+
+		#Offensive Abilities
+		soft_attack = 10
+		hard_attack = 2
+		ap_attack = 1
+		
+		build_cost_ic = 0.06
+		resources = {
+			tungsten = 2
+			steel = 3
+		}
+	}
+	lmg_infantry_equipment_3 = {
+		year = 1949
+
+		archetype = lmg_infantry_equipment
+		parent = lmg_infantry_equipment_2
+		priority = 90
+		visual_level = 2
+		
+		#Defensive Abilities
+		defense = 14
+		breakthrough = 0
+
+
+		#Offensive Abilities
+		soft_attack = 14
+		hard_attack = 2
+		ap_attack = 1
+		
+		
+		build_cost_ic = 0.07
+		resources = {
+			tungsten = 2
+			steel = 3
+		}
+	}
+	lmg_infantry_equipment_4 = {
+		year = 1961
+
+		archetype = lmg_infantry_equipment
+		parent = lmg_infantry_equipment_3
+		priority = 90
+		visual_level = 2
+		
+		#Defensive Abilities
+		defense = 18
+		breakthrough = 0
+
+
+		#Offensive Abilities
+		soft_attack = 18
+		hard_attack = 2
+		ap_attack = 1
+		
+		build_cost_ic = 0.07
+		resources = {
+			tungsten = 2
+			steel = 3
+		}
+	}
+	lmg_infantry_equipment_5 = {
+		year = 1965
+
+		archetype = lmg_infantry_equipment
+		parent = lmg_infantry_equipment_4
+		priority = 90
+		visual_level = 2
+		
+		#Defensive Abilities
+		defense = 20
+		breakthrough = 0
+
+
+		#Offensive Abilities
+		soft_attack = 20
+		hard_attack = 2
+		ap_attack = 1
+		
+		build_cost_ic = 0.08
+		resources = {
+			tungsten = 2
+			steel = 3
+		}
+	}
+	lmg_infantry_equipment_6 = {
+		year = 1970
+
+		archetype = lmg_infantry_equipment
+		parent = lmg_infantry_equipment_5
+		priority = 90
+		visual_level = 2
+		
+		#Defensive Abilities
+		defense = 24
+		breakthrough = 0
+
+
+		#Offensive Abilities
+		soft_attack = 24
+		hard_attack = 2
+		ap_attack = 1
+		
+		build_cost_ic = 0.08
+		resources = {
+			tungsten = 2
+			steel = 3
+		}
+	}
+	lmg_infantry_equipment_7 = {
+		year = 1974
+
+		archetype = lmg_infantry_equipment
+		parent = lmg_infantry_equipment_6
+		priority = 90
+		visual_level = 2
+		
+		#Defensive Abilities
+		defense = 26
+		breakthrough = 0
+
+
+		#Offensive Abilities
+		soft_attack = 26
+		hard_attack = 2
+		ap_attack = 1
+		
+		build_cost_ic = 0.09
+		resources = {
+			tungsten = 2
+			steel = 3
+		}
+	}
+	lmg_infantry_equipment_8 = {
+		year = 1991
+
+		archetype = lmg_infantry_equipment
+		parent = lmg_infantry_equipment_7
+		priority = 90
+		visual_level = 2
+		
+		#Defensive Abilities
+		defense = 28
+		breakthrough = 0
+
+
+		#Offensive Abilities
+		soft_attack = 28
+		hard_attack = 3
+		ap_attack = 2
+		
+		build_cost_ic = 0.09
+		resources = {
+			tungsten = 2
+			steel = 3
+		}
+	}
+}

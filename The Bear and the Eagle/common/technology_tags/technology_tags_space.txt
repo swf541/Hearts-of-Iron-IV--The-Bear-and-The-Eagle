@@ -1,0 +1,23 @@
+# Do not change tags in here without changing every other reference to them.
+# If adding new technology, make sure they are uniquely named.
+
+technology_categories = {
+	space_rockets
+	space_manned
+	space_unmanned
+	space_lunar
+	space_shuttle
+	space_mars
+	space_venus
+	space_mercury
+	space_jupiter
+	space_saturn
+	space_colonization
+	space_station
+}
+
+technology_folders = {
+	space_folder
+}
+
+ 

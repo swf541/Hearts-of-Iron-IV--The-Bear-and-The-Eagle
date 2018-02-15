@@ -1,0 +1,422 @@
+﻿SIK = {
+	male = {
+		names = { Wang Li Zhang Liu Chen Huang Liang Luo Kwong Hsia Zhu Mao Hu Liao Tan Deng Cheng Yang Gao Xie Ma Kong Dong Pan Yu  }
+	}
+	female = {
+		names = { }
+	}
+	surnames = { Zhao Wu Sun Ma Hu Peng Dong Ye Lü Tian Jiang Wei Ting Shen Fang Jin Qiu }
+	callsigns = { }
+}
+KUW = {
+	male = {
+		names = {  
+			"Abd Allah" "Abd al-Karim" "Abd al-Malik" "Abd al-Qadir" "Abd al-Rahman" "Abu Bakr" Ahmad Ali 
+			Fawzi Fuad Halil Hasan Hisham Ibrahim Ishaq Iskandar Ja'far Jamal Kamil Khalid 
+			Muhammad Mustafa "Nur al-Din" "Sa'd al-Din" Salim  Sa'ud Shukri
+			Tawfiq Umar Uthman Yahya Yusuf Zafir 		
+		}
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 
+		"ibn Abd Allah" "ibn Abd al-Qadir" "ibn Abu Bakr" "ibn Ahmad" "ibn Ali"
+			"ibn Fuad" "ibn Halil" "ibn Hasan" "ibn Hisham" "ibn Ishaq" "ibn Ja'far" "ibm Kamil" "ibn Khalid" 
+			"ibn Muhammad" "ibn Mustafa" "ibn Salim"  
+			"ibn Umar" "ibn Uthman" "ibn Yusuf"
+			"al-Najdi" "al-Hijazi"   
+	
+	}
+	callsigns = { }
+}
+VIN = {
+	male = {
+		names = {  Ezekiel Maximilian Felix Erich Gerhard Gunther Otto Walter Wilhelm Heinz Hermann Heinrich
+			Theodor Hans Anton Joachim Max Emil Peter Fritz Otto Adolf Tobias Staffan Marco Karl
+			Alajos Albert Álmos Anasztáz András Arisztid Aurél Béla Benedek Béni
+			Bertalan Dániel Dávid Edvárd Éliás Erno Ferencz Gábor Gábriel Gáspár
+			György Gyula Ignác Imre István Izidor János József Kálmán
+			Károly Katalin Kelemen Krisztian Lajos László Manó Mihály Mór Myklós
+			Ödön Ottó Péter Rafael Sándor Simon Tivadar Vilmos Virág Zsigmond  }
+	}
+	female = {
+		names = { Sandra Maria Theresia Viktoria }
+	}
+	surnames = { Lugmair Neudinger Muller Schmidt Schneider Fischer Meyer Weber Schulz Wagner Hartmann Rall Barkhorn
+		Becker Hoffmann Graf Erhler Hafner Lipfert Brendel Stotz Kirschner Lang Sturm
+		Beisswenger Duttmann Wilbs Berglen Behrmann
+		Vajlok Andrássy Apponyi Aulich Bacher Baross Batthyány Beöthy Bothmer Damjanich Dessewffy
+		Egressy Farkas Goldziher Gungl Hauszmann Heller Horthy Izsó
+		Joseffy Katona Kaufman Kéler Kiss Knezich Kogutowicz Lahner Lázár
+		Liszt Mikszáth Molnár Nagy-Sándor Österreicher Ottinger Perczel Poeltenberg Reményi
+		Rohr Schweidel Széchenyi Szemere Szlávic Tersztyansky Török Varga Vécsey
+	}
+	callsigns = { }
+}
+NYA = {
+	male = {
+		names = { 
+			Desmond Abel Kadungure Sekuru Robert Lobengula Joshua Dumiso Leopold Joseph Gabriel Mqabuko Nyongolo Thomas Letswansto Ndabaningi
+		   }
+	}
+	female = {
+		names = { }
+	}
+	surnames = {
+	  	Tutu Muzorewa Nkomo Mapondera Kaguvi Khumalo Dabengwa Msika Takawira Masuku Sithole Tekere Nkala Nyagumbo
+	 }
+	callsigns = { }
+}
+MLI = {
+	male = {
+		names = { 
+			Abi-Bakr Abubakari Akoi Alayaman Ali_Ali Ali-Fay Ali-Kolon Ali-Zalil Badä Bakr Bakr-Kanbu Bamari Bankanu
+			Bannu Bassarou Bassi Birama Bisi Biyu Bonga Cisse Dankaran Daoud Dawud Demba Diara Düru
+			Faga-Laye Fatta Fodi Fuluku Fädazu Gane Gao Hargani Harun Igoumou Ishaq_Isaac Ismail_Ismail Kabayo Kalabi Kambine
+			Kanafa Kassa Kasseï Kaya Kayna Kinkin Kisha Kodama Koïzé Kukuray Kusoy Lahiltoul Maammarou Maghan
+			Mahmud_Mahmud Majan Malla Mamadi Mamoudou Manding-Bory Mari-Djata Maÿroumfa Missi-Izé Morobani Musa_Moses
+			Nintasanay Nuh Ouali Ouankoÿ Ouati Reidja Sakoura Salman_Solomon Samsou-Béri Samsou-Keïna Sandaki Soumaba
+			Soumaoro Soundiata Sulayman Takoi Tib Tomo_Thomas Tunka Umar Yama Yaqub Yasiboy Zakoi Zenku
+
+		   }
+	}
+	female = {
+		names = { }
+	}
+	surnames = {
+	  	Tutu Muzorewa Nkomo Mapondera Kaguvi Khumalo Dabengwa Msika Takawira Masuku Sithole Tekere Nkala Nyagumbo
+	 }
+	callsigns = { }
+}
+NIA = {
+	male = {
+		names = { 
+			Abi-Bakr Abubakari Akoi Alayaman Ali_Ali Ali-Fay Ali-Kolon Ali-Zalil Badä Bakr Bakr-Kanbu Bamari Bankanu
+			Bannu Bassarou Bassi Birama Bisi Biyu Bonga Cisse Dankaran Daoud Dawud Demba Diara Düru
+			Faga-Laye Fatta Fodi Fuluku Fädazu Gane Gao Hargani Harun Igoumou Ishaq_Isaac Ismail_Ismail Kabayo Kalabi Kambine
+			Kanafa Kassa Kasseï Kaya Kayna Kinkin Kisha Kodama Koïzé Kukuray Kusoy Lahiltoul Maammarou Maghan
+			Mahmud_Mahmud Majan Malla Mamadi Mamoudou Manding-Bory Mari-Djata Maÿroumfa Missi-Izé Morobani Musa_Moses
+			Nintasanay Nuh Ouali Ouankoÿ Ouati Reidja Sakoura Salman_Solomon Samsou-Béri Samsou-Keïna Sandaki Soumaba
+			Soumaoro Soundiata Sulayman Takoi Tib Tomo_Thomas Tunka Umar Yama Yaqub Yasiboy Zakoi Zenku
+
+		   }
+	}
+	female = {
+		names = { }
+	}
+	surnames = {
+	  	Tutu Muzorewa Nkomo Mapondera Kaguvi Khumalo Dabengwa Msika Takawira Masuku Sithole Tekere Nkala Nyagumbo
+	 }
+	callsigns = { }
+}
+MOR = {
+	male = {
+		names = {  
+			"Abd Allah" "Abd al-Karim" "Abd al-Malik" "Abd al-Qadir" "Abd al-Rahman" "Abu Bakr" Ahmad Ali 
+			Fawzi Fuad Halil Hasan Hisham Ibrahim Ishaq Iskandar Ja'far Jamal Kamil Khalid 
+			Muhammad Mustafa "Nur al-Din" "Sa'd al-Din" Salim  Sa'ud Shukri
+			Tawfiq Umar Uthman Yahya Yusuf Zafir 		
+		}
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 
+		"ibn Abd Allah" "ibn Abd al-Qadir" "ibn Abu Bakr" "ibn Ahmad" "ibn Ali"
+			"ibn Fuad" "ibn Halil" "ibn Hasan" "ibn Hisham" "ibn Ishaq" "ibn Ja'far" "ibm Kamil" "ibn Khalid" 
+			"ibn Muhammad" "ibn Mustafa" "ibn Salim"  
+			"ibn Umar" "ibn Uthman" "ibn Yusuf"
+			"al-Najdi" "al-Hijazi"   
+	
+	}
+	callsigns = { }
+}
+TUN = {
+	male = {
+		names = {  
+			"Abd Allah" "Abd al-Karim" "Abd al-Malik" "Abd al-Qadir" "Abd al-Rahman" "Abu Bakr" Ahmad Ali 
+			Fawzi Fuad Halil Hasan Hisham Ibrahim Ishaq Iskandar Ja'far Jamal Kamil Khalid 
+			Muhammad Mustafa "Nur al-Din" "Sa'd al-Din" Salim  Sa'ud Shukri
+			Tawfiq Umar Uthman Yahya Yusuf Zafir 		
+		}
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 
+		"ibn Abd Allah" "ibn Abd al-Qadir" "ibn Abu Bakr" "ibn Ahmad" "ibn Ali"
+			"ibn Fuad" "ibn Halil" "ibn Hasan" "ibn Hisham" "ibn Ishaq" "ibn Ja'far" "ibm Kamil" "ibn Khalid" 
+			"ibn Muhammad" "ibn Mustafa" "ibn Salim"  
+			"ibn Umar" "ibn Uthman" "ibn Yusuf"
+			"al-Najdi" "al-Hijazi"   
+	
+	}
+	callsigns = { }
+}
+ALG = {
+	male = {
+		names = {  
+			"Abd Allah" "Abd al-Karim" "Abd al-Malik" "Abd al-Qadir" "Abd al-Rahman" "Abu Bakr" Ahmad Ali 
+			Fawzi Fuad Halil Hasan Hisham Ibrahim Ishaq Iskandar Ja'far Jamal Kamil Khalid 
+			Muhammad Mustafa "Nur al-Din" "Sa'd al-Din" Salim  Sa'ud Shukri
+			Tawfiq Umar Uthman Yahya Yusuf Zafir 		
+		}
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 
+		"ibn Abd Allah" "ibn Abd al-Qadir" "ibn Abu Bakr" "ibn Ahmad" "ibn Ali"
+			"ibn Fuad" "ibn Halil" "ibn Hasan" "ibn Hisham" "ibn Ishaq" "ibn Ja'far" "ibm Kamil" "ibn Khalid" 
+			"ibn Muhammad" "ibn Mustafa" "ibn Salim"  
+			"ibn Umar" "ibn Uthman" "ibn Yusuf"
+			"al-Najdi" "al-Hijazi"   
+	
+	}
+	callsigns = { }
+}
+MAU = {
+	male = {
+		names = {  
+            Aminata Bakar Ramatulai  Sare N'Diklam Tyukuli Leeyti Birayma Bukaar Leele al-Buri Lat Gireun
+            Bakan Birawa Bakaa Jaineba Mba Mbanyi Dawda Alieu Amadou Alagie Abdou Modou Ebrima Baboucarr Lamin Sosseh Ndiadiane
+            Alboury Sukabe Maad Saloum Detie Samba Njak Yerim Meu Giuneur
+		}
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 
+
+	}
+	callsigns = { }
+}
+GUI = {
+	male = {
+		names = {  
+            Aminata Bakar Ramatulai  Sare N'Diklam Tyukuli Leeyti Birayma Bukaar Leele al-Buri Lat Gireun
+            Bakan Birawa Bakaa Jaineba Mba Mbanyi Dawda Alieu Amadou Alagie Abdou Modou Ebrima Baboucarr Lamin Sosseh Ndiadiane
+            Alboury Sukabe Maad Saloum Detie Samba Njak Yerim Meu Giuneur
+		}
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 
+
+	}
+	callsigns = { }
+}
+SEN = {
+	male = {
+		names = {  
+            Aminata Bakar Ramatulai  Sare N'Diklam Tyukuli Leeyti Birayma Bukaar Leele al-Buri Lat Gireun
+            Bakan Birawa Bakaa Jaineba Mba Mbanyi Dawda Alieu Amadou Alagie Abdou Modou Ebrima Baboucarr Lamin Sosseh Ndiadiane
+            Alboury Sukabe Maad Saloum Detie Samba Njak Yerim Meu Giuneur
+		}
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 
+
+	}
+	callsigns = { }
+}
+CTD = {
+	male = {
+		names = {  
+			Aaron Alexander Andre Benton Caesar Cathay Charles Colin Ebenezer Edgar
+			Edward Frederick George Henry James Joseph Lewis Lloyd Matin Michael 
+			Milton Osborne  Robert Samuel Stewart Thomas William Wilson
+		 }
+	}
+	female = {
+		names = { }
+	}
+	surnames = {
+		Anderson Antoine Augusta Basset Beaty Blake Brooks Brown Cailloux Carney
+		Delany Douglass  Fields Flipper Gardner Griffin Hawkins Holland Jackson
+		King Mink Nell Pinn Ratcliff Remond Smith Stukes Tubman Veale
+	 }
+	callsigns = { }
+}
+BEN = {
+	male = {
+		names = {  
+			Abayomi Abegunde Abejide Abiade Abidemi Abidugun Abimbola Abiodun Abiola Abioye Adagba Ade Adeagbo Adebamgbe Adebayo Adebowale Adegbalu Adegoke Adejinle Adejola Ademilu Adeniyi Adetokunbo Adisa Afolabi Agbedegbede Ajimuda Akinmoyero Alayemore Amadi Anikulapo Aribiwoso Aworokolokin Ayetise Ayo Ayodele Ayokunle Ayomide Ayotunde Babafemi Babajide Babatunde Bamidele Bandele Bolade Ekun Ekundayo Eniola Enitan Femi Folami Gbanlare Gbegbaaje Gboonijio Giesi Idowu Ifedapo Kashimawo Kayin Kayode Kehinde Lafogido Lagunja Lajamisan Lajodoogun Larunnka Lugbade Lumobi Luwoo Oba Obafemi Obalufon Obamakin Odidimode Odudua Oduduwa Ogbogbodirin Ogboruu Ogun Ojelokunbirin Ojigidiri Okanlajosin Okiti Olabode Oladele Olamilekan Olanrewaju Olateju Olojo Oloyede Olufemi Olufunke Olufunmilola Olujimi Olukayode Olumide Olumuyiwa Oluremi Olusegun Oluwa Oluwafunmilayo Oluwanisola Oluwasegun Oluwaseun Oluwaseyi Oluwatoyin Oluwayemisi Oluyemi Omobolanle Omogbogbo Opeyemi Oranmiyan Oranyan Osangangan Osinkola Osinlade Oyin Remilekun Rogbeesin Taiwo Temiloluwa Tokunbo Wunmonije		
+		}
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 
+	
+	}
+	callsigns = { }
+}
+NIA = {
+	male = {
+		names = {  
+			Abayomi Abegunde Abejide Abiade Abidemi Abidugun Abimbola Abiodun Abiola Abioye Adagba Ade Adeagbo Adebamgbe Adebayo Adebowale Adegbalu Adegoke Adejinle Adejola Ademilu Adeniyi Adetokunbo Adisa Afolabi Agbedegbede Ajimuda Akinmoyero Alayemore Amadi Anikulapo Aribiwoso Aworokolokin Ayetise Ayo Ayodele Ayokunle Ayomide Ayotunde Babafemi Babajide Babatunde Bamidele Bandele Bolade Ekun Ekundayo Eniola Enitan Femi Folami Gbanlare Gbegbaaje Gboonijio Giesi Idowu Ifedapo Kashimawo Kayin Kayode Kehinde Lafogido Lagunja Lajamisan Lajodoogun Larunnka Lugbade Lumobi Luwoo Oba Obafemi Obalufon Obamakin Odidimode Odudua Oduduwa Ogbogbodirin Ogboruu Ogun Ojelokunbirin Ojigidiri Okanlajosin Okiti Olabode Oladele Olamilekan Olanrewaju Olateju Olojo Oloyede Olufemi Olufunke Olufunmilola Olujimi Olukayode Olumide Olumuyiwa Oluremi Olusegun Oluwa Oluwafunmilayo Oluwanisola Oluwasegun Oluwaseun Oluwaseyi Oluwatoyin Oluwayemisi Oluyemi Omobolanle Omogbogbo Opeyemi Oranmiyan Oranyan Osangangan Osinkola Osinlade Oyin Remilekun Rogbeesin Taiwo Temiloluwa Tokunbo Wunmonije		
+		}
+	}
+	female = {
+		names = { }
+	}
+	surnames = {  
+	
+	}
+	callsigns = { }
+}		
+BRK = {
+	male = {
+		names = {  
+			Adrià Abegunde Abejide Abiade Abidemi Abidugun Abimbola Abiodun Abiola Abioye Adagba Ade Adeagbo Adebamgbe Adebayo Adebowale Adegbalu Adegoke Adejinle Adejola Ademilu Adeniyi Adetokunbo Adisa Afolabi Agbedegbede Ajimuda Akinmoyero Alayemore Amadi Anikulapo Aribiwoso Aworokolokin Ayetise Ayo Ayodele Ayokunle Ayomide Ayotunde Babafemi Babajide Babatunde Bamidele Bandele Bolade Ekun Ekundayo Eniola Enitan Femi Folami Gbanlare Gbegbaaje Gboonijio Giesi Idowu Ifedapo Kashimawo Kayin Kayode Kehinde Lafogido Lagunja Lajamisan Lajodoogun Larunnka Lugbade Lumobi Luwoo Oba Obafemi Obalufon Obamakin Odidimode Odudua Oduduwa Ogbogbodirin Ogboruu Ogun Ojelokunbirin Ojigidiri Okanlajosin Okiti Olabode Oladele Olamilekan Olanrewaju Olateju Olojo Oloyede Olufemi Olufunke Olufunmilola Olujimi Olukayode Olumide Olumuyiwa Oluremi Olusegun Oluwa Oluwafunmilayo Oluwanisola Oluwasegun Oluwaseun Oluwaseyi Oluwatoyin Oluwayemisi Oluyemi Omobolanle Omogbogbo Opeyemi Oranmiyan Oranyan Osangangan Osinkola Osinlade Oyin Remilekun Rogbeesin Taiwo Temiloluwa Tokunbo Wunmonije		
+		}
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 
+	
+	}
+	callsigns = { }
+}
+
+CTL = {
+	male = {
+		names = {  
+			Adrià Albert Àlex Artur Arnau Bartomeu Eduard Èric Felip Gabriel Gerard Iker Jan Josep Lluís Marcel Miquel Òscar Ramon Ricard Vicent Víctor Xavier	}
+	}
+	female = {
+		names = {Agnès Alba Alícia Anna Carla Caterina Francesca Joana Júlia Paula Sofia }
+	}
+	surnames = { 
+	Blázquez
+		Acuña Aguirre Allendesalazar Alonso Álvarez  Aranda  Asensio
+		Aznar Barradas Bugallal Cabrera Cano Cervera "de Albornoz" 
+		"de Carvajal" "de la Fuente" "de Orleans" Díaz Espartero Fernández   Franco 
+		García  González Heredia Hernández Herrera Hevia  Linares López 
+		Maroto Márquez Martínez-Campos Maura Menéndez Miaja Millán-Astray Mina Mola Muñoz 
+		Narváez O'Donnell Ortega Pavía Pérez  Rodríguez Rojo Ruiz 
+		Sanjurjo Serrano Silvestre Topete Valdés Varela Villapol Villar Weyler Yagüe
+	
+	}
+	callsigns = {Esé Vato Conejito Jefe }
+}
+
+DDR = {
+	male = {
+		names = {  Maximilian Felix Erich Gerhard Gunther Otto Walter Wilhelm Heinz Hermann Heinrich 
+			Theodor Hans Anton Joachim Max Emil Peter Fritz Otto Adolf Tobias Staffan Marco Karl
+		}
+	}
+	female = {
+		names = { Jessica Emma Hanna Sofia Marie }
+	}
+	surnames = { 
+		Muller Schmidt Schneider Fischer Meyer Weber Schulz Wagner Hartmann Rall Barkhorn 
+		Becker Hoffmann Graf Erhler Hafner Lipfert Brendel Stotz Kirschner Lang Sturm 
+		Beisswenger Duttmann Wilbs Berglen Behrmann 
+		}
+	callsigns = { "Bubi" "Assi" "The Black Devil" "The Blond Knight Of Germany" "Dolfo" "Fighter of Libau" "Petit Rouge" "Pritzl" "The Red Baron" "The Red Battle-flyer" "The Red Knight" "Reeste" }
+}
+
+WGR = {
+	male = {
+		names = {  Maximilian Felix Erich Gerhard Gunther Otto Walter Wilhelm Heinz Hermann Heinrich 
+			Theodor Hans Anton Joachim Max Emil Peter Fritz Otto Adolf Tobias Staffan Marco Karl
+		}
+	}
+	female = {
+		names = { Jessica Emma Hanna Sofia Marie }
+	}
+	surnames = { 
+		Muller Schmidt Schneider Fischer Meyer Weber Schulz Wagner Hartmann Rall Barkhorn 
+		Becker Hoffmann Graf Erhler Hafner Lipfert Brendel Stotz Kirschner Lang Sturm 
+		Beisswenger Duttmann Wilbs Berglen Behrmann 
+		}
+	callsigns = { "Bubi" "Assi" "The Black Devil" "The Blond Knight Of Germany" "Dolfo" "Fighter of Libau" "Petit Rouge" "Pritzl" "The Red Baron" "The Red Battle-flyer" "The Red Knight" "Reeste" }
+}
+
+SAR = {
+	male = {
+		names = {  Maximilian Felix Erich Gerhard Gunther Otto Walter Wilhelm Heinz Hermann Heinrich 
+			Theodor Hans Anton Joachim Max Emil Peter Fritz Otto Adolf Tobias Staffan Marco Karl
+		}
+	}
+	female = {
+		names = { Jessica Emma Hanna Sofia Marie }
+	}
+	surnames = { 
+		Muller Schmidt Schneider Fischer Meyer Weber Schulz Wagner Hartmann Rall Barkhorn 
+		Becker Hoffmann Graf Erhler Hafner Lipfert Brendel Stotz Kirschner Lang Sturm 
+		Beisswenger Duttmann Wilbs Berglen Behrmann 
+		}
+	callsigns = { "Bubi" "Assi" "The Black Devil" "The Blond Knight Of Germany" "Dolfo" "Fighter of Libau" "Petit Rouge" "Pritzl" "The Red Baron" "The Red Battle-flyer" "The Red Knight" "Reeste" }
+}
+
+VGD = {
+	male = {
+		names = { Dan David Fredrik Gustav Johan Martin Olof Nils Peter Per Dennis Alexander Felix Magnus 
+		Tobias Erik Niklas Björn Emil Robin Jonas John Rikard Daniel Anton Andreas
+		}
+	}
+	female = {
+		names = { Anna Linda Sara Caroline Eira }
+	}
+	
+	surnames = { Andersson Anward Björk Johansson Kiby Lind Norrevik Palmqvist Zetterman Wester Cornelius
+			Hasselström Knubb Sjöman Dahlberg Borg Wendel Sparrhult Oltner Hemmingsson Jenelius
+			Nisshagen Karlsson Bodlund Elgerot Lundström Blomberg Viklund Lindgren Lagerqvist
+			Brolin Cederholm Wickerström Tisander Rickne Ivarsson Åslund Sjöberg Norrevik Ekre
+			Sjöberg Lerström Hargelid Carlberg Ström Hultdin Renström
+	 }
+}
+SNM = {
+	male = {
+		names = { 
+			Alessandro Alfonso Ambrogio Amedeo Andrea Angelo Antonio Benito Camillo Carlo
+			Cesare Costanzo Davide Enrico Ettore Fabrizio Faustino Federico Felice Ferdinando
+			Fiorenzo Francesco Gaetano Gennaro Girolamo Giulio Giuseppe Guglielmo Innocenzo Leopoldo
+			Luigi Marco Massimo Matteo Nicola Oreste Paolo Pasquale Pietro Prospero
+			Raffaele Roberto Ruggiero Silvio Simone Tancredi Ugo Umberto Vincenzo Vittorio
+		
+		  }
+	}
+	female = {
+		names = { Maria Anna }
+	}
+	surnames = {
+		Acton Albricci Badoglio Baldissera Baratieri Bava-Beccaris Cadorna Cagni Canevaro Capello
+		Caviglia Ceccherini Cialdini Cusani Dezza "di Robilant" "di Savoia"
+		Emo Fanti Fara Filomarino Garibaldi Giardino Govone "La Màrmora" Mambretti 
+		Menabrea Orengo Pallavicino Pecori-Giraldi  Pelloux Perruchetti Pianelli Porro
+		Presbitero Ramorino Ricotti-Magnani Sacchi Saletta Sanna Solari Vaccari Zupelli
+	
+	 }
+	callsigns = { Buzzard Dusty Falcon Hawk Hammer Viper Banshee "The Baron" Lightning Duce Raven "Two Shot" Rosso }
+}
+###############################################################
+# Israel
+###############################################################
+ISR = {
+	male = {
+		names = {  Moshe Yitzhak Efraim Binyamin Yosef Daniel David Michael Chaim Yehudah Ya'akov 
+			Shimon Avigdor Ariel Aryeh Avraham Eliezer Zvi Dov Reuven Akiva Yisrael Shmuel Mordechai Natan
+		}
+	}
+	female = {
+		names = { Dvora Sarah Yael Tzipi Miriam Shoshana Rachel Esther Rivkah Leah Ada 
+			Ayalet Golda Chava Dinah Elisheva }
+	}
+	surnames = { 
+		Lieberman Sharon Levi Ashkenazi Meyer Cohen Shaked Wagner Ben-Yehudah Eretz-Kedosha Peres 
+		Kelmer Schneerson Owen Weiss Greenberg Schulz Livni Rosenbaum Kaplan Goldberg Levenstein 
+		Ratzon Sapir Gil Shapiro Maimon 
+		}
+	callsigns = { "Eagle" "Reaper" "Archangel" "Seraph" "The Red Hawk" "Samson" "Prophet" "Pritzl" "The Angel of Death" "The Eleventh Plague" "Masada" "Bar Kochba" }
+}
+

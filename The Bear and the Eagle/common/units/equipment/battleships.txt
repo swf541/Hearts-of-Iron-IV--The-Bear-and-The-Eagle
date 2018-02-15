@@ -1,0 +1,196 @@
+equipments = {
+
+	battleship = { 
+		year = 1922
+
+		is_archetype = yes
+		is_buildable = no
+		type = capital_ship
+		group_by = archetype
+		
+		interface_category = interface_category_capital_ships
+		
+		upgrades = {
+			ship_reliability_upgrade
+			ship_engine_upgrade
+			ship_armor_upgrade
+			ship_gun_upgrade
+		}
+
+		ap_attack = 30
+		attack = 22
+		fire_range = 33
+		torpedo_attack = 0
+		shore_bombardment = 12
+		
+		anti_air_attack = 10
+		
+		armor_value = 32
+		evasion = 12
+		
+		surface_detection = 15
+		sub_detection = 5
+		surface_visibility = 30
+		naval_speed = 29
+		reliability = 0.85
+
+		naval_range = 4000
+		
+		max_strength = 450
+		port_capacity_usage = 2
+		
+		build_cost_ic = 10400
+		resources = {
+			oil = 1
+			steel = 3
+			chromium = 1
+		}
+
+		manpower = 6000
+	}
+
+	battleship_1 = {
+		year = 1938
+
+		archetype = battleship
+		priority = 60
+
+	}
+	
+	battleship_2 = {
+		year = 1941
+
+		archetype = battleship
+		parent = battleship_1
+		priority = 60
+		
+		ap_attack = 34
+		attack = 35
+		fire_range = 34
+		torpedo_attack = 0
+		shore_bombardment = 14
+		
+		anti_air_attack = 16
+		
+		armor_value = 35
+		evasion = 16
+		
+		surface_detection = 25
+		sub_detection = 5
+		surface_visibility = 30
+		naval_speed = 30
+		reliability = 0.88
+
+		naval_range = 5000
+
+		max_strength = 500		
+		port_capacity_usage = 2
+
+		build_cost_ic = 11200
+		resources = {
+			oil = 2
+			steel = 4
+			chromium = 1
+		}
+		manpower = 6600
+		
+	}
+	
+	battleship_3 = {
+		year = 1945
+
+		archetype = battleship
+		parent = battleship_2
+		shore_bombardment = 16
+		priority = 60
+		
+		ap_attack = 38
+		attack = 40
+		fire_range = 35
+		torpedo_attack = 0
+		
+		anti_air_attack = 22
+		
+		armor_value = 36
+		evasion = 20
+		
+		surface_detection = 35
+		sub_detection = 5
+		surface_visibility = 30
+		naval_speed = 31
+		reliability = 0.90
+
+		naval_range = 6000
+		
+		max_strength = 550
+		
+		port_capacity_usage = 2
+		
+		build_cost_ic = 12000
+		resources = {
+			oil = 2
+			steel = 4
+			chromium = 2
+		}
+		manpower = 7000
+
+	}
+	
+	bbg = {
+		year = 1922
+
+ 		is_archetype = yes
+		is_buildable = no
+		type = capital_ship
+		
+		interface_category = interface_category_capital_ships
+		
+		upgrades = {
+			ship_reliability_upgrade
+			ship_engine_upgrade
+			ship_armor_upgrade
+			ship_gun_upgrade
+		}
+	}
+	
+	battleship_4 = {
+		year = 1955
+
+		archetype = bbg
+		parent = battleship_3
+		priority = 60
+		
+		ap_attack = 40
+		attack = 44
+		fire_range = 35
+		torpedo_attack = 0
+		shore_bombardment = 20
+
+		anti_air_attack = 34
+		
+		armor_value = 41
+		evasion = 28
+		
+		surface_detection = 55
+		sub_detection = 5
+		surface_visibility = 30
+		naval_speed = 30
+		reliability = 0.90
+
+		naval_range = 7000
+		
+		max_strength = 650
+		
+		port_capacity_usage = 2
+		
+		build_cost_ic = 15000
+		resources = {
+			oil = 2
+			steel = 5
+			chromium = 3
+		}
+		manpower = 7400
+		
+	}
+
+}

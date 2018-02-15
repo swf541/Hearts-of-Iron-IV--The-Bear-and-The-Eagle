@@ -1,0 +1,3178 @@
+technologies = {
+
+	early_helicopter = {
+				
+		path = {
+			leads_to_tech = utility_helicopter_1 
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = naval_helicopter_1
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1950
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 4 y = 0 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			light_air
+		}
+	}
+	
+	utility_helicopter_1 = {
+
+		enable_equipments = { 
+			utility_helicopter_equipment_1
+		}
+		
+		enable_subunits = {
+			airmobile
+		}
+
+		enable_subunits = {
+			heli_special_force
+		}			
+				
+		path = {
+			leads_to_tech = utility_helicopter_2 
+			research_cost_coeff = 1
+		}
+				
+		path = {
+			leads_to_tech = cargo_helicopter_1
+			research_cost_coeff = 1
+		}	
+		
+		path = {
+			leads_to_tech = naval_helicopter_1
+			research_cost_coeff = 0.75
+		}
+		
+		research_cost = 2
+		start_year = 1952
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 2 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			light_air
+		}
+	}
+	
+	utility_helicopter_2 = {
+
+		enable_equipments = { 
+			utility_helicopter_equipment_2
+		}
+				
+		path = {
+			leads_to_tech = utility_helicopter_3 
+			research_cost_coeff = 1
+		}
+				
+		path = {
+			leads_to_tech = attack_helicopter_1 
+			research_cost_coeff = 1
+		}
+				
+		path = {
+			leads_to_tech = scout_helicopter_1 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1959
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 4 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			light_air
+		}
+	}
+	
+	utility_helicopter_3 = {
+
+		enable_equipments = { 
+			utility_helicopter_equipment_3
+		}
+				
+		path = {
+			leads_to_tech = utility_helicopter_4 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1965
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 6 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			light_air
+		}
+	}
+	
+	utility_helicopter_4 = {
+
+		enable_equipments = { 
+			utility_helicopter_equipment_4
+		}
+				
+		path = {
+			leads_to_tech = utility_helicopter_5 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1969
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 8 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			light_air
+		}
+	}
+	
+	utility_helicopter_5 = {
+
+		enable_equipments = { 
+			utility_helicopter_equipment_5
+		}
+				
+		path = {
+			leads_to_tech = utility_helicopter_6 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1975
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 10 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			light_air
+		}
+	}
+	
+	utility_helicopter_6 = {
+
+		enable_equipments = { 
+			utility_helicopter_equipment_6
+		}
+				
+		path = {
+			leads_to_tech = utility_helicopter_7 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1982
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 12 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			light_air
+		}
+	}
+	
+	utility_helicopter_7 = {
+
+		enable_equipments = { 
+			utility_helicopter_equipment_7
+		}
+			
+		
+		research_cost = 2
+		start_year = 1995
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 14 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			light_air
+		}
+	}
+	
+	naval_helicopter_1 = {
+
+		enable_equipments = { 
+			naval_helicopter_equipment_1
+		}
+				
+		path = {
+			leads_to_tech = naval_helicopter_2 
+			research_cost_coeff = 1
+		}
+				
+		path = {
+			leads_to_tech = utility_helicopter_1 
+			research_cost_coeff = 0.75
+		}
+		
+		research_cost = 2
+		start_year = 1952
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 12 y = 2 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			naval_equipment
+			light_air
+		}
+	}
+	
+	naval_helicopter_2 = {
+
+		enable_equipments = { 
+			naval_helicopter_equipment_2
+		}
+				
+		path = {
+			leads_to_tech = naval_helicopter_3 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1959
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 12 y = 4 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			naval_equipment
+			light_air
+		}
+	}
+	
+	naval_helicopter_3 = {
+
+		enable_equipments = { 
+			naval_helicopter_equipment_3
+		}
+				
+		path = {
+			leads_to_tech = naval_helicopter_4 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1965
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 12 y = 6 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			naval_equipment
+			light_air
+		}
+	}
+	
+	naval_helicopter_4 = {
+
+		enable_equipments = { 
+			naval_helicopter_equipment_4
+		}
+				
+		path = {
+			leads_to_tech = naval_helicopter_5 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1969
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 12 y = 8 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			naval_equipment
+			light_air
+		}
+	}
+	
+	naval_helicopter_5 = {
+
+		enable_equipments = { 
+			naval_helicopter_equipment_5
+		}
+				
+		path = {
+			leads_to_tech = naval_helicopter_6 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1975
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 12 y = 10 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			naval_equipment
+			light_air
+		}
+	}
+	
+	naval_helicopter_6 = {
+
+		enable_equipments = { 
+			naval_helicopter_equipment_6
+		}
+				
+		path = {
+			leads_to_tech = naval_helicopter_7 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1982
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 12 y = 12 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			naval_equipment
+			light_air
+		}
+	}
+	
+	naval_helicopter_7 = {
+
+		enable_equipments = { 
+			naval_helicopter_equipment_7
+		}
+			
+		
+		research_cost = 2
+		start_year = 1995
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 12 y = 14 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			naval_equipment
+			light_air
+		}
+	}
+	
+	cargo_helicopter_1 = {
+
+		enable_equipments = { 
+			cargo_helicopter_equipment_1
+		}
+			
+		enable_subunits = {
+			general_aviation_battalion
+		}
+		
+		path = {
+			leads_to_tech = cargo_helicopter_2 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1959
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = -4 y = 4 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			light_air
+		}
+	}
+	
+	cargo_helicopter_2 = {
+
+		enable_equipments = { 
+			cargo_helicopter_equipment_2
+		}
+				
+		path = {
+			leads_to_tech = cargo_helicopter_3 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1965
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = -4 y = 6 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			light_air
+		}
+	}
+	
+	cargo_helicopter_3 = {
+
+		enable_equipments = { 
+			cargo_helicopter_equipment_3
+		}
+					
+		research_cost = 2
+		start_year = 1975
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = -4 y = 10 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			light_air
+		}
+	}
+
+	attack_helicopter_1 = {
+
+		enable_equipments = { 
+			attack_helicopter_equipment_1
+		}
+		
+		enable_subunits = {
+			attack_helo
+		}	
+		
+		path = {
+			leads_to_tech = attack_helicopter_2 
+			research_cost_coeff = 1
+		}
+						
+		research_cost = 2
+		start_year = 1965
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 4 y = 6 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			light_air
+		}
+	}
+	
+	attack_helicopter_2 = {
+
+		enable_equipments = { 
+			attack_helicopter_equipment_2
+		}
+				
+		path = {
+			leads_to_tech = attack_helicopter_3 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1969
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 4 y = 8 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			light_air
+		}
+	}
+	
+	attack_helicopter_3 = {
+
+		enable_equipments = { 
+			attack_helicopter_equipment_3
+		}
+				
+		path = {
+			leads_to_tech = attack_helicopter_4 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1975
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 4 y = 10 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			light_air
+		}
+	}
+	
+	attack_helicopter_4 = {
+
+		enable_equipments = { 
+			attack_helicopter_equipment_4
+		}
+				
+		path = {
+			leads_to_tech = attack_helicopter_5 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1982
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 4 y = 12 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			light_air
+		}
+	}
+	
+	attack_helicopter_5 = {
+
+		enable_equipments = { 
+			attack_helicopter_equipment_5
+		}
+					
+		research_cost = 2
+		start_year = 1995
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 4 y = 14 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			light_air
+		}
+	}
+	
+	scout_helicopter_1 = {
+
+		enable_equipments = { 
+			scout_helicopter_equipment_1
+		}
+		
+		enable_subunits = {
+			light_attack_helo
+		}
+		
+		path = {
+			leads_to_tech = scout_helicopter_2 
+			research_cost_coeff = 1
+		}
+						
+		research_cost = 2
+		start_year = 1965
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 8 y = 6 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			light_air
+		}
+	}
+	
+	scout_helicopter_2 = {
+
+		enable_equipments = { 
+			scout_helicopter_equipment_2
+		}
+				
+		path = {
+			leads_to_tech = scout_helicopter_3 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1969
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 8 y = 8 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			light_air
+		}
+	}
+		
+	scout_helicopter_3 = {
+
+		enable_equipments = { 
+			scout_helicopter_equipment_3
+		}
+				
+		path = {
+			leads_to_tech = scout_helicopter_4 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1982
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 8 y = 12 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			light_air
+		}
+	}
+	
+	scout_helicopter_4 = {
+
+		enable_equipments = { 
+			scout_helicopter_equipment_4
+		}
+					
+		research_cost = 2
+		start_year = 1995
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 8 y = 14 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			light_air
+		}
+	}
+	
+	cruisemissile_1 = {
+
+		enable_equipments = { 
+			cruisemissile_equipment_1
+		}
+				
+		path = {
+			leads_to_tech = cruisemissile_2 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1949
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 0 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		dependencies = {
+			advanced_rocket_engines = 1
+		}
+		
+		categories = {
+			naval_equipment
+			light_air
+		}
+	}
+			
+	cruisemissile_2 = {
+
+		enable_equipments = { 
+			cruisemissile_equipment_2
+		}
+				
+		path = {
+			leads_to_tech = cruisemissile_3 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1952
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 2 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			naval_equipment
+			light_air
+		}
+	}
+	
+	cruisemissile_3 = {
+
+		enable_equipments = { 
+			cruisemissile_equipment_3
+		}
+				
+		path = {
+			leads_to_tech = cruisemissile_4 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1956
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 8 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			naval_equipment
+			light_air
+		}
+	}
+	
+	cruisemissile_4 = {
+
+		enable_equipments = { 
+			cruisemissile_equipment_4
+		}
+				
+		path = {
+			leads_to_tech = cruisemissile_5 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1961
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 10 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			naval_equipment
+			light_air
+		}
+	}
+	
+	cruisemissile_5 = {
+
+		enable_equipments = { 
+			cruisemissile_equipment_5
+		}
+				
+		path = {
+			leads_to_tech = cruisemissile_6 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1983
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 22 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			naval_equipment
+			light_air
+		}
+	}
+	
+	
+	navalcruisemissile_1 = {
+
+#		enable_equipments = { 
+#			navalcruisemissile_equipment_1
+#		}
+		ffg = {
+			shore_bombardment = 0.1
+		}
+		ddg = {
+			shore_bombardment = 0.1
+		}
+		cg = {
+			shore_bombardment = 0.1
+		}
+		heavy_cruiser = {
+			shore_bombardment = 0.1
+		}
+		bcg = {
+			shore_bombardment = 0.1
+		}
+		bbg = {
+			shore_bombardment = 0.1
+		}
+
+		path = {
+			leads_to_tech = navalcruisemissile_2 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1955
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 4 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		dependencies = {
+			advanced_rocket_engines = 1
+		}
+		
+		categories = {
+			naval_equipment
+			light_air
+		}
+	}
+	
+	navalcruisemissile_2 = {
+
+#		enable_equipments = { 
+#			navalcruisemissile_equipment_2
+#		}
+		ffg = {
+			shore_bombardment = 0.1
+		}
+		ddg = {
+			shore_bombardment = 0.1
+		}
+		cg = {
+			shore_bombardment = 0.1
+		}
+		heavy_cruiser = {
+			shore_bombardment = 0.1
+		}
+		bcg = {
+			shore_bombardment = 0.1
+		}
+		bbg = {
+			shore_bombardment = 0.1
+		}		
+		path = {
+			leads_to_tech = navalcruisemissile_3 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1963
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 12 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			naval_equipment
+			light_air
+		}
+	}
+	
+	navalcruisemissile_3 = {
+
+#		enable_equipments = { 
+#			navalcruisemissile_equipment_3
+#		}
+				ffg = {
+			shore_bombardment = 0.1
+		}
+		ddg = {
+			shore_bombardment = 0.1
+		}
+		cg = {
+			shore_bombardment = 0.1
+		}
+		heavy_cruiser = {
+			shore_bombardment = 0.1
+		}
+		bcg = {
+			shore_bombardment = 0.1
+		}
+		bbg = {
+			shore_bombardment = 0.1
+		}		
+		path = {
+			leads_to_tech = navalcruisemissile_4 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1973
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 16 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			naval_equipment
+			light_air
+		}
+	}
+	
+	navalcruisemissile_4 = {
+
+#		enable_equipments = { 
+#			navalcruisemissile_equipment_4
+#		}
+				ffg = {
+			shore_bombardment = 0.1
+		}
+		ddg = {
+			shore_bombardment = 0.1
+		}
+		cg = {
+			shore_bombardment = 0.1
+		}
+		heavy_cruiser = {
+			shore_bombardment = 0.1
+		}
+		bcg = {
+			shore_bombardment = 0.1
+		}
+		bbg = {
+			shore_bombardment = 0.1
+		}		
+		path = {
+			leads_to_tech = navalcruisemissile_5 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1979
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 20 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			naval_equipment
+			light_air
+		}
+	}
+	
+	navalcruisemissile_5 = {
+
+#		enable_equipments = { 
+#			navalcruisemissile_equipment_5
+#		}
+				ffg = {
+			shore_bombardment = 0.1
+		}
+		ddg = {
+			shore_bombardment = 0.1
+		}
+		cg = {
+			shore_bombardment = 0.1
+		}
+		heavy_cruiser = {
+			shore_bombardment = 0.1
+		}
+		bcg = {
+			shore_bombardment = 0.1
+		}
+		bbg = {
+			shore_bombardment = 0.1
+		}		
+		path = {
+			leads_to_tech = navalcruisemissile_6 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1983
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 22 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			naval_equipment
+			light_air
+		}
+	}
+	
+	coastalmissile_1 = {
+
+		enable_equipments = { 
+			coastalmissile_equipment_1
+		}
+				
+		path = {
+			leads_to_tech = coastalmissile_2 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1955
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 4 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		dependencies = {
+			advanced_rocket_engines = 1
+		}
+		
+		categories = {
+			naval_equipment
+			light_air
+		}
+	}
+	
+	coastalmissile_2 = {
+
+		enable_equipments = { 
+			coastalmissile_equipment_2
+		}
+				
+		path = {
+			leads_to_tech = coastalmissile_3 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1963
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 12 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			naval_equipment
+			light_air
+		}
+	}
+	
+	coastalmissile_3 = {
+
+		enable_equipments = { 
+			coastalmissile_equipment_3
+		}
+				
+		path = {
+			leads_to_tech = coastalmissile_4 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1973
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 16 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			naval_equipment
+			light_air
+		}
+	}
+	
+	coastalmissile_4 = {
+
+		enable_equipments = { 
+			coastalmissile_equipment_4
+		}
+				
+		path = {
+			leads_to_tech = coastalmissile_5 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1979
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 20 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			naval_equipment
+			light_air
+		}
+	}
+	
+	coastalmissile_5 = {
+
+		enable_equipments = { 
+			coastalmissile_equipment_5
+		}
+				
+		path = {
+			leads_to_tech = coastalmissile_6 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1983
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 22 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			naval_equipment
+			light_air
+		}
+	}
+		
+	navalasm_1 = {
+		path = {
+			leads_to_tech = navalasm_2 
+			research_cost_coeff = 1
+		}
+		
+		ffg = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		ddg = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		cg = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		heavy_cruiser = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		bcg = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		bbg = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		
+		research_cost = 2
+		start_year = 1955
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 4 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		dependencies = {
+			advanced_rocket_engines = 1
+		}
+		
+		categories = {
+			naval_equipment
+			light_air
+		}
+	}
+	
+	navalasm_2 = {
+
+	path = {
+			leads_to_tech = navalasm_3 
+			research_cost_coeff = 1
+		}
+		ffg = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		ddg = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		cg = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		heavy_cruiser = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		bcg = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		bbg = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		research_cost = 2
+		start_year = 1963
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 12 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			naval_equipment
+			light_air
+		}
+	}
+	
+	navalasm_3 = {
+				
+		path = {
+			leads_to_tech = navalasm_4 
+			research_cost_coeff = 1
+		}
+		ffg = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		ddg = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		cg = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		heavy_cruiser = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		bcg = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		bbg = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		research_cost = 2
+		start_year = 1968
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 14 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			naval_equipment
+			light_air
+		}
+	}
+	
+	navalasm_4 = {
+				
+		path = {
+			leads_to_tech = navalasm_5 
+			research_cost_coeff = 1
+		}
+		ffg = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		ddg = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		cg = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		heavy_cruiser = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		bcg = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		bbg = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		research_cost = 2
+		start_year = 1973
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 16 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			naval_equipment
+			light_air
+		}
+	}
+	
+	navalasm_5 = {
+				
+		path = {
+			leads_to_tech = navalasm_6 
+			research_cost_coeff = 1
+		}
+		ffg = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		ddg = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		cg = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		heavy_cruiser = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		bcg = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		bbg = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		research_cost = 2
+		start_year = 1978
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 18 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			naval_equipment
+			light_air
+		}
+	}
+	
+	navalasm_6 = {
+				
+		path = {
+			leads_to_tech = navalasm_7 
+			research_cost_coeff = 1
+		}
+		ffg = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		ddg = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		cg = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		heavy_cruiser = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		bcg = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		bbg = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		research_cost = 2
+		start_year = 1983
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 22 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			naval_equipment
+			light_air
+		}
+	}
+	
+	navalasm_7 = {
+				
+		path = {
+			leads_to_tech = navalasm_8 
+			research_cost_coeff = 1
+		}
+		ffg = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		ddg = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		cg = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		heavy_cruiser = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		bcg = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		bbg = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		research_cost = 2
+		start_year = 1989
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 24 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			naval_equipment
+			light_air
+		}
+	}
+	
+	navalasm_8 = {
+				
+		
+		research_cost = 2
+		ffg = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		ddg = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		cg = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		heavy_cruiser = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		bcg = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		bbg = {
+			fire_range = 0.3
+			ap_attack = 0.1
+			attack = 0.1
+		}
+		research_cost = 2
+		start_year = 1995
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 26 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			naval_equipment
+			light_air
+		}
+	}
+	
+	navalaam_1 = {
+	
+		path = {
+			leads_to_tech = navalaam_2 
+			research_cost_coeff = 1
+		}
+		
+		ffg = {
+			anti_air_attack = 0.1
+		}
+		ddg = {
+			anti_air_attack = 0.1
+		}
+		cg = {
+			anti_air_attack = 0.1
+		}
+		heavy_cruiser = {
+			anti_air_attack = 0.1
+		}
+		bcg = {
+			anti_air_attack = 0.1
+		}
+		bbg = {
+			anti_air_attack = 0.1
+		}
+		research_cost = 2
+		start_year = 1955
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 4 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		dependencies = {
+			advanced_rocket_engines = 1
+		}
+		
+		categories = {
+			naval_equipment
+			light_air
+		}
+	}
+	
+	navalaam_2 = {
+
+	path = {
+			leads_to_tech = navalaam_3 
+			research_cost_coeff = 1
+		}
+		
+		ffg = {
+			anti_air_attack = 0.1
+		}
+		ddg = {
+			anti_air_attack = 0.1
+		}
+		cg = {
+			anti_air_attack = 0.1
+		}
+		heavy_cruiser = {
+			anti_air_attack = 0.1
+		}
+		bcg = {
+			anti_air_attack = 0.1
+		}
+		bbg = {
+			anti_air_attack = 0.1
+		}
+		research_cost = 2
+		start_year = 1957
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 6 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			naval_equipment
+			light_air
+		}
+	}
+	
+	navalaam_3 = {
+				
+		path = {
+			leads_to_tech = navalaam_4 
+			research_cost_coeff = 1
+		}
+		
+		ffg = {
+			anti_air_attack = 0.1
+		}
+		ddg = {
+			anti_air_attack = 0.1
+		}
+		cg = {
+			anti_air_attack = 0.1
+		}
+		heavy_cruiser = {
+			anti_air_attack = 0.1
+		}
+		bcg = {
+			anti_air_attack = 0.1
+		}
+		bbg = {
+			anti_air_attack = 0.1
+		}
+		research_cost = 2
+		start_year = 1968
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 14 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			naval_equipment
+			light_air
+		}
+	}
+	
+	navalaam_4 = {
+				
+		path = {
+			leads_to_tech = navalaam_5 
+			research_cost_coeff = 1
+		}
+		
+		ffg = {
+			anti_air_attack = 0.1
+		}
+		ddg = {
+			anti_air_attack = 0.1
+		}
+		cg = {
+			anti_air_attack = 0.1
+		}
+		heavy_cruiser = {
+			anti_air_attack = 0.1
+		}
+		bcg = {
+			anti_air_attack = 0.1
+		}
+		bbg = {
+			anti_air_attack = 0.1
+		}
+		research_cost = 2
+		start_year = 1973
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 16 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			naval_equipment
+			light_air
+		}
+	}
+	
+	navalaam_5 = {
+				
+		path = {
+			leads_to_tech = navalaam_6 
+			research_cost_coeff = 1
+		}
+		
+		ffg = {
+			anti_air_attack = 0.1
+		}
+		ddg = {
+			anti_air_attack = 0.1
+		}
+		cg = {
+			anti_air_attack = 0.1
+		}
+		heavy_cruiser = {
+			anti_air_attack = 0.1
+		}
+		bcg = {
+			anti_air_attack = 0.1
+		}
+		bbg = {
+			anti_air_attack = 0.1
+		}
+		research_cost = 2
+		start_year = 1978
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 18 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			naval_equipment
+			light_air
+		}
+	}
+	
+		navalaam_6 = {
+				
+		path = {
+			leads_to_tech = navalaam_7 
+			research_cost_coeff = 1
+		}
+		
+		ffg = {
+			anti_air_attack = 0.1
+		}
+		ddg = {
+			anti_air_attack = 0.1
+		}
+		cg = {
+			anti_air_attack = 0.1
+		}
+		heavy_cruiser = {
+			anti_air_attack = 0.1
+		}
+		bcg = {
+			anti_air_attack = 0.1
+		}
+		bbg = {
+			anti_air_attack = 0.1
+		}
+		research_cost = 2
+		start_year = 1983
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 22 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			naval_equipment
+			light_air
+		}
+	}
+	
+	navalaam_7 = {
+				
+		path = {
+			leads_to_tech = navalaam_8 
+			research_cost_coeff = 1
+		}
+		
+		ffg = {
+			anti_air_attack = 0.1
+		}
+		ddg = {
+			anti_air_attack = 0.1
+		}
+		cg = {
+			anti_air_attack = 0.1
+		}
+		heavy_cruiser = {
+			anti_air_attack = 0.1
+		}
+		bcg = {
+			anti_air_attack = 0.1
+		}
+		bbg = {
+			anti_air_attack = 0.1
+		}
+		research_cost = 2
+		start_year = 1989
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 24 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			naval_equipment
+			light_air
+		}
+	}
+		
+	navalaam_8 = {
+						
+		research_cost = 2
+		start_year = 1995
+		
+		ffg = {
+			anti_air_attack = 0.1
+		}
+		ddg = {
+			anti_air_attack = 0.1
+		}
+		cg = {
+			anti_air_attack = 0.1
+		}
+		heavy_cruiser = {
+			anti_air_attack = 0.1
+		}
+		bcg = {
+			anti_air_attack = 0.1
+		}
+		bbg = {
+			anti_air_attack = 0.1
+		}
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 26 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			naval_equipment
+			light_air
+		}
+	}
+	
+	aam_1 = {
+						
+		research_cost = 2
+		start_year = 1953
+		
+		path = {
+			leads_to_tech = aam_2 
+			research_cost_coeff = 1
+		}
+		
+		jet_fighter = {
+			air_attack = 0.05
+		}
+		jet_interceptor = {
+			air_attack = 0.05
+		}		
+		cv_jet_fighter = {
+			air_attack = 0.05
+		}
+		cv_stealth_fighter = {
+			air_attack = 0.05
+		}
+		stealth_fighter = {
+			air_attack = 0.05
+		}
+		jump_jet = {
+			air_attack = 0.05
+		}
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 0 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		dependencies = {
+			advanced_rocket_engines = 1
+		}
+		
+		categories = {
+			air_equipment
+			light_air
+		}
+	}
+	
+	aam_2 = {
+						
+		research_cost = 2
+		start_year = 1956
+		
+		path = {
+			leads_to_tech = aam_3 
+			research_cost_coeff = 1
+		}
+		
+		jet_fighter = {
+			air_attack = 0.05
+		}
+		jet_interceptor = {
+			air_attack = 0.05
+		}		
+		cv_jet_fighter = {
+			air_attack = 0.05
+		}
+		cv_stealth_fighter = {
+			air_attack = 0.05
+		}
+		stealth_fighter = {
+			air_attack = 0.05
+		}
+		jump_jet = {
+			air_attack = 0.05
+		}
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 2 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			air_equipment
+			light_air
+		}
+	}
+	
+	aam_3 = {
+						
+		research_cost = 2
+		start_year = 1959
+		
+		path = {
+			leads_to_tech = aam_4 
+			research_cost_coeff = 1
+		}
+		
+		jet_fighter = {
+			air_attack = 0.05
+		}
+		jet_interceptor = {
+			air_attack = 0.05
+		}		
+		cv_jet_fighter = {
+			air_attack = 0.05
+		}
+		cv_stealth_fighter = {
+			air_attack = 0.05
+		}
+		stealth_fighter = {
+			air_attack = 0.05
+		}
+		jump_jet = {
+			air_attack = 0.05
+		}
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 4 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			air_equipment
+			light_air
+		}
+	}
+	
+	aam_4 = {
+						
+		research_cost = 2
+		start_year = 1964
+		
+		path = {
+			leads_to_tech = aam_5 
+			research_cost_coeff = 1
+		}
+		
+		jet_fighter = {
+			air_attack = 0.05
+		}
+		jet_interceptor = {
+			air_attack = 0.05
+		}		
+		cv_jet_fighter = {
+			air_attack = 0.05
+		}
+		cv_stealth_fighter = {
+			air_attack = 0.05
+		}
+		stealth_fighter = {
+			air_attack = 0.05
+		}
+		jump_jet = {
+			air_attack = 0.05
+		}
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 6 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			air_equipment
+			light_air
+		}
+	}
+	
+	aam_5 = {
+						
+		research_cost = 2
+		start_year = 1965
+		
+		path = {
+			leads_to_tech = aam_6 
+			research_cost_coeff = 1
+		}
+		
+		jet_fighter = {
+			air_attack = 0.05
+		}
+		jet_interceptor = {
+			air_attack = 0.05
+		}		
+		cv_jet_fighter = {
+			air_attack = 0.05
+		}
+		cv_stealth_fighter = {
+			air_attack = 0.05
+		}
+		stealth_fighter = {
+			air_attack = 0.05
+		}
+		jump_jet = {
+			air_attack = 0.05
+		}
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 8 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			air_equipment
+			light_air
+		}
+	}
+	
+	aam_6 = {
+						
+		research_cost = 2
+		start_year = 1969
+		
+		path = {
+			leads_to_tech = aam_7 
+			research_cost_coeff = 1
+		}
+		
+		jet_fighter = {
+			air_attack = 0.05
+		}
+		jet_interceptor = {
+			air_attack = 0.05
+		}		
+		cv_jet_fighter = {
+			air_attack = 0.05
+		}
+		cv_stealth_fighter = {
+			air_attack = 0.05
+		}
+		stealth_fighter = {
+			air_attack = 0.05
+		}
+		jump_jet = {
+			air_attack = 0.05
+		}
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 14 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			air_equipment
+			light_air
+		}
+	}
+	
+	aam_7 = {
+						
+		research_cost = 2
+		start_year = 1970
+		
+		path = {
+			leads_to_tech = aam_8 
+			research_cost_coeff = 1
+		}
+		
+		jet_fighter = {
+			air_attack = 0.05
+		}
+		jet_interceptor = {
+			air_attack = 0.05
+		}		
+		cv_jet_fighter = {
+			air_attack = 0.05
+		}
+		cv_stealth_fighter = {
+			air_attack = 0.05
+		}
+		stealth_fighter = {
+			air_attack = 0.05
+		}
+		jump_jet = {
+			air_attack = 0.05
+		}
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 16 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			air_equipment
+			light_air
+		}
+	}
+	
+	aam_8 = {
+						
+		research_cost = 2
+		start_year = 1974
+		
+		path = {
+			leads_to_tech = aam_9 
+			research_cost_coeff = 1
+		}
+		
+		jet_fighter = {
+			air_attack = 0.05
+		}
+		jet_interceptor = {
+			air_attack = 0.05
+		}		
+		cv_jet_fighter = {
+			air_attack = 0.05
+		}
+		cv_stealth_fighter = {
+			air_attack = 0.05
+		}
+		stealth_fighter = {
+			air_attack = 0.05
+		}
+		jump_jet = {
+			air_attack = 0.05
+		}
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 18 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			air_equipment
+			light_air
+		}
+	}
+	
+	aam_9 = {
+						
+		research_cost = 2
+		start_year = 1978
+		
+		path = {
+			leads_to_tech = aam_10 
+			research_cost_coeff = 1
+		}
+		
+		jet_fighter = {
+			air_attack = 0.05
+		}
+		jet_interceptor = {
+			air_attack = 0.05
+		}		
+		cv_jet_fighter = {
+			air_attack = 0.05
+		}
+		cv_stealth_fighter = {
+			air_attack = 0.05
+		}
+		stealth_fighter = {
+			air_attack = 0.05
+		}
+		jump_jet = {
+			air_attack = 0.05
+		}
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 20 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			air_equipment
+			light_air
+		}
+	}
+	
+	aam_10 = {
+						
+		research_cost = 2
+		start_year = 1980
+		
+		path = {
+			leads_to_tech = aam_11 
+			research_cost_coeff = 1
+		}
+		
+		jet_fighter = {
+			air_attack = 0.05
+		}
+		jet_interceptor = {
+			air_attack = 0.05
+		}		
+		cv_jet_fighter = {
+			air_attack = 0.05
+		}
+		cv_stealth_fighter = {
+			air_attack = 0.05
+		}
+		stealth_fighter = {
+			air_attack = 0.05
+		}
+		jump_jet = {
+			air_attack = 0.05
+		}
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 22 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			air_equipment
+			light_air
+		}
+	}
+	
+	aam_11 = {
+						
+		research_cost = 2
+		start_year = 1984
+		
+		path = {
+			leads_to_tech = aam_12 
+			research_cost_coeff = 1
+		}
+		
+		jet_fighter = {
+			air_attack = 0.05
+		}
+		jet_interceptor = {
+			air_attack = 0.05
+		}		
+		cv_jet_fighter = {
+			air_attack = 0.05
+		}
+		cv_stealth_fighter = {
+			air_attack = 0.05
+		}
+		stealth_fighter = {
+			air_attack = 0.05
+		}
+		jump_jet = {
+			air_attack = 0.05
+		}
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 24 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			air_equipment
+			light_air
+		}
+	}
+	aam_12 = {
+						
+		research_cost = 2
+		start_year = 1989
+				
+		jet_fighter = {
+			air_attack = 0.05
+		}
+		jet_interceptor = {
+			air_attack = 0.05
+		}		
+		cv_jet_fighter = {
+			air_attack = 0.05
+		}
+		cv_stealth_fighter = {
+			air_attack = 0.05
+		}
+		stealth_fighter = {
+			air_attack = 0.05
+		}
+		jump_jet = {
+			air_attack = 0.05
+		}
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 26 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			air_equipment
+			light_air
+		}
+	}
+	
+	agm_1 = {
+						
+		research_cost = 2
+		start_year = 1959
+		
+		path = {
+			leads_to_tech = agm_2 
+			research_cost_coeff = 1
+		}
+		
+		jet_fighter = {
+			air_ground_attack = 0.025
+		}
+		jet_cas = {
+			air_ground_attack = 0.05
+		}		
+		cv_jet_fighter = {
+			air_ground_attack = 0.025
+		}	
+		cv_jet_cas = {
+			air_ground_attack = 0.05
+		}
+		cv_stealth_fighter = {
+			air_ground_attack = 0.025
+		}
+		jump_jet = {
+			air_ground_attack = 0.025
+		}
+		jet_tac_bomber = {
+			air_ground_attack = 0.05
+		}
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 4 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		dependencies = {
+			advanced_rocket_engines = 1
+		}
+		
+		categories = {
+			air_equipment
+			light_air
+		}
+	}
+	
+	agm_2 = {
+						
+		research_cost = 2
+		start_year = 1964
+		
+		path = {
+			leads_to_tech = agm_3 
+			research_cost_coeff = 1
+		}
+		
+		jet_fighter = {
+			air_ground_attack = 0.025
+		}
+		jet_cas = {
+			air_ground_attack = 0.05
+		}		
+		cv_jet_fighter = {
+			air_ground_attack = 0.025
+		}	
+		cv_jet_cas = {
+			air_ground_attack = 0.05
+		}
+		cv_stealth_fighter = {
+			air_ground_attack = 0.025
+		}
+		jump_jet = {
+			air_ground_attack = 0.025
+		}
+		jet_tac_bomber = {
+			air_ground_attack = 0.05
+		}
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 6 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			air_equipment
+			light_air
+		}
+	}
+	
+	agm_3 = {
+						
+		research_cost = 2
+		start_year = 1965
+		
+		path = {
+			leads_to_tech = agm_4 
+			research_cost_coeff = 1
+		}
+		
+		jet_fighter = {
+			air_ground_attack = 0.025
+		}
+		jet_cas = {
+			air_ground_attack = 0.05
+		}		
+		cv_jet_fighter = {
+			air_ground_attack = 0.025
+		}	
+		cv_jet_cas = {
+			air_ground_attack = 0.05
+		}
+		cv_stealth_fighter = {
+			air_ground_attack = 0.025
+		}
+		jump_jet = {
+			air_ground_attack = 0.025
+		}
+		jet_tac_bomber = {
+			air_ground_attack = 0.05
+		}
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 8 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			air_equipment
+			light_air
+		}
+	}
+	
+	agm_4 = {
+						
+		research_cost = 2
+		start_year = 1966
+		
+		path = {
+			leads_to_tech = agm_5 
+			research_cost_coeff = 1
+		}
+		
+		
+		jet_fighter = {
+			air_ground_attack = 0.025
+		}
+		jet_cas = {
+			air_ground_attack = 0.05
+		}		
+		cv_jet_fighter = {
+			air_ground_attack = 0.025
+		}	
+		cv_jet_cas = {
+			air_ground_attack = 0.05
+		}
+		cv_stealth_fighter = {
+			air_ground_attack = 0.025
+		}
+		jump_jet = {
+			air_ground_attack = 0.025
+		}
+		jet_tac_bomber = {
+			air_ground_attack = 0.05
+		}
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 10 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			air_equipment
+			light_air
+		}
+	}
+	
+	agm_5 = {
+						
+		research_cost = 2
+		start_year = 1968
+		
+		path = {
+			leads_to_tech = agm_6 
+			research_cost_coeff = 1
+		}
+		
+		
+		jet_fighter = {
+			air_ground_attack = 0.025
+		}
+		jet_cas = {
+			air_ground_attack = 0.05
+		}		
+		cv_jet_fighter = {
+			air_ground_attack = 0.025
+		}	
+		cv_jet_cas = {
+			air_ground_attack = 0.05
+		}
+		cv_stealth_fighter = {
+			air_ground_attack = 0.025
+		}
+		jump_jet = {
+			air_ground_attack = 0.025
+		}
+		jet_tac_bomber = {
+			air_ground_attack = 0.05
+		}
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 12 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			air_equipment
+			light_air
+		}
+	}
+	
+	agm_6 = {
+						
+		research_cost = 2
+		start_year = 1969
+		
+		path = {
+			leads_to_tech = agm_7 
+			research_cost_coeff = 1
+		}
+		
+		jet_fighter = {
+			air_ground_attack = 0.025
+		}
+		jet_cas = {
+			air_ground_attack = 0.05
+		}		
+		cv_jet_fighter = {
+			air_ground_attack = 0.025
+		}	
+		cv_jet_cas = {
+			air_ground_attack = 0.05
+		}
+		cv_stealth_fighter = {
+			air_ground_attack = 0.025
+		}
+		jump_jet = {
+			air_ground_attack = 0.025
+		}
+		jet_tac_bomber = {
+			air_ground_attack = 0.05
+		}
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 14 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			air_equipment
+			light_air
+		}
+	}
+	
+	agm_7 = {
+						
+		research_cost = 2
+		start_year = 1970
+		
+		path = {
+			leads_to_tech = agm_8 
+			research_cost_coeff = 1
+		}
+		
+		jet_fighter = {
+			air_ground_attack = 0.025
+		}
+		jet_cas = {
+			air_ground_attack = 0.05
+		}		
+		cv_jet_fighter = {
+			air_ground_attack = 0.025
+		}	
+		cv_jet_cas = {
+			air_ground_attack = 0.05
+		}
+		cv_stealth_fighter = {
+			air_ground_attack = 0.025
+		}
+		jump_jet = {
+			air_ground_attack = 0.025
+		}
+		jet_tac_bomber = {
+			air_ground_attack = 0.05
+		}
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 16 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			air_equipment
+			light_air
+		}
+	}
+	
+	agm_8 = {
+						
+		research_cost = 2
+		start_year = 1974
+		
+		path = {
+			leads_to_tech = agm_9 
+			research_cost_coeff = 1
+		}
+		
+		jet_fighter = {
+			air_ground_attack = 0.025
+		}
+		jet_cas = {
+			air_ground_attack = 0.05
+		}		
+		cv_jet_fighter = {
+			air_ground_attack = 0.025
+		}	
+		cv_jet_cas = {
+			air_ground_attack = 0.05
+		}
+		cv_stealth_fighter = {
+			air_ground_attack = 0.025
+		}
+		jump_jet = {
+			air_ground_attack = 0.025
+		}
+		jet_tac_bomber = {
+			air_ground_attack = 0.05
+		}
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 18 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			air_equipment
+			light_air
+		}
+	}
+	
+	agm_9 = {
+						
+		research_cost = 2
+		start_year = 1978
+		
+		path = {
+			leads_to_tech = agm_10 
+			research_cost_coeff = 1
+		}
+		
+		jet_fighter = {
+			air_ground_attack = 0.025
+		}
+		jet_cas = {
+			air_ground_attack = 0.05
+		}		
+		cv_jet_fighter = {
+			air_ground_attack = 0.025
+		}	
+		cv_jet_cas = {
+			air_ground_attack = 0.05
+		}
+		cv_stealth_fighter = {
+			air_ground_attack = 0.025
+		}
+		jump_jet = {
+			air_ground_attack = 0.025
+		}
+		jet_tac_bomber = {
+			air_ground_attack = 0.05
+		}
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 20 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			air_equipment
+			light_air
+		}
+	}
+	
+	agm_10 = {
+						
+		research_cost = 2
+		start_year = 1980
+		
+		path = {
+			leads_to_tech = agm_11 
+			research_cost_coeff = 1
+		}
+		
+		jet_fighter = {
+			air_ground_attack = 0.025
+		}
+		jet_cas = {
+			air_ground_attack = 0.05
+		}		
+		cv_jet_fighter = {
+			air_ground_attack = 0.025
+		}	
+		cv_jet_cas = {
+			air_ground_attack = 0.05
+		}
+		cv_stealth_fighter = {
+			air_ground_attack = 0.025
+		}
+		jump_jet = {
+			air_ground_attack = 0.025
+		}
+		jet_tac_bomber = {
+			air_ground_attack = 0.05
+		}
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 22 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			air_equipment
+			light_air
+		}
+	}
+	
+	agm_11 = {
+						
+		research_cost = 2
+		start_year = 1984
+		
+		path = {
+			leads_to_tech = agm_12 
+			research_cost_coeff = 1
+		}
+		
+		jet_fighter = {
+			air_ground_attack = 0.025
+		}
+		jet_cas = {
+			air_ground_attack = 0.05
+		}		
+		cv_jet_fighter = {
+			air_ground_attack = 0.025
+		}	
+		cv_jet_cas = {
+			air_ground_attack = 0.05
+		}
+		cv_stealth_fighter = {
+			air_ground_attack = 0.025
+		}
+		jump_jet = {
+			air_ground_attack = 0.025
+		}
+		jet_tac_bomber = {
+			air_ground_attack = 0.05
+		}
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 24 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			air_equipment
+			light_air
+		}
+	}
+	agm_12 = {
+						
+		research_cost = 2
+		start_year = 1989
+		
+		jet_fighter = {
+			air_ground_attack = 0.025
+		}
+		jet_cas = {
+			air_ground_attack = 0.05
+		}		
+		cv_jet_fighter = {
+			air_ground_attack = 0.025
+		}	
+		cv_jet_cas = {
+			air_ground_attack = 0.05
+		}
+		cv_stealth_fighter = {
+			air_ground_attack = 0.025
+		}
+		jump_jet = {
+			air_ground_attack = 0.025
+		}
+		jet_tac_bomber = {
+			air_ground_attack = 0.05
+		}
+		
+		folder = {
+			name = helicopter_folder
+			position = { x = 0 y = 26 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			air_equipment
+			light_air
+		}
+	}
+}

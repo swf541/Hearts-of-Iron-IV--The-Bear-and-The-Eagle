@@ -1,0 +1,456 @@
+equipments = {
+
+	light_cruiser = {
+		year = 1922
+
+		is_archetype = yes
+		is_buildable = no
+		type = screen_ship
+
+		upgrades = {
+			ship_reliability_upgrade
+			ship_engine_upgrade
+			ship_gun_upgrade
+			ship_anti_air_upgrade
+		}
+
+		interface_category = interface_category_screen_ships
+
+		ap_attack = 5.5
+		attack = 6
+		fire_range = 18
+		torpedo_attack = 5
+		sub_attack = 2
+
+		anti_air_attack = 3
+
+		armor_value = 5
+		evasion = 50
+
+		surface_detection = 15
+		sub_detection = 20
+		surface_visibility = 15
+		naval_speed = 28
+		reliability = 0.8
+
+		naval_range = 2400
+
+		max_strength = 100
+
+		port_capacity_usage = 1
+
+		build_cost_ic = 3100
+		resources = {
+			oil = 1
+			steel = 2
+		}
+
+		manpower = 600
+	}
+
+	light_cruiser_1 = {
+		year = 1941
+
+		archetype = light_cruiser
+		priority = 30
+
+		type = {
+			screen_ship
+			anti_air
+		}
+
+	}
+
+	light_cruiser_2 = {
+		year = 1945
+
+		archetype = light_cruiser
+		parent = light_cruiser_1
+		priority = 30
+
+		ap_attack = 7
+		attack = 8
+		fire_range = 19
+		torpedo_attack = 8
+		sub_attack = 5
+
+		anti_air_attack = 9
+
+		armor_value = 6
+		evasion = 60
+
+		surface_detection = 20
+		sub_detection = 25
+		naval_speed = 30
+		reliability = 0.85
+
+		naval_range = 3000
+
+		max_strength = 120
+
+		port_capacity_usage = 1
+
+		type = {
+			screen_ship
+			anti_air
+		}
+		build_cost_ic = 3400
+		resources = {
+			oil = 1
+			steel = 3
+		}
+		manpower = 800
+	}
+
+	light_cruiser_3 = {
+		year = 1947
+
+		archetype = light_cruiser
+		parent = light_cruiser_2
+		priority = 30
+
+		ap_attack = 8
+		attack = 9
+		fire_range = 20
+		torpedo_attack = 9
+		sub_attack = 6
+
+		anti_air_attack = 14
+
+		armor_value = 7
+		evasion = 68
+
+		surface_detection = 50
+		sub_detection = 50
+		naval_speed = 32
+		reliability = 0.90
+
+		naval_range = 4000
+
+		max_strength = 140
+
+		port_capacity_usage = 1
+
+		type = {
+			screen_ship
+			anti_air
+		}
+		build_cost_ic = 4000
+		resources = {
+			oil = 2
+			steel = 3
+		}
+		manpower = 960
+	}
+
+	light_cruiser_4 = {
+		year = 1944
+
+		archetype = light_cruiser
+		parent = light_cruiser_3
+		priority = 30
+
+		ap_attack = 9
+		attack = 11
+		fire_range = 21
+		torpedo_attack = 10
+		sub_attack = 8
+
+		anti_air_attack = 17
+
+		armor_value = 8
+		evasion = 75
+
+		surface_detection = 70
+		sub_detection = 60
+		naval_speed = 34
+		reliability = 0.92
+
+		naval_range = 4500
+
+		max_strength = 160
+
+		port_capacity_usage = 1
+
+		type = {
+			screen_ship
+			anti_air
+		}
+		build_cost_ic = 5500
+		resources = {
+			oil = 2
+			steel = 4
+			chromium = 1
+		}
+		manpower = 1140
+	}
+
+	cg = {
+		year = 1922
+
+ 		is_archetype = yes
+		is_buildable = no
+		type = capital_ship
+
+		interface_category = interface_category_capital_ships
+
+		upgrades = {
+		ship_reliability_upgrade
+			ship_engine_upgrade
+			ship_gun_upgrade
+			ship_anti_air_upgrade
+		}
+	}
+
+	light_cruiser_5 = {
+		year = 1952
+
+		archetype = cg
+		parent = light_cruiser_4
+		priority = 30
+
+		ap_attack = 40
+		attack = 30
+		torpedo_attack = 100
+		sub_attack = 30
+		fire_range = 35
+
+		anti_air_attack = 40
+
+		armor_value = 20
+		evasion = 75
+
+		surface_detection = 70
+		sub_detection = 60
+		naval_speed = 34
+		reliability = 0.92
+
+		naval_range = 4500
+
+		max_strength = 400
+
+		port_capacity_usage = 1
+
+		type = {
+			screen_ship
+			anti_air
+		}
+		build_cost_ic = 8500
+		resources = {
+			oil = 2
+			steel = 4
+			chromium = 1
+		}
+		manpower = 1140
+	}
+
+	light_cruiser_6 = {
+		year = 1959
+
+		archetype = cg
+		parent = light_cruiser_5
+		priority = 30
+
+		ap_attack = 50
+		attack = 40
+		torpedo_attack = 100
+		sub_attack = 30
+		fire_range = 35
+		anti_air_attack = 50
+
+		armor_value = 30
+		evasion = 75
+
+		surface_detection = 70
+		sub_detection = 60
+		naval_speed = 34
+		reliability = 0.92
+
+		naval_range = 4500
+
+		max_strength = 500
+
+		port_capacity_usage = 1
+
+		type = {
+			screen_ship
+			anti_air
+		}
+		build_cost_ic = 12000
+		resources = {
+			oil = 2
+			steel = 4
+			chromium = 1
+		}
+		manpower = 1140
+	}
+
+	light_cruiser_7 = {
+		year = 1964
+
+		archetype = cg
+		parent = light_cruiser_6
+		priority = 30
+
+		ap_attack = 75
+		attack = 40
+		torpedo_attack = 200
+		sub_attack = 50
+		fire_range = 40
+
+		anti_air_attack = 75
+
+		armor_value = 40
+		evasion = 75
+
+		surface_detection = 70
+		sub_detection = 60
+		naval_speed = 34
+		reliability = 0.92
+
+		naval_range = 4500
+
+		max_strength = 600
+
+		port_capacity_usage = 1
+
+		type = {
+			screen_ship
+			anti_air
+		}
+		build_cost_ic = 16000
+		resources = {
+			oil = 2
+			steel = 4
+			chromium = 1
+		}
+		manpower = 1140
+	}
+
+	light_cruiser_8 = {
+		year = 1967
+
+		archetype = cg
+		parent = light_cruiser_7
+		priority = 30
+
+		ap_attack = 75
+		attack = 40
+		torpedo_attack = 200
+		sub_attack = 75
+		fire_range = 40
+
+		anti_air_attack = 100
+
+		armor_value = 50
+		evasion = 75
+
+		surface_detection = 70
+		sub_detection = 60
+		naval_speed = 34
+		reliability = 0.92
+
+		naval_range = 4500
+
+		max_strength = 700
+
+		port_capacity_usage = 1
+
+		type = {
+			screen_ship
+			anti_air
+		}
+		build_cost_ic = 20000
+		resources = {
+			oil = 2
+			steel = 4
+			chromium = 1
+		}
+		manpower = 1140
+	}
+
+	light_cruiser_9 = {
+		year = 1971
+
+		archetype = cg
+		parent = light_cruiser_8
+		priority = 30
+
+		ap_attack = 100
+		attack = 50
+		torpedo_attack = 250
+		sub_attack = 100
+		fire_range = 45
+
+		anti_air_attack = 150
+
+		armor_value = 75
+		evasion = 150
+
+		surface_detection = 70
+		sub_detection = 100
+		naval_speed = 34
+		reliability = 0.92
+
+		naval_range = 4500
+
+		max_strength = 800
+
+		port_capacity_usage = 1
+
+		type = {
+			screen_ship
+			anti_air
+		}
+		build_cost_ic = 24000
+		resources = {
+			oil = 2
+			steel = 4
+			chromium = 1
+		}
+		manpower = 1140
+	}
+
+	light_cruiser_10 = {
+		year = 1980
+
+		archetype = cg
+		parent = light_cruiser_9
+		priority = 30
+
+		ap_attack = 100
+		attack = 50
+		torpedo_attack = 250
+		sub_attack = 100
+		fire_range = 50
+
+		anti_air_attack = 200
+
+		armor_value = 75
+		evasion = 200
+
+		surface_detection = 70
+		sub_detection = 100
+		naval_speed = 34
+		reliability = 0.92
+
+		naval_range = 11000
+
+		max_strength = 900
+
+		port_capacity_usage = 1
+
+		type = {
+			screen_ship
+			anti_air
+		}
+		build_cost_ic = 28000
+		resources = {
+			oil = 2
+			steel = 4
+			chromium = 3
+		}
+		manpower = 1140
+	}
+
+}

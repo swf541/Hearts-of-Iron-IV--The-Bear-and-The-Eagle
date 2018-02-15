@@ -1,0 +1,157 @@
+equipments = {
+
+	battle_cruiser = {
+		year = 1922
+
+		is_archetype = yes
+		is_buildable = no
+		type = capital_ship
+		group_by = archetype
+
+		interface_category = interface_category_capital_ships
+
+		upgrades = {
+			ship_reliability_upgrade
+			ship_engine_upgrade
+			ship_armor_upgrade
+			ship_gun_upgrade
+		}
+
+		ap_attack = 25
+		attack = 21
+		fire_range = 33
+		torpedo_attack = 0
+		shore_bombardment = 10
+
+		anti_air_attack = 10
+
+		armor_value = 30
+		evasion = 20
+
+		surface_detection = 25
+		sub_detection = 5
+		surface_visibility = 25
+		naval_speed = 30
+		reliability = 0.90
+
+		naval_range = 5000
+
+		max_strength = 400
+
+		port_capacity_usage = 1.5
+
+		build_cost_ic = 8000
+		resources = {
+			oil = 1
+			steel = 3
+			chromium = 1
+		}
+
+		manpower = 3500
+	}
+
+	battle_cruiser_1 = {
+		year = 1941
+
+		archetype = battle_cruiser
+		priority = 50
+	}
+
+	bcg = {
+		year = 1922
+
+ 		is_archetype = yes
+		is_buildable = no
+		type = capital_ship
+
+		fire_range = 35
+		interface_category = interface_category_capital_ships
+
+		upgrades = {
+			ship_reliability_upgrade
+			ship_engine_upgrade
+			ship_armor_upgrade
+			ship_gun_upgrade
+		}
+	}
+
+	battle_cruiser_2 = {
+		year = 1955
+
+		archetype = bcg
+		parent = battle_cruiser_1
+		priority = 50
+
+		ap_attack = 25
+		attack = 41
+		torpedo_attack = 0
+		shore_bombardment = 18
+
+		anti_air_attack = 30
+
+		armor_value = 25
+		evasion = 40
+
+		surface_detection = 75
+		sub_detection = 5
+		surface_visibility = 25
+		naval_speed = 31
+		reliability = 0.90
+
+		naval_range = 7000
+
+		max_strength = 600
+
+		port_capacity_usage = 1.5
+
+		build_cost_ic = 12000
+		resources = {
+			oil = 1
+			steel = 4
+			chromium = 1
+		}
+		manpower = 4000
+	}
+
+	battle_cruiser_3 = {
+		year = 1980
+
+		archetype = bcg
+		parent = battle_cruiser_2
+		priority = 50
+
+		ap_attack = 100
+		attack = 50
+		torpedo_attack = 250
+		shore_bombardment = 30
+		fire_range = 50
+		sub_attack = 100
+
+
+		anti_air_attack = 200
+
+		armor_value = 70
+		evasion = 200
+
+		surface_detection = 150
+		sub_detection = 180
+		surface_visibility = 25
+		naval_speed = 32
+		reliability = 0.90
+
+		naval_range = 50000
+
+		max_strength = 1100
+
+		port_capacity_usage = 2
+
+		build_cost_ic = 45000
+		resources = {
+			oil = 3
+			steel = 5
+			chromium = 4
+		}
+		manpower = 4000
+	}
+
+}

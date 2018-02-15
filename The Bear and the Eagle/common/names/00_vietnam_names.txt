@@ -1,0 +1,24 @@
+﻿VIE = {
+	male = {
+		names = {  Ezekiel Maximilian Felix Erich Gerhard Gunther Otto Walter Wilhelm Heinz Hermann Heinrich
+			Theodor Hans Anton Joachim Max Emil Peter Fritz Otto Adolf Tobias Staffan Marco Karl
+			Alajos Albert Álmos Anasztáz András Arisztid Aurél Béla Benedek Béni
+			Bertalan Dániel Dávid Edvárd Éliás Erno Ferencz Gábor Gábriel Gáspár
+			György Gyula Ignác Imre István Izidor János József Kálmán
+			Károly Katalin Kelemen Krisztian Lajos László Manó Mihály Mór Myklós
+			Ödön Ottó Péter Rafael Sándor Simon Tivadar Vilmos Virág Zsigmond  }
+	}
+	female = {
+		names = { Sandra Maria Theresia Viktoria }
+	}
+	surnames = { Lugmair Neudinger Muller Schmidt Schneider Fischer Meyer Weber Schulz Wagner Hartmann Rall Barkhorn
+		Becker Hoffmann Graf Erhler Hafner Lipfert Brendel Stotz Kirschner Lang Sturm
+		Beisswenger Duttmann Wilbs Berglen Behrmann
+		Vajlok Andrássy Apponyi Aulich Bacher Baross Batthyány Beöthy Bothmer Damjanich Dessewffy
+		Egressy Farkas Goldziher Gungl Hauszmann Heller Horthy Izsó
+		Joseffy Katona Kaufman Kéler Kiss Knezich Kogutowicz Lahner Lázár
+		Liszt Mikszáth Molnár Nagy-Sándor Österreicher Ottinger Perczel Poeltenberg Reményi
+		Rohr Schweidel Széchenyi Szemere Szlávic Tersztyansky Török Varga Vécsey
+	}
+	callsigns = { }
+}

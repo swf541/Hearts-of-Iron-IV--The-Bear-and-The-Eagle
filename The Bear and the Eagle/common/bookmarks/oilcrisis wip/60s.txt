@@ -1,0 +1,20 @@
+
+bookmarks = {
+	bookmark = {
+		name = "Decade of Crisis"
+		desc = "GATHERING_STORM_DESC"
+		date = 1960.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "USA"
+		default = yes
+
+		"---"={
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

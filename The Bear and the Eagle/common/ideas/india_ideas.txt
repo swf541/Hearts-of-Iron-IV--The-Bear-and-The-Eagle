@@ -1,0 +1,108 @@
+ideas = {
+	country = {
+		
+		idea_RAJ_Ehtos_Independence= {
+			
+			allowed = { always = no }
+
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				industrial_capacity_factory = 0.25
+				MONTHLY_POPULATION = 0.50
+				research_time_factor = -0.025
+				political_power_factor = 0.30
+				conscription = 0.05
+			}
+
+			picture = generic_manpower_bonus
+		}
+		
+		idea_RAJ_Infantery_equipment = {
+			
+			allowed = { always = no }
+
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+
+			equipment_bonus = {
+
+				anti_tank_infantry_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				heavy_infantry_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				infantry_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				light_infantry_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				lmg_infantry_equipment  = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				mortar_infantry_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+
+			picture = generic_manpower_bonus
+		}
+		
+		idea_RAJ_Motorized_Equipment = {
+			
+			allowed = { always = no }
+
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+
+			equipment_bonus = {
+
+				mechanized_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				motorized_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				lt_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				mbt_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				ht_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				 
+			}
+
+			picture = generic_manpower_bonus
+		}
+		
+		idea_RAJ_Industrial = {
+		
+			allowed = { always = no }
+
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				industrial_capacity_factory = 0.15
+			}
+
+			picture = generic_manpower_bonus
+		}
+	}
+}

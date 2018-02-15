@@ -1,0 +1,922 @@
+equipments = {
+
+	strat_bomber_equipment = {
+		year = 1933
+
+		is_archetype = yes
+		is_convertable = yes
+		picture = archetype_strat_bomber_equipment
+		is_buildable = no
+		type = strategic_bomber
+		group_by = archetype
+		sprite = heavy_plane
+		air_map_icon_frame = 11
+
+		interface_category = interface_category_air
+
+		# Strategic bomber
+		interface_overview_category_index = 5
+
+		upgrades = {
+			plane_bomb_upgrade
+			plane_range_upgrade
+			plane_engine_upgrade
+			plane_reliability_upgrade
+		}
+
+		air_superiority = 1
+		reliability = 0.8
+
+		# Air vs Navy - high damage / low hit chance / hard to hurt
+		naval_strike_attack = 1.5
+		naval_strike_targetting = 0.6
+
+		#Space taken in convoy
+		lend_lease_cost = 12
+
+		build_cost_ic = 60
+		resources = {
+			oil = 1
+			aluminium = 3
+			rubber = 2
+		}
+
+		manpower = 80
+	}
+
+	jet_strat_bomber_equipment = {
+		year = 1933
+
+		is_archetype = yes
+		is_convertable = yes
+		picture = archetype_strat_bomber_equipment
+		is_buildable = no
+		type = strategic_bomber
+		group_by = archetype
+		sprite = heavy_plane
+		air_map_icon_frame = 10
+
+		interface_category = interface_category_air
+
+		# Strategic bomber
+		interface_overview_category_index = 5
+
+		upgrades = {
+			plane_bomb_upgrade
+			plane_range_upgrade
+			plane_engine_upgrade
+			plane_reliability_upgrade
+		}
+
+		air_superiority = 1
+		reliability = 0.8
+
+		# Air vs Navy - high damage / low hit chance / hard to hurt
+		naval_strike_attack = 1.5
+		naval_strike_targetting = 0.6
+
+		build_cost_ic = 80
+		resources = {
+			aluminium = 3
+			tungsten = 3
+			rubber = 1
+		}
+
+		manpower = 160
+	}
+
+
+	# Basic strat_bomber
+	strat_bomber_equipment_1 = {
+		year = 1936
+
+		archetype = strat_bomber_equipment
+		priority = 140
+
+		air_range = 2500
+		maximum_speed = 400
+		air_agility = 5
+		air_attack = 50
+		air_defence = 30
+		air_bombing = 30
+
+		# build_cost_ic = 36
+	}
+
+	# Improved strat_bomber
+	strat_bomber_equipment_2 = {
+		year = 1940
+
+		archetype = strat_bomber_equipment
+		parent = strat_bomber_equipment_1
+		priority = 140
+
+		air_range = 3500
+		maximum_speed = 450
+		air_agility = 7
+		air_attack = 100
+		air_defence = 45
+		air_bombing = 45
+
+		build_cost_ic = 62
+		resources = {
+			oil = 1
+			aluminium = 4
+			rubber = 2
+		}
+	}
+
+	# Advanced strat_bomber
+	strat_bomber_equipment_3 = {
+		year = 1944
+
+		archetype = strat_bomber_equipment
+		parent = strat_bomber_equipment_2
+		priority = 140
+
+		air_range = 5000
+		maximum_speed = 500
+		air_agility = 10
+		air_attack = 150
+		air_defence = 60
+		air_bombing = 60
+
+		build_cost_ic = 64
+		resources = {
+			oil = 1
+			aluminium = 5
+			rubber = 2
+		}
+	}
+
+	# Basic Jet strat_bomber
+	jet_strat_bomber_equipment_1 = {
+		year = 1947
+
+		archetype = jet_strat_bomber_equipment
+		parent = strat_bomber_equipment_3
+		priority = 150
+
+		air_range = 6000
+		maximum_speed = 650
+		air_agility = 16
+		air_attack = 100
+		air_defence = 90
+		air_bombing = 90
+		build_cost_ic = 68
+	}
+
+	jet_strat_bomber_equipment_2 = {
+		year = 1950
+
+		archetype = jet_strat_bomber_equipment
+		parent = jet_strat_bomber_equipment_1
+		priority = 150
+
+		air_range = 6500
+		maximum_speed = 800
+		air_agility = 19
+		air_attack = 10
+		air_defence = 105
+		air_bombing = 105
+		build_cost_ic = 70
+	}
+
+	jet_strat_bomber_equipment_3 = {
+		year = 1955
+
+		archetype = jet_strat_bomber_equipment
+		parent = jet_strat_bomber_equipment_2
+		priority = 150
+
+		air_range = 7000
+		maximum_speed = 900
+		air_agility = 22
+		air_attack = 10
+		air_defence = 120
+		air_bombing = 120
+		build_cost_ic = 94
+	}
+
+	jet_strat_bomber_equipment_4 = {
+		year = 1960
+
+		archetype = jet_strat_bomber_equipment
+		parent = jet_strat_bomber_equipment_3
+		priority = 150
+
+		air_range = 7500
+		maximum_speed = 920
+		air_agility = 25
+		air_attack = 0
+		air_defence = 135
+		air_bombing = 135
+		build_cost_ic = 126
+	}
+
+	jet_strat_bomber_equipment_5 = {
+		year = 1975
+
+		archetype = jet_strat_bomber_equipment
+		parent = jet_strat_bomber_equipment_4
+		priority = 150
+
+		air_range = 9500
+		maximum_speed = 1000
+		air_agility = 34
+		air_attack = 0
+		air_defence = 180
+		air_bombing = 180
+		build_cost_ic = 298
+	}
+
+#	jet_strat_bomber_equipment_6 = {
+#		year = 1950
+#
+#		archetype = jet_strat_bomber_equipment
+#		parent = jet_strat_bomber_equipment_5
+#		priority = 150
+#
+#		air_range = 7000
+#		maximum_speed = 920
+#		air_agility = 14
+#		air_attack = 100
+#		air_defence = 54
+#		air_bombing = 64
+#	}
+
+	# Transport plane ##########################
+	transport_plane_equipment = {
+		year = 1933
+
+		is_archetype = yes
+		is_convertable = yes
+		picture = archetype_strat_bomber_equipment
+		type = air_transport
+		group_by = archetype
+		sprite = heavy_plane
+		air_map_icon_frame = 12
+
+
+		interface_category = interface_category_air
+
+		# Transport
+		interface_overview_category_index = 6
+
+		air_superiority = 0
+		reliability = 0.8
+
+		# Air vs Navy - high damage / low hit chance / hard to hurt
+		naval_strike_attack = 0.0
+		naval_strike_targetting = 0.0
+
+		build_cost_ic = 180
+		resources = {
+			oil = 1
+			aluminium = 3
+			rubber = 2
+		}
+
+		manpower = 80
+	}
+
+
+	transport_plane_equipment_1 = {
+		year = 1933
+
+		archetype = transport_plane_equipment
+		active = yes
+		priority = 130
+
+		air_range = 1000
+		maximum_speed = 300
+		air_agility = 10
+		air_defence = 20
+	}
+
+
+	mach2stratbomber_equipment = {
+		year = 1933
+
+		is_archetype = yes
+		is_convertable = yes
+		picture = archetype_mach2stratbomber_equipment
+		is_buildable = no
+		type = { strategic_bomber }
+		group_by = archetype
+		sprite = heavy_plane
+		air_map_icon_frame = 2
+
+		interface_category = interface_category_air
+
+		# CAS
+		interface_overview_category_index = 0
+
+		upgrades = {
+			plane_bomb_upgrade
+			plane_range_upgrade
+			plane_engine_upgrade
+			plane_reliability_upgrade
+		}
+
+		air_superiority = 1
+		reliability = 0.8
+
+		# Air vs Ground
+		air_ground_attack = 1.0
+
+		# Air vs Navy - medium damage / high hit chance / medium to hurt
+		naval_strike_attack = 1
+		naval_strike_targetting = 10
+
+		build_cost_ic = 22
+		resources = {
+			oil = 1
+			aluminium = 2
+			rubber = 1
+		}
+
+		manpower = 80
+	}
+
+	mach3stratbomber_equipment = {
+		year = 1933
+
+		is_archetype = yes
+		is_convertable = yes
+		picture = archetype_mach2stratbomber_equipment
+		is_buildable = no
+		type = { strategic_bomber }
+		group_by = archetype
+		sprite = heavy_plane
+		air_map_icon_frame = 2
+
+		interface_category = interface_category_air
+
+		# CAS
+		interface_overview_category_index = 0
+
+		upgrades = {
+			plane_bomb_upgrade
+			plane_range_upgrade
+			plane_engine_upgrade
+			plane_reliability_upgrade
+		}
+
+		air_superiority = 1
+		reliability = 0.8
+
+		# Air vs Ground
+		air_ground_attack = 1.0
+
+		# Air vs Navy - medium damage / high hit chance / medium to hurt
+		naval_strike_attack = 1
+		naval_strike_targetting = 10
+
+		build_cost_ic = 22
+		resources = {
+			oil = 1
+			aluminium = 2
+			rubber = 1
+		}
+
+		manpower = 20
+	}
+
+	mach2stratbomber_equipment_1 = {
+		year = 1960
+
+		archetype = mach2stratbomber_equipment
+		priority = 150
+
+		air_range = 3000
+		maximum_speed = 2100
+		air_agility = 25
+		air_attack = 0
+		air_defence = 150
+		air_bombing = 100
+		build_cost_ic = 126
+	}
+
+	mach2stratbomber_equipment_2 = {
+		year = 1970
+
+		archetype = mach2stratbomber_equipment
+		parent = mach2stratbomber_equipment_1
+		priority = 150
+
+		air_range = 7000
+		maximum_speed = 2300
+		air_agility = 31
+		air_attack = 0
+		air_defence = 180
+		air_bombing = 150
+		build_cost_ic = 224
+	}
+
+	mach3stratbomber_equipment_1 = {
+		year = 1965
+
+		archetype = mach3stratbomber_equipment
+		priority = 150
+
+		air_range = 7000
+		maximum_speed = 3000
+		air_agility = 28
+		air_attack = 0
+		air_defence = 165
+		air_bombing = 125
+		build_cost_ic = 300
+	}
+
+	stealth_strategic_bomber_equipment = {
+		year = 1933
+
+		is_archetype = yes
+		is_convertable = yes
+		picture = archetype_strat_bomber_equipment
+		is_buildable = no
+		type = strategic_bomber
+		group_by = archetype
+		sprite = heavy_plane
+		air_map_icon_frame = 10
+
+		interface_category = interface_category_air
+
+		# Strategic bomber
+		interface_overview_category_index = 5
+
+		upgrades = {
+			plane_bomb_upgrade
+			plane_range_upgrade
+			plane_engine_upgrade
+			plane_reliability_upgrade
+		}
+
+		air_superiority = 1
+		reliability = 0.75
+
+		# Air vs Navy - high damage / low hit chance / hard to hurt
+		naval_strike_attack = 1.5
+		naval_strike_targetting = 0.6
+
+		resources = {
+			aluminium = 3
+			tungsten = 3
+			rubber = 1
+		}
+
+		manpower = 160
+	}
+
+	stealth_strategic_bomber_equipment_1 = {
+		year = 1995
+
+		archetype = stealth_strategic_bomber_equipment
+		priority = 150
+
+		air_range = 11000
+		maximum_speed = 900
+		air_agility = 46
+		air_attack = 0
+		air_defence = 240
+		air_bombing = 240
+		build_cost_ic = 2000
+	}
+
+
+	slbm_equipment = {
+		year = 1936
+
+		is_archetype = yes
+		is_buildable = no
+		can_license = no
+		type = missile
+		group_by = type
+		sprite = missile_default
+		air_map_icon_frame = 9
+		carrier_capable = yes
+        default_carrier_composition_weight = 0
+
+		interface_category = interface_category_air
+
+		reliability = 0.8
+
+		# Air vs Navy - high damage / low hit chance / hard to hurt
+		naval_strike_attack = 1.5
+		naval_strike_targetting = 0.6
+
+		#Space taken in convoy
+		lend_lease_cost = 1.5
+
+		build_cost_ic = 54
+		resources = {
+			aluminium = 3
+			tungsten = 3
+		}
+	}
+
+	slbm_equipment_1 = {
+		year = 1955
+
+		archetype = slbm_equipment
+		is_buildable = yes
+		one_use_only = yes
+		sprite = missile_default
+		air_map_icon_frame = 9
+        default_carrier_composition_weight = 0
+
+		carrier_capable = yes
+
+		interface_category = interface_category_air
+
+		air_range = 150
+		maximum_speed = 6000
+		air_bombing = 600
+
+		build_cost_ic = 150
+	}
+
+	slbm_equipment_2 = {
+		year = 1960
+		parent = slbm_equipment_1
+		archetype = slbm_equipment
+		is_buildable = yes
+		one_use_only = yes
+		sprite = missile_default
+		air_map_icon_frame = 9
+        default_carrier_composition_weight = 0
+
+		carrier_capable = yes
+
+		interface_category = interface_category_air
+
+		air_range = 600
+		maximum_speed = 8000
+		air_bombing = 900
+
+		build_cost_ic = 220
+	}
+
+	slbm_equipment_3 = {
+		year = 1963
+		parent = slbm_equipment_2
+		archetype = slbm_equipment
+		is_buildable = yes
+		one_use_only = yes
+		sprite = missile_default
+		air_map_icon_frame = 9
+        default_carrier_composition_weight = 0
+
+		carrier_capable = yes
+
+		interface_category = interface_category_air
+
+		air_range = 1400
+		maximum_speed = 9999
+		air_bombing = 1200
+
+		build_cost_ic = 393
+	}
+
+	slbm_equipment_4 = {
+		year = 1968
+		parent = slbm_equipment_3
+		archetype = slbm_equipment
+		is_buildable = yes
+		one_use_only = yes
+		sprite = missile_default
+		air_map_icon_frame = 9
+        default_carrier_composition_weight = 0
+
+		carrier_capable = yes
+
+		interface_category = interface_category_air
+
+		air_range = 2500
+		maximum_speed = 9999
+		air_bombing = 1350
+
+		build_cost_ic = 523
+	}
+
+	slbm_equipment_5 = {
+		year = 1971
+		parent = slbm_equipment_4
+		archetype = slbm_equipment
+		is_buildable = yes
+		one_use_only = yes
+		sprite = missile_default
+		air_map_icon_frame = 9
+        default_carrier_composition_weight = 0
+
+		carrier_capable = yes
+
+		interface_category = interface_category_air
+
+		air_range = 4000
+		maximum_speed = 9999
+		air_bombing = 1500
+
+		build_cost_ic = 695
+	}
+
+	slbm_equipment_6 = {
+		year = 1979
+		parent = slbm_equipment_5
+		archetype = slbm_equipment
+		is_buildable = yes
+		one_use_only = yes
+		sprite = missile_default
+		air_map_icon_frame = 9
+        default_carrier_composition_weight = 0
+
+		carrier_capable = yes
+
+		interface_category = interface_category_air
+
+		air_range = 5500
+		maximum_speed = 9999
+		air_bombing = 1650
+
+		build_cost_ic = 925
+	}
+
+	slbm_equipment_7 = {
+		year = 1982
+		parent = slbm_equipment_6
+		archetype = slbm_equipment
+		is_buildable = yes
+		one_use_only = yes
+		sprite = missile_default
+		air_map_icon_frame = 9
+        default_carrier_composition_weight = 0
+
+		carrier_capable = yes
+
+		interface_category = interface_category_air
+
+		air_range = 7000
+		maximum_speed = 9999
+		air_bombing = 1800
+
+		build_cost_ic = 1233
+	}
+
+	slbm_equipment_8 = {
+		year = 1986
+		parent = slbm_equipment_7
+		archetype = slbm_equipment
+		is_buildable = yes
+		one_use_only = yes
+		sprite = missile_default
+		air_map_icon_frame = 9
+        default_carrier_composition_weight = 0
+
+		carrier_capable = yes
+
+		interface_category = interface_category_air
+
+		air_range = 8300
+		maximum_speed = 9999
+		air_bombing = 2100
+
+		build_cost_ic = 2183
+	}
+
+	slbm_equipment_9 = {
+		year = 1990
+		parent = slbm_equipment_8
+		archetype = slbm_equipment
+		is_buildable = yes
+		one_use_only = yes
+		sprite = missile_default
+		air_map_icon_frame = 9
+        default_carrier_composition_weight = 0
+
+		carrier_capable = yes
+
+		interface_category = interface_category_air
+
+		air_range = 9000
+		maximum_speed = 9999
+		air_bombing = 2250
+
+		build_cost_ic = 2905
+	}
+
+	icbm_equipment = {
+		year = 1936
+
+		is_archetype = yes
+		is_buildable = no
+		can_license = no
+		type = missile
+		group_by = type
+		sprite = missile_default
+		air_map_icon_frame = 9
+
+
+		interface_category = interface_category_air
+
+		reliability = 0.8
+
+		# Air vs Navy - high damage / low hit chance / hard to hurt
+		naval_strike_attack = 1.5
+		naval_strike_targetting = 0.6
+
+		#Space taken in convoy
+		lend_lease_cost = 1.5
+
+		build_cost_ic = 54
+		resources = {
+			aluminium = 3
+			tungsten = 3
+		}
+	}
+
+	icbm_equipment_1 = {
+		year = 1955
+
+		archetype = icbm_equipment
+		is_buildable = yes
+		one_use_only = yes
+		sprite = missile_default
+		air_map_icon_frame = 9
+
+		interface_category = interface_category_air
+
+		air_range = 7000
+		maximum_speed = 9999
+		air_agility = 1000
+		air_bombing = 800
+
+		build_cost_ic = 10
+	}
+
+	icbm_equipment_2 = {
+		year = 1960
+		parent = icbm_equipment_1
+		archetype = icbm_equipment
+		is_buildable = yes
+		one_use_only = yes
+		sprite = missile_default
+		air_map_icon_frame = 9
+
+		interface_category = interface_category_air
+
+		air_range = 8000
+		maximum_speed = 9999
+		air_agility = 1000
+		air_bombing = 800
+
+		build_cost_ic = 10
+	}
+
+	icbm_equipment_3 = {
+		year = 1963
+		parent = icbm_equipment_2
+		archetype = icbm_equipment
+		is_buildable = yes
+		one_use_only = yes
+		sprite = missile_default
+		air_map_icon_frame = 9
+
+		interface_category = interface_category_air
+
+		air_range = 9000
+		maximum_speed = 9999
+		air_agility = 1000
+		air_bombing = 800
+
+		build_cost_ic = 10
+	}
+
+	icbm_equipment_4 = {
+		year = 1968
+		parent = icbm_equipment_3
+		archetype = icbm_equipment
+		is_buildable = yes
+		one_use_only = yes
+		sprite = missile_default
+		air_map_icon_frame = 9
+
+		interface_category = interface_category_air
+
+		air_range = 10000
+		maximum_speed = 9999
+		air_agility = 1000
+		air_bombing = 800
+
+		build_cost_ic = 10
+	}
+
+	icbm_equipment_5 = {
+		year = 1971
+		parent = icbm_equipment_4
+		archetype = icbm_equipment
+		is_buildable = yes
+		one_use_only = yes
+		sprite = missile_default
+		air_map_icon_frame = 9
+
+		interface_category = interface_category_air
+
+		air_range = 11000
+		maximum_speed = 9999
+		air_agility = 1000
+		air_bombing = 800
+
+		build_cost_ic = 10
+	}
+
+	icbm_equipment_6 = {
+		year = 1979
+		parent = icbm_equipment_5
+		archetype = icbm_equipment
+		is_buildable = yes
+		one_use_only = yes
+		sprite = missile_default
+		air_map_icon_frame = 9
+
+		interface_category = interface_category_air
+
+		air_range = 11000
+		maximum_speed = 99991
+		air_bombing = 1500
+
+		build_cost_ic = 556
+	}
+
+	icbm_equipment_7 = {
+		year = 1982
+		parent = icbm_equipment_6
+		archetype = icbm_equipment
+		is_buildable = yes
+		one_use_only = yes
+		sprite = missile_default
+		air_map_icon_frame = 9
+
+		interface_category = interface_category_air
+
+		air_range = 12000
+		maximum_speed = 9999
+		air_bombing = 1650
+
+		build_cost_ic = 740
+	}
+
+	icbm_equipment_8 = {
+		year = 1986
+		parent = icbm_equipment_7
+		archetype = icbm_equipment
+		is_buildable = yes
+		one_use_only = yes
+		sprite = missile_default
+		air_map_icon_frame = 9
+
+		interface_category = interface_category_air
+
+		air_range = 13000
+		maximum_speed = 9999
+		air_bombing = 1800
+
+		build_cost_ic = 986
+	}
+
+	icbm_equipment_9 = {
+		year = 1990
+		parent = icbm_equipment_8
+		archetype = icbm_equipment
+		is_buildable = yes
+		one_use_only = yes
+		sprite = missile_default
+		air_map_icon_frame = 9
+
+		interface_category = interface_category_air
+
+		air_range = 14000
+		maximum_speed = 9999
+		air_bombing = 1950
+
+		build_cost_ic = 1312
+	}
+
+	icbm_equipment_10 = {
+		year = 1990
+		parent = icbm_equipment_9
+		archetype = icbm_equipment
+		is_buildable = yes
+		one_use_only = yes
+		sprite = missile_default
+		air_map_icon_frame = 9
+
+		interface_category = interface_category_air
+
+		air_range = 15000
+		maximum_speed = 9999
+		air_bombing = 2250
+
+		build_cost_ic = 2334
+	}
+}

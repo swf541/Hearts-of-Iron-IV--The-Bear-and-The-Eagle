@@ -1,0 +1,4129 @@
+focus_tree = {
+	id = Libya_1950s
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = LBA
+		}
+	}
+	default = no
+	focus = {
+		id = LBA_naval_effort
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		x = 34
+		y = 0
+			available_if_capitulated = yes
+			available = {
+					any_state = {
+							is_coastal = yes
+							is_controlled_by = ROOT
+						}
+				}
+			complete_tooltip = {
+					navy_experience = 25
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+							type = dockyard
+							level = 3
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					navy_experience = 25
+					if = {
+							limit = {
+									NOT = {
+											any_owned_state = {
+													dockyard > 0
+													free_building_slots = {
+															building = dockyard
+															size > 2
+															include_locked = yes
+														}
+												}
+										}
+									any_owned_state = {
+											is_coastal = yes
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											is_coastal = yes
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+							set_country_flag = naval_effort_built
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_country_flag = naval_effort_built
+										}
+									any_owned_state = {
+											dockyard > 0
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											dockyard > 0
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+							set_country_flag = naval_effort_built
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_country_flag = naval_effort_built
+										}
+									NOT = {
+											any_owned_state = {
+													free_building_slots = {
+															building = dockyard
+															size > 2
+															include_locked = yes
+														}
+												}
+										}
+								}
+							random_state = {
+									limit = {
+											controller = {
+													tag = ROOT
+												}
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_industrial_effort
+		icon = GFX_goal_generic_production
+		cost = 10.00
+		x = 4
+		y = 0
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = industrial_bonus
+							bonus = 0.5
+							uses = 1
+							category = industry
+						}
+				}
+			ai_will_do = {
+					factor = 3
+					modifier = {
+							factor = 0
+							date < 1939.1.1
+							OR = {
+									tag = GXC
+									tag = YUN
+									tag = SHX
+									tag = XSM
+									tag = BEL
+									tag = LUX
+									tag = HOL
+									tag = DEN
+									num_of_controlled_states < 2
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_non_aligned
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10.00
+		mutually_exclusive = {
+			focus = LBA_soviet_alignment
+		}
+		x = 12
+		y = 0
+			completion_reward = {
+					add_political_power = 120
+					add_national_unity = 0.10
+				}
+
+	}
+	focus = {
+		id = LBA_soviet_alignment
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		mutually_exclusive = {
+			focus = LBA_non_aligned
+			focus = LBA_american_alignment
+		}
+		x = 20
+		y = 0
+			completion_reward = {
+					LBA = {
+							add_opinion_modifier = {
+									target = SOV
+									modifier = large_increase
+								}
+						}
+					SOV = {
+							add_opinion_modifier = {
+									target = LBA
+									modifier = large_increase
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_american_alignment
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		mutually_exclusive = {
+			focus = LBA_soviet_alignment
+		}
+		x = 28
+		y = 0
+			completion_reward = {
+					LBA = {
+							add_opinion_modifier = {
+									target = USA
+									modifier = large_increase
+								}
+						}
+					USA = {
+							add_opinion_modifier = {
+									target = LBA
+									modifier = large_increase
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_equipment_effort
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		x = 9
+		y = 2
+		prerequisite = {
+			focus = LBA_army_effort
+		}
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 1
+							category = infantry_weapons
+							category = artillery
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_Independent_Senussi_Emirate
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 10.00
+		x = 50
+		y = 0
+			completion_reward = {
+					add_political_power = 300
+					add_national_unity = 0.15
+				}
+
+	}
+	focus = {
+		id = LBA_construction_effort
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_industrial_effort
+		}
+		x = 2
+		y = 1
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = construction_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = industrial_complex
+											size < 1
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_construction_effort_2
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_construction_effort
+		}
+		x = 2
+		y = 2
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = construction_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = industrial_complex
+											size < 1
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_infrastructure_effort
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_construction_effort_2
+		}
+		x = 2
+		y = 3
+			available_if_capitulated = yes
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = infrastructure_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = infrastructure
+											size < 1
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 0
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 0
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 1
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 1
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_construction_effort_3
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_infrastructure_effort
+		}
+		x = 2
+		y = 4
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = construction_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = industrial_complex
+											size < 2
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 1
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 1
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_production_effort
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_industrial_effort
+		}
+		x = 4
+		y = 1
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = production_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = arms_factory
+											size < 1
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_production_effort_2
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_production_effort
+		}
+		x = 4
+		y = 2
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = production_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = arms_factory
+											size < 1
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_production_effort_3
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_production_effort_2
+		}
+		x = 4
+		y = 3
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 2
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = production_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = arms_factory
+											size < 1
+											include_locked = yes
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_infrastructure_effort_2
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_infrastructure_effort
+		}
+		prerequisite = {
+			focus = LBA_production_effort_3
+		}
+		x = 4
+		y = 4
+			available_if_capitulated = yes
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = infrastructure_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = infrastructure
+											size < 1
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 0
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 0
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 1
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 1
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_secret_weapons
+		icon = GFX_goal_generic_secret_weapon
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_infrastructure_effort_2
+		}
+		prerequisite = {
+			focus = LBA_construction_effort_3
+		}
+		x = 1
+		y = 5
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = secret_bonus
+							bonus = 0.5
+							uses = 4
+							category = electronics
+							category = nuclear
+							category = rocketry
+						}
+				}
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0.25
+							always = yes
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_nuclear_effort
+		icon = GFX_focus_wonderweapons
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_infrastructure_effort_2
+		}
+		prerequisite = {
+			focus = LBA_construction_effort_3
+		}
+		x = 3
+		y = 5
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = nuclear_bonus
+							ahead_reduction = 0.5
+							category = nuclear
+						}
+				}
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0.25
+							always = yes
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_extra_tech_slot
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_infrastructure_effort_2
+		}
+		prerequisite = {
+			focus = LBA_construction_effort_3
+		}
+		x = 5
+		y = 5
+			available_if_capitulated = yes
+			completion_reward = {
+					add_research_slot = 1
+				}
+
+	}
+	focus = {
+		id = LBA_mining_development
+		icon = GFX_goal_generic_construction2
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_industrial_effort
+		}
+		x = 6
+		y = 1
+			completion_reward = {
+					random_owned_state = {
+							add_resource = {
+									type = chromium
+									amount = 25
+								}
+							add_resource = {
+									type = steel
+									amount = 25
+								}
+						}
+				}
+	}
+	focus = {
+		id = LBA_steel_industry
+		icon = GFX_goal_generic_construction2
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_mining_development
+		}
+		x = 6
+		y = 2
+			completion_reward = {
+					random_owned_state = {
+							add_resource = {
+									type = steel
+									amount = 50
+								}
+						}
+				}
+	}
+	focus = {
+		id = LBA_oil_development
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_steel_industry
+		}
+		x = 6
+		y = 3
+			completion_reward = {
+					random_owned_state = {
+							add_resource = {
+									type = oil
+									amount = 50
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_chromium_development
+		icon = GFX_goal_generic_construction2
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_oil_development
+		}
+		x = 6
+		y = 4
+			completion_reward = {
+					random_owned_state = {
+							add_resource = {
+									type = chromium
+									amount = 50
+								}
+						}
+				}
+	}
+	focus = {
+		id = LBA_equipment_effort_2
+		icon = GFX_goal_generic_army_artillery
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_equipment_effort
+		}
+		x = 9
+		y = 4
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = infantry_artillery_bonus
+							bonus = 0.5
+							uses = 1
+							category = infantry_weapons
+							category = artillery
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_equipment_effort_3
+		icon = GFX_goal_generic_army_artillery2
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_equipment_effort_2
+		}
+		x = 9
+		y = 6
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = infantry_artillery_bonus
+							ahead_reduction = 1
+							uses = 1
+							category = infantry_weapons
+							category = artillery
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_army_effort
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_non_aligned
+		}
+		x = 10
+		y = 1
+			available_if_capitulated = yes
+			completion_reward = {
+					army_experience = 5
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_doctrine_effort
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_army_effort
+		}
+		x = 10
+		y = 3
+			available_if_capitulated = yes
+			completion_reward = {
+					army_experience = 5
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_doctrine_effort_2
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_doctrine_effort
+		}
+		x = 10
+		y = 5
+			available_if_capitulated = yes
+			completion_reward = {
+					army_experience = 5
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_motorization_effort
+		icon = GFX_goal_generic_army_motorized
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_army_effort
+		}
+		x = 11
+		y = 2
+			bypass = {
+					has_tech = motorised_infantry
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = motorized_bonus
+							bonus = 0.75
+							technology = motorised_infantry
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_mechanization_effort
+		icon = GFX_goal_generic_build_tank
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_motorization_effort
+		}
+		x = 11
+		y = 4
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = motorized_bonus
+							ahead_reduction = 0.5
+							uses = 1
+							category = motorized_equipment
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_armor_effort
+		icon = GFX_goal_generic_army_tanks
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_mechanization_effort
+		}
+		x = 11
+		y = 6
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = armor_bonus
+							bonus = 0.5
+							uses = 2
+							category = armor
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_special_forces
+		icon = GFX_goal_generic_special_forces
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_equipment_effort_3
+		}
+		prerequisite = {
+			focus = LBA_doctrine_effort_2
+		}
+		prerequisite = {
+			focus = LBA_armor_effort
+		}
+		x = 10
+		y = 7
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = special_forces_bonus
+							bonus = 0.5
+							uses = 1
+							technology = paratroopers
+							technology = paratroopers2
+							technology = marines
+							technology = marines2
+							technology = tech_mountaineers
+							technology = tech_mountaineers2
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_aviation_effort
+		icon = GFX_goal_generic_build_airforce
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_non_aligned
+		}
+		x = 14
+		y = 1
+			available_if_capitulated = yes
+			complete_tooltip = {
+					air_experience = 25
+					if = {
+							limit = {
+									has_country_flag = aviation_effort_AB
+								}
+							add_building_construction = {
+									type = air_base
+									level = 2
+									instant_build = yes
+								}
+						}
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = air_doctrine
+						}
+				}
+			completion_reward = {
+					air_experience = 25
+					if = {
+							limit = {
+									capital_scope = {
+											NOT = {
+													free_building_slots = {
+															building = air_base
+															size > 1
+														}
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+									add_building_construction = {
+											type = air_base
+											level = 2
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_AB
+										}
+								}
+						}
+					if = {
+							limit = {
+									capital_scope = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+								}
+							capital_scope = {
+									add_building_construction = {
+											type = air_base
+											level = 2
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_AB
+										}
+								}
+						}
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = air_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_fighter_focus
+		icon = GFX_goal_generic_air_fighter
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_aviation_effort
+		}
+		mutually_exclusive = {
+			focus = LBA_bomber_focus
+		}
+		x = 13
+		y = 2
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = fighter_bonus
+							bonus = 0.5
+							uses = 2
+							technology = early_fighter
+							technology = fighter1
+							technology = fighter2
+							technology = fighter3
+							technology = heavy_fighter1
+							technology = heavy_fighter2
+							technology = heavy_fighter3
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_bomber_focus
+		icon = GFX_goal_generic_air_bomber
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_aviation_effort
+		}
+		mutually_exclusive = {
+			focus = LBA_fighter_focus
+		}
+		x = 15
+		y = 2
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = bomber_bonus
+							bonus = 0.5
+							uses = 2
+							technology = strategic_bomber1
+							technology = strategic_bomber2
+							technology = strategic_bomber3
+							category = tactical_bomber
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_aviation_effort_2
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_bomber_focus
+			focus = LBA_fighter_focus
+		}
+		x = 14
+		y = 3
+			available_if_capitulated = yes
+			complete_tooltip = {
+					air_experience = 25
+					if = {
+							limit = {
+									has_country_flag = aviation_effort_2_AB
+								}
+							add_building_construction = {
+									type = air_base
+									level = 2
+									instant_build = yes
+								}
+						}
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = air_doctrine
+						}
+				}
+			completion_reward = {
+					air_experience = 25
+					if = {
+							limit = {
+									capital_scope = {
+											OR = {
+													NOT = {
+															is_controlled_by = ROOT
+														}
+													NOT = {
+															free_building_slots = {
+																	building = air_base
+																	size > 1
+																}
+														}
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+									add_building_construction = {
+											type = air_base
+											level = 2
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_2_AB
+										}
+								}
+						}
+					if = {
+							limit = {
+									capital_scope = {
+											is_controlled_by = ROOT
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+								}
+							capital_scope = {
+									add_building_construction = {
+											type = air_base
+											level = 2
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_2_AB
+										}
+								}
+						}
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = air_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_CAS_effort
+		icon = GFX_goal_generic_CAS
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_aviation_effort_2
+		}
+		x = 13
+		y = 4
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = CAS_bonus
+							bonus = 0.5
+							ahead_reduction = 1
+							uses = 1
+							category = cas_bomber
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_NAV_effort
+		icon = GFX_goal_generic_air_naval_bomber
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_aviation_effort_2
+		}
+		x = 15
+		y = 4
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = nav_bomber_bonus
+							bonus = 0.5
+							ahead_reduction = 1
+							uses = 1
+							category = naval_bomber
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_rocket_effort
+		icon = GFX_focus_rocketry
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_CAS_effort
+		}
+		prerequisite = {
+			focus = LBA_NAV_effort
+		}
+		x = 14
+		y = 5
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = jet_rocket_bonus
+							ahead_reduction = 0.5
+							uses = 2
+							category = rocketry
+							category = jet_technology
+						}
+				}
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0.25
+							always = yes
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_reform_officer_corps_2
+		icon = GFX_goal_generic_special_forces
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_special_forces
+		}
+		prerequisite = {
+			focus = LBA_rocket_effort
+		}
+		prerequisite = {
+			focus = LBA_special_forces
+		}
+		prerequisite = {
+			focus = LBA_rocket_effort
+		}
+		prerequisite = {
+			focus = LBA_special_forces
+		}
+		prerequisite = {
+			focus = LBA_rocket_effort
+		}
+		prerequisite = {
+			focus = LBA_special_forces
+		}
+		prerequisite = {
+			focus = LBA_rocket_effort
+		}
+		x = 12
+		y = 8
+			completion_reward = {
+					remove_ideas = incompetent_officer_corps
+				}
+
+	}
+	focus = {
+		id = LBA_soviet_advisors
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_soviet_alignment
+		}
+		x = 18
+		y = 1
+			completion_reward = {
+					add_ideas = soviet_advisors
+				}
+
+	}
+	focus = {
+		id = LBA_surplus_soviet_equipment
+		icon = GFX_goal_continuous_reduce_training_time
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_soviet_advisors
+		}
+		x = 17
+		y = 2
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = assault_rifle_equipment_1
+							amount = 2000
+							producer = SOV
+						}
+					add_equipment_to_stockpile = {
+							type = main_battle_tanks_2
+							amount = 150
+							producer = SOV
+						}
+					add_equipment_to_stockpile = {
+							type = lt_equipment_1
+							amount = 300
+							producer = SOV
+						}
+					add_equipment_to_stockpile = {
+							type = ht_equipment_2
+							amount = 100
+							producer = SOV
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_soviet_armed_divisions
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_surplus_soviet_equipment
+		}
+		x = 17
+		y = 3
+			completion_reward = {
+					load_oob = LBA_soviet_armed_division
+				}
+
+	}
+	focus = {
+		id = LBA_soviet_trainer_pilots
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_soviet_alignment
+		}
+		x = 22
+		y = 1
+			completion_reward = {
+					air_experience = 25
+				}
+
+	}
+	focus = {
+		id = LBA_personel_exchanges
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_soviet_trainer_pilots
+		}
+		prerequisite = {
+			focus = LBA_soviet_advisors
+		}
+		x = 20
+		y = 2
+			completion_reward = {
+					add_manpower = 50000
+					army_experience = 5
+				}
+
+	}
+	focus = {
+		id = LBA_soviet_army_doctrine
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_personel_exchanges
+		}
+		prerequisite = {
+			focus = LBA_surplus_soviet_equipment
+		}
+		x = 19
+		y = 3
+			completion_reward = {
+					army_experience = 5
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.75
+							uses = 2
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_more_surplus_equipment
+		icon = GFX_focus_secret_rearmament
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_soviet_armed_divisions
+		}
+		prerequisite = {
+			focus = LBA_soviet_army_doctrine
+		}
+		x = 17
+		y = 4
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = assault_rifle_equipment_1
+							amount = 2000
+							producer = SOV
+						}
+					add_equipment_to_stockpile = {
+							type = main_battle_tanks_2
+							amount = 150
+							producer = SOV
+						}
+					add_equipment_to_stockpile = {
+							type = lt_equipment_1
+							amount = 300
+							producer = SOV
+						}
+					add_equipment_to_stockpile = {
+							type = ht_equipment_2
+							amount = 100
+							producer = SOV
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_soviet_fighters
+		icon = GFX_goal_generic_air_fighter
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_soviet_trainer_pilots
+		}
+		x = 23
+		y = 2
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = CAS_equipment_4
+							amount = 200
+							producer = SOV
+						}
+					add_equipment_to_stockpile = {
+							type = jet_fighter_equipment_2
+							amount = 800
+							producer = SOV
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_soviet_bombers
+		icon = GFX_goal_generic_air_bomber
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_soviet_fighters
+		}
+		prerequisite = {
+			focus = LBA_personel_exchanges
+		}
+		x = 21
+		y = 3
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = jet_strat_bomber_equipment_2
+							amount = 200
+							producer = SOV
+						}
+					add_equipment_to_stockpile = {
+							type = jet_tac_bomber_equipment_2
+							amount = 800
+							producer = SOV
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_soviet_air_doctrine
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_soviet_fighters
+		}
+		prerequisite = {
+			focus = LBA_personel_exchanges
+		}
+		x = 23
+		y = 3
+			completion_reward = {
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.5
+							uses = 3
+							category = air_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_soviet_airfield_development
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_soviet_air_doctrine
+		}
+		prerequisite = {
+			focus = LBA_soviet_bombers
+		}
+		x = 21
+		y = 4
+			completion_reward = {
+					air_experience = 25
+					if = {
+							limit = {
+									capital_scope = {
+											OR = {
+													NOT = {
+															is_controlled_by = ROOT
+														}
+													NOT = {
+															free_building_slots = {
+																	building = air_base
+																	size > 1
+																}
+														}
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+									add_building_construction = {
+											type = air_base
+											level = 5
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_2_AB
+										}
+								}
+						}
+					if = {
+							limit = {
+									capital_scope = {
+											is_controlled_by = ROOT
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+								}
+							capital_scope = {
+									add_building_construction = {
+											type = air_base
+											level = 5
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_2_AB
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_soviet_anti_air_defenses
+		icon = GFX_focus_generic_air_defense
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_soviet_air_doctrine
+		}
+		prerequisite = {
+			focus = LBA_soviet_bombers
+		}
+		x = 23
+		y = 4
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = anti_air_building
+											size > 3
+										}
+								}
+							add_building_construction = {
+									type = anti_air_building
+									level = 2
+									instant_build = yes
+								}
+							ROOT = {
+									set_country_flag = aviation_effort_2_AB
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = anti_air_building
+											size > 3
+										}
+								}
+							add_building_construction = {
+									type = anti_air_building
+									level = 2
+									instant_build = yes
+								}
+							ROOT = {
+									set_country_flag = aviation_effort_2_AB
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_research_advances_air
+		icon = GFX_goal_continuous_air_production
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_soviet_airfield_development
+		}
+		prerequisite = {
+			focus = LBA_soviet_anti_air_defenses
+		}
+		x = 22
+		y = 5
+			completion_reward = {
+					add_tech_bonus = {
+							name = TUR_fighter_modernisation
+							bonus = 0.5
+							uses = 2
+							category = light_fighter
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_soviet_scuds
+		icon = GFX_focus_rocketry
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_research_advances_air
+		}
+		x = 22
+		y = 6
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = cruisemissile_1
+							amount = 400
+							producer = SOV
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_american_advisors
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_american_alignment
+		}
+		x = 26
+		y = 1
+			completion_reward = {
+					add_ideas = american_advisors
+				}
+
+	}
+	focus = {
+		id = LBA_american_surplus_equipment
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_american_advisors
+		}
+		x = 25
+		y = 2
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = assault_rifle_equipment_1
+							amount = 2000
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = main_battle_tanks_2
+							amount = 150
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = lt_equipment_1
+							amount = 300
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = ht_equipment_2
+							amount = 100
+							producer = USA
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_american_armed_divisions
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_american_surplus_equipment
+		}
+		x = 25
+		y = 3
+			completion_reward = {
+					load_oob = LBA_american_armed_division
+				}
+
+	}
+	focus = {
+		id = LBA_american_aircraft_training
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_american_alignment
+		}
+		x = 30
+		y = 1
+			completion_reward = {
+					air_experience = 25
+				}
+
+	}
+	focus = {
+		id = LBA_american_weapon_sale
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_american_aircraft_training
+		}
+		prerequisite = {
+			focus = LBA_american_advisors
+		}
+		x = 28
+		y = 2
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = assault_rifle_equipment_1
+							amount = 2000
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = main_battle_tanks_2
+							amount = 150
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = lt_equipment_1
+							amount = 300
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = ht_equipment_2
+							amount = 100
+							producer = USA
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_american_doctrine
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_american_weapon_sale
+		}
+		prerequisite = {
+			focus = LBA_american_surplus_equipment
+		}
+		x = 27
+		y = 3
+			completion_reward = {
+					army_experience = 5
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.75
+							uses = 2
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_american_intelligence_aid
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_american_doctrine
+		}
+		prerequisite = {
+			focus = LBA_american_armed_divisions
+		}
+		x = 26
+		y = 4
+			completion_reward = {
+					add_ideas = american_intel_sharing
+				}
+
+	}
+	focus = {
+		id = LBA_american_tanks
+		icon = GFX_goal_generic_army_tanks
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_american_intelligence_aid
+		}
+		x = 25
+		y = 5
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = main_battle_tanks_2
+							amount = 150
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = lt_equipment_1
+							amount = 300
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = ht_equipment_2
+							amount = 100
+							producer = USA
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_american_weapon_sale_Copy
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_american_weapon_sale
+		}
+		x = 28
+		y = 4
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = assault_rifle_equipment_1
+							amount = 2000
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = main_battle_tanks_2
+							amount = 150
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = lt_equipment_1
+							amount = 300
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = ht_equipment_2
+							amount = 100
+							producer = USA
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_american_weapon_sale_Copy_Copy
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_american_weapon_sale_Copy
+		}
+		x = 28
+		y = 6
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = assault_rifle_equipment_1
+							amount = 2000
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = main_battle_tanks_2
+							amount = 150
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = lt_equipment_1
+							amount = 300
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = ht_equipment_2
+							amount = 100
+							producer = USA
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_american_fighters
+		icon = GFX_goal_generic_air_fighter
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_american_aircraft_training
+		}
+		x = 31
+		y = 2
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = CAS_equipment_4
+							amount = 200
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = jet_fighter_equipment_2
+							amount = 800
+							producer = USA
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_american_bombers
+		icon = GFX_goal_generic_air_bomber
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_american_weapon_sale
+		}
+		prerequisite = {
+			focus = LBA_american_fighters
+		}
+		x = 29
+		y = 3
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = jet_strat_bomber_equipment_2
+							amount = 200
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = jet_tac_bomber_equipment_2
+							amount = 800
+							producer = USA
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_american_doctrine_air
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_american_fighters
+		}
+		x = 31
+		y = 3
+			completion_reward = {
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.5
+							uses = 3
+							category = air_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_american_anti_air_defences
+		icon = GFX_focus_generic_air_defense
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_american_bombers
+		}
+		prerequisite = {
+			focus = LBA_american_doctrine_air
+		}
+		x = 30
+		y = 4
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = anti_air_building
+											size > 3
+										}
+								}
+							add_building_construction = {
+									type = anti_air_building
+									level = 2
+									instant_build = yes
+								}
+							ROOT = {
+									set_country_flag = aviation_effort_2_AB
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = anti_air_building
+											size > 3
+										}
+								}
+							add_building_construction = {
+									type = anti_air_building
+									level = 2
+									instant_build = yes
+								}
+							ROOT = {
+									set_country_flag = aviation_effort_2_AB
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_american_rocket_tech
+		icon = GFX_focus_rocketry
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_american_anti_air_defences
+		}
+		x = 29
+		y = 5
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = cruisemissile_1
+							amount = 400
+							producer = USA
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_american_airfield_development
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_american_anti_air_defences
+		}
+		x = 31
+		y = 5
+			completion_reward = {
+					air_experience = 25
+					if = {
+							limit = {
+									capital_scope = {
+											OR = {
+													NOT = {
+															is_controlled_by = ROOT
+														}
+													NOT = {
+															free_building_slots = {
+																	building = air_base
+																	size > 1
+																}
+														}
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+									add_building_construction = {
+											type = air_base
+											level = 5
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_2_AB
+										}
+								}
+						}
+					if = {
+							limit = {
+									capital_scope = {
+											is_controlled_by = ROOT
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+								}
+							capital_scope = {
+									add_building_construction = {
+											type = air_base
+											level = 5
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_2_AB
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_american_mic_contracts
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_american_rocket_tech
+		}
+		prerequisite = {
+			focus = LBA_american_airfield_development
+		}
+		x = 30
+		y = 6
+			completion_reward = {
+					add_ideas = american_mic_advisors
+				}
+
+	}
+	focus = {
+		id = LBA_reform_officer_corps
+		icon = GFX_goal_generic_special_forces
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_american_mic_contracts
+		}
+		x = 28
+		y = 7
+			completion_reward = {
+					remove_ideas = incompetent_officer_corps
+				}
+
+	}
+	focus = {
+		id = LBA_flexible_navy
+		icon = GFX_goal_generic_build_navy
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_naval_effort
+		}
+		mutually_exclusive = {
+			focus = LBA_large_navy
+		}
+		x = 33
+		y = 1
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0
+							all_owned_state = {
+									OR = {
+											is_coastal = no
+											dockyard < 1
+										}
+								}
+						}
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = sub_op_bonus
+							bonus = 0.5
+							uses = 2
+							technology = convoy_interdiction_ti
+							technology = unrestricted_submarine_warfare
+							technology = wolfpacks
+							technology = advanced_submarine_warfare
+							technology = combined_operations_raiding
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_large_navy
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_naval_effort
+		}
+		mutually_exclusive = {
+			focus = LBA_flexible_navy
+		}
+		x = 35
+		y = 1
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0
+							all_owned_state = {
+									OR = {
+											is_coastal = no
+											dockyard < 1
+										}
+								}
+						}
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = fleet_in_being_bonus
+							bonus = 0.5
+							uses = 2
+							category = fleet_in_being_tree
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_submarine_effort
+		icon = GFX_goal_generic_navy_submarine
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_flexible_navy
+			focus = LBA_large_navy
+		}
+		x = 33
+		y = 2
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0
+							all_owned_state = {
+									OR = {
+											is_coastal = no
+											dockyard < 1
+										}
+								}
+						}
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = ss_bonus
+							bonus = 0.5
+							ahead_reduction = 1
+							uses = 1
+							technology = early_submarine
+							technology = basic_submarine
+							technology = improved_submarine
+							technology = advanced_submarine
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_destroyer_effort
+		icon = GFX_goal_generic_wolf_pack
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_submarine_effort
+		}
+		x = 33
+		y = 3
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0
+							all_owned_state = {
+									OR = {
+											is_coastal = no
+											dockyard < 1
+										}
+								}
+						}
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = dd_bonus
+							bonus = 0.5
+							ahead_reduction = 1
+							uses = 1
+							technology = early_destroyer
+							technology = basic_destroyer
+							technology = improved_destroyer
+							technology = advanced_destroyer
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_cruiser_effort
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_large_navy
+			focus = LBA_flexible_navy
+		}
+		x = 35
+		y = 2
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0
+							all_owned_state = {
+									OR = {
+											is_coastal = no
+											dockyard < 1
+										}
+								}
+						}
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = cr_bonus
+							bonus = 0.5
+							ahead_reduction = 1
+							uses = 1
+							technology = improved_light_cruiser
+							technology = advanced_light_cruiser
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_capital_ships_effort
+		icon = GFX_goal_generic_navy_battleship
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_cruiser_effort
+		}
+		x = 35
+		y = 3
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0
+							all_owned_state = {
+									OR = {
+											is_coastal = no
+											dockyard < 1
+										}
+								}
+						}
+				}
+			completion_reward = {
+					navy_experience = 25
+					add_tech_bonus = {
+							name = capital_ships_bonus
+							bonus = 0.5
+							ahead_reduction = 1
+							uses = 1
+							technology = battle_cruiser_1
+							technology = early_battleship
+							technology = battleship_2
+							technology = battleship_3
+							technology = early_carrier
+							technology = basic_carrier
+							technology = improved_carrier
+							technology = advanced_carrier
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_Support_PCL
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Independent_Senussi_Emirate
+		}
+		mutually_exclusive = {
+			focus = LBA_Restore_AML
+			focus = LBA_Idris_Idea
+			focus = LBA_Oppose_Bevin_Sforza_plan
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+		x = 41
+		y = 1
+			completion_reward = {
+					add_ideas = internationalism
+				}
+
+	}
+	focus = {
+		id = LBA_No_More_Monarchy
+		icon = GFX_goal_tfv_burn_the_royal_portraits
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Support_PCL
+		}
+		x = 41
+		y = 2
+			completion_reward = {
+					add_political_power = 300
+					add_national_unity = -0.10
+				}
+
+	}
+	focus = {
+		id = LBA_Revolution_against_Oppressors
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_No_More_Monarchy
+		}
+		x = 41
+		y = 3
+			completion_reward = {
+					set_autonomy = {
+							target = LBA
+							autonomy_state = autonomy_free
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_Ask_USSR_For_Help
+		icon = GFX_goal_generic_military_deal
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Revolution_against_Oppressors
+		}
+		x = 41
+		y = 4
+			completion_reward = {
+					add_ideas = militarized_schools
+					LBA = {
+							add_opinion_modifier = {
+									target = SOV
+									modifier = large_increase
+								}
+						}
+					SOV = {
+							add_opinion_modifier = {
+									target = LBA
+									modifier = large_increase
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_A_New_Libya
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Ask_USSR_For_Help
+		}
+		x = 41
+		y = 5
+			completion_reward = {
+					transfer_state = 273
+					transfer_state = 448
+					transfer_state = 449
+					transfer_state = 450
+					transfer_state = 451
+					transfer_state = 661
+					transfer_state = 662
+					transfer_state = 663
+					transfer_state = 775
+					273 = { add_core_of = LBA }	
+					448 = { add_core_of = LBA }	
+					449 = { add_core_of = LBA }	
+					450 = { add_core_of = LBA }	
+					451 = { add_core_of = LBA }	
+					661 = { add_core_of = LBA }	
+					662 = { add_core_of = LBA }	
+					663 = { add_core_of = LBA }	
+					775 = { add_core_of = LBA }	
+					drop_cosmetic_tag = yes
+				}
+
+	}
+	focus = {
+		id = LBA_Stay_with_USSR
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_A_New_Libya
+		}
+		mutually_exclusive = {
+			focus = LBA_Ally_With_Yugoslavia
+		}
+		x = 39
+		y = 6
+			completion_reward = {
+					LBA = {
+							add_opinion_modifier = {
+									target = SOV
+									modifier = large_increase
+								}
+						}
+					SOV = {
+							add_opinion_modifier = {
+									target = LBA
+									modifier = large_increase
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_Ally_With_Yugoslavia
+		icon = GFX_focus_yug_pan_slavic_congress
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_A_New_Libya
+		}
+		mutually_exclusive = {
+			focus = LBA_Stay_with_USSR
+		}
+		x = 43
+		y = 6
+			completion_reward = {
+					LBA = {
+							add_opinion_modifier = {
+									target = YUG
+									modifier = large_increase
+								}
+						}
+					YUG = {
+							add_opinion_modifier = {
+									target = LBA
+									modifier = large_increase
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_Bring_Revolution_to_North_Africa
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Ally_With_Yugoslavia
+			focus = LBA_Stay_with_USSR
+		}
+		x = 41
+		y = 7
+			completion_reward = {
+					add_political_power = 300
+				}
+
+	}
+	focus = {
+		id = LBA_Revolution_in_Algieria
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Bring_Revolution_to_North_Africa
+		}
+		x = 41
+		y = 8
+			completion_reward = {
+					ALG = {
+							add_timed_idea = {
+									idea = internationalism
+									days = 650
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_Revolution_in_Egypt
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Bring_Revolution_to_North_Africa
+		}
+		x = 43
+		y = 8
+			completion_reward = {
+					EGY = {
+							add_timed_idea = {
+									idea = internationalism
+									days = 650
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_Revolution_in_Tunisia
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Bring_Revolution_to_North_Africa
+		}
+		x = 39
+		y = 8
+			completion_reward = {
+					TUN = {
+							add_timed_idea = {
+									idea = internationalism
+									days = 650
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_North_African_Communist_Faction
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Revolution_in_Tunisia
+			focus = LBA_Revolution_in_Algieria
+			focus = LBA_Revolution_in_Egypt
+		}
+		mutually_exclusive = {
+			focus = LBA_Connect_North_Africa_to_Our_Friends
+		}
+		x = 43
+		y = 9
+			completion_reward = {
+					create_faction = "The North African Commune"
+				}
+
+	}
+	focus = {
+		id = LBA_Restore_AML
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Independent_Senussi_Emirate
+		}
+		mutually_exclusive = {
+			focus = LBA_Support_PCL
+			focus = LBA_Idris_Idea
+			focus = LBA_Oppose_Bevin_Sforza_plan
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+		x = 49
+		y = 1
+			completion_reward = {
+					add_ideas = nationalism
+				}
+
+	}
+	focus = {
+		id = LBA_Recreate_Arab_Lictor_Youth
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Restore_AML
+		}
+		x = 49
+		y = 2
+			completion_reward = {
+					add_ideas = military_youth_focus
+					add_ideas = militarism_focus
+				}
+
+	}
+	focus = {
+		id = LBA_Free_Fascist_Libya
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Recreate_Arab_Lictor_Youth
+		}
+		x = 49
+		y = 3
+			completion_reward = {
+					set_autonomy = {
+							target = LBA
+							autonomy_state = autonomy_free
+						}
+					drop_cosmetic_tag = yes
+				}
+
+	}
+	focus = {
+		id = LBA_Retake_Our_Lands
+		icon = GFX_goal_anschluss
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Free_Fascist_Libya
+		}
+		x = 49
+		y = 4
+			completion_reward = {
+					transfer_state = 273
+					transfer_state = 448
+					transfer_state = 449
+					transfer_state = 450
+					transfer_state = 451
+					transfer_state = 661
+					transfer_state = 662
+					transfer_state = 663
+					transfer_state = 775
+					273 = { add_core_of = LBA }	
+					448 = { add_core_of = LBA }	
+					449 = { add_core_of = LBA }	
+					450 = { add_core_of = LBA }	
+					451 = { add_core_of = LBA }	
+					661 = { add_core_of = LBA }	
+					662 = { add_core_of = LBA }	
+					663 = { add_core_of = LBA }	
+					775 = { add_core_of = LBA }	
+				}
+
+	}
+	focus = {
+		id = LBA_Find_New_Allies
+		icon = GFX_goal_generic_military_deal
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Retake_Our_Lands
+		}
+		x = 49
+		y = 5
+			completion_reward = {
+					create_faction = "The Mediterranean Alliance"
+				}
+
+	}
+	focus = {
+		id = LBA_Nationalist_Spain_and_Portugal
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Find_New_Allies
+		}
+		x = 47
+		y = 6
+			completion_reward = {
+					POR = {
+							country_event = swfs.14
+						}
+					SPR = {
+							country_event = swfs.14
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_Recreated_Fascist_Italy
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Find_New_Allies
+		}
+		x = 49
+		y = 6
+			completion_reward = {
+					ITA = {
+							add_timed_idea = {
+									idea = nationalism
+									days = 650
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_Befriend_Pan_Arabist_Egypt
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Find_New_Allies
+		}
+		x = 51
+		y = 6
+			completion_reward = {
+					LBA = {
+							add_opinion_modifier = {
+									target = EGY
+									modifier = large_increase
+								}
+						}
+					EGY = {
+							add_opinion_modifier = {
+									target = LBA
+									modifier = large_increase
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_Support_Expansion_of_Fascism
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Nationalist_Spain_and_Portugal
+			focus = LBA_Recreated_Fascist_Italy
+			focus = LBA_Befriend_Pan_Arabist_Egypt
+		}
+		x = 49
+		y = 7
+			completion_reward = {
+					add_ideas = paramilitarism_focus
+				}
+
+	}
+	focus = {
+		id = LBA_Nationalism_in_Tunisia
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Support_Expansion_of_Fascism
+		}
+		prerequisite = {
+			focus = LBA_Support_Expansion_of_Fascism
+		}
+		x = 48
+		y = 8
+			completion_reward = {
+					TUN = {
+							add_ideas = nationalism
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_Nationalism_in_Algeria
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Support_Expansion_of_Fascism
+		}
+		prerequisite = {
+			focus = LBA_Support_Expansion_of_Fascism
+		}
+		x = 50
+		y = 8
+			completion_reward = {
+					ALG = {
+							add_timed_idea = {
+									idea = nationalism
+									days = 650
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_Befriend_New_Nationailst_Countries
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Nationalism_in_Tunisia
+		}
+		prerequisite = {
+			focus = LBA_Nationalism_in_Algeria
+		}
+		x = 49
+		y = 9
+			completion_reward = {
+					TUN = {
+							country_event = swfs.14
+						}
+					ALG = {
+							country_event = swfs.14
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_Oppose_Bevin_Sforza_plan
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Independent_Senussi_Emirate
+		}
+		mutually_exclusive = {
+			focus = LBA_Support_PCL
+			focus = LBA_Restore_AML
+			focus = LBA_Idris_Idea
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 1
+			}
+		}
+		x = 54
+		y = 1
+			completion_reward = {
+					LBA = {
+							add_opinion_modifier = {
+									target = USA
+									modifier = large_increase
+								}
+						}
+					USA = {
+							add_opinion_modifier = {
+									target = LBA
+									modifier = large_increase
+								}
+						}
+					LBA = {
+							add_opinion_modifier = {
+									target = ENG
+									modifier = large_decrease
+								}
+						}
+					ENG = {
+							add_opinion_modifier = {
+									target = LBA
+									modifier = large_decrease
+								}
+						}
+					LBA = {
+							add_opinion_modifier = {
+									target = FRA
+									modifier = large_decrease
+								}
+						}
+					FRA = {
+							add_opinion_modifier = {
+									target = LBA
+									modifier = large_decrease
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_UN_Intervention
+		icon = GFX_goal_tripartite_pact
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Oppose_Bevin_Sforza_plan
+		}
+		x = 54
+		y = 2
+			completion_reward = {
+					add_political_power = 300
+				}
+
+	}
+	focus = {
+		id = LBA_Full_Independence
+		icon = GFX_focus_generic_home_defense
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_UN_Intervention
+		}
+		x = 54
+		y = 3
+			completion_reward = {
+					set_autonomy = {
+							target = LBA
+							autonomy_state = autonomy_free
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_United_Kingdom_of_Libya
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Full_Independence
+		}
+		x = 0
+		y = 1
+		relative_position_id = LBA_Full_Independence
+			completion_reward = {
+					transfer_state = 273
+					transfer_state = 448
+					transfer_state = 449
+					transfer_state = 450
+					transfer_state = 451
+					transfer_state = 661
+					transfer_state = 662
+					transfer_state = 663
+					transfer_state = 775
+					273 = { add_core_of = LBA }	
+					448 = { add_core_of = LBA }	
+					449 = { add_core_of = LBA }	
+					450 = { add_core_of = LBA }	
+					451 = { add_core_of = LBA }	
+					661 = { add_core_of = LBA }	
+					662 = { add_core_of = LBA }	
+					663 = { add_core_of = LBA }	
+					775 = { add_core_of = LBA }	
+					drop_cosmetic_tag = yes
+				}
+
+	}
+	focus = {
+		id = LBA_Diplomacy_of_Idris
+		icon = GFX_focus_hun_elect_a_king
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_United_Kingdom_of_Libya
+		}
+		x = 54
+		y = 5
+			completion_reward = {
+					add_political_power = 300
+				}
+
+	}
+	focus = {
+		id = LBA_Join_to_Arab_League
+		icon = GFX_goal_generic_major_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Diplomacy_of_Idris
+		}
+		x = 54
+		y = 6
+			completion_reward = {
+					add_ideas = idea_IRQ_Mobilizate_League_Arabe
+				}
+
+	}
+	focus = {
+		id = TLBA_Turn_Pan_Arabist
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Join_to_Arab_League
+		}
+		mutually_exclusive = {
+			focus = LBA_Stay_with_Monarchy
+		}
+		x = 54
+		y = 7
+			completion_reward = {
+					set_politics = {
+							ruling_party = pan_arabism
+							elections_allowed = no
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_Ally_with_Nasser
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = TLBA_Turn_Pan_Arabist
+		}
+		x = 52
+		y = 8
+			available = {
+					EGY = {
+							is_faction_leader = yes
+						}
+				}
+			completion_reward = {
+					EGY = {
+							add_to_faction = LBA
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_Stay_with_Monarchy
+		icon = GFX_focus_hun_elect_a_king
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Join_to_Arab_League
+		}
+		mutually_exclusive = {
+			focus = TLBA_Turn_Pan_Arabist
+		}
+		x = 56
+		y = 7
+			completion_reward = {
+					add_political_power = 300
+					add_national_unity = 0.15
+				}
+
+	}
+	focus = {
+		id = LBA_Support_Algerian_Independence
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Stay_with_Monarchy
+			focus = TLBA_Turn_Pan_Arabist
+		}
+		x = 54
+		y = 8
+			available = {
+					country_exists = ALG
+				}
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = assault_rifle_equipment_1
+							amount = 3000
+							producer = SOV
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_Support_Morrocan_Independence
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Support_Algerian_Independence
+		}
+		x = 54
+		y = 9
+			completion_reward = {
+					MOR = {
+							add_autonomy_ratio = {
+									value = 0.40
+									localization = Libya
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_Bigger_Isolation
+		icon = GFX_focus_generic_coastal_fort
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Stay_with_Monarchy
+		}
+		x = 56
+		y = 8
+			completion_reward = {
+					add_national_unity = 0.15
+					add_political_power = 300
+				}
+
+	}
+	focus = {
+		id = LBA_Isolationist_Policy
+		icon = GFX_focus_generic_coastal_fort
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Bigger_Isolation
+		}
+		x = 56
+		y = 9
+			completion_reward = {
+					add_ideas = neutrality_idea
+				}
+
+	}
+	focus = {
+		id = LBA_Idris_Idea
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Independent_Senussi_Emirate
+		}
+		mutually_exclusive = {
+			focus = LBA_Support_PCL
+			focus = LBA_Restore_AML
+			focus = LBA_Oppose_Bevin_Sforza_plan
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+		x = 57
+		y = 1
+			completion_reward = {
+					add_national_unity = 0.10
+					add_political_power = 200
+				}
+
+	}
+	focus = {
+		id = LBA_Become_a_Protectorate
+		icon = GFX_focus_SAF_secure_africa
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Idris_Idea
+		}
+		x = 57
+		y = 2
+			completion_reward = {
+					transfer_state = 273
+					transfer_state = 448
+					transfer_state = 449
+					transfer_state = 450
+					transfer_state = 451
+					transfer_state = 661
+					transfer_state = 662
+					transfer_state = 663
+					transfer_state = 775
+					273 = { add_core_of = LBA }	
+					448 = { add_core_of = LBA }	
+					449 = { add_core_of = LBA }	
+					450 = { add_core_of = LBA }	
+					451 = { add_core_of = LBA }	
+					661 = { add_core_of = LBA }	
+					662 = { add_core_of = LBA }	
+					663 = { add_core_of = LBA }	
+					775 = { add_core_of = LBA }	
+					drop_cosmetic_tag = yes
+				}
+
+	}
+	focus = {
+		id = LBA_Go_Democratic
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Become_a_Protectorate
+		}
+		x = 57
+		y = 3
+			completion_reward = {
+					add_ideas = democratic_party_drift
+				}
+
+	}
+	focus = {
+		id = LBA_A_New_Ally_for_NATO
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Go_Democratic
+		}
+		x = 57
+		y = 4
+			completion_reward = {
+					USA = { add_to_faction = ROOT }
+					add_ideas = nato_member
+					LBA = {
+							add_opinion_modifier = {
+									target = USA
+									modifier = large_increase
+								}
+						}
+					USA = {
+							add_opinion_modifier = {
+									target = LBA
+									modifier = large_increase
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_Free_Elections
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_A_New_Ally_for_NATO
+		}
+		x = 59
+		y = 5
+			completion_reward = {
+					set_autonomy = {
+							target = LBA
+							autonomy_state = autonomy_free
+						}
+					set_politics = {
+							ruling_party = monarchism
+							elections_allowed = yes
+						}
+					hold_election = LBA
+				}
+
+	}
+	focus = {
+		id = LBA_Keep_the_Kingdom
+		icon = GFX_focus_hun_elect_a_king
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Free_Elections
+		}
+		mutually_exclusive = {
+			focus = LBA_New_Government
+		}
+		x = 58
+		y = 6
+			available = {
+					has_government = monarchism
+				}
+			completion_reward = {
+					set_politics = {
+							ruling_party = monarchism
+							elections_allowed = no
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_New_Government
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Free_Elections
+		}
+		mutually_exclusive = {
+			focus = LBA_Keep_the_Kingdom
+		}
+		x = 60
+		y = 6
+			available = {
+					NOT = {
+							has_government = monarchism
+						}
+				}
+			completion_reward = {
+					add_political_power = 300
+				}
+
+	}
+	focus = {
+		id = LBA_A_New_Free_Libya
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_New_Government
+			focus = LBA_Keep_the_Kingdom
+		}
+		x = 58
+		y = 7
+			completion_reward = {
+					add_national_unity = 0.15
+					add_political_power = 300
+				}
+
+	}
+	focus = {
+		id = LBA_Defend_the_Democracy_in_North_Africa
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_A_New_Free_Libya
+		}
+		x = 58
+		y = 8
+			completion_reward = {
+					ALG = {
+							add_timed_idea = {
+									idea = democratic_party_drift
+									days = 650
+								}
+						}
+					TUN = {
+							add_timed_idea = {
+									idea = democratic_party_drift
+									days = 650
+								}
+						}
+					EGY = {
+							add_timed_idea = {
+									idea = democratic_party_drift
+									days = 650
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_Intervention_in_Egypt
+		icon = GFX_goal_anschluss
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Defend_the_Democracy_in_North_Africa
+		}
+		x = 58
+		y = 9
+			completion_reward = {
+					create_wargoal = {
+							type = puppet_wargoal_focus
+							target = EGY
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_Diplomacy_with_the_Major_Powers
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Diplomacy_of_Idris
+		}
+		x = 61
+		y = 7
+			completion_reward = {
+					add_political_power = 300
+				}
+
+	}
+	focus = {
+		id = LBA_Ally_United_Kingdom
+		icon = GFX_goal_generic_major_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Diplomacy_with_the_Major_Powers
+		}
+		prerequisite = {
+			focus = LBA_Diplomacy_with_the_Major_Powers
+		}
+		x = 60
+		y = 8
+			completion_reward = {
+					LBA = {
+							add_opinion_modifier = {
+									target = ENG
+									modifier = large_increase
+								}
+						}
+					ENG = {
+							add_opinion_modifier = {
+									target = LBA
+									modifier = large_increase
+								}
+						}
+					add_equipment_to_stockpile = {
+							type = assault_rifle_equipment_1
+							amount = 2000
+							producer = ENG
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_Allow_British_Assistance
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Ally_United_Kingdom
+		}
+		x = 60
+		y = 9
+			completion_reward = {
+					random_owned_state = {
+							add_resource = {
+									type = oil
+									amount = 50
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_extra_tech_slot_2
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_extra_tech_slot
+		}
+		prerequisite = {
+			focus = LBA_nuclear_effort
+		}
+		prerequisite = {
+			focus = LBA_secret_weapons
+		}
+		x = 3
+		y = 6
+			available = {
+					num_of_factories > 50
+				}
+			cancel_if_invalid = no
+			continue_if_invalid = yes
+			available_if_capitulated = yes
+			completion_reward = {
+					add_research_slot = 1
+				}
+
+	}
+	focus = {
+		id = LBA_soviet_motorization_aid
+		icon = GFX_goal_generic_army_motorized
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_soviet_army_doctrine
+		}
+		prerequisite = {
+			focus = LBA_soviet_armed_divisions
+		}
+		x = 19
+		y = 4
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = motorized_equipment_2
+							amount = 500
+							producer = SOV
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_soviet_tanks
+		icon = GFX_goal_generic_army_tanks
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_soviet_motorization_aid
+		}
+		prerequisite = {
+			focus = LBA_more_surplus_equipment
+		}
+		x = 17
+		y = 5
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = main_battle_tanks_2
+							amount = 150
+							producer = SOV
+						}
+					add_equipment_to_stockpile = {
+							type = lt_equipment_1
+							amount = 300
+							producer = SOV
+						}
+					add_equipment_to_stockpile = {
+							type = ht_equipment_2
+							amount = 100
+							producer = SOV
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_soviet_mechanized_equipment
+		icon = GFX_goal_generic_build_tank
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_more_surplus_equipment
+		}
+		prerequisite = {
+			focus = LBA_soviet_motorization_aid
+		}
+		x = 19
+		y = 5
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = mechanized_equipment_3
+							amount = 500
+							producer = SOV
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_backwards_engineer_soviet_designs
+		icon = GFX_focus_secret_rearmament
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_soviet_mechanized_equipment
+		}
+		prerequisite = {
+			focus = LBA_soviet_tanks
+		}
+		x = 18
+		y = 6
+			completion_reward = {
+					add_ideas = soviet_military_desgins
+				}
+
+	}
+	focus = {
+		id = LBA_purge_officer_corps
+		icon = GFX_goal_generic_special_forces
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_backwards_engineer_soviet_designs
+		}
+		prerequisite = {
+			focus = LBA_soviet_scuds
+		}
+		x = 20
+		y = 7
+			completion_reward = {
+					remove_ideas = incompetent_officer_corps
+				}
+
+	}
+	focus = {
+		id = LBA_american_mechanized_equipment
+		icon = GFX_goal_generic_build_tank
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_american_intelligence_aid
+		}
+		x = 27
+		y = 5
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = mechanized_equipment_3
+							amount = 500
+							producer = USA
+						}
+					add_equipment_to_stockpile = {
+							type = motorized_equipment_2
+							amount = 500
+							producer = SOV
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_american_license_agreements
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_american_mechanized_equipment
+		}
+		prerequisite = {
+			focus = LBA_american_tanks
+		}
+		x = 26
+		y = 6
+			completion_reward = {
+					create_production_license = {
+							target = USA
+							cost_factor = 1.0
+							equipment = {
+									type = motorized_equipment_2
+									version = 0
+								}
+						}
+					create_production_license = {
+							target = USA
+							cost_factor = 1.0
+							equipment = {
+									type = mechanized_equipment_3
+									version = 0
+								}
+						}
+					create_production_license = {
+							target = USA
+							cost_factor = 1.0
+							equipment = {
+									type = main_battle_tanks_2
+									version = 0
+								}
+						}
+					create_production_license = {
+							target = USA
+							cost_factor = 1.0
+							equipment = {
+									type = lt_equipment_1
+									version = 0
+								}
+						}
+					create_production_license = {
+							target = USA
+							cost_factor = 1.0
+							equipment = {
+									type = ht_equipment_2
+									version = 0
+								}
+						}
+					create_production_license = {
+							target = USA
+							cost_factor = 1.0
+							equipment = {
+									type = assault_rifle_equipment_1
+									version = 0
+								}
+						}
+					create_production_license = {
+							target = USA
+							cost_factor = 1.0
+							equipment = {
+									type = CAS_equipment_4
+									version = 0
+								}
+						}
+					create_production_license = {
+							target = USA
+							cost_factor = 1.0
+							equipment = {
+									type = jet_fighter_equipment_2
+									version = 0
+								}
+						}
+					create_production_license = {
+							target = USA
+							cost_factor = 1.0
+							equipment = {
+									type = jet_tac_bomber_equipment_2
+									version = 0
+								}
+						}
+					create_production_license = {
+							target = USA
+							cost_factor = 1.0
+							equipment = {
+									type = jet_strat_bomber_equipment_2
+									version = 0
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_Ally_USA
+		icon = GFX_goal_generic_major_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Diplomacy_with_the_Major_Powers
+		}
+		x = 62
+		y = 8
+			completion_reward = {
+					LBA = {
+							add_opinion_modifier = {
+									target = USA
+									modifier = large_increase
+								}
+						}
+					USA = {
+							add_opinion_modifier = {
+									target = LBA
+									modifier = large_increase
+								}
+						}
+					add_equipment_to_stockpile = {
+							type = assault_rifle_equipment_1
+							amount = 3000
+							producer = USA
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_Wheelus_Air_Base
+		icon = GFX_goal_generic_air_fighter
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Ally_USA
+		}
+		x = 62
+		y = 9
+			completion_reward = {
+					448 = {
+							add_building_construction = {
+									type = air_base
+									level = 8
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_Pan_Arabists_in_Algeria
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Ally_with_Nasser
+		}
+		x = 52
+		y = 9
+			completion_reward = {
+					ALG = {
+							add_timed_idea = {
+									idea = pan_arab_influence
+									days = 650
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_Join_NATO
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Allow_British_Assistance
+		}
+		prerequisite = {
+			focus = LBA_Wheelus_Air_Base
+		}
+		mutually_exclusive = {
+			focus = LBA_Only_Cooperation
+		}
+		x = 60
+		y = 10
+			completion_reward = {
+					add_ideas = nato_member
+				}
+
+	}
+	focus = {
+		id = LBA_Only_Cooperation
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Allow_British_Assistance
+		}
+		prerequisite = {
+			focus = LBA_Wheelus_Air_Base
+		}
+		mutually_exclusive = {
+			focus = LBA_Join_NATO
+		}
+		x = 62
+		y = 10
+			completion_reward = {
+					LBA = {
+							add_opinion_modifier = {
+									target = USA
+									modifier = large_increase
+								}
+						}
+					USA = {
+							add_opinion_modifier = {
+									target = LBA
+									modifier = large_increase
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = LBA_Connect_North_Africa_to_Our_Friends
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = LBA_Revolution_in_Tunisia
+			focus = LBA_Revolution_in_Algieria
+			focus = LBA_Revolution_in_Egypt
+		}
+		mutually_exclusive = {
+			focus = LBA_North_African_Communist_Faction
+		}
+		x = 39
+		y = 9
+			completion_reward = {
+					TUN = {
+							country_event = swfs.13
+						}
+					EGY = {
+							country_event = swfs.13
+						}
+					ALG = {
+							country_event = swfs.13
+						}
+				}
+
+	}
+}

@@ -1,0 +1,125 @@
+ideas = {
+	political_advisor = {
+
+		gamal_abdel_nasser = {
+
+			
+			allowed = {
+				original_tag = EGY
+			}
+			
+			traits = { pan_arabist_revolutionary }
+		}
+		george_habash = {
+
+			
+			allowed = {
+				OR = {
+					original_tag = JOR
+					original_tag = PAL
+				}
+			}
+			
+			traits = { pan_arabist_revolutionary }
+		}
+	
+		akram_al_hawrani = {
+			
+			allowed = {
+				original_tag = SYR
+			}
+			
+			traits = { pan_arabist_revolutionary }
+		}
+	
+		abdul_salam_arif = {
+			
+			allowed = {
+				original_tag = IRQ
+			}
+			
+			traits = { pan_arabist_revolutionary }
+		}
+	
+		kamal_jumblat = {
+			
+			allowed = {
+				original_tag = LEB
+			}
+			
+			traits = { pan_arabist_revolutionary }
+		}
+	
+		abdullah_al_sallal = {
+			
+			allowed = {
+				original_tag = YEM
+			}
+			
+			traits = { pan_arabist_revolutionary }
+		}
+	
+		mussalim_bin_nafl = {
+			
+			allowed = {
+				original_tag = OMA
+			}
+			
+			traits = { pan_arabist_revolutionary }
+		}
+	
+		habib_bourguiba = {
+			
+			allowed = {
+				original_tag = TUN
+			}
+			
+			traits = { pan_arabist_revolutionary }
+		}
+	
+		hassan_as_senussi = {
+
+			
+			allowed = {
+				original_tag = MOR
+			}
+			
+			traits = { pan_arabist_revolutionary }
+		}
+	
+		chadli_bendjedid = {
+			
+			allowed = {
+				original_tag = ALG
+			}
+			
+			traits = { pan_arabist_revolutionary }
+		}
+		mahmud_sulayman_al_maghribi = {
+			
+			allowed = {
+				original_tag = LBA
+			}
+			
+			traits = { pan_arabist_revolutionary }
+		}
+		gaafar_nimeiry = {
+
+			
+			allowed = {
+				original_tag = SUD
+			}
+			
+			traits = { pan_arabist_revolutionary }
+		}
+		qahtan_muhammad_al_shaabi = {
+
+			
+			allowed = {
+				original_tag = DRY
+			}
+			
+			traits = { pan_arabist_revolutionary }
+		}
+	}
+}

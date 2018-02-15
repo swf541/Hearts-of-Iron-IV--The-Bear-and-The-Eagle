@@ -1,0 +1,1620 @@
+focus_tree = {
+	id = kpa_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = KPA
+		}
+		
+		modifier = {
+			add = 10
+			original_tag = KPA
+		}
+	}
+	
+	default = no
+
+	focus = {
+		id = KPA_WPK
+		icon = GFX_goal_support_communism
+		x = 3
+		y = 0
+		cost = 10
+		completion_reward = {
+			add_political_power = 150
+		 }
+	}
+	focus = {
+		id = KPA_land_of_the_tiller
+		prerequisite = { focus = KPA_WPK }
+		icon = GFX_goal_generic_national_unity
+		x = 2
+		y = 1
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = FRA_nuclear_effort
+				bonus = 0.1
+				category = industry
+				category = construction_tech
+			}
+		 }
+	}
+	focus = {
+		id = KPA_nationalisation_of_industry
+		prerequisite = { focus = KPA_land_of_the_tiller }
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 2
+		y = 2
+		cost = 10
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 3
+			  }
+		 }
+	}
+	focus = {
+		id = KPA_nationalisation_of_transport
+		prerequisite = { focus = KPA_nationalisation_of_industry }
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 2
+		y = 3
+		cost = 10
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+	   }
+	}
+	focus = {
+		id = KPA_nationalisation_of_resources
+		prerequisite = { focus = KPA_nationalisation_of_transport }
+		icon = GFX_goal_generic_oil_refinery
+		x = 2
+		y = 4
+		cost = 10
+		completion_reward = {
+			add_resource = {
+				type = oil
+				amount = 4
+				state = 749
+			}
+			749 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 2
+					instant_build = yes
+				}
+			}	
+		 }
+	}
+	focus = {
+		id = KPA_for_glorious_leader
+		prerequisite = { focus = KPA_WPK }
+		icon = GFX_goal_generic_propaganda
+		x = 4
+		y = 1
+		cost = 10
+		completion_reward = {
+			add_ideas = indoctrination_focus
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = KPA_stalinist_follower
+		prerequisite = { focus = KPA_for_glorious_leader }
+		icon = GFX_goal_generic_war_with_comintern
+		x = 4
+		y = 2
+		cost = 10
+		completion_reward = {
+			add_ideas = internationalism
+		}
+	}
+	focus = {
+		id = KPA_kims_schools
+		prerequisite = { focus = KPA_stalinist_follower }
+		icon = GFX_goal_generic_army_doctrines
+		x = 4
+		y = 3
+		cost = 10
+		completion_reward = {
+			add_ideas = militarized_schools
+		}
+	}
+	focus = {
+		id = KPA_korean_workers_program
+		prerequisite = { focus = KPA_kims_schools }
+		icon = GFX_goal_generic_construction
+		x = 4
+		y = 4
+		cost = 10
+		completion_reward = {
+			add_ideas = deterrence
+			add_ideas = workers_culture
+		}
+	}
+	focus = {
+		id = KPA_extra_tech_slot_early
+		icon = GFX_focus_research
+		text = extra_tech_slot
+		prerequisite = { focus = KPA_korean_workers_program }
+		prerequisite = { focus = KPA_nationalisation_of_resources }
+		x = 3
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}	
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = KPA_korean_research_comittee
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = KPA_extra_tech_slot_early }
+		x = 3
+		y = 6
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}	
+		completion_reward = {
+			add_ideas = progress_cult_focus
+		}
+	}
+	focus = {
+		id = KPA_Reunification
+		icon = GFX_goal_generic_political_pressure
+		x = 10
+		y = 0
+		cost = 10
+		completion_reward = {
+			KOR = {
+					add_opinion_modifier = { target = KPA modifier = democratic_leanings_bad }
+			}
+		 }
+	}
+	focus = {
+		id = KPA_claims_on_south_korea
+		prerequisite = { focus = KPA_Reunification }
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 10
+		y = 1
+		cost = 10
+		completion_reward = {
+			add_state_claim = 753
+			add_state_claim = 750
+			add_state_claim = 754
+			add_state_claim = 751
+			add_state_claim = 752
+			KOR = {
+					add_opinion_modifier = { target = KPA modifier = democratic_leanings_bad }
+			}
+		 }
+	}
+	focus = {
+		id = KPA_go_with_china
+		prerequisite = { focus = KPA_claims_on_south_korea }
+		icon = GFX_goal_generic_soviet_construction
+		x = 13
+		y = 2
+		cost = 10
+		completion_reward = {
+			KPA = {
+					add_opinion_modifier = { target = PRC modifier = democratic_leanings_good }
+			}
+			PRC = {
+					add_opinion_modifier = { target = KPA modifier = democratic_leanings_good }
+			}
+		 }
+	}
+	focus = {
+		id = KPA_chinese_training_program
+		prerequisite = { focus = KPA_go_with_china }
+		icon = GFX_goal_generic_small_arms
+		x = 12
+		y = 3
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		 }
+	}
+	focus = {
+		id = KPA_sino_north_korean_mutual_aid_treaty
+		prerequisite = { focus = KPA_chinese_training_program }
+		icon = GFX_goal_generic_dangerous_deal
+		x = 12
+		y = 4
+		cost = 10
+		completion_reward = {
+			KPA = {
+					add_opinion_modifier = { target = PRC modifier = democratic_leanings_good }
+			}
+			PRC = {
+					add_opinion_modifier = { target = KPA modifier = democratic_leanings_good }
+			}
+			KPA = {
+					add_opinion_modifier = { target = PRC modifier = democratic_leanings_good }
+			}
+			PRC = {
+					add_opinion_modifier = { target = KPA modifier = democratic_leanings_good }
+			}
+		 }
+	}
+	focus = {
+		id = KPA_dragon_versus_bear
+		prerequisite = { focus = KPA_sino_north_korean_mutual_aid_treaty }
+		mutually_exclusive = { focus = KPA_bear_versus_dragon }
+		icon = GFX_goal_generic_soviet_construction
+		x = 11
+		y = 6
+		cost = 10
+		completion_reward = {
+			PRC = {
+					add_opinion_modifier = { target = KPA modifier = democratic_leanings_good }
+			}
+			PRC = {
+					add_opinion_modifier = { target = KPA modifier = democratic_leanings_good }
+			}
+			PRC = {
+					add_opinion_modifier = { target = KPA modifier = democratic_leanings_good }
+			}
+			PRC = {
+					add_opinion_modifier = { target = KPA modifier = democratic_leanings_good }
+			}
+			SOV = {
+					add_opinion_modifier = { target = KPA modifier = democratic_leanings_bad }
+			}
+			SOV = {
+					add_opinion_modifier = { target = KPA modifier = democratic_leanings_bad }
+			}
+			SOV = {
+					add_opinion_modifier = { target = KPA modifier = democratic_leanings_bad }
+			}
+			SOV = {
+					add_opinion_modifier = { target = KPA modifier = democratic_leanings_bad }
+			}
+		 }
+	}
+	focus = {
+		id = KPA_sino_mutual_treaty
+		prerequisite = { focus = KPA_go_with_china }
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 14
+		y = 3
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	focus = {
+		id = KPA_construction_effort
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = KPA_sino_mutual_treaty }
+		x = 14
+		y = 4
+		cost = 10
+
+		
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}			
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = KPA_construction_effort_2
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = KPA_construction_effort }
+		x = 14
+		y = 5
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = KPA_go_with_the_soviet_union
+		prerequisite = { focus = KPA_claims_on_south_korea }
+		icon = GFX_goal_support_communism
+		x = 7
+		y = 2
+		cost = 10
+		completion_reward = {
+			KPA = {
+					add_opinion_modifier = { target = SOV modifier = democratic_leanings_good }
+			}
+			SOV = {
+					add_opinion_modifier = { target = KPA modifier = democratic_leanings_good }
+			}
+		 }
+	}
+	focus = {
+		id = KPA_go_with_north_korea
+		prerequisite = { focus = KPA_claims_on_south_korea }
+		icon = GFX_goal_generic_small_arms
+		x = 10
+		y = 2
+		cost = 10
+		completion_reward = {
+			add_ideas = indoctrination_focus
+		 }
+	}
+	focus = {
+		id = KPA_the_secondary_plan
+		prerequisite = { focus = KPA_go_with_north_korea }
+		icon = GFX_goal_generic_fortify_city
+		x = 10
+		y = 3
+		cost = 10
+		completion_reward = {
+			745 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 7155
+					instant_build = yes
+				}
+					   }
+			745 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 11915
+					instant_build = yes
+				}
+					   }
+			746 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 7070
+					instant_build = yes
+				}
+					   }
+			746 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 9981
+					instant_build = yes
+				}
+					   }
+			746 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 4004
+					instant_build = yes
+				}
+					   }
+			746 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 11958
+					instant_build = yes
+				}
+					   }
+		 }
+	}
+	focus = {
+		id = KPA_finish_the_three_year_plan
+		prerequisite = { focus = KPA_the_secondary_plan }
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 10
+		y = 4
+		cost = 10
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		 }
+	}
+	focus = {
+		id = KPA_declare_war_on_south_korea
+		prerequisite = { focus = KPA_finish_the_three_year_plan }
+		icon = GFX_goal_generic_major_war
+		x = 10
+		y = 5
+		cost = 10
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = KOR
+			} 
+			KOR = {
+					add_opinion_modifier = { target = KPA modifier = democratic_leanings_bad }
+			}
+		 }
+	}
+	focus = {
+		id = KPA_mig_alley
+		prerequisite = { focus = KPA_go_with_the_soviet_union }
+		icon = GFX_goal_generic_air_fighter
+		x = 8
+		y = 3
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+			air_experience = 20
+		 }
+	}
+	focus = {
+		id = KPA_soviet_radar_assistance
+		prerequisite = { focus = KPA_go_with_the_soviet_union }
+		icon = GFX_goal_generic_radar
+		x = 7
+		y = 4
+		cost = 10
+		completion_reward = {
+			745 = {
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+					   }
+			746 = {
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+					   }
+		 }
+	}
+	focus = {
+		id = KPA_bear_versus_dragon
+		prerequisite = { focus = KPA_soviet_radar_assistance }
+		mutually_exclusive = { focus = KPA_dragon_versus_bear }
+		icon = GFX_goal_support_communism
+		x = 9
+		y = 6
+		cost = 10
+		completion_reward = {
+			SOV = {
+					add_opinion_modifier = { target = KPA modifier = democratic_leanings_good }
+			}
+			SOV = {
+					add_opinion_modifier = { target = KPA modifier = democratic_leanings_good }
+			}
+			SOV = {
+					add_opinion_modifier = { target = KPA modifier = democratic_leanings_good }
+			}
+			SOV = {
+					add_opinion_modifier = { target = KPA modifier = democratic_leanings_good }
+			}
+			PRC = {
+					add_opinion_modifier = { target = KPA modifier = democratic_leanings_bad }
+			}
+			PRC = {
+					add_opinion_modifier = { target = KPA modifier = democratic_leanings_bad }
+			}
+			PRC = {
+					add_opinion_modifier = { target = KPA modifier = democratic_leanings_bad }
+			}
+			PRC = {
+					add_opinion_modifier = { target = KPA modifier = democratic_leanings_bad }
+			}
+		 }
+	}
+	focus = {
+		id = KPA_sino_soviet_treaty
+		prerequisite = { focus = KPA_go_with_the_soviet_union }
+		prerequisite = { focus = KPA_stalinist_follower }
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 6
+		y = 3
+		cost = 10
+		completion_reward = {
+			KPA = {
+					add_opinion_modifier = { target = SOV modifier = democratic_leanings_good }
+			}
+			SOV = {
+					add_opinion_modifier = { target = KPA modifier = democratic_leanings_good }
+			}
+			add_political_power = 50
+			add_ideas = partisan_suppression_focus
+		 }
+	}
+	focus = {
+		id = KPA_militarization
+		icon = GFX_goal_generic_military_sphere
+		x = 21
+		y = 0
+		cost = 10
+		completion_reward = {
+			army_experience = 30
+		 }
+	}
+	focus = {
+		id = KPA_army_effort
+		prerequisite = { focus = KPA_militarization }
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 21
+		y = 1
+		cost = 10
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = KPA_soviet_sino_training
+		prerequisite = { focus = KPA_militarization }
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 21
+		y = 2
+		cost = 10
+		completion_reward = {
+			army_experience = 15
+			navy_experience = 5
+			air_experience = 10
+		}
+	}
+	focus = {
+		id = KPA_equipment_effort
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = KPA_army_effort }
+		x = 20
+		y = 3
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+	focus = {
+		id = KPA_motorization_effort
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = KPA_army_effort }
+		bypass = { has_tech = motorised_infantry }
+		x = 22
+		y = 3
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 0.75
+				technology = motorised_infantry
+			}
+		}
+	}
+	focus = {
+		id = KPA_doctrine_effort
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = KPA_army_effort }
+		x = 21
+		y = 4
+		cost = 10
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = KPA_equipment_effort_2
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = KPA_equipment_effort }
+		x = 20
+		y = 5
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+	focus = {
+		id = KPA_mechanization_effort
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = KPA_motorization_effort }
+		x = 22
+		y = 5
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				ahead_reduction = 0.5
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+	}
+	focus = {
+		id = KPA_doctrine_effort_2
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = KPA_doctrine_effort }
+		x = 21
+		y = 6
+		cost = 10
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = KPA_equipment_effort_3
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = KPA_equipment_effort_2 }
+		x = 20
+		y = 7
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				ahead_reduction = 1
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+	focus = {
+		id = KPA_armor_effort
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = KPA_mechanization_effort }
+		x = 22
+		y = 7
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 0.5
+				uses = 2
+				category = armor
+			}
+		}
+	}
+	focus = {
+		id = KPA_special_forces
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = KPA_equipment_effort_3 }
+		prerequisite = { focus = KPA_doctrine_effort_2 }
+		prerequisite = { focus = KPA_armor_effort }
+		x = 21
+		y = 8
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 0.5
+				uses = 1
+				technology = paratroopers
+				technology = paratroopers2
+				technology = marines
+				technology = marines2
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+			}
+		}
+	}
+	focus = {
+		id = KPA_aviation_effort
+		prerequisite = { focus = KPA_militarization }
+		icon = GFX_goal_generic_build_airforce
+		x = 17
+		y = 1
+		cost = 10
+
+		complete_tooltip = {
+			air_experience = 25
+			if = { limit = { has_country_flag = aviation_effort_AB }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}			
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}			
+		}
+
+		completion_reward = {
+			air_experience = 25
+
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = {
+							free_building_slots = {
+								building = air_base
+								size > 1
+							}
+						}
+					}
+				}
+				random_owned_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+	focus = {
+		id = KPA_fighter_focus
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = KPA_aviation_effort }
+		mutually_exclusive = { focus = KPA_bomber_focus }
+		x = 16
+		y = 2
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 0.5
+				uses = 2
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+				technology = heavy_fighter1
+				technology = heavy_fighter2
+				technology = heavy_fighter3
+			}
+		}
+	}
+	focus = {
+		id = KPA_bomber_focus
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = KPA_aviation_effort }
+		mutually_exclusive = { focus = KPA_fighter_focus }
+		x = 18
+		y = 2
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 0.5
+				uses = 2
+				technology = strategic_bomber1
+				technology = strategic_bomber2
+				technology = strategic_bomber3
+				category = tactical_bomber
+			}
+		}
+	}
+	focus = {
+		id = KPA_aviation_effort_2
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = KPA_bomber_focus focus = KPA_fighter_focus }
+		x = 17
+		y = 3
+		cost = 10
+
+		complete_tooltip = {
+			air_experience = 25
+			if = { limit = { has_country_flag = aviation_effort_2_AB }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+		completion_reward = {
+			air_experience = 25
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = {
+							free_building_slots = {
+								building = air_base
+								size > 1
+							}
+						}
+					}
+				}
+				random_owned_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_2_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}				
+					ROOT = { set_country_flag = aviation_effort_2_AB }
+				}
+			}
+			add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+	focus = {
+		id = KPA_CAS_effort
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = KPA_aviation_effort_2 }
+		x = 16
+		y = 4
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	}
+	focus = {
+		id = KPA_rocket_effort
+		icon = GFX_focus_rocketry
+		prerequisite = { focus = KPA_aviation_effort_2 }
+		x = 17
+		y = 5
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = jet_rocket_bonus
+				ahead_reduction = 0.5
+				uses = 2
+				category = rocketry
+				category = jet_technology
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+				always = yes
+			}
+		}
+	}
+	focus = {
+		id = KPA_NAV_effort
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = { focus = KPA_aviation_effort_2 }
+		x = 18
+		y = 4
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = nav_bomber_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				category = naval_bomber
+			}
+		}
+	}
+	focus = {
+		id = KPA_naval_effort
+		prerequisite = { focus = KPA_militarization }
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 25
+		y = 1
+		cost = 10
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		complete_tooltip = {
+			navy_experience = 25
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = dockyard
+				level = 3
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			navy_experience = 25
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					any_owned_state = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_state = {
+					limit = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						controller = { tag = ROOT }
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+			}			
+		}
+	}
+	focus = {
+		id = KPA_flexible_navy
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = KPA_naval_effort }
+		mutually_exclusive = { focus = KPA_large_navy }
+		x = 24
+		y = 2
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = sub_op_bonus
+				bonus = 0.5
+				uses = 2
+				technology = convoy_interdiction_ti
+				technology = unrestricted_submarine_warfare
+				technology = wolfpacks
+				technology = advanced_submarine_warfare
+				technology = combined_operations_raiding
+			}
+		}
+	}
+	focus = {
+		id = KPA_large_navy
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = KPA_naval_effort }
+		mutually_exclusive = { focus = KPA_flexible_navy }
+		x = 26
+		y = 2
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = fleet_in_being_bonus
+				bonus = 0.5
+				uses = 2
+				category = fleet_in_being_tree
+			}
+		}
+	}
+	focus = {
+		id = KPA_submarine_effort
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = KPA_flexible_navy focus = KPA_large_navy }
+		x = 24
+		y = 3
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				technology = early_submarine
+				technology = basic_submarine
+				technology = improved_submarine
+				technology = advanced_submarine
+			}
+		}
+	}
+	focus = {
+		id = KPA_cruiser_effort
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = KPA_large_navy focus = KPA_flexible_navy }
+		x = 26
+		y = 3
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				technology = improved_light_cruiser
+				technology = advanced_light_cruiser
+				
+				
+			}
+		}
+	}
+	focus = {
+		id = KPA_destroyer_effort
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = KPA_submarine_effort }
+		x = 24
+		y = 3
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				technology = early_destroyer
+				technology = basic_destroyer
+				technology = improved_destroyer
+				technology = advanced_destroyer
+			}
+		}
+	}
+	focus = {
+		id = KPA_capital_ships_effort
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = KPA_cruiser_effort }
+		x = 26
+		y = 3
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				technology = battle_cruiser_2
+				technology = early_carrier
+				technology = basic_carrier
+				technology = improved_carrier
+				technology = advanced_carrier
+			}
+		}
+	}
+}

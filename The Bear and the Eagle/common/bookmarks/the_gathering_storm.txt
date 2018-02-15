@@ -1,0 +1,157 @@
+bookmarks = {
+	bookmark = {
+		name = "GATHERING_STORM_NAME"
+		desc = "GATHERING_STORM_DESC"
+		date = 1949.5.23.12
+		picture = "GFX_select_date_1936"
+		default_country = "USA"
+		default = yes
+		
+		"USA"={
+			history = "USA_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				home_of_the_free
+				organized_crime_problem
+				taft_hartley_act
+			}
+		}
+		"ENG"={
+			history = "ENG_GATHERING_STORM_DESC"
+			ideology = conservative
+			ideas = {
+				cold_war_civil_war_ideological_idea
+			}
+		}
+		WGR = {
+			history = WGR_GATHERING_STORM_DESC
+			ideology = conservative
+			ideas={
+				NATO_Military_Restrictions
+				Occupation
+			}
+		}
+		"KOR"={
+			history = "KOR_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+			}
+		}
+		"KPA"={
+			history = "KPA_GATHERING_STORM_DESC"
+			ideology = communism
+			ideas={
+			}			
+		}
+		"PRC"={
+			history = "PRC_GATHERING_STORM_DESC"
+			ideology = maoism
+			ideas={
+			}			
+		}
+		"SOV"={
+			history = "SOV_GATHERING_STORM_DESC"
+			ideology = communism
+			ideas = {
+			}
+		}
+		
+		"DDR"={
+			minor = yes
+			history = "DDR_GATHERING_STORM_DESC"
+			ideology = communism
+			ideas = {
+				
+			}
+			focuses = {
+				
+			}
+		}
+		"FRA"={
+			minor = yes
+			history = "FRA_GATHERING_STORM_DESC"
+			ideology = socialist
+			ideas = {
+				cold_war_civil_war_ideological_idea
+			}
+			focuses = {
+				
+			}
+		}
+		"ITA"={
+			minor = yes
+			history = "ITA_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				
+			}
+			focuses = {
+				
+			}
+		}
+		"RAJ"={
+			minor = yes
+			history = "RAJ_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				
+			}
+			focuses = {
+				
+			}
+		}
+		"POL"={
+			minor = yes
+			history = "POL_GATHERING_STORM_DESC"
+			ideology = communism
+			ideas = {
+				
+			}
+			focuses = {
+				
+			}
+		}
+		"ISR"={
+			minor = yes
+			history = "ISR_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				
+			}
+			focuses = {
+				
+			}
+		}
+		"YUG"={
+			minor = yes
+			history = "YUG_GATHERING_STORM_DESC"
+			ideology = communism
+			ideas = {
+				
+			}
+			focuses = {
+				
+			}
+		}
+		"PER"={
+			minor = yes
+			history = "PER_GATHERING_STORM_DESC"
+			ideology = monarchism
+			ideas = {
+				
+			}
+			focuses = {
+				
+			}
+		}
+
+		"---"={
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

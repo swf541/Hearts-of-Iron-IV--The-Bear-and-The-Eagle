@@ -1,0 +1,3984 @@
+focus_tree = {
+	id = turkish_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = TUR
+		}
+	}
+	default = no
+	focus = {
+		id = TUR_cement_industry_effort
+		icon = GFX_goal_generic_construction
+		cost = 10.00
+		x = 1
+		y = 0
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = TUR_cement_industry_effort
+							bonus = 0.5
+							uses = 1
+							category = construction_tech
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_the_five_year_plan
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10.00
+		x = 5
+		y = 0
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = TUR_the_five_year_plan
+							bonus = 0.5
+							uses = 1
+							category = industry
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_prepare_for_the_next_war
+		icon = GFX_goal_generic_build_tank
+		cost = 10.00
+		x = 10
+		y = 0
+			ai_will_do = {
+					factor = 5
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = TUR_prepare_for_the_next_war
+							bonus = 0.5
+							uses = 1
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_aviation_effort
+		icon = GFX_goal_generic_air_production
+		cost = 10.00
+		x = 15
+		y = 0
+			ai_will_do = {
+					factor = 1
+				}
+			complete_tooltip = {
+					air_experience = 25
+					if = {
+							limit = {
+									has_country_flag = aviation_effort_AB
+								}
+							add_building_construction = {
+									type = air_base
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+			completion_reward = {
+					air_experience = 25
+					set_rule = {
+							can_generate_female_aces = yes
+						}
+					if = {
+							limit = {
+									capital_scope = {
+											NOT = {
+													free_building_slots = {
+															building = air_base
+															size > 1
+														}
+												}
+										}
+								}
+							random_owned_state = {
+									limit = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+									add_building_construction = {
+											type = air_base
+											level = 2
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_AB
+										}
+								}
+						}
+					if = {
+							limit = {
+									capital_scope = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+								}
+							capital_scope = {
+									add_building_construction = {
+											type = air_base
+											level = 2
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_AB
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_develop_turkish_ship_building
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		x = 20
+		y = 0
+			ai_will_do = {
+					factor = 2
+				}
+			complete_tooltip = {
+					random_state = {
+							limit = {
+									has_state_flag = TUR_develop_turkish_ship_building_1
+								}
+							add_building_construction = {
+									type = dockyard
+									level = 3
+									instant_build = yes
+								}
+						}
+				}
+			completion_reward = {
+					341 = {
+							add_extra_state_shared_building_slots = 3
+							add_building_construction = {
+									type = dockyard
+									level = 3
+									instant_build = yes
+								}
+							set_state_flag = TUR_develop_turkish_ship_building_1
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_political_reforms
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		x = 34
+		y = 0
+		ai_will_do = {
+			factor = 100
+		}		
+		completion_reward = {
+			add_political_power = 200
+		}
+
+	}
+	focus = {
+		id = TUR_sugar_industry_effort
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_cement_industry_effort
+		}
+		x = 1
+		y = 1
+			bypass = {
+					346 = {
+							NOT = {
+									is_owned_by = ROOT
+								}
+						}
+					346 = {
+							NOT = {
+									is_controlled_by = ROOT
+								}
+						}
+				}
+			ai_will_do = {
+					factor = 10
+				}
+			complete_tooltip = {
+					random_state = {
+							limit = {
+									has_state_flag = TUR_sugar_industry_effort_1
+								}
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+			completion_reward = {
+					346 = {
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+							set_state_flag = TUR_sugar_industry_effort
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_build_pasabahce_glass_factory
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_sugar_industry_effort
+		}
+		x = 0
+		y = 2
+			bypass = {
+					341 = {
+							NOT = {
+									is_owned_by = ROOT
+								}
+						}
+					341 = {
+							NOT = {
+									is_controlled_by = ROOT
+								}
+						}
+				}
+			ai_will_do = {
+					factor = 10
+				}
+			complete_tooltip = {
+					random_state = {
+							limit = {
+									has_state_flag = TUR_build_pasabahce_glass_factory_1
+								}
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+			completion_reward = {
+					341 = {
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+							set_state_flag = TUR_build_pasabahce_glass_factory_1
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_build_merinos_textiles_factory
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_sugar_industry_effort
+		}
+		x = 2
+		y = 2
+			bypass = {
+					340 = {
+							NOT = {
+									is_owned_by = ROOT
+								}
+						}
+					340 = {
+							NOT = {
+									is_controlled_by = ROOT
+								}
+						}
+				}
+			ai_will_do = {
+					factor = 10
+				}
+			complete_tooltip = {
+					random_state = {
+							limit = {
+									has_state_flag = TUR_build_merinos_textiles_factory_1
+								}
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+			completion_reward = {
+					340 = {
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+							set_state_flag = TUR_build_merinos_textiles_factory_1
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_establish_village_institutes
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_build_pasabahce_glass_factory
+		}
+		prerequisite = {
+			focus = TUR_build_merinos_textiles_factory
+		}
+		x = 1
+		y = 3
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_research_slot = 1
+				}
+
+	}
+	focus = {
+		id = TUR_expand_the_ironweb
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_the_five_year_plan
+		}
+		x = 4
+		y = 1
+			ai_will_do = {
+					factor = 10
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = infrastructure_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = infrastructure
+											size < 1
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					random_state = {
+							limit = {
+									has_state_flag = TUR_expand_the_ironweb_1
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_state = {
+							limit = {
+									has_state_flag = TUR_expand_the_ironweb_2
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+			completion_reward = {
+					348 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+							set_state_flag = TUR_expand_the_ironweb_1
+						}
+					349 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+							set_state_flag = TUR_expand_the_ironweb_2
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_develop_the_capital
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_the_five_year_plan
+		}
+		x = 6
+		y = 1
+			bypass = {
+					49 = {
+							NOT = {
+									is_owned_by = ROOT
+								}
+						}
+					49 = {
+							NOT = {
+									is_controlled_by = ROOT
+								}
+						}
+				}
+			ai_will_do = {
+					factor = 10
+				}
+			complete_tooltip = {
+					random_state = {
+							limit = {
+									has_state_flag = TUR_develop_the_capital
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+			completion_reward = {
+					49 = {
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+							set_state_flag = TUR_develop_the_capital
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_expand_central_industrial_region
+		icon = GFX_goal_generic_build_tank
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_expand_the_ironweb
+		}
+		prerequisite = {
+			focus = TUR_develop_the_capital
+		}
+		x = 5
+		y = 2
+			bypass = {
+					348 = {
+							NOT = {
+									is_owned_by = ROOT
+								}
+						}
+					348 = {
+							NOT = {
+									is_controlled_by = ROOT
+								}
+						}
+				}
+			ai_will_do = {
+					factor = 10
+				}
+			complete_tooltip = {
+					random_state = {
+							limit = {
+									has_state_flag = TUR_expand_central_industrial_region_1
+								}
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+			completion_reward = {
+					348 = {
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+							set_state_flag = TUR_expand_central_industrial_region_1
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_invest_in_western_anatolia
+		icon = GFX_goal_generic_production
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_expand_central_industrial_region
+		}
+		x = 3
+		y = 3
+			bypass = {
+					339 = {
+							NOT = {
+									is_owned_by = ROOT
+								}
+						}
+					339 = {
+							NOT = {
+									is_controlled_by = ROOT
+								}
+						}
+				}
+			ai_will_do = {
+					factor = 10
+				}
+			complete_tooltip = {
+					random_state = {
+							limit = {
+									has_state_flag = TUR_invest_in_western_anatolia_1
+								}
+							add_building_construction = {
+									type = arms_factory
+									level = 5
+									instant_build = yes
+								}
+						}
+				}
+			completion_reward = {
+					339 = {
+							add_extra_state_shared_building_slots = 3
+							add_building_construction = {
+									type = arms_factory
+									level = 3
+									instant_build = yes
+								}
+							set_state_flag = TUR_invest_in_western_anatolia_1
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_electronics_effort
+		icon = GFX_goal_generic_radar
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_establish_village_institutes
+		}
+		prerequisite = {
+			focus = TUR_invest_in_western_anatolia
+		}
+		x = 1
+		y = 4
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = electronics_bonus
+							bonus = 0.5
+							uses = 3
+							category = electronics
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_middle_east_technical_university
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_electronics_effort
+		}
+		x = 0
+		y = 5
+			available = {
+					num_of_factories > 50
+				}
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_research_slot = 1
+				}
+
+	}
+	focus = {
+		id = TUR_atomic_energy_institute
+		icon = GFX_focus_wonderweapons
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_electronics_effort
+		}
+		x = 2
+		y = 5
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = TUR_atomic_energy_institute
+							bonus = 0.5
+							uses = 1
+							category = nuclear
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_improve_turkish_defensive_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_expand_central_industrial_region
+		}
+		x = 4
+		y = 4
+			available = {
+					is_puppet = no
+				}
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							add_extra_state_shared_building_slots = 3
+							add_building_construction = {
+									type = arms_factory
+									level = 3
+									instant_build = yes
+								}
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_build_kardemir_steelworks
+		icon = GFX_goal_generic_production2
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_expand_central_industrial_region
+		}
+		x = 6
+		y = 3
+			bypass = {
+					347 = {
+							NOT = {
+									is_owned_by = ROOT
+								}
+						}
+					347 = {
+							NOT = {
+									is_controlled_by = ROOT
+								}
+						}
+				}
+			ai_will_do = {
+					factor = 10
+				}
+			complete_tooltip = {
+					random_state = {
+							limit = {
+									has_state_flag = TUR_build_kardemir_steelworks_1
+								}
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+			completion_reward = {
+					add_resource = {
+							type = steel
+							amount = 16
+							state = 347
+						}
+					347 = {
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+							set_state_flag = TUR_build_kardemir_steelworks_1
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_prospect_for_oil
+		icon = GFX_goal_generic_construction2
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_build_kardemir_steelworks
+		}
+		x = 6
+		y = 4
+			ai_will_do = {
+					factor = 10
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = infrastructure_effort_tt
+							all_owned_state = {
+									free_building_slots = {
+											building = infrastructure
+											size < 1
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					random_state = {
+							limit = {
+									has_state_flag = TUR_prospect_for_oil_1
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_state = {
+							limit = {
+									has_state_flag = TUR_prospect_for_oil_2
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+			completion_reward = {
+					350 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+							set_state_flag = TUR_prospect_for_oil_1
+						}
+					353 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+							set_state_flag = TUR_prospect_for_oil_2
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_raman_petrolium
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_prospect_for_oil
+		}
+		x = 6
+		y = 5
+			bypass = {
+					352 = {
+							NOT = {
+									is_owned_by = ROOT
+								}
+						}
+					352 = {
+							NOT = {
+									is_controlled_by = ROOT
+								}
+						}
+				}
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_resource = {
+							type = oil
+							amount = 4
+							state = 352
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_mosul_extraction
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_raman_petrolium
+		}
+		x = 6
+		y = 6
+			available = {
+					676 = {
+							is_controlled_by = TUR
+						}
+					676 = {
+							is_owned_by = TUR
+						}
+				}
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_resource = {
+							type = oil
+							amount = 150
+							state = 676
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_standardisation_of_equipment
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_prepare_for_the_next_war
+		}
+		x = 9
+		y = 1
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = TUR_standardisation_of_equipment
+							bonus = 0.5
+							uses = 1
+							category = infantry_weapons
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_modernising_the_cavalry
+		icon = GFX_goal_generic_cavalry
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_standardisation_of_equipment
+		}
+		x = 8
+		y = 2
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = TUR_modernising_the_cavalry
+							bonus = 0.75
+							uses = 1
+							category = motorized_equipment
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_study_foreign_tanks
+		icon = GFX_goal_generic_production
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_modernising_the_cavalry
+		}
+		x = 8
+		y = 3
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = TUR_study_foreign_tanks
+							bonus = 0.5
+							uses = 1
+							category = armor
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_tank_experiments
+		icon = GFX_goal_generic_army_tanks
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_study_foreign_tanks
+		}
+		x = 8
+		y = 4
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = armor_bonus
+							bonus = 0.5
+							uses = 2
+							category = armor
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_nejd_drill
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_raman_petrolium
+		}
+		x = 8
+		y = 6
+			available = {
+					292 = {
+							is_controlled_by = TUR
+						}
+					292 = {
+							is_owned_by = TUR
+						}
+					679 = {
+							is_controlled_by = TUR
+						}
+					679 = {
+							is_owned_by = TUR
+						}
+				}
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_resource = {
+							type = oil
+							amount = 250
+							state = 292
+						}
+					add_resource = {
+							type = oil
+							amount = 100
+							state = 679
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_the_defence_of_anatolia
+		icon = GFX_goal_generic_defence
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_prepare_for_the_next_war
+		}
+		x = 11
+		y = 1
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = TUR_the_defence_of_anatolia
+							bonus = 0.5
+							uses = 1
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_crescent_retreat_strategy
+		icon = GFX_goal_generic_position_armies
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_the_defence_of_anatolia
+		}
+		x = 11
+		y = 2
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = TUR_crescent_retreat_strategy
+							bonus = 0.5
+							uses = 1
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_soviet_threat
+		icon = GFX_goal_generic_fortify_city
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_crescent_retreat_strategy
+		}
+		x = 10
+		y = 3
+			bypass = {
+					354 = {
+							NOT = {
+									is_owned_by = ROOT
+								}
+						}
+					354 = {
+							NOT = {
+									is_controlled_by = ROOT
+								}
+						}
+				}
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					354 = {
+							add_building_construction = {
+									type = coastal_bunker
+									province = 3714
+									level = 2
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = coastal_bunker
+									province = 9932
+									level = 2
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = bunker
+									province = 10403
+									level = 1
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = bunker
+									province = 7454
+									level = 1
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = bunker
+									province = 11753
+									level = 1
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = coastal_bunker
+									province = 11753
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_fortify_erzurum
+		icon = GFX_goal_generic_construct_military
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_crescent_retreat_strategy
+		}
+		x = 12
+		y = 3
+			bypass = {
+					353 = {
+							NOT = {
+									is_owned_by = ROOT
+								}
+						}
+					353 = {
+							NOT = {
+									is_controlled_by = ROOT
+								}
+						}
+				}
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					353 = {
+							add_building_construction = {
+									type = bunker
+									province = 10472
+									level = 1
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = bunker
+									province = 12376
+									level = 1
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = bunker
+									province = 4583
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_artillery_modernisation
+		icon = GFX_goal_generic_army_artillery
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_soviet_threat
+			focus = TUR_fortify_erzurum
+		}
+		x = 12
+		y = 4
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = TUR_artillery_modernisation
+							bonus = 0.5
+							uses = 1
+							category = artillery
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_air_innovations
+		icon = GFX_goal_generic_build_airforce
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_aviation_effort
+		}
+		x = 14
+		y = 1
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = TUR_air_innovations
+							bonus = 0.5
+							uses = 1
+							category = air_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_fighter_modernisation
+		icon = GFX_goal_generic_air_fighter
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_aviation_effort
+		}
+		x = 16
+		y = 1
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = TUR_fighter_modernisation
+							bonus = 0.5
+							uses = 1
+							category = light_fighter
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_heavy_fighter_concept
+		icon = GFX_goal_generic_air_fighter2
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_air_innovations
+			focus = TUR_fighter_modernisation
+		}
+		x = 15
+		y = 2
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = TUR_heavy_fighter_concept
+							bonus = 0.5
+							uses = 1
+							category = cat_heavy_fighter
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_medium_bomber_focus
+		icon = GFX_goal_generic_occupy_start_war
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_heavy_fighter_concept
+			focus = TUR_air_innovations
+		}
+		mutually_exclusive = {
+			focus = TUR_light_bomber_focus
+		}
+		x = 14
+		y = 3
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = TUR_medium_bomber_focus
+							bonus = 0.5
+							uses = 1
+							category = tactical_bomber
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_light_bomber_focus
+		icon = GFX_goal_generic_CAS
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_heavy_fighter_concept
+			focus = TUR_fighter_modernisation
+		}
+		mutually_exclusive = {
+			focus = TUR_medium_bomber_focus
+		}
+		x = 16
+		y = 3
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = TUR_light_bomber_focus
+							bonus = 0.5
+							uses = 1
+							category = cas_bomber
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_air_modernisations_programme
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_light_bomber_focus
+			focus = TUR_medium_bomber_focus
+		}
+		x = 15
+		y = 4
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = TUR_air_modernisations_programme
+							bonus = 0.5
+							uses = 1
+							category = air_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_rocket_development
+		icon = GFX_focus_rocketry
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_air_modernisations_programme
+		}
+		x = 15
+		y = 5
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = TUR_rocket_development
+							bonus = 0.5
+							uses = 3
+							category = jet_technology
+							category = rocketry
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_import_submarine_technology
+		icon = GFX_goal_generic_production2
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_develop_turkish_ship_building
+		}
+		x = 19
+		y = 1
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = TUR_import_submarine_technology
+							bonus = 0.5
+							uses = 1
+							category = ss_tech
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_commerce_attack
+		icon = GFX_goal_generic_navy_submarine
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_import_submarine_technology
+		}
+		x = 18
+		y = 2
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = TUR_commerce_attack
+							bonus = 0.5
+							uses = 1
+							category = submarine_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_naval_bomber_experiments
+		icon = GFX_goal_generic_air_naval_bomber
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_light_bomber_focus
+			focus = TUR_commerce_attack
+		}
+		x = 17
+		y = 4
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = TUR_naval_bomber_experiments
+							bonus = 0.5
+							uses = 1
+							category = naval_bomber
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_study_foreign_built_ships
+		icon = GFX_goal_generic_production
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_develop_turkish_ship_building
+		}
+		x = 21
+		y = 1
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = TUR_study_foreign_built_ships
+							bonus = 0.5
+							uses = 1
+							category = dd_tech
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_the_twin_threats
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_import_submarine_technology
+			focus = TUR_study_foreign_built_ships
+		}
+		x = 20
+		y = 2
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = TUR_the_twin_threats
+							bonus = 0.5
+							uses = 1
+							category = naval_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_strike_force
+		icon = GFX_goal_generic_occupy_states_coastal
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_the_twin_threats
+		}
+		mutually_exclusive = {
+			focus = TUR_coastal_defense
+		}
+		x = 19
+		y = 3
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = TUR_strike_force
+							bonus = 0.5
+							uses = 1
+							category = cl_tech
+						}
+					add_tech_bonus = {
+							name = TUR_strike_force
+							bonus = 0.5
+							uses = 1
+							category = ca_tech
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_coastal_defense
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_the_twin_threats
+		}
+		mutually_exclusive = {
+			focus = TUR_strike_force
+		}
+		x = 21
+		y = 3
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = TUR_coastal_defense
+							bonus = 0.5
+							uses = 1
+							category = ss_tech
+						}
+					add_tech_bonus = {
+							name = TUR_coastal_defense
+							bonus = 0.5
+							uses = 1
+							category = dd_tech
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_mediterranean_navy
+		icon = GFX_goal_generic_navy_battleship
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_strike_force
+			focus = TUR_coastal_defense
+		}
+		x = 20
+		y = 4
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = TUR_mediterranean_navy
+							bonus = 0.5
+							uses = 1
+							category = naval_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_a_cruiser_navy
+		icon = GFX_goal_generic_navy_anti_submarine
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_study_foreign_built_ships
+		}
+		x = 22
+		y = 2
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = TUR_a_cruiser_navy
+							bonus = 0.5
+							uses = 1
+							category = cl_tech
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_path_of_freedom
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_political_reforms
+		}
+		mutually_exclusive = {
+			focus = TUR_imperial_desires
+			focus = TUR_a_new_path
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 1
+			}
+		}
+		x = 25
+		y = 1
+		ai_will_do = {
+			factor = 25
+			modifier = {
+                factor = 100
+                is_historical_focus_on = yes
+            }
+		}
+		completion_reward = {
+			add_ideas = liberty_ethos_focus
+		}
+	}
+	focus = {
+		id = TUR_traditional_populism
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_path_of_freedom
+		}
+		mutually_exclusive = {
+			focus = TUR_social_democracy
+		}
+		x = 24
+		y = 2
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			add_ideas = traditionalist_influence
+			remove_ideas = liberty_ethos_focus
+		}
+	}
+	focus = {
+		id = TUR_social_democracy
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_path_of_freedom
+		}
+		mutually_exclusive = {
+			focus = TUR_traditional_populism
+		}
+		x = 26
+		y = 2
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			add_ideas = social_democracy_drift
+			remove_ideas = liberty_ethos_focus
+		}
+	}
+	focus = {
+		id = TUR_strengthen_ties_to_usa
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_traditional_populism
+			focus = TUR_social_democracy
+		}
+		x = 25
+		y = 3
+		completion_reward = {
+					TUR = {
+							add_opinion_modifier = {
+									target = USA
+									modifier = large_increase
+								}
+						}
+					USA = {
+							add_opinion_modifier = {
+									target = TUR
+									modifier = large_increase
+								}
+						}				
+		}
+	}
+	focus = {
+		id = TUR_join_nato
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_strengthen_ties_to_usa
+		}
+		x = 24
+		y = 4
+			completion_reward = {
+					USA = { add_to_faction = ROOT }
+					add_ideas = nato_member
+				}
+	}
+	focus = {
+		id = TUR_imperial_desires
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_political_reforms
+		}
+		mutually_exclusive = {
+			focus = TUR_path_of_freedom
+			focus = TUR_a_new_path
+		}
+		x = 34
+		y = 1
+		ai_will_do = {
+			factor = 1
+			modifier = {
+                factor = 0
+                is_historical_focus_on = yes
+            }
+		}
+		completion_reward = {
+			add_ideas = militarism_focus
+		}
+	}
+	focus = {
+		id = TUR_restore_the_caliphate
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_imperial_desires
+		}
+		mutually_exclusive = {
+			focus = TUR_restore_the_ottoman_dynasty
+			focus = TUR_embrace_pan_turkicism
+			focus = TUR_military_coup
+		}
+		x = 30
+		y = 2
+		completion_reward = {
+			set_politics = { ruling_party = islamism elections_allowed = no }	
+			add_ideas = ideological_fanaticism_focus
+			set_cosmetic_tag = TUR_caliphate
+		}
+	}
+	focus = {
+		id = TUR_army_of_the_faithful
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_restore_the_caliphate
+		}
+		x = 30
+		y = 3
+		completion_reward = {
+			add_ideas = militarism_focus
+		}
+	}
+	focus = {
+		id = TUR_unite_the_faithful
+		icon = GFX_goal_generic_major_war
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_army_of_the_faithful
+		}
+		x = 28
+		y = 4
+		completion_reward = {
+			add_ideas = volunteer_corps_focus
+			add_ideas = foreign_expeditions_focus
+		}
+	}
+	focus = {
+		id = TUR_embrace_pan_turkicism
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_imperial_desires
+		}
+		mutually_exclusive = {
+			focus = TUR_restore_the_caliphate
+			focus = TUR_restore_the_ottoman_dynasty
+			focus = TUR_military_coup
+		}
+		x = 34
+		y = 2
+		completion_reward = {
+			add_ideas = volunteer_corps_focus
+			add_ideas = foreign_expeditions_focus
+			add_ideas = ideological_fanaticism_focus
+		}
+	}
+	focus = {
+		id = TUR_irredentism
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_embrace_pan_turkicism
+		}
+		x = 34
+		y = 3
+		completion_reward = {
+			add_ideas = TUR_revanchism_focus
+		}
+	}
+	focus = {
+		id = TUR_jihad_against_communism
+		icon = GFX_goal_generic_major_war
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_army_of_the_faithful
+			focus = TUR_irredentism
+		}
+		x = 30
+		y = 4
+		completion_reward = {
+			add_ideas = communism_banned
+		}
+	}
+	focus = {
+		id = TUR_jihad_against_the_soviet_union
+		icon = GFX_goal_generic_major_war
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_jihad_against_communism
+		}
+		mutually_exclusive = {
+			focus = TUR_anti_soviet_propaganda_campaign
+		}
+		x = 32
+		y = 5
+				completion_reward = {
+					create_wargoal = {
+							type = annex_everything
+							target = SOV
+						}
+					UKR = { every_owned_state = { add_core_of = TUR }	}
+					BUL = { every_owned_state = { add_core_of = TUR }	}
+					ARM = { every_owned_state = { add_core_of = TUR }	}
+					GEO = { every_owned_state = { add_core_of = TUR }	}
+					AZR = { every_owned_state = { add_core_of = TUR }	}
+					ROM = { every_owned_state = { add_core_of = TUR }	}
+					HUN = { every_owned_state = { add_core_of = TUR }	}
+			}		
+	}
+	focus = {
+		id = TUR_demand_mosul_turkic
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_irredentism
+		}
+		x = 34
+		y = 4
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					676 = {
+							add_core_of = TUR
+						}
+					create_wargoal = {
+							type = take_state_focus
+							target = IRQ
+							generator = { 676 }
+						}
+					add_ideas = TUR_revanchism_focus
+				}
+
+	}
+	focus = {
+		id = TUR_demand_northern_syria
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_demand_mosul_turkic
+		}
+		x = 34
+		y = 5
+			completion_reward = {
+					create_wargoal = {
+							type = annex_everything
+							target = SYR
+						}
+						SYR = { every_owned_state = { add_core_of = TUR }	}
+				}
+	}
+	focus = {
+		id = TUR_formet_uyghur_unrest
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_demand_northern_syria
+		}
+		mutually_exclusive = {
+			focus = TUR_anti_soviet_propaganda_campaign
+		}
+		x = 34
+		y = 6
+		completion_reward = {
+			PRC = { add_national_unity = -0.15 }
+		}
+	}
+	focus = {
+		id = TUR_revolution_in_eastern_turkestan
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_formet_uyghur_unrest
+		}
+		x = 34
+		y = 7
+			completion_reward = {
+					PRC = {
+							release = ETR
+							declare_war_on = {
+									target = ETR
+									type = annex_everything
+								}
+						}
+				}
+	}
+	focus = {
+		id = TUR_formation_of_turkestan
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_revolution_in_eastern_turkestan
+		}
+		x = 34
+		y = 8
+		completion_reward = {
+			set_cosmetic_tag = TUR_turkestan	
+		}
+	}
+	focus = {
+		id = TUR_cental_asian_oil_exploration
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_formation_of_turkestan
+		}
+		x = 34
+		y = 9
+		completion_reward = {
+			random_owned_state = {
+				add_resource = {
+					type = oil
+					amount = 50
+				}
+			}
+		}
+	}
+	focus = {
+		id = TUR_turkestan_road_system
+		icon = GFX_goal_continuous_non_factory_construct
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_cental_asian_oil_exploration
+		}
+		x = 34
+		y = 10
+		completion_reward = {
+			TUR = {
+				every_owned_state = {
+					add_building_construction = {
+						type = infrastructure
+						level = 3
+						instant_build = yes
+					}		
+				}
+			}
+		}
+	}
+	focus = {
+		id = TUR_economic_superpower
+		icon = GFX_goal_generic_production
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_turkestan_road_system
+		}
+		x = 34
+		y = 11
+		completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+	}
+	focus = {
+		id = TUR_restore_the_ottoman_dynasty
+		icon = GFX_focus_rom_abdicate
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_imperial_desires
+		}
+		mutually_exclusive = {
+			focus = TUR_restore_the_caliphate
+			focus = TUR_embrace_pan_turkicism
+			focus = TUR_military_coup
+		}
+		x = 37
+		y = 2
+		completion_reward = {
+			set_politics = { ruling_party = monarchism elections_allowed = no }
+			add_ideas = monarchist_influence
+		}
+	}
+	focus = {
+		id = TUR_restore_the_military
+		icon = GFX_focus_rom_abdicate
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_restore_the_ottoman_dynasty
+		}
+		x = 37
+		y = 3
+		completion_reward = {
+			add_ideas = militarism_focus
+		}
+	}
+	focus = {
+		id = TUR_iraq_ottoman
+		icon = GFX_focus_rom_abdicate
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_restore_the_military
+		}
+		x = 36
+		y = 4
+			completion_reward = {
+					create_wargoal = {
+							type = annex_everything
+							target = IRQ
+						}
+						IRQ = { every_owned_state = { add_core_of = TUR }	}
+				}
+	}
+	focus = {
+		id = TUR_syria_ottoman
+		icon = GFX_focus_rom_abdicate
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_restore_the_military
+		}
+		x = 38
+		y = 4
+			completion_reward = {
+					create_wargoal = {
+							type = annex_everything
+							target = SYR
+						}
+						SYR = { every_owned_state = { add_core_of = TUR }	}
+				}
+	}
+	focus = {
+		id = TUR_the_levant_ottoman
+		icon = GFX_focus_rom_abdicate
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_syria_ottoman
+		}
+		prerequisite = {
+			focus = TUR_iraq_ottoman
+		}
+		x = 37
+		y = 5
+			completion_reward = {
+					create_wargoal = {
+							type = annex_everything
+							target = ISR
+						}
+						ISR = { every_owned_state = { add_core_of = TUR }	}
+					create_wargoal = {
+							type = annex_everything
+							target = LEB
+						}
+						LEB = { every_owned_state = { add_core_of = TUR }	}
+					create_wargoal = {
+							type = annex_everything
+							target = JOR
+						}
+						JOR = { every_owned_state = { add_core_of = TUR }	}
+				}
+	}
+	focus = {
+		id = TUR_arabia_ottoman
+		icon = GFX_focus_rom_abdicate
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_the_levant_ottoman
+		}
+		x = 37
+		y = 6
+			completion_reward = {
+					create_wargoal = {
+							type = annex_everything
+							target = SAU
+						}
+						SAU = { every_owned_state = { add_core_of = TUR }	}
+					create_wargoal = {
+							type = annex_everything
+							target = OMA
+						}
+						OMA = { every_owned_state = { add_core_of = TUR }	}
+					create_wargoal = {
+							type = annex_everything
+							target = YEM
+						}
+						YEM = { every_owned_state = { add_core_of = TUR }	}
+				}
+	}
+	focus = {
+		id = TUR_egypt_ottoman
+		icon = GFX_focus_rom_abdicate
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_arabia_ottoman
+		}
+		x = 37
+		y = 7
+			completion_reward = {
+					create_wargoal = {
+							type = annex_everything
+							target = EGY
+						}
+					EGY = { every_owned_state = { add_core_of = TUR }	}
+			}
+	}
+	focus = {
+		id = TUR_north_africa_ottoman
+		icon = GFX_focus_rom_abdicate
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_egypt_ottoman
+		}
+		x = 37
+		y = 8
+			completion_reward = {
+					create_wargoal = {
+							type = annex_everything
+							target = LBA
+						}
+						LBA = { every_owned_state = { add_core_of = TUR }	}
+					create_wargoal = {
+							type = annex_everything
+							target = ALG
+						}
+						ALG = { every_owned_state = { add_core_of = TUR }	}
+					create_wargoal = {
+							type = annex_everything
+							target = MOR
+						}
+						MOR = { every_owned_state = { add_core_of = TUR }	}
+					create_wargoal = {
+							type = annex_everything
+							target = TUN
+						}
+						TUN = { every_owned_state = { add_core_of = TUR }	}
+				}
+	}
+	focus = {
+		id = TUR_greece_ottoman
+		icon = GFX_focus_rom_abdicate
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_restore_the_military
+		}
+		x = 39
+		y = 5
+			completion_reward = {
+					create_wargoal = {
+							type = annex_everything
+							target = GRE
+						}
+					GRE = { every_owned_state = { add_core_of = TUR }	}
+			}
+	}
+	focus = {
+		id = TUR_yugoslavia_ottoman
+		icon = GFX_focus_rom_abdicate
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_greece_ottoman
+		}
+		x = 39
+		y = 6
+			completion_reward = {
+					create_wargoal = {
+							type = annex_everything
+							target = YUG
+						}
+					YUG = { every_owned_state = { add_core_of = TUR }	}
+			}
+	}
+	focus = {
+		id = TUR_russian_ottoman_war
+		icon = GFX_focus_rom_abdicate
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_greece_ottoman
+		}
+		prerequisite = {
+			focus = TUR_north_africa_ottoman
+		}
+		x = 39
+		y = 9
+				completion_reward = {
+					create_wargoal = {
+							type = annex_everything
+							target = SOV
+						}
+					UKR = { every_owned_state = { add_core_of = TUR }	}
+					BUL = { every_owned_state = { add_core_of = TUR }	}
+					ARM = { every_owned_state = { add_core_of = TUR }	}
+					GEO = { every_owned_state = { add_core_of = TUR }	}
+					AZR = { every_owned_state = { add_core_of = TUR }	}
+					ROM = { every_owned_state = { add_core_of = TUR }	}
+					HUN = { every_owned_state = { add_core_of = TUR }	}
+			}		
+		
+	}
+	focus = {
+		id = TUR_a_new_path
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_political_reforms
+		}
+		mutually_exclusive = {
+			focus = TUR_path_of_freedom
+			focus = TUR_imperial_desires
+			#focus = TUR_a_new_path
+		}
+		x = 43
+		y = 1
+		ai_will_do = {
+			factor = 1
+			modifier = {
+                factor = 0
+                is_historical_focus_on = yes
+            }
+		}
+		completion_reward = {
+			add_political_power = 200
+		}
+	}
+	focus = {
+		id = TUR_embrace_marxist_lenninism
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_a_new_path
+		}
+		mutually_exclusive = {
+			focus = TUR_the_global_revolution
+			focus = TUR_embrace_maoist_revisionism
+		}
+		x = 41
+		y = 2
+		completion_reward = {
+			add_ideas = internationalism
+		}
+	}
+	focus = {
+		id = TUR_soviet_advisors
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_embrace_marxist_lenninism
+		}
+		x = 41
+		y = 5
+		completion_reward = {
+			add_ideas = soviet_advisors
+		}	
+	}
+	focus = {
+		id = TUR_control_the_ulema
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_soviet_advisors
+		}
+		x = 41
+		y = 6
+		completion_reward = {
+			add_political_power = 150
+			add_national_unity = 0.15
+		}
+	}
+	focus = {
+		id = TUR_revise_the_treaty_of_kars
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_control_the_ulema
+		}
+		x = 41
+		y = 7
+		completion_reward = {
+			GEO = { set_state_owner = 354 }	
+			ARM = { set_state_owner = 793 }	
+			add_ideas = population_growth_islamic_migration_to_turkey
+		}
+	}
+	focus = {
+		id = TUR_join_the_warsaw_pact
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_revise_the_treaty_of_kars
+		}
+		x = 41
+		y = 8
+		completion_reward = {
+			SOV = { add_to_faction = TUR }
+		}
+	}
+	focus = {
+		id = TUR_spread_communism
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_join_the_warsaw_pact
+		}
+		x = 41
+		y = 10
+		completion_reward = {
+			every_neighbor_country = {
+				add_timed_idea = { idea = internationalism days = 365 }	
+			}
+		}
+	}
+	focus = {
+		id = TUR_the_global_revolution
+		icon = GFX_goal_support_fourth_int
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_a_new_path
+		}
+		mutually_exclusive = {
+			focus = TUR_embrace_marxist_lenninism
+			focus = TUR_embrace_maoist_revisionism
+		}
+		x = 43
+		y = 2
+		completion_reward = {
+			add_ideas = trotskyism_drift
+		}
+	}
+	focus = {
+		id = TUR_embrace_maoist_revisionism
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_a_new_path
+		}
+		mutually_exclusive = {
+			focus = TUR_embrace_marxist_lenninism
+			focus = TUR_the_global_revolution
+		}
+		x = 45
+		y = 2
+		completion_reward = {
+			add_ideas = maoist_drift
+		}
+	}
+	focus = {
+		id = TUR_first_five_year_plan
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_embrace_marxist_lenninism
+			focus = TUR_the_global_revolution
+			focus = TUR_embrace_maoist_revisionism
+		}
+		x = 43
+		y = 3
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+	}
+	focus = {
+		id = TUR_second_five_year_plan
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_first_five_year_plan
+		}
+		x = 43
+		y = 4
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+	}
+	focus = {
+		id = TUR_revolutionary_army
+		icon = GFX_goal_support_fourth_int
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_the_global_revolution
+		}
+		x = 43
+		y = 5
+		completion_reward = {
+			add_ideas = revolutionary_army
+		}
+	}
+	focus = {
+		id = TUR_mobilization_of_the_masses
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_the_global_revolution
+		}
+		x = 43
+		y = 6
+		completion_reward = {
+			add_ideas = TUR_mobilization_of_the_masses
+		}
+	}
+	focus = {
+		id = TUR_democratic_centralism
+		icon = GFX_goal_support_fourth_int
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_mobilization_of_the_masses
+		}
+		x = 43
+		y = 7
+		completion_reward = {
+			add_political_power = 120
+			add_national_unity = 0.10
+			set_politics = { ruling_party = trotskyism elections_allowed = no }
+		}
+	}
+	focus = {
+		id = TUR_mic_collectivization
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_democratic_centralism
+		}
+		x = 43
+		y = 8
+			completion_reward = {
+					every_owned_state = {
+							add_extra_state_shared_building_slots = 1
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+	}
+	focus = {
+		id = TUR_kurdish_reconciliation
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_join_the_warsaw_pact
+			focus = TUR_mic_collectivization
+		}
+		x = 42
+		y = 9
+		completion_reward = {
+			remove_ideas = kurdish_conflict
+		}
+	}
+	focus = {
+		id = TUR_spread_trotskyitism
+		icon = GFX_goal_support_fourth_int
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_mic_collectivization
+		}
+		x = 43
+		y = 10
+		completion_reward = {
+			every_neighbor_country = {
+				add_ideas = trotskyism_drift
+			}
+		}
+	}
+	focus = {
+		id = TUR_chinese_advisors
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_embrace_maoist_revisionism
+		}
+		x = 45
+		y = 5
+		completion_reward = {
+			add_ideas = chinese_advisors	
+		}
+	}
+	focus = {
+		id = TUR_agrarian_reform
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_chinese_advisors
+		}
+		x = 45
+		y = 6
+		completion_reward = {
+			add_ideas = agrarian_reform
+		}
+	}
+	focus = {
+		id = TUR_rural_vanguard
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_agrarian_reform
+		}
+		x = 45
+		y = 7
+		completion_reward = {
+			add_ideas = rural_vanguard
+		}
+	}
+	focus = {
+		id = TUR_cultural_revolution
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_rural_vanguard
+		}
+		x = 45
+		y = 8
+		completion_reward = {
+			add_ideas = PRC_cultural_revolution
+		}
+	}
+	focus = {
+		id = TUR_cultural_unification
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_cultural_revolution
+		}
+		x = 45
+		y = 9
+		completion_reward = {
+			remove_ideas = kurdish_conflict
+					TUR = {
+							release = KUR
+							declare_war_on = {
+									target = KUR
+									type = annex_everything
+								}
+						}
+				
+		}
+	}
+	focus = {
+		id = TUR_export_the_revolution
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_cultural_unification
+		}
+		x = 45
+		y = 10
+		completion_reward = {
+			every_neighbor_country = {
+				add_timed_idea = { idea = trotskyism_drift days = 365 }	
+			}
+		}
+	}
+	focus = {
+		id = TUR_military_coup
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_seek_soviet_financial_aid
+		}
+		mutually_exclusive = {
+			focus = TUR_restore_the_caliphate
+			focus = TUR_embrace_pan_turkicism
+			focus = TUR_restore_the_ottoman_dynasty
+			focus = TUR_soviet_development_aid
+		}
+		x = 26
+		y = 8
+		ai_will_do = {
+			factor = 50
+			modifier = {
+                factor = 100
+                is_historical_focus_on = yes
+            }
+		}
+		completion_reward = {
+				create_country_leader = {
+					name = "Cemal Gürsel"
+					desc = ""
+					picture = "Gursel.dds"
+					expire = "1975.1.1"
+					ideology = reactionary
+					traits = {
+						#
+					}
+				}
+			set_politics = { ruling_party = neutrality elections_allowed = no }
+		}
+	}
+	focus = {
+		id = TUR_establish_organized_industries
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_establish_village_institutes
+		}
+		x = -1
+		y = 4
+			bypass = {
+					341 = {
+							NOT = {
+									is_owned_by = ROOT
+								}
+						}
+					341 = {
+							NOT = {
+									is_controlled_by = ROOT
+								}
+						}
+				}
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							add_extra_state_shared_building_slots = 3
+							add_building_construction = {
+									type = industrial_complex
+									level = 3
+									instant_build = yes
+								}
+						}
+				}
+			completion_reward = {
+					349 = {
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_found_sidem
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_raman_petrolium
+		}
+		x = 4
+		y = 6
+			available = {
+					349 = {
+							is_controlled_by = TUR
+						}
+					349 = {
+							is_owned_by = TUR
+						}
+				}
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_resource = {
+							type = steel
+							amount = 80
+							state = 349
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_bauxite_mining
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_raman_petrolium
+		}
+		x = 2
+		y = 6
+			available = {
+					347 = {
+							is_controlled_by = TUR
+						}
+					347 = {
+							is_owned_by = TUR
+						}
+					346 = {
+							is_controlled_by = TUR
+						}
+					346 = {
+							is_owned_by = TUR
+						}
+				}
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_resource = {
+							type = aluminium
+							amount = 10
+							state = 347
+						}
+					add_resource = {
+							type = aluminium
+							amount = 8
+							state = 346
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_persian_oil
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_raman_petrolium
+		}
+		x = 10
+		y = 6
+			available = {
+					413 = {
+							is_controlled_by = TUR
+						}
+					413 = {
+							is_owned_by = TUR
+						}
+					412 = {
+							is_controlled_by = TUR
+						}
+					412 = {
+							is_owned_by = TUR
+						}
+				}
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_resource = {
+							type = oil
+							amount = 80
+							state = 413
+						}
+					add_resource = {
+							type = oil
+							amount = 40
+							state = 412
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_special_forces
+		icon = GFX_goal_generic_special_forces
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_soviet_threat
+			focus = TUR_fortify_erzurum
+		}
+		x = 10
+		y = 4
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = TUR_special_forces
+							bonus = 0.5
+							uses = 1
+							technology = tech_mountaineers2
+							technology = tech_mountaineers3
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_army_modernisation
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_artillery_modernisation
+			focus = TUR_special_forces
+		}
+		x = 11
+		y = 5
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = TUR_army_modernisation
+							bonus = 0.5
+							uses = 1
+							category = infantry_weapons
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_the_levant
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_unite_the_faithful
+		}
+		x = 28
+		y = 5
+			completion_reward = {
+					create_wargoal = {
+							type = annex_everything
+							target = ISR
+						}
+						ISR = { every_owned_state = { add_core_of = TUR }	}
+					create_wargoal = {
+							type = annex_everything
+							target = LEB
+						}
+						LEB = { every_owned_state = { add_core_of = TUR }	}
+					create_wargoal = {
+							type = annex_everything
+							target = JOR
+						}
+						JOR = { every_owned_state = { add_core_of = TUR }	}
+				}
+	}
+	focus = {
+		id = TUR_anti_soviet_propaganda_campaign
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_jihad_against_communism
+		}
+		mutually_exclusive = {
+			focus = TUR_formet_uyghur_unrest
+		}
+		x = 30
+		y = 5
+		completion_reward = {
+			AZR = { add_timed_idea = { idea = islamism_drift days = 365 } add_national_unity = -0.20 }
+			KAZ = { add_timed_idea = { idea = islamism_drift days = 365 } add_national_unity = -0.20 }
+			KRG = { add_timed_idea = { idea = islamism_drift days = 365 } add_national_unity = -0.20 }
+			TJK = { add_timed_idea = { idea = islamism_drift days = 365 } add_national_unity = -0.20 }
+			TRK = { add_timed_idea = { idea = islamism_drift days = 365 } add_national_unity = -0.20 }
+		}
+	}
+	focus = {
+		id = TUR_supply_islamist_militias_in_ssrs
+		icon = GFX_focus_secret_rearmament
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_anti_soviet_propaganda_campaign
+		}
+		x = 30
+		y = 6
+		completion_reward = {
+			AZR = { add_national_unity = -0.20 }
+			KAZ = { add_national_unity = -0.20 }
+			KRG = { add_national_unity = -0.20 }
+			TJK = { add_national_unity = -0.20 }
+			TRK = { add_national_unity = -0.20 }
+		}
+	}
+	focus = {
+		id = TUR_launch_covert_anti_communist_campaign
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_supply_islamist_militias_in_ssrs
+		}
+		x = 30
+		y = 7
+			completion_reward = {
+					AZR = {
+							start_civil_war = {
+									ideology = islamism
+									size = 0.67
+								}
+						}
+					KAZ = {
+							start_civil_war = {
+									ideology = islamism
+									size = 0.67
+								}
+						}
+					KRG = {
+							start_civil_war = {
+									ideology = islamism
+									size = 0.67
+								}
+						}
+					TJK = {
+							start_civil_war = {
+									ideology = islamism
+									size = 0.67
+								}
+						}
+					TRK = {
+							start_civil_war = {
+									ideology = islamism
+									size = 0.67
+								}
+						}
+				}
+	}
+	focus = {
+		id = TUR_arabia
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_the_levant
+		}
+		x = 28
+		y = 6
+			completion_reward = {
+					create_wargoal = {
+							type = annex_everything
+							target = SAU
+						}
+						SAU = { every_owned_state = { add_core_of = TUR }	}
+					create_wargoal = {
+							type = annex_everything
+							target = OMA
+						}
+						OMA = { every_owned_state = { add_core_of = TUR }	}
+					create_wargoal = {
+							type = annex_everything
+							target = YEM
+						}
+						YEM = { every_owned_state = { add_core_of = TUR }	}
+				}
+	}
+	focus = {
+		id = TUR_egypt
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_arabia
+		}
+		x = 28
+		y = 7
+			completion_reward = {
+					create_wargoal = {
+							type = annex_everything
+							target = EGY
+						}
+					EGY = { every_owned_state = { add_core_of = TUR }	}
+			}
+	}
+	focus = {
+		id = TUR_north_africa
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_egypt
+		}
+		x = 28
+		y = 8
+			completion_reward = {
+					create_wargoal = {
+							type = annex_everything
+							target = LBA
+						}
+						LBA = { every_owned_state = { add_core_of = TUR }	}
+					create_wargoal = {
+							type = annex_everything
+							target = ALG
+						}
+						ALG = { every_owned_state = { add_core_of = TUR }	}
+					create_wargoal = {
+							type = annex_everything
+							target = MOR
+						}
+						MOR = { every_owned_state = { add_core_of = TUR }	}
+					create_wargoal = {
+							type = annex_everything
+							target = TUN
+						}
+						TUN = { every_owned_state = { add_core_of = TUR }	}
+				}
+	}
+	focus = {
+		id = TUR_sahel
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_north_africa
+		}
+		x = 28
+		y = 9
+			completion_reward = {
+					create_wargoal = {
+							type = annex_everything
+							target = MAU
+						}
+						MAU = { every_owned_state = { add_core_of = TUR }	}
+					create_wargoal = {
+							type = annex_everything
+							target = CHA
+						}
+						CHA = { every_owned_state = { add_core_of = TUR }	}
+					create_wargoal = {
+							type = annex_everything
+							target = MLI
+						}
+						MLI = { every_owned_state = { add_core_of = TUR }	}
+				}
+	}
+	focus = {
+		id = TUR_the_heretics
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_sahel
+		}
+		x = 27
+		y = 10
+			completion_reward = {
+					create_wargoal = {
+							type = annex_everything
+							target = PER
+						}
+						PER = { every_owned_state = { add_core_of = TUR }	}
+				}
+	}
+	focus = {
+		id = TUR_central_asia
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_sahel
+		}
+		x = 30
+		y = 10
+		completion_reward = {
+					create_wargoal = {
+							type = annex_everything
+							target = AZR
+						}
+						AZR = { every_owned_state = { add_core_of = TUR }	}
+						
+					create_wargoal = {
+							type = annex_everything
+							target = KAZ
+						}
+						KAZ = { every_owned_state = { add_core_of = TUR }	}
+						
+					create_wargoal = {
+							type = annex_everything
+							target = KRG
+						}
+						KRG = { every_owned_state = { add_core_of = TUR }	}
+					create_wargoal = {
+							type = annex_everything
+							target = TJK
+						}
+						TJK = { every_owned_state = { add_core_of = TUR }	}
+					create_wargoal = {
+							type = annex_everything
+							target = TRK
+						}
+						TRK = { every_owned_state = { add_core_of = TUR }	}
+		}
+	}
+	focus = {
+		id = TUR_strike_india
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_central_asia
+		}
+		x = 28
+		y = 11
+			completion_reward = {
+					create_wargoal = {
+							type = annex_everything
+							target = RAJ
+						}
+					create_wargoal = {
+							type = annex_everything
+							target = PAK
+						}
+						TUR = { every_owned_state = { add_core_of = PAK }	}
+				}
+	}
+	focus = {
+		id = TUR_indonesia
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_central_asia
+		}
+		prerequisite = {
+			focus = TUR_the_heretics
+		}
+		x = 26
+		y = 11
+			completion_reward = {
+					create_wargoal = {
+							type = annex_everything
+							target = INO
+						}
+						INO = { every_owned_state = { add_core_of = TUR }	}
+				}
+	}
+	focus = {
+		id = TUR_restore_al_andalus
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_central_asia
+		}
+		prerequisite = {
+			focus = TUR_the_heretics
+		}
+		prerequisite = {
+			focus = TUR_north_africa
+		}
+		x = 28
+		y = 12
+			completion_reward = {
+					create_wargoal = {
+							type = annex_everything
+							target = SPR
+						}
+				}
+	}
+	focus = {
+		id = TUR_islamic_balkans
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_sahel
+		}
+		x = 30
+		y = 11
+			completion_reward = {
+					create_wargoal = {
+							type = annex_everything
+							target = YUG
+						}
+						TUR = { every_owned_state = { add_core_of = YUG }	}
+				}
+	}
+	focus = {
+		id = TUR_american_economic_aid
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_join_nato
+		}
+		x = 24
+		y = 5
+		completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+	}
+	focus = {
+		id = TUR_economic_crisis
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_american_economic_aid
+		}
+		x = 24
+		y = 6
+		completion_reward = {
+			add_ideas = TUR_economic_crisis
+		}
+	}
+	focus = {
+		id = TUR_seek_western_investment
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_economic_crisis
+		}
+		mutually_exclusive = {
+			focus = TUR_seek_soviet_financial_aid
+		}
+		x = 22
+		y = 7
+		ai_will_do = {
+			factor = 50
+			modifier = {
+                factor = 0
+                is_historical_focus_on = yes
+            }
+		}
+		completion_reward = {
+			remove_ideas = TUR_economic_crisis
+		}
+	}
+	focus = {
+		id = TUR_ban_communism
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_military_coup
+		}
+		x = 26
+		y = 9
+		completion_reward = {
+			add_ideas = communism_banned
+		}
+	}
+	focus = {
+		id = TUR_Yassıada_Trials
+		icon = GFX_focus_generic_strike_at_democracy2
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_ban_communism
+		}
+		x = 25
+		y = 10
+		completion_reward = {
+			add_national_unity = -0.10
+			add_ideas = leftist_persecution
+		}
+	}
+	focus = {
+		id = TUR_seek_soviet_financial_aid
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_economic_crisis
+		}
+		mutually_exclusive = {
+			focus = TUR_seek_western_investment
+		}
+		x = 25
+		y = 7
+		ai_will_do = {
+			factor = 50
+			modifier = {
+                factor = 100
+                is_historical_focus_on = yes
+            }
+		}
+		completion_reward = {
+			remove_ideas = TUR_economic_crisis
+		}
+	}
+	focus = {
+		id = TUR_soviet_development_aid
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_seek_soviet_financial_aid
+		}
+		prerequisite = {
+			focus = TUR_social_democracy
+		}
+		mutually_exclusive = {
+			focus = TUR_military_coup
+		}
+		x = 24
+		y = 8
+		ai_will_do = {
+			factor = 50
+			modifier = {
+                factor = 0
+                is_historical_focus_on = yes
+            }
+		}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+	}
+	focus = {
+		id = TUR_withdraw_from_nato
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_soviet_development_aid
+		}
+		x = 24
+		y = 9
+			completion_reward = {
+					USA = { remove_from_faction = ROOT }
+					remove_ideas = nato_member
+				}
+	}
+	focus = {
+		id = TUR_declare_neutrality
+		icon = GFX_goal_anschluss
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_withdraw_from_nato
+		}
+		x = 23
+		y = 10
+		completion_reward = {
+			add_ideas = neutrality_idea
+		}
+	}
+	focus = {
+		id = TUR_western_capitalism
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_seek_western_investment
+		}
+		mutually_exclusive = {
+			focus = TUR_seek_western_investment
+		}
+		x = 22
+		y = 8
+	completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = TUR_military_industrial_development
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_western_capitalism
+		}
+		x = 22
+		y = 9
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+	}
+	focus = {
+		id = TUR_promote_democracy_in_the_middle_east
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = TUR_military_industrial_development
+		}
+		x = 21
+		y = 10
+		completion_reward = {
+			every_neighbor_country = {
+				add_timed_idea = { idea = democratic_party_drift days = 365 }	
+			}
+			SAU = {	add_timed_idea = { idea = democratic_party_drift days = 365 } }
+			YEM = {	add_timed_idea = { idea = democratic_party_drift days = 365 } }
+			OMA = {	add_timed_idea = { idea = democratic_party_drift days = 365 } }
+			EGY = {	add_timed_idea = { idea = democratic_party_drift days = 365 } }
+			LEB = {	add_timed_idea = { idea = democratic_party_drift days = 365 } }
+			JOR = {	add_timed_idea = { idea = democratic_party_drift days = 365 } }
+		}
+	}
+}

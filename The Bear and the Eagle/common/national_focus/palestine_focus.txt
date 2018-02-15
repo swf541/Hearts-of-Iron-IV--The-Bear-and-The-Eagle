@@ -1,0 +1,2809 @@
+focus_tree = {
+	id = palestine_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = PAL
+		}
+	}
+	default = no
+	focus = {
+		id = PAL_cut_ties_with_egypt
+		icon = GFX_focus_SAF_colonialist_crusade
+		cost = 10.00
+		x = 51
+		y = 0
+			completion_reward = {
+					set_autonomy = {
+							target = PAL
+							autonomy_state = autonomy_free
+						}
+					}
+	}
+	focus = {
+		id = PAL_palestine_army
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10.00
+		x = 3
+		y = 0
+			completion_reward = {
+					army_experience = 10
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = land_doctrine
+						}
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 2
+							category = infantry_weapons
+							category = artillery
+						}
+				}
+	}
+	focus = {
+		id = PAL_palestine_navy
+		icon = GFX_goal_generic_navy_battleship
+		cost = 10.00
+		x = 9
+		y = 0
+			completion_reward = {
+					if = {
+							limit = {
+									NOT = {
+											any_owned_state = {
+													dockyard > 0
+													free_building_slots = {
+															building = dockyard
+															size > 2
+															include_locked = yes
+														}
+												}
+										}
+									any_owned_state = {
+											is_coastal = yes
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											is_coastal = yes
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+							set_country_flag = naval_effort_built
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_country_flag = naval_effort_built
+										}
+									any_owned_state = {
+											dockyard > 0
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											dockyard > 0
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+							set_country_flag = naval_effort_built
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_country_flag = naval_effort_built
+										}
+									NOT = {
+											any_owned_state = {
+													free_building_slots = {
+															building = dockyard
+															size > 2
+															include_locked = yes
+														}
+												}
+										}
+								}
+							random_state = {
+									limit = {
+											controller = {
+													tag = ROOT
+												}
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+						}
+				}
+	}
+	focus = {
+		id = PAL_palestine_airforce
+		icon = GFX_goal_generic_air_fighter2
+		cost = 10.00
+		x = 15
+		y = 0
+			completion_reward = {
+					air_experience = 25
+					if = {
+							limit = {
+									capital_scope = {
+											NOT = {
+													free_building_slots = {
+															building = air_base
+															size > 1
+														}
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+									add_building_construction = {
+											type = air_base
+											level = 2
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_AB
+										}
+								}
+						}
+					if = {
+							limit = {
+									capital_scope = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+								}
+							capital_scope = {
+									add_building_construction = {
+											type = air_base
+											level = 2
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_AB
+										}
+								}
+						}
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = air_doctrine
+						}
+				}
+	}
+	focus = {
+		id = PAL_the_palestinian_economy
+		icon = GFX_goal_generic_production2
+		cost = 10.00
+		x = 25
+		y = 0
+			completion_reward = {
+					every_owned_state = {
+							add_extra_state_shared_building_slots = 1
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					}
+	}
+	focus = {
+		id = PAL_the_1949_palestinian_exodus
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		x = 84
+		y = 1
+		completion_reward = {
+			every_owned_state = {
+				add_manpower = 50000
+			}
+		}
+	}
+	focus = {
+		id = PAL_research_the_means_of_mass_production
+		icon = GFX_focus_secret_rearmament
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_palestine_army
+		}
+		x = 1
+		y = 1
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = PAL_expand_military_factory
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_palestine_army
+		}
+		x = 5
+		y = 1
+			completion_reward = {
+					every_owned_state = {
+							add_extra_state_shared_building_slots = 1
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+						}
+					}
+	}
+	focus = {
+		id = PAL_request_funds_from_other_arab_nations
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_research_the_means_of_mass_production
+			focus = PAL_expand_military_factory
+		}
+		x = 3
+		y = 2
+			completion_reward = {
+					every_owned_state = {
+							add_extra_state_shared_building_slots = 1
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+						}
+					}
+	}
+	focus = {
+		id = PAL_recruit_a_professional_army
+		icon = GFX_focus_secret_rearmament
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_request_funds_from_other_arab_nations
+		}
+		x = 3
+		y = 3
+			completion_reward = {
+					remove_ideas = incompetent_officer_corps
+					army_experience = 25
+				}
+	}
+	focus = {
+		id = PAL_research_modern_tanks
+		icon = GFX_goal_generic_army_tanks
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_recruit_a_professional_army
+		}
+		x = 1
+		y = 4
+			completion_reward = {
+					add_tech_bonus = {
+							name = armor_bonus
+							bonus = 0.5
+							uses = 2
+							category = armor
+						}
+				}
+	}
+	focus = {
+		id = PAL_learn_cheap_but_effective_tanks
+		icon = GFX_goal_continuous_armor_production
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_recruit_a_professional_army
+		}
+		x = 5
+		y = 4
+			completion_reward = {
+					add_tech_bonus = {
+							name = armor_bonus
+							bonus = 0.5
+							uses = 2
+							category = armor
+						}
+				}
+	}
+	focus = {
+		id = PAL_expand_naval_dockyards
+		icon = GFX_goal_continuous_naval_production
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_palestine_navy
+		}
+		x = 9
+		y = 1
+			completion_reward = {
+					if = {
+							limit = {
+									NOT = {
+											any_owned_state = {
+													dockyard > 0
+													free_building_slots = {
+															building = dockyard
+															size > 2
+															include_locked = yes
+														}
+												}
+										}
+									any_owned_state = {
+											is_coastal = yes
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											is_coastal = yes
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+							set_country_flag = naval_effort_built
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_country_flag = naval_effort_built
+										}
+									any_owned_state = {
+											dockyard > 0
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											dockyard > 0
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+							set_country_flag = naval_effort_built
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_country_flag = naval_effort_built
+										}
+									NOT = {
+											any_owned_state = {
+													free_building_slots = {
+															building = dockyard
+															size > 2
+															include_locked = yes
+														}
+												}
+										}
+								}
+							random_state = {
+									limit = {
+											controller = {
+													tag = ROOT
+												}
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+						}
+				}
+	}
+	focus = {
+		id = PAL_ask_for_british_ships
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_expand_naval_dockyards
+		}
+		x = 9
+		y = 2
+			completion_reward = {
+					add_equipment_to_stockpile = { type = frigate_1 amount = 10 producer = ENG }	
+					add_equipment_to_stockpile = { type = destroyer_3 amount = 10 producer = ENG					}	
+					add_equipment_to_stockpile = { type = battleship_2 amount = 10 producer = ENG }	
+				}
+	}
+	focus = {
+		id = PAL_carrier_efforts
+		icon = GFX_goal_generic_navy_carrier
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_ask_for_british_ships
+		}
+		x = 7
+		y = 3
+			completion_reward = {
+					navy_experience = 25
+					add_tech_bonus = {
+							name = capital_ships_bonus
+							bonus = 0.5
+							ahead_reduction = 1
+							uses = 1
+							technology = battle_cruiser_1
+							technology = early_carrier
+							technology = basic_carrier
+							technology = improved_carrier
+							technology = advanced_carrier
+						}
+				}
+	}
+	focus = {
+		id = PAL_submarine_efforts
+		icon = GFX_goal_generic_navy_submarine
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_ask_for_british_ships
+		}
+		x = 11
+		y = 3
+			completion_reward = {
+					add_tech_bonus = {
+							name = ss_bonus
+							bonus = 0.5
+							ahead_reduction = 1
+							uses = 1
+							technology = early_submarine
+							technology = basic_submarine
+							technology = improved_submarine
+							technology = advanced_submarine
+						}
+				}
+	}
+	focus = {
+		id = PAL_palestines_naval_research_academy
+		icon = GFX_goal_continuous_research
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_submarine_efforts
+			focus = PAL_carrier_efforts
+		}
+		x = 9
+		y = 4
+		completion_reward = {
+			navy_experience = 50
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = PAL_expand_airports
+		icon = GFX_goal_generic_air_production
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_palestine_airforce
+		}
+		x = 15
+		y = 1
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 0
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 0
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							}
+						}
+	}
+	focus = {
+		id = PAL_arial_superiority
+		icon = GFX_goal_generic_air_fighter
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_expand_airports
+		}
+		x = 13
+		y = 2
+			completion_reward = {
+					air_experience = 5
+					add_tech_bonus = {
+							name = jet_technology_bonus
+							bonus = 0.5
+							uses = 1
+							category = jet_technology
+						}
+				}
+	}
+	focus = {
+		id = PAL_nuclear_efforts
+		icon = GFX_focus_wonderweapons
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_arial_superiority
+		}
+		x = 13
+		y = 3
+		completion_reward = {
+				add_tech_bonus = {
+					name = secret_bonus
+					bonus = 0.5
+					uses = 1
+					category = nuclear
+				}
+			}
+	}
+	focus = {
+		id = PAL_paratroop_efforts
+		icon = GFX_focus_generic_paratrooper
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_expand_airports
+		}
+		x = 17
+		y = 2
+			completion_reward = {
+					add_tech_bonus = {
+							name = special_forces_bonus
+							bonus = 0.5
+							uses = 1
+							technology = paratroopers
+							technology = paratroopers2
+
+						}
+				}
+	}
+	focus = {
+		id = PAL_new_airplane_models
+		icon = GFX_focus_yug_rogozarski
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_paratroop_efforts
+		}
+		x = 17
+		y = 3
+			completion_reward = {
+					air_experience = 5
+					add_tech_bonus = {
+							name = jet_technology_bonus
+							bonus = 0.5
+							uses = 1
+							category = jet_technology
+						}
+				}
+	}
+	focus = {
+		id = PAL_palestinian_arial_academy
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_new_airplane_models
+			focus = PAL_nuclear_efforts
+		}
+		x = 15
+		y = 4
+		completion_reward = {
+			air_experience = 50
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = PAL_the_4_year_plan
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_palestines_naval_research_academy
+			focus = PAL_palestinian_arial_academy
+			focus = PAL_research_modern_tanks
+			focus = PAL_learn_cheap_but_effective_tanks
+		}
+		x = 9
+		y = 5
+		completion_reward = {
+					every_owned_state = {
+							add_extra_state_shared_building_slots = 1
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+						}
+					}
+	}
+	focus = {
+		id = PAL_allow_females_in_military
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_the_4_year_plan
+		}
+		mutually_exclusive = {
+			focus = PAL_tradional_ways
+		}
+		x = 5
+		y = 6
+		completion_reward = {
+			add_ideas = egalitarian_beliefs
+		}
+	}
+	focus = {
+		id = PAL_tradional_ways
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_the_4_year_plan
+		}
+		mutually_exclusive = {
+			focus = PAL_allow_females_in_military
+		}
+		x = 13
+		y = 6
+		completion_reward = {
+			add_ideas = traditional_culture
+		}
+	}
+	focus = {
+		id = PAL_foreign_military_officers
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_the_4_year_plan
+		}
+		x = 17
+		y = 6
+		completion_reward = {
+			army_experience = 50
+			add_manpower = 50000
+		}
+	}
+	focus = {
+		id = PAL_increase_trade_with_neighbors
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_the_palestinian_economy
+		}
+		x = 22
+		y = 1
+		completion_reward = {
+			add_ideas = embrace_free_trade
+		}
+	}
+	focus = {
+		id = PAL_modernize_gaza
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_the_palestinian_economy
+		}
+		x = 25
+		y = 1
+			completion_reward = {
+					add_research_slot = 1
+					every_owned_state = {
+							add_extra_state_shared_building_slots = 1
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					}
+	}
+	focus = {
+		id = PAL_chromium_in_gaza
+		icon = GFX_goal_generic_construction2
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_the_palestinian_economy
+		}
+		x = 28
+		y = 1
+		completion_reward = {
+			random_owned_state = {
+				add_resource = {
+					type = chromium
+					amount = 50
+				}
+			}
+		}
+	}
+	focus = {
+		id = PAL_new_found_oil
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_modernize_gaza
+			focus = PAL_chromium_in_gaza
+			focus = PAL_increase_trade_with_neighbors
+		}
+		x = 25
+		y = 2
+		completion_reward = {
+			random_owned_state = {
+				add_resource = {
+					type = oil
+					amount = 50
+				}
+			}
+		}
+	}
+	focus = {
+		id = PAL_allow_american_investors_in_gaza
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_new_found_oil
+		}
+		x = 22
+		y = 3
+			completion_reward = {
+					every_owned_state = {
+							add_extra_state_shared_building_slots = 1
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					}
+	}
+	focus = {
+		id = PAL_better_infastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_new_found_oil
+		}
+		x = 25
+		y = 3
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 0
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 0
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+	}
+	focus = {
+		id = PAL_ask_egypt_for_better_support
+		icon = GFX_goal_continuous_repairments
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_new_found_oil
+		}
+		x = 28
+		y = 3
+			completion_reward = {
+				add_manpower = 50000
+				army_experience = 50
+			random_owned_state = {
+				add_resource = {
+					type = oil
+					amount = 25
+				}
+			}
+		}
+	}
+	focus = {
+		id = PAL_better_infastructure_ii
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_better_infastructure
+			focus = PAL_ask_egypt_for_better_support
+			focus = PAL_allow_american_investors_in_gaza
+		}
+		x = 25
+		y = 4
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 0
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = infrastructure
+																			size > 0
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+	}
+	focus = {
+		id = PAL_increase_workforce
+		icon = GFX_focus_yug_pan_slavic_congress
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_better_infastructure_ii
+		}
+		x = 25
+		y = 6
+		completion_reward = {
+			capital_scope = {
+				add_manpower = 50000
+			}
+		}
+	}
+	focus = {
+		id = PAL_modernize_steel_industry
+		icon = GFX_goal_generic_production
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_better_infastructure_ii
+		}
+		x = 28
+		y = 5
+		completion_reward = {
+			random_owned_state = {
+				add_resource = {
+					type = steel
+					amount = 25
+				}
+			}
+		}
+	}
+	focus = {
+		id = PAL_increase_arms_for_military
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_increase_workforce
+		}
+		x = 28
+		y = 7
+			completion_reward = {
+					every_owned_state = {
+							add_extra_state_shared_building_slots = 1
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+						}
+					}
+	}
+	focus = {
+		id = PAL_arab_cold_war
+		icon = GFX_focus_generic_air_defense
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_cut_ties_with_egypt
+		}
+		x = 51
+		y = 1
+		completion_reward = {
+			add_political_power = 300
+		}
+	}
+	focus = {
+		id = PAL_socialism
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_arab_cold_war
+		}
+		mutually_exclusive = {
+			focus = PAL_a_desired_path
+			focus = PAL_trust_in_the_militants
+			focus = PAL_a_new_idea
+			focus = PAL_a_desired_path
+			focus = PAL_trust_in_the_militants
+			focus = PAL_a_new_idea
+			focus = PAL_tradional_ideals
+		}
+		x = 33
+		y = 2
+		completion_reward = {
+					add_ideas = internationalism
+					set_politics = {
+							ruling_party = communism
+							elections_allowed = no
+					}
+			}
+	}
+	focus = {
+		id = PAL_socialist_science
+		icon = GFX_focus_generic_socialist_science
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_socialism
+		}
+		x = 33
+		y = 3
+		completion_reward = {
+			add_ideas = KOR_education_reform
+		}
+	}
+	focus = {
+		id = PAL_on_our_own
+		icon = GFX_goal_support_fourth_int
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_socialist_science
+		}
+		mutually_exclusive = {
+			focus = PAL_join_the_comintern
+		}
+		x = 31
+		y = 4
+
+	}
+	focus = {
+		id = PAL_join_the_comintern
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_socialist_science
+		}
+		mutually_exclusive = {
+			focus = PAL_on_our_own
+		}
+		x = 35
+		y = 4
+		completion_reward = {
+			SOV = { add_to_faction = ROOT }
+		}
+	}
+	focus = {
+		id = PAL_anti_zionist_sentiment
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_join_the_comintern
+			focus = PAL_on_our_own
+		}
+		x = 35
+		y = 5
+			completion_reward = {
+					PAL = {
+							add_opinion_modifier = {
+									target = ISR
+									modifier = large_decrease
+								}
+						}
+					ISR = {
+							add_opinion_modifier = {
+									target = PAL
+									modifier = large_decrease
+								}
+						}
+				}
+	}
+	focus = {
+		id = PAL_a_desired_path
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_arab_cold_war
+		}
+		mutually_exclusive = {
+			focus = PAL_socialism
+			focus = PAL_socialism
+			focus = PAL_trust_in_the_militants
+			focus = PAL_a_new_idea
+			focus = PAL_trust_in_the_militants
+			focus = PAL_a_new_idea
+			focus = PAL_tradional_ideals
+		}
+		x = 41
+		y = 2
+
+	}
+	focus = {
+		id = PAL_democracy_of_our_time
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_a_desired_path
+		}
+		x = 41
+		y = 3
+		completion_reward = {
+			set_politics = { ruling_party = democratic elections_allowed = yes }
+			add_ideas = social_democracy_drift
+			create_country_leader = {
+				name = "Ghassan Kanafani"
+				desc = ""
+				picture = "Kanafani.dds"
+				ideology = liberalism
+				traits = {
+					#
+				}
+			}
+
+		}
+	}
+	focus = {
+		id = PAL_rewrite_constitution
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_democracy_of_our_time
+		}
+		x = 41
+		y = 4
+		completion_reward = {
+			add_political_power = 300
+		}
+	}
+	focus = {
+		id = PAL_alliance_with_the_british
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_rewrite_constitution
+		}
+		x = 41
+		y = 5
+			completion_reward = {
+					PAL = {
+							add_opinion_modifier = {
+									target = ENG
+									modifier = large_increase
+								}
+						}
+					ENG = {
+							add_opinion_modifier = {
+									target = PAL
+									modifier = large_increase
+								}
+						}
+				}
+	}
+	focus = {
+		id = PAL_british_conference
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_alliance_with_the_british
+		}
+		x = 41
+		y = 6
+			completion_reward = {
+					PAL = {
+							add_opinion_modifier = {
+									target = ENG
+									modifier = small_increase
+								}
+						}
+					ENG = {
+							add_opinion_modifier = {
+									target = PAL
+									modifier = small_increase
+								}
+						}
+				}
+	}
+	focus = {
+		id = PAL_bring_up_palestinian_israeli_conflict
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_british_conference
+		}
+		x = 41
+		y = 7
+		completion_reward = {
+			add_political_power = 300
+		}
+	}
+	focus = {
+		id = PAL_propose_palestine_israeli_union
+		icon = GFX_goal_generic_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_bring_up_palestinian_israeli_conflict
+		}
+		mutually_exclusive = {
+			focus = PAL_all_is_ours
+		}
+		x = 38
+		y = 8
+		completion_reward = {
+			ISR = { country_event = PAL.2 }
+		}
+	}
+	focus = {
+		id = PAL_all_is_ours
+		icon = GFX_goal_continuous_suppression
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_bring_up_palestinian_israeli_conflict
+		}
+		mutually_exclusive = {
+			focus = PAL_propose_palestine_israeli_union
+		}
+		x = 44
+		y = 8
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = ISR
+			} 
+		}
+	}
+	focus = {
+		id = PAL_trust_in_the_militants
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_arab_cold_war
+		}
+		mutually_exclusive = {
+			focus = PAL_socialism
+			focus = PAL_a_desired_path
+			focus = PAL_a_new_idea
+			focus = PAL_a_desired_path
+			focus = PAL_socialism
+			focus = PAL_a_new_idea
+			focus = PAL_tradional_ideals
+		}
+		x = 51
+		y = 2
+		completion_reward = {
+			add_ideas = militarism_focus
+		}
+	}
+	focus = {
+		id = PAL_plan_the_coup
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_trust_in_the_militants
+		}
+		x = 51
+		y = 3
+		completion_reward = {
+			add_political_power = 300
+		}
+	}
+	focus = {
+		id = PAL_pro_propaganda_against_our_oppressor
+		icon = GFX_focus_generic_strike_at_democracy2
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_plan_the_coup
+		}
+		x = 48
+		y = 4
+		completion_reward = {
+			add_ideas = reactionary_drift
+		}
+	}
+	focus = {
+		id = PAL_assassinate_political_officals
+		icon = GFX_focus_hun_assassinate_horthy
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_plan_the_coup
+		}
+		x = 54
+		y = 4
+		completion_reward = {
+			add_political_power = 300
+			add_national_unity = -0.15
+		}
+	}
+	focus = {
+		id = PAL_influence_our_neighbors
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_pro_propaganda_against_our_oppressor
+			focus = PAL_assassinate_political_officals
+		}
+		mutually_exclusive = {
+			focus = PAL_break_ties_with_arab_countries
+		}
+		x = 54
+		y = 5
+			completion_reward = {
+					EGY = { add_timed_idea = { idea = reactionary_drift days = 365 } }
+					JOR = { add_timed_idea = { idea = reactionary_drift days = 365 } }
+					SYR = { add_timed_idea = { idea = reactionary_drift days = 365 } }
+					SAU = { add_timed_idea = { idea = reactionary_drift days = 365 } }
+					YEM = { add_timed_idea = { idea = reactionary_drift days = 365 } }
+					IRQ = { add_timed_idea = { idea = reactionary_drift days = 365 } }
+					LEB = { add_timed_idea = { idea = reactionary_drift days = 365 } }
+			}
+	}
+	focus = {
+		id = PAL_a_new_idea
+		icon = GFX_focus_SAF_support_ossewabrandwag
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_arab_cold_war
+		}
+		mutually_exclusive = {
+			focus = PAL_socialism
+			focus = PAL_a_desired_path
+			focus = PAL_trust_in_the_militants
+			focus = PAL_tradional_ideals
+			focus = PAL_trust_in_the_militants
+			focus = PAL_a_desired_path
+			focus = PAL_socialism
+			focus = PAL_tradional_ideals
+		}
+		x = 62
+		y = 2
+		completion_reward = {
+			add_political_power = 300
+		}
+	}
+	focus = {
+		id = PAL_hail_to_the_baaths
+		icon = GFX_focus_SAF_support_ossewabrandwag
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_a_new_idea
+		}
+		mutually_exclusive = {
+			focus = PAL_neo_nazi_society
+			focus = PAL_pan_arab_movements
+			focus = PAL_neo_nazi_society
+		}
+		x = 59
+		y = 3
+		completion_reward = {
+			add_ideas = nationalist_drift
+			set_politics = { ruling_party = nationalism elections_allowed = no }
+		}
+	}
+	focus = {
+		id = PAL_cult_of_personality
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_hail_to_the_baaths
+		}
+		x = 59
+		y = 4
+			completion_reward = {
+					add_ideas = ideological_fanaticism_focus
+					add_national_unity = 0.15
+				}
+	}
+	focus = {
+		id = PAL_propaganda_to_youngsters
+		icon = GFX_goal_generic_defence
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_cult_of_personality
+		}
+		x = 59
+		y = 5
+			completion_reward = {
+					add_ideas = military_youth_focus
+				}
+	}
+	focus = {
+		id = PAL_neo_nazi_society
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_a_new_idea
+		}
+		mutually_exclusive = {
+			focus = PAL_hail_to_the_baaths
+			focus = PAL_pan_arab_movements
+			focus = PAL_hail_to_the_baaths
+		}
+		x = 62
+		y = 3
+		completion_reward = {
+			add_ideas = nationalism
+			set_politics = { ruling_party = fascism elections_allowed = no }
+		}
+	}
+	focus = {
+		id = PAL_the_second_buraq_uprising
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_neo_nazi_society
+		}
+		x = 62
+		y = 4
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = ISR
+			} 
+		}
+	}
+	focus = {
+		id = PAL_relocate_zionist
+		icon = GFX_focus_generic_paratrooper
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_the_second_buraq_uprising
+		}
+		x = 62
+		y = 5
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					NOT = { state = 801 }
+					NOT = { state = 781 }
+					NOT = { state = 332 }
+					 is_core_of = ISR
+				}
+				add_manpower = -50000
+			}
+		}
+	}
+	focus = {
+		id = PAL_pan_arab_movements
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_a_new_idea
+		}
+		mutually_exclusive = {
+			focus = PAL_hail_to_the_baaths
+			focus = PAL_neo_nazi_society
+		}
+		x = 65
+		y = 3
+			completion_reward = {
+					add_timed_idea = { idea = pan_arab_influence days = 365 }
+					add_popularity = {
+							ideology = pan_arabism
+							popularity = 0.2
+						}
+					set_politics = {
+							ruling_party = pan_arabism
+							elections_allowed = no
+						}
+					}
+	}
+	focus = {
+		id = PAL_proclaim_holy_land_as_ours
+		icon = GFX_focus_SAF_colonialist_crusade
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_pan_arab_movements
+		}
+		x = 65
+		y = 4
+		completion_reward = {
+			add_ideas = ideological_fanaticism_focus
+			add_ideas = militarism_focus
+		}
+	}
+	focus = {
+		id = PAL_arm_rebels_in_israel
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_proclaim_holy_land_as_ours
+		}
+		x = 65
+		y = 5
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = ISR
+			} 
+		}
+	}
+	focus = {
+		id = PAL_tradional_ideals
+		icon = GFX_focus_rom_royal_dictatorship
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_arab_cold_war
+		}
+		mutually_exclusive = {
+			focus = PAL_socialism
+			focus = PAL_a_desired_path
+			focus = PAL_trust_in_the_militants
+			focus = PAL_a_new_idea
+			focus = PAL_a_new_idea
+			focus = PAL_trust_in_the_militants
+			focus = PAL_a_desired_path
+			focus = PAL_socialism
+		}
+		x = 75
+		y = 2
+		completion_reward = {
+			add_ideas = monarchist_influence
+		}
+	}
+	focus = {
+		id = PAL_merge_with_jordan
+		icon = GFX_focus_generic_home_defense
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_tradional_ideals
+		}
+		x = 75
+		y = 3
+		completion_reward = {
+			JOR = { country_event = PAL.1 }
+		}
+	}
+	focus = {
+		id = PAL_royal_guard
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_merge_with_jordan
+		}
+		x = 75
+		y = 4
+		completion_reward = {
+			add_ideas = ideological_fanaticism_focus
+		}
+	}
+	focus = {
+		id = PAL_royal_pact_with_egypt
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_royal_guard
+		}
+		x = 75
+		y = 5
+		completion_reward = {
+			create_faction = "Royal Pact"
+		}
+	}
+	focus = {
+		id = PAL_invite_saudia_arabia
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_royal_pact_with_egypt
+		}
+		x = 73
+		y = 6
+		completion_reward = {
+			add_to_faction = SAU
+		}
+	}
+	focus = {
+		id = PAL_invite_iraq
+		icon = GFX_focus_generic_concessions
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_royal_pact_with_egypt
+		}
+		x = 77
+		y = 6
+		completion_reward = {
+			add_to_faction = IRQ
+		}
+	}
+	focus = {
+		id = PAL_invade_israel
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_invite_iraq
+			focus = PAL_invite_saudia_arabia
+		}
+		x = 75
+		y = 7
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = ISR
+			} 
+		}
+	}
+	focus = {
+		id = PAL_faster_production_of_weaponry
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_the_4_year_plan
+		}
+		x = 1
+		y = 6
+			completion_reward = {
+					every_owned_state = {
+							add_extra_state_shared_building_slots = 1
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = arms_factory
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+						}
+					}
+	}
+	focus = {
+		id = PAL_demand_westbank
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_tradional_ways
+			focus = PAL_allow_females_in_military
+			focus = PAL_tradional_ways
+			focus = PAL_foreign_military_officers
+			focus = PAL_faster_production_of_weaponry
+		}
+		x = 9
+		y = 7
+		completion_reward = {
+			JOR = { country_event = PAL.3 }
+		}
+	}
+	focus = {
+		id = PAL_ask_for_british_doctrine
+		icon = GFX_focus_generic_coastal_fort
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_allow_females_in_military
+			focus = PAL_faster_production_of_weaponry
+			focus = PAL_tradional_ways
+			focus = PAL_foreign_military_officers
+			focus = PAL_faster_production_of_weaponry
+			focus = PAL_allow_females_in_military
+		}
+		x = 4
+		y = 7
+			completion_reward = {
+					army_experience = 10
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = land_doctrine
+						}
+					}
+	}
+	focus = {
+		id = PAL_desert_tactics
+		icon = GFX_goal_generic_position_armies
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_foreign_military_officers
+			focus = PAL_tradional_ways
+			focus = PAL_tradional_ways
+			focus = PAL_foreign_military_officers
+			focus = PAL_allow_females_in_military
+			focus = PAL_faster_production_of_weaponry
+		}
+		x = 15
+		y = 7
+			completion_reward = {
+					army_experience = 10
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = land_doctrine
+						}
+					}
+	}
+	focus = {
+		id = PAL_demand_referendum_in_sinai
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_ask_for_british_doctrine
+			focus = PAL_demand_westbank
+			focus = PAL_desert_tactics
+		}
+		x = 6
+		y = 8
+		completion_reward = {
+			EGY = { country_event = PAL.4 }
+		}
+	}
+	focus = {
+		id = PAL_efficiency_on_desert
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_desert_tactics
+			focus = PAL_demand_westbank
+			focus = PAL_ask_for_british_doctrine
+		}
+		x = 12
+		y = 8
+			completion_reward = {
+					army_experience = 10
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.5
+							uses = 1
+							category = land_doctrine
+						}
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 2
+							category = infantry_weapons
+							category = artillery
+						}
+				}
+	}
+	focus = {
+		id = PAL_fortification_on_gaza
+		icon = GFX_goal_continuous_non_factory_construct
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_efficiency_on_desert
+			focus = PAL_demand_referendum_in_sinai
+		}
+		x = 9
+		y = 9
+		completion_reward = {
+				801 = {
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 4088
+							instant_build = yes
+						}
+				}
+			}
+	}
+	focus = {
+		id = PAL_increase_civillian_factories
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_better_infastructure_ii
+		}
+		x = 22
+		y = 5
+			completion_reward = {
+					every_owned_state = {
+							add_extra_state_shared_building_slots = 1
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					}
+	}
+	focus = {
+		id = PAL_better_tools
+		icon = GFX_goal_generic_production
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_increase_workforce
+		}
+		x = 22
+		y = 7
+			completion_reward = {
+					add_tech_bonus = {
+							name = industrial_bonus
+							bonus = 0.5
+							uses = 1
+							category = industry
+						}
+				}
+	}
+	focus = {
+		id = PAL_break_ties_with_arab_countries
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_pro_propaganda_against_our_oppressor
+			focus = PAL_assassinate_political_officals
+		}
+		mutually_exclusive = {
+			focus = PAL_influence_our_neighbors
+		}
+		x = 48
+		y = 5
+		completion_reward = {
+					PAL = {
+							add_opinion_modifier = {
+									target = EGY
+									modifier = large_decrease
+								}
+						}
+					EGY = {
+							add_opinion_modifier = {
+									target = PAL
+									modifier = large_decrease
+								}
+						}
+					PAL = {
+							add_opinion_modifier = {
+									target = LEB
+									modifier = large_decrease
+								}
+						}
+					LEB = {
+							add_opinion_modifier = {
+									target = PAL
+									modifier = large_decrease
+								}
+						}
+					PAL = {
+							add_opinion_modifier = {
+									target = JOR
+									modifier = large_decrease
+								}
+						}
+					JOR = {
+							add_opinion_modifier = {
+									target = PAL
+									modifier = large_decrease
+								}
+						}
+					PAL = {
+							add_opinion_modifier = {
+									target = SYR
+									modifier = large_decrease
+								}
+						}
+					SYR = {
+							add_opinion_modifier = {
+									target = PAL
+									modifier = large_decrease
+								}
+						}
+					PAL = {
+							add_opinion_modifier = {
+									target = IRQ
+									modifier = large_decrease
+								}
+						}
+					IRQ = {
+							add_opinion_modifier = {
+									target = PAL
+									modifier = large_decrease
+								}
+						}
+					PAL = {
+							add_opinion_modifier = {
+									target = YEM
+									modifier = large_decrease
+								}
+						}
+					YEM = {
+							add_opinion_modifier = {
+									target = PAL
+									modifier = large_decrease
+								}
+						}
+				}
+	}
+	focus = {
+		id = PAL_the_funding_crisis
+		icon = GFX_goal_generic_trade
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_influence_our_neighbors
+			focus = PAL_break_ties_with_arab_countries
+		}
+		x = 51
+		y = 6
+		completion_reward = {
+			add_political_power = 300
+			add_national_unity = -0.10
+		}
+	}
+	focus = {
+		id = PAL_uncle_sam
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_the_funding_crisis
+		}
+		mutually_exclusive = {
+			focus = PAL_plea_to_neighboring_egypt
+			focus = PAL_the_russian_bear
+			focus = PAL_plea_to_neighboring_egypt
+			focus = PAL_the_russian_bear
+		}
+		x = 48
+		y = 7
+		completion_reward = {
+					PAL = {
+							add_opinion_modifier = {
+									target = USA
+									modifier = large_increase
+								}
+						}
+					USA = {
+							add_opinion_modifier = {
+									target = PAL
+									modifier = large_increase
+								}
+						}
+					}
+	}
+	focus = {
+		id = PAL_the_russian_bear
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_the_funding_crisis
+		}
+		mutually_exclusive = {
+			focus = PAL_uncle_sam
+			focus = PAL_plea_to_neighboring_egypt
+			focus = PAL_plea_to_neighboring_egypt
+			focus = PAL_uncle_sam
+		}
+		x = 54
+		y = 7
+		completion_reward = {
+					PAL = {
+							add_opinion_modifier = {
+									target = SOV
+									modifier = large_increase
+								}
+						}
+					SOV = {
+							add_opinion_modifier = {
+									target = PAL
+									modifier = large_increase
+								}
+						}
+					}
+	}
+	focus = {
+		id = PAL_plea_to_neighboring_egypt
+		icon = GFX_focus_AST_squander_bug
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_the_funding_crisis
+		}
+		mutually_exclusive = {
+			focus = PAL_uncle_sam
+			focus = PAL_the_russian_bear
+			focus = PAL_uncle_sam
+			focus = PAL_the_russian_bear
+		}
+		x = 51
+		y = 7
+		completion_reward = {
+					PAL = {
+							add_opinion_modifier = {
+									target = EGY
+									modifier = large_increase
+								}
+						}
+					EGY = {
+							add_opinion_modifier = {
+									target = PAL
+									modifier = large_increase
+								}
+						}
+					}
+	}
+	focus = {
+		id = PAL_the_rise_nationalist_armies
+		icon = GFX_focus_SAF_support_ossewabrandwag
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_plea_to_neighboring_egypt
+		}
+		x = 51
+		y = 8
+		completion_reward = {
+			add_ideas = ideological_fanaticism_focus
+			add_ideas = military_youth_focus
+		}
+	}
+	focus = {
+		id = PAL_pro_capitalist_sentiment
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_uncle_sam
+		}
+		x = 48
+		y = 8
+		completion_reward = {
+			add_ideas = capitalism
+		}
+	}
+	focus = {
+		id = PAL_invite_a_pro_marxist_legislature
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_the_russian_bear
+		}
+		x = 54
+		y = 8
+		completion_reward = {
+			add_ideas = city_economies
+			add_ideas = urban_planning
+		}
+	}
+	focus = {
+		id = PAL_execute_the_coup
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_the_rise_nationalist_armies
+			focus = PAL_pro_capitalist_sentiment
+			focus = PAL_invite_a_pro_marxist_legislature
+		}
+		x = 51
+		y = 9
+		completion_reward = {
+					set_politics = {
+							ruling_party = neutrality
+							elections_allowed = no
+					}
+			}
+	}
+	focus = {
+		id = PAL_spread_influence_amongst_neighbors
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_join_the_comintern
+			focus = PAL_on_our_own
+		}
+		x = 31
+		y = 5
+		completion_reward = {
+			YEM = { add_timed_idea = { idea = internationalism days = 450 } }	
+			SYR = { add_timed_idea = { idea = internationalism days = 450 } }
+			JOR = { add_timed_idea = { idea = internationalism days = 450 } }
+			ISR = { add_timed_idea = { idea = internationalism days = 450 } }
+			SUD = { add_timed_idea = { idea = internationalism days = 450 } }
+			SAU = { add_timed_idea = { idea = internationalism days = 450 } }		
+			LEB = { add_timed_idea = { idea = internationalism days = 450 } }
+			IRQ = { add_timed_idea = { idea = internationalism days = 450 } }				
+		}
+	}
+	focus = {
+		id = PAL_assassinate_monarchs
+		icon = GFX_goal_tfv_sever_ties_with_uk
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_anti_zionist_sentiment
+			focus = PAL_spread_influence_amongst_neighbors
+		}
+		x = 33
+		y = 6
+		completion_reward = {
+			JOR = {
+				kill_country_leader = yes	
+			}
+			declare_war_on = { target = JOR type = annex_everything }	
+		}
+	}
+	focus = {
+		id = PAL_5_year_plan
+		icon = GFX_goal_generic_soviet_construction
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_assassinate_monarchs
+		}
+		x = 33
+		y = 7
+			completion_reward = {
+					every_owned_state = {
+							add_extra_state_shared_building_slots = 1
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+					}
+	}
+	focus = {
+		id = PAL_nationalization_of_steel
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_5_year_plan
+		}
+		x = 35
+		y = 8
+		completion_reward = {
+			random_owned_state = {
+				add_resource = {
+					type = steel
+					amount = 25
+				}
+			}
+		}
+	}
+	focus = {
+		id = PAL_welfare_to_all_citizens
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_5_year_plan
+		}
+		x = 33
+		y = 8
+			completion_reward = {
+					add_ideas = the_american_welfare_state
+				}
+	}
+	focus = {
+		id = PAL_liberation_of_arabs_in_israel
+		icon = GFX_focus_yug_pan_slavic_congress
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_5_year_plan
+		}
+		x = 31
+		y = 8
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = ISR
+			} 
+		}
+	}
+	focus = {
+		id = PAL_the_1950_palestinian_exodus
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_the_1949_palestinian_exodus
+		}
+		x = 84
+		y = 2
+		completion_reward = {
+			every_owned_state = {
+				add_manpower = 50000
+			}
+		}
+	}
+	focus = {
+		id = PAL_the_1951_palestinian_exodus
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_the_1950_palestinian_exodus
+		}
+		x = 84
+		y = 3
+		completion_reward = {
+			every_owned_state = {
+				add_manpower = 50000
+			}
+		}
+	}
+	focus = {
+		id = PAL_the_1952_palestinean_exodus
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_the_1951_palestinian_exodus
+		}
+		x = 84
+		y = 4
+		completion_reward = {
+			every_owned_state = {
+				add_manpower = 50000
+			}
+		}
+	}
+	focus = {
+		id = PAL_the_1953_palestinian_exodus
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_the_1952_palestinean_exodus
+		}
+		x = 84
+		y = 5
+		completion_reward = {
+			every_owned_state = {
+				add_manpower = 50000
+			}
+		}
+	}
+	focus = {
+		id = PAL_the_1954_palestinian_exodus
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_the_1953_palestinian_exodus
+		}
+		x = 84
+		y = 6
+		completion_reward = {
+			every_owned_state = {
+				add_manpower = 50000
+			}
+		}
+	}
+	focus = {
+		id = PAL_the_1955_palestinian_exodus
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_the_1954_palestinian_exodus
+		}
+		x = 84
+		y = 7
+		completion_reward = {
+			every_owned_state = {
+				add_manpower = 50000
+			}
+		}
+	}
+	focus = {
+		id = PAL_the_1956_palestinian_exodus
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = PAL_the_1955_palestinian_exodus
+		}
+		x = 84
+		y = 8
+		completion_reward = {
+			every_owned_state = {
+				add_manpower = 50000
+			}
+		}
+	}
+}

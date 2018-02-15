@@ -1,0 +1,195 @@
+ideas = {
+	political_advisor = {
+		generic_pan_arabism_demagogue = {
+			
+			allowed = {
+				OR = {
+					tag = EGY
+					tag = JOR
+					tag = SYR
+					tag = IRQ
+					tag = LEB
+					tag = YEM
+					tag = OMA
+					tag = TUN
+					tag = MOR
+					tag = ALG	
+					tag = LBA
+					tag = SUD
+					tag = DRY					
+				}	
+			}
+			
+			available = {
+
+				
+			}
+			
+			traits = { pan_arabist_revolutionary }
+	
+			on_add = {
+			}
+	
+			do_effect = {
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	political_advisor = {
+		generic_monarchist = {
+			
+			allowed = {
+				OR = {
+					tag = EGY
+					tag = JOR
+					tag = SYR
+					tag = IRQ
+					tag = TUN
+					tag = MOR
+					tag = ALG	
+					tag = LBA
+					tag = FRA
+					tag = WGR
+					tag = PER
+					tag = JAP
+					tag = ENG
+					tag = ITA
+					tag = FRA
+					tag = AUS
+					tag = HUN
+					tag = BUL
+					tag = KOR
+					tag = VIE
+					tag = LAO
+					tag = LOS
+					tag = CAM
+					tag = CMB
+					tag = MYR
+					tag = ALB
+					tag = ROM
+					tag = ETH
+				}	
+			}
+			
+			available = {
+
+				
+			}
+			
+			traits = { monarchist_advisor }
+	
+			on_add = {
+				country_event = political.29
+			}
+	
+			do_effect = {
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	political_advisor = {
+		generic_shia_cleric = {
+			
+			allowed = {
+				OR = {
+					tag = PER
+					tag = AZR
+					tag = AFG
+					tag = LEB
+					tag = YEM
+					tag = SYR
+					tag = IRQ
+					tag = DRY
+					tag = SAU
+				}	
+			}
+			
+			available = {
+
+				
+			}
+			
+			traits = { shia_islamist_advisor }
+	
+			on_add = {
+				country_event = shia_islamist.29
+			}
+	
+			do_effect = {
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	political_advisor = {
+		generic_sunni_cleric = {
+			
+			allowed = {
+				OR = {
+					tag = JOR
+					tag = AZR
+					tag = AFG
+					tag = EGY
+					tag = YEM
+					tag = SYR
+					tag = IRQ
+					tag = DRY
+					tag = SAU
+					tag = LBA
+					tag = TUN
+					tag = MOR
+					tag = INO
+					tag = INS
+					tag = PAK
+					tag = BAN
+					tag = PAK
+					tag = KAZ
+					tag = TRK
+					tag = ALB
+					tag = TUR
+					tag = ALG
+					tag = MAU
+					tag = GUI
+					tag = MLI
+					tag = NIG
+					tag = SUD
+					tag = SOR
+					tag = SEN
+					tag = BRK
+					tag = CHA
+					tag = MAU
+					tag = UZB
+					tag = TJK
+					tag = KRG
+					tag = TRK
+				}	
+			}
+			
+			available = {
+
+				
+			}
+			
+			traits = { islamist_advisor }
+	
+			on_add = {
+				country_event = islamist.29
+			}
+	
+			do_effect = {
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+}

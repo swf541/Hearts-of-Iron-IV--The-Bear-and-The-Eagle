@@ -1,0 +1,3153 @@
+focus_tree = {
+	id = persian_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = PER
+		}
+	}
+	default = no
+	focus = {
+		id = PER_urbanize_the_countryside
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		x = 0
+		y = 0
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					412 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+						}
+					413 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+						}
+					411 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PER_education_reform
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		x = 3
+		y = 0
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_ideas = PER_education_reform_focus
+				}
+
+	}
+	focus = {
+		id = PER_government_reform
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		x = 28
+		y = -1
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					add_political_power = 120
+				}
+
+	}
+	focus = {
+		id = PER_create_a_mic
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		x = 5
+		y = 0
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					custom_effect_tooltip = available_political_advisor
+					show_ideas_tooltip = PER_massoud_lajani
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 2
+							category = support_tech
+						}
+				}
+
+	}
+	focus = {
+		id = PER_revive_the_empire
+		icon = GFX_goal_generic_attack_allies
+		cost = 10.00
+		x = 12
+		y = 0
+			ai_will_do = {
+					factor = 1
+				}
+				available = {
+					OR = {
+						has_government = fascism
+						has_government = neutrality
+						has_government = monarchism
+						has_government = nationalist
+					}
+				}
+			completion_reward = {
+					add_political_power = 120
+				}
+
+	}
+	focus = {
+		id = PER_modernize_the_artesh
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10.00
+		x = 15
+		y = 0
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					custom_effect_tooltip = available_political_advisor
+					show_ideas_tooltip = PER_Hassan_Shirali
+					266 = {
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+							add_extra_state_shared_building_slots = 2
+						}
+					army_experience = 50
+				}
+
+	}
+	focus = {
+		id = PER_foundation_of_flight
+		icon = GFX_goal_generic_air_production
+		cost = 10.00
+		x = 19
+		y = 0
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					custom_effect_tooltip = available_political_advisor
+					show_ideas_tooltip = PER_Afshin_Ghademi
+					411 = {
+							add_building_construction = {
+									type = air_base
+									level = 1
+									instant_build = yes
+								}
+							add_extra_state_shared_building_slots = 1
+						}
+					412 = {
+							add_building_construction = {
+									type = air_base
+									level = 1
+									instant_build = yes
+								}
+							add_extra_state_shared_building_slots = 1
+						}
+					413 = {
+							add_building_construction = {
+									type = air_base
+									level = 1
+									instant_build = yes
+								}
+							add_extra_state_shared_building_slots = 1
+						}
+					419 = {
+							add_building_construction = {
+									type = air_base
+									level = 1
+									instant_build = yes
+								}
+							add_extra_state_shared_building_slots = 1
+						}
+					air_experience = 25
+				}
+
+	}
+	focus = {
+		id = PER_naval_expansion
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		x = 22
+		y = 0
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = PER_invincible_armada
+							uses = 2
+							bonus = 0.5
+							category = naval_doctrine
+						}
+					412 = {
+							add_building_construction = {
+									type = dockyard
+									level = 2
+									instant_build = yes
+								}
+							add_extra_state_shared_building_slots = 2
+						}
+					413 = {
+							add_building_construction = {
+									type = dockyard
+									level = 2
+									instant_build = yes
+								}
+							add_extra_state_shared_building_slots = 2
+						}
+					navy_experience = 50
+				}
+
+	}
+	focus = {
+		id = PER_the_israeli_question
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 5.00
+		x = 8
+		y = 0
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+	focus = {
+		id = PER_industrialize_the_north
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = PER_urbanize_the_countryside
+		}
+		x = 0
+		y = 1
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					266 = {
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+							add_extra_state_shared_building_slots = 1
+						}
+					416 = {
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+							add_extra_state_shared_building_slots = 1
+						}
+					420 = {
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+							add_extra_state_shared_building_slots = 1
+						}
+					419 = {
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+							add_extra_state_shared_building_slots = 1
+						}
+				}
+
+	}
+	focus = {
+		id = PER_industrialize_the_south
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = PER_industrialize_the_north
+		}
+		x = 0
+		y = 2
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					411 = {
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+							add_extra_state_shared_building_slots = 1
+						}
+					412 = {
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+							add_extra_state_shared_building_slots = 1
+						}
+					413 = {
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+							add_extra_state_shared_building_slots = 1
+						}
+					417 = {
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+							add_extra_state_shared_building_slots = 1
+						}
+				}
+
+	}
+	focus = {
+		id = PER_fortress_persia
+		icon = GFX_goal_generic_fortify_city
+		cost = 10.00
+		prerequisite = {
+			focus = PER_industrialize_the_south
+		}
+		x = 0
+		y = 4
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					custom_effect_tooltip = available_political_advisor
+					show_ideas_tooltip = PER_babak_jamshidi
+					416 = {
+							custom_effect_tooltip = PER_fortress_persia_forts
+							hidden_effect = {
+									add_building_construction = {
+											type = bunker
+											level = 2
+											province = 10351
+											instant_build = yes
+										}
+									add_building_construction = {
+											type = bunker
+											level = 2
+											province = 1521
+											instant_build = yes
+										}
+									add_building_construction = {
+											type = bunker
+											level = 2
+											province = 5029
+											instant_build = yes
+										}
+									add_building_construction = {
+											type = bunker
+											level = 2
+											province = 2000
+											instant_build = yes
+										}
+									add_building_construction = {
+											type = anti_air_building
+											level = 2
+											instant_build = yes
+										}
+								}
+						}
+					266 = {
+							custom_effect_tooltip = PER_fortress_persia_forts_6
+							hidden_effect = {
+									add_building_construction = {
+											type = bunker
+											level = 4
+											province = 7602
+											instant_build = yes
+										}
+									add_building_construction = {
+											type = anti_air_building
+											level = 2
+											instant_build = yes
+										}
+								}
+						}
+					420 = {
+							custom_effect_tooltip = PER_fortress_persia_forts_1
+							hidden_effect = {
+									add_building_construction = {
+											type = bunker
+											level = 2
+											province = 4901
+											instant_build = yes
+										}
+									add_building_construction = {
+											type = bunker
+											level = 2
+											province = 10454
+											instant_build = yes
+										}
+								}
+						}
+					419 = {
+							custom_effect_tooltip = PER_fortress_persia_forts_2
+							hidden_effect = {
+									add_building_construction = {
+											type = bunker
+											level = 2
+											province = 4825
+											instant_build = yes
+										}
+									add_building_construction = {
+											type = bunker
+											level = 2
+											province = 4755
+											instant_build = yes
+										}
+									add_building_construction = {
+											type = bunker
+											level = 2
+											province = 1636
+											instant_build = yes
+										}
+									add_building_construction = {
+											type = bunker
+											level = 2
+											province = 7604
+											instant_build = yes
+										}
+									add_building_construction = {
+											type = anti_air_building
+											level = 2
+											instant_build = yes
+										}
+								}
+						}
+					413 = {
+							custom_effect_tooltip = PER_fortress_persia_forts_3
+							hidden_effect = {
+									add_building_construction = {
+											type = bunker
+											level = 2
+											province = 7953
+											instant_build = yes
+										}
+									add_building_construction = {
+											type = bunker
+											level = 2
+											province = 5005
+											instant_build = yes
+										}
+									add_building_construction = {
+											type = coastal_bunker
+											level = 2
+											province = 5005
+											instant_build = yes
+										}
+									add_building_construction = {
+											type = coastal_bunker
+											level = 2
+											province = 5089
+											instant_build = yes
+										}
+								}
+						}
+					412 = {
+							custom_effect_tooltip = PER_fortress_persia_forts_4
+							hidden_effect = {
+									add_building_construction = {
+											type = coastal_bunker
+											level = 2
+											province = 10797
+											instant_build = yes
+										}
+									add_building_construction = {
+											type = coastal_bunker
+											level = 2
+											province = 12832
+											instant_build = yes
+										}
+									add_building_construction = {
+											type = coastal_bunker
+											level = 2
+											province = 4959
+											instant_build = yes
+										}
+									add_building_construction = {
+											type = coastal_bunker
+											level = 2
+											province = 7982
+											instant_build = yes
+										}
+								}
+						}
+					410 = {
+							custom_effect_tooltip = PER_fortress_persia_forts_5
+							hidden_effect = {
+									add_building_construction = {
+											type = bunker
+											level = 2
+											province = 2070
+											instant_build = yes
+										}
+									add_building_construction = {
+											type = bunker
+											level = 2
+											province = 10782
+											instant_build = yes
+										}
+									add_building_construction = {
+											type = bunker
+											level = 2
+											province = 13082
+											instant_build = yes
+										}
+									add_building_construction = {
+											type = bunker
+											level = 2
+											province = 4891
+											instant_build = yes
+										}
+									add_building_construction = {
+											type = coastal_bunker
+											level = 2
+											province = 4891
+											instant_build = yes
+										}
+									add_building_construction = {
+											type = coastal_bunker
+											level = 2
+											province = 1889
+											instant_build = yes
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PER_establish_tehran_university
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = PER_education_reform
+			focus = PER_industrialize_the_north
+		}
+		x = 2
+		y = 1
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					add_research_slot = 1
+					hidden_effect = {
+							country_event = {
+									id = persia.10
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PER_reform_the_judiciary
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 5.00
+		prerequisite = {
+			focus = PER_establish_tehran_university
+		}
+		x = 2
+		y = 2
+			ai_will_do = {
+					factor = 1
+				}
+			available = {
+					NOT = {
+							has_government = neutrality
+						}
+					has_army_manpower = {
+							size > 200000
+						}
+				}
+			completion_reward = {
+					country_event = {
+							id = persia.3
+						}
+					remove_ideas = PER_corrupt_bureaucracy_judiciary
+				}
+
+	}
+	focus = {
+		id = PER_extra_tech_slot
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = PER_industrialize_the_south
+			focus = PER_reform_the_judiciary
+		}
+		x = 1
+		y = 3
+			ai_will_do = {
+					factor = 1
+				}
+			available = {
+					num_of_factories > 40
+				}
+			completion_reward = {
+					add_research_slot = 1
+				}
+
+	}
+	focus = {
+		id = PER_rocketry
+		icon = GFX_focus_rocketry
+		cost = 10.00
+		prerequisite = {
+			focus = PER_reform_the_judiciary
+		}
+		mutually_exclusive = {
+			focus = PER_nuclear_effort
+		}
+		x = 2
+		y = 4
+			available = {
+
+}
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = PER_rocketry
+							bonus = 0.5
+							uses = 4
+							category = rocketry
+						}
+				}
+
+	}
+	focus = {
+		id = PER_nuclear_effort
+		icon = GFX_focus_wonderweapons
+		cost = 10.00
+		prerequisite = {
+			focus = PER_reform_the_judiciary
+		}
+		mutually_exclusive = {
+			focus = PER_rocketry
+		}
+		x = 4
+		y = 4
+			available = {
+
+}
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = PER_nuclear_effort
+							bonus = 0.5
+							uses = 2
+							category = nuclear
+						}
+					news_event = {
+							id = news.174
+						}
+				}
+
+	}
+	focus = {
+		id = PER_secret_weapons
+		text = secret_weapons
+		icon = GFX_goal_generic_secret_weapon
+		cost = 10.00
+		prerequisite = {
+			focus = PER_nuclear_effort
+			focus = PER_rocketry
+		}
+		x = 3
+		y = 5
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = secret_bonus
+							bonus = 0.5
+							uses = 2
+							category = electronics
+							category = rocketry
+							category = nuclear
+						}
+				}
+
+	}
+	focus = {
+		id = PER_modernized_telecommunications
+		icon = GFX_goal_generic_radar
+		cost = 20.00
+		prerequisite = {
+			focus = PER_extra_tech_slot
+		}
+		x = 1
+		y = 5
+			available = {
+					has_tech = radio_detection
+				}
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					266 = {
+							add_building_construction = {
+									type = radar_station
+									level = 1
+									instant_build = yes
+								}
+						}
+					419 = {
+							add_building_construction = {
+									type = radar_station
+									level = 1
+									instant_build = yes
+								}
+						}
+					412 = {
+							add_building_construction = {
+									type = radar_station
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PER_rebuild_herat
+		icon = GFX_goal_generic_construction
+		cost = 10.00
+		prerequisite = {
+			focus = PER_modernized_telecommunications
+		}
+		x = 3
+		y = 6
+			available = {
+					PER = {
+							controls_state = 415
+						}
+				}
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					415 = {
+							add_core_of = PER
+						}
+					267 = {
+							add_core_of = PER
+						}
+					415 = {
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 2
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+							add_extra_state_shared_building_slots = 4
+						}
+				}
+
+	}
+	focus = {
+		id = PER_urban_planning
+		icon = GFX_goal_generic_construction2
+		cost = 10.00
+		prerequisite = {
+			focus = PER_education_reform
+		}
+		x = 4
+		y = 1
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					add_ideas = PER_urban_planing_focus
+				}
+
+	}
+	focus = {
+		id = PER_rebuild_baghdad
+		icon = GFX_goal_generic_construction
+		cost = 10.00
+		prerequisite = {
+			focus = PER_rebuild_herat
+		}
+		x = 4
+		y = 7
+			available = {
+					PER = {
+							controls_state = 291
+						}
+				}
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					291 = {
+							add_core_of = PER
+						}
+					676 = {
+							add_core_of = PER
+						}
+					675 = {
+							add_core_of = PER
+						}
+					291 = {
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 2
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+							add_extra_state_shared_building_slots = 4
+						}
+				}
+
+	}
+	focus = {
+		id = PER_militarization_efforts
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = PER_create_a_mic
+		}
+		x = 5
+		y = 3
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					266 = {
+							add_building_construction = {
+									type = arms_factory
+									level = 3
+									instant_build = yes
+								}
+							add_extra_state_shared_building_slots = 3
+						}
+				}
+
+	}
+	focus = {
+		id = PER_militarization_efforts_2
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = PER_militarization_efforts
+		}
+		x = 5
+		y = 5
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					411 = {
+							add_building_construction = {
+									type = arms_factory
+									level = 3
+									instant_build = yes
+								}
+							add_extra_state_shared_building_slots = 3
+						}
+				}
+
+	}
+	focus = {
+		id = PER_form_savak
+		icon = GFX_goal_generic_wolf_pack
+		cost = 10.00
+		prerequisite = {
+			focus = PER_modernized_telecommunications
+		}
+		x = 5
+		y = 6
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					add_ideas = PER_form_savak_focus
+					add_tech_bonus = {
+							bonus = 0.5
+							uses = 1
+							technology = tech_military_police2
+							technology = tech_military_police3
+							technology = tech_military_police4
+						}
+				}
+
+	}
+	focus = {
+		id = PER_condemn_israel
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 10.00
+		prerequisite = {
+			focus = PER_the_israeli_question
+		}
+		mutually_exclusive = {
+			focus = PER_american_millitary_cooperation
+		}
+		x = 7
+		y = 2
+
+		completion_reward = {
+				ISR = {
+							add_opinion_modifier = {
+									target = PER
+									modifier = large_decrease
+								}
+						}
+					PER = {
+							add_opinion_modifier = {
+									target = ISR
+						modifier = large_decrease
+						}
+			}
+		}
+	}
+	focus = {
+		id = PER_align_with_arabs
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 5.00
+		prerequisite = {
+			focus = PER_condemn_israel
+		}
+		x = 7
+		y = 4
+		completion_reward = {
+				EGY = {
+							add_opinion_modifier = {
+									target = PER
+									modifier = large_increase
+								}
+						}
+					PER = {
+							add_opinion_modifier = {
+									target = EGY
+						modifier = large_increase
+						}
+			}
+				SAU = {
+							add_opinion_modifier = {
+									target = PER
+									modifier = large_increase
+								}
+						}
+				PER = {
+					add_opinion_modifier = {
+					target = SAU
+					modifier = large_increase
+				}
+			}
+				JOR = {
+							add_opinion_modifier = {
+									target = PER
+									modifier = large_increase
+								}
+						}
+				PER = {
+					add_opinion_modifier = {
+					target = JOR
+					modifier = large_increase
+				}
+			}
+				IRQ = {
+							add_opinion_modifier = {
+									target = PER
+									modifier = large_increase
+								}
+						}
+				PER = {
+					add_opinion_modifier = {
+					target = IRQ
+					modifier = large_increase
+				}
+			}
+				SYR = {
+							add_opinion_modifier = {
+									target = PER
+									modifier = large_increase
+								}
+						}
+				PER = {
+					add_opinion_modifier = {
+					target = SYR
+					modifier = large_increase
+				}
+			}
+		}
+	}
+	focus = {
+		id = PER_invest_in_synthetics
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10.00
+		prerequisite = {
+			focus = PER_modernized_telecommunications
+		}
+		x = 7
+		y = 6
+			available = {
+					has_tech = synth_oil_experiments
+				}
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					411 = {
+							add_building_construction = {
+									type = synthetic_refinery
+									level = 2
+									instant_build = yes
+								}
+							add_extra_state_shared_building_slots = 2
+						}
+					add_tech_bonus = {
+							name = PER_invest_in_synthetics
+							bonus = 0.5
+							uses = 1
+							category = synth_resources
+						}
+				}
+
+	}
+	focus = {
+		id = PER_recognize_israel
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 10.00
+		prerequisite = {
+			focus = PER_the_israeli_question
+		}
+		mutually_exclusive = {
+			focus = PER_american_millitary_cooperation
+		}
+		x = 9
+		y = 2
+		completion_reward = {
+				ISR = {
+							add_opinion_modifier = {
+									target = PER
+									modifier = small_increase
+								}
+						}
+					PER = {
+							add_opinion_modifier = {
+									target = ISR
+						modifier = small_increase
+						}
+			}
+		}
+
+	}
+	focus = {
+		id = PER_align_with_israel
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 5.00
+		prerequisite = {
+			focus = PER_recognize_israel
+		}
+		x = 9
+		y = 4
+		completion_reward = {
+				ISR = {
+							add_opinion_modifier = {
+									target = PER
+									modifier = large_increase
+								}
+						}
+					PER = {
+							add_opinion_modifier = {
+									target = ISR
+						modifier = large_increase
+						}
+			}
+		}
+	}
+	focus = {
+		id = PER_gulf_claims
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = PER_revive_the_empire
+		}
+		x = 11
+		y = 1
+			ai_will_do = {
+					factor = 1
+				}
+			bypass = {
+					NOT = {
+							country_exists = ENG
+						}
+					OR = {
+							has_war_with = ENG
+							is_in_faction_with = ENG
+							AND = {
+									NOT = {
+											656 = {
+													is_owned_by = ENG
+												}
+										}
+									NOT = {
+											658 = {
+													is_owned_by = ENG
+												}
+										}
+								}
+						}
+				}
+			completion_reward = {
+					create_wargoal = {
+							target = SAU
+							type = take_state_focus
+							generator = { 292 }
+						}
+					add_state_core = 656
+					add_state_core = 658
+					ENG = {
+							add_opinion_modifier = {
+									target = PER
+									modifier = PER_claimed_the_gulf
+								}
+						}
+					SAU = {
+							add_opinion_modifier = {
+									target = PER
+									modifier = PER_claimed_the_gulf
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PER_claim_iraq
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = PER_revive_the_empire
+		}
+		x = 11
+		y = 3
+			ai_will_do = {
+					factor = 1
+				}
+			bypass = {
+					NOT = {
+							country_exists = IRQ
+						}
+					291 = {
+							is_owned_by = PER
+						}
+					676 = {
+							is_owned_by = PER
+						}
+					675 = {
+							is_owned_by = PER
+						}
+				}
+			completion_reward = {
+					create_wargoal = {
+							target = IRQ
+							type = take_state_focus
+							generator = { 291 }
+						}
+					IRQ = {
+							add_opinion_modifier = {
+									target = PER
+									modifier = PER_claimed_iraq
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PER_claim_turkey
+		icon = GFX_goal_generic_demand_territory
+		cost = 5.00
+		prerequisite = {
+			focus = PER_claim_iraq
+		}
+		x = 11
+		y = 6
+			ai_will_do = {
+					factor = 1
+				}
+			available = {
+					PER = {
+							controls_state = 291
+						}
+				}
+			bypass = {
+					NOT = {
+							country_exists = TUR
+						}
+					49 = {
+							is_owned_by = PER
+						}
+				}
+			completion_reward = {
+					create_wargoal = {
+							target = TUR
+							type = take_state_focus
+							generator = { 49 }
+						}
+					TUR = {
+							add_opinion_modifier = {
+									target = PER
+									modifier = PER_claimed_turkey
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PER_rebuild_the_royal_road
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = PER_claim_turkey
+		}
+		x = 11
+		y = 8
+			ai_will_do = {
+					factor = 10
+				}
+			available = {
+					PER = {
+							controls_state = 417
+							controls_state = 420
+							controls_state = 419
+							controls_state = 352
+							controls_state = 353
+							controls_state = 349
+							controls_state = 348
+							controls_state = 49
+							controls_state = 340
+						}
+				}
+			completion_reward = {
+					417 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 3
+									instant_build = yes
+								}
+						}
+					420 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 3
+									instant_build = yes
+								}
+						}
+					419 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 3
+									instant_build = yes
+								}
+						}
+					352 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 4
+									instant_build = yes
+								}
+						}
+					353 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 4
+									instant_build = yes
+								}
+						}
+					349 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 4
+									instant_build = yes
+								}
+						}
+					348 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 4
+									instant_build = yes
+								}
+						}
+					49 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 4
+									instant_build = yes
+								}
+						}
+					340 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 4
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PER_claim_afghanistan
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = PER_revive_the_empire
+		}
+		x = 13
+		y = 3
+			ai_will_do = {
+					factor = 1
+				}
+			bypass = {
+					NOT = {
+							country_exists = AFG
+						}
+					415 = {
+							is_owned_by = PER
+						}
+					267 = {
+							is_owned_by = PER
+						}
+				}
+			completion_reward = {
+					create_wargoal = {
+							target = AFG
+							type = take_state_focus
+							generator = { 267 }
+						}
+					AFG = {
+							add_opinion_modifier = {
+									target = PER
+									modifier = PER_claimed_afghanistan
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PER_claim_syria
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 5.00
+		prerequisite = {
+			focus = PER_claim_iraq
+		}
+		prerequisite = {
+			focus = PER_claim_afghanistan
+		}
+		x = 12
+		y = 4
+			available = {
+					NOT = {
+							has_government = democratic
+						}
+					has_army_manpower = {
+							size > 225000
+						}
+					PER = {
+							controls_state = 291
+						}
+				}
+			ai_will_do = {
+					factor = 10
+				}
+			bypass = {
+					680 = {
+							is_owned_by = PER
+						}
+					677 = {
+							is_owned_by = PER
+						}
+					554 = {
+							is_owned_by = PER
+						}
+					553 = {
+							is_owned_by = PER
+						}
+				}
+			completion_reward = {
+					if = {
+							limit = {
+									FRA = {
+											owns_state = 554
+										}
+								}
+							FRA = {
+									country_event = {
+											id = persia.1
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PER_revoke_gullistan
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 5.00
+		prerequisite = {
+			focus = PER_claim_iraq
+		}
+		prerequisite = {
+			focus = PER_claim_afghanistan
+		}
+		x = 12
+		y = 5
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					create_wargoal = {
+							target = SOV
+							type = take_state_focus
+							generator = { 229 }
+						}
+					add_state_core = 230
+					add_state_core = 231
+					add_state_core = 584
+					SOV = {
+							add_opinion_modifier = {
+									target = PER
+									modifier = PER_revoked_gullistan
+								}
+						}
+					custom_effect_tooltip = available_political_advisor
+					show_ideas_tooltip = PER_Rostam_Tehrani
+				}
+
+	}
+	focus = {
+		id = PER_road_to_jerusalem
+		icon = GFX_goal_generic_demand_territory
+		cost = 5.00
+		prerequisite = {
+			focus = PER_claim_afghanistan
+		}
+		x = 13
+		y = 6
+			ai_will_do = {
+					factor = 1
+				}
+			available = {
+					PER = {
+							controls_state = 267
+						}
+				}
+			bypass = {
+					NOT = {
+							country_exists = ENG
+						}
+					454 = {
+							is_owned_by = PER
+						}
+				}
+			completion_reward = {
+					create_wargoal = {
+							target = ENG
+							type = take_state_focus
+							generator = { 454 }
+						}
+					ENG = {
+							add_opinion_modifier = {
+									target = PER
+									modifier = PER_claimed_the_holy_land
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PER_the_saoshyant
+		icon = GFX_goal_generic_territory_or_war
+		cost = 10.00
+		prerequisite = {
+			focus = PER_road_to_jerusalem
+		}
+		prerequisite = {
+			focus = PER_claim_turkey
+		}
+		x = 12
+		y = 7
+			ai_will_do = {
+					factor = 1
+				}
+			available = {
+					PER = {
+							controls_state = 49
+							controls_state = 291
+							controls_state = 267
+						}
+				}
+			completion_reward = {
+					add_ideas = PER_awoken_generation
+					add_national_unity = 0.1
+				}
+
+	}
+	focus = {
+		id = PER_mass_forces
+		icon = GFX_goal_demand_sudetenland
+		cost = 10.00
+		prerequisite = {
+			focus = PER_modernize_the_artesh
+		}
+		mutually_exclusive = {
+			focus = PER_elite_forces
+		}
+		x = 14
+		y = 1
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					add_ideas = PER_mass_forces_focus
+					custom_effect_tooltip = available_designer
+					show_ideas_tooltip = PER_Pars_Khodro
+				}
+
+	}
+	focus = {
+		id = PER_standardized_equipment
+		icon = GFX_goal_generic_military_sphere
+		cost = 10.00
+		prerequisite = {
+			focus = PER_mass_forces
+		}
+		x = 14
+		y = 2
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					custom_effect_tooltip = available_political_advisor
+					show_ideas_tooltip = PER_Vandad_Rahbar
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 1
+							category = artillery
+						}
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 1
+							category = infantry_weapons
+						}
+				}
+
+	}
+	focus = {
+		id = PER_armor_effort
+		icon = GFX_goal_generic_army_tanks
+		cost = 10.00
+		prerequisite = {
+			focus = PER_standardized_equipment
+		}
+		x = 14
+		y = 4
+			completion_reward = {
+					custom_effect_tooltip = available_political_advisor
+					show_ideas_tooltip = PER_ramin_khorramdin
+					add_tech_bonus = {
+							name = armor_bonus
+							bonus = 0.5
+							uses = 1
+							category = cat_light_armor
+						}
+					add_tech_bonus = {
+							name = armor_bonus
+							bonus = 0.5
+							uses = 1
+							category = cat_medium_armor
+						}
+				}
+
+	}
+	focus = {
+		id = PER_doctrine_of_holy_defense
+		icon = GFX_goal_generic_defence
+		cost = 10.00
+		prerequisite = {
+			focus = PER_armor_effort
+		}
+		x = 14
+		y = 5
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					add_ideas = PER_doctrine_of_holy_defense_focus
+				}
+
+	}
+	focus = {
+		id = PER_elite_forces
+		icon = GFX_goal_generic_cavalry
+		cost = 10.00
+		prerequisite = {
+			focus = PER_modernize_the_artesh
+		}
+		mutually_exclusive = {
+			focus = PER_mass_forces
+		}
+		x = 16
+		y = 1
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					add_ideas = PER_elite_forces_focus
+					custom_effect_tooltip = available_designer
+					show_ideas_tooltip = PER_Iran_Khodro
+				}
+
+	}
+	focus = {
+		id = PER_mechanized_focus
+		icon = GFX_goal_generic_army_motorized
+		cost = 10.00
+		prerequisite = {
+			focus = PER_elite_forces
+		}
+		x = 16
+		y = 2
+			completion_reward = {
+					custom_effect_tooltip = available_political_advisor
+					show_ideas_tooltip = PER_derafsh_ghorbani
+					add_tech_bonus = {
+							name = motorized_bonus
+							bonus = 0.5
+							uses = 1
+							category = cat_mechanized_equipment
+						}
+					add_tech_bonus = {
+							name = motorized_bonus
+							bonus = 0.5
+							uses = 1
+							category = motorized_equipment
+						}
+				}
+
+	}
+	focus = {
+		id = PER_cataphract_battalions
+		icon = GFX_goal_generic_army_tanks
+		cost = 10.00
+		prerequisite = {
+			focus = PER_mechanized_focus
+		}
+		x = 16
+		y = 4
+			completion_reward = {
+					custom_effect_tooltip = available_political_advisor
+					show_ideas_tooltip = PER_Ebrahim_Parsi
+					add_tech_bonus = {
+							name = armor_bonus
+							bonus = 0.5
+							uses = 2
+							category = cat_heavy_armor
+						}
+				}
+
+	}
+	focus = {
+		id = PER_qizilbash_heritage
+		icon = GFX_goal_generic_special_forces
+		cost = 10.00
+		prerequisite = {
+			focus = PER_cataphract_battalions
+		}
+		x = 16
+		y = 5
+			completion_reward = {
+					add_ideas = PER_qizilbash_heritage_focus
+				}
+
+	}
+	focus = {
+		id = PER_immortal_corps
+		icon = GFX_goal_generic_build_tank
+		cost = 10.00
+		prerequisite = {
+			focus = PER_qizilbash_heritage
+			focus = PER_doctrine_of_holy_defense
+		}
+		x = 15
+		y = 7
+			completion_reward = {
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.5
+							uses = 4
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = PER_fighter_command
+		icon = GFX_goal_generic_air_fighter
+		cost = 10.00
+		prerequisite = {
+			focus = PER_foundation_of_flight
+		}
+		mutually_exclusive = {
+			focus = PER_bomber_command
+		}
+		x = 18
+		y = 1
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = fighter_command_focus
+							bonus = 0.5
+							uses = 2
+							category = light_fighter
+						}
+				}
+
+	}
+	focus = {
+		id = PER_cas_effort
+		icon = GFX_goal_generic_CAS
+		cost = 10.00
+		prerequisite = {
+			focus = PER_fighter_command
+		}
+		x = 18
+		y = 2
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					custom_effect_tooltip = available_political_advisor
+					show_ideas_tooltip = PER_omid_jahanshah
+					add_tech_bonus = {
+							name = PER_cas_effort
+							bonus = 0.5
+							uses = 1
+							category = cas_bomber
+						}
+				}
+
+	}
+	focus = {
+		id = PER_takavaran
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 10.00
+		prerequisite = {
+			focus = PER_qizilbash_heritage
+		}
+		prerequisite = {
+			focus = PER_cas_effort
+		}
+		x = 17
+		y = 6
+			completion_reward = {
+					add_tech_bonus = {
+							name = PER_takavaran
+							bonus = 0.5
+							uses = 2
+							category = tp_tech
+						}
+					add_tech_bonus = {
+							name = special_bonus
+							bonus = 0.5
+							uses = 1
+							technology = paratroopers2
+							technology = paratroopers3
+						}
+					add_tech_bonus = {
+							name = special_bonus
+							bonus = 0.5
+							uses = 1
+							technology = marines2
+							technology = marines3
+						}
+				}
+
+	}
+	focus = {
+		id = PER_bomber_command
+		icon = GFX_goal_generic_air_bomber
+		cost = 10.00
+		prerequisite = {
+			focus = PER_foundation_of_flight
+		}
+		mutually_exclusive = {
+			focus = PER_fighter_command
+		}
+		x = 20
+		y = 1
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = PER_bomber_command
+							bonus = 0.5
+							uses = 2
+							category = heavy_air
+						}
+				}
+
+	}
+	focus = {
+		id = PER_strategic_bombing
+		icon = GFX_goal_generic_air_naval_bomber
+		cost = 10.00
+		prerequisite = {
+			focus = PER_bomber_command
+		}
+		x = 20
+		y = 2
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					custom_effect_tooltip = available_political_advisor
+					show_ideas_tooltip = PER_Esmail_Maliki
+					add_tech_bonus = {
+							name = PER_strategic_bombing
+							bonus = 0.5
+							uses = 1
+							category = tactical_bomber
+						}
+					add_tech_bonus = {
+							name = USA_bureau_of_aeronautics
+							bonus = 0.5
+							uses = 2
+							category = naval_bomber
+						}
+				}
+
+	}
+	focus = {
+		id = PER_air_innovations
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10.00
+		prerequisite = {
+			focus = PER_strategic_bombing
+			focus = PER_cas_effort
+		}
+		x = 19
+		y = 3
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.5
+							uses = 4
+							category = air_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = PER_submarine_effort
+		icon = GFX_goal_generic_navy_submarine
+		cost = 10.00
+		prerequisite = {
+			focus = PER_naval_expansion
+		}
+		mutually_exclusive = {
+			focus = PER_destroyer_focus
+		}
+		x = 21
+		y = 3
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					custom_effect_tooltip = available_political_advisor
+					show_ideas_tooltip = PER_arash_khadem
+					add_tech_bonus = {
+							name = PER_submarine_effort
+							bonus = 0.5
+							uses = 2
+							technology = basic_submarine
+							technology = improved_submarine
+							technology = advanced_submarine
+						}
+				}
+
+	}
+	focus = {
+		id = PER_parthian_tactics
+		icon = GFX_goal_generic_occupy_start_war
+		cost = 10.00
+		prerequisite = {
+			focus = PER_submarine_effort
+		}
+		x = 21
+		y = 4
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = PER_parthian_tactics
+							bonus = 0.5
+							uses = 3
+							technology = submarine_operations
+							technology = undersea_blockade
+							technology = convoy_interdiction
+							technology = submarine_offensive
+						}
+				}
+
+	}
+	focus = {
+		id = PER_destroyer_focus
+		icon = GFX_goal_generic_navy_anti_submarine
+		cost = 10.00
+		prerequisite = {
+			focus = PER_naval_expansion
+		}
+		mutually_exclusive = {
+			focus = PER_submarine_effort
+		}
+		x = 23
+		y = 3
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = dd_bonus
+							bonus = 0.5
+							uses = 2
+							category = dd_tech
+						}
+				}
+
+	}
+	focus = {
+		id = PER_cruiser_effort
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 10.00
+		prerequisite = {
+			focus = PER_destroyer_focus
+		}
+		x = 23
+		y = 4
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = cr_bonus
+							bonus = 0.5
+							uses = 1
+							category = cl_tech
+						}
+					add_tech_bonus = {
+							name = cr_bonus
+							bonus = 0.5
+							uses = 1
+							category = ca_tech
+						}
+				}
+
+	}
+	focus = {
+		id = PER_naval_expansion_2
+		icon = GFX_goal_generic_build_navy
+		cost = 10.00
+		prerequisite = {
+			focus = PER_cruiser_effort
+			focus = PER_parthian_tactics
+		}
+		x = 22
+		y = 5
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = PER_invincible_armada
+							uses = 2
+							bonus = 0.5
+							category = naval_doctrine
+						}
+					412 = {
+							add_building_construction = {
+									type = dockyard
+									level = 2
+									instant_build = yes
+								}
+							add_extra_state_shared_building_slots = 2
+						}
+					413 = {
+							add_building_construction = {
+									type = dockyard
+									level = 2
+									instant_build = yes
+								}
+							add_extra_state_shared_building_slots = 2
+						}
+					navy_experience = 100
+				}
+
+	}
+	focus = {
+		id = PER_carrier_focus
+		icon = GFX_goal_generic_navy_carrier
+		cost = 10.00
+		prerequisite = {
+			focus = PER_naval_expansion_2
+		}
+		mutually_exclusive = {
+			focus = PER_battleship_focus
+		}
+		x = 21
+		y = 6
+			ai_will_do = {
+					factor = 0.25
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = cv_bonus
+							bonus = 0.50
+							uses = 1
+							category = cv_tech
+						}
+				}
+
+	}
+	focus = {
+		id = PER_battleship_focus
+		icon = GFX_goal_generic_navy_battleship
+		cost = 10.00
+		prerequisite = {
+			focus = PER_naval_expansion_2
+		}
+		mutually_exclusive = {
+			focus = PER_carrier_focus
+		}
+		x = 23
+		y = 6
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = bb_bonus
+							bonus = 0.50
+							uses = 1
+							category = bb_tech
+						}
+				}
+
+	}
+	focus = {
+		id = PER_Mosaddegh_prime_minister
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = PER_government_reform
+		}
+		x = 28
+		y = 1
+		completion_reward = {
+			add_political_power = 120
+			set_politics = { ruling_party = socialist elections_allowed = yes }	
+		}
+	}
+	focus = {
+		id = PER_nationalize_oil
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = PER_Mosaddegh_prime_minister
+		}
+		mutually_exclusive = {
+			focus = PER_persian_corridor
+		}
+		x = 27
+		y = 2
+			available = {
+					has_completed_focus = PER_reform_the_judiciary
+					PER = {
+							controls_state = 413
+						}
+				}
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					if = {
+							limit = {
+									NOT = {
+											has_idea = neutrality_idea
+										}
+								}
+							set_rule = {
+									can_create_factions = yes
+								}
+						}
+					remove_ideas = PER_anglo_iranian_oil_company
+					custom_effect_tooltip = available_designer
+					show_ideas_tooltip = PER_Sherkat-e_meli-ye_Naft-e_Iran
+					ENG = {
+							country_event = {
+									id = persia.11
+								}
+						}
+					ENG = {
+							add_opinion_modifier = {
+									target = PER
+									modifier = PER_nationalized_oil
+								}
+						}
+					add_resource = {
+							type = oil
+							amount = 40
+							state = 413
+						}
+				}
+
+	}
+	focus = {
+		id = PER_operation_ajax
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = PER_nationalize_oil
+		}
+		x = 27
+		y = 3
+			ai_will_do = {
+					factor = 1
+				}
+			bypass = {
+				has_global_flag = ajax
+				}
+			completion_reward = {
+					set_politics = { ruling_party = monarchism elections_allowed = no }	
+				}
+
+	}
+	focus = {
+		id = PER_a_new_path
+		icon = GFX_focus_SAF_colonialist_crusade
+		cost = 10.00
+		prerequisite = {
+			focus = PER_operation_ajax
+		}
+		mutually_exclusive = {
+			focus = PER_democratic_focus
+		}
+		x = 25
+		y = 4
+			available = {
+					OR = {
+							has_government = monarchism
+							has_government = neutrality
+						}
+				}
+			completion_reward = {
+					add_ideas = monarchist_influence
+				}
+
+	}
+	focus = {
+		id = PER_communism_focus
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = PER_operation_ajax
+		}
+		mutually_exclusive = {
+			focus = PER_a_new_path
+		}
+		x = 28
+		y = 4
+			available = {
+					OR = {
+							has_government = communism
+							has_government = neutrality
+						}
+				}
+			ai_will_do = {
+					factor = 5
+					modifier = {
+							factor = 2
+							any_neighbor_country = {
+									is_major = yes
+									has_government = communism
+								}
+						}
+				}
+			completion_reward = {
+					add_ideas = internationalism
+				}
+
+	}
+	focus = {
+		id = PER_support_communist_cause
+		icon = GFX_goal_generic_military_deal
+		cost = 10.00
+		prerequisite = {
+			focus = PER_communism_focus
+		}
+		x = 28
+		y = 5
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					set_rule = {
+							can_send_volunteers = yes
+						}
+					add_ideas = paramilitarism_focus
+					if = {
+							limit = {
+									has_idea = neutrality_idea
+								}
+							remove_ideas = neutrality_idea
+						}
+				}
+
+	}
+	focus = {
+		id = PER_soviet_cooperation
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 10.00
+		prerequisite = {
+			focus = PER_support_communist_cause
+		}
+		mutually_exclusive = {
+			focus = PER_british_millitary_cooperation
+			focus = PER_american_millitary_cooperation
+			focus = PER_prc_co_operation
+		}
+		x = 28
+		y = 6
+			available = {
+					NOT = {
+							has_war_with = SOV
+						}
+					is_in_faction_with = SOV
+				}
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_ideas = PER_soviet_cooperation_focus
+				}
+
+	}
+	focus = {
+		id = PER_request_azeribajain
+		icon = GFX_goal_generic_territory_or_war
+		cost = 10.00
+		prerequisite = {
+			focus = PER_soviet_cooperation
+		}
+		x = 28
+		y = 7
+		
+		completion_reward = {
+			#Azerbaijian Event
+		}
+	}
+	focus = {
+		id = PER_soviet_oil_development
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = PER_request_azeribajain
+		}
+		mutually_exclusive = {
+			focus = PER_a_new_path
+		}
+		x = 28
+		y = 8
+			completion_reward = {
+					add_resource = {
+							type = oil
+							amount = 10
+							state = 413
+						}
+				}
+
+	}
+	focus = {
+		id = PER_persian_corridor
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 5.00
+		prerequisite = {
+			focus = PER_Mosaddegh_prime_minister
+		}
+		mutually_exclusive = {
+			focus = PER_nationalize_oil
+		}
+		x = 29
+		y = 2
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					413 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 5
+									instant_build = yes
+								}
+						}
+					421 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 5
+									instant_build = yes
+								}
+						}
+					419 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 5
+									instant_build = yes
+								}
+						}
+					420 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 5
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = PER_figure_head_monarchy
+		icon = GFX_focus_generic_home_defense
+		cost = 10.00
+		prerequisite = {
+			focus = PER_persian_corridor
+		}
+		x = 29
+		y = 3
+		completion_reward = {
+			add_national_unity = 0.10
+		}
+	}
+	focus = {
+		id = PER_democratic_focus
+		icon = GFX_goal_support_democracy
+		cost = 5.00
+		prerequisite = {
+			focus = PER_figure_head_monarchy
+		}
+		mutually_exclusive = {
+			focus = PER_a_new_path
+			focus = PER_communism_focus
+		}
+		x = 30
+		y = 4
+			available = {
+					OR = {
+							has_government = democratic
+							has_government = neutrality
+						}
+				}
+			ai_will_do = {
+					factor = 95
+					modifier = {
+							factor = 0.1
+							any_neighbor_country = {
+									is_major = yes
+									OR = {
+											has_government = communism
+											has_government = fascism
+										}
+								}
+							NOT = {
+									any_neighbor_country = {
+											is_major = yes
+											has_government = democratic
+										}
+								}
+						}
+				}
+			completion_reward = {
+					add_ideas = { PER_support_the_centre_focus }
+				}
+
+	}
+	focus = {
+		id = PER_foreign_expeditions
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 5.00
+		prerequisite = {
+			focus = PER_democratic_focus
+		}
+		x = 30
+		y = 5
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					set_rule = {
+							can_send_volunteers = yes
+						}
+					add_ideas = foreign_expeditions_focus
+					add_political_power = 300
+					if = {
+							limit = {
+									has_idea = neutrality_idea
+								}
+							remove_ideas = neutrality_idea
+						}
+				}
+
+	}
+	focus = {
+		id = PER_british_millitary_cooperation
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 10.00
+		prerequisite = {
+			focus = PER_foreign_expeditions
+		}
+		mutually_exclusive = {
+			focus = PER_soviet_cooperation
+			focus = PER_prc_co_operation
+		}
+		x = 32
+		y = 6
+			available = {
+					NOT = {
+							has_war_with = GER
+						}
+					is_in_faction_with = GER
+				}
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_ideas = PER_german_millitary_cooperation_focus
+				}
+
+	}
+	focus = {
+		id = PER_request_bahrein
+		icon = GFX_goal_generic_territory_or_war
+		cost = 10.00
+		prerequisite = {
+			focus = PER_british_millitary_cooperation
+		}
+		x = 31
+		y = 7
+		completion_reward = {
+			#Gulf States Event
+		}
+	}
+	focus = {
+		id = PER_liberate_iraqi_shias
+		icon = GFX_goal_support_democracy
+		cost = 5.00
+		prerequisite = {
+			focus = PER_british_millitary_cooperation
+		}
+		mutually_exclusive = {
+			focus = PER_a_new_path
+			focus = PER_communism_focus
+		}
+		x = 32
+		y = 8
+			completion_reward = {
+					create_wargoal = {
+							target = IRQ
+							type = take_state_focus
+							generator = { 291 }
+						}
+					IRQ = {
+							add_opinion_modifier = {
+									target = PER
+									modifier = PER_claimed_iraq
+								}
+						}
+				}
+	}
+	focus = {
+		id = PER_request_kuwait
+		icon = GFX_goal_generic_territory_or_war
+		cost = 10.00
+		prerequisite = {
+			focus = PER_british_millitary_cooperation
+		}
+		x = 33
+		y = 7
+		completion_reward = {
+			#Kuwait Event
+		}
+	}
+	focus = {
+		id = PER_prc_co_operation
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 10.00
+		prerequisite = {
+			focus = PER_support_communist_cause
+		}
+		mutually_exclusive = {
+			focus = PER_soviet_cooperation
+			focus = PER_american_millitary_cooperation
+			focus = PER_soviet_cooperation
+			focus = PER_british_millitary_cooperation
+			focus = PER_american_millitary_cooperation
+		}
+		x = 36
+		y = 6
+			available = {
+					NOT = {
+							has_war_with = PRC
+						}
+					is_in_faction_with = PRC
+				}
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					if = {
+							limit = {
+									NOT = {
+											has_idea = chinese_advisors
+										}
+								}
+							add_ideas = chinese_advisors
+						}
+					add_political_power = 150
+				}
+
+	}
+	focus = {
+		id = PER_cultural_revolution
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = PER_prc_co_operation
+		}
+		x = 36
+		y = 7
+		
+		completion_reward = {
+			add_ideas = PRC_cultural_revolution
+		}
+
+	}
+	focus = {
+		id = PER_maoist_tactics
+		icon = GFX_goal_generic_territory_or_war
+		cost = 10.00
+		prerequisite = {
+			focus = PER_cultural_revolution
+		}
+		x = 36
+		y = 8
+			completion_reward = {
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.5
+							uses = 4
+							category = land_doctrine
+						}
+				}
+	}
+	focus = {
+		id = PER_industrial_development
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = PER_maoist_tactics
+			focus = PER_soviet_oil_development
+		}
+		x = 32
+		y = 9
+			available = {
+					OR = {
+							has_government = communism
+							has_government = neutrality
+						}
+				}
+			ai_will_do = {
+					factor = 5
+					modifier = {
+							factor = 2
+							any_neighbor_country = {
+									is_major = yes
+									has_government = communism
+								}
+						}
+				}
+			completion_reward = {
+					add_ideas = internationalism
+				}
+
+	}
+	focus = {
+		id = PER_foreign_reinforcements
+		icon = GFX_goal_generic_position_armies
+		cost = 5.00
+		prerequisite = {
+			focus = PER_foreign_expeditions
+		}
+		x = 39
+		y = 6
+			available = {
+					NOT = {
+							has_war_with = ENG
+						}
+					is_in_faction_with = ENG
+				}
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					custom_effect_tooltip = PER_foreign_reinforcements_tt
+					hidden_effect = {
+							load_oob = PER_foreign_reinforcements
+						}
+				}
+
+	}
+	focus = {
+		id = PER_extra_tech_slot_2
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = PER_modernized_telecommunications
+		}
+		x = 1
+		y = 6
+			available = {
+					num_of_factories > 100
+				}
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					add_research_slot = 1
+				}
+
+	}
+	focus = {
+		id = PER_search_for_steel
+		icon = GFX_goal_generic_production
+		cost = 10.00
+		prerequisite = {
+			focus = PER_extra_tech_slot_2
+		}
+		x = 0
+		y = 7
+			available = {
+					PER = {
+							controls_state = 411
+							controls_state = 420
+							controls_state = 417
+							controls_state = 416
+						}
+					num_of_factories > 110
+					has_tech = construction3
+					has_tech = advanced_machine_tools
+				}
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					add_resource = {
+							type = steel
+							amount = 12
+							state = 411
+						}
+					add_resource = {
+							type = steel
+							amount = 12
+							state = 420
+						}
+					add_resource = {
+							type = steel
+							amount = 12
+							state = 417
+						}
+					add_resource = {
+							type = steel
+							amount = 12
+							state = 416
+						}
+				}
+
+	}
+	focus = {
+		id = PER_develop_saudi_oil_fields
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10.00
+		prerequisite = {
+			focus = PER_extra_tech_slot_2
+		}
+		x = 2
+		y = 7
+			available = {
+					PER = {
+							controls_state = 292
+						}
+				}
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					add_resource = {
+							type = oil
+							amount = 40
+							state = 292
+						}
+				}
+
+	}
+	focus = {
+		id = PER_support_nationalist_cause
+		icon = GFX_goal_generic_military_deal
+		cost = 10.00
+		prerequisite = {
+			focus = PER_a_new_path
+		}
+		x = 25
+		y = 5
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					set_rule = {
+							can_send_volunteers = yes
+						}
+					add_ideas = military_youth_focus
+					if = {
+							limit = {
+									has_idea = neutrality_idea
+								}
+							remove_ideas = neutrality_idea
+						}
+				}
+
+	}
+	focus = {
+		id = PER_spread_communist_propaganda
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = PER_five_year_plan
+		}
+		x = 30
+		y = 12
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					AFG = { add_ideas = internationalism }
+					SAU = { add_ideas = internationalism }
+					IRQ = { add_ideas = internationalism }
+					PAK = { add_ideas = internationalism }
+				}
+	}
+	focus = {
+		id = PER_technology_sharing
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = PER_foreign_expeditions
+		}
+		x = 42
+		y = 6
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = PER_technology_sharing
+							bonus = 0.5
+							uses = 1
+							category = industry
+						}
+					add_tech_bonus = {
+							name = PER_technology_sharing
+							bonus = 0.5
+							uses = 1
+							category = electronics
+						}
+				}
+
+	}
+	focus = {
+		id = PER_revised_deal
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10.00
+		prerequisite = {
+			focus = PER_technology_sharing
+		}
+		prerequisite = {
+			focus = PER_technology_sharing
+		}
+		x = 42
+		y = 7
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					remove_ideas = PER_anglo_iranian_oil_company
+					add_ideas = PER_revised_ai_oil_company
+					add_resource = {
+							type = oil
+							amount = 10
+							state = 413
+						}
+				}
+
+	}
+	focus = {
+		id = PER_jet_effort
+		icon = GFX_goal_generic_air_fighter2
+		cost = 10.00
+		prerequisite = {
+			focus = PER_air_innovations
+		}
+		x = 19
+		y = 4
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = PER_jet_effort
+							bonus = 0.5
+							uses = 4
+							category = jet_technology
+						}
+				}
+
+	}
+	focus = {
+		id = PER_american_millitary_cooperation
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 10.00
+		prerequisite = {
+			focus = PER_support_nationalist_cause
+		}
+		mutually_exclusive = {
+			focus = PER_soviet_cooperation
+			focus = PER_soviet_cooperation
+			focus = PER_prc_co_operation
+		}
+		x = 25
+		y = 6
+			available = {
+					NOT = {
+							has_war_with = GER
+						}
+					is_in_faction_with = GER
+				}
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_ideas = american_advisors
+				}
+
+	}
+	focus = {
+		id = PER_authoritarianism
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10.00
+		prerequisite = {
+			focus = PER_american_millitary_cooperation
+		}
+		x = 25
+		y = 7
+		completion_reward = {
+			add_ideas = PER_authoritarianism
+		}
+	}
+	focus = {
+		id = PER_crush_liberal_dissent
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = PER_authoritarianism
+		}
+		x = 25
+		y = 8
+
+			completion_reward = {
+				add_ideas = anti_democracy_drift
+			}
+
+	}
+	focus = {
+		id = PER_emphasize_traditional_values
+		icon = GFX_focus_SAF_colonialist_crusade
+		cost = 10.00
+		prerequisite = {
+			focus = PER_crush_liberal_dissent
+		}
+		mutually_exclusive = {
+			focus = PER_emphasis_on_urban_culture
+		}
+		x = 24
+		y = 9
+			completion_reward = {
+					add_ideas = PER_nationalism_focus
+				}
+
+	}
+	focus = {
+		id = PER_emphasis_on_urban_culture
+		icon = GFX_focus_generic_home_defense
+		cost = 10.00
+		prerequisite = {
+			focus = PER_crush_liberal_dissent
+			focus = PER_british_millitary_cooperation
+		}
+		mutually_exclusive = {
+			focus = PER_emphasize_traditional_values
+		}
+		x = 26
+		y = 9
+		completion_reward = {
+			add_ideas = urban_culture
+		}
+	}
+	focus = {
+		id = PER_join_nato
+		icon = GFX_goal_support_democracy
+		cost = 5.00
+		prerequisite = {
+			focus = PER_embrace_capitalism
+		}
+		x = 25
+		y = 12
+		completion_reward = {
+			USA = { add_to_faction = PER }
+		}
+	}
+	focus = {
+		id = PER_promtoe_shia_religion
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = PER_emphasize_traditional_values
+		}
+		x = 23
+		y = 10
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+				add_ideas = reactionary_drift
+			}
+
+	}
+	focus = {
+		id = PER_embrace_secularism
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = PER_emphasis_on_urban_culture
+		}
+		x = 27
+		y = 10
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					add_political_power = 120
+					add_research_slot = 1
+					add_national_unity = 0.05
+				}
+
+	}
+	focus = {
+		id = PER_embrace_capitalism
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10.00
+		prerequisite = {
+			focus = PER_embrace_secularism
+			focus = PER_promtoe_shia_religion
+		}
+		x = 25
+		y = 11
+			completion_reward = {
+					266 = {
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+							add_extra_state_shared_building_slots = 1
+						}
+					416 = {
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+							add_extra_state_shared_building_slots = 1
+						}
+					420 = {
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+							add_extra_state_shared_building_slots = 1
+						}
+					419 = {
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+							add_extra_state_shared_building_slots = 1
+						}
+				}
+	}
+	focus = {
+		id = PER_state_atheism
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = PER_industrial_development
+		}
+		x = 32
+		y = 10
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+				add_national_unity = -0.10
+				add_political_power = 120
+			}
+
+	}
+	focus = {
+		id = PER_five_year_plan
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = PER_state_atheism
+		}
+		x = 32
+		y = 11
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					266 = {
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+							add_extra_state_shared_building_slots = 1
+						}
+					416 = {
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+							add_extra_state_shared_building_slots = 1
+						}
+					420 = {
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+							add_extra_state_shared_building_slots = 1
+						}
+					419 = {
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+							add_extra_state_shared_building_slots = 1
+						}
+				}
+
+	}
+	focus = {
+		id = PER_spread_maoism
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = PER_five_year_plan
+		}
+		x = 34
+		y = 12
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					AFG = { add_ideas = maoist_drift }
+					SAU = { add_ideas = maoist_drift }
+					IRQ = { add_ideas = maoist_drift }
+					PAK = { add_ideas = maoist_drift }
+				}
+
+	}
+}

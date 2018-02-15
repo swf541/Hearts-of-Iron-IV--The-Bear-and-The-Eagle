@@ -1,0 +1,2983 @@
+ideas = {
+
+	country = {
+		gaulist_media = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = generic_manpower_bonus
+			modifier = {
+				unity_factor = -0.10
+				enemy_partisan_effect = -0.25
+				drift_defence_factor = 1
+			}			
+		}
+		martial_law = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = generic_manpower_bonus
+			modifier = {
+				unity_factor = -0.10
+				conscription = 0.02
+				drift_defence_factor = 0.5
+			}			
+		}
+		population_boom = {	
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				MONTHLY_POPULATION = 0.15
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		Increased_Consumer_Consumption = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+
+			modifier = {
+				unity_factor = 0.10
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = 0.10
+				production_factory_efficiency_gain_factor = 0.10
+				production_speed_industrial_complex_factor = 0.10
+				production_factory_max_efficiency_factor = 0.10
+			}			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		profit_sharing = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+
+			modifier = {
+				unity_factor = 0.05
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = 0.10
+				production_factory_efficiency_gain_factor = 0.10
+				production_speed_industrial_complex_factor = 0.10
+				production_factory_max_efficiency_factor = 0.10
+			}			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		Arianespace = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				research_time_factor = -0.05
+			}
+		}
+		increased_pensions = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+
+			modifier = {
+				unity_factor = 0.05
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = 0.10
+			}			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		The_National_Front = {
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				conscription_factor = 0.10
+				drift_defence_factor = 0.25
+				fascism_drift = 0.05
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		clericalism = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				research_time_factor = 0.025
+				unity_factor = 0.10
+			}
+		}
+		Social_Dividends = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+
+			modifier = {
+				unity_factor = 0.10
+				consumer_goods_factor = 0.005
+				production_speed_buildings_factor = 0.10
+			}			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		Permament_Revolution = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+	
+			rule = {
+				can_create_factions = yes
+			}
+	
+			modifier = {
+				unity_factor = 0.05
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+		Nak_Sueksa_Wicha_Thahan_focus = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+	
+			modifier = {
+				conscription = 0.05
+				enemy_partisan_effect = -0.1
+			}
+		}
+		american_mic_advisors = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				research_time_factor = -0.025
+			}
+		}
+		american_intel_sharing = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+	
+			modifier = {
+				enemy_partisan_effect = -0.25
+			}
+		}
+		Khana_Ratsadon = {
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				nationalism_drift = 0.005
+				neutrality_drift = 0.005
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		maoist_drift = {	
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				maoism_drift = 0.15
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}		
+		}
+		communist_revolutionary_drift = {	
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				maoism_drift = 0.10
+				communism_drift = 0.10
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}		
+		}
+		pm_Nabulsi = {	
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				pan_arabism_drift = 0.025
+				unity_factor = 0.15
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		pan_arab_influence = {	
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				pan_arabism_drift = 0.05
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		multi_cultural_society = {	
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				conscription = 0.05
+				MONTHLY_POPULATION = 1.15
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		monarchist_influence = {	
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				monarchism_drift = 0.05
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		passion_of_the_right = {
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				monarchism_drift = 0.05
+				nationalism_drift = 0.05
+				fascism_drift = 0.05
+				National_Socialism_drift = 0.05
+				Christianism_drift = 0.05
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		fundamentalist_christian_drift = {
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				Christianism_drift = 0.05
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}		
+		}
+		neo_nazi_drift = {
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				National_Socialism_drift = 0.05
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}		
+		}
+		traditionalist_influence = {	
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				monarchism_drift = 0.05
+				conservative_drift = 0.05
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		islamic_traditionalist_influence = {	
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				monarchism_drift = 0.05
+				conservative_drift = 0.05
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		haredi_drift = {
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				fascism_drift = 0.05
+				Judaism_drift = 0.05
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		ISR_traditionalist_influence = {	
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				fascism_drift = 0.05
+				Judaism_drift = 0.05
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		ISR_education_reform = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				research_time_factor = -0.025
+			}
+		}
+		ISR_education_reform_religous = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				fascism_drift = 0.01
+				conservative_drift = 0.01
+			}
+		}
+
+
+				
+		haredi_draft_exclusion = {
+			picture = neutrality_idea
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			
+			modifier = { 
+				conscription_factor = -0.05
+			}
+			
+		}
+		conservativism_drift = {	
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				conservative_drift = 0.05
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		condemn_populism = {
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				centrist_drift = -0.005
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		centrism_drift = {
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				centrist_drift = 0.05
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		IRQ_traditionalist_drift = {
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				monarchism_drift = 0.05
+				islamism_drift = 0.05
+				radical_shiaism_drift = 0.05
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		shia_radical_drift = {
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				radical_shiaism_drift = 0.10
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		democratic_party_drift = {
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				socialist_drift = 0.05
+				democratic_drift = 0.1
+				conservative_drift = 0.05
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		imperial_restoration = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+	
+			rule = {
+				can_create_factions = yes
+			}
+	
+			modifier = {
+				unity_factor = 0.05
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+		
+		Songun = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+	
+			rule = {
+				can_create_factions = yes
+			}
+	
+			modifier = {
+				unity_factor = 0.05
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+		
+		christian_militarization = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+	
+			rule = {
+				can_create_factions = yes
+			}
+	
+			modifier = {
+				unity_factor = 0.05
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+		imperial_army = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+	
+			rule = {
+				can_create_factions = yes
+			}
+	
+			modifier = {
+				unity_factor = 0.05
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				conscription = 0.10
+			}
+		}
+		Ho_Cult = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				drift_defence_factor = 0.25
+				unity_factor = 0.05
+				army_morale_factor = 0.10
+			}
+		}
+		Kim_Cult = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				drift_defence_factor = 0.25
+				unity_factor = 0.05
+				army_morale_factor = 0.10
+			}
+		}		
+		Juche = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+	
+			rule = {
+				can_create_factions = yes
+			}
+	
+			modifier = {
+				unity_factor = 0.05
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				conscription = 0.10
+			}
+		}
+		minority_recruitment = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+	
+			rule = {
+				can_create_factions = yes
+			}
+	
+			modifier = {
+				unity_factor = 0.05
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				conscription = 0.10
+			}
+		}
+		TUR_mobilization_of_the_masses = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+	
+			rule = {
+				can_create_factions = yes
+			}
+	
+			modifier = {
+				unity_factor = 0.05
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+		revolutionary_army = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+	
+			rule = {
+				can_create_factions = yes
+			}
+	
+			modifier = {
+				unity_factor = 0.05
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}	
+		leftist_persecution = {
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				socialist_drift = -0.05
+				democratic_drift = 0.1
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		leftist_persecution_cam = {
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				socialist_drift = -0.05
+				communism_drift = -0.05
+				maoism_drift = -0.05
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		anti_serei_propaganda = {
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				conservative_drift = -0.05
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		leftist_persecution_fin = {
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				socialist_drift = -0.05
+				communism_drift = -0.05
+				fascism_drift = 0.1
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		IRQ_free_officer_era_drift = {
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				socialist_drift = 0.025
+				communism_drift = 0.025
+				fascism_drift = 0.025
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		KPA_Domoestic_Faction = {
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				socialist_drift = 0.1
+				Social_Democratic_drift = 0.1
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		social_democracy_drift = {	
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				socialist_drift = 0.1
+				democratic_drift = 0.1
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		caste_discrimination = {
+			picture = neutrality_idea
+			
+			allowed = { always = no }			
+			modifier = { 
+				unity_factor = -0.15
+				research_time_factor = 0.015
+				consumer_goods_factor = 0.05
+				conscription = -0.05
+			}
+			
+		}			
+		trotskyism_drift = {	
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				trotskyism_drift = 0.15
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		anti_soviet_communist_drift = {	
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				trotskyism_drift = 0.10
+				maoism_drift = 0.10
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		islamism_drift = {	
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				islamism_drift = 0.15
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		expelled_turkish_population = {
+			
+			picture = neutrality_idea
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			
+			modifier = { 
+				MONTHLY_POPULATION = -1.50
+				research_time_factor = 0.06
+				consumer_goods_factor = 0.15
+			}
+			
+		}
+		TUR_economic_crisis = {
+			
+			picture = neutrality_idea
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			
+			modifier = { 
+				consumer_goods_factor = 0.20
+			}
+			
+		}
+		cultural_superiority_propaganda = {	
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = neutrality_idea
+			
+			modifier = {
+				nationalism_drift = 0.05
+				fascism_drift = 0.05
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		viet_quoc_propaganda = {	
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = neutrality_idea
+			
+			modifier = {
+				fascism_drift = 0.10
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		pro_soviet_propaganda = {	
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = neutrality_idea
+			
+			modifier = {
+				nationalism_drift = -0.05
+				fascism_drift = -0.05
+				communism_drift = 0.05
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		corporatism = {	
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = neutrality_idea
+			
+			modifier = {
+				unity_factor = 0.1
+				production_speed_arms_factory_factor = 0.10
+				production_speed_industrial_complex_factor = 0.10
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = 0.10
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		soviet_reparations = {	
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = neutrality_idea
+			
+			modifier = {
+				unity_factor = -0.15
+				production_speed_arms_factory_factor = -0.10
+				production_speed_industrial_complex_factor = -0.10
+				consumer_goods_factor = 0.15
+				production_speed_buildings_factor = -0.10
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		soviet_payments = {	
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = neutrality_idea
+			
+			modifier = {
+				unity_factor = -0.15
+				production_speed_arms_factory_factor = -0.10
+				production_speed_industrial_complex_factor = -0.10
+				consumer_goods_factor = 0.15
+				production_speed_buildings_factor = -0.10
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		ban_on_rss = {	
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = neutrality_idea
+			
+			modifier = {
+				fascism_drift = -0.05
+				unity_factor = -0.10
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		ban_on_rss_perm = {	
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				fascism_drift = -0.05
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		promote_hindutva = {	
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				fascism_drift = 0.10
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		baathist_propaganda = {	
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				fascism_drift = 0.10
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		Lao_Issara = {	
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				nationalism_drift = 0.05
+				conscription = 0.05
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		nationalist_drift = {	
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				nationalism_drift = 0.05
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		reactionary_drift = {	
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				neutrality_drift = 0.05
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}		
+		anti_democracy_drift = {	
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				socialist_drift = -0.1
+				democratic_drift = -0.1
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		pracheachon_drift = {
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				socialist_drift = 0.1
+				maoism_drift = 0.1
+				communism_drift = 0.1
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}		
+		}
+		military_modernization = {
+		
+			picture = generic_air_manufacturer_3
+			
+	
+			research_bonus = {
+				air_equipment = 0.10
+				infantry_weapons = 0.10
+				land_doctrine = 0.10
+			}
+	
+			modifier = {
+				conscription_factor = -0.01
+			}			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+		soviet_military_desgins = {
+		
+			picture = generic_air_manufacturer_3
+			
+	
+			research_bonus = {
+				air_equipment = 0.10
+				infantry_weapons = 0.10
+				land_doctrine = 0.10
+			}
+	
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+		Petrobras = {
+			
+			allowed = { always = no }
+
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+
+			modifier = { 
+				unity_factor = 0.05
+				local_resources_factor = 0.25
+			}
+
+			picture = generic_air_manufacturer_3
+		}
+		nationalized_resources = {	
+				
+				
+				allowed = {
+					always = no
+				}
+
+				allowed_civil_war = {
+				}
+
+				cancel = {
+				}
+				
+				removal_cost = -1
+				
+				picture = generic_volunteer_expedition_bonus
+		
+				modifier = {
+					min_export = -0.50
+				}
+			}
+		Iraq_Petroleum_Company = {
+			
+			allowed = { always = no }
+
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+
+			modifier = { 
+				political_power_gain = -0.5
+				unity_factor = -0.10
+				local_resources_factor = 0.15
+			}
+
+			picture = generic_air_manufacturer_3
+		}
+		rural_vanguard = {
+		
+			picture = generic_air_manufacturer_3
+	
+			modifier = {
+				conscription = 0.05
+			}			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+		kurdish_conflict = {
+		
+			picture = generic_air_manufacturer_3
+	
+			modifier = {
+				conscription_factor = -0.05
+				training_time_army_factor = 0.20
+				unity_factor = -0.10
+			}			
+			ai_will_do = {
+				factor = 1
+			}
+		}			
+		agrarian_reform = {
+		
+			picture = generic_air_manufacturer_3
+	
+			modifier = {
+				conscription = 0.05
+			}			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+		
+		land_reform = {
+		
+			picture = generic_air_manufacturer_3
+	
+			modifier = {
+				conscription = 0.05
+			}			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+		military_expansion = {
+		
+			picture = generic_air_manufacturer_3
+			
+	
+			research_bonus = {
+				land_doctrine = 0.05
+			}
+	
+			modifier = {
+				conscription =  0.05
+			}			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		KOR_education_reform = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				research_time_factor = -0.05
+			}
+		}
+		education_reform_2 = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				research_time_factor = -0.025
+			}
+		}
+		education_reform_3 = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				research_time_factor = -0.15
+			}
+		}
+		KOR_new_civil_service_exam_focus = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				research_time_factor = -0.05
+			}
+		}
+		KOR_revolution_in_the_rice_paddies_focus = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_production_bonus
+
+
+			modifier = {
+			local_factories = 0.2
+			}
+		}		
+		decleration_of_martial_law = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = generic_manpower_bonus
+			modifier = {
+				unity_factor = -0.10
+				political_power_gain = -0.25
+				conscription = 0.02
+			}	
+		}
+		reformed_bureacracy = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				research_time_factor = -0.025
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				industrial_capacity_factory = 0.15
+			}
+		}
+		workers_trade_union = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				#research_time_factor = -0.025
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				#industrial_capacity_factory = 0.15
+			}
+		}
+		national_corporations = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				research_time_factor = -0.025
+				industrial_capacity_factory = 0.15
+			}
+		}
+		desperate_times = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				research_time_factor = 0.15
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_arms_factory_factor = 0.1
+				industrial_capacity_factory = -0.15
+				conscription = 0.15
+			}		
+		}
+		
+		white_terror = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = generic_manpower_bonus
+			modifier = {
+				unity_factor = -0.10
+				conscription = 0.02
+				drift_defence_factor = 0.5
+			}			
+		}
+		Korean_National_Revolutionary_Party = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = generic_manpower_bonus
+			modifier = {
+				unity_factor = 0.10
+				drift_defence_factor = 0.5
+				political_power_factor = 0.1
+			}			
+		}
+		Pak_Chong_ae = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = generic_manpower_bonus
+			modifier = {
+				unity_factor = 0.10
+				drift_defence_factor = 0.5
+				communism_drift = 0.05
+			}			
+		}
+		hold_firm = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = generic_manpower_bonus
+			modifier = {
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.15
+			}	
+		}
+		strike_back = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = generic_manpower_bonus
+			modifier = {
+				army_core_attack_factor = 0.20
+				army_core_defence_factor = 0.10
+			}		
+		}
+		nato_member = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = generic_NATO
+			modifier = {
+				conscription = 0.02
+				army_core_defence_factor = 0.10
+				ai_get_ally_desire_factor = -1500
+			}			
+		}
+
+		segregation_question = {	#Add to America Start
+
+			picture = USA_segregation_question
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			
+			modifier = { 
+				unity_factor = -0.15
+				research_time_factor = 0.015
+				consumer_goods_factor = 0.05
+				conscription_factor = -0.05
+				drift_defence_factor = -0.335
+			}
+			
+		}	
+		civil_rights_act_of_1960 = {
+			picture = neutrality_idea
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			
+			modifier = { 
+				unity_factor = -0.10
+				research_time_factor = 0.025
+				consumer_goods_factor = 0.03
+				conscription_factor = -0.035
+				drift_defence_factor = -0.25
+			}
+			
+		}	
+		civil_rights_act_of_1968 = {
+			picture = neutrality_idea
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			
+			modifier = { 
+				consumer_goods_factor = -0.01
+				conscription_factor = 0.01
+				drift_defence_factor = 0.05
+			}
+			
+		}	
+		voting_rights_act_of_1965 = {
+			picture = neutrality_idea
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = { 
+				unity_factor = 0.15
+				conscription_factor = 0.01
+				drift_defence_factor = 0.05
+			}
+			
+		}	
+		self_defense_militia = {
+			picture = neutrality_idea
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			
+			modifier = { 
+				conscription_factor = -0.01
+				drift_defence_factor = -0.05
+			}
+		}
+		traditional_culture= {	
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+
+			modifier = {
+				unity_factor = 0.10
+				conscription_factor = 0.05
+				drift_defence_factor = 0.33			
+				MONTHLY_POPULATION = 0.05
+			}			
+			ai_will_do = {
+				factor = 0
+			}
+		}			
+		social_security_act = {	#Needs Added From Game Start
+			picture = USA_social_security_act
+			allowed = {
+				always = no 
+			}	
+
+			modifier = {
+				unity_factor = 0.10
+				consumer_goods_factor = 0.005
+				MONTHLY_POPULATION = 0.01
+			}			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		social_security_act_of_1965 = {	
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+
+			modifier = {
+				unity_factor = 0.15
+				consumer_goods_factor = 0.01
+				MONTHLY_POPULATION = 0.035
+			}			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		social_security_act_of_1967 = {	
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+
+			modifier = {
+				unity_factor = 0.175
+				consumer_goods_factor = 0.015
+				MONTHLY_POPULATION = 0.05
+			}			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		privatized_social_security = {	
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+
+			modifier = {
+				unity_factor = -0.10
+				consumer_goods_factor = -0.05
+			}			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		war_on_poverty = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+
+			modifier = {
+				unity_factor = 0.10
+				consumer_goods_factor = 0.005
+				MONTHLY_POPULATION = 0.075
+				production_speed_buildings_factor = 0.10
+			}			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		USA_epa = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+			
+			modifier = {
+				political_power_gain = 0.05
+				MONTHLY_POPULATION = 0.10
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = -0.05
+				production_factory_max_efficiency_factor = -0.10
+			}		
+		}
+		northern_push = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+	
+			rule = {
+				can_create_factions = yes
+			}
+	
+			modifier = {
+				unity_factor = 0.05
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+		combat_inflation = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = -0.05
+				production_factory_max_efficiency_factor = 0.05
+			}		
+		}
+		tax_cuts = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = -0.05
+				production_factory_max_efficiency_factor = 0.05
+			}		
+		}
+		a_time_for_choosing = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+	
+			rule = {
+				can_create_factions = yes
+			}
+	
+			modifier = {
+				unity_factor = 0.05
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+		economic_gradualism = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = -0.05
+				production_factory_max_efficiency_factor = 0.05
+			}		
+		}
+		balanced_budget_amendment = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+			
+			modifier = {
+				consumer_goods_factor = -0.10
+				production_speed_buildings_factor = -0.05
+				production_factory_max_efficiency_factor = -0.15
+			}		
+		}
+		peace_corp = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+			
+			modifier = {
+				foreign_subversive_activites = -0.75
+			}			
+		}
+
+		welfare_reform = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				MONTHLY_POPULATION = -0.01
+				political_power_gain = 0.05
+			}
+
+		}
+
+		governmental_planning_and_management = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				political_power_gain = 0.05
+			}
+
+		}
+
+		food_stamp_program = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+
+			modifier = {
+				MONTHLY_POPULATION = 0.05
+				political_power_cost = 0.0025
+			}			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		vietnamization = {
+		
+			picture = generic_air_manufacturer_3
+			
+	
+			research_bonus = {
+				air_equipment = 0.10
+				infantry_weapons = 0.10
+				land_doctrine = 0.10
+			}
+	
+			modifier = {
+				conscription = 0.05
+				army_org_factor = 0.05
+			}			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		medicaid = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+
+			modifier = {
+				MONTHLY_POPULATION = 0.05
+			}			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+		Project_MERRIMAC = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+
+			
+			modifier = {
+				drift_defence_factor = 1.5
+				communism_drift = -0.01
+				foreign_subversive_activites = -0.15
+			}
+		}
+		Project_MKUltra = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+
+			
+			modifier = {
+				drift_defence_factor = 1.5
+				army_morale_factor = 0.10
+				communism_drift = -0.01
+				foreign_subversive_activites = -0.15
+			}
+		}
+		Operation_CHAOS = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+
+			
+			modifier = {
+				drift_defence_factor = 1.5
+				unity_factor = -0.10
+				communism_drift = -0.01
+				foreign_subversive_activites = -0.15
+			}
+		}
+
+		strengthened_labor_unions = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+
+			modifier = {
+				unity_factor = 0.05
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = 0.10
+				production_factory_max_efficiency_factor = 0.10
+			}			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		strengthened_labor_unions_2 = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+
+			modifier = {
+				unity_factor = 0.10
+				consumer_goods_factor = 0.08
+				production_speed_buildings_factor = 0.15
+				production_factory_max_efficiency_factor = 0.15
+			}			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		great_society = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+
+			modifier = {
+				unity_factor = 0.10
+				consumer_goods_factor = 0.075
+				MONTHLY_POPULATION = 0.075
+				production_speed_buildings_factor = 0.18
+				production_factory_max_efficiency_factor = 0.18
+			}			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+		socialized_health_care = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+
+			modifier = {
+				unity_factor = 0.10
+				consumer_goods_factor = 0.01
+				MONTHLY_POPULATION = 0.15
+				production_speed_buildings_factor = 0.10
+				production_factory_max_efficiency_factor = 0.15
+			}			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		humphrey_hawkins_full_employment_act = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				political_power_cost = 1
+				production_speed_infrastructure_factor = 0.1
+				production_speed_buildings_factor = 0.10
+			}
+		}
+		segregation_enforced = {
+			picture = neutrality_idea
+			
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			
+			modifier = { 
+				unity_factor = -0.15
+				research_time_factor = 0.015
+				consumer_goods_factor = 0.10
+				conscription_factor = -0.05
+			}
+			
+		}			
+
+
+		the_american_welfare_state = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+
+			modifier = {
+				unity_factor = 0.15
+				consumer_goods_factor = 0.10
+				MONTHLY_POPULATION = 0.10
+				production_speed_buildings_factor = 0.25
+				production_factory_max_efficiency_factor = 0.25
+			}			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		welfare_system = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+
+			modifier = {
+				unity_factor = 0.15
+				consumer_goods_factor = 0.10
+				MONTHLY_POPULATION = 0.10
+				production_speed_buildings_factor = 0.25
+				production_factory_max_efficiency_factor = 0.25
+			}			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		familia = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+
+			modifier = {
+				unity_factor = 0.10
+				MONTHLY_POPULATION = 0.10
+			}			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		strengthened_cia = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+
+			picture = generic_intel_bonus
+			
+			modifier = {
+				enemy_partisan_effect = -0.2
+				unity_factor = -0.1
+			}
+		}
+
+		chinese_war_draft = {
+		
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				conscription_factor = 0.2
+			}
+		}
+
+		embrace_free_trade = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.2
+				research_time_factor = -0.05
+				political_power_factor = 0.25
+			}
+		}
+		Chinese_Korean_Brotherhood = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.2
+				research_time_factor = -0.05
+				political_power_factor = 0.25
+			}
+		}
+		new_frontier = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_research_bonus
+			
+			modifier = {
+				research_time_factor = -0.05
+			}
+		}
+
+		law_and_order = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				drift_defence_factor = 1.5
+				unity_factor = -0.10
+				conscription_factor = 0.10
+			}
+		}
+
+		health_care_compromise = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+
+			modifier = {
+				unity_factor = 0.05
+				MONTHLY_POPULATION = 0.10
+				production_speed_buildings_factor = 0.05
+				production_factory_max_efficiency_factor = 0.10
+			}			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		CHESF = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+
+			modifier = {
+				unity_factor = 0.05
+				production_speed_buildings_factor = 0.05
+			}			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		ban_gambling = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+
+			modifier = {
+				unity_factor = -0.10
+				production_speed_buildings_factor = 0.05
+				production_factory_max_efficiency_factor = 0.10
+			}			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		right_to_work_laws = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.2
+				political_power_factor = 0.50
+			}
+		}
+
+		skylab_research = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				research_time_factor = -0.025
+			}
+		}
+		vietnam_war_draft = {
+		
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				conscription_factor = 0.15
+			}
+		}
+		selective_service_act = {
+		
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				conscription = 0.1
+			}
+		}
+		female_conscription = {
+		
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				conscription = 0.25
+			}
+		}
+
+		liberal_partisan_movement = {
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				democratic_drift = 0.05
+				communism_drift = 0.025
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		liberal_conservative_drifting = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				Liberal_Conservatism_drift = 0.05
+			}
+		}	
+		christian_dem_drift = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				Christian_Democratic_drift = 0.05
+			}
+		}		
+		peronism_banned = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+	
+			modifier = {
+				nationalism_drift = -0.05
+			}
+		}
+		access_to_health_care = {
+			
+			allowed = {
+				always = no
+			}
+
+			
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+	
+			modifier = {
+				MONTHLY_POPULATION = 0.05
+				unity_factor = 0.15
+			}
+		}	
+
+		
+		anticlericalism = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				research_time_factor = -0.05
+				unity_factor = -0.10
+			}
+		}
+		nazi_haven = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				research_time_factor = -0.05
+				unity_factor = -0.05
+			}
+		}
+		german_engineers = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				research_time_factor = -0.025
+			}
+		}
+		la_violencia = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+	
+			modifier = {
+				conscription = -0.15
+				enemy_partisan_effect = 0.25
+				MONTHLY_POPULATION = -0.05
+				unity_factor = -0.50
+			}
+		}
+		khmer_seriei_partisans = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+	
+			modifier = {
+				conscription = 0.05
+			}
+		}
+		african_famine_crisis = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+	
+			modifier = {
+				conscription = -0.01
+				MONTHLY_POPULATION = -0.1
+			}
+		}
+		Bao_Di = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+	
+			modifier = {
+				centrist_drift = 0.2
+			}
+		}
+		aliyah_soviet_bloc = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+	
+			modifier = {
+				unity_factor = 0.05
+			}
+		}
+		
+		The_Old_Order = {	
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+
+			modifier = {
+				unity_factor = 0.10
+				conscription_factor = 0.05
+				drift_defence_factor = 0.33			
+				MONTHLY_POPULATION = 0.05
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				research_time_factor = 0.1
+			}			
+			ai_will_do = {
+				factor = 0
+			}
+		}			
+		Subjugation_of_the_Labour_Unions = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				industrial_capacity_factory = 0.15
+			}
+		}
+		Yoshida_Doctrine = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				industrial_capacity_factory = 0.15
+				conscription_factor = -0.1
+			}
+		}
+		Katayama_Doctrine = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				conscription_factor = -0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				industrial_capacity_factory = 0.15
+			}
+		}
+		Ultrantionalist_Plot = {	
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				fascism_drift = 0.15
+				monarchism_drift = 0.15
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		peaceful_revolution = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+				has_war = yes
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				#generate_wargoal_tension = 1.00
+				join_faction_tension = 1.00
+				#lend_lease_tension = 0.50
+				send_volunteers_tension = 0.20
+				guarantee_tension = 1.0
+				ai_badass_factor = 0.01    # Will receive 1% of the threat from others
+				ai_get_ally_desire_factor = -100
+				unity_factor = 0.50
+				research_time_factor = -0.25
+			}
+		}
+		dodge_line = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				unity_factor = -0.10
+				production_speed_buildings_factor = -0.05
+				production_factory_max_efficiency_factor = 0.05
+			}		
+		}
+		Korean_Peoples_Army = {
+			
+			allowed = { always = yes }
+
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+
+			modifier = {
+				army_morale_factor = 0.15
+				army_org_factor = -0.1
+				army_org = 5.00
+			}
+		}
+		VIN_peoples_army = {
+			
+			allowed = { always = yes }
+
+			allowed_civil_war = { always = yes }
+
+			cancel = {
+				has_war = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_morale_factor = 0.15
+				army_org_factor = 0.15
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.3
+			}
+
+			picture = FRA_scw_intervention_republicans_focus
+		}
+
+		Spread_Christianity = {
+			
+			allowed = { always = yes }
+
+			allowed_civil_war = { always = yes }
+
+			cancel = {
+				has_war = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				christianism_drift = 0.05
+			}
+
+			picture = generic_pp_unity_bonus
+		}
+
+		Competent_officers = {
+			
+			allowed = { always = yes }
+
+			allowed_civil_war = { always = yes }
+
+			cancel = {
+				has_war = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_morale_factor = 0.1
+				army_org_factor = 0.1
+			}
+
+			picture = FRA_scw_intervention_republicans_focus
+		}
+	}
+}

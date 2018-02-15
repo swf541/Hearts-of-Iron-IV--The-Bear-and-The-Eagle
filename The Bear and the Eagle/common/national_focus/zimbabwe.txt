@@ -1,0 +1,3065 @@
+focus_tree = {
+	id = zimbabwe
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ZIM
+		}
+	}
+	default = no
+	focus = {
+		id = zim_our_future
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10.00
+		x = 19
+		y = 0
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	focus = {
+		id = zim_political
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = zim_our_future
+		}
+		ai_will_do = {
+			factor = 30
+		}
+		x = 19
+		y = 1
+
+	}
+	focus = {
+		id = zim_colony
+		icon = GFX_goal_generic_trade
+		cost = 10.00
+		prerequisite = {
+			focus = zim_political
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		x = 4
+		y = 2
+
+	}
+	focus = {
+		id = zim_support
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		cost = 10.00
+		prerequisite = {
+			focus = zim_colony
+		}
+		mutually_exclusive = {
+			focus = zim_defy
+		}
+		x = 3
+		y = 3
+
+	}
+	focus = {
+		id = zim_autonomy
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10.00
+		prerequisite = {
+			focus = zim_support
+		}
+		historical_ai = {
+			has_country_flag = rhodesia
+		}
+		mutually_exclusive = {
+			focus = zim_annex
+		}
+		x = 1
+		y = 4
+			completion_reward = {
+					add_ideas = { zim_autonomy_boost }
+				}
+
+	}
+	focus = {
+		id = zim_defy
+		icon = GFX_goal_tfv_sever_ties_with_uk
+		cost = 10.00
+		prerequisite = {
+			focus = zim_colony
+		}
+		mutually_exclusive = {
+			focus = zim_support
+		}
+		historical_ai = {
+			has_country_flag = rhodesia
+		}
+		x = 5
+		y = 3
+		completion_reward = {
+			ENG = { add_ideas = zim_rhodesian_propaganda }
+		}
+	}
+	focus = {
+		id = zim_nat
+		icon = GFX_goal_zimbabwe
+		cost = 10.00
+		prerequisite = {
+			focus = zim_defy
+		}
+		mutually_exclusive = {
+			focus = zim_apartheid
+		}
+		x = 5
+		y = 4
+			completion_reward = {
+					add_national_unity = -0.10
+					if = {
+							limit = {
+									NOT = {
+											has_country_flag = zanu_enabled
+										}
+								}
+							country_event = {
+									id = zimbabwe.11
+								}
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_country_flag = zapu_enabled
+										}
+								}
+							country_event = {
+									id = zimbabwe.31
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = zim_apartheid
+		icon = GFX_goal_rhodesia
+		cost = 10.00
+		prerequisite = {
+			focus = zim_defy
+		}
+		historical_ai = {
+			has_country_flag = rhodesia
+		}
+		mutually_exclusive = {
+			focus = zim_nat
+		}
+		x = 7
+		y = 4
+
+	}
+	focus = {
+		id = zim_frn
+		icon = GFX_goal_frn
+		cost = 10.00
+		prerequisite = {
+			focus = zim_apartheid
+		}
+		historical_ai = {
+			has_country_flag = rhodesia
+		}
+		ai_will_do = {
+		factor = 5
+		}
+		mutually_exclusive = {
+			focus = zim_faction
+		}
+		x = 5
+		y = 5
+
+	}
+	focus = {
+		id = zim_faction
+		icon = GFX_goal_generic_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = zim_apartheid
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		mutually_exclusive = {
+			focus = zim_frn
+		}
+		x = 7
+		y = 5
+
+	}
+	focus = {
+		id = zim_faction_continued
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		prerequisite = {
+			focus = zim_faction
+		}
+		x = 7
+		y = 7
+
+	}
+	focus = {
+		id = zim_persuade_bot
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = zim_faction_continued
+		}
+		x = 6
+		y = 8
+			completion_reward = {
+					BOT = {
+							country_event = {
+									id = zimbabwe.5
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = zim_persuade_saf
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = zim_faction_continued
+		}
+		x = 8
+		y = 8
+			completion_reward = {
+					SAF = {
+							country_event = {
+									id = zimbabwe.5
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = zim_independence
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = zim_political
+		}
+		x = 10
+		y = 2
+			available = {
+					OR = {
+							date > 1953.1.1
+							is_subject = no
+						}
+				}
+
+	}
+	focus = {
+		id = zim_nat_continued
+		icon = GFX_goal_zimbabwe
+		cost = 10.00
+		prerequisite = {
+			focus = zim_independence
+		}
+		mutually_exclusive = {
+			focus = zim_indrho
+		}
+		x = 9
+		y = 5
+			available = {
+					has_completed_focus = zim_nat
+				}
+			completion_reward = {
+					custom_effect_tooltip = zim_nat_tt
+					set_country_flag = zim_cw
+					drop_cosmetic_tag = yes
+					set_country_flag = zimbabwe
+				}
+
+	}
+	focus = {
+		id = zim_decolonization
+		icon = GFX_goal_tfv_sever_ties_with_uk
+		cost = 10.00
+		prerequisite = {
+			focus = zim_nat_continued
+		}
+		x = 9
+		y = 6
+			bypass = {
+					is_subject = no
+				}
+			completion_reward = {
+					add_autonomy_ratio = {
+							value = 500
+						}
+					add_ideas = { zim_autonomy_boost }
+					ENG = {
+							country_event = {
+									id = zimbabwe.511
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = zim_improvements
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = zim_independence
+		}
+		x = 10
+		y = 3
+		completion_reward = {
+			custom_effect_tooltip = zim_imp_tt
+		}
+	}
+	focus = {
+		id = zim_indrho
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = zim_independence
+		}
+		historical_ai = {
+			has_country_flag = rhodesia
+		}
+		mutually_exclusive = {
+			focus = zim_nat_continued
+		}
+		x = 11
+		y = 5
+			available = {
+					has_completed_focus = zim_apartheid
+				}
+
+	}
+	focus = {
+		id = zim_cut_british_ties
+		icon = GFX_goal_tfv_sever_ties_with_uk
+		cost = 10.00
+		prerequisite = {
+			focus = zim_indrho
+		}
+		ai_will_do = {
+			factor = 50
+		}
+		x = 11
+		y = 6
+			bypass = {
+					is_subject = no
+				}
+
+	}
+	focus = {
+		id = zim_udi
+		icon = GFX_goal_rhodesia
+		cost = 10.00
+		prerequisite = {
+			focus = zim_cut_british_ties
+		}
+		ai_will_do = {
+			factor = 500
+		}
+		x = 11
+		y = 7
+		available = {
+			date > 1964.1.1
+		}
+		bypass = {
+				is_subject = no
+			}
+		completion_reward = {
+			ENG = {
+				country_event = {
+						id = zimbabwe.60
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = zim_turmoil
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = zim_political
+		}
+		x = 19
+		y = 2
+		available = {
+			OR = {
+					has_country_flag = zanu_enabled
+					has_country_flag = zapu_enabled
+			}
+		}
+
+	}
+	focus = {
+		id = zim_let_nat_win
+		icon = GFX_goal_zimbabwe
+		cost = 10.00
+		prerequisite = {
+			focus = zim_turmoil
+		}
+		mutually_exclusive = {
+			focus = zim_resist
+			focus = zim_neutrality
+		}
+		x = 14
+		y = 3
+			bypass = {
+					has_country_flag = zimbabwe
+				}
+			completion_reward = {
+					add_national_unity = -0.15
+				}
+
+	}
+	focus = {
+		id = zim_let_zanu_win
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = zim_let_nat_win
+		}
+		mutually_exclusive = {
+			focus = zim_let_zapu_win
+		}
+		x = 13
+		y = 4
+			completion_reward = {
+					create_country_leader = {
+							name = "Robert Mugabe"
+							desc = "POLITICS_MUGABE_DESC"
+							picture = "Portrait_Mugabe.dds"
+							expire = "2015.1.1"
+							ideology = african_nationalism
+							traits = {
+
+}
+						}
+				}
+
+	}
+	focus = {
+		id = zim_let_zapu_win
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = zim_let_nat_win
+		}
+		mutually_exclusive = {
+			focus = zim_let_zanu_win
+		}
+		x = 15
+		y = 4
+			completion_reward = {
+					create_country_leader = {
+							name = "Joshua Nkomo"
+							desc = "POLITICS_NKOMO_DESC"
+							picture = "Portrait_Nkomo.dds"
+							expire = "2015.1.1"
+							ideology = african_nationalism
+							traits = {
+
+}
+						}
+				}
+
+	}
+	focus = {
+		id = zim_neutrality
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10.00
+		prerequisite = {
+			focus = zim_turmoil
+		}
+		mutually_exclusive = {
+			focus = zim_let_nat_win
+			focus = zim_resist
+		}
+		x = 19
+		y = 3
+			completion_reward = {
+					add_political_power = 100
+					add_national_unity = -0.05
+				}
+
+	}
+	focus = {
+		id = zim_peace_talks
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = zim_neutrality
+		}
+		x = 19
+		y = 4
+			available = {
+					AND = {
+							OR = {
+									has_idea = zim_zanu_2
+									has_idea = zim_zanu_3
+									has_idea = zim_zanu_4
+									has_idea = zim_zanu_5
+									has_idea = zim_zanu_6
+									has_idea = zim_zanu_7
+									has_idea = zim_zanu_8
+									has_idea = zim_zanu_9
+								}
+							OR = {
+									has_idea = zim_zapu_2
+									has_idea = zim_zapu_3
+									has_idea = zim_zapu_4
+									has_idea = zim_zapu_5
+									has_idea = zim_zapu_6
+									has_idea = zim_zapu_7
+									has_idea = zim_zapu_8
+									has_idea = zim_zapu_9
+								}
+						}
+				}
+			completion_reward = {
+					country_event = {
+							id = zimbabwe.41
+						}
+					random_list = {
+							50 = {
+									country_event = {
+											id = zimbabwe.11
+										}
+								}
+							50 = {
+									country_event = {
+											id = zimbabwe.21
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = zim_appeasement
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = zim_peace_talks
+		}
+		x = 19
+		y = 5
+			available = {
+					AND = {
+							OR = {
+									has_idea = zim_zanu_3
+									has_idea = zim_zanu_4
+									has_idea = zim_zanu_5
+									has_idea = zim_zanu_6
+									has_idea = zim_zanu_7
+									has_idea = zim_zanu_8
+									has_idea = zim_zanu_9
+								}
+							OR = {
+									has_idea = zim_zapu_3
+									has_idea = zim_zapu_4
+									has_idea = zim_zapu_5
+									has_idea = zim_zapu_6
+									has_idea = zim_zapu_7
+									has_idea = zim_zapu_8
+									has_idea = zim_zapu_9
+								}
+						}
+				}
+			completion_reward = {
+					add_popularity = {
+							ideology = nationalism
+							popularity = 0.15
+						}
+					country_event = {
+							id = zimbabwe.21
+						}
+					country_event = {
+							id = zimbabwe.21
+						}
+					country_event = {
+							id = zimbabwe.41
+						}
+					country_event = {
+							id = zimbabwe.41
+						}
+				}
+
+	}
+	focus = {
+		id = zim_two_state_deal
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = zim_appeasement
+		}
+		x = 19
+		y = 6
+
+	}
+	focus = {
+		id = zim_split_rhodesia
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = zim_two_state_deal
+		}
+		x = 19
+		y = 7
+			completion_reward = {
+					random_list = {
+							25 = {
+									start_civil_war = {
+											ideology = nationalism
+											size = 0.4
+										}
+									random_other_country = {
+											limit = {
+													original_tag = ZIM
+													has_government = nationalism
+												}
+											set_country_flag = zim_cw
+											drop_cosmetic_tag = yes
+											set_country_flag = zimbabwe
+											set_cosmetic_tag = ZIM
+										}
+								}
+							25 = {
+									clr_country_flag = zanu_enabled
+									clr_country_flag = zapu_enabled
+									start_civil_war = {
+											ideology = nationalism
+											size = 0.5
+										}
+									random_other_country = {
+											limit = {
+													original_tag = ZIM
+													has_government = nationalism
+												}
+											set_country_flag = zim_cw
+											drop_cosmetic_tag = yes
+											set_country_flag = zimbabwe
+											set_cosmetic_tag = ZIM
+										}
+								}
+							25 = {
+									start_civil_war = {
+											ideology = nationalism
+											size = 0.5
+										}
+									random_other_country = {
+											limit = {
+													original_tag = ZIM
+													has_government = nationalism
+												}
+											set_country_flag = zim_cw
+											drop_cosmetic_tag = yes
+											set_country_flag = zimbabwe
+											set_cosmetic_tag = ZIM
+											white_peace = ZIM
+										}
+								}
+							25 = {
+									clr_country_flag = zanu_enabled
+									clr_country_flag = zapu_enabled
+									start_civil_war = {
+											ideology = nationalism
+											size = 0.5
+										}
+									random_other_country = {
+											limit = {
+													original_tag = ZIM
+													has_government = nationalism
+												}
+											set_country_flag = zim_cw
+											drop_cosmetic_tag = yes
+											set_country_flag = zimbabwe
+											set_cosmetic_tag = ZIM
+											white_peace = ZIM
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = zim_resist
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = zim_turmoil
+		}
+		historical_ai = {
+			has_country_flag = rhodesia
+		}
+		mutually_exclusive = {
+			focus = zim_let_nat_win
+			focus = zim_neutrality
+		}
+		x = 26
+		y = 3
+			available = {
+					NOT = {
+							has_country_flag = zimbabwe
+						}
+				}
+
+	}
+	focus = {
+		id = zim_frn_resist
+		icon = GFX_goal_frn
+		cost = 10.00
+		prerequisite = {
+			focus = zim_resist
+		}
+		mutually_exclusive = {
+			focus = zim_faction_resist
+		}
+		historical_ai = {
+			has_country_flag = rhodesia
+		}
+		x = 22
+		y = 4
+			bypass = {
+					has_country_flag = frn
+				}
+
+	}
+	focus = {
+		id = zim_war_propaganda
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = zim_frn_resist
+		}
+		historical_ai = {
+			has_country_flag = rhodesia
+		}
+		x = 22
+		y = 5
+
+	}
+	focus = {
+		id = zim_zambian_bombing
+		icon = GFX_goal_generic_occypy_start_war
+		cost = 10.00
+		prerequisite = {
+			focus = zim_war_propaganda
+		}
+		historical_ai = {
+			has_country_flag = rhodesia
+		}
+		x = 21
+		y = 6
+			completion_reward = {
+					random_list = {
+							50 = {
+									country_event = zimbabwe.41
+								}
+							50 = {
+									add_manpower = -500
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = zim_mozambique_bombing
+		icon = GFX_goal_generic_occypy_start_war
+		cost = 10.00
+		prerequisite = {
+			focus = zim_war_propaganda
+		}
+		historical_ai = {
+			has_country_flag = rhodesia
+		}
+		x = 23
+		y = 6
+			completion_reward = {
+					random_list = {
+							50 = {
+									country_event = zimbabwe.21
+								}
+							50 = {
+									add_manpower = -500
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = zim_kill_mugabe
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = zim_resist
+		}
+		x = 25
+		y = 5
+			available = {
+					NOT = {
+							has_country_flag = mugabe_killed
+						}
+					has_country_flag = mugabe_arrested
+				}
+			completion_reward = {
+					clr_country_flag = mugabe_arrested
+					set_country_flag = mugabe_killed
+				}
+
+	}
+	focus = {
+		id = zim_kill_nkomo
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = zim_resist
+		}
+		x = 27
+		y = 5
+			available = {
+					NOT = {
+							has_country_flag = nkomo_killed
+						}
+					has_country_flag = nkomo_arrested
+				}
+			completion_reward = {
+					clr_country_flag = nkomo_arrested
+					set_country_flag = nkomo_killed
+				}
+
+	}
+	focus = {
+		id = zim_faction_resist
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = zim_resist
+		}
+		mutually_exclusive = {
+			focus = zim_frn_resist
+		}
+		available = {
+			has_completed_focus = zim_create_faction
+		}
+		x = 31
+		y = 4
+			bypass = {
+					has_completed_focus = zim_create_faction
+				}
+
+	}
+	focus = {
+		id = zim_faction_annex
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = zim_faction_resist
+		}
+		mutually_exclusive = {
+			focus = zim_faction_manhunt
+		}
+		x = 29
+		y = 5
+
+	}
+	focus = {
+		id = zim_annex_proposal
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = zim_faction_annex
+		}
+		x = 29
+		y = 6
+			completion_reward = {
+					every_country = {
+							limit = {
+									is_in_faction_with = ROOT
+									NOT = {
+											has_country_flag = zim_annex_consent
+											tag = ROOT
+										}
+								}
+							country_event = {
+									id = zimbabwe.9
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = zim_annex_members
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = zim_annex_proposal
+		}
+		x = 29
+		y = 8
+			available = {
+					OR = {
+							has_war = yes
+							threat > 0.7
+						}
+				}
+			completion_reward = {
+					country_event = {
+							id = zimbabwe.10
+						}
+				}
+
+	}
+	focus = {
+		id = zim_african_ultimatum
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = zim_annex_proposal
+		}
+		x = 30
+		y = 7
+			available = {
+					NOT = {
+							has_completed_focus = zim_annex_members
+						}
+				}
+			completion_reward = {
+					every_country = {
+							limit = {
+									is_in_faction_with = ROOT
+									NOT = {
+											has_country_flag = zim_annex_consent
+											tag = ROOT
+										}
+								}
+							country_event = {
+									id = zimbabwe.92
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = zim_faction_manhunt
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = zim_faction_resist
+		}
+		mutually_exclusive = {
+			focus = zim_faction_annex
+		}
+		x = 33
+		y = 5
+
+	}
+	focus = {
+		id = zim_hunt_mugabe
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = zim_faction_manhunt
+		}
+		x = 32
+		y = 6
+			available = {
+					OR = {
+							MZB = {
+									is_subject_of = ROOT
+								}
+							is_in_faction_with = MZB
+							544 = {
+									is_owned_by = ROOT
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = zim_mozambique_coordination
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = zim_hunt_mugabe
+		}
+		x = 32
+		y = 7
+			completion_reward = {
+					random_list = {
+							20 = {
+									set_country_flag = mugabe_arrested
+								}
+							40 = {
+									country_event = {
+											id = zimbabwe.11
+										}
+								}
+							40 = {
+									country_event = {
+											id = zimbabwe.21
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = zim_arrest_mugabe
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = zim_mozambique_coordination
+		}
+		x = 32
+		y = 8
+			completion_reward = {
+					set_country_flag = mugabe_arrested
+				}
+
+	}
+	focus = {
+		id = zim_hunt_nkomo
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = zim_faction_manhunt
+		}
+		x = 34
+		y = 6
+			available = {
+					OR = {
+							ZAM = {
+									is_subject_of = ROOT
+								}
+							is_in_faction_with = ZAM
+							771 = {
+									is_owned_by = ROOT
+								}
+						}
+				}
+			completion_reward = {
+					army_experience = 30
+					add_political_power = 150
+				}
+
+	}
+	focus = {
+		id = zim_zambian_cooperation
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = zim_hunt_nkomo
+		}
+		x = 34
+		y = 7
+			completion_reward = {
+					random_list = {
+							20 = {
+									set_country_flag = nkomo_arrested
+								}
+							40 = {
+									country_event = {
+											id = zimbabwe.31
+										}
+								}
+							40 = {
+									country_event = {
+											id = zimbabwe.41
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = zim_arrest_nkomo
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = zim_zambian_cooperation
+		}
+		x = 34
+		y = 8
+			completion_reward = {
+					set_country_flag = nkomo_arrested
+				}
+
+	}
+	focus = {
+		id = zim_breakdown
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = zim_political
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		x = 36
+		y = 2
+			available = {
+					has_country_flag = rhodesia
+					date < 1981.1.1
+					OR = {
+							has_country_flag = zanu_enabled
+							has_country_flag = zapu_enabled
+						}
+					OR = {
+							has_idea = zim_zanu_7
+							has_idea = zim_zanu_8
+							has_idea = zim_zanu_9
+							has_idea = zim_zanu_10
+							has_idea = zim_zapu_7
+							has_idea = zim_zapu_8
+							has_idea = zim_zapu_9
+							has_idea = zim_zapu_10
+						}
+				}
+
+	}
+	focus = {
+		id = zim_fair_election
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10.00
+		prerequisite = {
+			focus = zim_breakdown
+		}
+		historical_ai = {
+			NOT = { has_government = conservative }
+		}
+		mutually_exclusive = {
+			focus = zim_victory_or_death
+		}
+		x = 35
+		y = 3
+
+	}
+	focus = {
+		id = zim_no_conservative
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = zim_fair_election
+		}
+		historical_ai = {
+			has_country_flag = zimbabwe
+		}
+		x = 35
+		y = 4
+			completion_reward = {
+					custom_effect_tooltip = zimbabwe_nocon_tt
+					set_country_flag = zim_election_nocon
+				}
+
+	}
+	focus = {
+		id = zim_victory_or_death
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = zim_breakdown
+		}
+		historical_ai = {
+			has_country_flag = rhodesia
+		}
+		mutually_exclusive = {
+			focus = zim_fair_election
+		}
+		x = 37
+		y = 3
+			completion_reward = {
+					add_political_power = 150
+					add_national_unity = 0.05
+				}
+
+	}
+	focus = {
+		id = zim_quartz
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = zim_victory_or_death
+		}
+		ai_will_do = {
+		factor = 500
+		}
+		historical_ai = {
+			date > 1982.1.1
+			has_country_flag = rhodesia
+		}
+		x = 37
+		y = 4
+			completion_reward = {
+					custom_effect_tooltip = zimbabwe_quartz_tt
+					set_country_flag = zim_quartz
+				}
+
+	}
+	focus = {
+		id = zim_internal
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = zim_our_future
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		x = 64
+		y = 1
+
+	}
+	focus = {
+		id = zim_ideology
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = {
+			focus = zim_internal
+		}
+		x = 52
+		y = 2
+
+	}
+	focus = {
+		id = zim_ide_nat
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = zim_ideology
+		}
+		historical_ai = {
+			has_country_flag = zimbabwe
+		}
+		mutually_exclusive = {
+			focus = zim_ide_rhod
+			focus = zim_ide_other
+		}
+		x = 47
+		y = 3
+			bypass = {
+					has_completed_focus = zim_nat
+				}
+			completion_reward = {
+					if = {
+							limit = {
+									NOT = {
+											has_country_flag = zanu_enabled
+											has_country_flag = zapu_enabled
+										}
+								}
+							country_event = {
+									id = zimbabwe.111
+								}
+							country_event = {
+									id = zimbabwe.112
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = zim_ide_zapu
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = zim_ide_nat
+		}
+		mutually_exclusive = {
+			focus = zim_ide_zanu
+		}
+		x = 46
+		y = 4
+			completion_reward = {
+					set_party_name = {
+							ideology = nationalism
+							long_name = ZAPU_long
+							name = ZAPU
+						}
+					create_country_leader = {
+							name = "Joshua Nkomo"
+							desc = "ZIM_NKOMO_DESC"
+							picture = "gfx/leaders/ZIM/Portrait_Nkomo.dds"
+							expire = "2017.12.12"
+							ideology = african_nationalism
+							traits = {
+
+}
+						}
+					if = {
+							limit = {
+									has_idea = zim_zapu_9
+								}
+							swap_ideas = {
+									remove_idea = zim_zapu_9
+									add_idea = zim_zapu_10
+								}
+							set_country_flag = {
+									flag = zim_zapu_tension
+									value = 10
+								}
+						}
+					if = {
+							limit = {
+									has_idea = zim_zapu_8
+								}
+							swap_ideas = {
+									remove_idea = zim_zapu_8
+									add_idea = zim_zapu_10
+								}
+							set_country_flag = {
+									flag = zim_zapu_tension
+									value = 10
+								}
+						}
+					if = {
+							limit = {
+									has_idea = zim_zapu_7
+								}
+							swap_ideas = {
+									remove_idea = zim_zapu_7
+									add_idea = zim_zapu_10
+								}
+							set_country_flag = {
+									flag = zim_zapu_tension
+									value = 10
+								}
+						}
+					if = {
+							limit = {
+									has_idea = zim_zapu_6
+								}
+							swap_ideas = {
+									remove_idea = zim_zapu_6
+									add_idea = zim_zapu_10
+								}
+							set_country_flag = {
+									flag = zim_zapu_tension
+									value = 10
+								}
+						}
+					if = {
+							limit = {
+									has_idea = zim_zapu_5
+								}
+							swap_ideas = {
+									remove_idea = zim_zapu_5
+									add_idea = zim_zapu_10
+								}
+							set_country_flag = {
+									flag = zim_zapu_tension
+									value = 10
+								}
+						}
+					if = {
+							limit = {
+									has_idea = zim_zapu_4
+								}
+							swap_ideas = {
+									remove_idea = zim_zapu_4
+									add_idea = zim_zapu_10
+								}
+							set_country_flag = {
+									flag = zim_zapu_tension
+									value = 10
+								}
+						}
+					if = {
+							limit = {
+									has_idea = zim_zapu_3
+								}
+							swap_ideas = {
+									remove_idea = zim_zapu_3
+									add_idea = zim_zapu_10
+								}
+							set_country_flag = {
+									flag = zim_zapu_tension
+									value = 10
+								}
+						}
+					if = {
+							limit = {
+									has_idea = zim_zapu_2
+								}
+							swap_ideas = {
+									remove_idea = zim_zapu_2
+									add_idea = zim_zapu_10
+								}
+							set_country_flag = {
+									flag = zim_zanu_tension
+									value = 10
+								}
+						}
+					if = {
+							limit = {
+									has_idea = zim_zapu_1
+								}
+							swap_ideas = {
+									remove_idea = zim_zapu_1
+									add_idea = zim_zapu_10
+								}
+							set_country_flag = {
+									flag = zim_zapu_tension
+									value = 10
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = zim_ide_zanu
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = zim_ide_nat
+		}
+		mutually_exclusive = {
+			focus = zim_ide_zapu
+		}
+		x = 48
+		y = 4
+			completion_reward = {
+					set_party_name = {
+							ideology = nationalism
+							long_name = ZANU_long
+							name = ZANU
+						}
+					create_country_leader = {
+							name = "Robert Mugabe"
+							desc = "ZIM_MUGABE_DESC"
+							picture = "gfx/leaders/ZIM/Portrait_Mugabe.dds"
+							expire = "2017.12.12"
+							ideology = african_nationalism
+							traits = {
+
+}
+						}
+					if = {
+							limit = {
+									has_idea = zim_zanu_9
+								}
+							swap_ideas = {
+									remove_idea = zim_zanu_9
+									add_idea = zim_zanu_10
+								}
+							set_country_flag = {
+									flag = zim_zanu_tension
+									value = 10
+								}
+						}
+					if = {
+							limit = {
+									has_idea = zim_zanu_8
+								}
+							swap_ideas = {
+									remove_idea = zim_zanu_8
+									add_idea = zim_zanu_10
+								}
+							set_country_flag = {
+									flag = zim_zanu_tension
+									value = 10
+								}
+						}
+					if = {
+							limit = {
+									has_idea = zim_zanu_7
+								}
+							swap_ideas = {
+									remove_idea = zim_zanu_7
+									add_idea = zim_zanu_10
+								}
+							set_country_flag = {
+									flag = zim_zanu_tension
+									value = 10
+								}
+						}
+					if = {
+							limit = {
+									has_idea = zim_zanu_6
+								}
+							swap_ideas = {
+									remove_idea = zim_zanu_6
+									add_idea = zim_zanu_10
+								}
+							set_country_flag = {
+									flag = zim_zanu_tension
+									value = 10
+								}
+						}
+					if = {
+							limit = {
+									has_idea = zim_zanu_5
+								}
+							swap_ideas = {
+									remove_idea = zim_zanu_5
+									add_idea = zim_zanu_10
+								}
+							set_country_flag = {
+									flag = zim_zanu_tension
+									value = 10
+								}
+						}
+					if = {
+							limit = {
+									has_idea = zim_zanu_4
+								}
+							swap_ideas = {
+									remove_idea = zim_zanu_4
+									add_idea = zim_zanu_10
+								}
+							set_country_flag = {
+									flag = zim_zanu_tension
+									value = 10
+								}
+						}
+					if = {
+							limit = {
+									has_idea = zim_zanu_3
+								}
+							swap_ideas = {
+									remove_idea = zim_zanu_3
+									add_idea = zim_zanu_10
+								}
+							set_country_flag = {
+									flag = zim_zanu_tension
+									value = 10
+								}
+						}
+					if = {
+							limit = {
+									has_idea = zim_zanu_2
+								}
+							swap_ideas = {
+									remove_idea = zim_zanu_2
+									add_idea = zim_zanu_10
+								}
+							set_country_flag = {
+									flag = zim_zanu_tension
+									value = 10
+								}
+						}
+					if = {
+							limit = {
+									has_idea = zim_zanu_1
+								}
+							swap_ideas = {
+									remove_idea = zim_zanu_1
+									add_idea = zim_zanu_10
+								}
+							set_country_flag = {
+									flag = zim_zanu_tension
+									value = 10
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = zim_ide_rhod
+		icon = GFX_goal_rhodesia
+		cost = 10.00
+		prerequisite = {
+			focus = zim_ideology
+		}
+		historical_ai = {
+			has_country_flag = rhodesia
+		}
+		mutually_exclusive = {
+			focus = zim_ide_nat
+			focus = zim_ide_other
+		}
+		x = 52
+		y = 3
+
+	}
+	focus = {
+		id = zim_ide_leftwing
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = zim_ide_rhod
+		}
+		mutually_exclusive = {
+			focus = zim_ide_neutral
+			focus = zim_ide_rightwing
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 2
+				OR = {
+					has_government = socialist
+					has_government = Social_Democratic
+					has_government = Social_Liberalism
+					has_government = liberal
+				}
+			}
+		}
+		x = 50
+		y = 5
+			completion_reward = {
+					country_event = {
+							id = zimbabwePolitics.1
+						}
+				}
+
+	}
+	focus = {
+		id = zim_ide_neutral
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10.00
+		prerequisite = {
+			focus = zim_ide_rhod
+		}
+		mutually_exclusive = {
+			focus = zim_ide_leftwing
+			focus = zim_ide_rightwing
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 2
+				OR = {
+					has_government = centrist
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+		}
+		x = 52
+		y = 5
+			completion_reward = {
+					country_event = {
+							id = zimbabwePolitics.2
+						}
+				}
+
+	}
+	focus = {
+		id = zim_ide_rightwing
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = zim_ide_rhod
+		}
+		historical_ai = {
+			has_country_flag = rhodesia
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 2
+				OR = {
+					has_government = conservative
+					has_government = Liberal_Conservatism
+					has_government = Christianism
+				}
+			}
+		}
+		mutually_exclusive = {
+			focus = zim_ide_leftwing
+			focus = zim_ide_neutral
+		}
+		x = 54
+		y = 5
+			completion_reward = {
+					country_event = {
+							id = zimbabwePolitics.3
+						}
+				}
+
+	}
+	focus = {
+		id = zim_ide_other
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = zim_ideology
+		}
+		mutually_exclusive = {
+			focus = zim_ide_nat
+			focus = zim_ide_rhod
+		}
+		x = 58
+		y = 3
+
+	}
+	focus = {
+		id = zim_ide_communism
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = zim_ide_other
+		}
+		mutually_exclusive = {
+			focus = zim_ide_fascism
+			focus = zim_ide_islam
+			focus = zim_ancient_history
+		}
+		x = 55
+		y = 4
+			completion_reward = {
+					country_event = {
+							id = zimbabwePolitics.4
+						}
+				}
+
+	}
+	focus = {
+		id = zim_ancient_history
+		icon = GFX_focus_hun_elect_a_king
+		cost = 10.00
+		prerequisite = {
+			focus = zim_ide_other
+		}
+		mutually_exclusive = {
+			focus = zim_ide_communism
+			focus = zim_ide_fascism
+			focus = zim_ide_islam
+		}
+		x = 57
+		y = 4
+			completion_reward = {
+					country_event = {
+							id = zimbabwePolitics.7
+						}
+				}
+
+	}
+	focus = {
+		id = zim_ide_islam
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = zim_ide_other
+		}
+		mutually_exclusive = {
+			focus = zim_ide_communism
+			focus = zim_ancient_history
+			focus = zim_ide_fascism
+		}
+		x = 59
+		y = 4
+			completion_reward = {
+					country_event = {
+							id = zimbabwePolitics.5
+						}
+				}
+
+	}
+	focus = {
+		id = zim_ide_fascism
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = zim_ide_other
+		}
+		mutually_exclusive = {
+			focus = zim_ide_communism
+			focus = zim_ancient_history
+			focus = zim_ide_islam
+		}
+		x = 61
+		y = 4
+			completion_reward = {
+					country_event = {
+							id = zimbabwePolitics.6
+						}
+				}
+
+	}
+	focus = {
+		id = zim_building_effort
+		icon = GFX_goal_generic_production
+		cost = 10.00
+		prerequisite = {
+			focus = zim_internal
+		}
+		x = 64
+		y = 2
+			available = {
+					has_completed_focus = zim_improvements
+				}
+			completion_reward = {
+					545 = {
+							add_extra_state_shared_building_slots = 5
+						}
+					830 = {
+							add_extra_state_shared_building_slots = 3
+						}
+				}
+
+	}
+	focus = {
+		id = zim_factory_effort_1
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = zim_building_effort
+		}
+		x = 63
+		y = 3
+			available = {
+
+}
+			completion_reward = {
+					random_owned_controlled_state = {
+							add_extra_state_shared_building_slots = 4
+							add_building_construction = {
+									type = arms_factory
+									level = 4
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = zim_factory_effort_2
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = zim_factory_effort_1
+		}
+		x = 63
+		y = 4
+			available = {
+
+}
+			completion_reward = {
+					random_owned_controlled_state = {
+							add_extra_state_shared_building_slots = 4
+							add_building_construction = {
+									type = arms_factory
+									level = 4
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = zim_construction_effort_1
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = zim_building_effort
+		}
+		x = 65
+		y = 3
+			available = {
+
+}
+			completion_reward = {
+					random_owned_controlled_state = {
+							add_extra_state_shared_building_slots = 4
+							add_building_construction = {
+									type = industrial_complex
+									level = 4
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = zim_construction_effort_2
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = zim_construction_effort_1
+		}
+		x = 65
+		y = 4
+			available = {
+
+}
+			completion_reward = {
+					random_owned_controlled_state = {
+							add_extra_state_shared_building_slots = 4
+							add_building_construction = {
+									type = industrial_complex
+									level = 4
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = zim_infrastructure_effort
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = zim_internal
+		}
+		x = 68
+		y = 2
+			available = {
+					has_completed_focus = zim_improvements
+				}
+			completion_reward = {
+					every_owned_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 6
+											include_locked = yes
+										}
+								}
+							set_building_level = {
+									type = infrastructure
+									level = 4
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = zim_infrastructure_1
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = zim_infrastructure_effort
+		}
+		x = 68
+		y = 3
+			available = {
+
+}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = infrastructure
+											size > 4
+											include_locked = yes
+										}
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = zim_infrastructure_2
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = zim_infrastructure_1
+		}
+		x = 68
+		y = 4
+			available = {
+
+}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									infrastructure < 8
+								}
+							add_building_construction = {
+									type = infrastructure
+									level = 3
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = zim_infrastructure_3
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 20.00
+		prerequisite = {
+			focus = zim_infrastructure_2
+		}
+		x = 68
+		y = 5
+			available = {
+
+}
+			completion_reward = {
+					986 = {
+							if = {
+									limit = {
+											is_owned_by = ROOT
+										}
+									set_building_level = {
+											type = infrastructure
+											level = 10
+											instant_build = yes
+										}
+								}
+						}
+					987 = {
+							if = {
+									limit = {
+											is_owned_by = ROOT
+										}
+									set_building_level = {
+											type = infrastructure
+											level = 10
+											instant_build = yes
+										}
+								}
+						}
+					988 = {
+							if = {
+									limit = {
+											is_owned_by = ROOT
+										}
+									set_building_level = {
+											type = infrastructure
+											level = 10
+											instant_build = yes
+										}
+								}
+						}
+					989 = {
+							if = {
+									limit = {
+											is_owned_by = ROOT
+										}
+									set_building_level = {
+											type = infrastructure
+											level = 10
+											instant_build = yes
+										}
+								}
+						}
+					990 = {
+						if = {
+								limit = {
+										is_owned_by = ROOT
+									}
+								set_building_level = {
+										type = infrastructure
+										level = 10
+										instant_build = yes
+									}
+							}
+					}
+					545 = {
+							if = {
+									limit = {
+											is_owned_by = ROOT
+										}
+									set_building_level = {
+											type = infrastructure
+											level = 10
+											instant_build = yes
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = zim_army_effort
+		icon = GFX_goal_generic_position_armies
+		cost = 10.00
+		prerequisite = {
+			focus = zim_internal
+		}
+		x = 74
+		y = 2
+			available = {
+					has_completed_focus = zim_improvements
+				}
+			bypass = {
+
+}
+			completion_reward = {
+					army_experience = 50
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 2
+							category = infantry_weapons
+						}
+				}
+
+	}
+	focus = {
+		id = zim_artillery_effort
+		icon = GFX_goal_generic_army_artillery
+		cost = 10.00
+		prerequisite = {
+			focus = zim_army_effort
+		}
+		x = 70
+		y = 3
+			bypass = {
+
+}
+			completion_reward = {
+					add_tech_bonus = {
+							name = arty_bonus
+							bonus = 0.7
+							uses = 3
+							category = artillery
+						}
+				}
+
+	}
+	focus = {
+		id = zim_artillery_effort_2
+		icon = GFX_goal_generic_army_artillery2
+		cost = 10.00
+		prerequisite = {
+			focus = zim_artillery_effort
+		}
+		x = 70
+		y = 4
+			bypass = {
+
+}
+			completion_reward = {
+					add_tech_bonus = {
+							name = arty_bonus
+							bonus = 0.7
+							uses = 3
+							category = artillery
+						}
+				}
+
+	}
+	focus = {
+		id = zim_artillery_effort_3
+		icon = GFX_goal_generic_army_artillery2
+		cost = 10.00
+		prerequisite = {
+			focus = zim_artillery_effort_2
+		}
+		x = 70
+		y = 5
+			bypass = {
+
+}
+			completion_reward = {
+					add_tech_bonus = {
+							name = arty_bonus
+							bonus = 0.7
+							uses = 3
+							category = artillery
+						}
+				}
+
+	}
+	focus = {
+		id = zim_armor_effort
+		icon = GFX_goal_generic_build_tank
+		cost = 10.00
+		prerequisite = {
+			focus = zim_army_effort
+		}
+		x = 72
+		y = 3
+			bypass = {
+
+}
+			completion_reward = {
+					add_tech_bonus = {
+							name = armor_bonus
+							bonus = 0.6
+							uses = 1
+							category = armor
+						}
+				}
+
+	}
+	focus = {
+		id = zim_tank_effort
+		icon = GFX_goal_generic_army_tanks
+		cost = 10.00
+		prerequisite = {
+			focus = zim_armor_effort
+		}
+		x = 72
+		y = 4
+			bypass = {
+
+}
+			completion_reward = {
+					add_tech_bonus = {
+							name = armor_bonus
+							bonus = 0.7
+							uses = 2
+							category = armor
+						}
+				}
+
+	}
+	focus = {
+		id = zim_tank_effort_2
+		icon = GFX_goal_generic_army_tanks
+		cost = 10.00
+		prerequisite = {
+			focus = zim_tank_effort
+		}
+		x = 72
+		y = 5
+			bypass = {
+
+}
+			completion_reward = {
+					add_tech_bonus = {
+							name = armor_bonus
+							bonus = 0.7
+							uses = 2
+							category = armor
+						}
+				}
+
+	}
+	focus = {
+		id = zim_support_effort
+		icon = GFX_goal_generic_army_artillery
+		cost = 10.00
+		prerequisite = {
+			focus = zim_army_effort
+		}
+		x = 74
+		y = 3
+			bypass = {
+
+}
+			completion_reward = {
+					add_tech_bonus = {
+							name = support_bonus
+							bonus = 0.7
+							uses = 2
+							category = support_tech
+						}
+				}
+
+	}
+	focus = {
+		id = zim_support_effort_2
+		icon = GFX_goal_generic_army_artillery2
+		cost = 10.00
+		prerequisite = {
+			focus = zim_support_effort
+		}
+		x = 74
+		y = 4
+			bypass = {
+
+}
+			completion_reward = {
+					add_tech_bonus = {
+							name = support_bonus
+							bonus = 0.7
+							uses = 2
+							category = support_tech
+						}
+				}
+
+	}
+	focus = {
+		id = zim_infantry_effort
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = zim_army_effort
+		}
+		x = 76
+		y = 3
+			bypass = {
+
+}
+			completion_reward = {
+					army_experience = 10
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 2
+							category = infantry_weapons
+						}
+				}
+
+	}
+	focus = {
+		id = zim_infantry_effort_2
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = zim_infantry_effort
+		}
+		x = 76
+		y = 4
+			bypass = {
+
+}
+			completion_reward = {
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 2
+							category = infantry_weapons
+						}
+				}
+
+	}
+	focus = {
+		id = zim_training_focus
+		icon = GFX_goal_generic_construct_military
+		cost = 10.00
+		prerequisite = {
+			focus = zim_infantry_effort_2
+		}
+		x = 74
+		y = 5
+			bypass = {
+
+}
+			completion_reward = {
+					add_ideas = zim_shorter_training
+				}
+
+	}
+	focus = {
+		id = zim_equipment_focus
+		icon = GFX_goal_generic_small_arms
+		cost = 20.00
+		prerequisite = {
+			focus = zim_infantry_effort_2
+		}
+		x = 76
+		y = 5
+			bypass = {
+
+}
+			completion_reward = {
+					add_ideas = zim_streamlined_equipment
+				}
+
+	}
+	focus = {
+		id = zim_reform_BSAP
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = zim_equipment_focus
+		}
+		prerequisite = {
+			focus = zim_training_focus
+		}
+		x = 75
+		y = 6
+			completion_reward = {
+					division_template = {
+							name = "BSAP"
+							regiments = {
+									infantry = {
+											x = 0
+											y = 0
+										}
+									infantry = {
+											x = 0
+											y = 1
+										}
+									infantry = {
+											x = 0
+											y = 2
+										}
+									infantry = {
+											x = 1
+											y = 0
+										}
+									infantry = {
+											x = 1
+											y = 1
+										}
+									infantry = {
+											x = 1
+											y = 2
+										}
+									infantry = {
+											x = 2
+											y = 0
+										}
+									infantry = {
+											x = 2
+											y = 1
+										}
+									infantry = {
+											x = 2
+											y = 2
+										}
+								}
+							support = {
+									military_police = {
+											x = 0
+											y = 0
+										}
+									recon = {
+											x = 0
+											y = 1
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = zim_air_effort
+		icon = GFX_goal_generic_build_airforce
+		cost = 10.00
+		prerequisite = {
+			focus = zim_army_effort
+		}
+		x = 79
+		y = 3
+			bypass = {
+
+}
+			completion_reward = {
+					add_tech_bonus = {
+							name = jet_bonus
+							bonus = 0.6
+							uses = 3
+							category = jet_technology
+						}
+					air_experience = 25
+				}
+
+	}
+	focus = {
+		id = zim_fighter_effort
+		icon = GFX_goal_generic_air_fighter
+		cost = 10.00
+		prerequisite = {
+			focus = zim_air_effort
+		}
+		mutually_exclusive = {
+			focus = zim_bomber_effort
+		}
+		x = 78
+		y = 4
+			bypass = {
+
+}
+			completion_reward = {
+					add_tech_bonus = {
+							name = fighter_bonus
+							bonus = 0.6
+							uses = 5
+							category = light_fighter
+						}
+				}
+
+	}
+	focus = {
+		id = zim_bomber_effort
+		icon = GFX_goal_generic_air_bomber
+		cost = 10.00
+		prerequisite = {
+			focus = zim_air_effort
+		}
+		mutually_exclusive = {
+			focus = zim_fighter_effort
+		}
+		x = 80
+		y = 4
+			bypass = {
+
+}
+			completion_reward = {
+					add_tech_bonus = {
+							name = bomber_bonus
+							bonus = 0.6
+							uses = 2
+							category = tactical_bomber
+						}
+					add_tech_bonus = {
+							name = heavy_bomber_bonus
+							bonus = 0.6
+							uses = 2
+							category = cat_strategic_bomber
+						}
+					add_tech_bonus = {
+							name = bomber_bonus
+							bonus = 0.6
+							uses = 2
+							category = naval_bomber
+						}
+				}
+
+	}
+	focus = {
+		id = zim_air_effort_2
+		icon = GFX_goal_generic_air_fighter2
+		cost = 10.00
+		prerequisite = {
+			focus = zim_fighter_effort
+			focus = zim_bomber_effort
+		}
+		x = 77
+		y = 6
+			bypass = {
+
+}
+			completion_reward = {
+					add_tech_bonus = {
+							name = jet_bonus
+							bonus = 0.65
+							uses = 5
+							category = jet_technology
+						}
+					air_experience = 25
+				}
+
+	}
+	focus = {
+		id = zim_doctrine_effort
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10.00
+		prerequisite = {
+			focus = zim_reform_BSAP
+		}
+		prerequisite = {
+			focus = zim_air_effort_2
+		}
+		prerequisite = {
+			focus = zim_artillery_effort_3
+		}
+		prerequisite = {
+			focus = zim_tank_effort_2
+		}
+		x = 74
+		y = 7
+			bypass = {
+
+}
+			completion_reward = {
+					army_experience = 10
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.8
+							uses = 4
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = zim_doctrine_effort_2
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10.00
+		prerequisite = {
+			focus = zim_doctrine_effort
+		}
+		x = 73
+		y = 8
+			bypass = {
+
+}
+			completion_reward = {
+					army_experience = 10
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.8
+							uses = 4
+							category = air_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = zim_special_forces
+		icon = GFX_goal_generic_special_forces
+		cost = 10.00
+		prerequisite = {
+			focus = zim_doctrine_effort
+		}
+		x = 75
+		y = 8
+			bypass = {
+
+}
+			completion_reward = {
+					add_tech_bonus = {
+							name = marine_bonus
+							bonus = 0.8
+							uses = 2
+							category = marine_tech
+						}
+					add_tech_bonus = {
+							name = paratrooper_bonus
+							bonus = 0.8
+							uses = 2
+							category = para_tech
+						}
+					add_tech_bonus = {
+							name = mountain_bonus
+							bonus = 0.8
+							uses = 2
+							category = mountaineers_tech
+						}
+				}
+
+	}
+	focus = {
+		id = zim_special_forces_2
+		icon = GFX_goal_generic_special_forces
+		cost = 10.00
+		prerequisite = {
+			focus = zim_special_forces
+		}
+		x = 75
+		y = 9
+			bypass = {
+
+}
+			completion_reward = {
+					add_tech_bonus = {
+							name = marine_bonus
+							bonus = 0.8
+							uses = 2
+							category = marine_tech
+						}
+					add_tech_bonus = {
+							name = paratrooper_bonus
+							bonus = 0.8
+							uses = 2
+							category = para_tech
+						}
+					add_tech_bonus = {
+							name = mountain_bonus
+							bonus = 0.8
+							uses = 2
+							category = mountaineers_tech
+						}
+				}
+
+	}
+	focus = {
+		id = zim_doctrine_effort_3
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10.00
+		prerequisite = {
+			focus = zim_doctrine_effort_2
+		}
+		x = 73
+		y = 9
+			bypass = {
+
+}
+			completion_reward = {
+					army_experience = 10
+					add_tech_bonus = {
+							name = naval_doc_bonus
+							bonus = 0.8
+							uses = 4
+							category = naval_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = zim_annex
+		icon = GFX_goal_csrho
+		cost = 10.00
+		prerequisite = {
+			focus = zim_support
+		}
+		mutually_exclusive = {
+			focus = zim_autonomy
+		}
+		x = 3
+		y = 4
+			completion_reward = {
+					add_ideas = { zim_britification }
+					add_autonomy_ratio = {
+							value = -0.75
+						}
+				}
+
+	}
+	focus = {
+		id = zim_ide_unite_parties
+		icon = GFX_goal_zimbabwe
+		cost = 10.00
+		prerequisite = {
+			focus = zim_ide_zapu
+			focus = zim_ide_zanu
+		}
+		x = 47
+		y = 5
+			available = {
+					OR = {
+							has_country_flag = zimbabwe
+							has_government = nationalism
+						}
+				}
+			completion_reward = {
+					country_event = {
+							id = zimbabwe.71
+						}
+				}
+
+	}
+	focus = {
+		id = zim_frn_continued
+		icon = GFX_goal_generic_position_armies
+		cost = 10.00
+		prerequisite = {
+			focus = zim_frn
+		}
+		x = 3
+		y = 7
+
+	}
+	focus = {
+		id = zim_persuade_nr
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = zim_faction_continued
+			focus = zim_frn_continued
+		}
+		x = 2
+		y = 8
+			completion_reward = {
+					if = {
+							limit = {
+									has_completed_focus = zim_faction
+								}
+							ZAM = {
+									country_event = {
+											id = zimbabwe.5
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = zim_persuade_nya
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = zim_faction_continued
+			focus = zim_frn_continued
+		}
+		x = 4
+		y = 8
+			completion_reward = {
+					if = {
+							limit = {
+									has_completed_focus = zim_faction
+								}
+							NYA = {
+									country_event = {
+											id = zimbabwe.5
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = zim_form_frn
+		icon = GFX_goal_frn
+		cost = 10.00
+		prerequisite = {
+			focus = zim_persuade_nr
+		}
+		prerequisite = {
+			focus = zim_persuade_nya
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 3
+		y = 9
+			available = {
+					has_completed_focus = zim_frn
+				}
+			completion_reward = {
+					country_event = {
+							id = zimbabwe.8
+						}
+				}
+
+	}
+	focus = {
+		id = zim_create_faction
+		icon = GFX_goal_generic_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = zim_persuade_nya
+			focus = zim_persuade_nr
+			focus = zim_persuade_bot
+			focus = zim_persuade_saf
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 7
+		y = 9
+			available = {
+					has_completed_focus = zim_faction
+				}
+			completion_reward = {
+					if = {
+							limit = {
+									is_in_faction = yes
+								}
+							remove_from_faction = ROOT
+						}
+					create_faction = "Central African Federation"
+					set_country_flag = zim_made_faction
+					every_country = {
+							limit = {
+									has_country_flag = zim_persuaded
+								}
+							country_event = {
+									id = zimbabwe.6
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = zim_central_faction
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = zim_create_faction
+		}
+		x = 5
+		y = 10
+
+	}
+	focus = {
+		id = zim_east_faction
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = zim_create_faction
+		}
+		x = 9
+		y = 10
+
+	}
+	focus = {
+		id = zim_persuade_ang
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = zim_central_faction
+		}
+		x = 3
+		y = 11
+			completion_reward = {
+					ANG = {
+							country_event = {
+									id = zimbabwe.5
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = zim_persuade_mzb
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = zim_central_faction
+		}
+		x = 7
+		y = 11
+			completion_reward = {
+					MZB = {
+							country_event = {
+									id = zimbabwe.5
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = zim_persuade_taz
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = zim_central_faction
+		}
+		x = 5
+		y = 11
+			completion_reward = {
+					TAZ = {
+							country_event = {
+									id = zimbabwe.5
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = zim_persuade_doc
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = zim_central_faction
+		}
+		x = 4
+		y = 12
+			completion_reward = {
+					DOC = {
+							country_event = {
+									id = zimbabwe.5
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = zim_persuade_gab
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = zim_central_faction
+		}
+		x = 6
+		y = 12
+			completion_reward = {
+					GAB = {
+							country_event = {
+									id = zimbabwe.5
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = zim_reaffirm_taz
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = zim_east_faction
+		}
+		x = 9
+		y = 11
+			available = {
+					has_completed_focus = zim_persuade_taz
+				}
+			bypass = {
+				TAZ = {
+					is_in_faction_with = ZIM
+				}
+			}
+			completion_reward = {
+			TAZ = {
+				country_event = {id = zimbabwe.51}
+			}
+}
+
+	}
+	focus = {
+		id = zim_persuade_kna
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = zim_reaffirm_taz
+		}
+		x = 10
+		y = 12
+			completion_reward = {
+					KNA = {
+							country_event = {
+									id = zimbabwe.5
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = zim_persuade_uga
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = zim_reaffirm_taz
+		}
+		x = 8
+		y = 12
+			completion_reward = {
+					UGA = {
+							country_event = {
+									id = zimbabwe.5
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = zim_persuade_sor
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = zim_persuade_kna
+		}
+		x = 9
+		y = 13
+			completion_reward = {
+					SOR = {
+							country_event = {
+									id = zimbabwe.5
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = zim_persuade_eth
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = zim_persuade_kna
+		}
+		x = 11
+		y = 13
+			completion_reward = {
+					ETH = {
+							country_event = {
+									id = zimbabwe.5
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = zim_persuade_sud
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = zim_persuade_uga
+			focus = zim_persuade_kna
+		}
+		x = 7
+		y = 13
+			completion_reward = {
+					SUD = {
+							country_event = {
+									id = zimbabwe.5
+								}
+						}
+				}
+
+	}
+}
