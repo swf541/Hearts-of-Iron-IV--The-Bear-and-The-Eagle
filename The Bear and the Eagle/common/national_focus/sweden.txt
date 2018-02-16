@@ -2797,6 +2797,9 @@ focus_tree = {
 		prerequisite = {
 			focus = SWE_passions_of_the_right
 		}
+                                mutually_exclusive = {
+			focus = SWE_monarchy
+		}
 		x = 64
 		y = 2
 		completion_reward = {
@@ -3197,6 +3200,9 @@ focus_tree = {
 		cost = 10.00
 		prerequisite = {
 			focus = SWE_passions_of_the_right
+		}
+                                mutually_exclusive = {
+			focus = SWE_rightwing
 		}
 		x = 90
 		y = 2
