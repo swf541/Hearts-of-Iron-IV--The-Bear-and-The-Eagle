@@ -1,0 +1,19 @@
+state={
+	id=898
+	name="STATE_898"
+	history= {
+		owner = SOV
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = SOV
+		add_claim_by = PRC
+		add_claim_by = CHI
+	}
+	provinces={
+		13209 
+	}
+	manpower=852
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

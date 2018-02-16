@@ -1,0 +1,41 @@
+
+state={
+	id=758
+	name="STATE_758"
+
+	history={
+		owner = ENG
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+
+		}
+		victory_points = {
+			6626 20 
+		}
+		add_core_of = AUS
+                                add_core_of = ADR
+		1939.1.1 = {
+			buildings = {
+				air_base = 2
+				arms_factory = 1
+				industrial_complex = 2
+
+			}
+
+		}
+		1956.1.1 = {
+			owner = AUS
+
+		}
+
+	}
+
+	provinces={
+		653 6687 9646 9648 9650 9679 
+	}
+	manpower=1635862
+	buildings_max_level_factor=1.000
+	state_category=megalopolis
+}

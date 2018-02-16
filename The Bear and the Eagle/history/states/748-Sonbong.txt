@@ -1,0 +1,44 @@
+
+state={
+	id=748
+	name="STATE_748"
+	manpower = 488346
+	resources={
+		steel=3
+	}
+	buildings_max_level_factor = 1
+
+	state_category = megalopolis
+
+
+	history={
+		owner = KPA
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 3
+			dockyard = 1
+			6944 = {
+				naval_base = 2
+			}
+		}
+		
+		victory_points = {
+			6944 15
+		}	
+
+		add_core_of = KPA
+		add_core_of = KOR
+
+		1939.1.1 = {
+			buildings = {
+				air_base = 4
+				arms_factory = 1
+				industrial_complex = 5
+			}
+		}
+}
+	provinces={
+		6944 898 6822 959 6922 11878 3803 3860
+	}
+}

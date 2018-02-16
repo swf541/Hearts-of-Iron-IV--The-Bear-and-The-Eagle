@@ -1,0 +1,28 @@
+# Must replace vanilla Central africa
+state={
+	id=818
+	name="STATE_818" #Bria
+
+	state_category = town
+
+	history={
+		owner = CHA
+		add_core_of = CAR
+		add_core_of = CHA
+
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+
+		}
+		1960.1.1 = {
+			owner = CAR
+		}
+	}
+
+	provinces={
+		1974 3165 11108 5084 12719
+	}
+	manpower=482744
+	buildings_max_level_factor=1.000
+}

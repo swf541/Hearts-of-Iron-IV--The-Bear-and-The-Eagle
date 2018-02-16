@@ -1,0 +1,31 @@
+
+state={
+	id=273
+	name="STATE_273"
+
+	history={
+		owner = LBA
+		victory_points = {
+			4191 1 
+		}
+		buildings = {
+			infrastructure = 0
+
+		}
+		add_core_of = LBA
+		add_core_of = FAR
+		1951.1.1 = {
+			owner = LBA
+
+		}
+
+	}
+
+	provinces={
+		1057 1060 1140 4191 10104 10754 10785 11951 
+	}
+	manpower=62633
+	buildings_max_level_factor=1.000
+	state_category=rural
+                impassable = yes
+}

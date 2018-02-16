@@ -1,0 +1,28 @@
+
+state={
+	id=770
+	name="STATE_770" 
+
+	history={
+		owner = NYA
+		add_core_of = NYA
+		buildings = {
+			infrastructure = 3
+
+		}
+		1951.9.1 = {
+		owner = ZIM
+		}
+		1963.7.5 = {
+		owner = NYA
+		}
+
+	}
+
+	provinces={
+		12908 12986 
+	}
+	manpower=2881000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,0 +1,45 @@
+
+state={
+	id=759
+	name="STATE_759"
+	manpower = 73754
+	buildings_max_level_factor = 1
+
+	state_category = rural
+
+resources={
+		oil=4
+	}
+
+
+	history={
+		owner = SYR
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			
+			1074 = {
+				bunker = 3
+
+			}
+		}
+		
+		victory_points = {
+			6626 20
+		}	
+
+		add_core_of = ISR
+                add_core_of = UAR
+                add_core_of = UAS
+                add_core_of = FAR
+		1958.1.1 = {
+			owner = UAR
+		}
+		1969.1.1 = {
+			owner = ISR
+		}
+	}
+	provinces={
+		1074
+	}
+}

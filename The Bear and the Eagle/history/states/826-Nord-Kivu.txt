@@ -1,0 +1,25 @@
+state={
+	id=826
+	name="STATE_826" #Nord-Kivu
+	
+	state_category = town
+
+	history={
+		owner = BEL
+		add_core_of = DOC
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+
+		}
+		1960.1.1 = {
+			owner = DOC
+		}
+	}
+
+	provinces={
+		12783 1950 12847
+	}
+	manpower=876567
+	buildings_max_level_factor=1.000
+}

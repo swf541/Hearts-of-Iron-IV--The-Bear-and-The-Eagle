@@ -1,0 +1,37 @@
+
+state={
+	id=269
+	name="STATE_269"
+	resources={
+		oil=8.000
+	}
+
+	history={
+		owner = BSL
+		add_core_of = BSL
+		add_core_of = SOR
+                                victory_points = {
+			10833 5 
+		}
+		buildings = {
+			infrastructure = 3
+			10833 = {
+				naval_base = 1
+
+			}
+
+		}
+		1960.1.1 = {
+			owner = SOR
+
+		}
+
+	}
+
+	provinces={
+	           10833 12759 
+	}
+	manpower=744700
+	buildings_max_level_factor=1.000
+	state_category=town
+}

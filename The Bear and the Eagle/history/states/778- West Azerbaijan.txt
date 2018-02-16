@@ -1,0 +1,24 @@
+
+state={
+	id=778
+	name="STATE_778"
+	manpower = 207583
+	
+	state_category = rural
+
+	history={
+		owner = PER
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			1909 3
+		}
+		add_core_of = PER
+		add_core_of = KUR
+	}
+
+	provinces={
+	1636 7604 1822
+	}
+}

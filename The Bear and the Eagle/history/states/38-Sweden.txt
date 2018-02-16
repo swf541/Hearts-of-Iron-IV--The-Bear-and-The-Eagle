@@ -1,0 +1,24 @@
+
+state={
+	id=38
+	name="STATE_38"
+	history={
+		owner = SWE
+		buildings = {
+			infrastructure = 4
+			130 = {
+				naval_base = 1
+			}
+
+		}
+		add_core_of = SWE
+
+	}
+
+	provinces={
+		 130 205 3108 6126 
+	}
+	manpower=125812 
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

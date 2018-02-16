@@ -1,0 +1,23 @@
+#Must replace vanilla Equatorial Africa
+#Northern Chad 
+state={
+	id=660
+	name="STATE_660" #Borkou-Ennedi-Tibesti 
+	manpower = 59479
+	
+	state_category = wasteland
+	impassable = yes
+
+	history={
+		owner = CHA
+		add_core_of = CHA
+		buildings = {
+			infrastructure = 0
+		}
+		
+	}
+
+	provinces={
+		4902 5136 10893
+	}
+}

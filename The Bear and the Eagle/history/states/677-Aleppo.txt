@@ -1,0 +1,47 @@
+
+state={
+	id=677
+	name="STATE_677"
+
+	history={
+		owner = SYR
+		victory_points = {
+			12473 3 
+		}
+                                victory_points = {
+			13235 1 
+		}
+                                 victory_points = {
+			13236 1 
+		}
+                                 victory_points = {
+			13237 1 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+			arms_factory = 2
+
+		}
+		add_core_of = SYR
+		add_core_of = UAR
+		add_core_of = UAS
+		add_core_of = FAR
+		1958.1.1 = {
+			owner = UAR
+
+		}
+		1971.1.1 = {
+			owner = SYR
+
+		}
+
+	}
+
+	provinces={
+		7671 12473 13235 13236 13237 
+	}
+	manpower=1187126
+	buildings_max_level_factor=1.000
+	state_category=metropolis
+}

@@ -1,0 +1,29 @@
+
+state={
+	id=816
+	name="STATE_816" #Yaounde
+
+	history={
+		owner = FRA
+		add_core_of = CMR
+		victory_points = {
+			2080 5
+		}
+	
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+
+		}
+		1960.1.1 = {
+			owner = CMR
+		}
+	}
+
+	provinces={
+		2080 5036 5054
+	}
+	manpower= 1066000
+	buildings_max_level_factor=1.000
+	state_category=city
+}

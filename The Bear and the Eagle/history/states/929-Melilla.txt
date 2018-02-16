@@ -1,0 +1,26 @@
+state={
+	id=929
+	name="STATE_929"
+	history={
+		owner = SPR
+		add_core_of = SPR
+                                add_claim_by = MOR
+		victory_points = {
+			12100 1 
+		}
+		buildings = {
+			infrastructure = 4
+			12100 = {
+				naval_base = 1
+
+			}
+
+		}
+	}
+	provinces={
+		12100 
+	}
+	manpower=72000
+	buildings_max_level_factor=1.000
+                state_category=enclave
+}

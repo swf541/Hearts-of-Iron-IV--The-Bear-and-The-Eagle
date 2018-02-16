@@ -1,0 +1,25 @@
+
+state={
+	id=774
+	name="STATE_774"
+	manpower = 3094000
+	
+	state_category = city
+
+	history={
+		owner = GUI #debug
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			1909 3
+		}
+		add_core_of = GUI
+
+	}
+
+	provinces={
+	8008 5039 4957 1909 12802 12858	
+	}
+}

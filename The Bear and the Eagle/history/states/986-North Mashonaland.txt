@@ -1,0 +1,18 @@
+state={
+	id=986
+	name="STATE_986"
+	history={
+		owner = ZIM
+		add_core_of = ZIM
+		buildings = {
+			infrastructure = 2
+		}
+
+	}
+	provinces={
+		2216 
+	}
+	manpower=1501656
+	buildings_max_level_factor=1.000
+                state_category=rural
+}

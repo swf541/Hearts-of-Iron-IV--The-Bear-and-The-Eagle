@@ -1,0 +1,59 @@
+
+state={
+	id=743
+	name="STATE_743"
+
+	history={
+		owner = ENG
+		add_core_of = ENG
+		victory_points = {
+			4073 50 
+		}
+		victory_points = {
+			12049 15 
+		}
+		buildings = {
+			infrastructure = 8
+			arms_factory = 6
+			industrial_complex = 6
+			air_base = 1
+			anti_air_building = 3
+			12049 = {
+				naval_base = 2
+				bunker = 3
+			}
+			4073 = {
+				bunker = 3
+			}
+                                                1155 = {
+				naval_base = 2
+				bunker = 3
+			}
+			9947 = {
+				bunker = 3
+
+			}
+
+		}
+		add_core_of = UAR
+		add_core_of = EGY
+		add_core_of = UAS
+		add_core_of = FAR
+		1958.1.1 = {
+			owner = UAR
+
+		}
+		1971.1.1 = {
+			owner = EGY
+
+		}
+
+	}
+
+	provinces={
+		1155 4073 9947 12049 
+	}
+	manpower=62576
+	buildings_max_level_factor=1.000
+	state_category=megalopolis
+}

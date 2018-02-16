@@ -1,0 +1,26 @@
+state={
+	id=912
+	name="STATE_912"
+	history={
+		owner = ENG
+		add_core_of = CYP
+                                victory_points = {
+ 11984 5 
+}
+		buildings = {
+			infrastructure = 3
+			11984 = {
+				naval_base = 1
+
+			}
+
+		}
+
+	}
+	provinces={
+		11984 
+	}
+	manpower=286257
+	buildings_max_level_factor=1.000
+                state_category=rural
+}

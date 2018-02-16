@@ -1,0 +1,26 @@
+
+state={
+	id=335
+	name="STATE_335"
+	resources={
+		rubber=242.000
+		oil=16.000
+	}
+
+	history={
+		owner = INS
+		add_core_of = INS
+		add_core_of = DAR
+		add_core_of = INO
+		1950.1.1 = {
+			owner = INO
+		}
+	}
+
+	provinces={
+		1413 7223 7642 12277 12293 
+	}
+	manpower=18595565
+	buildings_max_level_factor=1.000
+	state_category=city
+}

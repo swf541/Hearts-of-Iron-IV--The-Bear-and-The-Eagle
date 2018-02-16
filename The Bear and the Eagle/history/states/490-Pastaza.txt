@@ -1,0 +1,29 @@
+state={
+	id=490
+	name="STATE_490"
+	manpower = 152843
+	
+	state_category = rural
+
+	history={
+		owner = SAR
+		victory_points = {
+			11531 20 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			air_base = 1
+		}
+		add_core_of = SAR
+		add_core_of = WGR
+		add_core_of = DDR
+		1957.1.1 = {
+			owner = WGR
+		}
+	}
+
+	provinces={
+		9575 11531
+	}
+}

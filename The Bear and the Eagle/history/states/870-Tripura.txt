@@ -1,0 +1,24 @@
+state={
+	id=870
+	name="STATE_870"
+	state_category = rural
+	history={
+		owner = TRP
+		add_core_of = TRP
+		add_core_of = RAJ
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		victory_points = {
+			1075 1
+		}
+
+	}
+	provinces={
+		1075 
+	}
+	manpower=1284861
+	buildings_max_level_factor=1.000
+}

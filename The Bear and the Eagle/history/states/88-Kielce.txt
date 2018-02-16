@@ -1,0 +1,23 @@
+state={
+	id=88 # Podkarpacie
+	name="STATE_88"
+	manpower = 1565700
+	resources={
+		steel=8
+		oil=4
+	}
+	
+	state_category = town
+
+	history={
+		owner = POL
+		buildings = {
+			infrastructure = 6
+		}
+		add_core_of = POL
+	}
+
+	provinces={
+		442 466 3410 6499 6522 11507 9494 
+	}
+}

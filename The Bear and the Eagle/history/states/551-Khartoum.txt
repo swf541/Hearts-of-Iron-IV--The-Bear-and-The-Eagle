@@ -1,0 +1,47 @@
+
+state={
+	id=551
+	name="STATE_551"
+	resources={
+		chromium=10.000
+		steel=22.000
+	}
+
+	history={
+		owner = SUD
+		add_core_of = SUD
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			air_base = 2
+			12725 = {
+				naval_base = 3
+
+			}
+
+		}
+		victory_points = {
+			12806 15 
+		}
+		victory_points = {
+			12725 5 
+		}
+		victory_points = {
+			12881 3 
+		}
+		victory_points = {
+			2088 2 
+		}
+		victory_points = {
+			10900 1 
+		}
+
+	}
+
+	provinces={
+		2003 2046 2088 4138 4961 4963 7925 7989 8105 10743 10745 10784 10900 10902 12725 12796 12806 12826 12836 12862 12881 
+	}
+	manpower=2993507
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

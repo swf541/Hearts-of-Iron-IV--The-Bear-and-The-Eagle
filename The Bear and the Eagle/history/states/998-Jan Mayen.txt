@@ -1,0 +1,24 @@
+state={
+	id=998
+	name="STATE_998"
+	history=
+	{
+		owner = NOR
+                                add_core_of = JNM
+								add_core_of = NOR
+                                victory_points = { 13244 1 }
+		buildings = {
+			infrastructure = 3
+                                                air_base = 1
+			13244 = {
+				naval_base = 1
+			}
+		}
+	}
+	provinces={
+		13244 
+	}
+	manpower=35
+	buildings_max_level_factor=1.000
+                state_category=tiny_island
+}

@@ -1,0 +1,20 @@
+state={
+	id=885
+	name="STATE_885"
+	history={
+		owner = KAZ
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+
+		}
+		add_core_of = KAZ
+		add_core_of = SOV		
+
+	}
+	provinces={
+		4581 7486 7777 4638 4578 10353 4636 10366
+	}
+	manpower = 250560
+	state_category = rural
+}

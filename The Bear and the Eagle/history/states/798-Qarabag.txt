@@ -1,0 +1,21 @@
+state={
+	id=798
+	name="STATE_798"
+	manpower = 146573
+	
+	state_category = town
+	
+	history={
+		owner = AZR
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		add_core_of = AZR
+		add_core_of = SOV
+	}
+
+	provinces={
+		1610 11674
+	}
+}

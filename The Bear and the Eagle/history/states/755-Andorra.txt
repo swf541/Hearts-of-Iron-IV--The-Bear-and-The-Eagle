@@ -1,0 +1,36 @@
+
+state={
+	id=755
+	name="STATE_755"
+	manpower = 20557
+	buildings_max_level_factor = 1
+
+	state_category = megalopolis
+
+
+	history={
+		owner = AND
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		
+		victory_points = {
+			3898 10
+		}	
+
+		add_core_of = AND
+
+		1939.1.1 = {
+			buildings = {
+				air_base = 2
+				arms_factory = 1
+				industrial_complex = 2
+			}
+		}
+}
+	provinces={
+		3898
+	}
+}

@@ -1,0 +1,31 @@
+state={
+	id=780
+	name="STATE_780"
+	resources = {
+		steel = 5
+	}
+	history = {
+		owner = ENG
+		
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			8051 = {
+				naval_base = 3
+			}
+		}
+		
+		add_core_of = ENG
+		add_core_of = QAT
+		1971.1.1 = {
+			owner = QAT
+		}
+	}
+	provinces={
+		8051 9849
+	}
+	manpower=57238
+	buildings_max_level_factor=1.000
+	
+	state_category = rural
+}

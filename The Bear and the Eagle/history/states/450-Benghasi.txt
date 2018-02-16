@@ -1,0 +1,34 @@
+
+state={
+	id=450
+	name="STATE_450"
+
+	history={
+		owner = LBA
+		victory_points = {
+			11954 3 
+		}
+		victory_points = {
+			1127 1 
+		}
+		buildings = {
+			infrastructure = 3
+			air_base = 1
+			11954 = {
+				naval_base = 1
+
+			}
+
+		}
+		add_core_of = LBA
+		add_core_of = FAR
+
+	}
+
+	provinces={
+		1127 1198 4120 10123 11954 
+	}
+	manpower=233535
+	buildings_max_level_factor=1.000
+	state_category=enclave
+}

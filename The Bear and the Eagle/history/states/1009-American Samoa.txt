@@ -1,0 +1,22 @@
+state={
+	id=1009
+	name="STATE_1009"
+	history={
+		owner = USA
+                                victory_points = {
+			13080 1 
+		}
+		buildings = {
+			infrastructure = 3
+			13080 = {
+				naval_base = 1
+			}
+		}
+	}
+	provinces={
+		13080 
+	}
+	manpower=68200
+	buildings_max_level_factor=1.000
+                state_category=small_island
+}

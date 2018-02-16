@@ -1,0 +1,21 @@
+state={
+	id=957
+	name="STATE_957"
+	history={
+		owner = BSL
+		add_core_of = BSL
+		add_core_of = SOR
+		buildings = {
+			infrastructure = 3
+		}
+		1960.1.1 = {
+			owner = SOR
+		}
+	}
+	provinces={
+		10921 12814 
+	}
+	manpower=114846
+	buildings_max_level_factor=1.000
+                state_category=rural
+}

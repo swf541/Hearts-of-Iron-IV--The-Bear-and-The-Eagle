@@ -1,0 +1,25 @@
+state={
+	id=952
+	name="STATE_952"
+	history=
+	{
+		owner = INS
+		add_core_of = INS
+		add_core_of = INO
+		add_core_of = INS
+		add_core_of = DAR
+		buildings = {
+			infrastructure = 3
+		}
+		1950.1.1 = {
+			owner = INO
+		}
+	}
+	provinces={
+		12113 
+	}
+	manpower=1973403
+	buildings_max_level_factor=1.000
+                state_category=tiny_island
+                
+}

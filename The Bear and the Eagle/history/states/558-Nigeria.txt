@@ -1,0 +1,61 @@
+
+state={
+	id=558
+	name="STATE_558"
+	manpower = 45219563
+	
+	state_category = city
+	
+	resources={
+		oil=18
+                steel=5
+	}
+	
+	history={
+		#owner = NIG #debug
+		owner = NIA
+		add_core_of = NIA
+		buildings = {
+			infrastructure = 3
+			arms_factory = 0
+			industrial_complex = 1
+			2050 = {
+				naval_base = 3
+			}
+		}
+		
+		#add_core_of = NIG
+		
+		victory_points = {
+			2050 3
+		}
+		victory_points = {
+			4972 4
+
+		}
+		victory_points = {
+			4952 3
+		}
+		victory_points = {
+			1932 1
+		}
+		victory_points = {
+			8034 2
+		}
+		victory_points = {
+			12900 2
+		}
+		victory_points = {
+			4997 1
+		}
+		victory_points = {
+			8021 5
+			
+		}
+
+	}
+
+	provinces={
+		1891 1932 1969 1992 2025 2050 4889 4938 4952 4972 4997 5028 7978 8021 8034 8109 10820 10831 12731 12817 12900 
+	}
+}

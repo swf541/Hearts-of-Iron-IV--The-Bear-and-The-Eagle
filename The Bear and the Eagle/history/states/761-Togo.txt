@@ -1,0 +1,28 @@
+
+state={
+	id=761
+	name="STATE_761"
+
+	history =
+	{
+		owner = TOG #debug
+		
+		victory_points = {
+			1951 3 #Lomé
+		}
+		
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = TOG
+		
+	}
+	
+	provinces={
+		12843 1951
+	}
+	manpower=1395000
+	buildings_max_level_factor=1.000
+	state_category= rural
+}

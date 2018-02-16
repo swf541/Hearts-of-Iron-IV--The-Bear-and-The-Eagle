@@ -1,0 +1,29 @@
+
+state={
+	id=820
+	name="STATE_820" # Bandundu
+	manpower = 440948
+	
+	state_category = town
+	
+	resources={
+		tungsten=2
+	}
+
+	history={
+		owner = BEL
+		add_core_of = DOC
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+
+		}
+		1960.1.1 = {
+			owner = DOC
+		}
+	}
+
+	provinces={
+		 12775 10071 7219 8016 1731
+	}
+}

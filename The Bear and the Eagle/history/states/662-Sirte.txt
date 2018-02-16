@@ -1,0 +1,27 @@
+
+state={
+	id=662
+	name="STATE_662"
+
+	history={
+		owner = ENG
+		1950.1.1 = {
+			owner = LBA
+
+		}
+		buildings = {
+			infrastructure = 1
+
+		}
+		add_core_of = LBA
+		add_core_of = FAR
+
+	}
+
+	provinces={
+		7136 8069 13073 
+	}
+	manpower=23213
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

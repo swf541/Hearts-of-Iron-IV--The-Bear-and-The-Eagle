@@ -1,0 +1,20 @@
+state={
+	id=906
+	name="STATE_906"
+	history={
+		owner = SUD
+		add_core_of = SUD
+		add_core_of = EGY
+		buildings = {
+			infrastructure = 1
+
+		}
+
+	}
+	provinces={
+		1977 
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,0 +1,39 @@
+
+state={
+	id=801
+	name="STATE_801" #Gaza
+	manpower = 969323
+	
+	state_category = city
+
+	history={
+		owner = PAL
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+			arms_factory = 3
+			air_base = 2
+						
+			4088 = {
+				bunker = 3
+
+			}
+			4088 = {
+				naval_base = 5
+			}
+		}
+
+		victory_points = {
+			4088 3
+		}
+		add_core_of = PAL
+		add_core_of = ISR
+		1967.1.1 = {
+			owner = ISR
+		}
+	}
+	provinces={
+		4088
+	}
+
+}

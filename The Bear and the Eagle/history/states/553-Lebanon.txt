@@ -1,0 +1,40 @@
+
+state={
+	id=553
+	name="STATE_553"
+	manpower = 1104000
+	resources={
+		oil=12
+		steel=8
+	}
+	
+	state_category = town
+
+	history={
+		owner = LEB
+		victory_points = {
+			792 10
+		}
+		victory_points = {
+			1108 5 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			air_base = 5
+			792 = {
+				naval_base = 3
+			}
+			
+			11919 = {
+				bunker = 3
+			}
+		}
+
+		add_core_of = LEB
+	}
+
+	provinces={
+		792 1108 11919 
+	}
+}

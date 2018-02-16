@@ -1,0 +1,31 @@
+state={
+	id=783
+	name="STATE_783"
+	resources={
+		rubber=12
+		oil=30.000
+	}
+	history={
+		owner = BRU
+		add_core_of = MAL
+		add_core_of = BRU
+		victory_points = {
+			7371 1 
+		}
+		buildings = {
+			infrastructure = 3
+			7371 = {
+				naval_base = 2
+
+			}
+
+		}
+
+	}
+	provinces={
+		7371 7387 
+	}
+	manpower=63401	
+	buildings_max_level_factor=1.000
+	state_category = rural
+}

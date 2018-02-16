@@ -1,0 +1,29 @@
+
+state={
+	id=802
+	name="STATE_802" #zefa
+	manpower = 169323
+	
+	state_category = city
+
+	history={
+		owner = ISR
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			arms_factory = 1
+						
+			7176 = {
+				bunker = 3
+
+			}
+
+		}
+
+		add_core_of = PAL
+		add_core_of = ISR
+	}
+	provinces={
+		7176
+	}
+}

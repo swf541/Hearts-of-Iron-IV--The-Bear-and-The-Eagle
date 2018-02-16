@@ -1,0 +1,21 @@
+state={
+	id=992
+	name="STATE_992"
+	history={
+		owner = VTC
+		victory_points = {
+			13238 10 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+		}
+		add_core_of = VTC
+	}
+	provinces={
+		13238 
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+                state_category=city
+}

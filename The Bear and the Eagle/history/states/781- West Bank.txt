@@ -1,0 +1,38 @@
+state={
+	id=781
+	name="STATE_781"
+	resources = {
+		steel = 5
+	}
+	history = {
+		owner = JOR
+		
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 3
+			arms_factory = 2
+						
+			7107 = {
+				bunker = 3
+
+			}
+		}
+		
+		add_core_of = ISR
+		add_core_of = PAL
+                                add_core_of = ARF
+                                add_core_of = JOR
+                                1967.1.1 = {
+
+                                      owner = ISR
+		
+                                 }
+	}
+	provinces={
+		7107
+	}
+	manpower=1068371
+	buildings_max_level_factor=1.000
+	
+	state_category = city
+}

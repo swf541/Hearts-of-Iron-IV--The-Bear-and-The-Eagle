@@ -1,0 +1,33 @@
+
+state={
+	id=769
+	name="STATE_769" 
+	
+	resources = {
+		rubber = 2
+	}
+
+	history={
+		owner = CHA
+		add_core_of = CHA
+		add_core_of = ROC
+		victory_points = {
+			12975 3
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+
+		}
+		1960.1.1 = {
+			owner = ROC
+		}
+	}
+
+	provinces={
+		12975 8193 2192
+	}
+	manpower= 808000
+	buildings_max_level_factor=1.000
+	state_category=town
+}

@@ -1,0 +1,27 @@
+state={
+	id=791
+	name="STATE_791"
+	resources={
+		rubber=240.000
+		steel=12.000
+		tungsten=104.000
+	}
+	state_category = town
+
+	history={
+		owner = MLA
+		add_core_of = MAL
+		add_core_of = MLA
+		victory_points = {
+			12271 5 
+		}
+		1955.1.1 = {
+			owner = MAL
+		}
+	}
+	provinces={
+		4367 4384 12255 12271 
+	}
+	manpower=1217775
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,28 @@
+
+state={
+	id=405
+	name="STATE_405" #Dushanbe
+
+	state_category = city
+
+	history={
+		owner = TJK
+		victory_points = {
+			10187 1
+		}
+
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 4
+			air_base = 2
+
+		}
+		add_core_of = TJK
+		add_core_of = SOV
+	}
+
+	provinces={
+		1216 1384 4542 7224 10187 10205 12218 12250 12430
+	}
+	manpower=6275820
+}

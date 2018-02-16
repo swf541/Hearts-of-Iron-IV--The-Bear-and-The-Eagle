@@ -1,0 +1,24 @@
+
+state={
+	id=824
+	name="STATE_824" # Katanga North
+	manpower = 693974
+	
+	state_category = town
+
+	history={
+		owner = BEL
+		add_core_of = DOC
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		1960.1.1 = {
+			owner = DOC
+		}
+	}
+
+	provinces={
+		  12795 1968 1516 1929   
+	}
+}

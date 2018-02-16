@@ -1,0 +1,42 @@
+
+state={
+	id=372
+	name="STATE_372"
+	manpower = 1854481
+	
+	state_category = town
+	
+	resources={
+#		aluminium=20
+
+
+# Cold War IC SkyCrystalStar's Fix1 map edit start - About 90 percent of American-mined bauxite has come from deposits in central Arkansas. The American bauxite industry held world importance during World War I, and from 1914 through 1920, supplied more than half the world's bauxite. In 1914 and again in 1915, the US supplied 94 percent of the world's bauxite.
+# Wartime aluminum demand for airplane construction during World War II caused bauxite production to jump more than 16-fold from 1939 to 1943. In 1943, US bauxite production peaked at 6.3 million tons, then fell back to 1.0 million tons in 1945.
+# https://en.wikipedia.org/wiki/Bauxite_mining_in_the_United_States
+# Besides, HoI4 vanilla long suffered a WORLD aluminum shortage.
+
+		aluminium=420
+
+# Cold War IC SkyCrystalStar's Fix1 map edit end - About 90 percent of American-mined bauxite has come from deposits in central Arkansas.
+
+	}
+
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+		}
+		add_core_of = USA
+		add_core_of = CSA
+		victory_points = {
+			12489 1 
+		}
+
+	}
+
+	provinces={
+		1503 1646 4444 4567 4597 4625 7485 7543 7586 10355 10477 12458 12489 12778 
+	}
+}

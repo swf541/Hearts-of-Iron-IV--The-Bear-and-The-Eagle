@@ -1,0 +1,29 @@
+
+state={
+	id=787
+	name="STATE_787"
+	manpower = 200000
+	
+	state_category = rural
+	
+	resources={
+		steel=5
+	}
+
+
+	history={
+		owner = FRA
+		
+		add_extra_state_shared_building_slots = 2
+
+		add_core_of = VIE
+		add_core_of = VIN
+		1954.1.1 = {
+			owner = VIN
+		}
+	}
+
+	provinces={
+		7280
+	}
+}

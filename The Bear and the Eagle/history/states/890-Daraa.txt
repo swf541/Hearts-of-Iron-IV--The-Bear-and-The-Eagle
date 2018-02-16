@@ -1,0 +1,32 @@
+state={
+	id=890
+	name="STATE_890"
+		history= {
+		owner = SYR
+		victory_points = { 13208 1 }
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = SYR
+				add_core_of = UAR
+		add_core_of = UAS
+		add_core_of = FAR
+		1958.1.1 = {
+			owner = UAR
+
+		}
+		1971.1.1 = {
+			owner = SYR
+
+		}
+		victory_points = {
+			13208 1 
+		}
+	}
+	provinces={
+		13208 
+	}
+	manpower=97969
+	buildings_max_level_factor=1.000
+                state_category=town
+}

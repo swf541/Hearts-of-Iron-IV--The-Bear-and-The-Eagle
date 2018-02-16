@@ -1,0 +1,20 @@
+state={
+	id=1019
+	name="STATE_1019"
+                history={
+		owner = URG
+                                victory_points = {
+			12481 1 
+		}
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = URG
+	}
+	provinces={
+		12481 
+	}
+	manpower=48134
+	buildings_max_level_factor=1.000
+                state_category=town
+}

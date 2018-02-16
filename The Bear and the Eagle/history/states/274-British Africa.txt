@@ -1,0 +1,36 @@
+state={
+	id=274
+	name="STATE_274"
+	
+	state_category = rural
+		resources = {
+		aluminium=7
+		oil = 5
+	}
+
+	history={
+		#owner = GHA #debug
+		owner = ENG
+		victory_points = {
+			10862 3 #Accra
+		}
+		buildings = {
+			infrastructure = 3
+			10862 = {
+				naval_base = 2
+
+			}
+
+		}
+		add_core_of = GHA
+		1960.1.1 = {
+			owner = GHA
+		}
+	}
+
+	provinces={
+		8039 8096 10862 12742 12785 12787 13136 
+	}
+	manpower=6653874
+	buildings_max_level_factor=1.000
+}

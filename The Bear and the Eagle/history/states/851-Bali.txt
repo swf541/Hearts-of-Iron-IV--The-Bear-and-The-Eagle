@@ -1,0 +1,28 @@
+state={
+	id=851
+	name="STATE_851"
+	provinces={
+		4273 
+	}
+	history={
+		owner = EIN
+		add_core_of = EIN
+		add_core_of = INO
+		add_core_of = INS
+		add_core_of = DAR
+		buildings = {
+			infrastructure = 3
+			4273 = {
+				naval_base = 1
+
+			}
+		}
+
+		1950.1.1 = {
+			owner = INO
+		}
+	}
+	manpower=1802274
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,0 +1,18 @@
+state={
+	id=977
+	name="STATE_977"
+	history={
+		owner = SWE
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = SWE
+
+	}
+	provinces={
+		125 6023 9035 9051 9151 11040 11123 11209 
+	}
+	manpower=131373
+	buildings_max_level_factor=1.000
+                state_category=rural
+}

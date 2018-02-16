@@ -1,0 +1,35 @@
+
+state={
+	id=788
+	name="STATE_788"
+	manpower = 200000
+	
+	state_category = town
+	
+	resources={
+		steel=5
+	}
+
+
+	history={
+		owner = VIE
+		victory_points = {
+			 1302 5
+		}
+		
+		add_extra_state_shared_building_slots = 2
+
+		add_core_of = VIE
+		add_core_of = VIN
+		1954.1.1 = {
+			owner = VIE
+		}
+		1974.1.1 = {
+			owner = VIN
+		}
+	}
+
+	provinces={
+		1302
+	}
+}

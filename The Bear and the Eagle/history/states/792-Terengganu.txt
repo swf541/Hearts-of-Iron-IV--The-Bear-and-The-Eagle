@@ -1,0 +1,44 @@
+state={
+	id=792
+	name="STATE_792"
+	resources={
+		rubber=254.000
+		steel=12.000
+		tungsten=88.000
+	}
+	state_category = town
+
+	history={
+		owner = MAL
+		add_core_of = MAL
+		add_core_of = MLA
+
+		victory_points = {
+			1364 1 
+		}
+		victory_points = {
+			4355 2 
+		}
+		victory_points = {
+			7329 3 
+		}
+
+# Cold War IC SkyCrystalStar's Fix1 map edit start - readded naval base back in to Terengganu. Also added back in infrastructure and some industry.
+
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			7329 = {
+				naval_base = 1
+			}
+		}
+
+# Cold War IC SkyCrystalStar's Fix1 map edit end - readded naval base back in to Terengganu.
+
+	}
+	provinces={
+		1348 1364 1392 4310 4355 7329 7399 10227 12199 
+	}
+	manpower=861000
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,29 @@
+
+state={
+	id=742
+	name="STATE_742"
+	manpower = 2174892
+	buildings_max_level_factor = 1
+
+	state_category = megalopolis
+
+
+	history={
+		owner = WGR
+		victory_points = {
+			6521 25 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+		}
+
+		add_core_of = DDR
+		add_core_of = WGR
+		add_core_of = FCB
+
+}
+	provinces={
+		6521
+	}
+}

@@ -1,0 +1,40 @@
+
+state={
+	id=749
+	name="STATE_749"
+	manpower = 693532
+	resources={
+		chromium=3
+                steel=11
+	}
+	buildings_max_level_factor = 1
+
+	state_category = megalopolis
+
+
+	history={
+		owner = KPA
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		
+		victory_points = {
+			11775 15
+		}	
+
+		add_core_of = KPA
+		add_core_of = KOR
+
+		1939.1.1 = {
+			buildings = {
+				arms_factory = 2
+				industrial_complex = 3
+			}
+		}
+}
+	provinces={
+		6963 11828 11775 906 9899 978 852 3904 3852
+	}
+}

@@ -1,0 +1,18 @@
+state={
+	id=975
+	name="STATE_975"
+	history={
+		owner = SWE
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = SWE
+		add_core_of = JMT
+	}
+	provinces={
+		46 168 3039 3162 6129 6185 9066 9154 9171 11049 11052 11148 11187 
+	}
+	manpower=115331
+	buildings_max_level_factor=1.000
+                state_category=rural
+}

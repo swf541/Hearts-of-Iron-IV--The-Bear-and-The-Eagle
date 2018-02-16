@@ -1,0 +1,31 @@
+
+state={
+	id=868
+	name="STATE_868"
+	manpower = 977100
+	
+	state_category = city
+	
+	resources={
+		oil=1
+	}
+
+	history={
+		owner = SKK
+		add_core_of = SKK
+		add_core_of = RAJ
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		victory_points = {
+			4435 1
+		}
+
+	}
+
+	provinces={
+		4435 
+	}
+}

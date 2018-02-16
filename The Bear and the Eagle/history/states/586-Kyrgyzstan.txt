@@ -1,0 +1,33 @@
+
+state={
+	id=586
+	name="STATE_586" #Alma Alta
+	resources={
+		steel=48
+		chromium=44
+		tungsten=14
+		aluminium=32
+	}
+
+
+	state_category = city
+
+	history={
+		owner = KRG
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 3
+
+		}
+		victory_points = {
+			12583 3 
+		}
+		add_core_of = KRG
+		add_core_of = SOV
+	}
+
+	provinces={
+		1591 1825 2058 4224 10660 12583 13147 1483 1675 4316 4391 4768 5062 10408 10530 12370 12511 12581 
+	}
+	manpower=2563404
+}

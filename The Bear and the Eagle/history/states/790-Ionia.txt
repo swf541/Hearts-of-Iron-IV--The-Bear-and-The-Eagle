@@ -1,0 +1,26 @@
+state={
+	id=790
+	name="STATE_790"
+	resources={
+		chromium=20.000
+		steel=20.000
+	}
+
+	history={
+		owner = GRE
+		controller = GRE
+		buildings = {
+			infrastructure = 4
+
+		}
+		add_core_of = PDG
+		add_core_of = GRE
+
+	}
+	provinces={
+		1106 1205 9916 10203 11786 11895 12001 
+	}
+	manpower=380450
+	buildings_max_level_factor=1.000
+	state_category=town
+}

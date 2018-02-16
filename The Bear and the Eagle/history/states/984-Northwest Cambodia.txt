@@ -1,0 +1,21 @@
+state={
+	id=984
+	name="STATE_984"
+	history={
+		owner = CAM
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = CAM
+		1954.1.1 = {
+			owner = CAM
+
+		}
+	}
+	provinces={
+		4251 4302 10134 10467 12447 12460 
+	}
+	manpower=230714
+	buildings_max_level_factor=1.000
+                state_category=rural
+}

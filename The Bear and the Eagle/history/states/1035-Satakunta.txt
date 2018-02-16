@@ -1,0 +1,20 @@
+state={
+	id=1035
+	name="STATE_1035"
+                history={
+		owner = FIN
+		victory_points = {
+			3117 6
+		}
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = FIN
+	}
+	provinces={
+		169 3117 
+	}
+	manpower=221740
+	buildings_max_level_factor=1.000
+                state_category=town
+}

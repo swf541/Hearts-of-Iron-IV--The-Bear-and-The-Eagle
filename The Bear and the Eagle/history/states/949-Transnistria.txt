@@ -1,0 +1,20 @@
+state={
+	id=949
+	name="STATE_949"
+	history={
+		owner = MLD
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		add_core_of = MLD
+		add_core_of = SOV
+
+	}
+	provinces={
+		13226 13227 13228 
+	}
+	manpower=475665
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

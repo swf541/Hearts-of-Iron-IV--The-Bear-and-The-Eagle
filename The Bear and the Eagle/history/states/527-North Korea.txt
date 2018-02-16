@@ -1,0 +1,21 @@
+state={
+	id=527
+	name="STATE_527"
+	manpower = 363
+	state_category = rural
+	history={
+		owner = NOR
+		add_core_of = NOR
+		buildings = {
+			infrastructure = 3
+		}
+		
+		victory_points = {
+			10 1
+		}	
+	}
+
+	provinces={
+		10
+	}
+}

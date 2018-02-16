@@ -1,0 +1,28 @@
+
+state={
+	id=538
+	name="STATE_538" # Katanga South
+	manpower = 1043974
+	
+	state_category = city
+
+	history={
+		owner = BEL
+		add_core_of = DOC
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		
+		victory_points = {
+			191 1 
+		}
+		1960.1.1 = {
+			owner = DOC
+		}
+	}
+
+	provinces={
+		4515 191 1817 12907
+	}
+}

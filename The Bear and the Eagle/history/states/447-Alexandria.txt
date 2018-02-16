@@ -1,0 +1,47 @@
+
+state={
+	id=447
+	name="STATE_447"
+	manpower = 4000000
+	resources={
+		oil=10
+	}
+	
+	state_category = metropolis
+
+	history={
+		owner = EGY
+		
+		victory_points = {
+			4076 10 
+		}
+		
+		victory_points = {
+			11964 2
+		}		
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 3
+			arms_factory = 2
+			air_base = 6
+			4076 = {
+				naval_base = 8
+			}
+		}
+
+		add_core_of = EGY
+		add_core_of = UAR
+        add_core_of = UAS
+        add_core_of = FAR
+		1958.1.1 = {
+			owner = UAR
+		}
+		1971.1.1 = {
+			owner = EGY
+		}
+	}
+
+	provinces={
+		 4076 7091 7164 10073 11964  
+	}
+}

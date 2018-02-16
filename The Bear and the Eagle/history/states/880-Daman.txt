@@ -1,0 +1,27 @@
+state={
+	id=880
+	name="STATE_880"
+	manpower = 1355600
+	state_category = large_city
+	
+	resources={
+		tungsten=30
+	}
+
+	history={
+		owner = POR
+		add_core_of = POR
+		add_core_of = RAJ
+		buildings = {
+			infrastructure = 5
+		}
+		victory_points = {
+			7013 1
+		}
+
+	}
+
+	provinces={
+		7013
+	}
+}

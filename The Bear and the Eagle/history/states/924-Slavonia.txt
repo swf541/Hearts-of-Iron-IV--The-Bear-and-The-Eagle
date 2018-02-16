@@ -1,0 +1,23 @@
+
+state={
+	id=924
+	name="STATE_924"
+
+	history={
+		owner = YUG
+		buildings = {
+			infrastructure = 4
+
+		}
+		add_core_of = YUG
+		add_core_of = CRO
+
+	}
+
+	provinces={
+		3627 6647 9595 9608 11577 
+	}
+	manpower=806192
+	buildings_max_level_factor=1.000
+	state_category=town
+}

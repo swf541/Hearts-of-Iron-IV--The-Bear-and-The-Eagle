@@ -1,0 +1,28 @@
+state={
+	id=893
+	name="STATE_893"
+	history={
+		owner = SYR
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = SYR
+		add_core_of = UAR
+		add_core_of = UAS
+		add_core_of = FAR
+		1958.1.1 = {
+			owner = UAR
+
+		}
+		1971.1.1 = {
+			owner = SYR
+
+		}
+                 }
+	provinces={
+		4550 7513 10383 12316 12442 
+	}
+	manpower=200000
+	buildings_max_level_factor=1.000
+                state_category=town
+}

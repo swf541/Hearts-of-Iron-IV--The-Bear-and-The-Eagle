@@ -1,0 +1,30 @@
+state={
+	id=842
+	name="STATE_842"
+	provinces={
+		7381 
+	}
+	history={
+		owner = PAS
+		add_core_of = PAS
+		add_core_of = INO
+		add_core_of = INS
+		add_core_of = DAR
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			dockyard = 1
+			air_base = 3
+			7381 ={
+				naval_base = 1
+			}
+		}
+		1950.1.1 = {
+			owner = INO
+		}
+	}
+
+	manpower=5546492
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

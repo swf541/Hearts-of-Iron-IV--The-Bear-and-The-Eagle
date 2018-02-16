@@ -1,0 +1,34 @@
+
+state={
+	id=4
+	name="STATE_4"
+	manpower = 2595983
+	resources={
+		oil=2
+	}
+	
+	state_category = large_city
+	
+	history={
+		owner = USA
+		victory_points = {
+			11666 30 
+		}
+		victory_points = {
+			9648 5 
+		}
+		buildings = {
+			infrastructure = 7
+			air_base = 1
+		}
+		add_core_of = AUS
+                                add_core_of = ADR
+		1956.1.1 = {
+			owner = AUS
+		}
+	}
+	provinces={
+		6691 3684 688 6708 3675
+			}
+		}
+

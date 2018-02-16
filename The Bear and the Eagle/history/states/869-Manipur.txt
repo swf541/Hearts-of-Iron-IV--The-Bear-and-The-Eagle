@@ -1,0 +1,23 @@
+state={
+	id=869
+	name="STATE_869"
+	state_category = rural
+	history={
+		owner = MNI
+		add_core_of = MNI
+		add_core_of = RAJ
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		victory_points = {
+			1581 1
+		}
+	}
+	provinces={
+		1581 
+	}
+	manpower=1136236
+	buildings_max_level_factor=1.000
+}

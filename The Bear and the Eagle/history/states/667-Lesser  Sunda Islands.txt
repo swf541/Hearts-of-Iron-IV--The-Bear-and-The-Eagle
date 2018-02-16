@@ -1,0 +1,47 @@
+
+state={
+	id=667
+	name="STATE_667"
+	resources={
+		rubber=16.000
+	}
+
+	history={
+		owner = EIN
+		add_core_of = EIN
+		add_core_of = INO
+		add_core_of = INS
+		add_core_of = DAR
+		buildings = {
+			infrastructure = 3
+			1355 = {
+				naval_base = 1
+
+			}
+			12234 = {
+				naval_base = 1
+
+			}
+
+# Cold War IC SkyCrystalStar's Fix1 map edit start - readded naval base back in, for the largest/main island and port access to the rubber resource.
+
+			10175 = {
+				naval_base = 1
+
+			}
+
+# Cold War IC SkyCrystalStar's Fix1 map edit end - readded naval base back in, for the largest/main island and port access to the rubber resource.
+
+		}
+		1950.1.1 = {
+			owner = INO
+		}
+	}
+
+	provinces={
+		1298 1339 1355 4301 4358 7321 10175 10219 12151 12219 12234 
+	}
+	manpower=3460200
+	buildings_max_level_factor=1.000
+	state_category=town
+}

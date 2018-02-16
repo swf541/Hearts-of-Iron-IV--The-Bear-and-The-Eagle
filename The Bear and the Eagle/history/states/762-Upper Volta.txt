@@ -1,0 +1,29 @@
+
+state={
+	id=762
+	name="STATE_762"
+
+	state_category=rural
+	
+	history={
+		owner = BRK
+		buildings = {
+			infrastructure = 3
+		
+		}
+		
+		victory_points = {
+			10836 3 #Ouagadougou
+		}	
+		
+		add_core_of = BRK
+	}
+
+	provinces={
+		7983 12851 8071 10836 7950 2001
+	}
+	manpower= 4284000	
+	buildings_max_level_factor=1.000
+	
+	
+}

@@ -1,0 +1,29 @@
+
+state={
+	id=823
+	name="STATE_823" # Equateur North
+	manpower = 340948
+	
+	state_category = town
+	
+	resources={
+		tungsten=2
+	}
+
+	history={
+		owner = BEL
+		add_core_of = DOC
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+
+		}
+		1960.1.1 = {
+			owner = DOC
+		}
+	}
+
+	provinces={
+		 7931 12824 12741 10883
+	}
+}

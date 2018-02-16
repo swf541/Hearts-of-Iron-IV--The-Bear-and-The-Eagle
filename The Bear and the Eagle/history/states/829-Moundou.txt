@@ -1,0 +1,27 @@
+
+state={
+	id=829
+	name="STATE_829" #Moundou
+
+	history={
+		owner = CHA
+
+		victory_points = {
+			8078 2
+		}
+
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+
+		}
+		add_core_of = CHA
+	}
+
+	provinces={
+		1993 8078
+	}
+	manpower= 469521
+	buildings_max_level_factor=1.000
+	state_category=town
+}

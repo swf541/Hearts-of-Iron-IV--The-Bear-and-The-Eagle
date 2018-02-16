@@ -1,0 +1,26 @@
+state={
+	id=903
+	name="STATE_903"
+	history={
+		owner = SWE
+		victory_points = {
+			11215 1 
+		}
+		buildings = {
+			infrastructure = 4
+			11215 = {
+				naval_base = 5
+				coastal_bunker = 3
+
+			}
+		}
+		add_core_of = SWE
+
+	}
+	provinces={
+		11215 11327 
+	}
+	manpower=158453 
+	buildings_max_level_factor=1.000
+                state_category=town
+}

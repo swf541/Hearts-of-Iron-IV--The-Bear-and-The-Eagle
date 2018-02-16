@@ -1,0 +1,27 @@
+
+state={
+	id=874
+	name="STATE_874"
+	manpower = 100000
+	
+	state_category = rural
+	resources={
+		tungsten=40
+	}
+
+	history={
+		owner = RAJ
+		add_core_of = CHI
+		add_core_of = PRC
+		add_core_of = RAJ
+                                add_core_of = TIB
+		buildings = {
+			infrastructure = 5
+		}
+
+	}
+
+	provinces={
+		1996 10810 12730 
+	}
+}

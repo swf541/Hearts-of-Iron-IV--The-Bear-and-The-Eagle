@@ -1,0 +1,25 @@
+state={
+	id=718
+	name="STATE_718" #South-Kivu
+	
+	state_category = city
+
+	history={
+		owner = BEL
+		add_core_of = DOC
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+
+		}
+		1960.1.1 = {
+			owner = DOC
+		}
+	}
+
+	provinces={
+		7161 4941 10766 1181
+	}
+	manpower=3229078
+	buildings_max_level_factor=1.000
+}

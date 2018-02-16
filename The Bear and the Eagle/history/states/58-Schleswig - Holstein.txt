@@ -1,0 +1,30 @@
+state= {
+	id=58
+	name="STATE_58"
+	manpower = 3248150 
+	state_category = large_city
+	
+	history=
+	{
+		victory_points = {
+			6389 10 
+		}
+		victory_points = {
+			9347 15 
+		}
+		owner = WGR
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+			dockyard = 2
+			air_base = 2
+		}
+		add_core_of = DEN
+		add_core_of = WGR
+		add_core_of = DDR
+	}
+
+	provinces= {
+		317 3231 3368 6257 6389 9320 9347 11331 11366
+ 	}
+}

@@ -1,0 +1,31 @@
+state={
+	id=871
+	name="STATE_871"
+	state_category = town
+	history={
+		owner = NGO
+		add_core_of = XSM
+		add_core_of = CHI
+		add_core_of = TIB
+		add_core_of = NGO
+		1951.1.1 = {
+			owner = PRC
+			controller = PRC
+			add_core_of = PRC
+
+		}
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 2
+			arms_factory = 1
+
+		}
+
+	}
+	provinces={
+		4914 4964 8037 12899 
+	}
+	manpower=396100
+	buildings_max_level_factor=1.000
+}

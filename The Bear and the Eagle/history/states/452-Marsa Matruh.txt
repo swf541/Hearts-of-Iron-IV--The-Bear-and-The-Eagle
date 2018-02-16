@@ -1,0 +1,34 @@
+
+state={
+	id=452
+	name="STATE_452"
+	manpower = 82556
+	
+	state_category = wasteland
+
+	history={
+		owner = EGY
+		buildings = {
+			infrastructure = 3
+		}
+
+	add_core_of = EGY
+		victory_points = {
+			10061 5
+		}
+        add_core_of = UAR
+        add_core_of = UAS
+        add_core_of = FAR
+		1958.1.1 = {
+			owner = UAR
+		}
+		1971.1.1 = {
+			owner = EGY
+		}
+	}
+
+	provinces={
+		7079 9989 10061 11910 11967 
+	}
+
+}

@@ -1,0 +1,35 @@
+
+state={
+	id=775
+	name="STATE_775"
+
+	history={
+		owner = FRA
+		1950.1.1 = {
+			owner = LBA
+
+		}
+		buildings = {
+			infrastructure = 2
+
+		}
+		victory_points = {
+			5004 1 
+		}
+		add_core_of = LBA
+		add_core_of = FAR
+		1951.1.1 = {
+			owner = LBA
+
+		}
+
+	}
+
+	provinces={
+		1994 4962 5004 7985 10884 12022 12082 12866 
+	}
+	manpower=27543
+	buildings_max_level_factor=1.000
+	state_category=rural
+                impassable = yes
+}

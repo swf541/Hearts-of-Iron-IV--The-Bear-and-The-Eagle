@@ -1,0 +1,20 @@
+state={
+	id=964
+	name="STATE_964"
+	history={
+		owner = WGR
+		add_core_of = WGR
+                                add_core_of = DDR
+                                add_claim_by = HOL
+		buildings = {
+			infrastructure = 5
+		}
+
+	}
+	provinces={
+		3512 6622 9281 11264 11346 11360 
+	}
+	manpower=93712
+	buildings_max_level_factor=1.000
+                state_category=town
+}

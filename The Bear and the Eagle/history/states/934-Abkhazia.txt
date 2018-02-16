@@ -1,0 +1,19 @@
+state={
+	id=934
+	name="STATE_934"
+	history={
+		owner = GEO
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = GEO
+		add_core_of = SOV
+
+	}
+	provinces={
+		672 11599 11617 
+	}
+	manpower=240705
+	buildings_max_level_factor=1.000
+                state_category=rural
+}

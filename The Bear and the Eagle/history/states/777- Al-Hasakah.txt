@@ -1,0 +1,33 @@
+
+state={
+	id=777
+	name="STATE_777"
+	manpower = 50283
+	
+	state_category = rural
+
+	history={
+		owner = SYR
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			1909 3
+		}
+		add_core_of = SYR
+		add_core_of = KUR
+                add_core_of = UAR
+                add_core_of = UAS
+                add_core_of = FAR
+		1958.1.1 = {
+			owner = UAR
+		}
+		1971.1.1 = {
+			owner = SYR
+		}
+	}
+
+	provinces={
+	1578 10882 1549
+	}
+}

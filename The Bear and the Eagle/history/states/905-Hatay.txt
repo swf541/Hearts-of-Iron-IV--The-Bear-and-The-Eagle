@@ -1,0 +1,21 @@
+state={
+	id=905
+	name="STATE_905"
+	history={
+		owner = TUR
+		add_core_of = TUR
+                                add_core_of = SYR
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+
+		}
+
+	}
+	provinces={
+		12029 
+	}
+	manpower=1253726
+	buildings_max_level_factor=1.000
+                state_category=town
+}

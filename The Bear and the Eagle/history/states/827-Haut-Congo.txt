@@ -1,0 +1,25 @@
+state={
+	id=827
+	name="STATE_827" #Haut-Congo
+	
+	state_category = city
+
+	history={
+		owner = BEL
+		add_core_of = DOC
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+
+		}
+		1960.1.1 = {
+			owner = DOC
+		}
+	}
+
+	provinces={
+		2154 12808 2073 11934 2034 6027
+	}
+	manpower=1369078
+	buildings_max_level_factor=1.000
+}

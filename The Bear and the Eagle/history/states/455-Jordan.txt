@@ -1,0 +1,39 @@
+
+state={
+	id=455
+	name="STATE_455"
+	manpower = 532000
+	
+	state_category = city
+
+	history={
+		owner = JOR
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+			arms_factory = 2
+			
+			7170 = {
+				bunker = 3
+			}
+			
+			7151 = {
+				bunker = 3
+			}
+		}
+		victory_points = {
+			7151 20
+		}
+
+		victory_points = {
+			 4440 3
+		}
+
+		add_core_of = JOR
+		add_core_of = ARF
+	}
+
+	provinces={
+		1544 4440 4574 7001 7151 7170  
+	}
+}

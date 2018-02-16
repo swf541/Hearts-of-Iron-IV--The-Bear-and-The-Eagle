@@ -1,0 +1,47 @@
+
+state={
+	id=453
+	name="STATE_453"
+	manpower = 15359
+	
+	state_category = rural
+	
+	
+	history = {
+		owner = EGY
+		buildings = {
+			infrastructure = 5
+			
+			4161 = {
+				bunker = 3
+			}
+			10002 = {
+				bunker = 3
+			}
+			12073 = {
+				bunker = 3
+			}
+
+
+		}
+
+		add_core_of = EGY
+		add_core_of = UAR
+        add_core_of = UAS
+        add_core_of = FAR
+		add_core_of = PAL
+		1958.1.1 = {
+			owner = UAR
+		}
+		1967.1.1 = {
+			owner = ISR
+		}
+		1978.1.1 = {
+			owner = EGY
+		}
+	}
+
+	provinces={
+		 4161 10002 10099 11979 12073 
+	}
+}

@@ -1,0 +1,38 @@
+state=
+{
+	id=807
+	name="STATE_807"
+	manpower = 2286596
+	
+	state_category = town
+
+	history=
+	{
+		owner = EGY
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+			arms_factory = 2
+			air_base = 5
+		}
+		
+		victory_points = {
+			1068 3
+		}
+
+		add_core_of = EGY
+		add_core_of = UAR
+        add_core_of = UAS
+        add_core_of = FAR
+		1958.1.1 = {
+			owner = UAR
+		}
+		1971.1.1 = {
+			owner = EGY
+		}
+	}
+
+	provinces={ 
+		  1068 3996 4055 10031
+	}
+}

@@ -1,0 +1,24 @@
+state={
+	id=925
+	name="STATE_925"
+	history={
+		owner = UKR
+		victory_points = { 13225 1 }
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = UKR
+		add_core_of = SOV
+                                1972.8.15 = {
+			buildings = {
+				nuclear_reactor = 4
+			}
+		}
+	}
+	provinces={
+		13225 
+	}
+	manpower=49360
+	buildings_max_level_factor=1.000
+	state_category=town
+}

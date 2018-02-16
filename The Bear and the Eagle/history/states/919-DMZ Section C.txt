@@ -1,0 +1,22 @@
+state={
+	id=919
+	name="STATE_919"
+		history={
+		owner = KPA
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = KOR
+		add_core_of = KPA
+          1953.1.1 = {
+			owner = KOR
+			set_demilitarized_zone = yes
+		}
+	}
+	provinces={
+		13221 13222 
+	}
+	manpower=1012
+	buildings_max_level_factor=1.000
+                state_category=enclave
+}

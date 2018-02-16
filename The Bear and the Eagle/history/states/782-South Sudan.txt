@@ -1,0 +1,26 @@
+state={
+	id=782
+	name="STATE_782"
+	resources = {
+		oil = 10
+	}
+	history={
+		owner = SUD
+		add_core_of = SUD
+		
+		victory_points = {
+			2096 5
+		}
+		buildings = {
+			infrastructure = 3
+
+		}
+
+	}
+	state_category = rural
+	provinces={
+		1953 2096 4033 7996 10764 10857 10859 10877 10908 12744 12800 
+	}
+	manpower=2582929
+	buildings_max_level_factor=1.000
+}

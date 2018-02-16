@@ -1,0 +1,14 @@
+state={
+	id=914
+	name="STATE_914"
+	history={
+		owner = ENG
+		add_core_of = CYP
+	}
+	provinces={
+		13215 
+	}
+	manpower=475
+	buildings_max_level_factor=1.000
+                state_category=enclave
+}

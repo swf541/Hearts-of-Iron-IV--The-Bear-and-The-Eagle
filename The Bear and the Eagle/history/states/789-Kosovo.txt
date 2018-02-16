@@ -1,0 +1,31 @@
+
+state={
+	id=789
+	name="STATE_789"
+	manpower = 1800000
+	resources={
+		aluminium=2
+		steel=7
+	}
+	
+	
+	state_category = city
+
+	history={
+		owner = YUG
+		victory_points = {
+			13205 5
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 6
+			air_base = 3
+		}
+		add_core_of = KOS
+		add_core_of = YUG
+	}
+
+	provinces={
+		13205 13206
+	}
+}

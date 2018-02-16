@@ -1,0 +1,37 @@
+
+state={
+	id=805
+	name="STATE_805"
+
+	history={
+		owner = EGY
+		buildings = {
+			infrastructure = 5
+		}
+		add_core_of = EGY
+		add_core_of = UAR
+		add_core_of = UAS
+		add_core_of = FAR
+		add_core_of = PAL
+		1958.1.1 = {
+			owner = UAR
+
+		}
+		1967.1.1 = {
+			owner = ISR
+
+		}
+		1978.1.1 = {
+			owner = EGY
+
+		}
+
+	}
+
+	provinces={
+		1112 11922 
+	}
+	manpower=15359
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

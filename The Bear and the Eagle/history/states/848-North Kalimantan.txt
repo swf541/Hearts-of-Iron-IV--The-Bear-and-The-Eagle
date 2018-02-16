@@ -1,0 +1,19 @@
+state={
+	id=848
+	name="STATE_848"
+	provinces={
+		1404 2047 7415 12243 
+	}
+	history={
+		owner = INS
+		add_core_of = INS
+		add_core_of = DAR
+		add_core_of = INO
+		1950.1.1 = {
+			owner = INO
+		}
+	}
+	manpower=314794
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

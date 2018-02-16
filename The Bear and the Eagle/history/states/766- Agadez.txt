@@ -1,0 +1,26 @@
+#Northern Niger
+state={
+	id=766
+	name="STATE_766" 
+
+	history={
+		owner = NIG 
+		victory_points = {
+			10917 1
+		}
+		buildings = {
+			infrastructure = 0
+
+		}
+		add_core_of = NIG
+
+	}
+
+	provinces={
+		1956 8128 10917 7939 4913
+	}
+	manpower=73860
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	impassable = yes
+}

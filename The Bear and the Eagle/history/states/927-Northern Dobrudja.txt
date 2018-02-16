@@ -1,0 +1,31 @@
+state={
+	id=927
+	name="STATE_927"
+		history={
+		owner = ROM
+		victory_points = {
+			657 3 
+		}
+		buildings = {
+			infrastructure = 4
+			657 = {
+				naval_base = 8
+
+			}
+			687 = {
+				naval_base = 1
+
+			}
+			dockyard = 1
+
+		}
+		add_core_of = ROM
+
+	}
+	provinces={
+		657 687 3076 9635 
+	}
+	manpower=684082
+	buildings_max_level_factor=1.000
+	state_category=town
+}

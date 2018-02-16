@@ -1,0 +1,22 @@
+state={
+	id=888
+	name="STATE_888"
+	history={
+		owner = UZB
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+
+		}
+		add_core_of = UZB
+		add_core_of = SOV		
+		victory_points = {
+			1459 3 
+		}
+	}
+	provinces={
+		1459 10488 10601
+	}
+	manpower = 350560
+	state_category = rural
+}

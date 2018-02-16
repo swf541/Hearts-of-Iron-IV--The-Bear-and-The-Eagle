@@ -1,0 +1,21 @@
+state={
+	id=994
+	name="STATE_994"
+	history={
+		owner = LIC
+		victory_points = {
+			13241 5 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+		}
+		add_core_of = LIC
+	}
+	provinces={
+		13241 
+	}
+	manpower=37340
+	buildings_max_level_factor=1.000
+                state_category=town
+}

@@ -1,0 +1,23 @@
+
+state={
+	id=825
+	name="STATE_825"
+
+	history={
+		owner = BEL
+		add_core_of = DOC
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+
+		}
+
+	}
+
+	provinces={
+		2220 
+	}
+	manpower=929078
+	buildings_max_level_factor=1.000
+	state_category=city
+}

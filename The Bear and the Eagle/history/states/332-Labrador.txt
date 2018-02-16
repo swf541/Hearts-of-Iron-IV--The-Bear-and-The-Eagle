@@ -1,0 +1,39 @@
+
+state={
+	id=332
+	name="STATE_332"
+
+	history={
+		owner = JOR
+		victory_points = {
+			1086 20 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 4
+			air_base = 2
+			arms_factory = 3
+			1086 = {
+				bunker = 3
+
+			}
+
+		}
+		add_core_of = PAL
+		add_core_of = JOR
+		add_core_of = ARF
+		add_core_of = ISR
+		1967.1.1 = {
+			owner = ISR
+
+		}
+
+	}
+
+	provinces={
+		1086 
+	}
+	manpower=2300000
+	buildings_max_level_factor=1.000
+	state_category=metropolis
+}

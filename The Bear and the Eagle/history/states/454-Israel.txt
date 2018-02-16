@@ -1,0 +1,33 @@
+
+state={
+	id=454
+	name="STATE_454" #Tel Aviv
+	manpower = 1069323
+	
+	state_category = metropolis
+
+	history={
+		owner = ISR
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 5
+			arms_factory = 4
+			air_base = 2
+			
+			4206 = {
+				naval_base = 3
+				bunker = 3
+			}
+		}
+
+		victory_points = {
+			4206 20
+		}
+
+		add_core_of = PAL
+		add_core_of = ISR
+	}
+	provinces={
+		4206
+	}
+}

@@ -1,0 +1,24 @@
+state={
+	id=837
+	name="STATE_837"
+	provinces={
+		4211 7384 7396 
+	}
+	history={
+		owner = INS
+		add_core_of = INS
+		add_core_of = DAR
+		add_core_of = INO
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+
+		}
+		1950.1.1 = {
+			owner = INO
+		}
+	}
+	manpower=431146
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

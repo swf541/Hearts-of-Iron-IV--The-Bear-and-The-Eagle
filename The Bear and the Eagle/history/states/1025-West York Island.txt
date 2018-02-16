@@ -1,0 +1,25 @@
+state={
+	id=1025
+	name="STATE_1025"
+	history=
+	{
+		owner = PHI
+                                add_core_of = CHI
+                                add_core_of = PRC
+		add_core_of = PHI
+		add_core_of = CPH
+                                add_core_of = VIE
+                                add_core_of = VIN
+		buildings = {
+			13256 = {
+				naval_base = 1
+			}
+		}
+	}
+	provinces={
+		13256 
+	}
+	manpower=1
+	buildings_max_level_factor=1.000
+                state_category=tiny_island
+}

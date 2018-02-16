@@ -1,0 +1,18 @@
+state={
+	id=950
+	name="STATE_950"
+	history={
+		owner = POL
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = POL
+		add_claim_by = CZE
+	}
+	provinces={
+		3485 
+	}
+	manpower=34284
+	buildings_max_level_factor=1.000
+                state_category=rural
+}

@@ -1,0 +1,15 @@
+state={
+	id=965
+	name="STATE_965"
+	history={
+		owner = MAU
+		add_core_of = MAU
+	}
+	provinces={
+		1897 10771 
+	}
+	manpower=45193
+	buildings_max_level_factor=1.000
+                state_category=wasteland
+                impassable = yes
+}

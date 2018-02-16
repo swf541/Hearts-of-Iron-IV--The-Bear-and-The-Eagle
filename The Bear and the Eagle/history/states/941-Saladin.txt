@@ -1,0 +1,19 @@
+state={
+	id=941
+	name="STATE_941"
+                history={
+		owner = IRQ
+		buildings = {
+			infrastructure = 4
+                                                industrial_complex = 1
+		}
+		add_core_of = IRQ
+		add_core_of = ARF
+	}
+	provinces={
+		1600 3795 
+	}
+	manpower=1408200
+	buildings_max_level_factor=1.000
+                state_category = town
+}

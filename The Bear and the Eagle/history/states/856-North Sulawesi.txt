@@ -1,0 +1,32 @@
+
+state={
+	id=856
+	name="STATE_856"
+
+	history={
+		owner = EIN
+		add_core_of = EIN
+		add_core_of = INO
+		add_core_of = INS
+		add_core_of = DAR
+		buildings = {
+			infrastructure = 3
+			air_base = 4
+			10153 = {
+				naval_base = 3
+
+			}
+
+		}
+		1950.1.1 = {
+			owner = INO
+		}
+	}
+
+	provinces={
+		1289 1351 7311 10153 10169 10197 
+	}
+	manpower=740000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

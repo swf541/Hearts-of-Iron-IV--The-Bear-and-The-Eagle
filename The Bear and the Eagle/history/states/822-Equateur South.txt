@@ -1,0 +1,29 @@
+
+state={
+	id=822
+	name="STATE_822" # Equateur South
+	manpower = 740948
+	
+	state_category = town
+	
+	resources={
+		tungsten=2
+	}
+
+	history={
+		owner = BEL
+		add_core_of = DOC
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+
+		}
+		1960.1.1 = {
+			owner = DOC
+		}
+	}
+
+	provinces={
+		 10858 8048 10951 988
+	}
+}

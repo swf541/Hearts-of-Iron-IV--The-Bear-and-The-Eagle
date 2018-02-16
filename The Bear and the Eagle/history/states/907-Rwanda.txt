@@ -1,0 +1,20 @@
+state={
+	id=907
+	name="STATE_907"
+	history={
+		owner = BEL
+		add_core_of = DOC
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+
+		}
+
+	}
+	provinces={
+		9962 
+	}
+	manpower=10393542
+	buildings_max_level_factor=1.000
+                state_category=city
+}

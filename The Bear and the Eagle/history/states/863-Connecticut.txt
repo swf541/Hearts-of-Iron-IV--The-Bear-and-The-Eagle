@@ -1,0 +1,21 @@
+state={
+	id=863
+	name="STATE_863"
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 7
+			arms_factory = 1
+			industrial_complex = 1
+			dockyard = 1
+
+		}
+		add_core_of = USA
+	}
+	provinces={
+		6909 9847 9850 
+	}
+	manpower=2007280
+	buildings_max_level_factor=1.000
+	state_category=metropolis
+}

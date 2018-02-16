@@ -1,0 +1,25 @@
+state={
+	id=915
+	name="STATE_915"
+	history={
+		owner = ENG
+		add_core_of = CYP
+                                victory_points = {
+                                          13216 1 
+                                            }
+		buildings = {
+			infrastructure = 3
+			13216 = {
+				naval_base = 1
+			}
+
+		}
+
+	}
+	provinces={
+		13216 
+	}
+	manpower=7700
+	buildings_max_level_factor=1.000
+                state_category=enclave
+}

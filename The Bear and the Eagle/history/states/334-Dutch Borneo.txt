@@ -1,0 +1,25 @@
+
+state={
+	id=334
+	name="STATE_334"
+	resources={
+		rubber=138.000
+		oil=10.000
+	}
+	history={
+		owner = GDA
+		add_core_of = GDA
+		add_core_of = INO
+		add_core_of = INS
+		add_core_of = DAR
+		1950.1.1 = {
+			owner = INO
+		}
+	}
+	provinces={
+		2184 5176 7227 7355 8221 10138 10310 12110 12280 
+	}
+	manpower=2168600
+	buildings_max_level_factor=1.000
+	state_category=rural
+}
