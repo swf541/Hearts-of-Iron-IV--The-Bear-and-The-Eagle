@@ -1,0 +1,1132 @@
+# MAIN THEME
+music = {
+	name = "maintheme"
+	file = "Codename Panzers Cold War Theme.ogg"
+	volume = 0.65
+}
+
+# General Peace:
+music = {
+	name = "An Iron Curtain"
+	file = "gen/H&G Main Theme.ogg"
+	volume = 0.65
+}
+music = {
+	name = "The War is Over"
+	file = "gen/MGS5- Big Boss Returns.ogg"
+	volume = 0.65
+}
+music = {
+	name = "A Cold War"
+	file = "gen/Planetary Annihiliation- Prepare for war.ogg"
+	volume = 0.65
+}
+
+# General war:
+music = {
+	name = "Global Nuclear Standoff"
+	file = "gen/MGS4- Encounter.ogg"
+	volume = 0.65
+}
+music = {
+	name = "When the Bombs Start to Drop"
+	file = "gen/Planetary Annihiliation- Mechanisms for war.ogg"
+	volume = 0.65
+}
+music = {
+	name = "War Between Two Worlds"
+	file = "gen/Planetary Annihiliation- Invictus.ogg"
+	volume = 0.65
+}
+
+# NATO Peace:
+music = {
+	name = "The Red Menace"
+	file = "dem/CoD Modern Warfare 2 Soundtrack - Boneyard Intro.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Blue Vs. Red"
+	file = "dem/Remo Baldi - The Theater The Dream The Battlefield.ogg"
+	volume = 0.65
+}
+music = {
+	name = "God Save the Queen"
+	file = "dem/British Anthem God Save the Queen.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Liberty Always Prevails"
+	file = "dem/Hans Zimmer - Chevaliers de Sangreal.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Our Great Nation"
+	file = "dem/Two Steps From Hell - To Glory (WWII Cinematic).ogg"
+	volume = 0.65
+}
+music = {
+	name = "I don't want to set the world on fire"
+	file = "dem/The Ink Spots- I dont want to set the world on fire.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Ain't I Right"
+	file = "dem/usa/Ain't I Right.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Japanese Internationale"
+	file = "dem/Jap/Japanese Internationale.ogg"
+	volume = 0.65
+}
+
+# NATO War:
+music = {
+	name = "Another War In Europe"
+	file = "dem/March of War - European Alliance Theme.ogg"
+	volume = 0.65
+}
+music = {
+	name = "The Yanks Will Save Us!"
+	file = "dem/H&G- America Theme.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Armies of the West"
+	file = "dem/COH2- Western Armies Theme.ogg"
+	volume = 0.65
+}
+music = {
+	name = "It's a great day to kill some Reds!"
+	file = "dem/usa/C&C America Theme.ogg"
+	volume = 0.65
+}
+music = {
+	name = "For Freedom and Democracy"
+	file = "dem/Crysis 2 Theme.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Star Spangled Banner"
+	file = "dem/Star Spangled Banner.ogg"
+	volume = 0.65
+}
+music = {
+	name = "The Young Japan"
+	file = "dem/Jap/Song of The Young Japan.ogg"
+	volume = 0.65
+}
+
+# Cominform Peace:
+music = {
+	name = "The Warsaw Pact"
+	file = "com/Song of the Warsaw Pact.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Rise, my comrades!"
+	file = "com/Hoi3 RA theme.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Lets Go!"
+	file = "com/Red Army Choir- Lets Go!.ogg"
+	volume = 0.65
+}
+music = {
+	name = "The Sacred War"
+	file = "com/USSR/The Sacred War.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Polyushka Polye"
+	file = "com/USSR/Polyushka Polye.ogg"
+	volume = 0.65
+}
+music = {
+	name = "The March Of Stalin's Artillery"
+	file = "com/March of Stalins Artillery.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Katyusha"
+	file = "com/USSR/Katyusha.ogg"
+	volume = 0.65
+}
+music = {
+	name = "The Farewell of Slavianka"
+	file = "com/USSR/Farewell of Slavianka.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Warszawianka Wersja"
+	file = "com/Pol/Warszawianka Wersja.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Aegukka"
+	file = "com/Kor/Aegukka.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Forward, Steel Division"
+	file = "com/Kor/Forward Steel-like Division.ogg"
+	volume = 0.65
+}
+music = {
+	name = "In Our Own Way, By our Own Efforts"
+	file = "com/Kor/In Our Own Way and by Our Own Efforts.ogg"
+	volume = 0.65
+}
+music = {
+	name = "No Motherland Without you"
+	file = "com/Kor/No Motherland Without You.ogg"
+	volume = 0.65
+}
+music = {
+	name = "PLA"
+	file = "com/Kor/People's Liberation Army.ogg"
+	volume = 0.65
+}
+music = {
+	name = "General Kim Jong Il"
+	file = "com/Kor/Song of General Kim Jong Il.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Today, Tomorrow, Forever"
+	file = "com/Kor/Today Tomorrow Forever.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Our Leader, Kim Il Sung"
+	file = "com/Kor/We Will Hold Generalissimo Kim Il Sung in High Esteem Forever.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Ah Nastassia"
+	file = "com/USSR/Ah Nastassia.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Chant of a Russian Soldier"
+	file = "com/USSR/Chant of a Russian Soldier.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Echelon's Song"
+	file = "com/USSR/Echelon's Song.ogg"
+	volume = 0.65
+}
+music = {
+	name = "If There Is War Tomorrow"
+	file = "com/USSR/If There Is War Tomorrow.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Kalinka"
+	file = "com/USSR/Kalinka.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Song of the Volga Boatman"
+	file = "com/USSR/Song of the Volga Boatman.ogg"
+	volume = 0.65
+}
+music = {
+	name = "The Samovars"
+	file = "com/USSR/The Samovars.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Troika Galop"
+	file = "com/USSR/Troika Galop.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Learn From Lei Feng"
+	file = "com/PRC/Learn From Lei Feng's Good Example.ogg"
+	volume = 0.65
+}
+music = {
+	name = "No New China"
+	file = "com/PRC/No Communist Party No New China.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Red Sun in the Sky"
+	file = "com/PRC/Red Sun in the Sky.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Socialism Is Good"
+	file = "com/PRC/Socialism is Good.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Moi Buoc Ta Di"
+	file = "com/Vie/Moi Buoc Ta Di.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Augen gradeaus!"
+	file = "com/DDR/Augen gradeaus!.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Lo Eterno"
+	file = "com/Cub/Lo Eterno.ogg"
+	volume = 0.65
+}
+music = {
+	name = "¡Venceremos!"
+	file = "com/Chl/Venceremos.ogg"
+	volume = 0.65
+}
+
+# Cominform War:
+music = {
+	name = "Red Alert!"
+	file = "com/C&C Red Alert- Soviet Theme.ogg"
+	volume = 0.65
+}
+music = {
+	name = "The Bear Awoken"
+	file = "com/March Of War - Soviet theme.ogg"
+	volume = 0.65
+}
+music = {
+	name = "The Might of the Red Army!"
+	file = "com/World At War - Red Army Theme.ogg"
+	volume = 0.65
+}
+music = {
+	name = "The Russians Are Coming"
+	file = "com/H&G- Soviet Theme.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Red Army is the Strongest!"
+	file = "com/USSR/Red Army is the strongest.ogg"
+	volume = 0.65
+}
+music = {
+	name = "A Red Army Rising"
+	file = "com/COH2- A red army rising.ogg"
+	volume = 0.65
+}
+music = {
+	name = "March Into Hell"
+	file = "com/COH2- March Into Hell.ogg"
+	volume = 0.65
+}
+music = {
+	name = "For the Revolution!"
+	file = "com/Kor/Defend the Headquarters of Revolution!.ogg"
+	volume = 0.65
+}
+music = {
+	name = "The Hunt for Red October"
+	file = "com/Red Army Choir - The Hunt For Red October.ogg"
+	volume = 0.65
+}
+music = {
+	name = "One Against a Hundred!"
+	file = "com/Kor/One against a hundred.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Our Victory Day"
+	file = "com/Kor/Our Victory Day.ogg"
+	volume = 0.65
+}
+music = {
+	name = "March In Step, 1, 2, 3!"
+	file = "com/Kor/March in step 1-2-3!.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Reunification"
+	file = "com/Kor/Reunification.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Training and Training"
+	file = "com/Kor/Training and Training.ogg"
+	volume = 0.65
+}
+music = {
+	name = "We Know Nobody but You"
+	file = "com/Kor/We Know Nobody but You.ogg"
+	volume = 0.65
+}
+music = {
+	name = "We Shall Hold Our Bayonets More Firmly"
+	file = "com/Kor/We Shall Hold Our Bayonets More Firmly.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Without a Break"
+	file = "com/Kor/Without a break.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Cossack's Song"
+	file = "com/USSR/Cossack's Song.ogg"
+	volume = 0.65
+}
+music = {
+	name = "My Army"
+	file = "com/USSR/My Army.ogg"
+	volume = 0.65
+}
+music = {
+	name = "The Pursuit"
+	file = "com/USSR/The Pursuit.ogg"
+	volume = 0.65
+}
+music = {
+	name = "We are the Red Cavalry"
+	file = "com/USSR/We are the Red Cavalry.ogg"
+	volume = 0.65
+}
+music = {
+	name = "I am a Soldier"
+	file = "com/PRC/I Am a Soldier.ogg"
+	volume = 0.65
+}
+music = {
+	name = "March of the Volunteers"
+	file = "com/PRC/March of the Volunteers.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Sailing the Seas"
+	file = "com/PRC/Sailing the Seas Depends on the Helmsman.ogg"
+	volume = 0.65
+}
+music = {
+	name = "When that day comes"
+	file = "com/PRC/When That Day Comes.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Marsz Gwardii Ludowej"
+	file = "com/Pol/Marsz Gwardii Ludowej.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Unsere Panzerdivision"
+	file = "com/DDR/Unsere Panzerdivision.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Der Offene Aufmarsch"
+	file = "com/DDR/Der Offene Aufmarsch.ogg"
+	volume = 0.65
+}
+
+# Non-Aligned:
+music = {
+	name = "Night Raid"
+	file = "non/Chi/Night Raid.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Battle of Bembezi"
+	file = "non/Rho/Battle of Bembezi.ogg"
+	volume = 0.65
+}
+music = {
+	name = "I wish I was a Blue Job"
+	file = "non/Rho/I wish i was a Blue Job.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Salisbury Town"
+	file = "non/Rho/Salisbury Town.ogg"
+	volume = 0.65
+}
+
+#East vs. West: 43 songs
+
+music = {
+	name = "a_path_of_danger"
+	file = "EW/East vs West - A Path of Danger.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "a_state_of_panic"
+	file = "EW/East vs West - A State of Panic.ogg"
+	volume = 0.65
+}
+
+#music = {
+#	name = "allies_battle_1"
+##	file = "EW/East vs West - Allies Battle 1.ogg"
+#	volume = 0.65
+#}
+
+music = {
+	name = "allies_peace_1_ew"
+	file = "EW/East vs West - Allies Peace 1.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "allies_peace_2_ew"
+	file = "EW/East vs West - Allies Peace 2.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "allies_peace_3"
+	file = "EW/East vs West - Allies Peace 3-Allies is Doing Well.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "an_uncertain_future"
+	file = "EW/East vs West - An Uncertain Future.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "beacon"
+	file = "EW/East vs West - Beacon.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "delightful_poetry"
+	file = "EW/East vs West - Delightful Poetry.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "democratic_rebellion"
+	file = "EW/East vs West - Democratic Rebellion.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "desert_at_dusk"
+	file = "EW/East vs West - Desert at Dusk.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "dilemma"
+	file = "EW/East vs West - Dilemma.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "diminishment"
+	file = "EW/East vs West - Diminishment.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "float"
+	file = "EW/East vs West - Float.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "general_battle_1"
+	file = "EW/East vs West - General Battle 1.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "gradient"
+	file = "EW/East vs West - Gradient.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "gridlock"
+	file = "EW/East vs West - Gridlock.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "latin_battle"
+	file = "EW/East vs West - Latin Battle.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "MEO"
+	file = "EW/East vs West - MEO.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "neutral_1"
+	file = "EW/East vs West - Neutral 1-Saved By Choppers.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "non_democratic_rebellion"
+	file = "EW/East vs West - Non Democratic Rebellion.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "nonplus"
+	file = "EW/East vs West - Nonplus.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "nuke_atmosphere"
+	file = "EW/East vs West - Nuke Atmosphere.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "orient"
+	file = "EW/East vs West - Orient.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "responsibilities"
+	file = "EW/East vs West - Responsibilities.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "russia_battle_1"
+	file = "EW/East vs West - Russia Battle 1.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "russia_battle_2"
+	file = "EW/East vs West - Russia Battle 2.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "russia_peace_1"
+	file = "EW/East vs West - Russia Peace 1.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "russia_peace_2"
+	file = "EW/East vs West - Russian Peace 2 (not finished).ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "russia_peace_3"
+	file = "EW/East vs West - Russian Peace 3.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "sand_struggle"
+	file = "EW/East vs West - Sand Struggle.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "spanish_heart"
+	file = "EW/East vs West - Spanish Heart.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "superpowers"
+	file = "EW/East vs West - Superpowers.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "ties_are_broken"
+	file = "EW/East vs West - Ties are Broken.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "tranquilite"
+	file = "EW/East vs West - Tranquilite.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "voices_through_lights"
+	file = "EW/East vs West - Voices Through Lights.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "water_vapour"
+	file = "EW/East vs West - Water Vapour.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "waveform"
+	file = "EW/East vs West - Waveform.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "world_at_war"
+	file = "EW/East vs West - World at War.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "WW3"
+	file = "EW/East vs West - WW3.ogg"
+	volume = 0.65
+}
+
+#World in Conflict: 35 songs
+
+music = {
+	name = "aim_for_the_heart"
+	file = "WiC/WiC - Aim for the Heart.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "bannons_sacrifice"
+	file = "WiC/WiC - Bannons Sacrifice.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "broken_flower"
+	file = "WiC/WiC - Broken Flower.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "classroom_rep"
+	file = "WiC/WiC - Classroom Prep.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "effloresco"
+	file = "WiC/WiC - Effloresco.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "ego"
+	file = "WiC/WiC - Ego.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "european_march"
+	file = "WiC/WiC - European March.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "fall_of_liberty"
+	file = "WiC/WiC - Fall of Liberty.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "final_fight"
+	file = "WiC/WiC - Final Fight.ogg"
+	volume = 0.70
+}
+
+music = {
+	name = "governors_island"
+	file = "WiC/WiC - Governors Island.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "hold_that_thought"
+	file = "WiC/WiC - Hold That Thought.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "hold_the_bridge"
+	file = "WiC/WiC - Hold the Bridge.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "incursio"
+	file = "WiC/WiC - Incursio.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "ivan_artillery_revert"
+	file = "WiC/WiC - Ivan Artillery Revert.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "khaldun"
+	file = "WiC/WiC - Khaldun.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "looking_for_survivors"
+	file = "WiC/WiC - Looking for Survivors.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "main_menu_wic"
+	file = "WiC/WiC - Main Menu.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "marche_de_sabatier"
+	file = "WiC/WiC - Marche de Sabatier.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "mike_and_anton"
+	file = "WiC/WiC - Mike & Anton.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "multiplayer_end"
+	file = "WiC/WiC - Multiplayer End.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "nicole"
+	file = "WiC/WiC - Nicole.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "originis"
+	file = "WiC/WiC - Originis.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "percutio"
+	file = "WiC/WiC - Percutio.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "prelude"
+	file = "WiC/WiC - Prelude.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "seattle_mission_start"
+	file = "WiC/WiC - Seattle Mission Start.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "shortcomings"
+	file = "WiC/WiC - Shortcomings.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "skynda_langsamt"
+	file = "WiC/WiC - Skynda Langsamt.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "sniper_run"
+	file = "WiC/WiC - Sniper Run.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "sollicitudo"
+	file = "WiC/WiC - Sollicitudo.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "squirrel_on_a_branch"
+	file = "WiC/WiC - Squirrel on a Branch.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "strong_point_strongpoint"
+	file = "WiC/WiC - Strong Point Strongpoint.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "the_president_and_the_nuke"
+	file = "WiC/WiC - The President and the Nuke.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "trimethoxyphenethylamine"
+	file = "WiC/WiC - Trimethoxyphenethylamine.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "tundra"
+	file = "WiC/WiC - Tundra.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "world_in_conflict"
+	file = "WiC/WiC - World in Conflict.ogg"
+	volume = 0.65
+}
+
+#Soviet Assault: 16 songs
+
+music = {
+	name = "aurora_borealis"
+	file = "WiC SA/WiC SA - Aurora Borealis.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "collective_punishment"
+	file = "WiC SA/WiC SA - Collective Punishment.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "fall_of_man"
+	file = "WiC SA/WiC SA - Fall of Man.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "incursion"
+	file = "WiC SA/WiC SA - Incursion.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "konets"
+	file = "WiC SA/WiC SA - Konets.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "marching_north"
+	file = "WiC SA/WiC SA - Marching North.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "my_name_is_legion"
+	file = "WiC SA/WiC SA - My Name is Legion.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "odinochestvo"
+	file = "WiC SA/WiC SA - Odinochestvo.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "plan_in_motion"
+	file = "WiC SA/WiC SA - Plan in Motion.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "propaganda_and_attack"
+	file = "WiC SA/WiC SA - Propaganda and Attack.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "second_thought"
+	file = "WiC SA/WiC SA - Second Thought.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "soviet_strength"
+	file = "WiC SA/WiC SA - Soviet Strength.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "soviet_waltz"
+	file = "WiC SA/WiC SA - Soviet Waltz.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "spetsnaz"
+	file = "WiC SA/WiC SA - Spetsnaz.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "the_end_is_nigh"
+	file = "WiC SA/WiC SA - The End is Nigh.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "under_pressure"
+	file = "WiC SA/WiC SA - Under Pressure.ogg"
+	volume = 0.65
+}
+
+##Bonus!
+
+music = {
+	name = "rasputin"
+	file = "bonus/rasputin.ogg"
+	volume = 0.65
+}
+
+#THE END 
+music = {
+	name = "sovietmarch"
+	file = "Soviet Music/SovietMarch.ogg"
+	volume = 0.65
+}
+music = {
+ 	name = "thehuntforredoctober"
+ 	file = "Soviet Music/The Hunt For Red October.ogg"
+ 	volume = 0.65
+ 	
+ }
+ 
+ music = {
+ 	name = "polyushkapolye"
+ 	file = "Soviet Music/Polyushka Polye.ogg"
+ 	volume = 0.65
+ 	
+ }
+ 	
+ music = {
+ 	name = "nationalanthemofussr"
+ 	file = "Soviet Music/National Anthem of USSR.ogg"
+ 	volume = 0.65
+}
+
+
+#Rhodesia
+
+music = {
+	name = "RHO_rhodesians_never_die"
+	file = "Rhodesia/RHO - Rhodesians Never Die.ogg"
+	volume = 0.65
+}
+music = {
+	name = "RHO_bembezi"
+	file = "Rhodesia/RHO - Bembezi.ogg"
+	volume = 0.65
+}
+music = {
+	name = "RHO_salisbury_town"
+	file = "Rhodesia/RHO - Salisbury Town.ogg"
+	volume = 0.65
+}
+music = {
+	name = "RHO_power_and_glory"
+	file = "Rhodesia/RHO - Power and Glory.ogg"
+	volume = 0.65
+}
+music = {
+	name = "RHO_sweet_banana"
+	file = "Rhodesia/RHO - Sweet Banana.ogg"
+	volume = 0.65
+}
+music = {
+	name = "RHO_the_udi"
+	file = "Rhodesia/RHO - The UDI.ogg"
+	volume = 0.65
+}
+music = {
+	name = "RHO_goodbye_britania"
+	file = "Rhodesia/RHO - Goodbye Britania.ogg"
+	volume = 0.65
+}
+music = {
+	name = "RHO_rock_and_roll_rhodie"
+	file = "Rhodesia/RHO - Rock and Roll Rhodie.ogg"
+	volume = 0.65
+}
+
+#Finland
+
+music = {
+	name = "fin_jaakarinmarssi"
+	file = "fin/fin_jaakarinmarssi.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "maamme"
+	file = "fin/Maamme.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "finlandia"
+	file = "fin/Finlandia.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Täällä Pohjantähden Alla"
+	file = "fin/taalla_Pohjantahden_alla.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Musta lippu yhdistää"
+	file = "fin/Musta_lippu_yhdistaa.ogg"
+	volume = 0.65
+}
+
+#Hungary
+
+music = {
+	name = "Rákóczi induló"
+	file = "com/hun/rakoczi.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Felszabadulás dala"
+	file = "com/hun/dala.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Bécsi Munkásinduló"
+	file = "com/hun/becsi.ogg"
+	volume = 0.65
+}

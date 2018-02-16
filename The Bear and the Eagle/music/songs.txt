@@ -1,0 +1,4118 @@
+
+music = {
+	song = "maintheme"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}		
+	}
+}
+
+# PEACE SONGS ##################
+music = {
+	song = "An Iron Curtain"
+	
+	chance = {
+		modifier = {
+			factor = 3
+			is_a_democracy = yes
+				has_war = no
+
+		}		
+	}	
+}
+
+music = {
+	song = "The War is Over"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+				has_war = no
+
+		}		
+	}	
+}
+
+music = {
+	song = "A Cold War"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+				has_war = no
+
+		}		
+	}
+}
+
+music = {
+	song = "The Red Menace"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+			is_a_democracy = yes
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "Blue Vs. Red"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = no
+				is_a_democracy = yes			
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "God Save the Queen"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = no
+				OR = { 
+					has_government = democratic
+					has_government = conservative
+					has_government = socialist
+					has_government = liberal
+					has_government = centrist
+				}
+				tag = ENG
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "Liberty Always Prevails"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = no
+				is_a_democracy = yes
+			}
+
+		}		
+	}	
+}
+
+#Rhodesia (many exclusive to Rhodesian events such as nationalism)
+music = {
+	song = "RHO_rock_and_roll_rhodie"
+	
+	chance = {
+	    factor = 1
+		modifier = {
+		factor = 0
+		AND = {
+			NOT = {
+				OR = {
+					original_tag  = ZIM
+					tag = ZIM
+				}
+			}
+			NOT = {
+				OR = {
+					original_tag  = ENG
+					tag = ENG
+				}
+			}
+		}
+		}
+		modifier = {
+		factor = 5
+		AND = {
+			has_idea = zim_rhodesian_propaganda
+				OR = {
+					original_tag  = ENG
+					tag = ENG
+				}
+			}
+		}
+		modifier = {
+			factor = 3
+			AND = {
+			original_tag  = ZIM
+			tag = ZIM
+			}
+			date > 1955.1.1
+			has_war = no
+			}
+		}
+	}
+
+music = {
+	song = "RHO_bembezi"
+	
+	chance = {
+	    factor = 1
+		modifier = {
+		factor = 0
+		AND = {
+			NOT = {
+				OR = {
+					original_tag  = ZIM
+					tag = ZIM
+				}
+			}
+			NOT = {
+				OR = {
+					original_tag  = ENG
+					tag = ENG
+				}
+			}
+		}
+		}
+		modifier = {
+		factor = 5
+		AND = {
+			has_idea = zim_rhodesian_propaganda
+				OR = {
+					original_tag  = ENG
+					tag = ENG
+				}
+			}
+		}
+	}
+}
+
+music = {
+	song = "RHO_rhodesians_never_die"
+	
+	chance = {
+	    factor = 1
+		modifier = {
+		factor = 0
+		AND = {
+			NOT = {
+				OR = {
+					original_tag  = ZIM
+					tag = ZIM
+				}
+			}
+			NOT = {
+				OR = {
+					original_tag  = ENG
+					tag = ENG
+				}
+			}
+		}
+		}
+		modifier = {
+		factor = 5
+		AND = {
+			has_idea = zim_rhodesian_propaganda
+				OR = {
+					original_tag  = ENG
+					tag = ENG
+				}
+			}
+		}
+	}
+}
+
+music = {
+	song = "RHO_power_and_glory"
+	
+	chance = {
+	    factor = 1
+		modifier = {
+		factor = 0
+		AND = {
+			NOT = {
+				OR = {
+					original_tag  = ZIM
+					tag = ZIM
+				}
+			}
+			NOT = {
+				OR = {
+					original_tag  = ENG
+					tag = ENG
+				}
+			}
+		}
+		}
+		modifier = {
+		factor = 5
+		AND = {
+			has_idea = zim_rhodesian_propaganda
+				OR = {
+					original_tag  = ENG
+					tag = ENG
+				}
+			}
+		}
+	}
+}
+music = {
+	song = "RHO_sweet_banana"
+	
+	chance = {
+	    factor = 1
+		modifier = {
+		factor = 0
+		AND = {
+			NOT = {
+				OR = {
+					original_tag  = ZIM
+					tag = ZIM
+				}
+			}
+			NOT = {
+				OR = {
+					original_tag  = ENG
+					tag = ENG
+				}
+			}
+		}
+		}
+		modifier = {
+		factor = 6
+		AND = {
+			has_idea = zim_rhodesian_propaganda
+				OR = {
+					original_tag  = ENG
+					tag = ENG
+				}
+			}
+		}
+	}
+}
+music = {
+	song = "RHO_the_udi"
+	
+	chance = {
+	    factor = 1
+		modifier = {
+			factor = 3
+			AND = {
+			OR = {
+			original_tag  = ZIM
+			tag = ZIM
+			}
+			has_country_flag = passed_udi
+			}
+		}
+	}
+}
+music = {
+	song = "RHO_goodbye_britania"
+	
+	chance = {
+	    factor = 1
+		modifier = {
+			factor = 3
+			AND = {
+			OR = {
+			original_tag  = ZIM
+			tag = ZIM
+			}
+			has_country_flag = passed_udi
+			}
+		}
+	}
+}
+
+music = {
+	song = "Our Great Nation"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = no
+				OR = { 
+					has_government = democratic
+					has_government = conservative
+					has_government = socialist
+					has_government = liberal
+					has_government = centrist
+				}
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "I don't want to set the world on fire"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+					has_war = no
+				OR = { 
+					has_government = democratic
+					has_government = conservative
+					has_government = socialist
+					has_government = liberal
+					has_government = centrist
+				}
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "The Warsaw Pact"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = no
+				OR = { 
+						OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+					has_government = maoism
+					has_government = trotskyism
+				}
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "Rise, my comrades!"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = no
+				OR = { 
+						OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+					has_government = maoism
+					has_government = trotskyism
+				}
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "Lets Go!"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = no
+				OR = { 
+						OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+					has_government = maoism
+					has_government = trotskyism
+				}
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "The Sacred War"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = no
+				OR = { 
+						OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+					has_government = maoism
+					has_government = trotskyism
+				}
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "Polyushka Polye"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = no
+				OR = { 
+						OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+					has_government = maoism
+					has_government = trotskyism
+				}
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "The March Of Stalin's Artillery"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = no
+				OR = { 
+						OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+					has_government = maoism
+					has_government = trotskyism
+				}
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "Katyusha"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = no
+				OR = { 
+						OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+					has_government = maoism
+					has_government = trotskyism
+				}
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "The Farewell of Slavianka"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = no
+				OR = { 
+						OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+					has_government = maoism
+					has_government = trotskyism
+				}
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "The Hunt for Red October"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = no
+				OR = { 
+						OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+					has_government = maoism
+					has_government = trotskyism
+				}
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "Aegukka"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = no
+				OR = { 
+						OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+					has_government = maoism
+					has_government = trotskyism
+				}
+				tag = KOR
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "Forward, Steel Division"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = no
+				OR = { 
+						OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+					has_government = maoism
+					has_government = trotskyism
+				}
+				tag = KOR
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "In Our Own Way, By our Own Efforts"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = no
+				OR = { 
+						OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+					has_government = maoism
+					has_government = trotskyism
+				}
+				tag = KOR
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "No Motherland Without you"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = no
+				OR = { 
+						OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+					has_government = maoism
+					has_government = trotskyism
+				}
+				tag = KOR
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "PLA"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = no
+				OR = { 
+						OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+					has_government = maoism
+					has_government = trotskyism
+				}
+				tag = KOR
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "General Kim Jong Il"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = no
+				OR = { 
+						OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+					has_government = maoism
+					has_government = trotskyism
+				}
+				tag = KOR
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "Today, Tomorrow, Forever"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = no
+				OR = { 
+						OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+					has_government = maoism
+					has_government = trotskyism
+				}
+				tag = KOR
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "Our Leader, Kim Il Sung"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = no
+				OR = { 
+						OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+					has_government = maoism
+					has_government = trotskyism
+				}
+				tag = KOR
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "Ah Nastassia"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = no
+				OR = { 
+						OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+					has_government = maoism
+					has_government = trotskyism
+				}
+				tag = SOV
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "Chant of a Russian Soldier"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = no
+				OR = { 
+						OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+					has_government = maoism
+					has_government = trotskyism
+				}
+				tag = SOV
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "Echelon's Song"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = no
+				OR = { 
+						OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+					has_government = maoism
+					has_government = trotskyism
+				}
+				tag = SOV
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "If There Is War Tomorrow"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = no
+				OR = { 
+						OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+					has_government = maoism
+					has_government = trotskyism
+				}
+				tag = SOV
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "Kalinka"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = no
+				OR = { 
+						OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+					has_government = maoism
+					has_government = trotskyism
+				}
+				tag = SOV
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "Song of the Volga Boatman"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = no
+				OR = { 
+						OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+					has_government = maoism
+					has_government = trotskyism
+				}
+				tag = SOV
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "Troika Galop"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = no
+				OR = { 
+						OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+					has_government = maoism
+					has_government = trotskyism
+				}
+				tag = SOV
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "Learn From Lei Feng"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = no
+			has_government = maoism
+				tag = PRC
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "No New China"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = no
+			has_government = maoism
+				tag = PRC
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "Red Sun in the Sky"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = no
+			has_government = maoism
+				tag = PRC
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "Socialism Is Good"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = no
+			has_government = maoism
+				tag = PRC
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "Moi Buoc Ta Di"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = no
+				OR = { 
+						OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+					has_government = maoism
+					has_government = trotskyism
+				}
+				tag = VIE
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "Augen gradeaus!"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = no
+				OR = { 
+						OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+					has_government = maoism
+					has_government = trotskyism
+				}
+				tag = DDR
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "Lo Eterno"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = no
+				OR = { 
+						OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+					has_government = maoism
+					has_government = trotskyism
+				}
+				tag = CUB
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "¡Venceremos!"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = no
+				OR = { 
+						OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+					has_government = maoism
+					has_government = trotskyism
+				}
+				tag = CHL
+			}
+		}		
+	}	
+}
+
+
+# WAR SONGS ####################
+music = {
+	song = "Global Nuclear Standoff"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+				has_war = yes
+
+		}		
+	}	
+}
+
+music = {
+	song = "When the Bombs Start to Drop"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+				has_war = yes
+
+		}		
+	}	
+}
+
+music = {
+	song = "War Between Two Worlds"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+				has_war = yes
+
+		}		
+	}	
+}
+
+music = {
+	song = "Another War In Europe"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = yes
+				OR = { 
+					has_government = democratic
+					has_government = conservative
+					has_government = socialist
+					has_government = liberal
+					has_government = centrist
+				}
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "The Yanks Will Save Us!"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = yes
+				OR = { 
+					has_government = democratic
+					has_government = conservative
+					has_government = socialist
+					has_government = liberal
+					has_government = centrist
+				}
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "Armies of the West"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = yes
+				OR = { 
+					has_government = democratic
+					has_government = conservative
+					has_government = socialist
+					has_government = liberal
+					has_government = centrist
+				}
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "It's a great day to kill some Reds!"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = yes
+				tag = USA
+			}
+		}
+	}
+}
+
+music = {
+	song = "For Freedom and Democracy"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = yes
+				OR = { 
+					has_government = democratic
+					has_government = conservative
+					has_government = socialist
+					has_government = liberal
+					has_government = centrist
+				}
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "Red Alert!"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = yes
+				OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "The Bear Awoken"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = yes
+				OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "The Might of the Red Army!"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = yes
+				OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "The Russians Are Coming"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = yes
+				OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "Red Army is the Strongest!"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = yes
+				OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+				tag = SOV
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "A Red Army Rising"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = yes
+				OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "March Into Hell"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = yes
+				OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "For the Revolution!"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = yes
+				OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+				tag = KOR
+			}
+		}
+	}	
+}
+
+music = {
+    song = "Warszawianka Wersja"
+    
+    chance = {
+        
+        modifier = {
+            factor = 3
+
+            AND = {
+            	has_war = no
+            	OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+				tag = POL
+            }
+        }
+    }
+}
+
+music = {
+	song = "One Against a Hundred!"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = yes
+				OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+				tag = KOR
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "Our Victory Day"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = yes
+				OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+				tag = KOR
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "March In Step, 1, 2, 3!"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = yes
+				OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+				tag = KOR
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "Reunification"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = yes
+				OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+				tag = KOR
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "Training and Training"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = yes
+				OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+				tag = KOR
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "We Know Nobody but You"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = yes
+				OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+				tag = KOR
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "We Shall Hold Our Bayonets More Firmly"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = yes
+				OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+				tag = KOR
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "Without a Break"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = yes
+				OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+				tag = KOR
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "Cossack's Song"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = yes
+				OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+				tag = SOV
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "My Army"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = yes
+				OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+				tag = SOV
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "The Pursuit"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = yes
+				OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+				tag = SOV
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "We are the Red Cavalry"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = yes
+				OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+				tag = SOV
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "I am a Soldier"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = yes
+				has_government = maoism
+				tag = PRC
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "March of the Volunteers"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = yes
+				has_government = maoism
+				tag = PRC
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "Sailing the Seas"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = yes
+				has_government = maoism
+				tag = PRC
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "When that day comes"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = yes
+				has_government = maoism
+				tag = PRC
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "Marsz Gwardii Ludowej"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = yes
+				OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+				tag = POL
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "Moi Buoc Ta Di"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = yes
+				OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+				tag = VIE
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "Unsere Panzerdivision"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = yes
+				OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+				tag = DDR
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "Der Offene Aufmarsch"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = yes
+				OR = { 
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+				}
+				tag = DDR
+			}
+		}		
+	}	
+}
+
+
+# REACTIONARY SONGS ####################
+music = {
+	song = "Night Raid"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_government = neutrality
+				tag = CHI
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "Battle of Bembezi"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_government = neutrality
+				tag = ZAM
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "I wish I was a Blue Job"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_government = neutrality
+				tag = ZAM
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "Salisbury Town"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_government = neutrality
+				tag = ZAM
+			}
+		}		
+	}	
+}
+
+# East vs. West ## Why did you get cancelled?!WHY? ######################################################
+music = {
+	song = "a_path_of_danger"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+			
+
+			has_war = no
+			
+		}		
+	}	
+}
+
+music = {
+	song = "a_state_of_panic"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+			
+
+		    AND = {	
+			has_war = no
+			has_government = democratic
+			}
+			
+		}		
+	}	
+}
+
+#music = {
+#	song = "allies_battle_1"
+#	
+#	chance = {
+#	    factor = 2
+#		modifier = {
+#			
+#
+#			has_war = yes
+#			has_government = democratic
+#		}		
+#	}	
+#}
+
+music = {
+	song = "allies_peace_1_ew"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+			
+
+		    AND = {	
+			has_war = no
+			has_government = democratic
+			}
+			
+		}		
+	}	
+}
+
+music = {
+	song = "allies_peace_2_ew"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+			
+
+			AND = {	
+			has_war = no
+			has_government = democratic
+			}
+			
+		}		
+	}	
+}
+
+music = {
+	song = "allies_peace_3"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+			
+
+			AND = {	
+			has_war = no
+			has_government = democratic
+			}
+				
+		}		
+	}	
+}
+
+music = {
+	song = "an_uncertain_future"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+			
+
+			OR = {
+			
+				AND = {	
+				has_war = no
+				has_government = democratic
+				}
+				
+				AND = {	
+				has_war = no
+				has_government = neutrality
+				}
+			
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "beacon"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+			
+			OR = {
+			
+				AND = {	
+				has_war = no
+				has_government = democratic
+				}
+				
+				AND = {	
+				has_war = no
+				has_government = neutrality
+				}
+				
+				AND = {	
+				has_war = no
+				has_government = fascism
+				}
+			
+			}
+			
+		}		
+	}	
+}
+
+
+music = {
+	song = "delightful_poetry"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+			
+
+			OR = {
+			
+				AND = {	
+				has_war = no
+				has_government = democratic
+				}
+				
+				AND = {	
+				has_war = no
+				has_government = neutrality
+				}
+				
+				AND = {	
+				has_war = no
+				has_government = fascism
+				}
+			
+			}
+			
+		}		
+	}	
+}
+
+music = {
+	song = "democratic_rebellion"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+			
+			
+		    AND = {
+			has_war = no
+			has_government = democratic
+			}
+			
+		}		
+	}	
+}
+
+music = {
+	song = "desert_at_dusk"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+			
+
+			AND = {	
+			has_war = no
+			has_government = neutrality
+			}
+			
+		}		
+	}	
+}
+
+music = {
+	song = "dilemma"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+			
+
+			OR = {
+		
+				AND = {
+						has_war = no
+						has_government = democratic
+				}
+				
+				
+				 AND = {
+						has_war = no
+						has_government = communism
+				}
+				
+				 AND = {
+						has_war = no
+						has_government = neutrality
+				}
+				
+				AND = {
+						has_war = no
+						has_government = fascism
+				}
+			
+			}
+		
+		}	
+	}	
+}
+
+music = {
+	song = "diminishment"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+
+			has_war = yes
+			#rest doesn't make sense
+			#has_government = democratic
+			#has_government = communism
+			#has_government = neutrality
+			#has_government = fascism
+		}		
+	}	
+}
+
+music = {
+	song = "float"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+
+			OR = {
+			
+				AND = {	
+				has_war = no
+				has_government = democratic
+				}
+				
+				AND = {	
+				has_war = no
+				has_government = neutrality
+				}
+			
+			}
+			
+		}		
+	}	
+}
+
+music = {
+	song = "general_battle_1"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+
+			has_war = yes
+			#has_government = democratic
+			#has_government = communism
+			#has_government = neutrality
+			#has_government = fascism
+		}		
+	}	
+}
+
+music = {
+	song = "gradient"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+
+			OR = {
+			
+				AND = {	
+				has_war = no
+				has_government = neutrality
+				}
+				
+				AND = {	
+				has_war = no
+				has_government = fascism
+				}
+			
+			}
+			
+		}		
+	}	
+}
+
+music = {
+	song = "gridlock"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+
+			OR = {
+			
+				AND = {	
+				has_war = no
+				has_government = neutrality
+				}
+				
+				AND = {	
+				has_war = no
+				has_government = fascism
+				}
+			
+			}
+			
+		}		
+	}	
+}
+
+music = {
+	song = "latin_battle"
+	
+	chance = {
+	    factor = 2 
+		modifier = {
+
+
+			AND = {
+			has_war = no
+			has_war = yes
+			has_government = democratic
+			has_government = communism
+			has_government = neutrality
+			has_government = fascism
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "MEO"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+
+			OR = {
+			
+				AND = {	
+				has_war = no
+				has_government = neutrality
+				}
+				
+				AND = {	
+				has_war = no
+				has_government = fascism
+			}
+			
+			}
+			
+		}		
+	}	
+}
+
+music = {
+	song = "neutral_1"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+			OR = {
+			
+				AND = {	
+				has_war = no
+				has_government = democratic
+				}
+				
+				AND = {	
+				has_war = no
+				has_government = neutrality
+				}
+				
+				AND = {	
+				has_war = yes
+				has_government = democratic
+				}
+				
+				AND = {	
+				has_war = yes
+				has_government = neutrality
+				}
+			
+			}
+			
+		}		
+	}	
+}
+
+music = {
+	song = "non_democratic_rebellion"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+
+			OR = {
+			
+				AND = {	
+				has_war = no
+				has_government = democratic
+				}
+				
+				AND = {	
+				has_war = no
+				has_government = neutrality
+				}
+				
+				AND = {	
+				has_war = no
+				has_government = fascism
+				}
+			
+			}
+			
+		}		
+	}	
+}
+
+music = {
+	song = "nonplus"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+
+			OR = {
+			
+				AND = {	
+				has_war = no
+				has_government = democratic
+				}
+				
+				AND = {	
+				has_war = no
+				has_government = neutrality
+				}
+				
+				AND = {	
+				has_war = no
+				has_government = fascism
+				}
+			
+			}
+			
+		}		
+	}	
+}
+
+music = {
+	song = "nuke_atmosphere"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+
+			has_war = no
+			#has_government = neutrality
+			#has_government = democratic
+			#has_government = communism
+			#has_government = fascism
+		}		
+	}	
+}
+
+music = {
+	song = "orient"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+
+			OR = {
+			
+				AND = {	
+				has_war = no
+				has_government = neutrality
+				}
+				
+				AND = {	
+				has_war = no
+				has_government = fascism
+				}
+			
+			}
+			
+		}		
+	}	
+}
+
+music = {
+	song = "responsibilities"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+
+			has_war = no
+			#has_government = communism
+			#has_government = democracy
+			#has_government = neutrality
+			#has_government = fascist
+		}		
+	}	
+}
+
+music = {
+	song = "russia_battle_1"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+
+			AND = {	
+			has_war = yes
+			has_government = communism
+			}
+			
+		}		
+	}	
+}
+
+music = {
+	song = "russia_battle_2"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+
+			AND = {	
+			has_war = yes
+			has_government = communism
+			}
+			
+		}		
+	}	
+}
+
+music = {
+	song = "russia_peace_1"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+
+			AND = {	
+			has_war = no
+			has_government = communism
+			}
+			
+		}		
+	}	
+}
+
+music = {
+	song = "russia_peace_2"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+
+			AND = {	
+			has_war = no
+			has_government = communism
+			}
+			
+		}		
+	}	
+}
+
+music = {
+	song = "russia_peace_3"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+
+			AND = {	
+			has_war = no
+			has_government = communism
+			}
+			
+		}		
+	}	
+}
+
+music = {
+	song = "sand_struggle"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+
+			
+			AND = {	
+			has_war = yes
+			has_government = neutrality
+			}
+			
+		}		
+	}	
+}
+
+music = {
+	song = "spanish_heart"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+
+			OR = {
+			
+				AND = {	
+				has_war = no
+				has_government = neutrality
+				}
+				
+				AND = {	
+				has_war = no
+				has_government = fascism
+				}
+			
+			}
+			
+		}		
+	}	
+}
+
+music = {
+	song = "superpowers"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+
+			OR = {
+			
+				AND = {	
+				has_war = yes
+				has_government = democratic
+				}
+				
+				AND = {	
+				has_war = yes
+				has_government = communism
+				}
+				
+				AND = {	
+				has_war = no
+				has_government = democratic
+				}
+				
+				AND = {	
+				has_war = no
+				has_government = communism
+				}
+			
+			}
+			
+		}		
+	}	
+}
+
+music = {
+	song = "ties_are_broken"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+			
+			OR = {
+			
+				AND = {	
+				has_war = no
+				has_government = democratic
+				}
+				
+				AND = {	
+				has_war = no
+				has_government = communism
+				}
+			
+			}
+			
+		}		
+	}	
+}
+
+music = {
+	song = "tranquilite"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+
+			OR = {
+			
+			AND = {	
+			has_war = no
+			has_government = neutrality
+			}
+			
+			AND = {	
+			has_war = no
+			has_government = fascism
+			}
+			
+			}
+			
+		}		
+	}	
+}
+
+music = {
+	song = "voices_through_lights"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+
+			AND = {	
+			has_war = no
+			has_government = democratic
+			}
+			
+		}		
+	}	
+}
+
+music = {
+	song = "water_vapour"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+
+			OR = {
+			
+				AND = {	
+				has_war = no
+				has_government = neutrality
+				}
+				
+				AND = {	
+				has_war = no
+				has_government = fascism
+				}
+			
+			}
+			
+		}		
+	}	
+}
+
+music = {
+	song = "waveform"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+
+			has_war = no
+			#has_government = fascist
+			#has_government = neutrality
+			#has_government = democratic
+			#has_government = communism
+		}		
+	}	
+}
+
+music = {
+	song = "world_at_war"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+
+			has_war = no
+			#has_government = democratic
+			#has_government = communism
+			#has_government = neutrality
+			#has_government = fascism
+		}		
+	}	
+}
+
+music = {
+	song = "WW3"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+
+			OR = {
+			
+				AND = {	
+				has_war = yes
+				has_government = democratic
+				}
+				
+				AND = {	
+				has_war = yes
+				has_government = communism
+			}
+			
+			}
+		}		
+	}	
+}
+
+# Here starts World in Conflict! ### One of the most underrated games! ##################################
+
+music = {
+	song = "aim_for_the_heart"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+
+			OR = {
+			
+				AND = {	
+				has_war = yes
+				has_government = democratic
+				}
+				
+				AND = {	
+				has_war = yes
+				has_government = communism
+				}
+			
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "bannons_sacrifice"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+
+			AND = {	
+			has_war = no
+			has_government = democratic
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "broken_flower"
+	
+	chance = {
+	    factor = 2
+
+
+		}	
+	}	
+
+
+music = {
+	song = "classroom_rep"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+			has_war = no
+			#has_government = democratic
+			#has_government = communism
+			#has_government = neutrality
+			#has_government = fascism
+		}		
+	}	
+}
+
+music = {
+	song = "effloresco"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+			OR = {
+			
+				AND = {	
+				has_war = no
+				has_government = neutrality
+				}
+				
+				AND = {	
+				has_war = no
+				has_government = fascism
+				}
+			
+			}
+			
+		}		
+	}	
+}
+
+music = {
+	song = "ego"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+
+			has_war = no
+			#has_government = democratic
+			#has_government = communism
+			#has_government = neutrality
+			#has_government = fascism
+		}		
+	}	
+}
+
+music = {
+	song = "european_march"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+			OR = {
+			
+				AND = {	
+				has_war = yes
+				has_government = democratic
+				}
+				
+				AND = {	
+				has_war = yes
+				has_government = communism
+				}
+			
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "fall_of_liberty"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+			OR = {
+			
+				AND = {	
+				has_war = yes
+				has_government = democratic
+				}
+				
+				AND = {	
+				has_war = yes
+				has_government = communism
+				}
+			
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "final_fight"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+			has_war = yes
+			#has_government = democratic
+			#has_government = communism
+			#has_government = neutrality
+			#has_government = fascism
+		}		
+	}	
+}
+
+music = {
+	song = "governors_island"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+			OR = {
+			
+				AND = {	
+				has_war = no
+				has_government = democratic
+				}
+				
+				AND = {	
+				has_war = no
+				has_government = neutrality
+				}
+				
+				AND = {	
+				has_war = yes
+				has_government = democratic
+				}
+				
+				AND = {	
+				has_war = yes
+				has_government = neutrality
+				}
+			
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "hold_that_thought"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+			OR = {
+			
+				AND = {	
+				has_war = no
+				has_government = democratic
+				}
+				
+				AND = {	
+				has_war = no
+				has_government = communism
+				}
+			
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "hold_the_bridge"
+	
+	chance = {
+	    factor = 2
+	
+		modifier = {
+
+			#has_war = no
+			#has_war = yes
+			#has_government = democratic
+			#has_government = communism
+			#has_government = neutrality
+			#has_government = fascism
+		}		
+	}	
+}
+
+music = {
+	song = "incursio"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+
+			OR = {
+			
+				AND = {	
+				has_war = yes
+				has_government = democratic
+				}
+				
+				AND = {	
+				has_war = yes
+				has_government = communism
+				}
+			
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "ivan_artillery_revert"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+			OR = {
+			
+				AND = {	
+				has_war = no
+				has_government = democratic
+				}
+				
+				AND = {	
+				has_war = no
+				has_government = fascism
+				}
+			
+			}
+			
+		}		
+	}	
+}
+
+music = {
+	song = "khaldun"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+
+			has_war = no
+			#has_government = democratic
+			#has_government = communism
+			#has_government = neutrality
+			#has_government = fascism
+		}		
+	}	
+}
+
+music = {
+	song = "looking_for_survivors"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+
+			OR = {
+			
+				AND = {	
+				has_war = yes
+				has_government = democratic
+				}
+				
+				AND = {	
+				has_war = yes
+				has_government = communism
+				}
+			
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "main_menu_wic"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+			#has_war = no
+			#has_war = yes
+			#has_government = democratic
+			#has_government = communism
+			#has_government = neutrality
+			#has_government = fascism
+		}		
+	}	
+}
+
+music = {
+	song = "marche_de_sabatier"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+			
+			OR = {
+			
+				AND = {	
+				has_war = yes
+				has_government = democratic
+				}
+				
+				AND = {	
+				has_war = yes
+				has_government = communism
+				}
+			
+			}
+			
+		}		
+	}	
+}
+
+music = {
+	song = "mike_and_anton"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+			AND = {	
+			has_war = no
+			has_government = democratic
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "multiplayer_end"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+			OR = {
+			
+				AND = {	
+				has_war = no
+				has_government = democratic
+				}
+				
+				AND = {	
+				has_war = no
+				has_government = neutrality
+				}
+			
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "nicole"
+	
+	chance = {
+	    factor = 2		
+	}	
+}
+
+music = {
+	song = "originis"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+			OR = {
+			
+				AND = {	
+				has_war = no
+				has_government = neutrality
+				}
+				
+				AND = {	
+				has_war = no
+				has_government = fascism
+				}
+			
+			}
+			
+		}		
+	}	
+}
+
+music = {
+	song = "percutio"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+			OR = {
+			
+				AND = {	
+				has_war = yes
+				has_government = democratic
+				}
+				
+				AND = {	
+				has_war = yes
+				has_government = communism
+				}
+			
+			}
+			
+
+		}		
+	}	
+}
+
+music = {
+	song = "prelude"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+			OR = {
+			
+				AND = {	
+				has_war = yes
+				has_government = democratic
+				}
+				
+				AND = {	
+				has_war = yes
+				has_government = communism
+				}
+			
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "seattle_mission_start"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+			AND = {	
+			has_war = no
+			has_government = democratic
+			}
+		
+		}		
+	}	
+}
+
+music = {
+	song = "shortcomings"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+			has_war = no
+			#has_government = democratic
+			#has_government = communism
+			#has_government = neutrality
+			#has_government = fascism
+		}		
+	}	
+}
+
+music = {
+	song = "skynda_langsamt"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+			OR = {
+			
+				AND = {	
+				has_war = no
+				has_government = democratic
+				}
+				
+				AND = {	
+				has_war = no
+				has_government = neutrality
+				}
+			
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "sniper_run"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+			OR = {
+			
+				AND = {	
+				has_war = yes
+				has_government = democratic
+				}
+				
+				AND = {	
+				has_war = yes
+				has_government = communism
+				}
+				
+				AND = {	
+				has_war = yes
+				has_government = neutrality
+				}
+			
+			}
+			
+		}		
+	}	
+}
+
+music = {
+	song = "sollicitudo"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+			has_war = no
+			#has_government = democratic
+			#has_government = communism
+			#has_government = neutrality
+			#has_government = fascism
+		}		
+	}	
+}
+
+music = {
+	song = "squirrel_on_a_branch"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+			has_war = no
+			#has_government = democratic
+			#has_government = communism
+			#has_government = neutrality
+			#has_government = fascism
+		}		
+	}	
+}
+
+music = {
+	song = "strong_point_strongpoint"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+			OR = {
+			
+				AND = {	
+				has_war = yes
+				has_government = democratic
+				}
+				
+				AND = {	
+				has_war = yes
+				has_government = communism
+				}
+			
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "the_president_and_the_nuke"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+			AND = {	
+			has_war = no
+			has_government = democratic
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "trimethoxyphenethylamine"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+			OR = {
+			
+				AND = {	
+				has_war = no
+				has_government = neutrality
+				}
+				
+				AND = {	
+				has_war = no
+				has_government = fascism
+				}
+			
+			}
+			
+		}		
+	}	
+}
+
+music = {
+	song = "tundra"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+			has_war = no
+		}		
+	}	
+}
+
+music = {
+	song = "world_in_conflict"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+
+			OR = {
+			
+				AND = {	
+				has_war = yes
+				has_government = democratic
+				}
+				
+				AND = {	
+				has_war = yes
+				has_government = communism
+				}
+			
+			}
+
+		}		
+	}	
+}
+
+# Here starts Soviet Assault ### Captain Orlovsky best character! ######################################
+
+music = {
+	song = "aurora_borealis"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+			factor = 3
+
+			OR = {
+			
+				AND = {	
+				has_war = no
+				has_government = communism
+				}
+				
+			
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "collective_punishment"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+			factor = 2
+
+			has_war = no
+			#has_government = democratic
+			#has_government = communism
+			#has_government = neutrality
+			#has_government = fascism
+		}		
+	}	
+}
+
+music = {
+	song = "fall_of_man"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+			OR = {
+			
+				AND = {	
+				has_war = yes
+				has_government = communism
+				}
+				
+				AND = {	
+				has_war = yes
+				has_government = neutrality
+				}
+				
+				AND = {	
+				has_war = yes
+				has_government = fascism
+				}
+			
+			}
+			
+		}		
+	}	
+}
+
+music = {
+	song = "incursion"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+			OR = {
+			
+				AND = {	
+				has_war = yes
+				has_government = democratic
+				}
+				
+				AND = {	
+				has_war = yes
+				has_government = communism
+			}
+			
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "konets"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+			OR = {
+			
+				AND = {	
+				has_war = no
+				has_government = democratic
+				}
+				
+				AND = {	
+				has_war = no
+				has_government = communism
+				}
+			
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "marching_north"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+
+			OR = {
+			
+				AND = {	
+				has_war = yes
+				has_government = democratic
+				}
+				
+				AND = {	
+				has_war = yes
+				has_government = communism
+				}
+			
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "my_name_is_legion"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+			has_war = no
+			#has_government = democratic
+			#has_government = communism
+			#has_government = neutrality
+			#has_government = fascism
+		}		
+	}	
+}
+
+music = {
+	song = "odinochestvo"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+			OR = {
+			
+				AND = {	
+				has_war = no
+				has_government = neutrality
+				}
+				
+				AND = {	
+				has_war = no
+				has_government = communism
+				}
+			
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "plan_in_motion"
+	
+	chance = {
+	    factor = 3
+		modifier = {
+
+			has_war = yes
+		}		
+	}	
+}
+
+music = {
+	song = "propaganda_and_attack"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+			factor = 3
+
+			OR = {
+			
+				AND = {	
+				has_war = no
+				has_government = communism
+				}
+				
+				AND = {	
+				has_war = yes
+				has_government = communism
+				}
+			
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "second_thought"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+			OR = {
+			
+				AND = {	
+				has_war = no
+				has_government = democratic
+				}
+				
+				AND = {	
+				has_war = no
+				has_government = communism
+				}
+			
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "soviet_strength"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+			OR = {
+			
+				AND = {	
+				has_war = yes
+				has_government = democratic
+				}
+				
+				AND = {	
+				has_war = yes
+				has_government = communism
+				}
+				
+				AND = {	
+				has_war = no
+				has_government = democratic
+				}
+				
+				AND = {	
+				has_war = no
+				has_government = communism
+				}
+			
+			}
+
+		}		
+	}	
+}
+
+music = {
+	song = "soviet_waltz"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+			
+			AND = {	
+			has_war = no
+			has_government = communism
+			}
+			
+		}		
+	}	
+}
+
+music = {
+	song = "spetsnaz"
+	
+	chance = {
+	    factor = 2
+		modifier = {
+
+			OR = {
+			
+			
+			}
+			
+		}		
+	}	
+}
+
+music = {
+	song = "the_end_is_nigh"
+	
+	chance = {
+	    factor = 2
+	
+	}	
+}
+
+music = {
+	song = "under_pressure"
+	
+	chance = {
+	    factor = 2		
+	}	
+}
+
+
+#BONUS###because why not?###############################################################################
+
+music = {
+	song = "rasputin"
+	
+	chance = {
+	    factor = 1.5
+		modifier = {
+			factor = 2
+
+			OR = {
+			
+				AND = {	
+				has_war = yes
+				has_government = communism
+				}
+				
+				
+				AND = {	
+				has_war = no
+				has_government = communism
+				}
+			
+			}
+			
+		}		
+	}	
+}
+
+music = {
+	song = "sovietmarch"
+	
+	chance = {
+	    factor = 1.5
+		modifier = {
+			factor = 2
+
+			OR = {
+			
+				AND = {	
+					has_war = yes
+					has_government = communism
+				}
+				
+				
+				AND = {	
+					has_war = yes
+					has_government = communism
+				}
+
+				tag = SOV
+			
+			}
+			
+		}		
+	}	
+}
+
+music = {
+	song = "thehuntforredoctober"
+	
+	chance = {
+	    factor = 1.5
+		modifier = {
+			factor = 2
+
+			OR = {
+			
+				AND = {	
+					has_war = yes
+					has_government = communism
+				}
+				
+				
+				AND = {	
+					has_war = yes
+					has_government = communism
+				}
+
+				tag = SOV
+			
+			}
+			
+		}		
+	}	
+}
+
+music = {
+	song = "polyushkapolye"
+	
+	chance = {
+	    factor = 1.5
+		modifier = {
+			factor = 2
+
+			OR = {
+			
+				AND = {	
+					has_war = yes
+					has_government = communism
+				}
+				
+				
+				AND = {	
+					has_war = yes
+					has_government = communism
+				}
+
+				tag = SOV
+			
+			}
+			
+		}		
+	}
+}
+
+music = {
+	song = "nationalanthemofussr"
+	
+	chance = {
+	    factor = 1.5
+		modifier = {
+			factor = 2
+
+			OR = {
+			
+				AND = {	
+					has_war = yes
+					has_government = communism
+				}
+				
+				
+				AND = {	
+					has_war = no
+					has_government = communism
+				}
+
+				tag = SOV
+			
+			}
+			
+		}		
+	}
+}
+
+#Finland
+music = {
+	song = "fin_jaakarinmarssi"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = yes
+				tag = FIN
+			}
+		}		
+	}
+}
+
+music = {
+	song = "maamme"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				tag = FIN
+			}
+		}		
+	}
+}
+
+music = {
+	song = "finlandia"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				tag = FIN
+			}
+		}		
+	}
+}
+
+music = {
+	song = "Täällä Pohjantähden Alla"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				tag = FIN
+			}
+		}		
+	}
+}
+
+music = {
+	song = "Musta lippu yhdistää"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				tag = FIN
+			}
+		}		
+	}
+}
+
+#Hungary
+music = {
+	song = "Rákóczi induló"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				has_war = yes
+				tag = HUN
+			}
+		}		
+	}
+}
+
+music = {
+	song = "Felszabadulás dala"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				tag = HUN
+				has_government = communism
+			}
+		}		
+	}
+}
+
+music = {
+	song = "Bécsi Munkásinduló"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+			AND = {
+				tag = HUN
+				has_government = communism
+			}
+		}		
+	}
+}
