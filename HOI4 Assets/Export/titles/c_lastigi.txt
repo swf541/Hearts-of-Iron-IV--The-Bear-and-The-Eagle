@@ -1,0 +1,10 @@
+405.1.1 = { # 371 BC
+	holder = 400001 
+	liege = d_turdetani
+}
+466.1.1 = { # 310 BC
+	holder = 400003
+}
+500.1.1 = {
+	holder = 400004
+}

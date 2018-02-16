@@ -1,0 +1,46 @@
+# 390601-390700 for the Contestani dynasty
+390601 = {
+	name = "Belasbaisereban" # Made up Contestani leader
+	dynasty = 39007
+	culture = iberian
+	religion = iberian_main
+	
+	381.1.1 = { # 395 BC, Made up
+		birth="yes"
+	}
+	464.1.1 = { # 312 BC
+		death="yes"
+	}
+}
+
+390602 = {
+	name = "Tiokenesos" # Made up Contestani leader
+	dynasty = 39007
+	culture = iberian
+	religion = iberian_main
+	
+	father = 390601
+	
+	412.1.1 = { # 361 BC, Made up
+		birth="yes"
+	}
+	471.1.1 = { # 305 BC
+		death="yes"
+	}
+}
+
+390603 = {
+	name = "Uxentio" # Made up Contestani leader
+	dynasty = 39007
+	culture = iberian
+	religion = iberian_main
+	
+	father = 390602
+	
+	442.1.1 = { # 334 BC, Made up
+		birth="yes"
+	}
+	513.1.1 = { # 263 BC
+		death="yes"
+	}
+}

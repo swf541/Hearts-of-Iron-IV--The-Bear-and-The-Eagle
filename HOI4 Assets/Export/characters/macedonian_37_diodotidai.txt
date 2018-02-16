@@ -1,0 +1,51 @@
+# 3601-3700 for the Dioditidai dynasty
+3601 = {
+	name = "Diodotos" # I
+	dynasty = 37
+	culture = macedonian
+	religion = hellenic_pagan
+
+	491.1.1 = { # 285 BC
+		birth="yes"
+	}
+	537.1.1 = { # 239 BC
+		death="yes"
+	}
+}
+
+# Offspring of Diodotos I
+3602 = {
+	name = "Diodotos" # II
+	dynasty = 37
+	culture = koine
+	religion = hellenic_pagan
+
+	father = 3601 # Diodotos I
+
+	524.1.1 = { # 252 BC
+		birth="yes"
+	}
+	553.1.1 = { # 223 BC
+		death = {
+			death_reason = death_execution
+			killer = 30802 # Euthydemus
+		}
+	}
+}
+3603 = {
+	name = "Eudoxia" # Wife of Euthydemus, Name unknown
+	dynasty = 37
+	culture = koine
+	religion = hellenic_pagan
+	female = yes
+
+	father = 3601 # Diodotos I
+
+	526.1.1 = { # 250 BC
+		birth="yes"
+	}
+	# 227 BC, Marries Euthydemus
+	582.1.1 = { # 194 BC, Made up
+		death="yes"
+	}
+}

@@ -1,0 +1,7 @@
+496.1.1 = { # 280 BC
+	holder = 23604
+}
+501.1.1 = {
+	law = succ_open_elective
+	holder = 23605
+}

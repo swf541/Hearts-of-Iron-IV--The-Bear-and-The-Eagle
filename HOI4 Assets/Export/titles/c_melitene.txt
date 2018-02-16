@@ -1,0 +1,44 @@
+417.1.1 = {
+	holder = 80003 # Orontes
+	liege = k_p_armenia
+}
+432.1.1 = {
+	holder = 90314 # Darius III of Persia
+}
+440.1.1 = {
+	holder = 80004 # Orontes, son of the other Orontes
+}
+444.1.1 = { # 332 BC
+	holder = 60001 # Ariobarzanes, King of Cappadocia
+	liege = k_cappadocia
+}
+454.1.1 = {
+	holder = 50101 # Eumenes
+	liege = k_s_cappadocia
+}
+458.5.1 = {
+	liege = d_cappadocia
+}
+460.1.1 = {
+	holder = 401 # Antigonus
+	liege = k_s_phrygia
+}
+467.1.1 = {
+	liege = e_asia
+}
+475.1.1 = {
+	holder = 60002 # Ariarathes II
+	liege = d_cappadocia
+}
+496.1.1 = { # 280 BC
+	holder = 60004 # Ariamnes I
+}
+514.1.1 = { # 262 BC
+	holder = 60005 # Ariarathes III
+}
+527.1.1 = { # 249 BC
+	liege = k_cappadocia
+}
+556.1.1 = { # 220 BC
+	holder = 60006 # Ariarathes IV
+}

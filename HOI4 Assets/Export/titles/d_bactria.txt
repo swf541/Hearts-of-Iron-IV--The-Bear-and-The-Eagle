@@ -1,0 +1,22 @@
+471.1.1 = {
+	holder = 1001 # Seleukos
+}
+482.1.1 = { # 294 BC
+	holder = 54801 # Demodamas of Miletus
+	liege = k_s_persia
+}
+495.8.1 = {
+	liege = e_syria
+}
+510.1.1 = { # 258 BC
+	holder = 3601 # Diodotos I
+}
+537.1.1 = { # 239 BC
+	holder = 3602 # Diodotos II
+}
+553.1.1 = { # 223 BC
+	holder = 30802 # Euthydemos I
+}
+576.1.1 = { # 200 BC
+	holder = 30803 # Demetrios I
+}

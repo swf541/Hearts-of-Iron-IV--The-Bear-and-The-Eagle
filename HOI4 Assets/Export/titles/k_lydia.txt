@@ -1,0 +1,16 @@
+532.1.1 = { # 244 BC, Hierax' rebellion
+	holder = 1023 # Antiochos Hierax
+}
+548.1.1 = { # 227 BC
+	holder = 0
+}
+553.3.1 = { # 223 BC
+	holder = 1020 # Achaios
+	liege = e_syria
+}
+555.1.1 = { # 221 BC
+	liege = 0
+}
+563.1.1 = { # 213 BC
+	holder = 0
+}

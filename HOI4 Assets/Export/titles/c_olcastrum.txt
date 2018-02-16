@@ -1,0 +1,13 @@
+405.1.1 = { # 371 BC
+	holder = 390201 # Urcebas
+	liege = d_lacetani
+}
+468.1.1 = { # 308 BC
+	holder = 390202 # Sinebetin
+}
+474.1.1 = { # 302 BC
+	holder = 390203 # Sinebetin
+}
+498.1.1 = { # 278 BC
+	holder = 390204 # Urcebas
+}

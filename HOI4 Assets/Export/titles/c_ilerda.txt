@@ -1,0 +1,13 @@
+405.1.1 = { # 371 BC
+	holder = 390101 # Baisebilos
+	liege = d_lacetani
+}
+467.1.1 = { # 309 BC
+	holder = 390102 # Garokan
+}
+468.1.1 = { # 308 BC
+	holder = 390103 # Baisebilos
+}
+505.1.1 = { # 271 BC
+	holder = 390104 # Biurtibes
+}

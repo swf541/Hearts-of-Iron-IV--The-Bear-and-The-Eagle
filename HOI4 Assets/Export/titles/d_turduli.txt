@@ -1,0 +1,12 @@
+405.1.1 = { # 371 BC
+	holder = 420801 # Ultinos
+}
+466.1.1 = { # 309 BC
+	holder = 420802 # Tureno
+}
+477.1.1 = { # 299 BC
+	holder = 420803 # Pirreso
+}
+503.1.1 = { # 273 BC
+	holder = 420804 # Ultinos
+}

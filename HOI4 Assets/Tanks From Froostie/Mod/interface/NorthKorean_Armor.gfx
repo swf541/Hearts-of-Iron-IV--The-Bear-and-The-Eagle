@@ -1,0 +1,211 @@
+spriteTypes = {
+
+
+
+	SpriteType = {
+		name = "GFX_KPA_light_tanks_1_medium"
+		texturefile = "gfx/interface/technologies/KPA_lt_1.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_KPA_light_tanks_2_medium"
+		texturefile = "gfx/interface/technologies/SOV_lt_2.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_KPA_light_tanks_3_medium"
+		texturefile = "gfx/interface/technologies/SOV_lt_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_KPA_light_tanks_4_medium"
+		texturefile = "gfx/interface/technologies/SOV_lt_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_KPA_light_tanks_5_medium"
+		texturefile = "gfx/interface/technologies/SOV_lt_5.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_KPA_light_tanks_6_medium"
+		texturefile = "gfx/interface/technologies/SOV_lt_6.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_KPA_main_battle_tanks_1_medium"
+		texturefile = "gfx/interface/technologies/KPA_mbt_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_KPA_main_battle_tanks_2_medium"
+		texturefile = "gfx/interface/technologies/PRC_mbt_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_KPA_main_battle_tanks_3_medium"
+		texturefile = "gfx/interface/technologies/KPA_mbt_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_KPA_main_battle_tanks_4_medium"
+		texturefile = "gfx/interface/technologies/KPA_mbt_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_KPA_main_battle_tanks_5_medium"
+		texturefile = "gfx/interface/technologies/KPA_mbt_5.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_KPA_main_battle_tanks_6_medium"
+		texturefile = "gfx/interface/technologies/KPA_mbt_6.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_KPA_main_battle_tanks_7_medium"
+		texturefile = "gfx/interface/technologies/KPA_mbt_6.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_KPA_main_battle_tanks_8_medium"
+		texturefile = "gfx/interface/technologies/SOV_mbt_8.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_KPA_main_battle_tanks_9_medium"
+		texturefile = "gfx/interface/technologies/SOV_mbt_9.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_KPA_main_battle_tanks_10_medium"
+		texturefile = "gfx/interface/technologies/SOV_mbt_10.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_KPA_main_battle_tanks_11_medium"
+		texturefile = "gfx/interface/technologies/PRC_mbt_6.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_KPA_main_battle_tanks_12_medium"
+		texturefile = "gfx/interface/technologies/PRC_mbt_7.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_KPA_main_battle_tanks_13_medium"
+		texturefile = "gfx/interface/technologies/PRC_mbt_8.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_KPA_main_battle_tanks_14_medium"
+		texturefile = "gfx/interface/technologies/PRC_mbt_9.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_KPA_main_battle_tanks_15_medium"
+		texturefile = "gfx/interface/technologies/SOV_mbt_11.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_KPA_main_battle_tanks_16_medium"
+		texturefile = "gfx/interface/technologies/SOV_mbt_12.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_KPA_main_battle_tanks_17_medium"
+		texturefile = "gfx/interface/technologies/SOV_mbt_13.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_KPA_main_battle_tanks_18_medium"
+		texturefile = "gfx/interface/technologies/SOV_mbt_14.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_KPA_advanced_battle_tanks_1_medium"
+		texturefile = "gfx/interface/technologies/KPA_adv_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_KPA_advanced_battle_tanks_2_medium"
+		texturefile = "gfx/interface/technologies/KPA_adv_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_KPA_advanced_battle_tanks_3_medium"
+		texturefile = "gfx/interface/technologies/KPA_adv_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_KPA_advanced_battle_tanks_4_medium"
+		texturefile = "gfx/interface/technologies/KPA_adv_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_KPA_advanced_battle_tanks_5_medium"
+		texturefile = "gfx/interface/technologies/KPA_adv_5.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_KPA_advanced_battle_tanks_6_medium"
+		texturefile = "gfx/interface/technologies/KPA_adv_6.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_KPA_advanced_battle_tanks_7_medium"
+		texturefile = "gfx/interface/technologies/KPA_adv_7.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_KPA_advanced_battle_tanks_8_medium"
+		texturefile = "gfx/interface/technologies/KPA_adv_8.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_KPA_heavy_tanks_1_medium"
+		texturefile = "gfx/interface/technologies/KPA_ht_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_KPA_heavy_tanks_2_medium"
+		texturefile = "gfx/interface/technologies/SOV_ht_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_KPA_heavy_tanks_3_medium"
+		texturefile = "gfx/interface/technologies/SOV_ht_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_KPA_heavy_tanks_4_medium"
+		texturefile = "gfx/interface/technologies/SOV_ht_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_KPA_heavy_tanks_5_medium"
+		texturefile = "gfx/interface/technologies/SOV_ht_5.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_KPA_heavy_tanks_6_medium"
+		texturefile = "gfx/interface/technologies/SOV_ht_6.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_KPA_modern_battle_tanks_1_medium"
+		texturefile = "gfx/interface/technologies/KPA_mod_1.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_KPA_modern_battle_tanks_2_medium"
+		texturefile = "gfx/interface/technologies/KPA_mod_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_KPA_modern_battle_tanks_3_medium"
+		texturefile = "gfx/interface/technologies/KPA_mod_3.dds"
+	}
+
+}
+

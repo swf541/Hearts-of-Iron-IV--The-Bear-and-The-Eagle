@@ -1,0 +1,63 @@
+298.1.1 = { # 478 BC, given as reward of efforts during Persian invasion of Greece.
+    holder = 90902 # Artabazus I
+	liege = d_mysia
+}
+321.1.1 = { # 455 BC
+    holder = 90903 # Pharnabazus I
+}
+346.1.1 = { # 430 BC
+    holder = 90904 # Pharnaces II
+}
+354.1.1 = { # 422 BC
+    holder = 90905 # Pharnabazus II
+}
+389.1.1 = { # 387 BC
+    holder = 90906 # Ariobarzanes of Phrygia
+}
+414.1.1 = { # 362 BC
+    holder = 90908 # Artabazus II of Phrygia
+}
+442.5.1 = { # 334 BC
+	holder = 101 # Leonnatus, Satrap of Hellespontine Phrygia
+	liege = k_s_mysia
+}
+454.1.1 = {
+	holder = 2701 # Arrhidaios
+}
+457.2.1 = {
+	holder = 401 # Antigonos
+	liege = k_s_phrygia
+}
+467.1.1 = {
+	liege = e_asia
+}
+475.1.1 = { # 301 BC
+	holder = 30002 # Agathokles
+	liege = d_lydia
+}
+492.1.1 = { # 284 BC
+	holder = 30001 # Lysimachos
+	liege = k_odrysia
+}
+495.2.1 = {
+	holder = 1001 # Seleukos
+	liege = e_syria
+}
+495.8.1 = {
+	holder = 0
+	liege = 0
+}
+498.1.1 = { # 278 BC
+	holder = 40005 # Nikomedes I
+	liege = d_bithynia
+}
+521.1.1 = { # 255 BC
+	holder = 40010 # Ziaelas I
+}
+548.1.1 = { # 228 BC
+	holder = 40012 # Prusias I
+}
+572.1.1 = { # 204 BC
+	holder = 40012 # Prusias I
+	liege = d_bithynia
+}

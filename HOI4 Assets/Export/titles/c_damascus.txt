@@ -1,0 +1,38 @@
+417.1.1 = {
+	holder = 90324
+	liege = k_p_babylon
+}
+445.6.1 = { # 331 BC
+	holder = 30101 # Laomedon, Satrap of Syria
+	liege = k_s_syria
+}
+456.1.1 = {
+	holder = 601 # Ptolemy
+	liege = k_s_egypt
+}
+461.2.1 = {
+	holder = 401 # Antigonus
+	liege = k_s_phrygia
+}
+467.1.1 = {
+	liege = e_asia
+}
+475.1.1 = {
+	holder = 1001 # Seleukos I
+	liege = e_syria
+}
+495.8.1 = {
+	holder = 1002 # Antiochos I
+}
+515.1.1 = { # 261 BC
+	holder = 1012 # Antiochos II Theos
+}
+530.1.1 = { # 246 BC
+	holder = 1022 # Seleukos II Kallinikos
+}
+551.1.1 = { # 225 BC
+	holder = 1028 # Seleukos III Keraunos
+}
+553.1.1 = { # 223 BC
+	holder = 1029 # Antiochos III Megas
+}

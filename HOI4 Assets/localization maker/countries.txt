@@ -1,0 +1,185 @@
+BRA|Brazil|Brazilian
+BRK|Burkina Faso|Burkinabe
+BRP|Baltia|Baltian
+BRU|Brunei|Bruneian
+BSL|Somaliland|Somali
+BUL|Bulgaria|Bulgarian
+CAM|Cambodia|Cambodian
+CAN|Canada|Canadian
+CAR|Central Africa|African
+CEY|Ceylon|Ceylonese
+CHA|Chad|Chadian
+CHI|China|Chinese
+CHL|Chile|Chilean
+CMB|Cambodia|Cambodian
+CMR|Cameroon|Cameroonian
+COG|Congo|Congolese
+COL|Columbia|Columbian
+COS|Costa Rica|Costa Rican
+CPH|Hukbalahap|Hukbalahapian
+CPI|Communist India|Indian
+CRO|Croatia|Croatian
+CTD|Ivory Coast|Ivorian
+CUB|Cuba|Cubanese
+CYP|Cyrpus|Cypriot
+CZE|Czechoslovakia|Czech
+DAR|Darul Islam|Indonesian
+DDR|German Democratic Republic|German
+DEN|Denmark|Danish
+DOC|Democratic Republic of Congo|Congolese
+DOM|Dominican Republic|Dominican
+DRY|Democratic Republic of Yemen|Yemeni
+ECU|Ecuador|Ecuadoran
+EGY|Egypt|Egyptian
+EIN|East Indonesia|Indonesian
+ELS|El Salvador|Salvadorian
+ENG|United Kingdom|British
+EST|Estonia|Estonian
+ETH|Ethiopia|Ethiopian
+ETR|East Turkestan Republic|Turkestanian
+FAR|Federation of Arab Republics|Arabian
+ENG_FBU|Franco-British Union|Franco-British
+FBU|Franco-British Union|Franco-British
+FCB|Free City of Berlin|Berliner
+FIN|Finland|Finnish
+FRA|France|French
+GAB|Gabon|Gabonese
+GDA|Great Dayak|Dayakese
+GEO|Georgia|Georgian
+GEQ|Guinea Equatorial|Guinean
+GER|Germany|German
+GHA|Ghana|Ghanaian
+GRE|Greece|Greek
+GUA|Guatemala|Guatemalan
+GUI|Guinea|Guinean
+GXC|Guangxi|Guangxian
+HAI|Haiti|Haitian
+HOL|Netherlands|Dutch
+HON|Honduras|Honduran
+HUN|Hungary|Hungarian
+ICE|Iceland|Icelandic
+INO|Indonesia|Indonesian
+INS|East Indonesia|Indonesian
+IRE|Ireland|Irish
+IRQ|Iraq|Iraqi
+ISR|Israel|Israeli
+ITA|Italy|Italian
+JAM|Jamaica|Jamaican
+JAP|Japan|Japanese
+JOR|Jordan|Jordanese
+KAS|Kashmir|Kashmiri
+KAZ|Kazakhstan|Kazakh
+KEN|Kenya|Kenyan
+KHA|Khalistan|Khalistani
+KNE|Kenya|Kenyan
+KOR|Republic of Korea|Korean
+KOS|Kosovo|Kosovar
+KPA|People's Republic of Korea|Korean
+KRG|Kyrgyzstan|Kyrgyz
+KRL|Karelia|Karelian
+KUR|Kurdistan|Kurdish
+KUW|Kuwait|Kuwaiti
+LAO|Laos|Laotian
+LAT|Lativa|Latvian
+LBA|Libya|Libyan
+LEB|Lebanon|Lebanese
+LES|Lesotho|Lesothan
+LIB|Liberia|Liberian
+LIT|Lithuania|Lithuanian
+LOS|Laos|Laotian
+LUX|Luxemburg|Luxemburgian
+MAD|Madagascar|mMdagascan
+MAL|Malaysia|Malaysian
+MAN|Manchukuo|Manchukoan
+MAU|Mauritania|Mauritanian
+MAY|Mayala|Mayalan
+MEN|Mengkukuo|Mengkukuon
+MEX|Mexico|Mexican
+MLA|Malaya|Malayan
+MLD|Moldovia|Moldovian
+MLI|Mali|Malian
+MNC|Manchu|Manchu
+MNG|Mongolia|Mongolian
+MNI|Manipur|Manipuri
+MNT|Montenegro|Montenegrin
+MON|Mongolia|Mongolian
+MOR|Morocco|Moroccan
+MYR|Myanmar|Myanmarese
+MZB|Mozambique|Mozambiquan
+NEP|Nepal|Nepalese
+NIA|Nigeria|Nigerian
+NIC|Nicaragua|Nicaraguan
+NIG|Niger|Nigerian
+NOR|Norway|Norwegian
+NYA|Malawi|Malawian
+NZL|New Zealand|New Zealand
+OMA|Oman|Omani
+PAK|Pakistan|Pakistani
+PAL|Palestine|Palestinian
+PAN|Panama|Panamanian
+PAR|Paraguay|Paraguayan
+PAS|Pasundan|Pasundanese
+PDG|Provisional Democratic Greece|Greek
+PER|Persia|Persian
+PHI|Philippines|Philippine
+POL|Poland|Polish
+PON|Pontianak|Pontianakan
+POR|Portugal|Portugese
+PRC|People's Republic of China|Chinese
+PRU|Peru|Peruvian
+QAT|Quatar|Quatari
+RAJ|India|Indian
+ROC|Republic of Congo|Congolese
+ROM|Romania|Romanian
+SAF|South Africa|South African
+SAR|Saarland Protectorate|Saar
+SAU|Saudi Arabia|Saudi Arabian
+SDR|Somali Democratic Republic|Somali
+SEN|Senegal|Senegalese
+SER|Serbia|Serbian
+SHX|Shangxi|Shangxi
+SIA|Siam|Siamese
+SIK|Sinkiang|Sinkiang
+SKK|Sikkim|Sikkim
+SLO|Slovakia|Slovakian
+SLV|Slovenia|Slovenian
+SOR|Somali Republic|Somali
+SOV|Soviet Union|Russian
+SPR|Spain|Spanish
+SUD|Sudan|Sudanese
+SWA|Swaziland|Swazi
+SWE|Sweden|Swedish
+SWI|Switzerland|Swiss
+SYR|Syria|Syrian
+TAG|Tanganyika|Tanganyikan
+TAN|Tannu Tuva|Tannu Tuvian
+TAT|Trinidad and Tobago|Trinidadian
+TIB|Tibet|Tibetan
+TJK|Tajikistan|Tajik
+TOG|Togo|Togolese
+TRI|Trieste|Triestian
+TRK|Turkmenistan|Turkmen
+TRP|Tripura|Tripurian
+TTP|Trust Territory of the Pacific Islands|Micronesian
+TUN|Tunisia|Tunisian
+TUK|Turkey|Turkish
+UAE|United Arab Emirates|Arabian
+UAR|United Arab Republic|Arabian
+UAS|United Arab States|Arabian
+UGA|Uganda|Ugandan
+UKR|Ukraine|Ukranian
+URG|Uruguay|Uruguayan
+USA|United States of America|American
+UYG|Uyghuria|Uyghur
+UZB|Uzbekistan|Uzbek
+VEN|Venezuela|Venezuelan
+VIE|Vietnam|Vietnamese
+VIN|Democratic Republic of Vietnam|Vietnamese
+WGR|Federal Republic of Germany|German
+XSM|Hui Republic|Ma
+YEM|Yemen|Yemeni
+YUG|Yugoslavia|Yugoslavian
+YUN|Yunnan|Yunnanese
+ZAM|Zambia|Zambian
+ZIM|Zimbabwe|Zimbabwean
+

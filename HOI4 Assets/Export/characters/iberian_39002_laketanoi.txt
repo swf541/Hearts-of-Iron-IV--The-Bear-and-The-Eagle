@@ -1,0 +1,62 @@
+# 390101-390200 for the Lacetani dynasty
+390101 = {
+	name = "Baisebilos" # Made up Lacetani leader
+	dynasty = 39002
+	culture = iberian
+	religion = iberian_main
+	
+	392.1.1 = { # 384 BC, Made up
+		birth="yes"
+	}
+	467.1.1 = { # 309 BC
+		death="yes"
+	}
+}
+
+390102 = {
+	name = "Garokan" # Made up Lacetani leader
+	dynasty = 39002
+	culture = iberian
+	religion = iberian_main
+	
+	father = 390101
+	
+	417.1.1 = { # 359 BC, Made up
+		birth="yes"
+	}
+	468.1.1 = { # 308 BC
+		death="yes"
+	}
+}
+
+390103 = {
+	name = "Baisebilos" # Made up Lacetani leader
+	dynasty = 39002
+	culture = iberian
+	religion = iberian_main
+	
+	father = 390102
+	
+	441.1.1 = { # 335 BC, Made up
+		birth="yes"
+	}
+	505.1.1 = { # 271 BC
+		death="yes"
+	}
+}
+
+390104 = {
+	name = "Biurtibes" # Made up Lacetani leader
+	dynasty = 39002
+	culture = iberian
+	religion = iberian_main
+	
+	father = 390103
+	
+	472.1.1 = { # 304 BC, Made up
+		birth="yes"
+	}
+	528.1.1 = { # 248 BC
+		death="yes"
+	}
+}

@@ -1,0 +1,26 @@
+# 460301-470400 for the Presamdhashu dynasty
+460301 = {
+	name = "Hvarda" # Made up
+	dynasty = 46004 # Presamdhashu
+	religion = zoroastrian
+	culture = khotanese
+	395.1.1 = { # 381 BC
+		birth="yes"
+	}
+	460.1.1 = { # 316 BC
+		death="yes"
+	}
+}
+460302 = {
+	name = "Huyi" # Made up
+	dynasty = 46004 # Presamdhashu
+	religion = zoroastrian
+	culture = khotanese
+	father = 460301
+	419.1.1 = { # 357 BC
+		birth="yes"
+	}
+	496.1.1 = { # 280 BC
+		death="yes"
+	}
+}

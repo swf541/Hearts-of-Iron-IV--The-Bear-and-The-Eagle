@@ -1,0 +1,382 @@
+focus_tree = {
+	id = finland
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = FIN
+		}
+	}
+	default = no
+	focus = {
+		id = FIN_political_focus
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		x = 17
+		y = 0
+
+	}
+	focus = {
+		id = FIN_economy_reform
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		x = 37
+		y = 0
+
+	}
+	focus = {
+		id = FIN_final_train
+		icon = GFX_goal_generic_trade
+		cost = 10.00
+		x = 37
+		y = 3
+
+	}
+	focus = {
+		id = FIN_prepare_ conscription
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10.00
+		x = 45
+		y = 0
+
+	}
+	focus = {
+		id = FIN_friendly_soviets
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = FIN_political_focus
+		}
+		mutually_exclusive = {
+			focus = FIN_true_neutral
+		}
+		x = 7
+		y = 1
+
+	}
+	focus = {
+		id = FIN_neutral_soviet
+		icon = GFX_goal_generic_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = FIN_friendly_soviets
+		}
+		mutually_exclusive = {
+			focus = FIN_embrace_soviet
+		}
+		x = 4
+		y = 2
+
+	}
+	focus = {
+		id = FIN_soviet_friends
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = FIN_neutral_soviet
+		}
+		x = 2
+		y = 3
+
+	}
+	focus = {
+		id = FIN_befriend_west
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = FIN_neutral_soviet
+		}
+		x = 6
+		y = 3
+
+	}
+	focus = {
+		id = FIN_embrace_soviet
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = FIN_friendly_soviets
+		}
+		mutually_exclusive = {
+			focus = FIN_neutral_soviet
+		}
+		x = 11
+		y = 2
+
+	}
+	focus = {
+		id = FIN_support_prosoviet
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = FIN_embrace_soviet
+		}
+		x = 9
+		y = 3
+
+	}
+	focus = {
+		id = FIN_jail_anticommunist
+		icon = GFX_goal_generic_secret_weapon
+		cost = 10.00
+		prerequisite = {
+			focus = FIN_support_prosoviet
+		}
+		x = 9
+		y = 4
+
+	}
+	focus = {
+		id = FIN-_propaganda_com
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = FIN_embrace_soviet
+		}
+		x = 13
+		y = 3
+
+	}
+	focus = {
+		id = FIN_cencor_anitcommunists
+		icon = GFX_focus_renounce_the_treaty_of_triannon
+		cost = 10.00
+		prerequisite = {
+			focus = FIN-_propaganda_com
+		}
+		x = 13
+		y = 4
+
+	}
+	focus = {
+		id = FIN_communist_coup
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = FIN_cencor_anitcommunists
+		}
+		prerequisite = {
+			focus = FIN_jail_anticommunist
+		}
+		prerequisite = {
+			focus = FIN_cencor_anitcommunists
+		}
+		mutually_exclusive = {
+			focus = FIN_com_civwar
+		}
+		x = 10
+		y = 5
+
+	}
+	focus = {
+		id = FIN_com_civwar
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = FIN_cencor_anitcommunists
+		}
+		prerequisite = {
+			focus = FIN_jail_anticommunist
+		}
+		mutually_exclusive = {
+			focus = FIN_communist_coup
+		}
+		x = 12
+		y = 5
+
+	}
+	focus = {
+		id = FIN_com_sta
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		prerequisite = {
+			focus = FIN_communist_coup
+			focus = FIN_com_civwar
+		}
+		x = 11
+		y = 6
+
+	}
+	focus = {
+		id = FIN_true_neutral
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = FIN_political_focus
+		}
+		mutually_exclusive = {
+			focus = FIN_friendly_soviets
+			focus = FIN_friends_in_west
+		}
+		x = 17
+		y = 1
+
+	}
+	focus = {
+		id = FIN_cancel_yya
+		icon = GFX_focus_renounce_the_treaty_of_triannon
+		cost = 10.00
+		prerequisite = {
+			focus = FIN_true_neutral
+		}
+		x = 17
+		y = 2
+
+	}
+	focus = {
+		id = FIN_friends_in_west
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = FIN_political_focus
+		}
+		mutually_exclusive = {
+			focus = FIN_true_neutral
+			focus = FIN_fourth_option
+		}
+		x = 22
+		y = 1
+
+	}
+	focus = {
+		id = FIN_warm_relations
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = FIN_friends_in_west
+		}
+		x = 22
+		y = 2
+
+	}
+	focus = {
+		id = FIN_fourth_option
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = FIN_political_focus
+		}
+		mutually_exclusive = {
+			focus = FIN_friends_in_west
+		}
+		x = 28
+		y = 1
+
+	}
+	focus = {
+		id = FIN_nationalistic_waves
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = FIN_fourth_option
+		}
+		mutually_exclusive = {
+			focus = FIN_fascism_rises
+		}
+		x = 26
+		y = 2
+
+	}
+	focus = {
+		id = FIN_fascism_rises
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = FIN_fourth_option
+		}
+		mutually_exclusive = {
+			focus = FIN_nationalistic_waves
+		}
+		x = 30
+		y = 2
+
+	}
+	focus = {
+		id = FIN_wood_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = FIN_economy_reform
+		}
+		x = 34
+		y = 1
+
+	}
+	focus = {
+		id = FIN_railways
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = FIN_economy_reform
+		}
+		x = 37
+		y = 1
+
+	}
+	focus = {
+		id = FIN_valmet
+		icon = GFX_goal_generic_production
+		cost = 10.00
+		prerequisite = {
+			focus = FIN_economy_reform
+		}
+		x = 40
+		y = 1
+
+	}
+	focus = {
+		id = FIN_1950_con
+		icon = GFX_goal_generic_military_sphere
+		cost = 50.00
+		prerequisite = {
+			focus = FIN_prepare_ conscription
+		}
+		x = 45
+		y = 1
+
+	}
+	focus = {
+		id = FIN_new_eq
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = FIN_1950_con
+		}
+		x = 43
+		y = 2
+
+	}
+	focus = {
+		id = FIN_join_wp
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = FIN_com_sta
+		}
+		x = 8
+		y = 7
+
+	}
+	focus = {
+		id = FIN_ban_parties
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = FIN_com_sta
+		}
+		x = 14
+		y = 7
+
+	}
+	focus = {
+		id = FIN_refund_reva
+		icon = GFX_goal_continuous_suppression
+		cost = 10.00
+		prerequisite = {
+			focus = FIN_com_sta
+		}
+		x = 11
+		y = 7
+
+	}
+}

@@ -1,0 +1,8 @@
+443.3.1 = { # 333 BC
+	holder = 401 # Antigonus, the one eyed
+	liege = e_macedonia
+}
+467.1.1 = {
+	holder = 0
+	liege = 0
+}

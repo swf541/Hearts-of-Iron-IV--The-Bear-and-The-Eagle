@@ -1,0 +1,6 @@
+413.1.1 = { # 363 BC
+	holder = 460101 # Kushtana
+}
+460.1.1 = { # 316 BC
+	holder = 460102 # Samgaka
+}

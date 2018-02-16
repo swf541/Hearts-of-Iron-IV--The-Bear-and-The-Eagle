@@ -1,0 +1,18 @@
+495.2.1 = { # 281 BC, Defeat of Lysimachus
+	holder = 3101 # Lysias
+	liege = e_syria
+}
+532.1.1 = { # Hierax' rebellion
+	liege = k_lydia
+}
+548.1.1 = { # 227 BC
+	holder = 0
+	liege = 0
+}
+553.4.1 = { # 223 BC
+	holder = 3101 # Lysias
+	liege = k_lydia
+}
+560.5.1 = { # 216 BC
+	liege = e_syria
+}

@@ -1,0 +1,62 @@
+# 421301-421400 for the Turmodigoi dynasty
+421301 = {
+	name = "Sekilos" # Made up Turmodigi leader
+	dynasty = 42014
+	culture = celtiberian
+	religion = celtic_pagan
+	
+	384.1.1 = { # 392 BC, Made up
+		birth="yes"
+	}
+	466.1.1 = { # 309 BC
+		death="yes"
+	}
+}
+
+421302 = {
+	name = "Sekilos" # Made up Turmodigi leader
+	dynasty = 42014
+	culture = celtiberian
+	religion = celtic_pagan
+	
+	father = 421301
+	
+	415.1.1 = { # 361 BC, Made up
+		birth="yes"
+	}
+	472.1.1 = { # 304 BC
+		death="yes"
+	}
+}
+
+421303 = {
+	name = "Sekilos" # Made up Turmodigi leader
+	dynasty = 42014
+	culture = celtiberian
+	religion = celtic_pagan
+	
+	father = 421302
+	
+	442.1.1 = { # 334 BC, Made up
+		birth="yes"
+	}
+	502.1.1 = { # 274 BC
+		death="yes"
+	}
+}
+
+421304 = {
+	name = "Sekilos" # Made up Turmodigi leader
+	dynasty = 42014
+	culture = celtiberian
+	religion = celtic_pagan
+	
+	father = 421303
+	
+	459.1.1 = { # 317 BC, Made up
+		birth="yes"
+	}
+	523.1.1 = { # 253 BC
+		death="yes"
+	}
+}

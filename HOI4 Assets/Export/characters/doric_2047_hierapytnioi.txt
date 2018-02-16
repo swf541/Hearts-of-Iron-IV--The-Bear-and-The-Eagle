@@ -1,0 +1,59 @@
+# 24601-24700 for the Hierapytnoi dynasty
+24601 = {
+	name = "Kleomenes" # Made up
+	dynasty = 2047
+	culture = doric
+	religion = hellenic_pagan
+	
+	363.1.1 = { # 413 BC
+		birth="yes"
+	}
+	414.1.1 = { # 362 BC 
+		death="yes"
+	}
+}
+24602 = {
+	name = "Iason" # Made up
+	dynasty = 2047
+	culture = doric
+	religion = hellenic_pagan
+
+	father = 24601
+	
+	391.1.1 = { # 385 BC
+		birth="yes"
+	}
+	455.1.1 = { # 321 BC 
+		death="yes"
+	}
+}
+24603 = {
+	name = "Hieron" # Made up
+	dynasty = 2047
+	culture = doric
+	religion = hellenic_pagan
+
+	father = 24602
+	
+	422.1.1 = { # 354 BC
+		birth="yes"
+	}
+	470.1.1 = { # 306 BC 
+		death="yes"
+	}
+}
+24604 = {
+	name = "Iason" # Made up
+	dynasty = 2047
+	culture = doric
+	religion = hellenic_pagan
+
+	father = 24603
+	
+	448.1.1 = { # 328 BC
+		birth="yes"
+	}
+	509.1.1 = { # 267 BC 
+		death="yes"
+	}
+}

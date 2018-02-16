@@ -1,0 +1,10 @@
+405.1.1 = { # 371 BC
+	holder = 390301 # Biurtan
+	liege = d_lacetani
+}
+468.1.1 = { # 308 BC
+	holder = 390302 # Mandonio
+}
+480.1.1 = { # 296 BC
+	holder = 390303 # Biurtan
+}

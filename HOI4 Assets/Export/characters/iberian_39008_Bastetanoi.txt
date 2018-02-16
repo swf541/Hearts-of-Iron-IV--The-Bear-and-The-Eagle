@@ -1,0 +1,46 @@
+# 390701-390800 for the Bastetani dynasty
+390701 = {
+	name = "Aiunesker" # Made up Bastetani leader
+	dynasty = 39008
+	culture = iberian
+	religion = iberian_main
+	
+	381.1.1 = { # 395 BC, Made up
+		birth="yes"
+	}
+	464.1.1 = { # 312 BC
+		death="yes"
+	}
+}
+
+390702 = {
+	name = "Mezukenos" # Made up Bastetani leader
+	dynasty = 39008
+	culture = iberian
+	religion = iberian_main
+	
+	father = 390701
+	
+	424.1.1 = { # 352 BC, Made up
+		birth="yes"
+	}
+	487.1.1 = { # 289 BC
+		death="yes"
+	}
+}
+
+390703 = {
+	name = "Sekilos" # Made up Bastetani leader
+	dynasty = 39008
+	culture = iberian
+	religion = iberian_main
+	
+	father = 390702
+	
+	456.1.1 = { # 320 BC, Made up
+		birth="yes"
+	}
+	521.1.1 = { # 255 BC
+		death="yes"
+	}
+}

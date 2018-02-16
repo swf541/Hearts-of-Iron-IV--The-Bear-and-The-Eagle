@@ -1,0 +1,61 @@
+# 390501-390600 for the Edetani dynasty
+390501 = {
+	name = "Lagunas" # Made up Edetani leader
+	dynasty = 39006
+	culture = iberian
+	religion = iberian_main
+	
+	382.1.1 = { # 394 BC, Made up
+		birth="yes"
+	}
+	465.1.1 = { # 311 BC
+		death="yes"
+	}
+}
+
+390502 = {
+	name = "Lagunas" # Made up Edetani leader
+	dynasty = 39006
+	culture = iberian
+	religion = iberian_main
+	
+	father = 390501
+	
+	417.1.1 = { # 359 BC, Made up
+		birth="yes"
+	}
+	478.1.1 = { # 298 BC
+		death="yes"
+	}
+}
+
+390503 = {
+	name = "Baisebilos" # Made up Edetani leader
+	dynasty = 39006
+	culture = iberian
+	religion = iberian_main
+	
+	father = 390502
+	
+	446.1.1 = { # 330 BC, Made up
+		birth="yes"
+	}
+	507.1.1 = { # 269 BC
+		death="yes"
+	}
+}
+390504 = {
+	name = "Sosian" # Made up Edetani leader
+	dynasty = 39006
+	culture = iberian
+	religion = iberian_main
+	
+	father = 390503
+	
+	486.1.1 = { # 330 BC, Made up
+		birth="yes"
+	}
+	567.1.1 = { # 269 BC
+		death="yes"
+	}
+}

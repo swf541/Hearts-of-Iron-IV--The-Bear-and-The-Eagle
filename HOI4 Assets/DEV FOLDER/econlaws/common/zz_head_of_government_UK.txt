@@ -1,0 +1,29 @@
+ideas = { 
+	 z_head_of_government = {
+		head_of_government_churchill = {
+			picture = Portrait_Britain_Winston_Churchill.dds
+			allowed = {
+				original_tag = ENG 
+			}			
+			available = {
+			}
+			
+			removal_cost = 0
+			modifier = {
+			}
+
+			on_add = { 
+				country_event = heads_of_government.1
+			}
+			ai_will_do = {
+   				factor = 1
+
+   				modifier = {
+					factor = 2
+					
+					is_major = yes
+				}
+   			}			
+		}
+	}
+}

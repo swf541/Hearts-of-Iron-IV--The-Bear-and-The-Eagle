@@ -1,0 +1,8 @@
+islamism|[ADJ] Caliphate
+radical_shiaism|[ADJ] Caliphate
+Social_Liberalism|[NAME]
+Salafism|[ADJ] Caliphate
+centrist|[NAME]
+liberal|[NAME]
+Republicanism|[NAME]
+American_Democratic|[NAME]

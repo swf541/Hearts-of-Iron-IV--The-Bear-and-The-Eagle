@@ -1,0 +1,62 @@
+# 400101-400200 for the Counei dynasty
+400101 = {
+	name = "Melmanios" # Made up Counei leader
+	dynasty = 40002
+	culture = turdetanian
+	religion = iberian_main
+	
+	383.1.1 = { # 393 BC, Made up
+		birth="yes"
+	}
+	465.1.1 = { # 311 BC
+		death="yes"
+	}
+}
+
+400102 = {
+	name = "Sakarbik" # Made up Counei leader
+	dynasty = 40002
+	culture = turdetanian
+	religion = iberian_main
+
+	father = 400101
+	
+	415.1.1 = { # 361 BC, Made up
+		birth="yes"
+	}
+	488.1.1 = { # 288 BC
+		death="yes"
+	}
+}
+
+400103 = {
+	name = "Magauarico" # Made up Counei leader
+	dynasty = 40002
+	culture = turdetanian
+	religion = iberian_main
+
+	father = 400102
+	
+	441.1.1 = { # 335 BC, Made up
+		birth="yes"
+	}
+	482.1.1 = { # 294 BC
+		death="yes"
+	}
+}
+
+400104 = {
+	name = "Sakarbik" # Made up Counei leader
+	dynasty = 40002
+	culture = turdetanian
+	religion = iberian_main
+
+	father = 400103
+	
+	465.1.1 = { # 311 BC, Made up
+		birth="yes"
+	}
+	541.1.1 = { # 235 BC
+		death="yes"
+	}
+}

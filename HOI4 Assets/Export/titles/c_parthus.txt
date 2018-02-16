@@ -1,0 +1,47 @@
+417.1.1 = { # 359 BC
+	holder = 140102
+	liege = d_dardania
+}
+418.1.1 = { # 358 BC
+	liege = k_macedon
+}
+420.1.1 = { # 356 BC
+	holder = 140103
+}
+426.1.1 = { # 350 BC
+	liege = e_macedonia
+}
+441.1.1 = { # 335 BC
+	holder = 140101 # Glaucias of the Taulanti
+}
+453.6.10 = { # 323 BC
+	liege = k_s_macedon
+}
+459.10.1 = {
+	liege = k_macedon
+}
+474.1.1 = {
+	holder = 10009
+	liege = k_epirus
+}
+479.1.1 = {
+	holder = 10010
+}
+504.6.1 = {
+	holder = 10015 # Alexander II
+}
+534.1.1 = { # 242 BC
+	holder = 10017 # Pyrrhus II
+}
+539.1.1 = { # 237 BC
+	holder = 10018 # Ptolemy I
+}
+541.1.1 = { # 235 BC
+	holder = 10022 # Pyrrhus III
+}
+541.4.1 = { # 235 BC
+	holder = 10020 # Deidameia
+}
+543.1.1 = { # 233 BC
+	# Epirote Republic
+}

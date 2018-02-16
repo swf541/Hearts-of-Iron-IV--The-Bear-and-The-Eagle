@@ -1,0 +1,62 @@
+# 421001-421100 for the Lobetani dynasty
+421001 = {
+	name = "Retukenos" # Made up Lobetani leader
+	dynasty = 42011
+	culture = celtiberian
+	religion = celtic_pagan
+	
+	383.1.1 = { # 393 BC, Made up
+		birth="yes"
+	}
+	467.1.1 = { # 308 BC
+		death="yes"
+	}
+}
+
+421002 = {
+	name = "Adingibas" # Made up Lobetani leader
+	dynasty = 42011
+	culture = celtiberian
+	religion = celtic_pagan
+	
+	father = 421001
+	
+	417.1.1 = { # 359 BC, Made up
+		birth="yes"
+	}
+	467.1.1 = { # 308 BC
+		death="yes"
+	}
+}
+
+421003 = {
+	name = "Bodo" # Made up Lobetani leader
+	dynasty = 42011
+	culture = celtiberian
+	religion = celtic_pagan
+	
+	father = 421002
+	
+	446.1.1 = { # 330 BC, Made up
+		birth="yes"
+	}
+	510.1.1 = { # 266 BC
+		death="yes"
+	}
+}
+
+421004 = {
+	name = "Retukenos" # Made up Lobetani leader
+	dynasty = 42011
+	culture = celtiberian
+	religion = celtic_pagan
+	
+	father = 421003
+	
+	475.1.1 = { # 301 BC, Made up
+		birth="yes"
+	}
+	530.1.1 = { # 246 BC
+		death="yes"
+	}
+}

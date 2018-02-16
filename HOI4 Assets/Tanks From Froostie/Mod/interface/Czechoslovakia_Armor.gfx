@@ -1,0 +1,157 @@
+spriteTypes = {
+
+
+
+	SpriteType = {
+		name = "GFX_CZE_light_tanks_1_medium"
+		texturefile = "gfx/interface/technologies/CZE_lt_1.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_CZE_light_tanks_2_medium"
+		texturefile = "gfx/interface/technologies/SOV_lt_2.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_CZE_light_tanks_3_medium"
+		texturefile = "gfx/interface/technologies/SOV_lt_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_CZE_light_tanks_4_medium"
+		texturefile = "gfx/interface/technologies/SOV_lt_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_CZE_light_tanks_5_medium"
+		texturefile = "gfx/interface/technologies/SOV_lt_5.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_CZE_light_tanks_6_medium"
+		texturefile = "gfx/interface/technologies/SOV_lt_6.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_CZE_main_battle_tanks_1_medium"
+		texturefile = "gfx/interface/technologies/CZE_mbt_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_CZE_main_battle_tanks_2_medium"
+		texturefile = "gfx/interface/technologies/CZE_mbt_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_CZE_main_battle_tanks_3_medium"
+		texturefile = "gfx/interface/technologies/CZE_mbt_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_CZE_main_battle_tanks_4_medium"
+		texturefile = "gfx/interface/technologies/CZE_mbt_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_CZE_main_battle_tanks_5_medium"
+		texturefile = "gfx/interface/technologies/CZE_mbt_5.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_CZE_main_battle_tanks_6_medium"
+		texturefile = "gfx/interface/technologies/CZE_mbt_6.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_CZE_main_battle_tanks_7_medium"
+		texturefile = "gfx/interface/technologies/CZE_mbt_6.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_CZE_main_battle_tanks_8_medium"
+		texturefile = "gfx/interface/technologies/CZE_mbt_8.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_CZE_main_battle_tanks_9_medium"
+		texturefile = "gfx/interface/technologies/CZE_mbt_9.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_CZE_main_battle_tanks_10_medium"
+		texturefile = "gfx/interface/technologies/CZE_mbt_10.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_CZE_main_battle_tanks_11_medium"
+		texturefile = "gfx/interface/technologies/SOV_mbt_11.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_CZE_main_battle_tanks_15_medium"
+		texturefile = "gfx/interface/technologies/CZE_mbt_15.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_CZE_main_battle_tanks_16_medium"
+		texturefile = "gfx/interface/technologies/SOV_mbt_16.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_CZE_main_battle_tanks_17_medium"
+		texturefile = "gfx/interface/technologies/POL_mbt_17.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_CZE_main_battle_tanks_18_medium"
+		texturefile = "gfx/interface/technologies/CZE_mbt_18.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_CZE_heavy_tanks_1_medium"
+		texturefile = "gfx/interface/technologies/POL_ht_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_CZE_heavy_tanks_2_medium"
+		texturefile = "gfx/interface/technologies/SOV_ht_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_CZE_heavy_tanks_3_medium"
+		texturefile = "gfx/interface/technologies/SOV_ht_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_CZE_heavy_tanks_4_medium"
+		texturefile = "gfx/interface/technologies/SOV_ht_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_CZE_heavy_tanks_5_medium"
+		texturefile = "gfx/interface/technologies/SOV_ht_5.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_CZE_heavy_tanks_6_medium"
+		texturefile = "gfx/interface/technologies/SOV_ht_6.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_CZE_modern_battle_tanks_1_medium"
+		texturefile = "gfx/interface/technologies/CZE_mod_1.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_CZE_modern_battle_tanks_2_medium"
+		texturefile = "gfx/interface/technologies/CZE_mod_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_CZE_modern_battle_tanks_3_medium"
+		texturefile = "gfx/interface/technologies/CZE_mod_3.dds"
+	}
+
+
+}
+

@@ -1,0 +1,32 @@
+417.1.1 = {
+	holder = 350001 # Nectanebo II
+}
+435.1.1 = {
+	holder = 90501 # Sabaces
+	liege = k_p_egypt
+}
+443.1.1 = {
+	holder = 90601 # Mazaces
+}
+445.1.1 = { # 331 BC
+	holder = 811 # Kleomenes
+	liege = k_s_egypt
+}
+453.6.10 = {
+	holder = 601
+}
+467.1.1 = {
+	liege = e_egypt
+}
+491.1.1 = {
+	holder = 602 # Ptolemy II
+}
+530.1.1 = { # 246 BC
+	holder = 606 # Ptolemy III
+}
+554.1.1 = { # 222 BC
+	holder = 610 # Ptolemy IV
+}
+572.7.1 = { # 204 BC
+	holder = 615 # Ptolemy V
+}

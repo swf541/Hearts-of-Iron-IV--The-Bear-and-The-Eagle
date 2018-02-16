@@ -1,0 +1,26 @@
+# 460101-470200 for the Aryamgulashu dynasty
+460101 = {
+	name = "Kushtana" # Made up
+	dynasty = 46002 # Aryamgulashu
+	religion = zoroastrian
+	culture = khotanese
+	395.1.1 = { # 381 BC
+		birth="yes"
+	}
+	460.1.1 = { # 316 BC
+		death="yes"
+	}
+}
+460102 = {
+	name = "Samgaka" # Made up
+	dynasty = 46002 # Aryamgulashu
+	religion = zoroastrian
+	culture = khotanese
+	father = 460101
+	419.1.1 = { # 357 BC
+		birth="yes"
+	}
+	496.1.1 = { # 280 BC
+		death="yes"
+	}
+}

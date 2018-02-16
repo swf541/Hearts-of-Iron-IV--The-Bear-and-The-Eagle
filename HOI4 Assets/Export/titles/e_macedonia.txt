@@ -1,0 +1,29 @@
+426.1.1 = {
+	holder = 803	
+	law = succ_tanistry
+	law = agnatic_succession
+}
+440.10.1 = {
+	holder = 802
+}
+453.6.10 = {
+	holder = 801
+}
+459.12.25 = {
+	holder = 808 # Alexandros IV
+}
+467.1.1 = {
+	holder = 0
+}
+499.1.1 = { # 277 BC
+	holder = 408 # Antigonos II Gonatas
+}
+537.1.1 = { # 237 BC
+	holder = 415 # Demetrios II Aetolicus
+}
+547.1.1 = { # 229 BC
+	holder = 418 # Antigonos III Doson
+}
+555.1.1 = { # 221 BC
+	holder = 416 # Philippos V
+}

@@ -1,0 +1,626 @@
+focus_tree = {
+	id = Poland
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = POL
+		}
+	}
+	default = no
+	focus = {
+		id = POL_deny_soviet_military_control
+		icon = GFX_goal_generic_build_tank
+		cost = 10.00
+		mutually_exclusive = {
+			focus = POL_purge_anti_communists_from_army
+		}
+		x = 2
+		y = 0
+
+	}
+	focus = {
+		id = POL_purge_anti_communists_from_army
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		mutually_exclusive = {
+			focus = POL_deny_soviet_military_control
+		}
+		x = 9
+		y = 0
+
+	}
+	focus = {
+		id = POL_accelerated_aviation_development
+		icon = GFX_goal_continuous_air_production
+		cost = 10.00
+		x = 15
+		y = 0
+
+	}
+	focus = {
+		id = POL_naval_cooperation_with_ussr
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		x = 21
+		y = 0
+
+	}
+	focus = {
+		id = POL_complete_three_year_plan
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		x = 26
+		y = 0
+
+	}
+	focus = {
+		id = POL_equipment_effort
+		icon = GFX_goal_rhineland
+		cost = 10.00
+		prerequisite = {
+			focus = POL_deny_soviet_military_control
+		}
+		x = 0
+		y = 1
+
+	}
+	focus = {
+		id = POL_equipment_II
+		icon = GFX_goal_generic_army_artillery2
+		cost = 10.00
+		prerequisite = {
+			focus = POL_equipment_effort
+		}
+		x = 0
+		y = 3
+
+	}
+	focus = {
+		id = POL_equipment_III
+		icon = GFX_goal_generic_army_artillery
+		cost = 10.00
+		prerequisite = {
+			focus = POL_equipment_II
+		}
+		x = 0
+		y = 5
+
+	}
+	focus = {
+		id = POL_old_guard
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = POL_deny_soviet_military_control
+		}
+		x = 2
+		y = 2
+
+	}
+	focus = {
+		id = POL_doctrine_effort
+		icon = GFX_goal_generic_build_tank
+		cost = 10.00
+		prerequisite = {
+			focus = POL_old_guard
+		}
+		x = 2
+		y = 4
+
+	}
+	focus = {
+		id = POL_doctrine_effort_II
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = POL_doctrine_effort
+		}
+		x = 2
+		y = 6
+
+	}
+	focus = {
+		id = POL_motorization_effort
+		icon = GFX_goal_generic_army_motorized
+		cost = 10.00
+		prerequisite = {
+			focus = POL_deny_soviet_military_control
+		}
+		x = 4
+		y = 1
+
+	}
+	focus = {
+		id = POL_mechanization_effort
+		icon = GFX_goal_generic_cavalry
+		cost = 10.00
+		prerequisite = {
+			focus = POL_motorization_effort
+		}
+		x = 4
+		y = 3
+
+	}
+	focus = {
+		id = POL_mechanization_effort_II
+		icon = GFX_goal_generic_army_motorized
+		cost = 10.00
+		prerequisite = {
+			focus = POL_mechanization_effort
+		}
+		x = 4
+		y = 5
+
+	}
+	focus = {
+		id = POL_special_forces
+		icon = GFX_goal_generic_special_forces
+		cost = 10.00
+		prerequisite = {
+			focus = POL_doctrine_effort_II
+		}
+		prerequisite = {
+			focus = POL_equipment_III
+		}
+		prerequisite = {
+			focus = POL_mechanization_effort_II
+		}
+		x = 2
+		y = 7
+
+	}
+	focus = {
+		id = POL_exchange_personel
+		icon = GFX_goal_generic_military_deal
+		cost = 10.00
+		prerequisite = {
+			focus = POL_purge_anti_communists_from_army
+		}
+		x = 9
+		y = 1
+
+	}
+	focus = {
+		id = POL_soviet_military_doctrine
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = POL_exchange_personel
+		}
+		x = 9
+		y = 2
+
+	}
+	focus = {
+		id = POL_expand_marine_forces
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 10.00
+		prerequisite = {
+			focus = POL_soviet_military_doctrine
+		}
+		x = 7
+		y = 3
+
+	}
+	focus = {
+		id = POL_expand_mechanized_forces
+		icon = GFX_goal_generic_army_motorized
+		cost = 10.00
+		prerequisite = {
+			focus = POL_soviet_military_doctrine
+		}
+		x = 9
+		y = 3
+
+	}
+	focus = {
+		id = POL_polish_mechanized_forces
+		icon = GFX_goal_generic_cavalry
+		cost = 10.00
+		prerequisite = {
+			focus = POL_expand_mechanized_forces
+		}
+		x = 9
+		y = 4
+
+	}
+	focus = {
+		id = POL_mechanized_advancements
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10.00
+		prerequisite = {
+			focus = POL_polish_mechanized_forces
+		}
+		x = 9
+		y = 5
+
+	}
+	focus = {
+		id = POL_soviet_army_ideology
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = POL_exchange_personel
+		}
+		x = 11
+		y = 2
+
+	}
+	focus = {
+		id = POL_cooperation_with_the_soviets
+		icon = GFX_goal_generic_military_deal
+		cost = 10.00
+		prerequisite = {
+			focus = POL_soviet_military_doctrine
+		}
+		x = 11
+		y = 3
+
+	}
+	focus = {
+		id = POL_polish_front_concept
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10.00
+		prerequisite = {
+			focus = POL_cooperation_with_the_soviets
+		}
+		x = 11
+		y = 4
+
+	}
+	focus = {
+		id = POL_soviet_style_army
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = POL_polish_front_concept
+		}
+		x = 11
+		y = 5
+
+	}
+	focus = {
+		id = POL_fighter_divisions
+		icon = GFX_goal_generic_air_fighter
+		cost = 10.00
+		prerequisite = {
+			focus = POL_accelerated_aviation_development
+		}
+		x = 14
+		y = 1
+
+	}
+	focus = {
+		id = POL_attack_aircraft_development
+		icon = GFX_goal_generic_air_fighter2
+		cost = 10.00
+		prerequisite = {
+			focus = POL_fighter_divisions
+		}
+		x = 14
+		y = 2
+
+	}
+	focus = {
+		id = POL_bomber_divisions
+		icon = GFX_goal_generic_air_bomber
+		cost = 10.00
+		prerequisite = {
+			focus = POL_accelerated_aviation_development
+		}
+		x = 16
+		y = 1
+
+	}
+	focus = {
+		id = POL_naval_aviation
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 10.00
+		prerequisite = {
+			focus = POL_bomber_divisions
+		}
+		x = 16
+		y = 2
+
+	}
+	focus = {
+		id = POL_reject_soviet_aviation_officers
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10.00
+		prerequisite = {
+			focus = POL_attack_aircraft_development
+		}
+		prerequisite = {
+			focus = POL_naval_aviation
+		}
+		x = 15
+		y = 3
+
+	}
+	focus = {
+		id = POL_planning_foriegn_invasion
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 10.00
+		prerequisite = {
+			focus = POL_naval_cooperation_with_ussr
+		}
+		x = 20
+		y = 1
+
+	}
+	focus = {
+		id = POL_naval_transporation
+		icon = GFX_goal_continuous_naval_production
+		cost = 10.00
+		prerequisite = {
+			focus = POL_planning_foriegn_invasion
+		}
+		x = 20
+		y = 2
+
+	}
+	focus = {
+		id = POL_fast_navy
+		icon = GFX_goal_generic_wolf_pack
+		cost = 10.00
+		prerequisite = {
+			focus = POL_naval_transporation
+		}
+		x = 20
+		y = 3
+
+	}
+	focus = {
+		id = POL_develop_local_naval_industry
+		icon = GFX_goal_generic_build_navy
+		cost = 10.00
+		prerequisite = {
+			focus = POL_naval_cooperation_with_ussr
+		}
+		x = 22
+		y = 1
+
+	}
+	focus = {
+		id = POL_soviet_naval_officers
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = POL_develop_local_naval_industry
+		}
+		x = 22
+		y = 2
+
+	}
+	focus = {
+		id = POL_soviet_ships
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 10.00
+		prerequisite = {
+			focus = POL_soviet_naval_officers
+		}
+		x = 22
+		y = 3
+
+	}
+	focus = {
+		id = POL_ready_to_strike
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10.00
+		prerequisite = {
+			focus = POL_soviet_ships
+		}
+		prerequisite = {
+			focus = POL_fast_navy
+		}
+		x = 21
+		y = 4
+
+	}
+	focus = {
+		id = POL_collectivization_of_the_peasents
+		icon = GFX_goal_continuous_increase_nu
+		cost = 10.00
+		prerequisite = {
+			focus = POL_complete_three_year_plan
+		}
+		x = 25
+		y = 1
+
+	}
+	focus = {
+		id = POL_rebuild_the_factories
+		icon = GFX_goal_generic_construction2
+		cost = 10.00
+		prerequisite = {
+			focus = POL_collectivization_of_the_peasents
+		}
+		x = 25
+		y = 2
+
+	}
+	focus = {
+		id = POL_expand_heavy_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = POL_rebuild_the_factories
+		}
+		x = 25
+		y = 3
+
+	}
+	focus = {
+		id = POL_rebuild_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = POL_expand_heavy_industry
+		}
+		x = 25
+		y = 4
+
+	}
+	focus = {
+		id = POL_scientific_funding
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = POL_rebuild_infrastructure
+		}
+		x = 25
+		y = 5
+
+	}
+	focus = {
+		id = POL_soviet_scientists
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = POL_scientific_funding
+		}
+		x = 23
+		y = 6
+
+	}
+	focus = {
+		id = POL_prepare_for_invasion
+		icon = GFX_goal_generic_position_armies
+		cost = 10.00
+		prerequisite = {
+			focus = POL_expand_marine_forces
+		}
+		x = 7
+		y = 4
+
+	}
+	focus = {
+		id = POL_true_polish_marines
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 10.00
+		prerequisite = {
+			focus = POL_prepare_for_invasion
+		}
+		x = 7
+		y = 5
+
+	}
+	focus = {
+		id = POL_army_for_another_war
+		icon = GFX_goal_generic_major_war
+		cost = 10.00
+		prerequisite = {
+			focus = POL_soviet_style_army
+		}
+		prerequisite = {
+			focus = POL_mechanized_advancements
+		}
+		prerequisite = {
+			focus = POL_true_polish_marines
+		}
+		x = 9
+		y = 6
+
+	}
+	focus = {
+		id = H_bomb_development
+		icon = GFX_focus_wonderweapons
+		cost = 10.00
+		prerequisite = {
+			focus = POL_special_forces
+			focus = POL_army_for_another_war
+		}
+		x = 6
+		y = 8
+
+	}
+	focus = {
+		id = POL_reform_aviation_forces
+		icon = GFX_goal_generic_build_airforce
+		cost = 10.00
+		prerequisite = {
+			focus = POL_reject_soviet_aviation_officers
+		}
+		x = 15
+		y = 4
+
+	}
+	focus = {
+		id = POL_establish_military_industry
+		icon = GFX_goal_generic_air_production
+		cost = 10.00
+		prerequisite = {
+			focus = POL_complete_three_year_plan
+		}
+		x = 27
+		y = 1
+
+	}
+	focus = {
+		id = POL_expand_and_rebuild_military_factories
+		icon = GFX_goal_continuous_repairments
+		cost = 10.00
+		prerequisite = {
+			focus = POL_establish_military_industry
+		}
+		x = 27
+		y = 2
+
+	}
+	focus = {
+		id = POL_industrial_development
+		icon = GFX_goal_continuous_non_factory_construct
+		cost = 10.00
+		prerequisite = {
+			focus = POL_expand_and_rebuild_military_factories
+		}
+		x = 27
+		y = 3
+
+	}
+	focus = {
+		id = POL_finish_rebuilding
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = POL_expand_heavy_industry
+		}
+		x = 27
+		y = 4
+
+	}
+	focus = {
+		id = POL_independent_scientists
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = POL_scientific_funding
+		}
+		x = 27
+		y = 6
+
+	}
+	focus = {
+		id = POL_meteor_rockets
+		icon = GFX_focus_rocketry
+		cost = 10.00
+		prerequisite = {
+			focus = POL_independent_scientists
+		}
+		x = 27
+		y = 7
+
+	}
+	focus = {
+		id = POL_soviet_controlled_science
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = POL_soviet_scientists
+		}
+		x = 23
+		y = 7
+
+	}
+}

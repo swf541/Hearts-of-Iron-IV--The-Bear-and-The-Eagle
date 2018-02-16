@@ -1,0 +1,62 @@
+# 421201-421300 for the Uakkaioi dynasty
+421201 = {
+	name = "Tirtanos" # Made up Uakkaioi leader
+	dynasty = 42013
+	culture = celtiberian
+	religion = celtic_pagan
+	
+	385.1.1 = { # 391 BC, Made up
+		birth="yes"
+	}
+	466.1.1 = { # 309 BC
+		death="yes"
+	}
+}
+
+421202 = {
+	name = "Tirtanos" # Made up Uakkaioi leader
+	dynasty = 42013
+	culture = celtiberian
+	religion = celtic_pagan
+	
+	father = 421201
+	
+	417.1.1 = { # 359 BC, Made up
+		birth="yes"
+	}
+	464.1.1 = { # 312 BC
+		death="yes"
+	}
+}
+
+421203 = {
+	name = "Tirtanos" # Made up Uakkaioi leader
+	dynasty = 42013
+	culture = celtiberian
+	religion = celtic_pagan
+	
+	father = 421202
+	
+	437.1.1 = { # 339 BC, Made up
+		birth="yes"
+	}
+	504.1.1 = { # 272 BC
+		death="yes"
+	}
+}
+
+421204 = {
+	name = "Tirtanos" # Made up Uakkaioi leader
+	dynasty = 42013
+	culture = celtiberian
+	religion = celtic_pagan
+	
+	father = 421203
+	
+	463.1.1 = { # 313 BC, Made up
+		birth="yes"
+	}
+	517.1.1 = { # 259 BC
+		death="yes"
+	}
+}

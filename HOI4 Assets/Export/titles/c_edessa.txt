@@ -1,0 +1,38 @@
+417.1.1 = {
+	holder = 90324
+	liege = k_p_babylon
+}
+445.8.1 = { # 331 BC
+	holder = 30201
+	liege = k_s_assyria
+}
+457.1.1 = {
+	holder = 1001 # Seleukos
+	liege = k_s_babylonia
+}
+461.1.1 = {
+	holder = 401
+	liege = k_s_phrygia
+}
+465.1.1 = {
+	holder = 1001 # Seleukos
+	liege = k_s_babylonia
+}
+467.1.1 = {
+	liege = e_syria
+}
+495.8.1 = {
+	holder = 1002 # Antiochos I
+}
+515.1.1 = { # 261 BC
+	holder = 1012 # Antiochos II Theos
+}
+530.1.1 = { # 246 BC
+	holder = 1022 # Seleukos II Kallinikos
+}
+551.1.1 = { # 225 BC
+	holder = 1028 # Seleukos III Keraunos
+}
+553.1.1 = { # 223 BC
+	holder = 1029 # Antiochos III Megas
+}

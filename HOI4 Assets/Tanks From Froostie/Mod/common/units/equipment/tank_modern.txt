@@ -1,0 +1,113 @@
+# modern tank/self propelled equipment
+equipments = {
+
+	mod_equipment = {
+		is_archetype = yes
+		picture = archetype_mod_equipment			
+		is_buildable = no
+		type = armor
+		group_by = archetype
+		
+		interface_category = interface_category_armor
+		
+		upgrades = {
+			tank_reliability_upgrade
+			tank_engine_upgrade
+			tank_armor_upgrade
+			tank_gun_upgrade
+		}
+		
+		#Misc Abilities
+		maximum_speed = 11
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 24
+		breakthrough = 138
+		hardness = 0.98
+		armor_value = 160
+
+		#Offensive Abilities
+		soft_attack = 68
+		hard_attack = 66
+		ap_attack = 150
+		air_attack = 0
+
+		#Space taken in convoy
+		lend_lease_cost = 14
+		
+		build_cost_ic = 70
+		resources = {
+			oil = 8
+			steel = 12
+			chromium = 4
+			tungsten = 4
+		}
+		
+	}
+
+	mod_equipment_1 = {
+		archetype = mod_equipment
+		priority = 120
+		visual_level = 0
+	}
+
+	mod_equipment_2 = {
+		archetype = mod_equipment
+		parent = mod_equipment_1
+		priority = 130
+		visual_level = 1
+						
+		#Misc Abilities
+		maximum_speed = 11
+
+		#Defensive Abilities
+		defense = 25
+		breakthrough = 142
+		armor_value = 165
+
+		#Offensive Abilities
+		soft_attack = 70
+		hard_attack = 68
+		ap_attack = 152
+		air_attack = 0
+
+		build_cost_ic = 74
+		resources = {
+			oil = 8
+			steel = 12
+			chromium = 6
+			tungsten = 6
+		}	
+	}
+
+	mod_equipment_3 = {
+		archetype = mod_equipment
+		parent = mod_equipment_2
+		priority = 120
+		visual_level = 1
+						
+		#Misc Abilities
+		maximum_speed = 11
+
+		#Defensive Abilities
+		defense = 26
+		breakthrough = 146
+		armor_value = 170
+
+		#Offensive Abilities
+		soft_attack = 72
+		hard_attack = 70
+		ap_attack = 154
+		air_attack = 0
+
+		build_cost_ic = 78
+		resources = {
+			oil = 8
+			steel = 12
+			chromium = 8
+			tungsten = 8
+		}	
+	}
+
+}

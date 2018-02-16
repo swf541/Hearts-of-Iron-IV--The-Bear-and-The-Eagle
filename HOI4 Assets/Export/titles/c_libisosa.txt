@@ -1,0 +1,13 @@
+405.1.1 = { # 371 BC
+	holder = 420601 
+	liege = d_carpetani
+}
+467.1.1 = { # 308 BC
+	holder = 420602 # Belsu
+}
+473.1.1 = { # 303 BC
+	holder = 420603 # Kado
+}
+499.1.1 = { # 277 BC
+	holder = 420604 # Belsu
+}

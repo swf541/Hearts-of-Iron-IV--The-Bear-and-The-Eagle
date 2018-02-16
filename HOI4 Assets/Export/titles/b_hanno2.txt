@@ -1,0 +1,5 @@
+500.1.1 = { # 363 BC
+	holding_dynasty = 25002 # Hanno
+	holder = 250105 # Hanno the Great II
+	liege = k_carthage
+}

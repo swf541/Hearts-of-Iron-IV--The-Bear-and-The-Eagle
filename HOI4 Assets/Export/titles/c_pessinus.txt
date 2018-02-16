@@ -1,0 +1,36 @@
+417.1.1 = {
+	holder = 90323
+	liege = k_p_lydia
+}
+442.1.1 = { # 334 BC
+	holder = 90314 # Darius III
+}
+443.7.1 = { # 333 BC
+	holder = 401 # Antigonus, the one eyed
+	liege = k_s_phrygia
+}
+467.1.1 = {
+	liege = e_asia
+}
+475.1.1 = { # 301 BC
+	holder = 3301
+	liege = d_phrygia
+}
+495.2.1 = { # 281 BC, Defeat of Lysimachus
+	holder = 3101 # Lysias
+	liege = d_lycaonia
+}
+501.1.1 = { # 275 BC, Galatians settle in Galatia
+	holder = 472001 # Critasirus of the Tolistobogii
+	liege = d_galatia
+	de_jure_liege = d_galatia
+}
+516.1.1 = { # 260 BC
+	holder = 472002 # Acco of the Tolistobogii
+}
+550.1.1 = { # 226 BC
+	holder = 472003 # Cotuatus of the Tolistobogii
+}
+551.1.1 = { # 225 BC
+	holder = 472004 # Acco of the Tolistobogii
+}

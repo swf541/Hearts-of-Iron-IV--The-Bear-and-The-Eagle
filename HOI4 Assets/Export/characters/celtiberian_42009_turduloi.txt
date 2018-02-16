@@ -1,0 +1,62 @@
+# 420801-420900 for the Turduli dynasty
+420801 = {
+	name = "Ultinos" # Made up Turduli leader
+	dynasty = 42009
+	culture = celtiberian
+	religion = celtic_pagan
+	
+	385.1.1 = { # 391 BC, Made up
+		birth="yes"
+	}
+	466.1.1 = { # 309 BC
+		death="yes"
+	}
+}
+
+420802 = {
+	name = "Tureno" # Made up Turduli leader
+	dynasty = 42009
+	culture = celtiberian
+	religion = celtic_pagan
+
+	father = 420801
+	
+	414.1.1 = { # 362 BC, Made up
+		birth="yes"
+	}
+	477.1.1 = { # 299 BC
+		death="yes"
+	}
+}
+
+420803 = {
+	name = "Pirreso" # Made up Turduli leader
+	dynasty = 42009
+	culture = celtiberian
+	religion = celtic_pagan
+
+	father = 420802
+	
+	439.1.1 = { # 337 BC, Made up
+		birth="yes"
+	}
+	503.1.1 = { # 273 BC
+		death="yes"
+	}
+}
+
+420804 = {
+	name = "Ultinos" # Made up Turduli leader
+	dynasty = 42009
+	culture = celtiberian
+	religion = celtic_pagan
+
+	father = 420803
+	
+	474.1.1 = { # 302 BC, Made up
+		birth="yes"
+	}
+	527.1.1 = { # 249 BC
+		death="yes"
+	}
+}

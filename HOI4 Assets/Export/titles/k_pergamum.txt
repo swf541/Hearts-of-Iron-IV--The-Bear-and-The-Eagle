@@ -1,0 +1,15 @@
+538.1.1 = { # 238 BC
+	holder = 51309 # Attalus I
+}
+579.1.1 = { # 197 BC
+	holder = 51310 # Eumenes II
+}
+617.1.1 = { # 159 BC
+	holder = 51313 # Attalos II
+}
+638.1.1 = { # 138 BC
+	holder = 51311 # Attalos III
+}
+643.1.1 = { # 133 BC
+	holder = 0 # Pergamon passes to Rome
+}

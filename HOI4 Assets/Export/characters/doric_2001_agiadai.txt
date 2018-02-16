@@ -1,0 +1,513 @@
+# 20001-20100 for the Agiadai dynasty
+
+20001 = {
+	name = "Teleklos" # Teleklos I, King of Sparta, Son of Arkhelaus I
+	dynasty = 2001 # Agiadai
+	religion = hellenic_pagan
+	culture = doric
+	
+	trait = brilliant_strategist
+
+	1.1.1 = { # 776 BC, made up
+		birth="yes" 
+	}	
+	36.1.1 = { # 740 BC, Teleklos was killed during a skirmish with the Messanians during a festival at the temple of Artemis Limnatis
+			death = {	
+				death_reason = death_rabble
+		}
+	}
+}
+
+20002 = {
+	name = "Alkamenos" # Alkamenos I, King of Sparta, Son of Teleklos I
+	dynasty = 2001 # Agiadai
+	religion = hellenic_pagan
+	culture = doric
+
+	father = 20001
+
+	trait = brilliant_strategist
+
+	24.1.1 = { # 752 BC, made up
+		birth="yes" 
+	}	
+	76.1.1 = { # 700 BC, Natural as there are no causes of death known
+		death="yes" 
+	}
+}
+
+20003 = {
+	name = "Polydoros" # Polydoros I, King of Sparta, Son of Alkamenos I
+	dynasty = 2001 # Agiadai
+	religion = hellenic_pagan
+	culture = doric
+
+	father = 20002
+
+	trait = brilliant_strategist
+	trait = brave
+
+	68.1.1 = { # 708 BC, made up
+		birth="yes" 
+	}	
+	111.1.1 = { # 665 BC,  Killed by Athenian Archon Polemarchus in battle
+			death = {	
+				death_reason = death_battle
+		}
+	}
+}
+
+20004 = {
+	name = "Eurykrates" # Eurykrates I, King of Sparta, Son of Polydoros I
+	dynasty = 2001 # Agiadai
+	religion = hellenic_pagan
+	culture = doric
+
+	father = 20003
+
+	trait = skilled_tactician
+
+	91.1.1 = { # 685 BC, made up
+		birth="yes" 
+	}	
+	136.1.1 = { # 640 BC, Natural as there are no causes of death known
+		death="yes" 
+	}
+}
+
+20005 = {
+	name = "Anaxandros" # Anaxandros I, King of Sparta, Son of Eurykrates I
+	dynasty = 2001 # Agiadai
+	religion = hellenic_pagan
+	culture = doric
+
+	father = 20004
+
+	trait = skilled_tactician
+
+	113.1.1 = { # 663 BC, made up
+		birth="yes" 
+	}	
+	161.1.1 = { # 615 BC, Natural as there are no causes of death known
+		death="yes" 
+	}
+}
+
+20006 = {
+	name = "Eurykratides" # Eurykratides I, King of Sparta, Son of Anaxandros1 I
+	dynasty = 2001 # Agiadai
+	religion = hellenic_pagan
+	culture = doric
+
+	father = 20005
+
+	trait = skilled_tactician
+
+	136.1.1 = { # 640 BC, made up
+		birth="yes" 
+	}	
+	186.1.1 = { # 590 BC, Natural as there are no causes of death known
+		death="yes" 
+	}
+}
+
+20007 = {
+	name = "Leon" # Leon I, King of Sparta, Son of Eurykratides I
+	dynasty = 2001 # Agiadai
+	religion = hellenic_pagan
+	culture = doric
+
+	father = 20006
+
+	trait = skilled_tactician
+
+	164.1.1 = { # 612 BC, made up
+		birth="yes" 
+	}	
+	216.1.1 = { # 560 BC, Natural as there are no causes of death known
+		death="yes" 
+	}
+}
+
+20008 = {
+	name = "Anaxandridas" # Anaxandridas II, King of Sparta, Son of Leon I
+	dynasty = 2001 # Agiadai
+	religion = hellenic_pagan
+	culture = doric
+
+	father = 20007
+
+	trait = brilliant_strategist
+
+	188.1.1 = { # 588 BC, made up
+		birth="yes" 
+	}	
+	251.1.1 = { # 525 BC, Natural as there are no causes of death known
+		death="yes" 
+	}
+}
+
+20009 = {
+	name = "Kleomenes" # Kleomenes I, King of Sparta, Son of Anaxandrides II by his Second Wife
+	dynasty = 2001 # Agiadai
+	religion = hellenic_pagan
+	culture = doric
+
+	father = 20008
+
+	trait = brilliant_strategist
+
+	232.1.1 = { # 544 BC, made up
+		birth="yes" 
+	}	
+	287.1.1 = { # 489 BC, He died in prison in mysterious circumstances, with the Spartan authorities claiming his death was suicide due to insanity
+		death = {	
+			death_reason = death_murder
+		}
+	}
+}
+
+20010 = {
+	name = "Gorgo" # Gorgo, Queen of Sparta, Daughter of Kleomenes I
+	dynasty = 2001 # Agiadai
+	religion = hellenic_pagan
+	culture = doric
+	female = yes
+
+	father = 20009
+
+	trait = fair
+	trait = tough_soldier
+
+	261.1.1 = { # 515 BC, made up
+		birth="yes" 
+	}	
+	307.1.1 = { # 469 BC, Natural as there are no causes of death known
+		death="yes" 
+	}
+}
+
+20011 = {
+	name = "Dorieos" # Dorieos, Son of Anaxandrides II by his First Wife
+	dynasty = 2001 # Agiadai
+	religion = hellenic_pagan
+	culture = doric
+
+	father = 20008
+
+	trait = adventurer
+	trait = brave
+	trait = tough_soldier
+
+	234.1.1 = { # 536 BC, made up
+		birth="yes" 
+	}	
+	299.1.1 = { # 477 BC, Natural as there are no causes of death known
+		death="yes" 
+	}
+}
+
+20012 = {
+	name = "Leonidas" # Leonidas I, King of Sparta, Son of Anaxandrides II by his First Wife
+	dynasty = 2001 # Agiadai
+	religion = hellenic_pagan
+	culture = doric
+
+	father = 20008
+
+	trait =brave
+	trait =brilliant_strategist
+	trait =quick
+	trait =strategist
+	trait =patient
+
+	236.1.1 = { # 540 BC
+		birth="yes" 
+	}
+
+	276.1.1={
+          add_spouse=20010 # 500 BC Made up, Married to Gorgo
+
+	}
+
+	296.8.11 = { # 480 BC, Killed during the battle of Thermopylae
+			death = {	
+				death_reason = death_battle
+				killer = 90306 # Xerxes The Great
+		}
+
+	}
+}
+
+20013 = {
+	name = "Pleistarchus" # Pleistarchus I, King of Sparta, Son of Leonidas and Gorgo
+	dynasty = 2001 # Agiadai
+	religion = hellenic_pagan
+	culture = doric
+
+	father = 20012
+	mother = 20010
+
+	trait =tough_soldier
+
+	287.1.1 = { # 489 BC, made up
+		birth="yes" 
+	}	
+	318.1.1 = { # 458 BC, Natural as there are no causes of death known
+		death="yes" 
+	}
+}
+20014 = {
+	name = "Kleombrotus" # Kleombrotus, Regent of Sparta, Son of Anaxandrides II by his First Wife
+	dynasty = 2001 # Agiadai
+	religion = hellenic_pagan
+	culture = doric
+
+	father = 20008
+
+	trait =tough_soldier
+
+	240.1.1 = { # 536 BC, made up
+		birth="yes" 
+	}	
+	297.1.1 = { # 479 BC, Natural as there are no causes of death known
+		death="yes" 
+	}
+}
+
+20015 = {
+	name = "Pausanias" # Pausanias, General of Sparta, Son of Kleombrotus and Father of Pleistoanax I
+	dynasty = 2001 # Agiadai
+	religion = hellenic_pagan
+	culture = doric
+
+	father = 20014
+
+	trait =skilled_commander
+
+	264.1.1 = { # 512 BC, made up
+		birth="yes" 
+	}	
+	306.1.1 = { # 470 BC, Suspected of conspiring with Athens against Sparta. Died of starvation after being imprisoned.
+			death = {	
+				death_reason = death_dungeon
+		}
+	}
+}
+
+20016 = {
+	name = "Pleistoanax" # Pleistoanax I, King of Sparta Son of Pausanias
+	dynasty = 2001 # Agiadai
+	religion = hellenic_pagan
+	culture = doric
+
+	father = 20015
+
+	trait =tough_soldier
+
+	300.1.1 = { # 476 BC, made up
+		birth="yes" 
+	}	
+	367.1.1 = { # 409 BC, Natural as there are no causes of death known
+		death="yes" 
+	}
+}
+
+20017 = {
+	name = "Nikomedes" # Nikomedes, Spartan General, Son of Kleombrotus
+	dynasty = 2001 # Agiadai
+	religion = hellenic_pagan
+	culture = doric
+
+	father = 20015
+
+	trait =skilled_commander
+
+	277.1.1 = { # 499 BC, made up
+		birth="yes" 
+	}	
+	329.1.1 = { # 447 BC, Natural as there are no causes of death known
+		death="yes" 
+	}
+}
+
+20018 = {
+	name = "Pausanias" # Pausanias I, King of Sparta Son of Pleistoanax
+	dynasty = 2001 # Agiadai
+	religion = hellenic_pagan
+	culture = doric
+
+	father = 20016
+
+	trait =tough_soldier
+
+	325.1.1 = { # 451 BC, made up
+		birth="yes" 
+	}	
+	386.1.1 = { # 380 BC, Natural as there are no causes of death known
+		death="yes" 
+	}
+}
+
+
+20019 = {
+	name = "Agesipolis" # Agesipolis I, King of Sparta, Son of Pausanias I
+	dynasty = 2001 # Agiadai
+	religion = hellenic_pagan
+	culture = doric
+
+	father = 20018
+
+	trait =tough_soldier
+
+	364.1.1 = { # 412 BC, made up
+		birth="yes" 
+	}	
+	396.1.1 = { # 380 BC, Died of a fever
+		death="yes" 
+	}
+}
+
+20020 = {
+	name = "Kleombrotus" # Kleombrotus I, King of Sparta, Son of Pausanias I
+	dynasty = 2001 # Agiadai
+	religion = hellenic_pagan
+	culture = doric
+
+	father = 20019
+
+	trait =misguided_warrior
+
+	367.1.1 = { # 409 BC, made up
+		birth="yes" 
+	}	
+	405.7.6 = { # 371 BC, Died during the battle of Leuctra
+			death = {	
+				death_reason = death_battle
+		}
+	}
+}
+
+
+20021 = {
+	name = "Agesipolis" # Agesipolis II, King of Sparta, Son of Kleombrotus 
+	dynasty = 2001 # Agiadai
+	religion = hellenic_pagan
+	culture = doric
+
+	father = 20020
+
+	trait = tough_soldier
+
+	386.1.1 = { # 390 BC, made up
+		birth="yes" 
+	}	
+	407.1.1 = { # 369 BC, Natural as there are no causes of death known
+		death="yes" 
+	}
+}
+
+20022 = {
+	name = "Kleomenes" # Cleomenes II, King of Sparta, Son of Kleombrotus
+	dynasty = 2001 # Agiadai
+	religion = hellenic_pagan
+	culture = doric
+
+	father = 20020
+
+	396.1.1 = { # 380 BC, made up
+		birth="yes" 
+	}	
+	467.1.1 = { # 309 BC, Natural as there are no causes of death known
+		death="yes" 
+	}
+}
+
+20023 = {
+	name = "Akrotatos" # Acrotatus I, son of Cleomenes II
+	dynasty = 2001 # Agiadai
+	religion = hellenic_pagan
+	culture = doric
+
+	father = 20022
+	
+	trait = cruel
+	
+	416.1.1 = { # Made up
+		birth="yes" # 360 BC
+	}
+	464.1.1 = { # Made up
+		death="yes" # 312 BC
+	}
+}
+
+20024 = {
+	name = "Areios" # Areus I, Agiad king of Sparta
+	dynasty = 2001 # Agiadai
+	religion = hellenic_pagan
+	culture = doric
+
+	father = 20023
+
+	439.1.1 = { # Made up
+		birth="yes" # 337 BC
+	}
+	511.1.1 = {
+			death = {	
+				death_reason = death_battle # 265 BC, Died in battle near Corinth
+		}
+	}
+}
+
+20025 = {
+	name = "Kleonymos" # Brief ruler of Corfu, son of Cleomenes II
+	dynasty = 2001 # Agiadai
+	religion = hellenic_pagan
+	culture = doric
+
+	father = 20022
+	
+	trait = wroth
+	trait = cruel
+	
+	432.1.1 = { # Made up
+		birth="yes" # 344 BC
+	}
+	511.1.1 = { # Made up
+		death="yes" # 265 BC
+	}
+}
+
+20026 = {
+	name = "Akrotatos" # Akrotatos II, Agiad king of Sparta, Son of Areus I
+	dynasty = 2001 # Agiadai
+	religion = hellenic_pagan
+	culture = doric
+
+	father = 20024
+
+	463.1.1 = { 
+		birth="yes" # 313 BC Made Up
+	}
+	514.1.1 = {
+			death = {
+				death_reason = death_battle # 262 BC Died in Battle against Aristodemus the Good
+		}
+	}
+}
+
+20027 = {
+	name = "Areios II" # Areus I, Agiad king of Sparta
+	dynasty = 2001 # Agiadai
+	religion = hellenic_pagan
+	culture = doric
+
+	father = 20026
+
+	494.1.1 = { # Made up
+		birth="yes" # 512 reign began BC
+	}
+	522.1.1 = {
+		death="yes" # 265 BC
+	}
+}

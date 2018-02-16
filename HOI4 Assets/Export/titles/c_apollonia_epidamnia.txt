@@ -1,0 +1,36 @@
+402.1.1 = { # 374 BC
+	holder = 23901
+}
+431.1.1 = { # 345 BC
+	holder = 23902
+}
+441.1.1 = { # 335 BC
+	holder = 23903
+}
+462.1.1 = { # 314 BC
+	liege = k_macedon
+}
+474.1.1 = { # 302 BC
+	liege = k_epirus
+}
+479.1.1 = { # 297 BC
+	holder = 10010
+}
+504.6.1 = {
+	holder = 10015 # Alexander II
+}
+534.1.1 = { # 242 BC
+	holder = 10017 # Pyrrhus II
+}
+539.1.1 = { # 237 BC
+	holder = 10018 # Ptolemy I
+}
+541.1.1 = { # 235 BC
+	holder = 10022 # Pyrrhus III
+}
+541.4.1 = { # 235 BC
+	holder = 10020 # Deidameia
+}
+543.1.1 = { # 233 BC
+	# Epirote Republic
+}

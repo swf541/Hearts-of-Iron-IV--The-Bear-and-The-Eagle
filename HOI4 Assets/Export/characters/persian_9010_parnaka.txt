@@ -1,0 +1,144 @@
+# 90901-91000 for the Parnaka dynasty
+90901 = {
+    name = "Parnaka" # Pharnaces I
+    dynasty = 9010 # Parnaka
+	religion = zoroastrian
+	culture = persian
+
+    father = 90319 # Arsames, grandfather of Darius
+
+    216.1.1 = { # 563 BC, made up
+        birth="yes"
+    }
+    279.1.1 = { # 497 BC
+        death="yes"
+    }
+}
+
+90902 = {
+    name = "Artavasdes" # Artabazus I
+    dynasty = 9010 # Parnaka
+	religion = zoroastrian
+	culture = persian
+
+    father = 90901 # Pharnaces I
+
+    240.1.1 = { # 536 BC, made up
+        birth="yes"
+    }
+    321.1.1 = { # 455 BC
+        death="yes"
+    }
+}
+
+90903 = {
+    name = "Parnavasdes" # Pharnabazus I
+    dynasty = 9010 # Parnaka
+	religion = zoroastrian
+	culture = persian
+
+    father = 90902 # Artabazus I
+
+    271.1.1 = { # 505 BC, made up
+        birth="yes"
+    }
+    346.1.1 = { # 430 BC
+        death="yes"
+    }
+}
+
+90904 = {
+    name = "Parnaka" # Pharnaces II
+    dynasty = 9010 # Parnaka
+	religion = zoroastrian
+	culture = persian
+
+    father = 90903 # Pharnabazus I
+
+    300.1.1 = { # 476 BC, made up
+        birth="yes"
+    }
+    354.1.1 = { # 422 BC
+        death="yes"
+    }
+}
+
+90905 = {
+    name = "Parnavasdes" # Pharnabazus II
+    dynasty = 9010 # Parnaka
+	religion = zoroastrian
+	culture = persian
+
+    father = 90904 # Pharnaces II
+
+    334.1.1 = { # 442 BC, made up
+        birth="yes"
+    }
+    399.1.1 = { # 377 BC
+        death="yes"
+    }
+}
+
+90906 = {
+	name = "Ariyabrdhna" # Ariobarzanes of Phrygia
+	dynasty = 9010 # Parnaka
+	religion = zoroastrian
+	culture = persian
+
+    father = 90904 # Pharnaces II
+
+	339.1.1 = { # 437 BC, Made up
+		birth="yes"
+	}
+	414.1.1 = { # 362 BC
+		death="yes"
+	}
+}
+
+90907 = {
+	name = "Ariyabrdhna" # Ariobarzanes II of Cius
+	dynasty = 9010 # Parnaka
+	religion = zoroastrian
+	culture = persian
+
+    father = 90906 # Ariobarzanes of Phrygia
+
+	364.1.1 = { # 412 BC, Made up
+		birth="yes"
+	}
+	439.1.1 = { # 337 BC
+		death="yes"
+	}
+}
+
+90908 = {
+	name = "Artavasdes" # Artabazus II of Phrygia
+	dynasty = 9010 # Parnaka
+	religion = zoroastrian
+	culture = persian
+
+    father = 90905 # Pharnabazus II
+
+	373.1.1 = { # 403 BC, Made up
+		birth="yes"
+	}
+	447.1.1 = { # 329 BC
+		death="yes"
+	}
+}
+
+90909 = {
+	name = "Parnavasdes" # Pharnabazus III
+	dynasty = 9010 # Parnaka
+	religion = zoroastrian
+	culture = persian
+
+    father = 90908 # Artabazus II
+
+	402.1.1 = { # 374 BC, Made up
+		birth="yes"
+	}
+	463.1.1 = { # 313 BC, Made up
+		death="yes"
+	}
+}

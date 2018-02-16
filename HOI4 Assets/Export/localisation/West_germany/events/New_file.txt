@@ -1,0 +1,12 @@
+add_namespace = 
+country_event = {
+	id = namespace.0
+	title = namespace.0.t
+	picture = GFX_event_test
+	desc = namespace.0.d
+	option = {
+	name = namespace.count.a
+
+	}
+
+	}

@@ -1,0 +1,62 @@
+# 420601-420700 for the Turboletae dynasty
+420601 = {
+	name = "Elazunos" # Made up Carpetani leader
+	dynasty = 42007
+	culture = celtiberian
+	religion = celtic_pagan
+	
+	384.1.1 = { # 392 BC, Made up
+		birth="yes"
+	}
+	467.1.1 = { # 308 BC
+		death="yes"
+	}
+}
+
+420602 = {
+	name = "Belsu" # Made up Carpetani leader
+	dynasty = 42007
+	culture = celtiberian
+	religion = celtic_pagan
+	
+	father = 420601
+	
+	417.1.1 = { # 359 BC, Made up
+		birth="yes"
+	}
+	473.1.1 = { # 303 BC
+		death="yes"
+	}
+}
+
+420603 = {
+	name = "Kado" # Made up Carpetani leader
+	dynasty = 42007
+	culture = celtiberian
+	religion = celtic_pagan
+	
+	father = 420602
+	
+	443.1.1 = { # 333 BC, Made up
+		birth="yes"
+	}
+	499.1.1 = { # 277 BC
+		death="yes"
+	}
+}
+
+420604 = {
+	name = "Belsu" # Made up Carpetani leader
+	dynasty = 42007
+	culture = celtiberian
+	religion = celtic_pagan
+	
+	father = 420603
+	
+	471.1.1 = { # 305 BC, Made up
+		birth="yes"
+	}
+	538.1.1 = { # 238 BC
+		death="yes"
+	}
+}

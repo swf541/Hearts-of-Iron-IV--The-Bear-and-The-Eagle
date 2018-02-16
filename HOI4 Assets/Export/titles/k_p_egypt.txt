@@ -1,0 +1,10 @@
+435.1.1 = {
+	holder = 90501 # Sabaces
+	liege = e_persia
+}
+443.1.1 = {
+	holder = 90601 # Mazaces
+}
+445.1.1 = { # 331 BC
+	holder = 0
+}

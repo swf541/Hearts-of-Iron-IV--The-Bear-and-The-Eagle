@@ -1,0 +1,21 @@
+479.1.1 = { # 297 BC
+	holder = 80005 # Sames
+	liege = k_armenia
+}
+516.1.1 = { # 260 BC
+	holder = 80006 # Arsames I
+}
+538.1.1 = { # 228 BC
+	holder = 80008 # Xerxes
+}
+564.1.1 = { # 212 BC
+	holder = 80011 # Abdissares
+	liege = 0
+}
+566.1.1 = { # 210 BC
+	holder = 80012 # Zariadres
+	liege = e_syria
+}
+588.1.1 = { # 188 BC
+	liege = 0
+}

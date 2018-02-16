@@ -1,0 +1,17 @@
+# 480001-480100 for Narisanki characters
+480001 = {
+	name = "Narisanka" # Andragoras, satrap of Parthia. Rebelled and was killed by the Parni
+	dynasty = 48001
+	culture = parthian
+	religion = zoroastrian
+
+	492.1.1 = { # 284 BC, Made up
+		birth="yes"
+	}
+	538.1.1 = { # 238 BC
+		death = {
+			death_reason = death_battle
+			killer = 480101 # Arsaces I
+		}
+	}
+}

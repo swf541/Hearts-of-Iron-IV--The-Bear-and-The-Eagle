@@ -1,0 +1,15 @@
+405.1.1 = { # 371 BC
+	holder = 380001 # Jeddua
+	liege = d_kohen_gadol
+}
+444.8.1 = { # 332 BC
+	holder = 90601 # Mazaces
+	liege = k_p_egypt
+}
+444.10.1 = { # 332 BC
+	holder = 380001 # Jeddua
+	liege = d_kohen_gadol
+}
+456.1.1 = { # 320 BC
+	holder = 380002 # Onias
+}

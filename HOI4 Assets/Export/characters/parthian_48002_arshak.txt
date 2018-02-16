@@ -1,0 +1,73 @@
+# 480101-480200 for Arshak characters
+480101 = {
+	name = "Arshak" # I
+	dynasty = 33001 # Parni / Dahae
+	religion = zoroastrian
+	culture = scythian
+
+	father = 330003
+
+	506.1.1 = { # 270 BC, Made up
+		birth="yes"
+	}
+	529.1.1 = { # 247 BC
+		dynasty = 48002 # Arshak dynasty
+	}
+	565.1.1 = { # 211 BC
+		death="yes"
+	}
+}
+480102 = {
+	name = "Tiridata" # I
+	dynasty = 33001 # Parni / Dahae
+	religion = zoroastrian
+	culture = scythian
+
+	father = 330003
+
+	510.1.1 = { # 266 BC, Made up
+		birth="yes"
+	}
+	529.1.1 = { # 247 BC
+		dynasty = 48002 # Arshak dynasty
+	}
+	565.1.1 = { # 223 BC, Made up
+		death="yes"
+	}
+}
+480103 = {
+	name = "Ardaban" # Artabanus I
+	dynasty = 48002 # Arshak
+	religion = zoroastrian
+	culture = scythian
+
+	father = 480102 # Tiridata
+
+	541.1.1 = { # 235 BC, Made up
+		birth="yes"
+	}
+	565.1.1 = { # 211 BC
+		name = "Arshak"
+	}
+	591.1.1 = { # 185 BC
+		death="yes"
+	}
+}
+480104 = {
+	name = "Phraates" # Priapatius I
+	dynasty = 48002 # Arshak
+	religion = zoroastrian
+	culture = parthian
+
+	father = 480103 # Ardaban
+
+	565.1.1 = { # 211 BC, Made up
+		birth="yes"
+	}
+	591.1.1 = { # 185 BC
+		name = "Arshak"
+	}
+	606.1.1 = { # 170 BC
+		death="yes"
+	}
+}

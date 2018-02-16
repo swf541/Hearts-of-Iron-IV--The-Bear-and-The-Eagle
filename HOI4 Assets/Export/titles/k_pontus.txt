@@ -1,0 +1,12 @@
+496.1.1 = { # 280 BC
+	holder = 130002 # Mithradates Ktistes
+}
+510.1.1 = { # 266 BC
+	holder = 130003 # Ariobarzanes I
+}
+525.1.1 = { # 251 BC
+	holder = 130004 # Mithradates II
+}
+567.1.1 = { # 209 BC
+	holder = 130005 # Mithradates III
+}

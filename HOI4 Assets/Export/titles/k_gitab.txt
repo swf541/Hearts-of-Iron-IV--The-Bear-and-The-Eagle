@@ -1,0 +1,10 @@
+416.1.1 = { # 360 BC
+	holder = 330202 # Protothyes
+	historical_nomad = yes
+}
+451.1.1 = {
+	holder = 330201 # Kanites
+}
+502.1.1 = {
+	holder = 330203
+}

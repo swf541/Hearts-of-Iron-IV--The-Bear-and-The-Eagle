@@ -1,0 +1,26 @@
+# 371001-371100 for Kuun dynasty
+371001 = {
+	name = "Pigita" # Made up
+	dynasty = 37041
+	religion = zoroastrian
+	culture = tocharian
+	388.1.1 = { # 388 BC
+		birth="yes"
+	}
+	455.1.1 = { # 321 BC
+		death="yes"
+	}
+}
+371002 = {
+	name = "Budhavama" # Made up
+	dynasty = 37041
+	religion = zoroastrian
+	culture = tocharian
+	father = 371001
+	420.1.1 = { # 356 BC
+		birth="yes"
+	}
+	498.1.1 = { # 287 BC
+		death="yes"
+	}
+}

@@ -1,0 +1,13 @@
+501.1.1 = { # 275 BC, Galatians settle in Galatia
+	holder = 470001 # Brennus of the Tectosages
+	de_jure_liege = k_lydia
+}
+519.1.1 = { # 257 BC
+	holder = 470002 # Vercassivellaunus of the Tectosages
+}
+557.1.1 = { # 219 BC
+	holder = 470003 # Indutiomarus of the Tectosages
+}
+560.1.1 = { # 216 BC
+	holder = 470004 # Brennus of the Tectosages
+}

@@ -1,0 +1,8 @@
+443.9.1 = { # 333 BC
+	holder = 501 # Philotas, Satrap of Kilikia
+	liege = e_macedonia
+}
+460.1.1 = {
+	holder = 0
+	liege = 0
+}

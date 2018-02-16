@@ -1,0 +1,6 @@
+475.1.1 = { # 301 BC
+	holder = 70001 # Pharnavazi
+}
+540.1.1 = { # 236 BC
+	holder = 70004 # Saurmag
+}

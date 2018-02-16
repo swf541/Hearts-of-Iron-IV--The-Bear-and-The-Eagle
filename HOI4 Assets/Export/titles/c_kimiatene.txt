@@ -1,0 +1,32 @@
+417.1.1 = {
+	holder = 60003 # Ariamnes
+	liege = k_p_cappadocia
+}
+426.1.1 = {
+	holder = 60101 # Mithrobuzanes
+}
+442.1.1 = {
+	holder = 60001 # Ariarathes, King of Cappadocia
+}
+444.1.1 = { # 332 BC
+	holder = 300001 # Mutallu
+	liege = 0
+}
+474.1.1 = { # 302 BC
+	holder = 130002 # Mithridates Ktistes
+}
+475.1.1 = { # 301 BC
+	liege = d_pontus
+}
+496.1.1 = { # 280 BC
+	liege = k_pontus
+}
+510.1.1 = { # 266 BC
+	holder = 130003 # Ariobarzanes I
+}
+525.1.1 = { # 251 BC
+	holder = 130004 # Mithradates II
+}
+567.1.1 = { # 209 BC
+	holder = 130005 # Mithradates III
+}

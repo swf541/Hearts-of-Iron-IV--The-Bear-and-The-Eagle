@@ -1,0 +1,10 @@
+405.1.1 = { # 371 BC
+	holder = 421201 # Sekilos
+	liege = d_turmodigi
+}
+466.1.1 = { # 309 BC
+	holder = 421203 # Sekilos
+}
+504.1.1 = { # 272 BC
+	holder = 421204 # Sekilos
+}

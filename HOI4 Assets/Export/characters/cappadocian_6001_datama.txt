@@ -1,0 +1,97 @@
+# 60001-60100 for the Datama dynasty
+60001 = {
+	name = "Aryawratha" # Ariarathes I, Achaemenid satrap of Cappadocia and later the first king of Cappadocia
+	dynasty = 6001 # Datama
+	religion = anatolian_main
+	culture = cappadocian
+	father = 60003
+	
+	add_trait = content # Loyal
+	
+	372.1.1 = { # 404 BC
+		birth="yes"
+	}	
+	454.1.1 = {
+		death = { # 322 BC, imprisoned and crucified by Perdikkas
+			death_reason = death_execution
+			killer = 901 # Perdikkas
+		}
+	}
+}
+60002 = {
+	name = "Aryawratha" # Ariarathes II, adopted son of Ariarathes I
+	dynasty = 6001 # Datama
+	religion = anatolian_main
+	culture = cappadocian
+	father = 60001
+	436.1.1 = { # 340 BC Made up
+		birth="yes"
+	}
+	496.1.1 = { # 280 BC
+		death="yes"
+	}
+}
+60003 = {
+	name = "Ariyamna" # Ariamnes, Achaemenid satrap of Cappadocia, father of Ariarathes I
+	dynasty = 6001 # Datama
+	religion = anatolian_main
+	culture = cappadocian
+	355.1.1 = { # 421 BC, made up
+		birth="yes"
+	}
+	426.1.1 = { # 350 BC
+		death="yes"
+	}
+}
+60004 = {
+	name = "Ariyamna" # Ariamnes I
+	dynasty = 6001 # Datama
+	religion = anatolian_main
+	culture = cappadocian
+
+	father = 60002
+
+	459.1.1 = { # Made up
+		birth="yes" # 317 BC
+	}
+	514.1.1 = { 
+		death="yes" # 262 BC
+	}
+}
+60005 = {	
+	name = "Aryawratha" # Ariarathes III
+	dynasty = 6001 # Datama
+	religion = anatolian_main
+	culture = cappadocian
+	
+	father = 60004
+
+	486.1.1 = { # Made up
+		birth="yes" # 290 BC
+	}
+	527.1.1 = { # Marries Stratonike of Cappadocia, 249 BC
+		add_spouse = 1025 # Stratonike
+	}
+	556.1.1 = {
+		death="yes" # 220 BC
+	}
+}
+60006 = {
+	name = "Aryawratha" # Ariarathes IV
+	dynasty = 6001 # Datama
+	religion = anatolian_main
+	culture = cappadocian
+
+	father = 60005
+	mother = 1025 # Stratonike
+
+	535.1.1 = { # Made up
+		birth="yes" # 241 BC
+	}
+	579.1.1 = { # 197 BC
+		add_spouse = 1037 # Antiochis, daughter of Antiochus III
+	}
+	613.1.1 = {
+		death="yes" # 163 BC
+	}
+}

@@ -1,0 +1,6 @@
+413.1.1 = { # 363 BC
+	holder = 460001 # Kimashana
+}
+460.1.1 = { # 316 BC
+	holder = 460002 # Irasamga
+}

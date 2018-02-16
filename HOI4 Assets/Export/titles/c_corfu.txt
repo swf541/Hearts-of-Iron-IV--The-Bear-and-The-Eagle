@@ -1,0 +1,42 @@
+409.1.1 = {	# 367 BC
+	holder = 22602 # Euphranor, Made up
+}
+443.1.1 = { # 333 BC
+	holder = 22601 # Prokopios, Made up
+}
+473.1.1 = { # 303 BC
+	holder = 20004 # Kleonymos, son of Cleomedes II
+}
+475.1.1 = { # 301 BC
+	holder = 22701 # Agathocles
+	# liege = k_syracuse
+}
+481.1.1 = { # 295 BC
+	holder = 22702 # Lanassa, daughter of Agathocles
+	liege = k_epirus
+}
+485.1.1 = { # 291 BC
+	liege = e_asia
+}
+493.1.1 = { # 283 BC
+	holder = 10010 # Pyrrhus
+	liege = k_epirus
+}
+504.6.1 = {
+	holder = 10015 # Alexander II
+}
+534.1.1 = { # 242 BC
+	holder = 10017 # Pyrrhus II
+}
+539.1.1 = { # 237 BC
+	holder = 10018 # Ptolemy I
+}
+541.1.1 = { # 235 BC
+	holder = 10022 # Pyrrhus III
+}
+541.4.1 = { # 235 BC
+	holder = 10020 # Deidameia
+}
+543.1.1 = { # 233 BC
+	# Epirote Republic
+}

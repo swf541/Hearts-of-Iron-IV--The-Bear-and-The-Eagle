@@ -1,0 +1,43 @@
+417.1.1 = {
+	holder = 90324
+	liege = k_p_babylon
+}
+443.9.1 = { # 333 BC
+	holder = 501 # Philotas, Satrap of Cilicia
+	liege = k_s_cilicia
+}
+460.1.1 = {
+	holder = 401 # Antigonus
+	liege = k_s_phrygia
+}
+467.1.1 = {
+	liege = e_asia
+}
+475.1.1 = {
+	holder = 7 # Pleistarchus
+	liege = k_cilicia
+}
+478.1.1 = {
+	holder = 402 # Demetrios Poliorketes
+	liege = e_asia
+}
+480.1.1 = {
+	holder = 1001 # Seleukos
+	liege = e_syria
+}
+495.8.1 = {
+	holder = 1002 # Antiochos
+}
+505.1.1 = { # 271 BC
+	holder = 602 # Ptolemy II
+	liege = e_egypt
+}
+530.1.1 = { # 246 BC
+	holder = 606 # Ptolemy III
+}
+554.1.1 = { # 222 BC
+	holder = 610 # Ptolemy IV
+}
+572.7.1 = { # 204 BC
+	holder = 615 # Ptolemy V
+}

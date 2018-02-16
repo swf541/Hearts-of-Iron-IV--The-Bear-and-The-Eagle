@@ -1,0 +1,19 @@
+ideas = {
+    country = {
+	    occupation ={
+		
+		removal_cost = -1
+		
+		allowed = {
+				always = no # Added via focus
+			}
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				political_power_gain = -40
+			}
+		
+		}
+	}
+}

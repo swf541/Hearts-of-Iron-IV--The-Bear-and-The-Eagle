@@ -1,0 +1,19 @@
+410.1.1 = { # 366 BC
+	holder = 24501
+}
+465.1.1 = { # 311 BC
+	holder = 24502
+}
+476.1.1 = { # 300 BC
+	holder = 40001 # Zipoetes I
+	liege = d_bithynia
+}
+498.1.1 = { # 278 BC
+	holder = 40005 # Nikomedes I
+}
+521.1.1 = { # 255 BC
+	holder = 40010 # Ziaelas I
+}
+548.1.1 = { # 228 BC
+	holder = 40012 # Prusias I
+}

@@ -1,0 +1,1828 @@
+focus_tree = {
+	id = New_file
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = POL
+		}
+	}
+	default = no
+	focus = {
+		id = POL_Return_of_Communist_Methods
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10,00
+		x = 6
+		y = 0
+
+	}
+	focus = {
+		id = Poland_in_the_1960s
+		icon = GFX_goal_generic_position_armies
+		cost = 10,00
+		x = 25
+		y = 0
+
+	}
+	focus = {
+		id = POL_Naval_Cooperation_with_the_USSR
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10,00
+		mutually_exclusive = {
+			focus = POL_Chance_for_Polish_Officers
+		}
+		x = 32
+		y = 0
+
+	}
+	focus = {
+		id = POL_Chance_for_Polish_Officers
+		icon = GFX_focus_generic_military_mission
+		cost = 10,00
+		mutually_exclusive = {
+			focus = POL_Naval_Cooperation_with_the_USSR
+		}
+		x = 36
+		y = 0
+
+	}
+	focus = {
+		id = POL_Continue_Aviation_Development
+		icon = GFX_goal_continuous_air_production
+		cost = 10,00
+		x = 40
+		y = 0
+
+	}
+	focus = {
+		id = POL_Deny_Soviet_Military_Control
+		icon = GFX_goal_generic_build_tank
+		cost = 10,00
+		mutually_exclusive = {
+			focus = POL_Purge_Anti-communists_From_The_Army
+		}
+		x = 46
+		y = 0
+
+	}
+	focus = {
+		id = POL_Purge_Anti-communists_From_The_Army
+		icon = GFX_focus_generic_join_comintern
+		cost = 10,00
+		mutually_exclusive = {
+			focus = POL_Deny_Soviet_Military_Control
+		}
+		x = 53
+		y = 0
+
+	}
+	focus = {
+		id = POL_Opress_the_Church
+		icon = GFX_focus_generic_join_comintern
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Return_of_Communist_Methods
+		}
+		x = 4
+		y = 1
+
+	}
+	focus = {
+		id = POL_Abolition_of_Christian_Holidays
+		icon = GFX_focus_generic_join_comintern
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Opress_the_Church
+		}
+		x = 4
+		y = 2
+
+	}
+	focus = {
+		id = POL_Code_of_Administrative_Procedure
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Return_of_Communist_Methods
+		}
+		x = 6
+		y = 1
+
+	}
+	focus = {
+		id = POL_Raise_the_Wages
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Code_of_Administrative_Procedure
+		}
+		x = 6
+		y = 2
+
+	}
+	focus = {
+		id = POL_Support_The_DDR
+		icon = GFX_goal_generic_improve_relations
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Return_of_Communist_Methods
+		}
+		x = 8
+		y = 1
+
+	}
+	focus = {
+		id = POL_Support_the_Idea_of_Berlin_Wall
+		icon = GFX_goal_generic_military_sphere
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Support_The_DDR
+		}
+		x = 8
+		y = 2
+
+	}
+	focus = {
+		id = POL_1961_Assasination_Attempt_of_Wladyslaw_Gomulka
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Support_the_Idea_of_Berlin_Wall
+		}
+		prerequisite = {
+			focus = POL_Abolition_of_Christian_Holidays
+		}
+		x = 6
+		y = 3
+
+	}
+	focus = {
+		id = POL_Gomulka_Still_Rules
+		icon = GFX_focus_generic_self_management
+		cost = 10,00
+		prerequisite = {
+			focus = POL_1961_Assasination_Attempt_of_Wladyslaw_Gomulka
+		}
+		mutually_exclusive = {
+			focus = POL_A_chance_for_the_Others
+		}
+		x = 1
+		y = 4
+
+	}
+	focus = {
+		id = POL_Ideas_for_Comecon
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Gomulka_Still_Rules
+		}
+		x = 5
+		y = 5
+
+	}
+	focus = {
+		id = POL_A_chance_for_the_Others
+		icon = GFX_goal_generic_national_unity
+		cost = 10,00
+		prerequisite = {
+			focus = POL_1961_Assasination_Attempt_of_Wladyslaw_Gomulka
+		}
+		mutually_exclusive = {
+			focus = POL_Gomulka_Still_Rules
+		}
+		x = 16
+		y = 4
+
+	}
+	focus = {
+		id = POL_Reforms_in_the_PZPR
+		icon = GFX_goal_support_communism
+		cost = 10,00
+		prerequisite = {
+			focus = POL_A_chance_for_the_Others
+		}
+		x = 12
+		y = 5
+
+	}
+	focus = {
+		id = POL_Kuron_and_Modzelewski
+		icon = GFX_goal_support_communism
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Reforms_in_the_PZPR
+		}
+		mutually_exclusive = {
+			focus = POL_Partisans_of_Moczar
+		}
+		x = 9
+		y = 6
+
+	}
+	focus = {
+		id = POL_Dictatorship_of_the_proletariat
+		icon = GFX_goal_generic_national_unity
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Kuron_and_Modzelewski
+		}
+		x = 9
+		y = 7
+
+	}
+	focus = {
+		id = POL_Partisans_of_Moczar
+		icon = GFX_focus_generic_join_comintern
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Reforms_in_the_PZPR
+		}
+		mutually_exclusive = {
+			focus = POL_Kuron_and_Modzelewski
+		}
+		x = 15
+		y = 6
+
+	}
+	focus = {
+		id = POL_Communist_Chauvinism
+		icon = GFX_focus_generic_join_comintern
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Partisans_of_Moczar
+		}
+		x = 15
+		y = 7
+
+	}
+	focus = {
+		id = POL_Leave_the_Warsaw_Pact
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Dictatorship_of_the_proletariat
+			focus = POL_Communist_Chauvinism
+		}
+		mutually_exclusive = {
+			focus = POL_Stay_with_the_USSR
+		}
+		x = 11
+		y = 8
+
+	}
+	focus = {
+		id = POL_Stay_with_the_USSR
+		icon = GFX_focus_generic_join_comintern
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Dictatorship_of_the_proletariat
+			focus = POL_Communist_Chauvinism
+		}
+		mutually_exclusive = {
+			focus = POL_Leave_the_Warsaw_Pact
+		}
+		x = 13
+		y = 8
+
+	}
+	focus = {
+		id = POL_Antisemitism
+		icon = GFX_goal_demand_sudetenland
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Communist_Chauvinism
+		}
+		x = 15
+		y = 8
+
+	}
+	focus = {
+		id = POL_Fight_with_the_Cosmopolitanism
+		icon = GFX_focus_generic_polish_deal
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Antisemitism
+		}
+		x = 15
+		y = 9
+
+	}
+	focus = {
+		id = POL_Remove_the_Minorities
+		icon = GFX_focus_generic_military_mission
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Fight_with_the_Cosmopolitanism
+		}
+		x = 15
+		y = 10
+
+	}
+	focus = {
+		id = POL_Turn_Fascist?
+		icon = GFX_goal_support_fascism
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Remove_the_Minorities
+		}
+		mutually_exclusive = {
+			focus = POL_Promote_Our_Way_to_Communism
+		}
+		x = 13
+		y = 11
+
+	}
+	focus = {
+		id = POL_Promote_Our_Way_to_Communism
+		icon = GFX_goal_support_communism
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Remove_the_Minorities
+		}
+		mutually_exclusive = {
+			focus = POL_Turn_Fascist?
+		}
+		x = 17
+		y = 11
+
+	}
+	focus = {
+		id = POL_Retake_Kresy
+		icon = GFX_goal_generic_political_pressure
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Turn_Fascist?
+			focus = POL_Promote_Our_Way_to_Communism
+		}
+		x = 15
+		y = 12
+
+	}
+	focus = {
+		id = POL_Influence_Czechoslovakia
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Promote_Our_Way_to_Communism
+		}
+		x = 17
+		y = 12
+
+	}
+	focus = {
+		id = POL_Influence_Hungary
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Promote_Our_Way_to_Communism
+		}
+		x = 19
+		y = 12
+
+	}
+	focus = {
+		id = POL_New_Communist_Faction
+		icon = GFX_goal_generic_national_unity
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Influence_Czechoslovakia
+		}
+		prerequisite = {
+			focus = POL_Influence_Hungary
+		}
+		x = 17
+		y = 13
+
+	}
+	focus = {
+		id = POL_Coup_against_PZPR
+		icon = GFX_focus_generic_little_entente
+		cost = 10,00
+		prerequisite = {
+			focus = POL_A_chance_for_the_Others
+		}
+		x = 20
+		y = 5
+
+	}
+	focus = {
+		id = POL_Return_of_the_Government_on_Exile
+		icon = GFX_goal_support_democracy
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Coup_against_PZPR
+		}
+		x = 20
+		y = 6
+
+	}
+	focus = {
+		id = POL_Join_NATO
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Return_of_the_Government_on_Exile
+		}
+		x = 20
+		y = 7
+
+	}
+	focus = {
+		id = POL_Creation_of_Opposition
+		icon = GFX_goal_generic_improve_relations
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Join_NATO
+		}
+		x = 20
+		y = 8
+
+	}
+	focus = {
+		id = POL_Free_Elections
+		icon = GFX_goal_support_democracy
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Creation_of_Opposition
+		}
+		x = 20
+		y = 9
+
+	}
+	focus = {
+		id = POL_Support_Democracy_in_the_Neighbours
+		icon = GFX_focus_secret_rearmament
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Free_Elections
+		}
+		x = 20
+		y = 10
+
+	}
+	focus = {
+		id = POL_Hungary
+		icon = GFX_focus_secret_rearmament
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Support_Democracy_in_the_Neighbours
+		}
+		x = 20
+		y = 11
+
+	}
+	focus = {
+		id = POL_Nationalist_Economic_Policy
+		icon = GFX_goal_generic_political_pressure
+		cost = 10,00
+		prerequisite = {
+			focus = Poland_in_the_1960s
+		}
+		mutually_exclusive = {
+			focus = POL_Catholic_Economic_Policy
+			focus = POL_Socialist_Economic_Policy
+			focus = POL_Make_a_Compromise
+		}
+		x = 22
+		y = 1
+
+	}
+	focus = {
+		id = POL_Catholic_Economic_Policy
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10,00
+		prerequisite = {
+			focus = Poland_in_the_1960s
+		}
+		mutually_exclusive = {
+			focus = POL_Nationalist_Economic_Policy
+			focus = POL_Socialist_Economic_Policy
+			focus = POL_Make_a_Compromise
+		}
+		x = 24
+		y = 1
+
+	}
+	focus = {
+		id = POL_Socialist_Economic_Policy
+		icon = GFX_goal_generic_soviet_construction
+		cost = 10,00
+		prerequisite = {
+			focus = Poland_in_the_1960s
+		}
+		mutually_exclusive = {
+			focus = POL_Nationalist_Economic_Policy
+			focus = POL_Catholic_Economic_Policy
+			focus = POL_Make_a_Compromise
+		}
+		x = 26
+		y = 1
+
+	}
+	focus = {
+		id = POL_Make_a_Compromise
+		icon = GFX_goal_generic_national_unity
+		cost = 10,00
+		prerequisite = {
+			focus = Poland_in_the_1960s
+		}
+		mutually_exclusive = {
+			focus = POL_Nationalist_Economic_Policy
+			focus = POL_Catholic_Economic_Policy
+			focus = POL_Socialist_Economic_Policy
+		}
+		x = 29
+		y = 1
+
+	}
+	focus = {
+		id = POL_Thousands_schools_for_the_Millennium_of_the_Polish_State
+		icon = GFX_goal_generic_propaganda
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Nationalist_Economic_Policy
+			focus = POL_Catholic_Economic_Policy
+			focus = POL_Socialist_Economic_Policy
+			focus = POL_Make_a_Compromise
+		}
+		x = 22
+		y = 3
+
+	}
+	focus = {
+		id = POL_Supersamy
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Thousands_schools_for_the_Millennium_of_the_Polish_State
+		}
+		x = 22
+		y = 4
+
+	}
+	focus = {
+		id = POL_Czechoslovakia
+		icon = GFX_focus_secret_rearmament
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Support_Democracy_in_the_Neighbours
+		}
+		x = 23
+		y = 11
+
+	}
+	focus = {
+		id = POL_The_Intermarium
+		icon = GFX_goal_generic_national_unity
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Hungary
+		}
+		prerequisite = {
+			focus = POL_Czechoslovakia
+		}
+		mutually_exclusive = {
+			focus = POL_Expand_NATO
+		}
+		x = 23
+		y = 13
+
+	}
+	focus = {
+		id = POL_Expansion_of_Chemical_Plants
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Nationalist_Economic_Policy
+			focus = POL_Catholic_Economic_Policy
+			focus = POL_Socialist_Economic_Policy
+			focus = POL_Make_a_Compromise
+		}
+		x = 25
+		y = 3
+
+	}
+	focus = {
+		id = POL_Expansion_of_Mines
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Expansion_of_Chemical_Plants
+		}
+		x = 25
+		y = 4
+
+	}
+	focus = {
+		id = POL_Rybnik_Coal_Area
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Expansion_of_Mines
+		}
+		x = 25
+		y = 5
+
+	}
+	focus = {
+		id = POL_Oil_Refineries
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Rybnik_Coal_Area
+		}
+		x = 25
+		y = 6
+
+	}
+	focus = {
+		id = Military_Expansion
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Make_a_Compromise
+			focus = POL_Socialist_Economic_Policy
+			focus = POL_Catholic_Economic_Policy
+			focus = POL_Nationalist_Economic_Policy
+		}
+		x = 27
+		y = 3
+
+	}
+	focus = {
+		id = POL_New_Factories_for_the_Army
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10,00
+		prerequisite = {
+			focus = Military_Expansion
+		}
+		x = 27
+		y = 4
+
+	}
+	focus = {
+		id = POL_Factories_in_the_Cities
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10,00
+		prerequisite = {
+			focus = POL_New_Factories_for_the_Army
+		}
+		x = 27
+		y = 5
+
+	}
+	focus = {
+		id = POL_Factories_on_the_Countryside
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Factories_in_the_Cities
+		}
+		x = 27
+		y = 6
+
+	}
+	focus = {
+		id = POL_Polish_Industrialisation
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Oil_Refineries
+		}
+		prerequisite = {
+			focus = POL_Factories_on_the_Countryside
+		}
+		x = 26
+		y = 7
+
+	}
+	focus = {
+		id = Polish_Atomic_Research
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Polish_Industrialisation
+		}
+		mutually_exclusive = {
+			focus = POL_Connect_to_Druzhba_Pipeline
+		}
+		x = 24
+		y = 8
+
+	}
+	focus = {
+		id = POL_Connect_to_Druzhba_Pipeline
+		icon = GFX_goal_generic_soviet_construction
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Polish_Industrialisation
+		}
+		mutually_exclusive = {
+			focus = Polish_Atomic_Research
+		}
+		x = 28
+		y = 8
+
+	}
+	focus = {
+		id = POL_Scientific_Deal
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Connect_to_Druzhba_Pipeline
+		}
+		x = 28
+		y = 9
+
+	}
+	focus = {
+		id = POL_Dissolution_of_Some_Agricultural_Cooperatives
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Nationalist_Economic_Policy
+			focus = POL_Catholic_Economic_Policy
+			focus = POL_Socialist_Economic_Policy
+			focus = POL_Make_a_Compromise
+		}
+		x = 29
+		y = 3
+
+	}
+	focus = {
+		id = POL_Allow_Individual_Peasant_Parms
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Dissolution_of_Some_Agricultural_Cooperatives
+		}
+		x = 29
+		y = 4
+
+	}
+	focus = {
+		id = POL_New_Agricultural_Machinery
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Allow_Individual_Peasant_Parms
+		}
+		x = 29
+		y = 5
+
+	}
+	focus = {
+		id = POL_Stimulation_Of_Agriculture
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10,00
+		prerequisite = {
+			focus = POL_New_Agricultural_Machinery
+		}
+		x = 29
+		y = 6
+
+	}
+	focus = {
+		id = POL_Polish_Agriculture
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Stimulation_Of_Agriculture
+		}
+		x = 29
+		y = 7
+
+	}
+	focus = {
+		id = POL_Planning_Foreign_Invasion
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Naval_Cooperation_with_the_USSR
+			focus = POL_Chance_for_Polish_Officers
+		}
+		x = 32
+		y = 1
+
+	}
+	focus = {
+		id = POL_Develop_Local_Naval_Industry
+		icon = GFX_goal_generic_build_navy
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Chance_for_Polish_Officers
+			focus = POL_Naval_Cooperation_with_the_USSR
+			focus = POL_Naval_Cooperation_with_the_USSR
+		}
+		x = 36
+		y = 1
+
+	}
+	focus = {
+		id = POL_Naval_Transportation
+		icon = GFX_goal_continuous_naval_production
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Planning_Foreign_Invasion
+			focus = POL_Develop_Local_Naval_Industry
+		}
+		x = 34
+		y = 2
+
+	}
+	focus = {
+		id = POL_Soviet_Naval_Officers
+		icon = GFX_goal_support_communism
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Naval_Transportation
+		}
+		mutually_exclusive = {
+			focus = POL_No_Need_For_Help
+		}
+		x = 33
+		y = 3
+
+	}
+	focus = {
+		id = POL_No_Need_For_Help
+		icon = GFX_focus_generic_self_management
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Naval_Transportation
+		}
+		mutually_exclusive = {
+			focus = POL_Soviet_Naval_Officers
+		}
+		x = 35
+		y = 3
+
+	}
+	focus = {
+		id = POL_Soviet_Heavy_Navy
+		icon = GFX_goal_generic_navy_battleship
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Soviet_Naval_Officers
+			focus = POL_No_Need_For_Help
+		}
+		mutually_exclusive = {
+			focus = POL_Polish_Fast_Navy
+		}
+		x = 35
+		y = 4
+
+	}
+	focus = {
+		id = POL_Fighter_Divisions
+		icon = GFX_goal_generic_air_fighter
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Continue_Aviation_Development
+		}
+		x = 39
+		y = 1
+
+	}
+	focus = {
+		id = POL_Attack_Aircraft_Development
+		icon = GFX_goal_generic_air_fighter2
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Fighter_Divisions
+		}
+		x = 39
+		y = 2
+
+	}
+	focus = {
+		id = POL_Bomber_Divisions
+		icon = GFX_goal_generic_air_bomber
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Continue_Aviation_Development
+		}
+		x = 41
+		y = 1
+
+	}
+	focus = {
+		id = POL_Naval_Aviation
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Bomber_Divisions
+		}
+		x = 41
+		y = 2
+
+	}
+	focus = {
+		id = POL_Reject_Soviet_Aviation
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Attack_Aircraft_Development
+			focus = POL_Naval_Aviation
+		}
+		mutually_exclusive = {
+			focus = POL_Keep_Soviet_Advisors
+		}
+		x = 39
+		y = 3
+
+	}
+	focus = {
+		id = POL_Keep_Soviet_Advisors
+		icon = GFX_focus_generic_military_mission
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Attack_Aircraft_Development
+			focus = POL_Naval_Aviation
+		}
+		mutually_exclusive = {
+			focus = POL_Reject_Soviet_Aviation
+		}
+		x = 41
+		y = 3
+
+	}
+	focus = {
+		id = POL_Reform_Aviation_Forces
+		icon = GFX_goal_generic_build_airforce
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Reject_Soviet_Aviation
+			focus = POL_Keep_Soviet_Advisors
+		}
+		x = 40
+		y = 4
+
+	}
+	focus = {
+		id = POL_Equipment_Effort
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Deny_Soviet_Military_Control
+		}
+		x = 44
+		y = 1
+
+	}
+	focus = {
+		id = POL_Equipment_Effort_II
+		icon = GFX_goal_generic_army_artillery2
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Equipment_Effort
+		}
+		x = 44
+		y = 3
+
+	}
+	focus = {
+		id = POL_Equipment_Effort_III
+		icon = GFX_goal_generic_army_artillery
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Equipment_Effort_II
+		}
+		x = 44
+		y = 5
+
+	}
+	focus = {
+		id = POL_Old_Guard
+		icon = GFX_focus_generic_military_mission
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Deny_Soviet_Military_Control
+		}
+		x = 46
+		y = 2
+
+	}
+	focus = {
+		id = POL_Doctrine_Effort
+		icon = GFX_goal_generic_build_tank
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Old_Guard
+		}
+		x = 46
+		y = 4
+
+	}
+	focus = {
+		id = POL_Doctrine_Effort_II
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Doctrine_Effort
+		}
+		x = 46
+		y = 6
+
+	}
+	focus = {
+		id = POL_Motorisation_Effort
+		icon = GFX_goal_generic_army_motorized
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Deny_Soviet_Military_Control
+		}
+		x = 48
+		y = 1
+
+	}
+	focus = {
+		id = POL_Mechanization_Effort
+		icon = GFX_goal_generic_cavalry
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Motorisation_Effort
+		}
+		x = 48
+		y = 3
+
+	}
+	focus = {
+		id = POL_Mechanization_Effort_II
+		icon = GFX_goal_generic_army_motorized
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Mechanization_Effort
+		}
+		x = 48
+		y = 5
+
+	}
+	focus = {
+		id = POL_Special_Forces
+		icon = GFX_goal_generic_special_forces
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Doctrine_Effort_II
+		}
+		prerequisite = {
+			focus = POL_Equipment_Effort_III
+		}
+		prerequisite = {
+			focus = POL_Mechanization_Effort_II
+		}
+		x = 46
+		y = 7
+
+	}
+	focus = {
+		id = POL_Exchange_Personel
+		icon = GFX_goal_generic_military_deal
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Purge_Anti-communists_From_The_Army
+		}
+		x = 53
+		y = 1
+
+	}
+	focus = {
+		id = POL_Soviet_Military_Doctrine
+		icon = GFX_goal_support_communism
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Exchange_Personel
+		}
+		x = 53
+		y = 2
+
+	}
+	focus = {
+		id = POL_Expand_Marine_Forces
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Soviet_Military_Doctrine
+		}
+		x = 51
+		y = 3
+
+	}
+	focus = {
+		id = POL_Expand_Mechanized_Forces
+		icon = GFX_goal_generic_army_motorized
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Soviet_Military_Doctrine
+		}
+		x = 53
+		y = 3
+
+	}
+	focus = {
+		id = POL_Polish_Mechanized_Forces
+		icon = GFX_goal_generic_cavalry
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Expand_Mechanized_Forces
+		}
+		x = 53
+		y = 4
+
+	}
+	focus = {
+		id = POL_Mechanized_Advancements
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Polish_Mechanized_Forces
+		}
+		x = 53
+		y = 5
+
+	}
+	focus = {
+		id = POL_Finish_the_Schools
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Material_Stimuli
+		}
+		x = 26
+		y = 12
+
+	}
+	focus = {
+		id = POL_Decentralisation
+		icon = GFX_goal_generic_improve_relations
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Dictatorship_of_the_proletariat
+		}
+		x = 9
+		y = 8
+
+	}
+	focus = {
+		id = POL_Workers'_Councils
+		icon = GFX_focus_yug_pan_slavic_congress
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Decentralisation
+		}
+		x = 9
+		y = 9
+
+	}
+	focus = {
+		id = POL_Freedom_of_Speech
+		icon = GFX_goal_generic_national_unity
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Workers'_Councils
+		}
+		x = 9
+		y = 10
+
+	}
+	focus = {
+		id = POL_True_Communism
+		icon = GFX_goal_support_communism
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Freedom_of_Speech
+		}
+		x = 8
+		y = 11
+
+	}
+	focus = {
+		id = POL_Fascism_in_Czechoslovakia
+		icon = GFX_goal_support_fascism
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Turn_Fascist?
+		}
+		x = 11
+		y = 12
+
+	}
+	focus = {
+		id = POL_Fascism_in_Hungary
+		icon = GFX_goal_support_fascism
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Turn_Fascist?
+		}
+		x = 13
+		y = 12
+
+	}
+	focus = {
+		id = POL_Fascist_Faction
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Fascism_in_Hungary
+		}
+		prerequisite = {
+			focus = POL_Fascism_in_Czechoslovakia
+		}
+		x = 13
+		y = 13
+
+	}
+	focus = {
+		id = POL_Befriend_Czechoslovakia
+		icon = GFX_goal_generic_improve_relations
+		cost = 10,00
+		prerequisite = {
+			focus = POL_True_Communism
+		}
+		x = 9
+		y = 12
+
+	}
+	focus = {
+		id = POL_Befriend_Hungary
+		icon = GFX_goal_generic_improve_relations
+		cost = 10,00
+		prerequisite = {
+			focus = POL_True_Communism
+		}
+		x = 5
+		y = 12
+
+	}
+	focus = {
+		id = POL_Befriend_Yugoslavia
+		icon = GFX_goal_generic_improve_relations
+		cost = 10,00
+		prerequisite = {
+			focus = POL_True_Communism
+		}
+		x = 7
+		y = 12
+
+	}
+	focus = {
+		id = POL_New_Communist_Faction_in_Europe
+		icon = GFX_goal_generic_national_unity
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Befriend_Czechoslovakia
+		}
+		prerequisite = {
+			focus = POL_Befriend_Yugoslavia
+		}
+		prerequisite = {
+			focus = POL_Befriend_Hungary
+		}
+		x = 7
+		y = 13
+
+	}
+	focus = {
+		id = POL_Fight_with_Cultural_Leftism
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Gomulka_Still_Rules
+		}
+		x = 1
+		y = 5
+
+	}
+	focus = {
+		id = POL_A_New_International_Currency
+		icon = GFX_goal_generic_national_unity
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Support_the_Integration
+		}
+		x = 5
+		y = 7
+
+	}
+	focus = {
+		id = POL_Support_the_Integration
+		icon = GFX_goal_generic_improve_relations
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Ideas_for_Comecon
+		}
+		x = 5
+		y = 6
+
+	}
+	focus = {
+		id = POL_Letter_of_the_34
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Fight_with_Cultural_Leftism
+		}
+		x = 1
+		y = 6
+
+	}
+	focus = {
+		id = POL_Fight_with_the_Intelligents
+		icon = GFX_focus_generic_join_comintern
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Letter_of_the_34
+		}
+		mutually_exclusive = {
+			focus = POL_Intelligents_are_Harmful
+		}
+		x = 1
+		y = 7
+
+	}
+	focus = {
+		id = POL_Intelligents_are_Harmful
+		icon = GFX_goal_generic_national_unity
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Letter_of_the_34
+		}
+		mutually_exclusive = {
+			focus = POL_Fight_with_the_Intelligents
+		}
+		x = 3
+		y = 7
+
+	}
+	focus = {
+		id = POL_Millennium_of_the_Polish_State
+		icon = GFX_goal_generic_propaganda
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Family_and_Caring_Code
+		}
+		x = 4
+		y = 10
+
+	}
+	focus = {
+		id = POL_Problem_of_the_Young_Marxists
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Family_and_Caring_Code
+		}
+		x = 2
+		y = 10
+
+	}
+	focus = {
+		id = POL_Give_them_Power_in_the_PZPR
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Problem_of_the_Young_Marxists
+		}
+		mutually_exclusive = {
+			focus = POL_Stay_with_Elders
+		}
+		x = 3
+		y = 11
+
+	}
+	focus = {
+		id = POL_Stay_with_Elders
+		icon = GFX_focus_generic_join_comintern
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Problem_of_the_Young_Marxists
+		}
+		mutually_exclusive = {
+			focus = POL_Give_them_Power_in_the_PZPR
+		}
+		x = 1
+		y = 11
+
+	}
+	focus = {
+		id = POL_Civil_Code
+		icon = GFX_goal_generic_national_unity
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Fight_with_the_Intelligents
+			focus = POL_Intelligents_are_Harmful
+		}
+		x = 2
+		y = 8
+
+	}
+	focus = {
+		id = POL_Family_and_Caring_Code
+		icon = GFX_goal_generic_national_unity
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Civil_Code
+		}
+		x = 2
+		y = 9
+
+	}
+	focus = {
+		id = POL_Development_Profits
+		icon = GFX_focus_research
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Give_them_Power_in_the_PZPR
+		}
+		x = 3
+		y = 12
+
+	}
+	focus = {
+		id = POL_More_Power
+		icon = GFX_focus_generic_self_management
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Stay_with_Elders
+		}
+		x = 1
+		y = 12
+
+	}
+	focus = {
+		id = POL_Work_of_Intelligents
+		icon = GFX_focus_generic_socialist_science
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Intelligents_are_Harmful
+		}
+		x = 4
+		y = 8
+
+	}
+	focus = {
+		id = POL_Expand_NATO
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Hungary
+		}
+		prerequisite = {
+			focus = POL_Czechoslovakia
+		}
+		mutually_exclusive = {
+			focus = POL_The_Intermarium
+		}
+		x = -3
+		y = 2
+		relative_position_id = POL_Czechoslovakia
+
+	}
+	focus = {
+		id = POL_March_Events
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Antisemitic_Campaign
+		}
+		x = 1
+		y = 14
+
+	}
+	focus = {
+		id = POL_Antisemitic_Campaign
+		icon = GFX_goal_generic_propaganda
+		cost = 10,00
+		prerequisite = {
+			focus = POL_More_Power
+			focus = POL_Development_Profits
+		}
+		x = 2
+		y = 13
+
+	}
+	focus = {
+		id = POL_Mass_Jewish_Emigration
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Antisemitic_Campaign
+		}
+		x = 3
+		y = 14
+
+	}
+	focus = {
+		id = POL_Create_Criminal_Code
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Mass_Jewish_Emigration
+		}
+		prerequisite = {
+			focus = POL_March_Events
+		}
+		x = 2
+		y = 15
+
+	}
+	focus = {
+		id = POL_Late_1960s_Crisis
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Supersamy
+		}
+		prerequisite = {
+			focus = POL_Polish_Industrialisation
+		}
+		prerequisite = {
+			focus = POL_Polish_Agriculture
+		}
+		x = 26
+		y = 10
+
+	}
+	focus = {
+		id = POL_Material_Stimuli
+		icon = GFX_goal_generic_trade
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Late_1960s_Crisis
+		}
+		x = 26
+		y = 11
+
+	}
+	focus = {
+		id = POL_Economical_Cooperation_with_USSR
+		icon = GFX_goal_generic_soviet_construction
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Bigger_Export
+		}
+		mutually_exclusive = {
+			focus = POL_Focus_on_Polish_Economy
+		}
+		x = 25
+		y = 14
+
+	}
+	focus = {
+		id = POL_Focus_on_Polish_Economy
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Bigger_Export
+		}
+		mutually_exclusive = {
+			focus = POL_Economical_Cooperation_with_USSR
+		}
+		x = 27
+		y = 14
+
+	}
+	focus = {
+		id = POL_Bigger_Export
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Finish_the_Schools
+		}
+		x = 26
+		y = 13
+
+	}
+	focus = {
+		id = POL_Polish_H_Bomb
+		icon = GFX_focus_wonderweapons
+		cost = 10,00
+		prerequisite = {
+			focus = Polish_Atomic_Research
+		}
+		x = 24
+		y = 9
+
+	}
+	focus = {
+		id = POL_Polish_Fast_Navy
+		icon = GFX_goal_generic_wolf_pack
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Soviet_Naval_Officers
+			focus = POL_No_Need_For_Help
+		}
+		mutually_exclusive = {
+			focus = POL_Soviet_Heavy_Navy
+		}
+		x = 33
+		y = 4
+
+	}
+	focus = {
+		id = POL_Ready_to_Strike
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Polish_Fast_Navy
+			focus = POL_Soviet_Heavy_Navy
+		}
+		x = 34
+		y = 5
+
+	}
+	focus = {
+		id = POL_Soviet_Army_Ideology
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Exchange_Personel
+		}
+		x = 55
+		y = 2
+
+	}
+	focus = {
+		id = POL_Cooperation_with_the_Soviets
+		icon = GFX_goal_generic_military_deal
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Soviet_Military_Doctrine
+		}
+		x = 55
+		y = 3
+
+	}
+	focus = {
+		id = POL_Prepare_for_Invasion
+		icon = GFX_goal_generic_position_armies
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Expand_Marine_Forces
+		}
+		x = 51
+		y = 4
+
+	}
+	focus = {
+		id = POL_Polish_Front_Concept
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Cooperation_with_the_Soviets
+		}
+		x = 55
+		y = 4
+
+	}
+	focus = {
+		id = POL_True_Polish_Marines
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Prepare_for_Invasion
+		}
+		x = 51
+		y = 5
+
+	}
+	focus = {
+		id = POL_Soviet_Style_army
+		icon = GFX_goal_support_communism
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Polish_Front_Concept
+		}
+		x = 55
+		y = 5
+
+	}
+	focus = {
+		id = POL_Army_for_Another_War
+		icon = GFX_goal_generic_major_war
+		cost = 10,00
+		prerequisite = {
+			focus = POL_True_Polish_Marines
+		}
+		prerequisite = {
+			focus = POL_Mechanized_Advancements
+		}
+		prerequisite = {
+			focus = POL_Soviet_Style_army
+		}
+		prerequisite = {
+			focus = POL_Soviet_Style_army
+		}
+		x = 53
+		y = 6
+
+	}
+	focus = {
+		id = POL_H_Bomb_Development
+		icon = GFX_focus_wonderweapons
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Army_for_Another_War
+			focus = POL_Special_Forces
+		}
+		x = 50
+		y = 8
+
+	}
+	focus = {
+		id = POL_1970_Polish_Protests
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Create_Criminal_Code
+		}
+		x = 2
+		y = 16
+
+	}
+	focus = {
+		id = POL_Replace_Gomulka_with_Gierek
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10,00
+		prerequisite = {
+			focus = POL_1970_Polish_Protests
+		}
+		mutually_exclusive = {
+			focus = POL_Democratic_Revolution
+		}
+		x = 1
+		y = 17
+
+	}
+	focus = {
+		id = POL_Poland_Under_Gierek
+		icon = GFX_goal_generic_propaganda
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Economical_Cooperation_with_USSR
+			focus = POL_Focus_on_Polish_Economy
+		}
+		x = 26
+		y = 16
+
+	}
+	focus = {
+		id = POL_Create_Pewex
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Take_the_Loans
+		}
+		x = 24
+		y = 18
+
+	}
+	focus = {
+		id = POL_Rebuild_Historical_Places
+		icon = GFX_goal_generic_construction2
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Take_the_Loans
+		}
+		x = 26
+		y = 18
+
+	}
+	focus = {
+		id = POL_Take_the_Loans
+		icon = GFX_focus_generic_polish_deal
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Poland_Under_Gierek
+		}
+		x = 26
+		y = 17
+
+	}
+	focus = {
+		id = POL_Wielka_Plyta
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10,00
+		prerequisite = {
+			focus = POL_Take_the_Loans
+		}
+		x = 28
+		y = 18
+
+	}
+	focus = {
+		id = POL_Democratic_Revolution
+		icon = GFX_goal_support_democracy
+		cost = 10,00
+		prerequisite = {
+			focus = POL_1970_Polish_Protests
+		}
+		mutually_exclusive = {
+			focus = POL_Replace_Gomulka_with_Gierek
+		}
+		x = 3
+		y = 17
+
+	}
+}

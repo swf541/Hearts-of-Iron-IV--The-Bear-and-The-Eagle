@@ -1,0 +1,4 @@
+# 470001-480000 for Galatian characters
+	# 470001-471000 for Tectosages
+	# 471001-472000 for Trocmi
+	# 472001-473000 for Tolistobogii

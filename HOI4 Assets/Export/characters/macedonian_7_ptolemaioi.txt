@@ -1,0 +1,372 @@
+# 601-700 for the Ptolemaioi dynasty
+601 = {
+	name = "Ptolemaios" # Ptolemy, Satrap of Egypt and founder of the Ptolemaic empire/dynasty
+	dynasty = 7 # Ptolemaioi
+	religion = hellenic_pagan
+	culture = macedonian
+	
+	add_trait = ambitious
+	add_trait = tough_soldier
+	add_trait = greedy
+	add_trait = temperate
+	add_trait = patient
+	
+	409.1.1 = {
+		birth="yes" # 367 BC
+	}
+	452.1.1 = { # 324 BC
+		add_spouse = 90203 # Artacama
+	}
+	453.6.10 = {
+		add_trait = diadochi_king
+	}
+	455.1.1 = { # 321 BC
+		add_spouse = 4 # Eurydike
+	}
+	459.1.1 = {
+		add_spouse = 19 # Berenike I
+	}
+	472.1.1 = { # 304 BC, End of siege of Rhodes
+		give_nickname = nick_soter
+	}
+	493.1.1 = {
+		death="yes" # 283 BC
+	}
+}
+602 = {
+	name = "Ptolemaios" # Ptolemaios II
+	dynasty = 7 # Ptolemaioi
+	religion = hellenic_pagan
+	culture = macedonian
+
+	father = 601 # Ptolemaios I
+	mother = 19 # Berenike I
+
+	add_trait = diadochi_king
+	add_trait = scholarly_theologian
+	
+	467.1.1 = { # 309 BC
+		birth="yes"
+	}
+	490.1.1 = { # 286 BC, Made up-ish
+		add_spouse = 30003 # Arsinoe I
+	}
+	493.1.1 = { # 283 BC
+		give_nickname = nick_philadelphos
+	}
+	502.1.1 = { # 274 BC, Made up-ish
+		remove_spouse = 30003 # Arsinoe I
+		add_spouse = 603 # Arsinoe II
+	}
+	530.1.1 = { # 246 BC
+		death="yes"
+	}
+}
+603 = {
+	name = "Arsinoe" # Arsinoe II
+	dynasty = 7 # Ptolemaioi
+	religion = hellenic_pagan
+	culture = macedonian
+	female = yes
+
+	father = 601 # Ptolemaios I
+	mother = 19 # Berenike I
+	
+	add_trait = gregarious
+	
+	460.1.1 = {
+		birth="yes" # 316 BC
+	}
+	# 301 BC, marries Lysimachus
+	# 281 BC, marries Ptolemaios Keraunos
+	# 274 BC, marries Ptolemaios II
+	514.1.1 = { # Made up
+		death="yes" # 262
+	}
+}
+604 = {
+	name = "Ptolemaios" # Keraunos
+	dynasty = 7 # Ptolemaioi
+	religion = hellenic_pagan
+	culture = macedonian
+	father = 601
+	mother = 4
+	
+	add_trait = diadochi_king
+	add_trait = intricate_webweaver
+	add_trait = deceitful
+	add_trait = wroth
+	add_trait = proud
+	
+	457.1.1 = { # Made up
+		birth="yes" # 319 BC
+	}
+	495.8.1 = {
+		add_spouse = 603 # Arsinoe II
+	}
+	495.8.1 = { # 281 BC, on killing Seleucus
+		give_nickname = nick_keraunos
+	}
+	497.1.1 = {
+		death = { # 279 BC
+			death_reason = death_battle
+		}
+	}
+}
+605 = {
+	name = "Meleagros" # Temporary King of Macedon
+	dynasty = 7 # Ptolemaioi
+	religion = hellenic_pagan
+	culture = macedonian
+	father = 601
+	mother = 4
+	add_trait = diadochi_king
+	458.1.1 = { # 318 BC Made up
+		birth="yes"
+	}
+	500.1.1 = { # 276 BC made up
+		death="yes"
+	}
+}
+
+# Offspring of Ptolemy II
+606 = {
+	name = "Ptolemaios" # III, Euergetes
+	dynasty = 7 # Ptolemaioi
+	religion = hellenic_pagan
+	culture = macedonian
+
+	father = 602 # Ptolemaios II
+	mother = 30003 # Arsinoe I
+
+	add_trait = diadochi_king
+
+	493.1.1 = { # 283 BC Made up
+		birth="yes"
+	}
+	527.1.1 = { # 249 BC
+		add_spouse = 3506 # Berenike of Cyrene
+	}
+	554.1.1 = { # 222 BC
+		death="yes"
+	}
+}
+607 = {
+	name = "Lysimachos" # Son of Ptolemaios II
+	dynasty = 7 # Ptolemaioi
+	religion = hellenic_pagan
+	culture = macedonian
+
+	father = 602 # Ptolemaios II
+	mother = 30003 # Arsinoe I
+
+	add_trait = diadochi_king
+
+	497.1.1 = { # 279 BC Made up
+		birth="yes"
+	}
+	573.1.1 = { # 203 BC, Made up-ish
+		death = {
+			death_reason = death_execution
+			#TODO: killer = Sosibius
+		}
+	}
+}
+608 = {
+	name = "Berenike" # Syra
+	dynasty = 7 # Ptolemaioi
+	religion = hellenic_pagan
+	culture = macedonian
+	female = yes
+
+	father = 602 # Ptolemaios II
+	mother = 30003 # Arsinoe I
+
+	501.1.1 = { # 275 BC
+		birth="yes"
+	}
+	# 252 BC, marries Antiochos II
+	530.1.1 = { # 246 BC
+		death = {
+			death_reason = death_murder
+			killer = 1018 # Laodike I
+		}
+	}
+}
+
+# Offspring of Ptolemaios III Euergetes
+
+609 = {
+	name = "Arsinoe" # III
+	dynasty = 7 # Ptolemaioi
+	religion = hellenic_pagan
+	culture = macedonian
+	female = yes
+
+	father = 606 # Ptolemaios III
+	mother = 3506 # Berenike of Cyrene
+
+	530.1.1 = { # 246 BC
+		birth="yes"
+	}
+	# 220 BC, marries Ptolemaios IV
+	572.8.1 = { # 204 BC
+		death = {
+			death_reason = death_murder
+			#TODO: killer = Sosibius
+		}
+	}
+}
+
+610 = {
+	name = "Ptolemaios" # IV
+	dynasty = 7 # Ptolemaioi
+	religion = hellenic_pagan
+	culture = macedonian
+
+	father = 606 # Ptolemaios III
+	mother = 3506 # Berenike of Cyrene
+
+	532.1.1 = { # 244 BC
+		birth="yes"
+	}
+	555.1.1 = { # 221 BC
+		add_trait = kinslayer # Killing his own mother
+	}
+	556.1.1 = { # 220 BC
+		add_spouse = 609 # Arsinoe III
+	}
+	572.7.1 = { # 204 BC
+		death="yes"
+	}
+}
+
+611 = {
+	name = "Lysimachos" # Son of Ptolemaios III
+	dynasty = 7 # Ptolemaioi
+	religion = hellenic_pagan
+	culture = macedonian
+
+	father = 606 # Ptolemaios III
+	mother = 3506 # Berenike of Cyrene
+
+	533.1.1 = { # 243 BC
+		birth="yes"
+	}
+	559.1.1 = { # 217 BC, made up
+		death="yes"
+	}
+}
+
+612 = {
+	name = "Alexandros" # Son of Ptolemaios III
+	dynasty = 7 # Ptolemaioi
+	religion = hellenic_pagan
+	culture = macedonian
+
+	father = 606 # Ptolemaios III
+	mother = 3506 # Berenike of Cyrene
+
+	534.1.1 = { # 242 BC
+		birth="yes"
+	}
+	585.1.1 = { # 191 BC, made up
+		death="yes"
+	}
+}
+
+613 = {
+	name = "Magas" # Son of Ptolemaios III
+	dynasty = 7 # Ptolemaioi
+	religion = hellenic_pagan
+	culture = macedonian
+
+	father = 606 # Ptolemaios III
+	mother = 3506 # Berenike of Cyrene
+
+	535.1.1 = { # 241 BC
+		birth="yes"
+	}
+	555.1.1 = {
+		death = { # 221 BC
+			death_reason = death_murder
+			killer = 610 # Ptolemaios IV
+		}
+	}
+}
+
+614 = {
+	name = "Berenike" # Daughter of Ptolemaios III
+	dynasty = 7 # Ptolemaioi
+	religion = hellenic_pagan
+	culture = macedonian
+	female = yes
+
+	father = 606 # Ptolemaios III
+	mother = 3506 # Berenike of Cyrene
+
+	537.1.1 = { # 239 BC
+		birth="yes"
+	}
+	538.1.1 = { # 238 BC
+		death="yes"
+	}
+}
+
+# Offspring of Ptolemaios IV
+
+615 = {
+	name = "Ptolemaios" # V
+	dynasty = 7 # Ptolemaioi
+	religion = hellenic_pagan
+	culture = macedonian
+
+	father = 610 # Ptolemaios IV
+	mother = 609 # Arsinoe III
+
+	567.1.1 = { # 209 BC
+		birth="yes"
+	}
+	595.1.1 = { # 181 BC
+		death="yes"
+	}
+}
+
+# Daughters of Ptolemy I
+616 = {
+	name = "Ptolemais" # Daughter of Ptolemy I, marries Demetrius
+	dynasty = 7 # Ptolemaioi
+	religion = hellenic_pagan
+	culture = macedonian
+	female = yes
+
+	father = 601
+	mother = 4
+
+	460.1.1 = { # 316 BC Made up
+		birth="yes"
+	}
+	# 288 BC, marries Demetrius
+	507.1.1 = { # 269 BC made up
+		death="yes"
+	}
+}
+617 = {
+	name = "Lysandra" # Daughter of Ptolemy I, marries Agathocles
+	dynasty = 7 # Ptolemaioi
+	religion = hellenic_pagan
+	culture = macedonian
+	female = yes
+
+	father = 601
+	mother = 4
+
+	456.1.1 = { # 320 BC Made up
+		birth="yes"
+	}
+	# 297 BC, marries Alexander V
+	# 291 BC, marries Agathocles
+	497.1.1 = { # 279 BC made up
+		death="yes"
+	}
+}

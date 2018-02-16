@@ -1,0 +1,5 @@
+500.1.1 = { 
+	holding_dynasty = 2048 # Barca
+	liege = k_carthage
+	holder = 250404
+}

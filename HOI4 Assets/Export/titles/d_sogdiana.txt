@@ -1,0 +1,7 @@
+538.1.1 = { # 238 BC
+	holder = 30802 # Euthydemos I
+	liege = k_bactria
+}
+576.1.1 = { # 200 BC
+	holder = 30803 # Demetrios I
+}

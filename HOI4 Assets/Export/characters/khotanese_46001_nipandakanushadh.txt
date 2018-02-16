@@ -1,0 +1,26 @@
+# 460001-460100 for the Nipandakanushadh dynasty
+460001 = {
+	name = "Kimashana" # Made up
+	dynasty = 46001 # Nipandakanushadh
+	religion = zoroastrian
+	culture = khotanese
+	395.1.1 = { # 381 BC
+		birth="yes"
+	}
+	460.1.1 = { # 316 BC
+		death="yes"
+	}
+}
+460002 = {
+	name = "Irasamga" # Made up
+	dynasty = 46001 # Nipandakanushadh
+	religion = zoroastrian
+	culture = khotanese
+	father = 460001
+	419.1.1 = { # 357 BC
+		birth="yes"
+	}
+	496.1.1 = { # 280 BC
+		death="yes"
+	}
+}

@@ -1,0 +1,67 @@
+298.1.1 = { # 478 BC, given as reward of efforts during Persian invasion of Greece.
+    holder = 90902 # Artabazus I
+	liege = d_mysia
+}
+321.1.1 = { # 455 BC
+    holder = 90903 # Pharnabazus I
+}
+346.1.1 = { # 430 BC
+    holder = 90904 # Pharnaces II
+}
+354.1.1 = { # 422 BC
+    holder = 90905 # Pharnabazus II
+}
+389.1.1 = { # 387 BC
+    holder = 90906 # Ariobarzanes of Phrygia
+}
+414.1.1 = { # 362 BC
+    holder = 90908 # Artabazus II of Phrygia
+}
+442.5.1 = { # 334 BC
+	holder = 101 # Leonnatus, Satrap of Hellespontine Phrygia
+	liege = k_s_mysia
+}
+454.1.1 = {
+	holder = 2701 # Arrhidaios
+}
+457.2.1 = {
+	holder = 401 # Antigonos
+	liege = k_s_phrygia
+}
+467.1.1 = {
+	liege = e_asia
+}
+475.1.1 = {
+	holder = 51301 # Philetairos
+	liege = d_lydia
+}
+492.1.1 = { # 284 BC
+	liege = k_odrysia
+}
+495.2.1 = {
+	liege = e_syria
+}
+513.1.1 = { # 263 BC
+	holder = 51304 # Eumenes I
+}
+515.1.1 = { # 261 BC
+	liege = 0
+}
+535.1.1 = { # 241 BC
+	holder = 51309 # Attalus I
+}
+538.1.1 = { # 238 BC
+	liege = k_pergamum # Attalus I becomes king
+}
+579.1.1 = { # 197 BC
+	holder = 51310 # Eumenes II
+}
+617.1.1 = { # 159 BC
+	holder = 51313 # Attalos II
+}
+638.1.1 = { # 138 BC
+	holder = 51311 # Attalos III
+}
+643.1.1 = { # 133 BC
+	#Pergamon passes to Rome
+}

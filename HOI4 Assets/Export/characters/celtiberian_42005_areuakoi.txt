@@ -1,0 +1,40 @@
+# 420401-420500 for the Titti dynasty
+420401 = {
+	name = "Sekontios" # Made up Arevaci leader
+	dynasty = 42005
+	culture = celtiberian
+	religion = celtic_pagan
+	
+	385.1.1 = { # 391 BC, Made up
+		birth="yes"
+	}
+	467.1.1 = { # 308 BC
+		death="yes"
+	}
+}
+420402 = {
+	name = "Tiokenesos" # Made up Arevaci leader
+	dynasty = 42005
+	culture = celtiberian
+	religion = celtic_pagan
+	
+	415.1.1 = { # 361 BC, Made up
+		birth="yes"
+	}
+	496.1.1 = { # 280 BC
+		death="yes"
+	}
+}
+420403 = {
+	name = "Magauarikos" # Made up Arevaci leader
+	dynasty = 42005
+	culture = celtiberian
+	religion = celtic_pagan
+	
+	476.1.1 = { # 361 BC, Made up
+		birth="yes"
+	}
+	552.1.1 = { # 280 BC
+		death="yes"
+	}
+}

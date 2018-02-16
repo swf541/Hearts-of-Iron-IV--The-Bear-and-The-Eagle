@@ -1,0 +1,10 @@
+405.1.1 = { # 371 BC
+	holder = 390601 # Belasbaisereban
+	liege = d_contestani
+}
+464.1.1 = { # 312 BC
+	holder = 390602 # Tiokenesos
+}
+471.1.1 = { # 305 BC
+	holder = 390603 # Uxentio
+}

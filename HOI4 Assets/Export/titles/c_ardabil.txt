@@ -1,0 +1,29 @@
+417.1.1 = {
+	holder = 90322 # Made up Satrap of Media
+	liege = k_p_media
+}
+446.6.1 = { # 330 BC
+	holder = 90325 # Oxydates
+	liege = k_s_media
+}
+448.1.1 = { # 328 BC
+	holder = 90001 # Aturpat
+}
+453.6.10 = { # 323 BC
+	liege = k_atropatene
+}
+480.1.1 = { # 296 BC
+	holder = 90003 # Bardiya
+}
+509.1.1 = { # 267 BC
+	holder = 90004 # Aturpat
+}
+518.1.1 = { # 258 BC
+	holder = 90005 # Darayavahu
+}
+552.1.1 = { # 224 BC
+	holder = 90006 # Darayavahu
+}
+555.1.1 = { # 221 BC
+	holder = 90007 # Artabazanes
+}

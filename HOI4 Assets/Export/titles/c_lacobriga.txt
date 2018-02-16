@@ -1,0 +1,10 @@
+405.1.1 = { # 371 BC
+	holder = 410101
+	liege = d_counei
+}
+467.1.1 = { # 309 BC
+	holder = 410103 # Habis
+}
+498.1.1 = { # 278 BC
+	holder = 410104 # Gargoris
+}

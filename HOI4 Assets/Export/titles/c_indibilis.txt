@@ -1,0 +1,10 @@
+405.1.1 = { # 371 BC
+	holder = 390401 # Iltiradin
+	liege = d_ilercavones
+}
+465.1.1 = { # 311 BC
+	holder = 390403 # Unibetin
+}
+500.1.1 = {
+	holder = 390404
+}

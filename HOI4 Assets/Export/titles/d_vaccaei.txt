@@ -1,0 +1,7 @@
+405.1.1 = { # 371 BC
+	holder = 421101 # Tirtanos
+
+}
+466.1.1 = { # 309 BC
+	holder = 421103 # Kasilos
+}

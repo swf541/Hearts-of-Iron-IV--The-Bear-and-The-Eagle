@@ -1,0 +1,47 @@
+417.1.1 = {
+	holder = 90323
+	liege = k_p_lydia
+}
+442.1.1 = { # 334 BC
+	holder = 90314 # Darius III
+}
+442.12.1 = { # 334 BC
+	holder = 24301 # Nearchus
+	liege = e_macedonia
+}
+448.1.1 = { # 328 BC
+	holder = 901 # Perdiccas
+}
+453.6.10 = {
+	holder = 401 # Antigonus, the one eyed
+	liege = k_s_phrygia
+}
+467.1.1 = {
+	liege = e_asia
+}
+475.1.1 = { # 301 BC
+	holder = 601 # Ptolemy
+	liege = e_egypt
+}
+491.1.1 = { # 285 BC
+	holder = 602 # Ptolemy II
+}
+523.1.1 = { # 253 BC
+	holder = 1017 # Alexandros
+	liege = d_pisidia
+}
+547.1.1 = { # 229 BC
+	holder = 1019 # Andromachos
+}
+548.1.1 = { # 227 BC
+	holder = 51309 # Attalus I
+	liege = k_pergamum
+}
+553.6.1 = { # 223 BC
+	holder = 1020 # Achaios
+	liege = k_lydia
+}
+560.6.1 = { # 216 BC
+	holder = 1029 # Antiochos III Megas
+	liege = e_syria
+}

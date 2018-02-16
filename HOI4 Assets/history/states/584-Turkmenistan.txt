@@ -1,0 +1,30 @@
+state={
+	id=584
+	name="STATE_584"
+
+	history={
+		owner = SOV
+		victory_points = {
+			12333 3 
+		}
+		victory_points = {
+			10742 2 
+		}
+		victory_points = {
+			7560 2 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 3
+		}
+		add_core_of = SOV
+
+	}
+
+	provinces={
+		1493 1593 1649 4482 4549 4563 4599 4958 5003 7477 7491 7560 7563 7618 7635 7924 8099 10357 10359 10406 10414 10485 10510 10742 12333 12359 12491 
+	}
+	manpower=1664523
+	buildings_max_level_factor=1.000
+	state_category=town
+}

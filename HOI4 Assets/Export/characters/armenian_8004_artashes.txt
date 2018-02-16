@@ -1,0 +1,19 @@
+# 80301-80400 for the Artashes dynasty
+80301 = {
+	name = "Artashes" # Artaxias I
+	dynasty = 8001 # Yervanduni
+	religion = armenian_pagan
+	culture = armenian
+
+	father = 80012 # Zariadres
+
+	554.1.1 = { # Made up
+		birth="yes" # 222 BC
+	}
+	566.1.1 = { # 210 BC
+		dynasty = 8004 # Artaxiad
+	}
+	616.1.1 = {
+		death="yes" # 160 BC
+	}
+}

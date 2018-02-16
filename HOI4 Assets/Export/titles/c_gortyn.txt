@@ -1,0 +1,9 @@
+411.1.1 = { # 365 BC
+	holder = 24701 # Ekphantos
+}
+438.1.1 = { # 338 BC 
+	holder = 24702 # Neophytos
+}
+448.1.1 = { # 328 BC 
+	holder = 24703 # Neophytos
+}

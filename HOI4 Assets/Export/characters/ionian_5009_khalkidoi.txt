@@ -1,0 +1,39 @@
+# 50801-50900 for the Khalkidoi dynasty
+50801 = {
+	name = "Praxiteles" # Olbia
+	dynasty = 5009 # Khalkidoi
+	religion = hellenic_pagan
+	culture = ionian
+	385.1.1 = { # 391 BC Made up
+		birth="yes"
+	}
+	455.1.1 = { # 321 BC Made up
+		death="yes"
+	}
+}
+50802 = {
+	name = "Heliodoros" # Olbia
+	dynasty = 5009 # Khalkidoi
+	religion = hellenic_pagan
+	culture = ionian
+	father = 50801
+	439.1.1 = { # 351 BC Made up
+		birth="yes"
+	}
+	520.1.1 = { # 280 BC Made up
+		death="yes"
+	}
+}
+50803 = {
+	name = "Praxiteles" # Olbia
+	dynasty = 5009 # Khalkidoi
+	religion = hellenic_pagan
+	culture = ionian
+	father = 50802
+	480.1.1 = { # 351 BC Made up
+		birth="yes"
+	}
+	562.1.1 = { # 280 BC Made up
+		death="yes"
+	}
+}

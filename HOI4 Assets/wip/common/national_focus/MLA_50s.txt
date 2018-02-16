@@ -1,0 +1,697 @@
+focus_tree = {
+	id = MLA_50s
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = MLA
+		}
+	}
+	default = no
+	focus = {
+		id = MLA_Foundation_of_the_Socialist_Republic
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		x = 45
+		y = 0
+
+	}
+	focus = {
+		id = MLA_Embrace_Mao
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Foundation_of_the_Socialist_Republic
+		}
+		mutually_exclusive = {
+			focus = MLA_Marxist_Lenninism
+			focus = MLA_Malaysian_Socialism
+		}
+		x = 41
+		y = 1
+
+	}
+	focus = {
+		id = MLA_Chinese_Economic_Aid
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Embrace_Mao
+		}
+		x = 40
+		y = 2
+
+	}
+	focus = {
+		id = MLA_Chinese_Advisors
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Embrace_Mao
+		}
+		x = 42
+		y = 2
+
+	}
+	focus = {
+		id = MLA_The_July_Revolution
+		icon = GFX_focus_yug_pan_slavic_congress
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Chinese_Advisors
+		}
+		prerequisite = {
+			focus = MLA_Chinese_Economic_Aid
+		}
+		x = 41
+		y = 3
+
+	}
+	focus = {
+		id = MLA_Agrarian_Reform
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_The_July_Revolution
+		}
+		x = 40
+		y = 4
+
+	}
+	focus = {
+		id = MLA_Revise_the_Constitution
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_The_July_Revolution
+		}
+		x = 42
+		y = 4
+
+	}
+	focus = {
+		id = MLA_The_Anti_Colonialist_League
+		icon = GFX_goal_anschluss
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Revise_the_Constitution
+		}
+		prerequisite = {
+			focus = MLA_Agrarian_Reform
+		}
+		x = 41
+		y = 5
+
+	}
+	focus = {
+		id = MLA_Eliminate_Dissenters
+		icon = GFX_goal_generic_attack_allies
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_The_Anti_Colonialist_League
+		}
+		x = 42
+		y = 6
+
+	}
+	focus = {
+		id = MLA_Maoist_Insurgency_in_North_Borneo
+		icon = GFX_focus_secret_rearmament
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_The_Anti_Colonialist_League
+		}
+		x = 40
+		y = 6
+
+	}
+	focus = {
+		id = MLA_Demand_North_Boreno_and_Singapore
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Eliminate_Dissenters
+		}
+		prerequisite = {
+			focus = MLA_Maoist_Insurgency_in_North_Borneo
+		}
+		x = 41
+		y = 7
+
+	}
+	focus = {
+		id = MLA_Joint_Invasion_of_Vietnam
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Demand_North_Boreno_and_Singapore
+		}
+		x = 42
+		y = 8
+
+	}
+	focus = {
+		id = MLA_Invade_Thailand
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Demand_North_Boreno_and_Singapore
+		}
+		x = 40
+		y = 8
+
+	}
+	focus = {
+		id = MLA_Cultural_Revolution
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Joint_Invasion_of_Vietnam
+		}
+		prerequisite = {
+			focus = MLA_Invade_Thailand
+		}
+		x = 41
+		y = 9
+
+	}
+	focus = {
+		id = MLA_Marxist_Lenninism
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Foundation_of_the_Socialist_Republic
+		}
+		mutually_exclusive = {
+			focus = MLA_Embrace_Mao
+			focus = MLA_Malaysian_Socialism
+		}
+		x = 45
+		y = 1
+
+	}
+	focus = {
+		id = MLA_Soviet_Economic_Aid
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Marxist_Lenninism
+		}
+		x = 44
+		y = 2
+
+	}
+	focus = {
+		id = MLA_Soviet_Advisors
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Marxist_Lenninism
+		}
+		x = 46
+		y = 2
+
+	}
+	focus = {
+		id = MLA_Eliminate_the_Sultans
+		icon = GFX_goal_tfv_burn_the_royal_portraits
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Soviet_Economic_Aid
+		}
+		prerequisite = {
+			focus = MLA_Soviet_Advisors
+		}
+		x = 45
+		y = 3
+
+	}
+	focus = {
+		id = MLA_Indonesian_Propaganda
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Eliminate_the_Sultans
+		}
+		x = 44
+		y = 4
+
+	}
+	focus = {
+		id = MLA_Thai_Propaganda
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Eliminate_the_Sultans
+		}
+		x = 46
+		y = 4
+
+	}
+	focus = {
+		id = MLA_Crackdown_on_Malay_Nationalists
+		icon = GFX_goal_generic_attack_allies
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Thai_Propaganda
+		}
+		prerequisite = {
+			focus = MLA_Indonesian_Propaganda
+		}
+		x = 45
+		y = 5
+
+	}
+	focus = {
+		id = MLA_Demand_Malay_Unification
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Crackdown_on_Malay_Nationalists
+		}
+		x = 46
+		y = 6
+
+	}
+	focus = {
+		id = MLA_North_Borneo_Communist_Movement
+		icon = GFX_focus_secret_rearmament
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Crackdown_on_Malay_Nationalists
+		}
+		x = 44
+		y = 6
+
+	}
+	focus = {
+		id = MLA_Socialist_Union_of_Malaysia
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Demand_Malay_Unification
+		}
+		prerequisite = {
+			focus = MLA_North_Borneo_Communist_Movement
+		}
+		x = 45
+		y = 7
+
+	}
+	focus = {
+		id = MLA_Cultural_Changes
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Socialist_Union_of_Malaysia
+		}
+		x = 46
+		y = 8
+
+	}
+	focus = {
+		id = MLA_Five_Year_Plan
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Socialist_Union_of_Malaysia
+		}
+		x = 44
+		y = 8
+
+	}
+	focus = {
+		id = MLA_Join_the_Warsaw_Pact
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Cultural_Changes
+		}
+		prerequisite = {
+			focus = MLA_Five_Year_Plan
+		}
+		x = 45
+		y = 9
+
+	}
+	focus = {
+		id = MLA_Malaysian_Socialism
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Foundation_of_the_Socialist_Republic
+		}
+		mutually_exclusive = {
+			focus = MLA_Embrace_Mao
+			focus = MLA_Marxist_Lenninism
+		}
+		x = 49
+		y = 1
+
+	}
+	focus = {
+		id = MLA_Embrace_Market_Socialism
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Malaysian_Socialism
+		}
+		x = 48
+		y = 2
+
+	}
+	focus = {
+		id = MLA_Yugoslavian_Advisors
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Malaysian_Socialism
+		}
+		x = 50
+		y = 2
+
+	}
+	focus = {
+		id = MLA_Condemn_Soviet_Imperialism
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Yugoslavian_Advisors
+		}
+		prerequisite = {
+			focus = MLA_Embrace_Market_Socialism
+		}
+		x = 49
+		y = 3
+
+	}
+	focus = {
+		id = MLA_Yugoslavian_Economic_Aid
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Condemn_Soviet_Imperialism
+		}
+		x = 48
+		y = 4
+
+	}
+	focus = {
+		id = MLA_Support_Anti_Colonialism
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Condemn_Soviet_Imperialism
+		}
+		x = 50
+		y = 4
+
+	}
+	focus = {
+		id = MLA_Join_the_Non_Aligned_Movement
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Support_Anti_Colonialism
+		}
+		prerequisite = {
+			focus = MLA_Yugoslavian_Economic_Aid
+		}
+		x = 49
+		y = 5
+
+	}
+	focus = {
+		id = MLA_Seek_Foriegn_Investment
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Join_the_Non_Aligned_Movement
+		}
+		x = 50
+		y = 6
+
+	}
+	focus = {
+		id = MLA_Western_Rappoachment
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Join_the_Non_Aligned_Movement
+		}
+		x = 48
+		y = 6
+
+	}
+	focus = {
+		id = MLA_Request_Malaysian_Unification
+		icon = GFX_goal_anschluss
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Seek_Foriegn_Investment
+		}
+		prerequisite = {
+			focus = MLA_Western_Rappoachment
+		}
+		x = 49
+		y = 7
+
+	}
+	focus = {
+		id = MLA_Social_Dividends
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Request_Malaysian_Unification
+		}
+		x = 50
+		y = 8
+
+	}
+	focus = {
+		id = MLA_Western_Economic_Investments
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Request_Malaysian_Unification
+		}
+		x = 48
+		y = 8
+
+	}
+	focus = {
+		id = MLA_Economnic_Self_Management
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Social_Dividends
+		}
+		prerequisite = {
+			focus = MLA_Western_Economic_Investments
+		}
+		x = 49
+		y = 9
+
+	}
+	focus = {
+		id = MLA_Merdaka_Square_Massacre
+		icon = GFX_focus_generic_strike_at_democracy2
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Join_the_Warsaw_Pact
+			focus = MLA_Economnic_Self_Management
+			focus = MLA_Cultural_Revolution
+		}
+		x = 45
+		y = 10
+
+	}
+	focus = {
+		id = MLA_End_of_the_Socialist_Regime
+		icon = GFX_goal_generic_attack_allies
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Merdaka_Square_Massacre
+		}
+		mutually_exclusive = {
+			focus = MLA_Repress_Dissent
+		}
+		x = 43
+		y = 11
+
+	}
+	focus = {
+		id = MLA_Military_Junta
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_End_of_the_Socialist_Regime
+		}
+		mutually_exclusive = {
+			focus = MLA_Democratic_Reforms
+		}
+		x = 42
+		y = 12
+
+	}
+	focus = {
+		id = MLA_Repress_Dissent
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Merdaka_Square_Massacre
+		}
+		mutually_exclusive = {
+			focus = MLA_End_of_the_Socialist_Regime
+		}
+		x = 47
+		y = 11
+
+	}
+	focus = {
+		id = MLA_Social_Freedoms
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Repress_Dissent
+		}
+		mutually_exclusive = {
+			focus = MLA_Secret_Prisons
+		}
+		x = 46
+		y = 12
+
+	}
+	focus = {
+		id = MLA_Democratic_Reforms
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_End_of_the_Socialist_Regime
+		}
+		mutually_exclusive = {
+			focus = MLA_Military_Junta
+		}
+		x = 44
+		y = 12
+
+	}
+	focus = {
+		id = MLA_Embrace_Capitalism
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Democratic_Reforms
+		}
+		prerequisite = {
+			focus = MLA_Military_Junta
+		}
+		x = 43
+		y = 13
+
+	}
+	focus = {
+		id = MLA_Join_NATO
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_The_Free_Markets
+		}
+		prerequisite = {
+			focus = MLA_American_Economic_Aid
+		}
+		x = 43
+		y = 15
+
+	}
+	focus = {
+		id = MLA_American_Economic_Aid
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Embrace_Capitalism
+		}
+		x = 42
+		y = 14
+
+	}
+	focus = {
+		id = MLA_The_Free_Markets
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Embrace_Capitalism
+		}
+		x = 44
+		y = 14
+
+	}
+	focus = {
+		id = MLA_Ideological_Fanaticism
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Consolidate_Grasp_on_the_Army
+		}
+		prerequisite = {
+			focus = MLA_Anti_Western_Propaganda
+		}
+		x = 47
+		y = 15
+
+	}
+	focus = {
+		id = MLA_Secret_Prisons
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Repress_Dissent
+		}
+		mutually_exclusive = {
+			focus = MLA_Military_Junta
+			focus = MLA_Social_Freedoms
+		}
+		x = 48
+		y = 12
+
+	}
+	focus = {
+		id = MLA_Socialist_Economics
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Social_Freedoms
+		}
+		prerequisite = {
+			focus = MLA_Secret_Prisons
+		}
+		x = 47
+		y = 13
+
+	}
+	focus = {
+		id = MLA_Consolidate_Grasp_on_the_Army
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Socialist_Economics
+		}
+		x = 48
+		y = 14
+
+	}
+	focus = {
+		id = MLA_Anti_Western_Propaganda
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = MLA_Socialist_Economics
+		}
+		mutually_exclusive = {
+			focus = MLA_Social_Freedoms
+		}
+		x = 46
+		y = 14
+
+	}
+}

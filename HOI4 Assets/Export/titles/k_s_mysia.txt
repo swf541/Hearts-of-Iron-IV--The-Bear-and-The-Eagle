@@ -1,0 +1,11 @@
+442.5.1 = { # 334 BC
+	holder = 101 # Leonnatus, Satrap of Hellespontine Phrygia
+	liege = e_macedonia
+}
+454.1.1 = {
+	holder = 2701 # Arrhidaios
+}
+457.3.1 = {
+	holder = 0
+	liege = 0
+}

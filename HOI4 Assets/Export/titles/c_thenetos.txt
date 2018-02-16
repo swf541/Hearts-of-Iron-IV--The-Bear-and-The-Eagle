@@ -1,0 +1,9 @@
+415.1.1 = { # 361 BC
+	holder = 260601 # Sugotus
+}
+453.1.1 = { # 323 BC
+	holder = 260602 # Massinissa	
+}
+500.1.1 = {
+	holder = 260603
+}

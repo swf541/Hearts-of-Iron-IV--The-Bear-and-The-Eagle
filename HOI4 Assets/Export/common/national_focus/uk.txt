@@ -1,0 +1,3646 @@
+focus_tree = {
+	id = Britain_Focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ENG
+		}
+	}
+	
+	default = no
+	
+	continuous_focus_position = { x = 50 y = 1100 }
+	
+	focus = {
+		id = ENG_rebuild
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		x = 6
+		y = 0
+		
+		completion_reward = {
+		    add_tech_bonus = {
+			name = industrial_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+	
+	}
+	focus = {
+		id = ENG_ColdWar
+		icon = GFX_goal_generic_military_sphere
+		cost = 10.00
+		x = 17
+		y = 0
+		
+		completion_reward = {
+			add_political_power = 100
+			army_experience = 10
+		}
+	}
+	focus = {
+		id = ENG_Path
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10.00
+		x = 41
+		y = 0
+		
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = ENG_SeaAndSky
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		x = 58
+		y = 0
+		
+		completion_reward = {
+			navy_experience = 10
+			air_experience = 10
+		}
+	}
+	focus = {
+		id = ENG_ASW
+		icon = GFX_goal_generic_navy_anti_submarine
+		cost = 10.00
+		x = 61
+		y = 2
+
+			completion_reward = {
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 2
+				technology = early_destroyer
+				technology = basic_destroyer
+				technology = improved_destroyer
+				technology = advanced_destroyer
+			}
+		}
+	}
+	focus = {
+		id = ENG_Royalarmy
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		cost = 10.00
+		x = 71
+		y = 0
+
+		completion_reward = {
+			army_experience = 5
+		}
+	}
+	focus = {
+		id = ENG_CivilianEconomy
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_rebuild
+		}
+		x = 11
+		y = 1
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ENG_Economics
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_CivilianEconomy
+		}
+		x = 9
+		y = 2
+
+		completion_reward = {
+			126 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+					}
+				}
+			}
+			128 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+					}
+				}
+			}
+			127 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+					}
+				}
+			}
+			131 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+					}
+				}
+			}
+		}	
+	}		
+	focus = {
+		id = ENG_ScottishEconomics
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_CivilianEconomy
+		}
+		x = 11
+		y = 2
+
+		completion_reward = {
+			133 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+					}
+				}
+			}
+			121 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ENG_UnitedEconomics
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Economics
+		}
+		prerequisite = {
+			focus = ENG_ScottishEconomics
+		}
+		x = 11
+		y = 3
+		
+		completion_reward = {
+			119 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+					}
+				}
+			}
+			122 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ENG_Disarm
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_UnitedEconomics
+		}
+		mutually_exclusive = {
+			focus = ENG_Maintain
+		}
+		x = 11
+		y = 4
+
+		completion_reward = {
+			army_experience = -10
+			add_ideas = disarmed_nation
+		}
+	}
+	focus = {
+		id = ENG_Yankee
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Disarm
+		}
+		x = 0
+		y = 1
+		relative_position_id = ENG_Disarm
+
+		completion_reward = {
+			126 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+					}
+				}
+			}
+			128 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+					}
+				}
+			}
+			119 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+					}
+				}
+			}
+			127 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+					}
+				}
+			}
+			131 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ENG_Libritarian
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Yankee
+		}
+		x = 0
+		y = 2
+		relative_position_id = ENG_Disarm
+
+		completion_reward = {
+			add_ideas = free_trade
+			120 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+							type = industrial_complex
+							level = 4
+							instant_build = yes
+					}
+				}
+			}
+			129 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+							type = industrial_complex
+							level = 4
+							instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ENG_InfEffort1
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Libritarian
+		}
+		x = 11
+		y = 7
+
+		completion_reward = {
+			130 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = infrastructure
+							level = 2
+							instant_build = yes
+					}
+				}
+			}
+			132 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = infrastructure
+							level = 2
+							instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ENG_NatDev1
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Libritarian
+		}
+		x = 9
+		y = 7
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ENG_InfEffort2
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_InfEffort1
+		}
+		x = 11
+		y = 8
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 2
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 2
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ENG_NatDev2
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_NatDev1
+		}
+		x = 9
+		y = 8
+	
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}	
+	
+	}
+	focus = {
+		id = ENG_NHS
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_CivilianEconomy
+		}
+		x = 13
+		y = 2
+
+		completion_reward = {
+			add_political_power = 50
+			add_ideas = NHS_idea
+		}
+	}
+	focus = {
+		id = ENG_NorthSea
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Libritarian
+		}
+		x = 13
+		y = 7
+		
+		completion_reward = {
+			add_resource = {
+				type = oil
+				amount = 36
+				state = 120
+			}
+		}
+	}
+	focus = {
+		id = ENG_Maintain
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_UnitedEconomics
+		}
+		mutually_exclusive = {
+			focus = ENG_Disarm
+		}
+		x = 14
+		y = 4
+
+		completion_reward = {
+			army_experience = 10
+		}
+	}
+	focus = {
+		id = ENG_HighMilitarism
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_ColdWar
+		}
+		mutually_exclusive = {
+			focus = ENG_LowMilitarism
+		}
+		x = 16
+		y = 2
+
+		completion_reward = {
+			add_ideas = HighMilitarism
+		}
+	}
+	focus = {
+		id = ENG_Militarise
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_HighMilitarism
+		}
+		x = 16
+		y = 3
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 2
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ENG_StrikeFirst
+		icon = GFX_goal_generic_attack_allies
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Maintain
+		}
+		prerequisite = {
+			focus = ENG_Militarise
+		}
+		x = 16
+		y = 5
+
+		completion_reward = {
+			army_experience = 50
+			128 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+							type = arms_factory
+							level = 4
+							instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ENG_Unthinkable
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_StrikeFirst
+		}
+		x = 16
+		y = 6
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = SOV
+			}
+		}
+	}
+	focus = {
+		id = ENG_LowMilitarism
+		icon = GFX_focus_secret_rearmament
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_ColdWar
+		}
+		mutually_exclusive = {
+			focus = ENG_HighMilitarism
+		}
+		x = 18
+		y = 2
+
+		completion_reward = {
+			add_ideas = lowmilitarism
+		}
+	}
+	focus = {
+		id = ENG_Mobalise
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_LowMilitarism
+		}
+		x = 18
+		y = 3
+
+		completion_reward = {
+			128 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = arms_factory
+							level = 2
+							instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ENG_DefensivePrep
+		icon = GFX_goal_generic_construct_military
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Mobalise
+		}
+		x = 18
+		y = 4
+		
+		completion_reward = {
+			127 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+
+		
+						add_building_construction = {
+							type = coastal_bunker
+							level = 5
+							province = 13070
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = coastal_bunker
+							level = 5
+							province = 3501
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = coastal_bunker
+							level = 5
+							province = 11446
+							instant_build = yes
+						
+					    }
+					    add_building_construction = {
+						    type = coastal_bunker
+							level = 5
+							province = 9458
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = coastal_bunker
+							level = 5
+							province = 6489
+							instant_build = yes
+						}		
+							
+					}		
+				}
+			}
+		}
+	
+	focus = {
+		id = ENG_LetThemCome
+		icon = GFX_focus_generic_coastal_fort
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_DefensivePrep
+		}
+		x = 18
+		y = 5
+
+			completion_reward = {
+				add_political_power = 300
+				# I will add a special modifier later #
+			}
+		}
+	
+	focus = {
+		id = ENG_Warhawks
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_ColdWar
+		}
+		x = 21
+		y = 1
+
+		completion_reward = {
+			add_named_threat = { threat = -5 name = ENG_Warhawks }
+		}
+	}
+	focus = {
+		id = ENG_Cooling
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Warhawks
+		}
+		x = 21
+		y = 2
+		
+		completion_reward = {
+			add_named_threat = { threat = -5 name = ENG_Cooling }
+		}
+	}
+	focus = {
+		id = ENG_Soldiers
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Cooling
+		}
+		x = 21
+		y = 3
+
+		completion_reward = {
+			add_named_threat = { threat = -7 name = ENG_Soldiers }
+		}
+	}
+	focus = {
+		id = ENG_Detante
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Soldiers
+		}
+		x = 21
+		y = 4
+
+		completion_reward = {
+			add_named_threat = { threat = -10 name = Detante }
+		}
+	}
+	focus = {
+		id = ENG_TakeEasy
+		icon = GFX_focus_rom_parties_end
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Detante
+		}
+		x = 21
+		y = 5
+
+		completion_reward = {
+			129 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+							type = industrial_complex
+							level = 4
+							instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ENG_CloakDagger
+		icon = GFX_goal_generic_major_war
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_ColdWar
+		}
+		x = 26
+		y = 1
+
+			completion_reward = {
+				completion_reward = {
+				add_named_threat = { threat = 1 name = Cloak&Dagger }
+			}
+		}
+	}
+	focus = {
+		id = ENG_MI6
+		icon = GFX_goal_generic_military_deal
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_CloakDagger
+		}
+		x = 24
+		y = 2
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = codebreaking_bonus
+				bonus = 0.5
+				uses = 3
+				category = decryption_tech
+			}
+	    }
+	}
+	focus = {
+		id = ENG_Spy1
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_MI6
+		}
+		x = 24
+		y = 3
+			completion_reward = {
+				add_tech_bonus = {
+					name = codebreaking_bonus
+					bonus = 0.5
+					uses = 3
+					category = decryption_tech
+				}
+			}
+		}
+	
+	focus = {
+		id = ENG_Spy2
+		icon = GFX_goal_generic_major_war
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Spy1
+		}
+		x = 24
+		y = 4
+			completion_reward = {
+				add_tech_bonus = {
+					name = codebreaking_bonus
+					bonus = 0.5
+					uses = 3
+					category = decryption_tech
+				}
+			}
+	}
+	focus = {
+		id = ENG_Heating
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_CloakDagger
+		}
+		x = 26
+		y = 3
+		completion_reward = {	
+			add_named_threat = { threat = 1 name = Heating }
+		}
+	}
+	focus = {
+		id = ENG_Incident
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Heating
+		}
+		x = 26
+		y = 5
+		completion_reward = {	
+			add_named_threat = { threat = 1 name = Incident }
+		}
+	}
+	focus = {
+		id = ENG_MI5
+		icon = GFX_goal_generic_military_deal
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_CloakDagger
+		}
+		x = 28
+		y = 2
+		completion_reward = {
+				add_tech_bonus = {
+					name = codebreaking_bonus
+					bonus = 0.5
+					uses = 3
+					category = encryption_tech
+				}
+			}
+	
+	
+	}
+	focus = {
+		id = ENG_Cubs
+		icon = GFX_goal_generic_defence
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_MI5
+		}
+		x = 28
+		y = 3
+		completion_reward = {
+				add_tech_bonus = {
+					name = codebreaking_bonus
+					bonus = 0.5
+					uses = 3
+					category = encryption_tech
+				}
+			}
+	}
+	focus = {
+		id = ENG_Defend
+		icon = GFX_goal_generic_military_sphere
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Cubs
+		}
+		x = 28
+		y = 4
+		completion_reward = {
+				add_tech_bonus = {
+					name = codebreaking_bonus
+					bonus = 0.5
+					uses = 3
+					category = encryption_tech
+				}
+			}
+	}
+	focus = {
+		id = ENG_Preserve
+		icon = GFX_goal_generic_position_armies
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Path
+		}
+		mutually_exclusive = {
+			focus = ENG_BNW
+			focus = ENG_RedSun
+		}
+		x = 33
+		y = 1
+		completion_reward = {
+			add_national_unity = 0.05
+		}	
+	}
+	focus = {
+		id = ENG_Patriot
+		icon = GFX_goal_demand_sudetenland
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Preserve
+		}
+		x = 33
+		y = 2
+		completion_reward = {
+			add_national_unity = 0.15
+		}
+	}
+	focus = {
+		id = ENG_Statute
+		icon = GFX_focus_renounce_the_treaty_of_triannon
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Patriot
+		}
+		x = 31
+		y = 3
+		completion_reward = {
+			CAN = {
+				add_autonomy_ratio = {
+						value = -0.05
+					}
+				}
+			AST = {
+				add_autonomy_ratio = {
+						value = -0.05
+					}
+				}	
+			NZL = {
+				add_autonomy_ratio = {
+						value = -0.05
+					}
+				}
+			SAF = {
+				add_autonomy_ratio = {
+						value = -0.05
+					}
+				}
+			}
+		}
+	focus = {
+		id = ENG_RetakeCrown
+		icon = GFX_focus_rom_royal_dictatorship
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Patriot
+		}
+		x = 33
+		y = 4
+			completion_reward = {		#Will add modifier later
+				add_national_unity = 0.05
+			}
+	}
+	focus = {
+		id = ENG_Raj
+		icon = GFX_focus_RAJ_british_investors
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_RetakeCrown
+		}
+		x = 33
+		y = 5
+		completion_reward = {
+				create_wargoal = {
+				type = puppet_wargoal_focus
+				target = RAJ
+			}
+		}
+	}
+	focus = {
+		id = ENG_Troubles
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Preserve
+		}
+		x = 35
+		y = 2
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = ENG_SecureSuez
+		icon = GFX_goal_generic_territory_or_war
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Troubles
+		}
+		x = 35
+		y = 3
+		completion_reward = {
+			447 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 4076
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					province = 4076
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 1071
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ENG_EndEgypt
+		icon = GFX_goal_demand_sudetenland
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_SecureSuez
+		}
+		prerequisite = {
+			focus = ENG_Patriot
+		}
+		mutually_exclusive = {
+			focus = ENG_BowEgypt
+		}
+		x = 35
+		y = 4
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = EGY
+			}
+		}
+	}
+	focus = {
+		id = ENG_CntrlAfrica
+		icon = GFX_focus_SAF_secure_africa
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_EndEgypt
+		}
+		x = 35
+		y = 6
+		completion_reward = {		#Add Modifier and Events Later
+			add_political_power = 120
+		}
+	}
+	focus = {
+		id = ENG_BNW
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Path
+		}
+		prerequisite = {
+			focus = ENG_Path
+		}
+		mutually_exclusive = {
+			focus = ENG_Preserve
+			focus = ENG_RedSun
+		}
+		x = 40
+		y = 1
+		completion_reward = {	#Democratic Influence Modifier TBA
+			add_political_power = 150
+			add_national_unity = 0.15
+		}
+	}
+	focus = {
+		id = ENG_UN
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_BNW
+		}
+		x = 40
+		y = 2
+		completion_reward = {
+			add_political_power = 100
+			USA = { add_opinion_modifier =  { target = USA modifier = UnitedNations } 	}
+			
+		}
+	}
+	focus = {
+		id = ENG_OverseasCrisis
+		icon = GFX_goal_generic_position_armies
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_UN
+		}
+		x = 37
+		y = 3
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = ENG_OldCrown
+		icon = GFX_focus_rom_abdicate
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_UN
+		}
+		x = 40
+		y = 3
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+	focus = {
+		id = ENG_FrndIndia
+		icon = GFX_focus_RAJ_all_india_forward_bloc
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_OldCrown
+		}
+		mutually_exclusive = {
+			focus = ENG_FrndPakistan
+		}
+		x = 39
+		y = 4
+		completion_reward = {
+			ENG = { add_opinion_modifier =  { target = RAJ modifier = Befriend_India } 	}
+		}
+	}
+	focus = {
+		id = ENG_FrndPakistan
+		icon = GFX_focus_RAJ_indian_gentlemen_offcers
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_OldCrown
+		}
+		mutually_exclusive = {
+			focus = ENG_FrndIndia
+		}
+		x = 41
+		y = 4
+		completion_reward = {
+			ENG = { add_opinion_modifier =  { target = PAK modifier = Befriend_Pakistan } 	}
+		}
+	}
+	focus = {
+		id = ENG_Consolidate
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_FrndIndia
+			focus = ENG_FrndPakistan
+		}
+		x = 40
+		y = 5
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+	focus = {
+		id = ENG_Security
+		icon = GFX_goal_generic_military_sphere
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_UN
+		}
+		x = 42
+		y = 3
+		completion_reward = {		#Security Council Modifier TBA
+			add_national_unity = 0.1
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = ENG_Assembly
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Security
+		}
+		x = 43
+		y = 5
+		completion_reward = {	#Will add a lot of opinion modifiers later
+			add_political_power = 50
+	
+		}
+	}
+	focus = {
+		id = ENG_RedSun
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Path
+		}
+		mutually_exclusive = {
+			focus = ENG_BNW
+			focus = ENG_Preserve
+		}
+		x = 47
+		y = 1
+		completion_reward = { 
+			add_popularity = {
+					ideology = communism
+					popularity = 0.2
+				}
+		}
+	}
+	focus = {
+		id = ENG_Internationalism
+		icon = GFX_goal_support_fourth_int
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_RedSun
+		}
+		mutually_exclusive = {
+			focus = ENG_OneCountry
+		}
+		x = 45
+		y = 2
+		completion_reward = {
+			add_ideas = internationalism
+		}
+				
+	}
+	focus = {
+		id = ENG_DecoloniseComittee
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_UN
+		}
+		x = 44
+		y = 3
+		completion_reward = {
+			MAY = {
+				transfer_state = 333
+			}
+			add_political_power = 100
+		
+		}
+		
+	
+	}
+	focus = {
+		id = ENG_OneCountry
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_RedSun
+		}
+		mutually_exclusive = {
+			focus = ENG_Internationalism
+		}
+		x = 50
+		y = 2
+		SOV = { add_opinion_modifier =  { target = ENG modifier = Stalinism } 	}
+	}
+	focus = {
+		id = ENG_EndRoyalFamily
+		icon = GFX_goal_tfv_burn_the_royal_portraits
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Internationalism
+			focus = ENG_OneCountry
+		}
+		x = 48
+		y = 3
+		add_popularity = {
+					ideology = communism
+					popularity = 0.25
+				}
+		
+	}
+	focus = {
+		id = ENG_CutTies
+		icon = GFX_goal_tfv_sever_ties_with_uk
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_EndRoyalFamily
+		}
+		x = 48
+		y = 4
+		completion_reward = {
+			BOT = {
+				add_autonomy_ratio = {
+						value = 100 
+					}
+				}
+			ZIM = {
+				add_autonomy_ratio = {
+						value = 100
+					}
+				}	
+			ZAM = {
+				add_autonomy_ratio = {
+						value = 100
+					}
+				}
+			NYA = {
+				add_autonomy_ratio = {
+						value = 100
+					}
+				}
+			KNA = {
+				add_autonomy_ratio = {
+						value = 100
+					}
+				}	
+			UGA = {
+				add_autonomy_ratio = {
+						value = 100
+					}
+				}	
+			SUD = {
+				add_autonomy_ratio = {
+						value = 100
+					}
+				}	
+				
+			}
+	}
+	focus = {
+		id = ENG_OwnAlliance
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Internationalism
+		}
+		prerequisite = {
+			focus = ENG_CutTies
+		}
+		x = 45
+		y = 5
+		completion_reward = {
+			create_faction = Liverpool_Pact
+		}
+	}
+	focus = {
+		id = ENG_WarsawPact
+		icon = GFX_goal_generic_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_OneCountry
+		}
+		prerequisite = {
+			focus = ENG_CutTies
+		}
+		x = 50
+		y = 5
+		completion_reward = {
+			# ADD FACTION JOIN EVENT HERE #
+		}
+	}
+	focus = {
+		id = ENG_Prepareforinvasion
+		icon = GFX_goal_generic_construct_military
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_OwnAlliance
+			focus = ENG_WarsawPact
+		}
+		x = 47
+		y = 6
+		completion_reward = {
+			add_ideas = deterrence
+		}
+	}
+	focus = {
+		id = ENG_ArmWelsh
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Prepareforinvasion
+		}
+		x = 49
+		y = 7
+		completion_reward = {
+		122 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+							type = arms_factory
+							level = 4
+							instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ENG_RAF
+		icon = GFX_goal_continuous_air_production
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_SeaAndSky
+		}
+		x = 55
+		y = 1
+		
+	}
+	focus = {
+		id = ENG_ShdwScheme
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_RAF
+		}
+		x = 53
+		y = 2
+
+	}
+	focus = {
+		id = ENG_SuthEnglishBase
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_ShdwScheme
+		}
+		x = 53
+		y = 3
+
+	}
+	focus = {
+		id = ENG_Designs
+		icon = GFX_goal_generic_air_fighter2
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_RAF
+		}
+		x = 55
+		y = 2
+
+	}
+	focus = {
+		id = ENG_AirDoctrine
+		icon = GFX_goal_generic_build_airforce
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_RAF
+		}
+		x = 57
+		y = 2
+		completion_reward = {
+		random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+			}
+		air_experience = 25
+		}
+	}
+	focus = {
+		id = ENG_Airforce
+		icon = GFX_focus_yug_rogozarski
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_AirDoctrine
+		}
+		x = 55
+		y = 3
+		completion_reward = {
+			air_experience = 25
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 0.5
+				uses = 2
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+				technology = heavy_fighter1
+				technology = heavy_fighter2
+				technology = heavy_fighter3
+			}
+		}
+	}
+	focus = {
+		id = ENG_ExpndRoyalNavy
+		icon = GFX_goal_generic_navy_battleship
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_SeaAndSky
+		}
+		x = 61
+		y = 1
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = dockyard
+										size > 2
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ENG_Carriers
+		icon = GFX_goal_generic_navy_carrier
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_ExpndRoyalNavy
+		}
+		x = 59
+		y = 2
+		completion_reward = {
+			add_tech_bonus = {
+				name = carrier_bonus
+				bonus = 0.5
+				ahead_reduction = 3
+				uses = 2
+				technology = early_carrier
+				technology = basic_carrier
+				technology = improved_carrier
+				technology = advanced_carrier
+			}
+		}
+	}
+	focus = {
+		id = ENG_ChessSky
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_AirDoctrine
+		}
+		prerequisite = {
+			focus = ENG_Carriers
+		}
+		x = 57
+		y = 3
+		completion_reward = {
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 0.5
+				uses = 3
+				category = air_doctrine
+			}
+		}
+	}
+	focus = {
+		id = ENG_AirSchemeII
+		icon = GFX_goal_generic_air_fighter
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_SuthEnglishBase
+		}
+		prerequisite = {
+			focus = ENG_Airforce
+		}
+		prerequisite = {
+			focus = ENG_ChessSky
+		}
+		x = 55
+		y = 4
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 4
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 4
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ENG_ShdwDocks
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Carriers
+		}
+		prerequisite = {
+			focus = ENG_ASW
+		}
+		x = 60
+		y = 3
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 4
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = dockyard
+										size > 4
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+			
+	}
+	focus = {
+		id = ENG_Battleships
+		icon = GFX_goal_generic_navy_battleship
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_ExpndRoyalNavy
+		}
+		x = 63
+		y = 2
+		completion_reward = {
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 0.5
+				ahead_reduction = 2
+				uses = 3
+			}
+		}
+	}
+	focus = {
+		id = ENG_ScotDocks
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_ASW
+		}
+		prerequisite = {
+			focus = ENG_Battleships
+		}
+		x = 62
+		y = 3
+		completion_reward = {
+		121 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = dockyard
+							level = 2
+							instant_build = yes
+					}
+				}
+			}
+		133 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = dockyard
+							level = 2
+							instant_build = yes
+					}
+				}
+			}
+		136 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = dockyard
+							level = 2
+							instant_build = yes
+					}
+				}
+			}
+		120 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = dockyard
+							level = 2
+							instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ENG_TacticsAdmiralty
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_ShdwDocks
+		}
+		prerequisite = {
+			focus = ENG_ScotDocks
+		}
+		x = 61
+		y = 4
+		completion_reward = {
+			add_tech_bonus = {
+				name = USA_fund_the_navy
+				uses = 3
+				bonus = 0.5
+				category = naval_doctrine
+			}
+		}
+	}
+	focus = {
+		id = ENG_praiselord
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Royalarmy
+		}
+		x = 68
+		y = 1
+		
+	}
+	focus = {
+		id = ENG_passammo
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_praiselord
+		}
+		x = 68
+		y = 2
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ENG_stayfree
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_passammo
+		}
+		x = 68
+		y = 3
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ENG_Frwlharold
+		icon = GFX_goal_tripartite_pact
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Royalarmy
+		}
+		x = 70
+		y = 1
+		completion_reward = {		#GetThisFocusToDismissHaroldAlexander
+			army_experience = -10
+		}
+	}
+	focus = {
+		id = ENG_Frwlvetrans
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Frwlharold
+		}
+		x = 70
+		y = 2
+		completion_reward = {
+			army_experience = -50
+		}
+	}
+	focus = {
+		id = ENG_NewGuard
+		icon = GFX_focus_generic_license_production
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Frwlvetrans
+		}
+		x = 70
+		y = 3
+		completion_reward = {
+			army_experience = 30
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 5
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = ENG_DfndFalklands
+		icon = GFX_focus_generic_coastal_fort
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_NewGuard
+		}
+		x = 69
+		y = 4
+		completion_reward = {
+			299 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+
+		
+						add_building_construction = {
+							type = coastal_bunker
+							level = 5
+							province = 12960
+							instant_build = yes
+						}
+					}		
+				}
+			720 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					
+					add_building_construction = {
+						type = coastal_bunker
+						level = 5
+						province = 10995
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ENG_NewDoctrines
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Royalarmy
+		}
+		mutually_exclusive = {
+			focus = ENG_OldDoctrines
+		}
+		x = 72
+		y = 1
+		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 0.5
+				uses = 1
+				category = cat_mass_assault
+			}
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 0.5
+				uses = 1
+				category = cat_superior_firepower
+			}
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 0.5
+				uses = 1
+				category = cat_mobile_warfare
+			}
+		}
+	}
+	focus = {
+		id = ENG_ConsultAdvisors
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_NewDoctrines
+		}
+		x = 72
+		y = 2
+		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 0.5
+				uses = 1
+				category = cat_mass_assault
+			}
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 0.5
+				uses = 1
+				category = cat_superior_firepower
+			}
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 0.5
+				uses = 1
+				category = cat_mobile_warfare
+			}
+		}
+	}
+	focus = {
+		id = ENG_MdrnDivisions
+		icon = GFX_goal_generic_army_motorized
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_ConsultAdvisors
+		}
+		x = 72
+		y = 3
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_focus
+				ahead_reduction = 1
+				bonus = 0.75
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+			
+	}
+	focus = {
+		id = ENG_Marshall
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_rebuild
+		}
+		x = -4
+		y = 1
+		relative_position_id = ENG_rebuild
+		completion_reward = {
+			126 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			127 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			119 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}	
+		}
+	}
+	focus = {
+		id = ENG_blitz
+		icon = GFX_goal_generic_construction
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Marshall
+		}
+		x = -5
+		y = 2
+		relative_position_id = ENG_rebuild
+		completion_reward = {
+			126 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+					}
+				}
+			}
+			127 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_building_construction = {
+							type = infrastructure
+							level = 2
+							instant_build = yes
+					}
+				}
+			}	
+			131 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_building_construction = {
+							type = infrastructure
+							level = 3
+							instant_build = yes
+					}
+				}
+			}	
+			119 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_building_construction = {
+							type = infrastructure
+							level = 2
+							instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ENG_NewInfa
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Marshall
+		}
+		x = -1
+		y = 2
+		relative_position_id = ENG_rebuild
+		completion_reward = {
+			128 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_building_construction = {
+							type = infrastructure
+							level = 4
+							instant_build = yes
+					}
+				}
+			}
+			127 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_building_construction = {
+							type = infrastructure
+							level = 2
+							instant_build = yes
+					}
+				}
+			}
+			131 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_building_construction = {
+							type = infrastructure
+							level = 2
+							instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ENG_Ringways
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_FurtherExpan
+		}
+		x = 4
+		y = 4
+		completion_reward = {
+		126 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_building_construction = {
+							type = infrastructure
+							level = 10
+							instant_build = yes
+					}
+				    add_building_construction = {
+					        type = industrial_complex
+							level = 2
+							instant_build = yes
+				    }
+				
+				}
+			}
+		}
+	}
+	focus = {
+		id = ENG_WBL
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_blitz
+		}
+		x = 1
+		y = 3
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+	focus = {
+		id = ENG_rebirth
+		icon = GFX_goal_generic_production
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_WBL
+		}
+		x = 1
+		y = 4
+		completion_reward = {
+			126 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			128 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}	
+			119 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			127 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			131 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			125 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			122 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ENG_CivEcon
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_rebirth
+		}
+		mutually_exclusive = {
+			focus = ENG_DefEcon
+		}
+		x = 1
+		y = 5
+		completion_reward = {
+			121 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			129 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ENG_NavalIndustries
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_DefEcon
+		}
+		x = 6
+		y = 6
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = dockyard
+										size > 2
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ENG_DefEcon
+		icon = GFX_goal_generic_construct_military
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_rebirth
+			focus = ENG_Ringways
+			focus = ENG_StopLondon
+		}
+		mutually_exclusive = {
+			focus = ENG_CivEcon
+		}
+		x = 5
+		y = 5
+		completion_reward = {
+			127 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_building_construction = {
+							type = anti_air_building
+							level = 2
+							instant_build = yes
+					}
+				}
+			}
+			126 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_building_construction = {
+							type = anti_air_building
+							level = 2
+							instant_build = yes
+					}
+				}
+			}
+			131 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_building_construction = {
+							type = anti_air_building
+							level = 2
+							instant_build = yes
+					}
+				}
+			}
+			128 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_building_construction = {
+							type = anti_air_building
+							level = 2
+							instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ENG_MilIndustries
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_DefEcon
+		}
+		x = 4
+		y = 6
+	completion_reward = {
+		136 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+					}
+		}		}
+			}
+	}
+	focus = {
+		id = ENG_SussexIndustry
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_CivEcon
+		}
+		x = 0
+		y = 6
+		completion_reward = {
+				127 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ENG_BBC
+		icon = GFX_goal_generic_radar
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_CivEcon
+		}
+		x = 2
+		y = 6
+		completion_reward = {
+			add_tech_bonus = {
+				name = radar_focus
+				bonus = 0.5
+				uses = 3
+				category = radar_tech
+			}
+		}
+	}	
+	focus = {
+		id = ENG_FurtherExpan
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_NewInfa
+		}
+		mutually_exclusive = {
+			focus = ENG_Greenbelt
+		}
+		x = 4
+		y = 3
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 2
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 2
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ENG_Greenbelt
+		icon = GFX_goal_generic_defence
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_NewInfa
+		}
+		prerequisite = {
+			focus = ENG_Economics
+		}
+		mutually_exclusive = {
+			focus = ENG_FurtherExpan
+		}
+		x = 6
+		y = 3
+		completion_reward = {
+				add_national_unity = 0.1
+		}
+	}
+	focus = {
+		id = ENG_StopLondon
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Greenbelt
+		}
+		x = 6
+		y = 4
+		completion_reward = {
+				add_political_power = 150
+		}
+	}
+	focus = {
+		id = ENG_MiddlesexIndustry
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_SussexIndustry
+		}
+		x = 0
+		y = 7
+		completion_reward = {
+			127 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}	
+			126 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			128 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ENG_Connect
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_BBC
+		}
+		x = 2
+		y = 7
+		completion_reward = {
+			add_political_power = 200
+			}
+	}
+	focus = {
+		id = ENG_Manchester
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_MilIndustries
+		}
+		x = 4
+		y = 7
+		completion_reward = {
+		132 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_building_construction = {
+							type = arms_factory
+							level = 2
+							instant_build = yes
+					}
+				}
+			}
+	    }
+	}
+	focus = {
+		id = ENG_NorfolksDocks
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_NavalIndustries
+		}
+		x = 6
+		y = 7
+		completion_reward = {
+			125 = {
+					if = {
+						limit = {
+							is_owned_by = ENG
+						}
+						add_building_construction = {
+								type = dockyard
+								level = 3
+								instant_build = yes
+						}
+					}
+				}
+			}
+	}
+	focus = {
+		id = ENG_LightInfa
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Connect
+		}
+		prerequisite = {
+			focus = ENG_MiddlesexIndustry
+		}
+		x = 2
+		y = 8
+		completion_reward = {
+			131 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_building_construction = {
+							type = infrastructure
+							level = 2
+							instant_build = yes
+					}
+				}
+			}
+			130 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_building_construction = {
+							type = infrastructure
+							level = 2
+							instant_build = yes
+					}
+				}
+			}
+			132 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_building_construction = {
+							type = infrastructure
+							level = 2
+							instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ENG_WessexIndustry
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_MiddlesexIndustry
+		}
+		x = 0
+		y = 8
+		completion_reward = {	
+			127 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			131 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ENG_SouthEnglish
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_WessexIndustry
+			focus = ENG_LightInfa
+			focus = ENG_Birmingham
+			focus = ENG_GlasgowDocks
+		}
+		x = 3
+		y = 9
+		completion_reward = {
+		128 = {
+				add_resource = {
+					type = steel
+					amount = 12
+				}
+			}	
+		131 = {
+				add_resource = {
+					type = steel
+					amount = 24
+				}
+			}
+		}
+	
+	}
+	focus = {
+		id = ENG_Birmingham
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Manchester
+		}
+		x = 4
+		y = 8
+		completion_reward = {
+			128 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_building_construction = {
+							type = arms_factory
+							level = 4
+							instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ENG_GlasgowDocks
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_NorfolksDocks
+		}
+		x = 6
+		y = 8
+		completion_reward = {
+			128 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_building_construction = {
+							type = arms_factory
+							level = 4
+							instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ENG_Dominions
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Statute
+		}
+		x = 31
+		y = 4
+		completion_reward = {		#add modifier for dominions later
+			add_political_power = 120
+		}
+	
+	}
+	focus = {
+		id = ENG_Commonwealth
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Dominions
+		}
+		x = 31
+		y = 5
+		completion_reward = {		#Improve modifier for dominions
+			add_political_power = 80
+		}
+	}
+	focus = {
+		id = ENG_CanExpan
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Commonwealth
+		}
+		x = 30
+		y = 6
+		completion_reward = {
+			puppet = CAN
+		}
+	}
+	focus = {
+		id = ENG_SouthAfrica
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Commonwealth
+		}
+		x = 29
+		y = 7
+		completion_reward = {
+			puppet = SAF
+		}
+	}
+	focus = {
+		id = ENG_NZL
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Commonwealth
+		}
+		x = 33
+		y = 7
+		completion_reward = {
+			puppet = NZL
+		}
+	}
+	focus = {
+		id = ENG_Ozzie
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Commonwealth
+		}
+		x = 32
+		y = 6
+		completion_reward = {
+			puppet = AST
+		}
+	}
+	focus = {
+		id = ENG_Empress
+		icon = GFX_focus_generic_home_defense
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_NZL
+		}
+		prerequisite = {
+			focus = ENG_SouthAfrica
+		}
+		prerequisite = {
+			focus = ENG_CanExpan
+		}
+		prerequisite = {
+			focus = ENG_Ozzie
+		}
+		x = 31
+		y = 8
+		completion_reward = {
+			add_ideas = God_Save_Empress
+		}
+	}
+	focus = {
+		id = ENG_BowEgypt
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_OverseasCrisis
+		}
+		mutually_exclusive = {
+			focus = ENG_EndEgypt
+		}
+		x = 37
+		y = 4
+		completion_reward = {
+			EGY = {
+				transfer_state = 743
+			}
+		}
+	}
+	focus = {
+		id = ENG_EncourageStatute
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_DecoloniseComittee
+		}
+		x = 44
+		y = 4
+		completion_reward = {		#Will add special idea later
+			add_political_power = 75
+		}
+	}
+	focus = {
+		id = ENG_SouthEnglish
+		icon = GFX_goal_generic_construction2
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_WessexIndustry
+			focus = ENG_LightInfa
+			focus = ENG_Birmingham
+			focus = ENG_GlasgowDocks
+		}
+		x = 13
+		y = 8
+		completion_reward = {
+		128 = {
+				add_resource = {
+					type = steel
+					amount = 12
+				}
+			}	
+		131 = {
+				add_resource = {
+					type = steel
+					amount = 24
+				}
+			}
+		}
+	}
+	focus = {
+		id = ENG_SussexResearch
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_NatDev2
+		}
+		prerequisite = {
+			focus = ENG_InfEffort2
+		}
+		prerequisite = {
+			focus = ENG_SouthEnglish
+		}
+		x = 11
+		y = 9
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = ENG_DemEnternal
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Assembly
+		}
+		prerequisite = {
+			focus = ENG_EncourageStatute
+		}
+		x = 43
+		y = 6
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = ENG_Invest
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_DemEnternal
+		}
+		x = 43
+		y = 7
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ENG_Queen
+		icon = GFX_focus_rom_royal_dictatorship
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Consolidate
+		}
+		prerequisite = {
+			focus = ENG_Invest
+		}
+		x = 40
+		y = 8
+		completion_reward = {
+			add_national_unity = 0.15
+		}
+	}
+	
+	focus = {
+		id = ENG_ArmScot
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Prepareforinvasion
+		}
+		x = 47
+		y = 7
+		completion_reward = {
+			128 = {
+				if = {
+					limit = {
+						is_owned_by = ENG
+					}
+					add_building_construction = {
+							type = arms_factory
+							level = 4
+							instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ENG_Prolitariat
+		icon = GFX_focus_rom_abdicate
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_ExpndBurmingham
+		}
+		prerequisite = {
+			focus = ENG_ArmScot
+		}
+		prerequisite = {
+			focus = ENG_ArmWelsh
+		}
+		x = 47
+		y = 8
+			completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ENG_Britannia
+		icon = GFX_goal_generic_build_navy
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Queen
+			focus = ENG_Prolitariat
+			focus = ENG_Empress
+		}
+		x = 40
+		y = 11
+		completion_reward = {
+			add_ideas = RuleBritannia
+		}
+	}
+	focus = {
+		id = ENG_OldDoctrines
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Royalarmy
+		}
+		mutually_exclusive = {
+			focus = ENG_NewDoctrines
+		}
+		x = 74
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 0.5
+				uses = 2
+				category = cat_grand_battle_plan
+			}
+		}
+	}
+	focus = {
+		id = ENG_Grand-erBttlepln
+		icon = GFX_goal_generic_position_armies
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_OldDoctrines
+		}
+		x = 74
+		y = 2
+		completion_reward = {
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 0.5
+				uses = 2
+				category = cat_grand_battle_plan
+			}
+		}
+	}
+	focus = {
+		id = ENG_NewDivisions
+		icon = GFX_goal_continuous_armor_production
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Grand-erBttlepln
+		}
+		x = 74
+		y = 3
+		completion_reward = {
+			army_experience = 50
+		}
+	}
+	focus = {
+		id = ENG_GodSoldiers
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_stayfree
+		}
+		prerequisite = {
+			focus = ENG_NewGuard
+			focus = ENG_MdrnDivisions
+			focus = ENG_NewDivisions
+		}
+		x = 71
+		y = 4
+		completion_reward = {
+			army_leader_start_level = 1
+		}
+	}
+	focus = {
+		id = ENG_Referendum
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_DfndFalklands
+		}
+		x = 69
+		y = 5
+		completion_reward = {
+			event = FalklandsReferendum
+		}
+	}
+	focus = {
+		id = ENG_Decolonise
+		icon = GFX_focus_generic_concessions
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Queen
+		}
+		x = 44
+		y = 9
+		completion_reward = {
+			BOT = {
+				add_autonomy_ratio = {
+						value = 100 
+					}
+				}
+			ZIM = {
+				add_autonomy_ratio = {
+						value = 100
+					}
+				}	
+			ZAM = {
+				add_autonomy_ratio = {
+						value = 100
+					}
+				}
+			NYA = {
+				add_autonomy_ratio = {
+						value = 100
+					}
+				}
+			KNA = {
+				add_autonomy_ratio = {
+						value = 100
+					}
+				}	
+			UGA = {
+				add_autonomy_ratio = {
+						value = 100
+					}
+				}	
+			SUD = {
+				add_autonomy_ratio = {
+						value = 100
+					}
+				}	
+				
+			}
+	}
+	focus = {
+		id = ENG_deafrica
+		icon = GFX_focus_SAF_secure_africa
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Decolonise
+		}
+		x = 43
+		y = 10
+		completion_reward = {
+			BOT = {
+				add_autonomy_ratio = {
+						value = 100 
+					}
+				}
+			ZIM = {
+				add_autonomy_ratio = {
+						value = 100
+					}
+				}	
+			ZAM = {
+				add_autonomy_ratio = {
+						value = 100
+					}
+				}
+			NYA = {
+				add_autonomy_ratio = {
+						value = 100
+					}
+				}
+			KNA = {
+				add_autonomy_ratio = {
+						value = 100
+					}
+				}	
+			UGA = {
+				add_autonomy_ratio = {
+						value = 100
+					}
+				}	
+			SUD = {
+				add_autonomy_ratio = {
+						value = 100
+					}
+				}	
+				
+			}
+	}
+	focus = {
+		id = ENG_decarib
+		icon = GFX_focus_rom_handle_king
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Decolonise
+		}
+		x = 45
+		y = 10
+            ######### ADD CARIBBEAN NATIONS HERE #########
+	}
+	focus = {
+		id = ENG_FalklandsBritish
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_Referendum
+		}
+		x = 69
+		y = 6
+		completion_reward = {
+			ideology_drift_defence = 50
+		}
+	}
+}

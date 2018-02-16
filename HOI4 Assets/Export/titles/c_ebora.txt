@@ -1,0 +1,13 @@
+405.1.1 = { # 371 BC
+	holder = 420901 # Kasilos
+	liege = d_celtici
+}
+466.1.1 = { # 309 BC
+	holder = 420902 # Bilinos
+}
+495.1.1 = { # 281 BC
+	holder = 420903 # Ablon
+}
+500.1.1 = {
+	holder = 420904
+}

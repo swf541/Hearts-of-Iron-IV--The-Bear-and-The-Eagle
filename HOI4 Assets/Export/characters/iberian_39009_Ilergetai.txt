@@ -1,0 +1,46 @@
+# 390801-390900 for the Ilergetae dynasty
+390801 = {
+	name = "Armitalsko" # Made up Ilergetae leader
+	dynasty = 39009
+	culture = iberian
+	religion = iberian_main
+	
+	383.1.1 = { # 393 BC, Made up
+		birth="yes"
+	}
+	464.1.1 = { # 312 BC
+		death="yes"
+	}
+}
+
+390802 = {
+	name = "Korbis" # Made up Ilergetae leader
+	dynasty = 39009
+	culture = iberian
+	religion = iberian_main
+	
+	father = 390801
+	
+	434.1.1 = { # 342 BC, Made up
+		birth="yes"
+	}
+	497.1.1 = { # 279 BC
+		death="yes"
+	}
+}
+
+390803 = {
+	name = "Eterindu" # Made up Ilergetae leader
+	dynasty = 39009
+	culture = iberian
+	religion = iberian_main
+	
+	father = 390802
+	
+	455.1.1 = { # 321 BC, Made up
+		birth="yes"
+	}
+	526.1.1 = { # 250 BC
+		death="yes"
+	}
+}

@@ -1,0 +1,46 @@
+# 421101-421200 for the Turduloi Veteres dynasty
+421101 = {
+	name = "Ordumeles" # Made up Turduli Vetteres leader
+	dynasty = 42012
+	culture = celtiberian
+	religion = celtic_pagan
+	
+	385.1.1 = { # 391 BC, Made up
+		birth="yes"
+	}
+	466.1.1 = { # 309 BC
+		death="yes"
+	}
+}
+
+421102 = {
+	name = "Ordumeles" # Made up Turduli Vetteres leader
+	dynasty = 42012
+	culture = celtiberian
+	religion = celtic_pagan
+	
+	father = 421101
+	
+	408.1.1 = { # 368 BC, Made up
+		birth="yes"
+	}
+	441.1.1 = { # 335 BC
+		death="yes"
+	}
+}
+
+421103 = {
+	name = "Kasilos" # Made up Turduli Vetteres leader
+	dynasty = 42012
+	culture = celtiberian
+	religion = celtic_pagan
+	
+	father = 421102
+	
+	450.1.1 = { # 340 BC, Made up
+		birth="yes"
+	}
+	525.1.1 = { # 269 BC
+		death="yes"
+	}
+}

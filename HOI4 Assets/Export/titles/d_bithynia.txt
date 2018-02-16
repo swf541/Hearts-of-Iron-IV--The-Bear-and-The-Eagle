@@ -1,0 +1,15 @@
+400.1.1 = { # 376 BC
+	holder = 40004 # Bas
+}
+450.1.1 = { # 326 BC
+	holder = 40001 # Zipoetes I
+}
+498.1.1 = { # 278 BC
+	holder = 40005 # Nikomedes I
+}
+521.1.1 = { # 255 BC
+	holder = 40010 # Ziaelas I
+}
+548.1.1 = { # 228 BC
+	holder = 40012 # Prusias I
+}

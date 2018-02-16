@@ -1,0 +1,23 @@
+417.1.1 = {
+	holder = 60003 # Ariamnes
+	liege = k_p_cappadocia
+}
+426.1.1 = { # 350 BC
+	holder = 52001 # Zephyros, Made up Tyrant
+}
+444.1.1 = { # 332 BC
+	liege = 0
+}
+475.1.1 = { # 301 BC
+	holder = 52002 # Euphemios
+}
+510.1.1 = { # 266 BC
+	holder = 130003 # Ariobarzanes I
+	liege = k_pontus
+}
+525.1.1 = { # 251 BC
+	holder = 130004 # Mithradates II
+}
+567.1.1 = { # 209 BC
+	holder = 130005 # Mithradates III
+}

@@ -1,0 +1,28 @@
+453.1.10 = { # 323 BC
+	holder = 90001 # Atropates, king of Atropatene
+	liege = e_macedonia
+}
+455.1.1 = { # 321 BC
+	liege = 0
+}
+480.1.1 = { # 296 BC
+	holder = 90003 # Bardiya
+}
+509.1.1 = { # 267 BC
+	holder = 90004 # Aturpat
+}
+518.1.1 = { # 258 BC
+	holder = 90005 # Darayavahu
+}
+552.1.1 = { # 224 BC
+	holder = 90006 # Darayavahu
+}
+555.1.1 = { # 221 BC
+	holder = 90007 # Artabazanes
+}
+556.1.1 = { # 220 BC
+	liege = e_syria
+}
+589.1.1 = { # 187 BC
+	liege = 0
+}

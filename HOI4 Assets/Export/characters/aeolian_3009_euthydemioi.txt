@@ -1,0 +1,55 @@
+# 30801-30900 for the Euthydemioi dynasty
+30801 = {
+	name = "Apollodotos" # Father of Euthydemus I
+	dynasty = 3009
+	culture = aeolian
+	religion = hellenic_pagan
+
+	485.1.1 = { # 291 BC, Made up
+		birth="yes"
+	}
+	541.1.1 = { # 235 BC, Made up
+		death="yes"
+	}
+}
+30802 = {
+	name = "Euthydemos" # Euthydemus I
+	dynasty = 3009
+	culture = aeolian
+	religion = hellenic_pagan
+
+	father = 30801 # Apollodotos
+
+	516.1.1 = { # 260 BC
+		birth="yes"
+	}
+	549.1.1 = { # 227 BC
+		add_spouse = 3603 # Eudoxia
+	}
+	576.1.1 = { # 200 BC
+		death="yes"
+	}
+}
+
+# Offspring of Euthydemus I
+30803 = {
+	name = "Demetrios" # Demetrius I
+	dynasty = 3009
+	culture = koine
+	religion = hellenic_pagan
+
+	father = 30802 # Diodotus
+	mother = 3603 # Eudoxia
+
+	516.1.1 = { # 225 BC, Made up
+		birth="yes"
+	}
+	570.1.1 = { # 206 BC
+		add_spouse = 1034 # Apama, daughter of Antiochus III
+	}
+	596.1.1 = { # 180 BC
+		death="yes"
+	}
+}
+
+# No others yet, the future of the Indo-Greco-Bactrians is really confusing.

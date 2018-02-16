@@ -1,0 +1,12 @@
+537.1.1 = { # 239 BC
+	holder = 480101 # Arsaces I
+}
+565.1.1 = { # 211 BC
+	holder = 480103 # Artabanus I
+}
+567.1.1 = { # 209 BC
+	liege = e_syria
+}
+591.1.1 = { # 185 BC
+	holder = 480104 # Priapatius I
+}

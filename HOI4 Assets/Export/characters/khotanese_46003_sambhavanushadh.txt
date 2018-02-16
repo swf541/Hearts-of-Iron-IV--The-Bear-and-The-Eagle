@@ -1,0 +1,26 @@
+# 460201-470300 for the Shambhavanushadh dynasty
+460201 = {
+	name = "Simhyi" # Made up
+	dynasty = 46003 # Shambhavanushadh
+	religion = zoroastrian
+	culture = khotanese
+	395.1.1 = { # 381 BC
+		birth="yes"
+	}
+	460.1.1 = { # 316 BC
+		death="yes"
+	}
+}
+460202 = {
+	name = "Vidakai" # Made up
+	dynasty = 46003 # Shambhavanushadh
+	religion = zoroastrian
+	culture = khotanese
+	father = 460201
+	419.1.1 = { # 357 BC
+		birth="yes"
+	}
+	496.1.1 = { # 280 BC
+		death="yes"
+	}
+}

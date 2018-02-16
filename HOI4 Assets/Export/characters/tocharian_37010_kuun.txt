@@ -1,0 +1,26 @@
+# 370901-371000 for Kuun dynasty
+370901 = {
+	name = "Kuuna" # Made up
+	dynasty = 37040
+	religion = zoroastrian
+	culture = tocharian
+	388.1.1 = { # 388 BC
+		birth="yes"
+	}
+	455.1.1 = { # 321 BC
+		death="yes"
+	}
+}
+370902 = {
+	name = "Samghaparana" # Made up
+	dynasty = 37040
+	religion = zoroastrian
+	culture = tocharian
+	father = 370901
+	420.1.1 = { # 356 BC
+		birth="yes"
+	}
+	498.1.1 = { # 287 BC
+		death="yes"
+	}
+}

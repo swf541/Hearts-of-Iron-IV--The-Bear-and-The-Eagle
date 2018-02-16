@@ -1,0 +1,5 @@
+# 460001-470000 for Khotanese characters
+	# 460001-460100 for the Nipandakanushadh dynasty
+	# 460101-470200 for the Aryamgulashu dynasty
+	# 460201-470300 for the Shambhavanushadh dynasty
+	# 460301-470400 for the Presamdhashu dynasty

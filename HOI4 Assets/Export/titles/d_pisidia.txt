@@ -1,0 +1,17 @@
+495.2.1 = { # 281 BC
+	holder = 1007 # Achaios
+	liege = e_syria
+}
+518.1.1 = { # 258 BC
+	holder = 1017 # Alexandros
+}
+532.1.1 = { # Hierax' rebellion
+	liege = k_lydia
+}
+547.1.1 = { # 229 BC
+	holder = 1019 # Andromachos
+}
+548.1.1 = { # 227 BC
+	holder = 0
+	liege = 0
+}

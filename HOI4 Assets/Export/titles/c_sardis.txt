@@ -1,0 +1,55 @@
+417.1.1 = {
+	holder = 90323
+	liege = k_p_lydia
+}
+442.1.1 = { # 334 BC
+	holder = 90314 # Darius III
+}
+442.6.1 = { # 334 BC
+	holder = 201 # Menander, Satrap of Lydia
+	liege = k_s_lydia
+}
+457.5.1 = {
+	holder = 401 # Antigonos
+	liege = k_s_phrygia
+}
+467.1.1 = {
+	liege = e_asia
+}
+475.1.1 = { # 301 BC
+	holder = 30002 # Agathokles
+	liege = d_lydia
+}
+492.1.1 = { # 284 BC
+	holder = 30001 # Lysimachos
+	liege = k_odrysia
+}
+495.2.1 = {
+	holder = 1001 # Seleukos
+	liege = e_syria
+}
+495.8.1 = {
+	holder = 1002 # Antiochos
+}
+515.1.1 = { # 261 BC
+	holder = 1012 # Antiochos II Theos
+}
+530.1.1 = { # 246 BC
+	holder = 1022 # Seleukos II Kallinikos
+}
+532.1.1 = { # 244 BC, Hierax' rebellion
+	holder = 1023 # Antiochos Hierax
+	liege = k_lydia
+}
+547.3.1 = { # 228 BC
+	holder = 51309 # Attalus I
+	liege = k_pergamum
+}
+554.4.1 = { # 222 BC
+	holder = 1020 # Achaios
+	liege = k_lydia
+}
+563.1.1 = { # 213 BC
+	holder = 1029 # Antiochos III Megas
+	liege = e_syria
+}

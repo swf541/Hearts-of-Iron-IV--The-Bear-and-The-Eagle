@@ -1,0 +1,594 @@
+#WW3/Cold War OST  1.East vs. West 2.WiC 3.Defcon
+
+# MAIN THEME
+music = {
+	name = "maintheme" #Allies Battle 1
+	file = "EW/East vs West - Allies Battle 1.ogg"
+	volume = 0.65
+}
+
+#East vs. West: 43 songs
+
+music = {
+	name = "a_path_of_danger"
+	file = "EW/East vs West - A Path of Danger.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "a_state_of_panic"
+	file = "EW/East vs West - A State of Panic.ogg"
+	volume = 0.65
+}
+
+#music = {
+#	name = "allies_battle_1"
+##	file = "EW/East vs West - Allies Battle 1.ogg"
+#	volume = 0.65
+#}
+
+music = {
+	name = "allies_peace_1_ew"
+	file = "EW/East vs West - Allies Peace 1.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "allies_peace_2_ew"
+	file = "EW/East vs West - Allies Peace 2.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "allies_peace_3"
+	file = "EW/East vs West - Allies Peace 3-Allies is Doing Well.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "an_uncertain_future"
+	file = "EW/East vs West - An Uncertain Future.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "beacon"
+	file = "EW/East vs West - Beacon.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "delightful_poetry"
+	file = "EW/East vs West - Delightful Poetry.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "democratic_rebellion"
+	file = "EW/East vs West - Democratic Rebellion.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "desert_at_dusk"
+	file = "EW/East vs West - Desert at Dusk.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "dilemma"
+	file = "EW/East vs West - Dilemma.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "diminishment"
+	file = "EW/East vs West - Diminishment.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "float"
+	file = "EW/East vs West - Float.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "general_battle_1"
+	file = "EW/East vs West - General Battle 1.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "gradient"
+	file = "EW/East vs West - Gradient.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "gridlock"
+	file = "EW/East vs West - Gridlock.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "latin_battle"
+	file = "EW/East vs West - Latin Battle.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "MEO"
+	file = "EW/East vs West - MEO.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "neutral_1"
+	file = "EW/East vs West - Neutral 1-Saved By Choppers.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "non_democratic_rebellion"
+	file = "EW/East vs West - Non Democratic Rebellion.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "nonplus"
+	file = "EW/East vs West - Nonplus.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "nuke_atmosphere"
+	file = "EW/East vs West - Nuke Atmosphere.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "orient"
+	file = "EW/East vs West - Orient.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "responsibilities"
+	file = "EW/East vs West - Responsibilities.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "russia_battle_1"
+	file = "EW/East vs West - Russia Battle 1.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "russia_battle_2"
+	file = "EW/East vs West - Russia Battle 2.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "russia_peace_1"
+	file = "EW/East vs West - Russia Peace 1.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "russia_peace_2"
+	file = "EW/East vs West - Russian Peace 2 (not finished).ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "russia_peace_3"
+	file = "EW/East vs West - Russian Peace 3.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "sand_struggle"
+	file = "EW/East vs West - Sand Struggle.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "spanish_heart"
+	file = "EW/East vs West - Spanish Heart.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "superpowers"
+	file = "EW/East vs West - Superpowers.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "ties_are_broken"
+	file = "EW/East vs West - Ties are Broken.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "tranquilite"
+	file = "EW/East vs West - Tranquilite.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "voices_through_lights"
+	file = "EW/East vs West - Voices Through Lights.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "water_vapour"
+	file = "EW/East vs West - Water Vapour.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "waveform"
+	file = "EW/East vs West - Waveform.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "world_at_war"
+	file = "EW/East vs West - World at War.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "WW3"
+	file = "EW/East vs West - WW3.ogg"
+	volume = 0.65
+}
+
+#World in Conflict: 35 songs
+
+music = {
+	name = "aim_for_the_heart"
+	file = "WiC/WiC - Aim for the Heart.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "bannons_sacrifice"
+	file = "WiC/WiC - Bannons Sacrifice.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "broken_flower"
+	file = "WiC/WiC - Broken Flower.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "classroom_rep"
+	file = "WiC/WiC - Classroom Prep.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "effloresco"
+	file = "WiC/WiC - Effloresco.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "ego"
+	file = "WiC/WiC - Ego.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "european_march"
+	file = "WiC/WiC - European March.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "fall_of_liberty"
+	file = "WiC/WiC - Fall of Liberty.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "final_fight"
+	file = "WiC/WiC - Final Fight.ogg"
+	volume = 0.70
+}
+
+music = {
+	name = "governors_island"
+	file = "WiC/WiC - Governors Island.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "hold_that_thought"
+	file = "WiC/WiC - Hold That Thought.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "hold_the_bridge"
+	file = "WiC/WiC - Hold the Bridge.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "incursio"
+	file = "WiC/WiC - Incursio.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "ivan_artillery_revert"
+	file = "WiC/WiC - Ivan Artillery Revert.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "khaldun"
+	file = "WiC/WiC - Khaldun.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "looking_for_survivors"
+	file = "WiC/WiC - Looking for Survivors.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "main_menu_wic"
+	file = "WiC/WiC - Main Menu.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "marche_de_sabatier"
+	file = "WiC/WiC - Marche de Sabatier.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "mike_and_anton"
+	file = "WiC/WiC - Mike & Anton.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "multiplayer_end"
+	file = "WiC/WiC - Multiplayer End.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "nicole"
+	file = "WiC/WiC - Nicole.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "originis"
+	file = "WiC/WiC - Originis.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "percutio"
+	file = "WiC/WiC - Percutio.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "prelude"
+	file = "WiC/WiC - Prelude.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "seattle_mission_start"
+	file = "WiC/WiC - Seattle Mission Start.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "shortcomings"
+	file = "WiC/WiC - Shortcomings.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "skynda_langsamt"
+	file = "WiC/WiC - Skynda Langsamt.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "sniper_run"
+	file = "WiC/WiC - Sniper Run.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "sollicitudo"
+	file = "WiC/WiC - Sollicitudo.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "squirrel_on_a_branch"
+	file = "WiC/WiC - Squirrel on a Branch.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "strong_point_strongpoint"
+	file = "WiC/WiC - Strong Point Strongpoint.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "the_president_and_the_nuke"
+	file = "WiC/WiC - The President and the Nuke.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "trimethoxyphenethylamine"
+	file = "WiC/WiC - Trimethoxyphenethylamine.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "tundra"
+	file = "WiC/WiC - Tundra.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "world_in_conflict"
+	file = "WiC/WiC - World in Conflict.ogg"
+	volume = 0.65
+}
+
+#Soviet Assault: 16 songs
+
+music = {
+	name = "aurora_borealis"
+	file = "WiC SA/WiC SA - Aurora Borealis.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "collective_punishment"
+	file = "WiC SA/WiC SA - Collective Punishment.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "fall_of_man"
+	file = "WiC SA/WiC SA - Fall of Man.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "incursion"
+	file = "WiC SA/WiC SA - Incursion.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "konets"
+	file = "WiC SA/WiC SA - Konets.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "marching_north"
+	file = "WiC SA/WiC SA - Marching North.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "my_name_is_legion"
+	file = "WiC SA/WiC SA - My Name is Legion.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "odinochestvo"
+	file = "WiC SA/WiC SA - Odinochestvo.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "plan_in_motion"
+	file = "WiC SA/WiC SA - Plan in Motion.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "propaganda_and_attack"
+	file = "WiC SA/WiC SA - Propaganda and Attack.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "second_thought"
+	file = "WiC SA/WiC SA - Second Thought.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "soviet_strength"
+	file = "WiC SA/WiC SA - Soviet Strength.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "soviet_waltz"
+	file = "WiC SA/WiC SA - Soviet Waltz.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "spetsnaz"
+	file = "WiC SA/WiC SA - Spetsnaz.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "the_end_is_nigh"
+	file = "WiC SA/WiC SA - The End is Nigh.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "under_pressure"
+	file = "WiC SA/WiC SA - Under Pressure.ogg"
+	volume = 0.65
+}
+
+##Bonus!
+
+music = {
+	name = "rasputin"
+	file = "bonus/rasputin.ogg"
+	volume = 0.65
+}
+
+#THE END 
+music = {
+	name = "sovietmarch"
+	file = "Soviet Music/SovietMarch.ogg"
+	volume = 0.65
+}
+music = {
+ 	name = "thehuntforredoctober"
+ 	file = "Soviet Music/The Hunt For Red October.ogg"
+ 	volume = 0.65
+ 	
+ }
+ 
+ music = {
+ 	name = "polyushkapolye"
+ 	file = "Soviet Music/Polyushka Polye.ogg"
+ 	volume = 0.65
+ 	
+ }
+ 	
+ music = {
+ 	name = "nationalanthemofussr"
+ 	file = "Soviet Music/National Anthem of USSR.ogg"
+ 	volume = 0.65
+}

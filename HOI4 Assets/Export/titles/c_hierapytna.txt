@@ -1,0 +1,28 @@
+399.1.1 = { # 377 BC
+	holder = 24601 # Kleomenes, made up
+}
+414.1.1 = { # 362 BC 
+	holder = 24602 # Iason, made up
+}
+455.1.1 = { # 321 BC 
+	holder = 24603 # Hieron, made up
+}
+470.1.1 = { # 306 BC 
+	holder = 24604 # Iason, made up
+}
+485.1.1 = { # 291 BC
+	holder = 601 # Ptolemy
+	liege = e_egypt
+}
+491.1.1 = { # 285 BC
+	holder = 602 # Ptolemy II
+}
+530.1.1 = { # 246 BC
+	holder = 606 # Ptolemy III
+}
+554.1.1 = { # 222 BC
+	holder = 610 # Ptolemy IV
+}
+572.7.1 = { # 204 BC
+	holder = 615 # Ptolemy V
+}

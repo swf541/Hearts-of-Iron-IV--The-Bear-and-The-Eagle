@@ -1,0 +1,10 @@
+405.1.1 = { # 371 BC
+	holder = 421001 # Retukenos
+	liege = d_turduli_vetteres
+}
+467.1.1 = { # 308 BC
+	holder = 421003 # Bodo
+}
+510.1.1 = { # 266 BC
+	holder = 421004 # Retukenos
+}

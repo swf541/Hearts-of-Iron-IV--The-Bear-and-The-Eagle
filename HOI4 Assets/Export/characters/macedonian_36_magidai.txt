@@ -1,0 +1,108 @@
+# 3501-3600 for the Magidai dynasty
+3501 = {
+	name = "Amyntas" # Father of Philippos
+	dynasty = 36 
+	culture = macedonian
+	religion = hellenic_pagan
+
+	392.1.1 = { # Made up
+		birth="yes" # 384 BC
+	}
+	434.1.1 = { # Made up
+		death="yes" # 342 BC
+	}
+}
+3502 = {
+	name = "Philippos" # Father of Magas
+	dynasty = 36 
+	culture = macedonian
+	religion = hellenic_pagan
+
+	father = 3501
+
+	419.1.1 = { # Made up
+		birth="yes" # 357 BC
+	}
+	451.1.1 = { # 325 BC
+		add_spouse = 19 # Berenike of Egypt
+	}
+	458.1.1 = {
+		death="yes" # 318 BC
+	}
+}
+3503 = {
+	name = "Magas" # King of Cyrene
+	dynasty = 36 
+	culture = macedonian
+	religion = hellenic_pagan
+
+	father = 3502 # Philippos
+	mother = 19 # Berenike of Egypt
+
+	452.1.1 = { # Made up-ish
+		birth="yes" # 324 BC
+	}
+	501.1.1 = {
+		add_spouse = 1014 # Apama II, 275 BC
+	}
+	526.1.1 = {
+		death="yes" # 250 BC
+	}
+}
+3504 = {
+	name = "Antigone" # Wife of Pyrrhus
+	dynasty = 36 
+	culture = macedonian
+	religion = hellenic_pagan
+	female = yes
+
+	father = 3502 # Philippos
+	mother = 19 # Berenike of Egypt
+
+	454.1.1 = { # Made up-ish
+		birth="yes" # 322 BC
+	}
+	# 298 BC, marries Pyrrhus of Epirus
+	481.1.1 = {
+		death="yes" # 295 BC
+	}
+}
+3505 = {
+	name = "Theoxena" # Wife of Agathocles
+	dynasty = 36 
+	culture = macedonian
+	religion = hellenic_pagan
+	female = yes
+
+	father = 3502 # Philippos
+	mother = 19 # Berenike of Egypt
+
+	457.1.1 = { # Made up-ish
+		birth="yes" # 319 BC
+	}
+	500.1.1 = { # Made up
+		death="yes" # 276 BC
+	}
+}
+3506 = {
+	name = "Berenike" # Wife of Ptolemy III
+	dynasty = 36 
+	culture = macedonian
+	religion = hellenic_pagan
+	female = yes
+
+	father = 3503 # Magas
+	mother = 1014 # Apama II
+
+	509.1.1 = {
+		birth="yes" # 267 BC
+	}
+	# Marries Demetrius the Fair in 250 BC, killing him in 249 BC
+	# Marries Ptolemy III in 249 BC
+	555.1.1 = {
+		death = { # 221 BC
+			death_reason = death_murder
+			killer = 610 # Ptolemaios IV
+		}
+	}
+}

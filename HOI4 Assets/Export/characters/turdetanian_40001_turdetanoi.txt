@@ -1,0 +1,53 @@
+# 400001-400100 for the Turdetani dynasty
+400001 = {
+	name = "Gargoris" # Made up Turdetani leader
+	dynasty = 40001
+	culture = turdetanian
+	religion = iberian_main
+	
+	390.1.1 = { # 386 BC, Made up
+		birth="yes"
+	}
+	466.1.1 = { # 310 BC
+		death="yes"
+	}
+}
+400002 = {
+	name = "Kaikonbe" # Made up Turdetani leader
+	dynasty = 40001
+	culture = turdetanian
+	religion = iberian_main
+	
+	414.1.1 = { # 362 BC
+		birth="yes"
+	}
+	462.1.1 = { # 314 BC
+		death="yes"
+	}
+}
+400003 = {
+	name = "Luxinio" # Made up Turdetani leader
+	dynasty = 40001
+	culture = turdetanian
+	religion = iberian_main
+	
+	443.1.1 = { # 333 BC
+		birth="yes"
+	}
+	511.1.1 = { # 265 BC
+		death="yes"
+	}
+}
+400004 = {
+	name = "Argantodanos" # Made up Turdetani leader
+	dynasty = 40001
+	culture = turdetanian
+	religion = iberian_main
+	
+	484.1.1 = { # 333 BC
+		birth="yes"
+	}
+	567.1.1 = { # 265 BC
+		death="yes"
+	}
+}

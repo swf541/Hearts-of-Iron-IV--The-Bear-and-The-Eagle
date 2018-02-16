@@ -1,0 +1,39 @@
+# 340001-340100 for the Sirakes dynasty
+340001 = {
+	name = "Akrosander" # Made up
+	dynasty = 34001 # Sirakes
+	religion = ossetian_pagan
+	culture = sarmatian
+	father = 340002
+	419.1.1 = { # 357 BC
+		birth="yes"
+	}
+	496.1.1 = { # 280 BC
+		death="yes"
+	}
+}
+340002 = {
+	name = "Azes" # Made up
+	dynasty = 34001 # Sirakes
+	religion = ossetian_pagan
+	culture = sarmatian
+	395.1.1 = { # 381 BC
+		birth="yes"
+	}
+	460.1.1 = { # 316 BC
+		death="yes"
+	}
+}
+340003 = {
+	name = "Scyles" # Made up
+	dynasty = 34001 # Sirakes
+	religion = ossetian_pagan
+	culture = sarmatian
+	father = 340001
+	483.1.1 = { # 357 BC
+		birth="yes"
+	}
+	568.1.1 = { # 280 BC
+		death="yes"
+	}
+}

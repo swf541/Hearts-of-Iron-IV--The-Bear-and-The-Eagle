@@ -1,0 +1,61 @@
+# 390401-390500 for the Ilercavones dynasty
+390401 = {
+	name = "Iltiradin" # Made up Ilercavones leader
+	dynasty = 39005
+	culture = iberian
+	religion = iberian_main
+	
+	383.1.1 = { # 393 BC, Made up
+		birth="yes"
+	}
+	465.1.1 = { # 311 BC
+		death="yes"
+	}
+}
+
+390402 = {
+	name = "Sosian" # Made up Ilercavones leader
+	dynasty = 39005
+	culture = iberian
+	religion = iberian_main
+	
+	father = 390401
+	
+	404.1.1 = { # 372 BC, Made up
+		birth="yes"
+	}
+	445.1.1 = { # 331 BC
+		death="yes"
+	}
+}
+
+390403 = {
+	name = "Unibetin" # Made up Ilercavones leader
+	dynasty = 39005
+	culture = iberian
+	religion = iberian_main
+	
+	father = 390402
+	
+	429.1.1 = { # 347 BC, Made up
+		birth="yes"
+	}
+	502.1.1 = { # 274 BC
+		death="yes"
+	}
+}
+390404 = {
+	name = "Isbataris" # Made up Ilercavones leader
+	dynasty = 39005
+	culture = iberian
+	religion = iberian_main
+	
+	father = 390403
+	
+	477.1.1 = { # 347 BC, Made up
+		birth="yes"
+	}
+	562.1.1 = { # 274 BC
+		death="yes"
+	}
+}

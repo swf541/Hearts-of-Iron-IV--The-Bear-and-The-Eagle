@@ -1,0 +1,45 @@
+417.1.1 = {
+	holder = 60003 # Ariamnes
+	liege = k_p_cappadocia
+}
+426.1.1 = {
+	holder = 60101 # Mithrobuzanes
+}
+442.1.1 = {
+	holder = 60001 # Ariarathes, King of Cappadocia
+}
+446.1.1 = {
+	liege = k_cappadocia
+}
+454.1.1 = {
+	holder = 50101 # Eumenes
+	liege = k_s_cappadocia
+}
+458.5.1 = {
+	liege = d_cappadocia
+}
+460.1.1 = {
+	holder = 401 # Antigonus
+	liege = k_s_phrygia
+}
+467.1.1 = {
+	liege = e_asia
+}
+475.1.1 = {
+	holder = 60002 # Ariarathes II
+	liege = d_cappadocia
+}
+501.1.1 = { # 275 BC, Galatians settle in Galatia
+	holder = 471001 # Teutomatus of the Trocmi
+	liege = d_galatia
+	de_jure_liege = d_galatia
+}
+509.1.1 = { # 267 BC
+	holder = 471002 # Cotuatus of the Trocmi
+}
+515.1.1 = { # 261 BC
+	holder = 471003 # Iccius of the Trocmi
+}
+554.1.1 = { # 222 BC
+	holder = 471004 # Cotuatus of the Trocmi
+}

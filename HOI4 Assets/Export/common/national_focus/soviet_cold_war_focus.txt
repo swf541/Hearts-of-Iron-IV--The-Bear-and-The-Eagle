@@ -1,0 +1,3649 @@
+focus_tree = {
+	id = soviet_cold_war_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SOV
+		}
+	}
+	default = no
+	focus = {
+		id = SOV_stalin_reforms
+		text = SOV_stalin_reforms
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		x = 6
+		y = 0
+		available = {
+			has_country_leader = { ruling_only = yes name = "Joseph Stalin" }
+		}
+		completion_reward = {
+			add_political_power = 120
+		}
+		
+		
+	}
+	focus = {
+		id = SOV_khrushchev_reforms
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		x = 3
+		y = 6
+		
+		available = {
+			has_country_leader = { ruling_only = yes name = "Mikhail Gorbachev" }
+		}
+		completion_reward = {
+			add_political_power = 120
+		}
+
+	}
+	focus = {
+		id = SOV_malenkov_reforms
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		x = 11
+		y = 6
+		available = {
+			has_country_leader = { ruling_only = yes name = "Georgy Malenkov" }
+		}
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+	focus = {
+		id = SOV_beria_reforms
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		x = 19
+		y = 6
+		available = {
+			has_country_leader = { ruling_only = yes name = "Lavrentiy Beria" }
+		}
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+	focus = {
+		id = SOV_molotov_reforms
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		x = 40
+		y = 6
+		available = {
+			has_country_leader = { ruling_only = yes name = "Vyacheslav Molotov" }
+		}
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+	focus = {
+		id = SOV_zhukov_reforms
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		x = 28
+		y = 6
+		available = {
+			has_country_leader = { ruling_only = yes name = "Georgy Zhukov" }
+		}
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+	focus = {
+		id = SOV_brezhnev_reforms
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		x = 4
+		y = 10
+		available = {
+			has_country_leader = { ruling_only = yes name = "Leonid Brezhnev" }
+		}
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+	focus = {
+		id = SOV_gorbachav_reforms
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		mutually_exclusive = {
+			focus = SOV_KGB_coup
+		}
+		x = 5
+		y = 15
+		available = {
+			has_country_leader = { ruling_only = yes name = "Mikhail Gorbachev" }
+		}
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+	focus = {
+		id = SOV_KGB_coup
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		mutually_exclusive = {
+			focus = SOV_gorbachav_reforms
+		}
+		x = 13
+		y = 15
+
+	}
+	focus = {
+		id = SOV_soviet_development
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		x = 16
+		y = 0
+
+	}
+	focus = {
+		id = SOV_urban_planning
+		icon = GFX_goal_generic_construction2
+		cost = 10.00
+		x = 25
+		y = 0
+
+	}
+	focus = {
+		id = SOV_agriculture
+		icon = GFX_goal_continuous_increase_nu
+		cost = 10.00
+		x = 34
+		y = 0
+
+	}
+	focus = {
+		id = SOV_improved_training
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10.00
+		x = 43
+		y = 0
+
+	}
+	focus = {
+		id = SOV_expand_deep_battle_doctrine
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		x = 46
+		y = 1
+
+	}
+	focus = {
+		id = SOV_lessons_from_the_great_patriotic_war
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		x = 52
+		y = 0
+
+	}
+	focus = {
+		id = SOV_greatest_airforce
+		icon = GFX_goal_generic_air_bomber
+		cost = 10.00
+		x = 58
+		y = 0
+
+	}
+	focus = {
+		id = SOV_naval_power_projection
+		icon = GFX_goal_generic_build_navy
+		cost = 10.00
+		x = 62
+		y = 0
+
+	}
+	focus = {
+		id = SOV_COMECON
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		x = 70
+		y = 0
+
+	}
+	focus = {
+		id = SOV_new_political_theory
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		x = 89
+		y = 0
+
+	}
+	focus = {
+		id = SOV_send_arms_to_frelimo
+		icon = GFX_goal_continuous_reduce_training_time
+		cost = 10.00
+		x = 78
+		y = 11
+
+	}
+	focus = {
+		id = SOV_egalitarian_beliefs
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_stalin_reforms
+		}
+		mutually_exclusive = {
+			focus = SOV_traditional_beliefs
+		}
+		x = 0
+		y = 1
+			completion_reward = {
+					add_ideas = egalitarian_beliefs
+					set_rule = {
+							can_generate_female_aces = yes
+						}
+				}
+
+	}
+	focus = {
+		id = SOV_traditional_beliefs
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_stalin_reforms
+		}
+		mutually_exclusive = {
+			focus = SOV_egalitarian_beliefs
+		}
+		x = 4
+		y = 1
+			completion_reward = {
+					add_ideas = traditional_beliefs
+					
+			}
+	}
+	focus = {
+		id = SOV_collectivization
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_egalitarian_beliefs
+			focus = SOV_traditional_beliefs
+		}
+		mutually_exclusive = {
+			focus = SOV_traditional_farms
+		}
+		x = 0
+		y = 2
+
+	}
+	focus = {
+		id = SOV_traditional_farms
+		icon = GFX_goal_continuous_increase_nu
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_traditional_beliefs
+			focus = SOV_egalitarian_beliefs
+		}
+		mutually_exclusive = {
+			focus = SOV_collectivization
+		}
+		x = 4
+		y = 2
+		
+		completion_reward = {
+			add_national_unity = 0.1
+		}
+
+	}
+	focus = {
+		id = SOV_continue_the_great_turn
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_traditional_farms
+			focus = SOV_collectivization
+		}
+		mutually_exclusive = {
+			focus = SOV_revitalize_the_new_economic_policy
+		}
+		x = 0
+		y = 3
+			completion_reward = {
+				add_resource = { type = oil amount = 20 state = 219 }	
+				add_resource = { type = steel amount = 20 state = 219 }	
+			}
+	}
+	focus = {
+		id = SOV_revitalize_the_new_economic_policy
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_traditional_farms
+			focus = SOV_collectivization
+		}
+		mutually_exclusive = {
+			focus = SOV_continue_the_great_turn
+		}
+		x = 4
+		y = 3
+			completion_reward = {
+					add_ideas = capitalism
+					
+			}
+	}
+	focus = {
+		id = SOV_socialized_health_care
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_revitalize_the_new_economic_policy
+			focus = SOV_continue_the_great_turn
+		}
+		mutually_exclusive = {
+			focus = SOV_traditional_healthcare
+		}
+		x = 0
+		y = 4
+			completion_reward = {
+					add_ideas = healthcare_benefits
+					
+			}
+	}
+	focus = {
+		id = SOV_traditional_healthcare
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_revitalize_the_new_economic_policy
+			focus = SOV_continue_the_great_turn
+		}
+		mutually_exclusive = {
+			focus = SOV_socialized_health_care
+		}
+		x = 4
+		y = 4
+			completion_reward = {
+					add_ideas = traditional_healthcare
+					
+			}
+	}
+	focus = {
+		id = SOV_educate_the_masses
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_socialized_health_care
+			focus = SOV_traditional_healthcare
+		}
+		mutually_exclusive = {
+			focus = SOV_the_working_man
+		}
+		x = 0
+		y = 5
+		
+		completion_reward = {
+			add_ideas = educate_the_peasants
+		}
+
+	}
+	focus = {
+		id = SOV_sino_soviet_split
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_khrushchev_reforms
+		}
+		x = 0
+		y = 7
+			completion_reward = {
+					add_national_unity = 0.05
+					SOV = {
+							add_opinion_modifier = {
+									target = ALB
+									modifier = large_decrease
+								}
+						}
+					ALB = {
+							add_opinion_modifier = {
+									target = SOV
+									modifier = large_decrease
+								}
+						}
+					SOV = {
+							add_opinion_modifier = {
+									target = PRC
+									modifier = large_decrease
+								}
+						}
+					PRC = {
+							add_opinion_modifier = {
+									target = SOV
+									modifier = large_decrease
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = SOV_peaceful_coexistence
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_sino_soviet_split
+		}
+		x = 0
+		y = 8
+
+	}
+	focus = {
+		id = SOV_fund_the_viet_cong
+		icon = GFX_goal_generic_trade
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_brezhnev_reforms
+		}
+		x = 0
+		y = 11
+
+	}
+	focus = {
+		id = SOV_helsinki_treaty
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_fund_the_viet_cong
+		}
+		x = 0
+		y = 12
+
+	}
+	focus = {
+		id = SOV_revise_the_economy
+		icon = GFX_goal_continuous_repairments
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_gorbachav_reforms
+		}
+		x = 2
+		y = 16
+
+	}
+	focus = {
+		id = SOV_consolidate_the_soviet_military
+		icon = GFX_goal_continuous_reduce_training_time
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_revise_the_economy
+		}
+		x = 2
+		y = 17
+
+	}
+	focus = {
+		id = SOV_give_the_people_more_rights
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_consolidate_the_soviet_military
+		}
+		x = 2
+		y = 18
+
+	}
+	focus = {
+		id = SOV_arts_and_liberalization
+		icon = GFX_goal_continuous_research
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_khrushchev_reforms
+		}
+		x = 3
+		y = 7
+
+	}
+	focus = {
+		id = SOV_khrushchev_standards
+		icon = GFX_goal_support_fourth_int
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_arts_and_liberalization
+		}
+		x = 3
+		y = 8
+
+	}
+	focus = {
+		id = SOV_stabilization_policy
+		icon = GFX_goal_generic_attack_allies
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_brezhnev_reforms
+		}
+		x = 3
+		y = 11
+
+	}
+	focus = {
+		id = SOV_eighth_five_year_plan
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_stabilization_policy
+		}
+		x = 3
+		y = 12
+
+	}
+	focus = {
+		id = SOV_ninth_five_year_plan
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_eighth_five_year_plan
+		}
+		x = 3
+		y = 13
+
+	}
+	focus = {
+		id = SOV_the_working_man
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_traditional_healthcare
+			focus = SOV_socialized_health_care
+		}
+		mutually_exclusive = {
+			focus = SOV_educate_the_masses
+		}
+		x = 4
+		y = 5
+		completion_reward = {
+			add_ideas = peasants_shall_work
+		}
+
+	}
+	focus = {
+		id = SOV_de_stalinization
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_khrushchev_reforms
+		}
+		x = 6
+		y = 7
+			completion_reward = {
+					add_national_unity = 0.10
+					SOV = {
+							add_opinion_modifier = {
+									target = ALB
+									modifier = large_decrease
+								}
+						}
+					ALB = {
+							add_opinion_modifier = {
+									target = SOV
+									modifier = large_decrease
+								}
+						}
+					SOV = {
+							add_opinion_modifier = {
+									target = PRC
+									modifier = large_decrease
+								}
+						}
+					PRC = {
+							add_opinion_modifier = {
+									target = SOV
+									modifier = large_decrease
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = SOV_the_secret_speech
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_de_stalinization
+		}
+		x = 6
+		y = 8
+			completion_reward = {
+					add_national_unity = 0.05
+				}
+
+	}
+	focus = {
+		id = SOV_reform_prison_system
+		icon = GFX_goal_generic_soviet_construction
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_the_secret_speech
+		}
+		x = 6
+		y = 9
+			completion_reward = {
+					add_national_unity = 0.05
+				}
+
+	}
+	focus = {
+		id = SOV_brezhnev_doctrine
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_brezhnev_reforms
+		}
+		x = 6
+		y = 11
+
+	}
+	focus = {
+		id = SOV_communist_world
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_brezhnev_doctrine
+		}
+		x = 6
+		y = 12
+
+	}
+	focus = {
+		id = SOV_tenth_five_year_plan
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_ninth_five_year_plan
+		}
+		prerequisite = {
+			focus = SOV_helsinki_treaty
+		}
+		prerequisite = {
+			focus = SOV_communist_world
+		}
+		x = 3
+		y = 14
+
+	}
+	focus = {
+		id = SOV_end_of_soviet_era
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_gorbachav_reforms
+		}
+		x = 8
+		y = 16
+
+	}
+	focus = {
+		id = SOV_normalize_relations
+		icon = GFX_goal_tripartite_pact
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_end_of_soviet_era
+		}
+		x = 6
+		y = 17
+
+	}
+	focus = {
+		id = SOV_an_iron_curtain
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_stalin_reforms
+		}
+		prerequisite = {
+			focus = SOV_stalin_reforms
+		}
+		x = 7
+		y = 1
+
+	}
+	focus = {
+		id = SOV_socialism_in_one_country
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_an_iron_curtain
+		}
+		x = 7
+		y = 2
+
+	}
+	focus = {
+		id = SOV_expand_gulags
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_socialism_in_one_country
+		}
+		x = 7
+		y = 3
+
+	}
+	focus = {
+		id = SOV_reign_of_terror
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_expand_gulags
+		}
+		x = 7
+		y = 4
+
+	}
+	focus = {
+		id = SOV_form_russian_federation
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_normalize_relations
+		}
+		mutually_exclusive = {
+			focus = SOV_keep_the_union
+		}
+		x = 8
+		y = 18
+
+	}
+	focus = {
+		id = SOV_keep_the_union
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_normalize_relations
+		}
+		mutually_exclusive = {
+			focus = SOV_form_russian_federation
+		}
+		x = -3
+		y = 0
+		relative_position_id = SOV_form_russian_federation
+
+	}
+	focus = {
+		id = SOV_restore_the_glory
+		icon = GFX_goal_generic_attack_allies
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_form_russian_federation
+			focus = SOV_keep_the_union
+		}
+		x = 8
+		y = 19
+
+	}
+	focus = {
+		id = SOV_revise_the_system
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_keep_the_union
+		}
+		x = 5
+		y = 19
+
+	}
+	focus = {
+		id = SOV_secure_the_border_zone
+		icon = GFX_goal_generic_attack_allies
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_restore_the_glory
+		}
+		x = 8
+		y = 20
+
+	}
+	focus = {
+		id = SOV_payments_to_politburo_officials
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_malenkov_reforms
+		}
+		x = 9
+		y = 7
+
+	}
+	focus = {
+		id = SOV_increase_wages
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_payments_to_politburo_officials
+		}
+		x = 9
+		y = 8
+
+	}
+	focus = {
+		id = SOV_for_the_people
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_increase_wages
+		}
+		x = 9
+		y = 9
+
+	}
+	focus = {
+		id = SOV_the_brezhnev_years
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_brezhnev_reforms
+		}
+		x = 9
+		y = 11
+
+	}
+	focus = {
+		id = SOV_repression
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_the_brezhnev_years
+		}
+		x = 9
+		y = 12
+
+	}
+	focus = {
+		id = SOV_the_doctors_plot
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_stalin_reforms
+		}
+		x = 10
+		y = 1
+
+	}
+	focus = {
+		id = SOV_blame_jewish_doctors
+		icon = GFX_goal_continuous_suppression
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_the_doctors_plot
+		}
+		x = 10
+		y = 2
+
+	}
+	focus = {
+		id = SOV_anti_western_propaganda
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_blame_jewish_doctors
+		}
+		x = 10
+		y = 3
+
+	}
+	focus = {
+		id = SOV_declare_war_usa
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_anti_western_propaganda
+		}
+		x = 10
+		y = 4
+
+	}
+	focus = {
+		id = SOV_neutral_austria
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_stalin_reforms
+		}
+		x = 12
+		y = 1
+
+	}
+	focus = {
+		id = SOV_stalin_notes
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_neutral_austria
+		}
+		x = 12
+		y = 2
+
+	}
+	focus = {
+		id = SOV_farmers_first
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_malenkov_reforms
+		}
+		x = 13
+		y = 7
+
+	}
+	focus = {
+		id = SOV_increase_the_population
+		icon = GFX_goal_support_fourth_int
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_farmers_first
+		}
+		x = 13
+		y = 8
+
+	}
+	focus = {
+		id = SOV_undo_the_damage
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_KGB_coup
+		}
+		x = 13
+		y = 16
+
+	}
+	focus = {
+		id = SOV_KGB_leading_union
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_undo_the_damage
+		}
+		x = 13
+		y = 17
+
+	}
+	focus = {
+		id = SOV_vladimir_kryuchkov_consolidation
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_KGB_leading_union
+		}
+		x = 13
+		y = 18
+
+	}
+	focus = {
+		id = SOV_rule_with_iron_fist
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_vladimir_kryuchkov_consolidation
+		}
+		x = 11
+		y = 19
+
+	}
+	focus = {
+		id = SOV_blame_the_west
+		icon = GFX_goal_continuous_suppression
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_vladimir_kryuchkov_consolidation
+		}
+		x = 13
+		y = 19
+
+	}
+	focus = {
+		id = SOV_mass_propaganda
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_blame_the_west
+		}
+		x = 13
+		y = 20
+
+	}
+	focus = {
+		id = SOV_stabilize_the_union
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_mass_propaganda
+		}
+		x = 13
+		y = 21
+
+	}
+	focus = {
+		id = SOV_socialist_utopia
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_soviet_development
+		}
+		x = 14
+		y = 1
+
+	}
+	focus = {
+		id = SOV_industry_rearrangement
+		icon = GFX_goal_generic_production
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_socialist_utopia
+		}
+		x = 14
+		y = 2
+
+	}
+	focus = {
+		id = SOV_industrialization_1
+		icon = GFX_goal_continuous_repairments
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_industry_rearrangement
+		}
+		x = 14
+		y = 3
+
+	}
+	focus = {
+		id = SOV_industrialization_2
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_industrialization_1
+		}
+		x = 14
+		y = 4
+
+	}
+	focus = {
+		id = SOV_industrialization_3
+		icon = GFX_goal_generic_air_production
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_industrialization_2
+		}
+		x = 14
+		y = 5
+
+	}
+	focus = {
+		id = SOV_industrialization_4
+		icon = GFX_goal_continuous_repairments
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_industrialization_3
+		}
+		x = 14
+		y = 6
+
+	}
+	focus = {
+		id = SOV_increase_buffer
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_vladimir_kryuchkov_consolidation
+		}
+		x = 15
+		y = 19
+
+	}
+	focus = {
+		id = SOV_renew_military_industrial_complex
+		icon = GFX_goal_continuous_reduce_training_time
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_increase_buffer
+		}
+		x = 15
+		y = 20
+
+	}
+	focus = {
+		id = SOV_revitalize_the_economy
+		icon = GFX_goal_support_fourth_int
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_renew_military_industrial_complex
+		}
+		x = 15
+		y = 21
+
+	}
+	focus = {
+		id = SOV_build_up_military_indusrial_complex
+		icon = GFX_goal_continuous_reduce_training_time
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_soviet_development
+		}
+		x = 18
+		y = 1
+
+	}
+	focus = {
+		id = SOV_militarization
+		icon = GFX_goal_generic_build_tank
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_build_up_military_indusrial_complex
+		}
+		x = 18
+		y = 2
+
+	}
+	focus = {
+		id = SOV_militarization_2
+		icon = GFX_goal_generic_army_artillery
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_militarization
+		}
+		x = 18
+		y = 3
+
+	}
+	focus = {
+		id = SOV_militarization_3
+		icon = GFX_goal_generic_army_artillery2
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_militarization_2
+		}
+		x = 18
+		y = 4
+
+	}
+	focus = {
+		id = SOV_nuclear_focus
+		icon = GFX_focus_wonderweapons
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_industrialization_2
+		}
+		prerequisite = {
+			focus = SOV_militarization_3
+		}
+		x = 16
+		y = 4
+
+	}
+	focus = {
+		id = SOV_militarization_4
+		icon = GFX_focus_NZL_bob_semple_tank
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_militarization_3
+		}
+		x = 18
+		y = 5
+
+	}
+	focus = {
+		id = SOV_decentralize_authority
+		icon = GFX_goal_anschluss
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_beria_reforms
+		}
+		x = 19
+		y = 7
+
+	}
+	focus = {
+		id = SOV_economic_liberalization
+		icon = GFX_goal_continuous_reduce_training_time
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_decentralize_authority
+		}
+		x = 19
+		y = 8
+
+	}
+	focus = {
+		id = SOV_science_focus
+		icon = GFX_goal_continuous_research
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_build_up_military_indusrial_complex
+		}
+		x = 20
+		y = 1
+
+	}
+	focus = {
+		id = SOV_research_slot
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_science_focus
+		}
+		x = 20
+		y = 2
+
+	}
+	focus = {
+		id = SOV_research_slot_2
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_research_slot
+		}
+		x = 20
+		y = 3
+
+	}
+	focus = {
+		id = SOV_militarization_5
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_militarization_4
+		}
+		x = 20
+		y = 5
+
+	}
+	focus = {
+		id = SOV_reform_army_nkvd
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_beria_reforms
+		}
+		x = 22
+		y = 7
+
+	}
+	focus = {
+		id = SOV_reign_of_terror
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_expand_gulags
+		}
+		x = 22
+		y = 8
+
+	}
+	focus = {
+		id = SOV_total_loyalty
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_reign_of_terror
+		}
+		x = 22
+		y = 9
+
+	}
+	focus = {
+		id = SOV_city_economics
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_urban_planning
+		}
+		x = 23
+		y = 1
+
+	}
+	focus = {
+		id = SOV_growth
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_city_economics
+		}
+		x = 23
+		y = 3
+
+	}
+	focus = {
+		id = SOV_city_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_urban_planning
+		}
+		x = 27
+		y = 1
+
+	}
+	focus = {
+		id = SOV_city_propaganda
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_city_infrastructure
+		}
+		x = 27
+		y = 3
+
+	}
+	focus = {
+		id = SOV_encouragE_population_growth
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_city_propaganda
+		}
+		prerequisite = {
+			focus = SOV_growth
+		}
+		x = 25
+		y = 5
+
+	}
+	focus = {
+		id = SOV_military_primacy
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_zhukov_reforms
+		}
+		x = 28
+		y = 7
+
+	}
+	focus = {
+		id = SOV_military_advancements
+		icon = GFX_focus_NZL_bob_semple_tank
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_military_primacy
+		}
+		x = 28
+		y = 8
+
+	}
+	focus = {
+		id = SOV_western_thaw
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_zhukov_reforms
+		}
+		x = 32
+		y = 7
+
+	}
+	focus = {
+		id = SOV_capitalist_reforms
+		icon = GFX_goal_generic_construction2
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_western_thaw
+		}
+		x = 33
+		y = 8
+
+	}
+	focus = {
+		id = SOV_embrace_nationalism
+		icon = GFX_focus_SAF_support_ossewabrandwag
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_capitalist_reforms
+		}
+		x = 31
+		y = 9
+
+	}
+	focus = {
+		id = SOV_consolidate_power
+		icon = GFX_focus_SAF_colonialist_crusade
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_capitalist_reforms
+		}
+		x = 33
+		y = 9
+
+	}
+	focus = {
+		id = AOC_reorganize_farming_policies
+		icon = GFX_goal_generic_trade
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_agriculture
+		}
+		x = 34
+		y = 1
+
+	}
+	focus = {
+		id = SOV_command_economy
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = AOC_reorganize_farming_policies
+		}
+		x = 34
+		y = 3
+
+	}
+	focus = {
+		id = SOV_fix_the_inefficiencies
+		icon = GFX_goal_generic_soviet_construction
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_command_economy
+		}
+		x = 34
+		y = 5
+
+	}
+	focus = {
+		id = SOV_abandon_collective_agriculture
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_fix_the_inefficiencies
+		}
+		x = 34
+		y = 7
+
+	}
+	focus = {
+		id = SOV_democratic_reforms
+		icon = GFX_goal_anschluss
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_capitalist_reforms
+		}
+		x = 35
+		y = 9
+
+	}
+	focus = {
+		id = SOV_air_ground_tactics
+		icon = GFX_goal_generic_build_airforce
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_improved_training
+		}
+		x = 43
+		y = 1
+
+	}
+	focus = {
+		id = SOV_expand_the_VDV
+		icon = GFX_goal_continuous_air_production
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_air_ground_tactics
+		}
+		x = 40
+		y = 2
+
+	}
+	focus = {
+		id = airborne_army_paratroopers
+		icon = GFX_goal_generic_special_forces
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_expand_the_VDV
+		}
+		x = 37
+		y = 2
+
+	}
+	focus = {
+		id = SOV_gunship_tactics
+		icon = GFX_goal_generic_air_fighter2
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_expand_the_VDV
+		}
+		x = 40
+		y = 3
+
+	}
+	focus = {
+		id = SOV_further_collectivization
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_molotov_reforms
+		}
+		x = 40
+		y = 7
+
+	}
+	focus = {
+		id = SOV_siberian_infrastructure
+		icon = GFX_goal_generic_soviet_construction
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_further_collectivization
+		}
+		x = 40
+		y = 8
+
+	}
+	focus = {
+		id = SOV_armored_superiority
+		icon = GFX_goal_generic_army_tanks
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_expand_deep_battle_doctrine
+		}
+		x = 48
+		y = 2
+
+	}
+	focus = {
+		id = SOV_fuda_gap_tactics
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_armored_superiority
+		}
+		mutually_exclusive = {
+			focus = SOV_river_rhine
+		}
+		x = 47
+		y = 3
+
+	}
+	focus = {
+		id = SOV_river_rhine
+		icon = GFX_goal_generic_major_war
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_armored_superiority
+		}
+		mutually_exclusive = {
+			focus = SOV_fuda_gap_tactics
+		}
+		x = 49
+		y = 3
+
+	}
+	focus = {
+		id = SOV_mass_the_armor
+		icon = GFX_goal_generic_army_tanks
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_fuda_gap_tactics
+			focus = SOV_river_rhine
+		}
+		x = 47
+		y = 4
+
+	}
+	focus = {
+		id = SOV_armored_invasion
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_mass_the_armor
+		}
+		x = 47
+		y = 5
+
+	}
+	focus = {
+		id = SOV_ground_forces_expenditure
+		icon = GFX_goal_generic_military_sphere
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_lessons_from_the_great_patriotic_war
+		}
+		x = 49
+		y = 1
+
+	}
+	focus = {
+		id = SOV_nine_days_to_the_pyrenees
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_river_rhine
+		}
+		x = 49
+		y = 4
+
+	}
+	focus = {
+		id = SOV_reform_ministry_of_defense
+		icon = GFX_goal_continuous_reduce_training_time
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_lessons_from_the_great_patriotic_war
+		}
+		x = 52
+		y = 1
+
+	}
+	focus = {
+		id = SOV_armored_advancement
+		icon = GFX_goal_continuous_armor_production
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_reform_ministry_of_defense
+		}
+		x = 51
+		y = 2
+
+	}
+	focus = {
+		id = SOV_mechanized_innovations
+		icon = GFX_goal_generic_army_motorized
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_armored_advancement
+		}
+		x = 45
+		y = 2
+
+	}
+	focus = {
+		id = SOV_expand_the_soviet_airforce
+		icon = GFX_goal_generic_air_fighter2
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_greatest_airforce
+		}
+		x = 54
+		y = 1
+
+	}
+	focus = {
+		id = SOV_fund_the_soviet_airforce
+		icon = GFX_goal_generic_air_bomber
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_reform_ministry_of_defense
+		}
+		prerequisite = {
+			focus = SOV_expand_the_soviet_airforce
+		}
+		x = 52
+		y = 3
+
+	}
+	focus = {
+		id = SOV_transpolar_bombing
+		icon = GFX_goal_generic_air_fighter2
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_fund_the_soviet_airforce
+		}
+		x = 52
+		y = 4
+
+	}
+	focus = {
+		id = SOV_strategic_missle_troops
+		icon = GFX_goal_generic_air_naval_bomber
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_transpolar_bombing
+		}
+		x = 52
+		y = 5
+
+	}
+	focus = {
+		id = SOV_missle_saturation
+		icon = GFX_focus_rocketry
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_strategic_missle_troops
+		}
+		x = 52
+		y = 6
+
+	}
+	focus = {
+		id = SOV_land_forces_reforms
+		icon = GFX_goal_generic_build_tank
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_lessons_from_the_great_patriotic_war
+		}
+		x = 56
+		y = 3
+
+	}
+	focus = {
+		id = SOV_expand_far_eastern_infrastructure
+		icon = GFX_goal_continuous_non_factory_construct
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_land_forces_reforms
+		}
+		x = 54
+		y = 4
+
+	}
+	focus = {
+		id = SOV_expand_siberian_infrastructure
+		icon = GFX_goal_continuous_non_factory_construct
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_expand_far_eastern_infrastructure
+		}
+		x = 54
+		y = 5
+
+	}
+	focus = {
+		id = SOV_expand_russian_infrastructure
+		icon = GFX_goal_continuous_non_factory_construct
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_expand_siberian_infrastructure
+		}
+		x = 54
+		y = 6
+
+	}
+	focus = {
+		id = SOV_far_eastern_defences
+		icon = GFX_goal_generic_construct_military
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_expand_russian_infrastructure
+		}
+		x = 54
+		y = 7
+
+	}
+	focus = {
+		id = SOV_first_line_of_defences
+		icon = GFX_goal_generic_construct_military
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_far_eastern_defences
+		}
+		x = 54
+		y = 8
+
+	}
+	focus = {
+		id = SOV_second_line_of_defences
+		icon = GFX_goal_generic_construct_military
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_first_line_of_defences
+		}
+		x = 54
+		y = 9
+
+	}
+	focus = {
+		id = SOV_continued_arming
+		icon = GFX_goal_continuous_reduce_training_time
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_second_line_of_defences
+		}
+		x = 54
+		y = 10
+
+	}
+	focus = {
+		id = SOV_army_redevelopment
+		icon = GFX_goal_continuous_reduce_training_time
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_land_forces_reforms
+		}
+		x = 58
+		y = 4
+
+	}
+	focus = {
+		id = SOV_new_land_doctrines
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_army_redevelopment
+		}
+		x = 58
+		y = 5
+
+	}
+	focus = {
+		id = SOV_tank_research
+		icon = GFX_goal_generic_build_tank
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_new_land_doctrines
+		}
+		x = 58
+		y = 6
+
+	}
+	focus = {
+		id = SOV_small_arms_research
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_tank_research
+		}
+		x = 58
+		y = 7
+
+	}
+	focus = {
+		id = SOV_industry_research
+		icon = GFX_goal_continuous_non_factory_construct
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_small_arms_research
+		}
+		x = 58
+		y = 8
+
+	}
+	focus = {
+		id = SOV_anti_aircraft_initiative
+		icon = GFX_focus_generic_air_defense
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_industry_research
+		}
+		x = 58
+		y = 9
+
+	}
+	focus = {
+		id = SOV_airfield_initiative
+		icon = GFX_goal_generic_air_fighter
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_anti_aircraft_initiative
+		}
+		x = 58
+		y = 10
+
+	}
+	focus = {
+		id = SOV_nuclear_initiatiive
+		icon = GFX_focus_wonderweapons
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_airfield_initiative
+		}
+		x = 57
+		y = 11
+
+	}
+	focus = {
+		id = SOV_military_production_initiatiive
+		icon = GFX_goal_continuous_non_factory_construct
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_nuclear_initiatiive
+		}
+		prerequisite = {
+			focus = SOV_continued_arming
+		}
+		x = 56
+		y = 12
+
+	}
+	focus = {
+		id = SOV_great_soviet_engineering
+		icon = GFX_goal_continuous_non_factory_construct
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_military_production_initiatiive
+		}
+		x = 55
+		y = 13
+
+	}
+	focus = {
+		id = SOV_nuclear_deterence
+		icon = GFX_focus_wonderweapons
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_nuclear_initiatiive
+		}
+		x = 59
+		y = 11
+
+	}
+	focus = {
+		id = SOV_naval_focus
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_naval_power_projection
+		}
+		x = 62
+		y = 1
+
+	}
+	focus = {
+		id = SOV_capital_ship_initiative
+		icon = GFX_goal_generic_navy_battleship
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_naval_focus
+		}
+		x = 60
+		y = 2
+
+	}
+	focus = {
+		id = SOV_naval_offence
+		icon = GFX_goal_generic_navy_battleship
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_capital_ship_initiative
+		}
+		x = 60
+		y = 3
+
+	}
+	focus = {
+		id = SOV_air_carrier_initiative
+		icon = GFX_goal_generic_navy_carrier
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_naval_offence
+		}
+		x = 60
+		y = 4
+
+	}
+	focus = {
+		id = SOV_naval_expansion
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_air_carrier_initiative
+		}
+		x = 60
+		y = 5
+
+	}
+	focus = {
+		id = SOV_civilian_factory_initiative
+		icon = GFX_goal_continuous_non_factory_construct
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_small_arms_research
+		}
+		x = 60
+		y = 8
+
+	}
+	focus = {
+		id = SOV_naval_production_expansion
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_naval_focus
+		}
+		x = 62
+		y = 2
+
+	}
+	focus = {
+		id = SOV_pacific_ocean_defense
+		icon = GFX_goal_generic_navy_carrier
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_naval_production_expansion
+		}
+		x = 62
+		y = 3
+
+	}
+	focus = {
+		id = SOV_naval_industry_two
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_pacific_ocean_defense
+		}
+		x = 62
+		y = 4
+
+	}
+	focus = {
+		id = SOV_naval_industry_three
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_naval_industry_two
+		}
+		x = 62
+		y = 5
+
+	}
+	focus = {
+		id = SOV_naval_industry_four
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_naval_industry_three
+		}
+		x = 62
+		y = 6
+
+	}
+	focus = {
+		id = SOV_develop_membership_infrastructure
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_COMECON
+		}
+		x = 65
+		y = 1
+
+	}
+	focus = {
+		id = SOV_develop_membership_research_collection
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_COMECON
+		}
+		x = 67
+		y = 1
+
+	}
+	focus = {
+		id = SOV_rebuild_member_civilian_industries
+		icon = GFX_goal_continuous_repairments
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_COMECON
+		}
+		x = 69
+		y = 1
+
+	}
+	focus = {
+		id = SOV_collectivized_five_year_plans
+		icon = GFX_goal_continuous_non_factory_construct
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_rebuild_member_civilian_industries
+		}
+		prerequisite = {
+			focus = SOV_develop_membership_research_collection
+		}
+		prerequisite = {
+			focus = SOV_develop_membership_infrastructure
+		}
+		x = 67
+		y = 2
+
+	}
+	focus = {
+		id = SOV_soviet_oil_fields
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_collectivized_five_year_plans
+		}
+		x = 67
+		y = 3
+
+	}
+	focus = {
+		id = SOV_soviet_oil_refineries
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_soviet_oil_fields
+		}
+		x = 67
+		y = 4
+
+	}
+	focus = {
+		id = SOV_autarkic_policies
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_soviet_oil_refineries
+		}
+		x = 67
+		y = 5
+
+	}
+	focus = {
+		id = SOV_comprehensive_program_for_the_further_cooperation_on_development
+		icon = GFX_goal_continuous_non_factory_construct
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_autarkic_policies
+		}
+		x = 66
+		y = 6
+
+	}
+	focus = {
+		id = SOV_comprehensive_program_for_scientific_progress
+		icon = GFX_goal_tfv_generic_tech_sharing
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_autarkic_policies
+		}
+		x = 68
+		y = 6
+
+	}
+	focus = {
+		id = SOV_hold_til_the_russians
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_COMECON
+		}
+		x = 70
+		y = 2
+
+	}
+	focus = {
+		id = SOV_civil_defense_network
+		icon = GFX_goal_generic_military_sphere
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_hold_til_the_russians
+		}
+		x = 70
+		y = 3
+
+	}
+	focus = {
+		id = SOV_military_defense_focus
+		icon = GFX_goal_generic_fortify_city
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_civil_defense_network
+		}
+		x = 70
+		y = 4
+
+	}
+	focus = {
+		id = SOV_anti_colonialism
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_new_political_theory
+		}
+		x = 89
+		y = 2
+
+	}
+	focus = {
+		id = SOV_latam_operations
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_anti_colonialism
+		}
+		x = 70
+		y = 8
+
+	}
+	focus = {
+		id = SOV_sell_peru_arms
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_latam_operations
+		}
+		x = 60
+		y = 9
+
+	}
+	focus = {
+		id = SOV_honduras_rebel_arms
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_latam_operations
+		}
+		x = 62
+		y = 9
+
+	}
+	focus = {
+		id = SOV_el_salvador_rebels_armament
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_latam_operations
+		}
+		x = 64
+		y = 9
+
+	}
+	focus = {
+		id = SOV_aid_socialist_grenada
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_latam_operations
+		}
+		x = 68
+		y = 9
+
+	}
+	focus = {
+		id = SOV_cuban_revolution
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_latam_operations
+		}
+		x = 70
+		y = 9
+
+	}
+	focus = {
+		id = SOV_cuban_missle_crisis
+		icon = GFX_focus_rocketry
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_cuban_revolution
+		}
+		x = 70
+		y = 10
+
+	}
+	focus = {
+		id = SOV_support_nicaurgua
+		icon = GFX_goal_generic_military_sphere
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_latam_operations
+		}
+		x = 72
+		y = 9
+
+	}
+	focus = {
+		id = SOV_save_nic_gov
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_support_nicaurgua
+		}
+		x = 72
+		y = 10
+
+	}
+	focus = {
+		id = SOV_european_thrust
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_COMECON
+		}
+		x = 76
+		y = 1
+
+	}
+	focus = {
+		id = SOV_internal_stability
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_european_thrust
+		}
+		x = 73
+		y = 2
+
+	}
+	focus = {
+		id = SOV_soviet_big_seven
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_internal_stability
+		}
+		x = 73
+		y = 3
+
+	}
+	focus = {
+		id = SOV_yugoslavian_interest
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_soviet_big_seven
+		}
+		x = 73
+		y = 4
+
+	}
+	focus = {
+		id = SOV_nuclear_threat
+		icon = GFX_focus_wonderweapons
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_yugoslavian_interest
+		}
+		x = 73
+		y = 5
+
+	}
+	focus = {
+		id = SOV_suriname_coup
+		icon = GFX_goal_generic_military_sphere
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_latam_operations
+		}
+		x = 74
+		y = 9
+
+	}
+	focus = {
+		id = SOV_influence_eastern_bloc
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_soviet_big_seven
+		}
+		x = 75
+		y = 3
+
+	}
+	focus = {
+		id = SOV_main_center_for_missle_detection
+		icon = GFX_focus_rocketry
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_influence_eastern_bloc
+		}
+		x = 75
+		y = 4
+
+	}
+	focus = {
+		id = SOV_radar_network_expansion
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_main_center_for_missle_detection
+		}
+		x = 75
+		y = 5
+
+	}
+	focus = {
+		id = SOV_support_FARC
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_latam_operations
+		}
+		x = 76
+		y = 9
+
+	}
+	focus = {
+		id = SOV_FARC_advisors
+		icon = GFX_goal_continuous_reduce_training_time
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_support_FARC
+		}
+		x = 76
+		y = 10
+
+	}
+	focus = {
+		id = SOV_invite_communist_colombia_towarsaw_pact
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_FARC_advisors
+		}
+		x = 76
+		y = 11
+
+	}
+	focus = {
+		id = SOV_eastern_bloc_mic
+		icon = GFX_goal_continuous_reduce_training_time
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_european_thrust
+		}
+		x = 77
+		y = 2
+
+	}
+	focus = {
+		id = SOV_build_berlin_wall
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_eastern_bloc_mic
+		}
+		x = 77
+		y = 3
+
+	}
+	focus = {
+		id = SOV_build_anti_air_defences_east_germany
+		icon = GFX_goal_generic_construct_military
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_build_berlin_wall
+		}
+		x = 77
+		y = 4
+
+	}
+	focus = {
+		id = SOV_africa_operations
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_anti_colonialism
+		}
+		x = 86
+		y = 8
+
+	}
+	focus = {
+		id = SOV_fund_mozambiqan_war_of_independence
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_africa_operations
+		}
+		x = 78
+		y = 9
+
+	}
+	focus = {
+		id = SOV_mozambique_advisors
+		icon = GFX_focus_secret_rearmament
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_fund_mozambiqan_war_of_independence
+		}
+		x = 78
+		y = 10
+
+	}
+	focus = {
+		id = SOV_spread_the_revolution
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_european_thrust
+		}
+		x = 82
+		y = 2
+
+	}
+	focus = {
+		id = SOV_french_communists
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_spread_the_revolution
+		}
+		x = 80
+		y = 3
+
+	}
+	focus = {
+		id = SOV_infilitrate_local_government_fra
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_french_communists
+		}
+		x = 80
+		y = 4
+
+	}
+	focus = {
+		id = SOV_institgate_general_strike_fra
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_infilitrate_local_government_fra
+		}
+		x = 80
+		y = 5
+
+	}
+	focus = {
+		id = SOV_support_the_mpla
+		icon = GFX_goal_continuous_reduce_training_time
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_africa_operations
+		}
+		x = 80
+		y = 9
+
+	}
+	focus = {
+		id = SOV_send_advisors_to_angola
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_support_the_mpla
+		}
+		x = 80
+		y = 10
+
+	}
+	focus = {
+		id = SOV_invade_angola
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_send_advisors_to_angola
+		}
+		x = 80
+		y = 11
+
+	}
+	focus = {
+		id = SOV_italian_communists
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_spread_the_revolution
+		}
+		x = 82
+		y = 3
+
+	}
+	focus = {
+		id = SOV_italian_sleeper_cells
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_italian_communists
+		}
+		x = 82
+		y = 4
+
+	}
+	focus = {
+		id = SOV_bolster_worker_unionism
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_italian_sleeper_cells
+		}
+		x = 82
+		y = 5
+
+	}
+	focus = {
+		id = SOV_infilitrate_west_germany
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_spread_the_revolution
+		}
+		x = 84
+		y = 3
+
+	}
+	focus = {
+		id = SOV_unity_propaganda
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_infilitrate_west_germany
+		}
+		x = 84
+		y = 4
+
+	}
+	focus = {
+		id = SOV_support_for_red_army_faction
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_unity_propaganda
+		}
+		x = 84
+		y = 5
+
+	}
+	focus = {
+		id = SOV_west_europe_armed_insurrection
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_institgate_general_strike_fra
+		}
+		prerequisite = {
+			focus = SOV_bolster_worker_unionism
+		}
+		prerequisite = {
+			focus = SOV_support_for_red_army_faction
+		}
+		x = 82
+		y = 6
+
+	}
+	focus = {
+		id = SOV_communist_coup_ethiopia
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_africa_operations
+		}
+		x = 84
+		y = 9
+
+	}
+	focus = {
+		id = SOV_aid_congo_rebels
+		icon = GFX_goal_continuous_reduce_training_time
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_africa_operations
+		}
+		x = 86
+		y = 9
+
+	}
+	focus = {
+		id = SOV_eritrean_civil_war
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_africa_operations
+		}
+		x = 88
+		y = 9
+
+	}
+	focus = {
+		id = SOV_support_ZIRPA
+		icon = GFX_goal_continuous_reduce_training_time
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_africa_operations
+		}
+		x = 90
+		y = 9
+
+	}
+	focus = {
+		id = SOV_middle_east_operations
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_new_political_theory
+		}
+		x = 97
+		y = 1
+
+	}
+	focus = {
+		id = SOV_support_israeli_indep
+		icon = GFX_goal_generic_major_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_middle_east_operations
+		}
+		mutually_exclusive = {
+			focus = SOV_support_arab_cause
+		}
+		x = 94
+		y = 2
+
+	}
+	focus = {
+		id = SOV_support_mapam
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_support_israeli_indep
+		}
+		x = 92
+		y = 3
+
+	}
+	focus = {
+		id = SOV_allow_aliyah_to_israel
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_support_mapam
+		}
+		x = 91
+		y = 4
+
+	}
+	focus = {
+		id = SOV_israel_cominterm
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_support_mapam
+		}
+		x = 93
+		y = 4
+
+	}
+	focus = {
+		id = SOV_israeli_armament
+		icon = GFX_focus_secret_rearmament
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_support_israeli_indep
+		}
+		x = 95
+		y = 3
+
+	}
+	focus = {
+		id = SOV_israeli_military_advisors
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_israeli_armament
+		}
+		x = 95
+		y = 4
+
+	}
+	focus = {
+		id = SOV_asia_operations
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_anti_colonialism
+		}
+		x = 96
+		y = 8
+
+	}
+	focus = {
+		id = SOV_call_for_china_unity_gov
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_asia_operations
+		}
+		mutually_exclusive = {
+			focus = SOV_PRC_civil_war_aid
+		}
+		x = 95
+		y = 9
+
+	}
+	focus = {
+		id = SOV_zhenbao_island_incident
+		icon = GFX_goal_continuous_reduce_training_time
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_call_for_china_unity_gov
+		}
+		x = 95
+		y = 10
+
+	}
+	focus = {
+		id = SOV_fortify_soviet_sino_border
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_zhenbao_island_incident
+		}
+		x = 95
+		y = 11
+
+	}
+	focus = {
+		id = SOV_fund_uyghur_and_kazhak_uprisings
+		icon = GFX_goal_continuous_reduce_training_time
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_fortify_soviet_sino_border
+		}
+		x = 95
+		y = 12
+
+	}
+	focus = {
+		id = SOV_bear_vs_dragon
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_fund_uyghur_and_kazhak_uprisings
+		}
+		x = 95
+		y = 13
+
+	}
+	focus = {
+		id = SOV_advisors_to_north_korea
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_asia_operations
+		}
+		x = 97
+		y = 9
+
+	}
+	focus = {
+		id = SOV_weapons_for_north_korea
+		icon = GFX_goal_generic_build_tank
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_advisors_to_north_korea
+		}
+		x = 97
+		y = 10
+
+	}
+	focus = {
+		id = SOV_invite_north_korea_warsaw
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_weapons_for_north_korea
+		}
+		x = 97
+		y = 11
+
+	}
+	focus = {
+		id = SOV_support_arab_cause
+		icon = GFX_goal_generic_major_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_middle_east_operations
+		}
+		mutually_exclusive = {
+			focus = SOV_support_israeli_indep
+		}
+		x = 98
+		y = 2
+
+	}
+	focus = {
+		id = SOV_arm_arab_states
+		icon = GFX_focus_secret_rearmament
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_support_arab_cause
+		}
+		x = 98
+		y = 3
+
+	}
+	focus = {
+		id = SOV_arab_military_advisors
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_arm_arab_states
+		}
+		mutually_exclusive = {
+			focus = SOV_direct_intervention
+		}
+		x = 98
+		y = 4
+
+	}
+	focus = {
+		id = SOV_syrian_army_funding
+		icon = GFX_goal_continuous_reduce_training_time
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_arab_military_advisors
+		}
+		x = 96
+		y = 5
+
+	}
+	focus = {
+		id = SOV_egyptian_army_funding
+		icon = GFX_goal_continuous_reduce_training_time
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_arab_military_advisors
+		}
+		x = 98
+		y = 5
+
+	}
+	focus = {
+		id = SOV_egyptian_infrastructure_funding
+		icon = GFX_goal_continuous_non_factory_construct
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_egyptian_army_funding
+		}
+		x = 98
+		y = 6
+
+	}
+	focus = {
+		id = SOV_syrian_infrastructure_funding
+		icon = GFX_goal_continuous_non_factory_construct
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_syrian_army_funding
+		}
+		x = 96
+		y = 6
+
+	}
+	focus = {
+		id = SOV_japanese_communist_propaganda
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_asia_operations
+		}
+		x = 100
+		y = 9
+
+	}
+	focus = {
+		id = SOV_japanese_treaty
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_japanese_communist_propaganda
+		}
+		mutually_exclusive = {
+			focus = SOV_support_red_army_faction
+		}
+		x = 99
+		y = 10
+
+	}
+	focus = {
+		id = SOV_soviet_concede_sakhailin_to_japan
+		icon = GFX_focus_renounce_the_treaty_of_triannon
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_japanese_treaty
+		}
+		x = 99
+		y = 11
+
+	}
+	focus = {
+		id = SOV_expel_americans_from_japan
+		icon = GFX_focus_generic_strike_at_democracy2
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_soviet_concede_sakhailin_to_japan
+		}
+		x = 99
+		y = 12
+
+	}
+	focus = {
+		id = SOV_soviet_arabian_sphere
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_support_arab_cause
+		}
+		x = 100
+		y = 3
+
+	}
+	focus = {
+		id = SOV_direct_intervention
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_arm_arab_states
+		}
+		mutually_exclusive = {
+			focus = SOV_arab_military_advisors
+		}
+		x = 100
+		y = 4
+
+	}
+	focus = {
+		id = SOV_fund_south_yemen_aden_emergency
+		icon = GFX_goal_continuous_reduce_training_time
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_arab_military_advisors
+		}
+		x = 100
+		y = 5
+
+	}
+	focus = {
+		id = SOV_make_south_yemen_puppet
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_fund_south_yemen_aden_emergency
+		}
+		x = 100
+		y = 6
+
+	}
+	focus = {
+		id = SOV_soviet_arabian_pact
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_make_south_yemen_puppet
+		}
+		prerequisite = {
+			focus = SOV_egyptian_infrastructure_funding
+		}
+		prerequisite = {
+			focus = SOV_syrian_infrastructure_funding
+		}
+		x = 98
+		y = 7
+
+	}
+	focus = {
+		id = SOV_support_red_army_faction
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_japanese_communist_propaganda
+		}
+		mutually_exclusive = {
+			focus = SOV_japanese_treaty
+		}
+		x = 101
+		y = 10
+
+	}
+	focus = {
+		id = SOV_insuregency_in_japan
+		icon = GFX_goal_continuous_reduce_training_time
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_support_red_army_faction
+		}
+		x = 101
+		y = 11
+
+	}
+	focus = {
+		id = SOV_start_japanese_civil_war
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_insuregency_in_japan
+		}
+		x = 101
+		y = 12
+
+	}
+	focus = {
+		id = SOV_invite_japan_warsaw_pact
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_start_japanese_civil_war
+			focus = SOV_expel_americans_from_japan
+		}
+		x = 100
+		y = 13
+
+	}
+	focus = {
+		id = SOV_foster_political_neutrality_turkey
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_support_arab_cause
+		}
+		x = 102
+		y = 2
+
+	}
+	focus = {
+		id = SOV_istanbul_conference
+		icon = GFX_focus_renounce_the_treaty_of_triannon
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_foster_political_neutrality_turkey
+		}
+		x = 102
+		y = 3
+
+	}
+	focus = {
+		id = SOV_turkish_soviet_cooperation
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_istanbul_conference
+		}
+		x = 102
+		y = 4
+
+	}
+	focus = {
+		id = SOV_syrian_civil_war
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_direct_intervention
+		}
+		x = 102
+		y = 5
+			completion_reward = {
+					SYR = {
+							start_civil_war = {
+									ideology = communism
+									size = 0.5
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = SOV_egyptian_civil_war
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_direct_intervention
+		}
+		x = 104
+		y = 5
+			completion_reward = {
+					EGY = {
+							start_civil_war = {
+									ideology = communism
+									size = 0.5
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = SOV_turkish_civil_war
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_direct_intervention
+		}
+		x = 106
+		y = 5
+			completion_reward = {
+					TUR = {
+							start_civil_war = {
+									ideology = communism
+									capital = 350
+									states = { 344  350  352  353  354  355 }
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = SOV_support_baluchistani_liberalation_army
+		icon = GFX_goal_continuous_reduce_training_time
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_direct_intervention
+		}
+		x = 108
+		y = 5
+
+	}
+	focus = {
+		id = SOV_re_occupy_northern_iran
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_syrian_civil_war
+		}
+		prerequisite = {
+			focus = SOV_egyptian_civil_war
+		}
+		prerequisite = {
+			focus = SOV_turkish_civil_war
+		}
+		prerequisite = {
+			focus = SOV_support_baluchistani_liberalation_army
+		}
+		x = 104
+		y = 7
+
+	}
+	focus = {
+		id = SOV_afghanistan_intervention
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_re_occupy_northern_iran
+			focus = SOV_soviet_arabian_pact
+		}
+		x = 102
+		y = 8
+
+	}
+	focus = {
+		id = SOV_detente_with_the_west
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_beria_reforms
+		}
+		x = 16
+		y = 7
+
+	}
+	focus = {
+		id = SOV_germany_settlement
+		icon = GFX_goal_generic_major_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_detente_with_the_west
+		}
+		x = 16
+		y = 8
+
+	}
+	focus = {
+		id = SOV_dismantle_nkvd
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_zhukov_reforms
+		}
+		x = 25
+		y = 7
+
+	}
+	focus = {
+		id = SOV_purge_corruption
+		icon = GFX_goal_continuous_suppression
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_dismantle_nkvd
+		}
+		x = 25
+		y = 8
+
+	}
+	focus = {
+		id = SOV_embrace_stalinism
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_molotov_reforms
+		}
+		x = 37
+		y = 7
+
+	}
+	focus = {
+		id = SOV_centralize_power
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_molotov_reforms
+		}
+		x = 43
+		y = 7
+
+	}
+	focus = {
+		id = SOV_sino_soviet_relations
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_embrace_stalinism
+		}
+		x = 37
+		y = 8
+
+	}
+	focus = {
+		id = SOV_sino_soviet_pact
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_sino_soviet_relations
+		}
+		x = 37
+		y = 9
+
+	}
+	focus = {
+		id = SOV_the_fundamental_struggle
+		icon = GFX_goal_support_fourth_int
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_centralize_power
+		}
+		x = 43
+		y = 8
+
+	}
+	focus = {
+		id = SOV_the_union_that_will_last_thousand_years
+		icon = GFX_goal_support_fourth_int
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_revise_the_system
+		}
+		x = 5
+		y = 20
+
+	}
+	focus = {
+		id = SOV_steel_curtain
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_rule_with_iron_fist
+		}
+		x = 11
+		y = 20
+
+	}
+	focus = {
+		id = SOV_iranian_interest
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_steel_curtain
+		}
+		x = 11
+		y = 21
+
+	}
+	focus = {
+		id = SOV_arabian_sea_interest
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_iranian_interest
+		}
+		x = 11
+		y = 22
+
+	}
+	focus = {
+		id = SOV_consolidate_power_kgb
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_revitalize_the_economy
+		}
+		x = 15
+		y = 22
+
+	}
+	focus = {
+		id = SOV_industrial_complexes
+		icon = GFX_goal_continuous_non_factory_construct
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_industrialization_4
+		}
+		prerequisite = {
+			focus = SOV_militarization_5
+		}
+		x = 16
+		y = 6
+
+	}
+	focus = {
+		id = SOV_airborne_IVF
+		icon = GFX_goal_generic_air_fighter
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_air_ground_tactics
+		}
+		prerequisite = {
+			focus = SOV_infantry_fighting_vehicles
+		}
+		x = 43
+		y = 3
+
+	}
+	focus = {
+		id = SOV_expand_airborne
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_airborne_IVF
+		}
+		x = 43
+		y = 4
+
+	}
+	focus = {
+		id = SOV_air_aemada
+		icon = GFX_goal_generic_air_fighter2
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_expand_airborne
+		}
+		x = 43
+		y = 5
+
+	}
+	focus = {
+		id = SOV_infantry_fighting_vehicles
+		icon = GFX_goal_generic_occupy_start_war
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_mechanized_innovations
+		}
+		x = 45
+		y = 3
+
+	}
+	focus = {
+		id = SOV_mobile_Warfare
+		icon = GFX_goal_generic_build_tank
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_infantry_fighting_vehicles
+		}
+		x = 45
+		y = 4
+
+	}
+	focus = {
+		id = SOV_tank_army
+		icon = GFX_focus_NZL_bob_semple_tank
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_mobile_Warfare
+		}
+		x = 45
+		y = 5
+
+	}
+	focus = {
+		id = SOV_mixed_warfare
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_tank_army
+		}
+		x = 47
+		y = 6
+
+	}
+	focus = {
+		id = SOV_light_focus
+		icon = GFX_goal_continuous_reduce_training_time
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_mixed_warfare
+		}
+		x = 45
+		y = 7
+
+	}
+	focus = {
+		id = SOV_medium_focus
+		icon = GFX_goal_continuous_reduce_training_time
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_mixed_warfare
+		}
+		x = 47
+		y = 7
+
+	}
+	focus = {
+		id = SOV_heavy_focus
+		icon = GFX_goal_continuous_reduce_training_time
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_mixed_warfare
+		}
+		x = 49
+		y = 7
+
+	}
+	focus = {
+		id = SOV_continued_arming
+		icon = GFX_goal_continuous_reduce_training_time
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_second_line_of_defences
+		}
+		x = 54
+		y = 10
+
+	}
+	focus = {
+		id = SOV_spark_civil_wars_west_europe
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_west_europe_armed_insurrection
+		}
+		x = 82
+		y = 7
+			completion_reward = {
+					FRA = {
+							start_civil_war = {
+									ideology = communism
+									size = 0.5
+								}
+						}
+					ITA = {
+							start_civil_war = {
+									ideology = communism
+									size = 0.5
+								}
+						}
+					WGR = {
+							start_civil_war = {
+									ideology = communism
+									size = 0.5
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = SOV_support_dhofar_rebels
+		icon = GFX_goal_continuous_reduce_training_time
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_direct_intervention
+		}
+		x = 110
+		y = 5
+
+	}
+	focus = {
+		id = SOV_PRC_civil_war_aid
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_asia_operations
+		}
+		mutually_exclusive = {
+			focus = SOV_call_for_china_unity_gov
+		}
+		x = 93
+		y = 9
+
+	}
+	focus = {
+		id = SOV_invite_china_warsaw_pact
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_PRC_civil_war_aid
+		}
+		x = 93
+		y = 10
+
+	}
+	focus = {
+		id = SOV_support_nigerian_communist_government
+		icon = GFX_goal_generic_major_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_africa_operations
+		}
+		x = 82
+		y = 9
+
+	}
+	focus = {
+		id = SOV_finance_nigerian_kainiji_dam
+		icon = GFX_focus_renounce_the_treaty_of_triannon
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_support_nigerian_communist_government
+		}
+		x = 82
+		y = 10
+
+	}
+	focus = {
+		id = SOV_send_arms_to_frelimo
+		icon = GFX_goal_continuous_reduce_training_time
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_mozambique_advisors
+		}
+		x = 78
+		y = 11
+
+	}
+	focus = {
+		id = SOV_support_guatamala_rebels
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = SOV_latam_operations
+		}
+		x = 66
+		y = 9
+
+	}
+}

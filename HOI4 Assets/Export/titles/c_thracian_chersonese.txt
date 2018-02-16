@@ -1,0 +1,45 @@
+405.1.1 = { # 371 BC
+	holder = 53501 # Euboulos
+	liege = k_r_athens
+}
+438.1.1 = { # 338 BC
+	holder = 803 # Philip II
+	liege = e_macedonia
+}
+440.10.1 = { # 336 BC
+	holder = 802 # Alexander
+}
+453.6.10 = { # 323 BC
+	holder = 30001 # Lysimachus
+	liege = k_s_thrace
+}
+467.1.1 = { # 309 BC
+	liege = k_odrysia
+}
+495.2.1 = {
+	holder = 1001 # Seleukos
+	liege = e_syria
+}
+495.8.1 = {
+	holder = 1002 # Antiochos
+}
+515.1.1 = { # 261 BC
+	holder = 1012 # Antiochos II Theos
+}
+530.1.1 = { # 246 BC
+	holder = 1022 # Seleukos II Kallinikos
+}
+532.1.1 = { # 244 BC
+	holder = 606 # Ptolemy III
+	liege = e_egypt
+}
+554.1.1 = { # 222 BC
+	holder = 610 # Ptolemy IV
+}
+572.7.1 = { # 204 BC
+	holder = 615 # Ptolemy V
+}
+575.1.1 = { # 201 BC
+	holder = 416 # Philippos V
+	liege = e_macedonia	
+}
