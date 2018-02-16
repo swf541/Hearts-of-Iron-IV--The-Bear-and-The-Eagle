@@ -1,0 +1,174 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_news_event_Forbidden_City"
+		texturefile = "gfx/event_pictures/GFX_news_event_Forbidden_City.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_Treaty_of_San_Francisco"
+		texturefile = "gfx/event_pictures/GFX_news_event_Treaty_of_San_Francisco.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_Japanese_Palace"
+		texturefile = "gfx/event_pictures/GFX_news_event_Japanese_Palace.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_nuremberg"
+		texturefile = "gfx/event_pictures/news_event_nuremberg.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_berlin_airlift"
+		texturefile = "gfx/event_pictures/news_event_berlin_airlift.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_korea_war"
+		texturefile = "gfx/event_pictures/news_event_korea_war.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_prc_simplchinese"
+		texturefile = "gfx/event_pictures/news_event_prc_simplchinese.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_prc_winner"
+		texturefile = "gfx/event_pictures/news_event_prc_winner.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_prc_foreign_ministeries"
+		texturefile = "gfx/event_pictures/news_event_prc_foreign_ministeries.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_prc_sino_soviet_treaty"
+		texturefile = "gfx/event_pictures/news_event_prc_sino_soviet_treaty.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_prc_marshall_plan"
+		texturefile = "gfx/event_pictures/news_event_prc_marshall_plan.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_republic_china_taiwan"
+		texturefile = "gfx/event_pictures/news_event_republic_china_taiwan.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_prc_one_china_policy"
+		texturefile = "gfx/event_pictures/news_event_prc_one_china_policy.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_warsaw_pact_new_member"
+		texturefile = "gfx/event_pictures/news_event_warsaw_pact_new_member.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_prc_founding_faction"
+		texturefile = "gfx/event_pictures/news_event_prc_founding_faction.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_aus_unification"
+		texturefile = "gfx/event_pictures/news_event_aus_unification.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_un_new_member"
+		texturefile = "gfx/event_pictures/news_event_un_new_member.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_tri_unification"
+		texturefile = "gfx/event_pictures/news_event_tri_unification.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_fbu_unification"
+		texturefile = "gfx/event_pictures/news_event_fbu_unification.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_tito_dead"
+		texturefile = "gfx/event_pictures/news_event_tito_dead.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_greek_civil_war"
+		texturefile = "gfx/event_pictures/news_event_greek_civil_war.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_berlin_uprising_1953"
+		texturefile = "gfx/event_pictures/news_event_berlin_uprising_1952.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_poznan_uprising_1956"
+		texturefile = "gfx/event_pictures/news_event_poznan_uprising_1956.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_hungarian_uprising_1956"
+		texturefile = "gfx/event_pictures/news_event_hungarian_uprising_1956.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_czech_uprising_1968"
+		texturefile = "gfx/event_pictures/news_event_czech_uprising_1968.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_polish_uprising_1970"
+		texturefile = "gfx/event_pictures/news_event_polish_uprising_1970.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_croatian_uprising_1971"
+		texturefile = "gfx/event_pictures/news_event_croatian_uprising_1971.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_kosovan_uprising_81"
+		texturefile = "gfx/event_pictures/news_event_kosovan_uprising_81.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_malayan_emergency_48"
+		texturefile = "gfx/event_pictures/news_event_malayan_emergency.dds" 
+	}
+	spriteType = {
+		name = "GFX_news_event_malayan_uprising_67"
+		texturefile = "gfx/event_pictures/news_event_malayan_emergency_67.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_second_malayan_emergency_67"
+		texturefile = "gfx/event_pictures/news_event_second_malayan_emergency_67.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_foundation_ddr"
+		texturefile = "gfx/event_pictures/news_event_foundation_ddr.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_notecrisis1"
+		texturefile = "gfx/event_pictures/news_event_notecrisis1.dds"
+	}
+        spriteType = {
+		name = "GFX_news_event_notecrisis2"
+		texturefile = "gfx/event_pictures/news_event_notecrisis2.dds"
+	}
+    spriteType = {
+		name = "GFX_news_event_notecrisis3"
+		texturefile = "gfx/event_pictures/news_event_notecrisis3.dds"
+	}
+    spriteType = {
+		name = "GFX_news_event_notecrisis4"
+		texturefile = "gfx/event_pictures/news_event_notecrisis4.dds"
+	}
+    spriteType = {
+		name = "GFX_news_event_notecrisis5"
+		texturefile = "gfx/event_pictures/news_event_notecrisis5.dds"
+	}
+    spriteType = {
+		name = "GFX_news_event_notecrisis6"
+		texturefile = "gfx/event_pictures/news_event_notecrisis6.dds"
+	}
+    spriteType = {
+		name = "GFX_news_event_notecrisis7"
+		texturefile = "gfx/event_pictures/news_event_notecrisis7.dds"
+	}
+    spriteType = {
+		name = "GFX_news_event_notecrisis8"
+		texturefile = "gfx/event_pictures/news_event_notecrisis8.dds"
+	}
+    spriteType = {
+		name = "GFX_news_event_notecrisis9"
+		texturefile = "gfx/event_pictures/news_event_notecrisis9.dds"
+	}
+	spriteType = {
+		name = "GFX_report_SNC_Note_From_USSR"
+		texturefile = "gfx/event_pictures/report_SNC_Note_From_USSR.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_ECSC_created"
+		texturefile = "gfx/event_pictures/news_event_ECSC_created.dds"
+	}
+}
