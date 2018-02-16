@@ -10,6 +10,7 @@ country_event = {
 		has_country_flag = european_union_member_state
 		NOT = { has_country_flag = has_EU_modifiers }
 	}
+	fire_only_once = yes
 	
 	immediate = {
 		set_country_flag = has_EU_modifiers
