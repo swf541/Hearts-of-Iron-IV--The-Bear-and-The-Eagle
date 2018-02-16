@@ -518,11 +518,6 @@ technologies = {
 		}
 		
 		path = {
-			leads_to_tech = mechanized_infantry
-			research_cost_coeff = 1
-		}
-		
-		path = {
 			leads_to_tech = motorised_infantry2
 			research_cost_coeff = 1
 		}	
@@ -531,7 +526,7 @@ technologies = {
 		start_year = 1941
 		folder = {
 			name = armour_folder
-			position = { x = 14 y = 2 }
+			position = { x = 14 y = 0 }
 		}
 		
 		folder = {
@@ -579,7 +574,7 @@ technologies = {
 		start_year = 1952
 		folder = {
 			name = armour_folder
-			position = { x = 14 y = 4 }
+			position = { x = 14 y = 3 }
 		}
 		
 		categories = {
@@ -607,7 +602,7 @@ technologies = {
 		start_year = 1967
 		folder = {
 			name = armour_folder
-			position = { x = 14 y = 6 }
+			position = { x = 14 y = 4 }
 		}
 		
 		categories = {
@@ -630,7 +625,7 @@ technologies = {
 		start_year = 1984
 		folder = {
 			name = armour_folder
-			position = { x = 14 y = 8 }
+			position = { x = 14 y = 6 }
 		}
 		
 		categories = {
@@ -670,7 +665,6 @@ technologies = {
 		}
 		
 		categories = {
-			motorized_equipment
 			mechanized_tech
 			cat_mechanized_equipment
 		}
@@ -699,7 +693,6 @@ technologies = {
 		}
 		
 		categories = {
-			motorized_equipment
 			mechanized_tech
 			cat_mechanized_equipment
 		}
@@ -728,7 +721,6 @@ technologies = {
 		}
 		
 		categories = {
-			motorized_equipment
 			mechanized_tech
 			cat_mechanized_equipment
 		}
@@ -763,7 +755,6 @@ technologies = {
 		}
 		
 		categories = {
-			motorized_equipment
 			mechanized_tech
 			cat_mechanized_equipment
 		}
@@ -797,7 +788,6 @@ technologies = {
 		}
 		
 		categories = {
-			motorized_equipment
 			mechanized_tech
 			cat_mechanized_equipment
 		}
@@ -826,7 +816,6 @@ technologies = {
 		}
 		
 		categories = {
-			motorized_equipment
 			mechanized_tech
 			cat_mechanized_equipment
 		}
@@ -855,7 +844,6 @@ technologies = {
 		}
 		
 		categories = {
-			motorized_equipment
 			mechanized_tech
 			cat_mechanized_equipment
 		}
@@ -884,7 +872,6 @@ technologies = {
 		}
 		
 		categories = {
-			motorized_equipment
 			mechanized_tech
 			cat_mechanized_equipment
 		}
@@ -913,7 +900,6 @@ technologies = {
 		}
 		
 		categories = {
-			motorized_equipment
 			mechanized_tech
 			cat_mechanized_equipment
 		}
