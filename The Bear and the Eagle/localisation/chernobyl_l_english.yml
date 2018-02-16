@@ -1,0 +1,8 @@
+﻿l_english:
+ chernobyl.1.t: "Construction of the Chernobyl Nuclear Power Plant"
+ chernobyl.1.d: "We have a proposal to build a large nuclear reactor near the town of Pripyat. This will provide large amounts of electricity and if we acquire the right technology, can be used for nuclear weapons."
+ chernobyl.1.a: "Accept"
+ chernobyl.1.b: "Deny"
+ chernobyl.2.t: "Meltdown at Chernobyl Reactor 4"
+ chernobyl.2.d: "Reactor 4 at the Chernobyl Nuclear Power Plant in Pripyat has suffered a complete meltdown after a test gone wrong. The remaining 3 reactors are still operating but most of the town has been evacuated to Kiev, the area is extremely irradiated and the town is quickly falling apart."
+ chernobyl.2.a: "Oh no!"

@@ -1,0 +1,263 @@
+﻿l_english:
+
+ zimbabwePolitics.1.t:0 "Left-Wing Parties"
+ zimbabwePolitics.1.d:0 "Choose which ideology you would like to adopt for our government."
+ zimbabwePolitics.1.a:0 "Socialism"
+ zimbabwePolitics.1.b:0 "Market Socialism"
+ zimbabwePolitics.1.c:0 "Social Liberalism"
+ zimbabwePolitics.1.e:0 "Liberalism"
+
+ zimbabwePolitics.2.t:0 "Centrist Parties"
+ zimbabwePolitics.2.a:0 "Centrism"
+ zimbabwePolitics.2.b:0 "Reactionary"
+ zimbabwePolitics.2.c:0 "Libertarianism"
+ zimbabwePolitics.2.e:0 "Democratic"
+ 
+ zimbabwePolitics.3.t:0 "Right-Wing Parties"
+ zimbabwePolitics.3.a:0 "Conservative"
+ zimbabwePolitics.3.b:0 "Christianism"
+ zimbabwePolitics.3.c:0 "Liberal Conservatism"
+ 
+ zimbabwePolitics.4.t:0 "Communist Parties"
+ zimbabwePolitics.4.a:0 "Marxism"
+ zimbabwePolitics.4.b:0 "Trotskyism"
+ zimbabwePolitics.4.c:0 "Maoism"
+ 
+ zimbabwePolitics.5.t:0 "Islamic Parties"
+ zimbabwePolitics.5.a:0 "Islamism"
+ zimbabwePolitics.5.b:0 "Salafism"
+ zimbabwePolitics.5.c:0 "Radical Shiaism"
+ 
+ zimbabwePolitics.6.t:0 "Fascist Parties"
+ zimbabwePolitics.6.a:0 "National Socialism"
+ zimbabwePolitics.6.b:0 "Fascism"
+ 
+ zimbabwePolitics.7.t:0 "Ancient Governments"
+ zimbabwePolitics.7.d:0 "Choose which ancient government you wish to adopt."
+ zimbabwePolitics.7.a:0 "Matabele"
+ zimbabwePolitics.7.b:0 "Agisymba"
+
+ zimbabweElection.1.t:0 "Rhodesian Election of [GetYear]"
+ zimbabweElection.1.d:0 "Huggins' twenty year reign over [ZIM.GetName] has come to an end after his resignation.  Garfield Todd is the new leader of the United Rhodesian Party."
+ zimbabweElection.1.b:0 "Garfield Todd!"
+ zimbabweElection.1.a:0 "Alright."
+ zimbabweElection.2.d:0 "Garfield Todd was forced to resign from the party due to his radical reforms.  Edgar Whitehead is the new leader of the Federal Rhodesian Party."
+ zimbabweElection.2.b:0 "Edgar Whitehead!"
+ zimbabweElection.2.a:0 "Good riddance."
+ zimbabweElection.3.d:0 "Whitehead's reforms to the black population made him quickly hated by the white minority while the black majority remained dissatisfied by his advances, wanting more.  The Rhodesian Front, led by Winston Field, won the election easily."
+ zimbabweElection.3.a:0 "Nice."
+ zimbabweElection.3.b:0 "Winston Field!"
+ zimbabweElection.3.a:0 "Nice."
+ zimbabweElection.4.d:0 "Field successfully dismantled the Federation of Rhodesia and Nyasaland, but was unable to gain independence from Britain.  Due to this, he was forced to resign.  Ian Smith was elected at the head of the Rhodesian Front."
+ zimbabweElection.4.b:0 "Ian Smith!"
+ zimbabweElection.4.a:0 "Hopefully Smith can finally secure our freedom."
+ zimbabweElection.5.t:0 "[Root.GetAdjective] election of [GetYear]"
+ zimbabweElection.5.d:0 "This election will determine the fate of [Root.GetName] forever.  Who you vote for will determine whether you become Rhodesia, Zimbabwe, or Zimbabwe Rhodesia."
+ zimbabweElection.5.a:0 "Rhodesian Front!"
+ zimbabweElection.5.b:0 "Zimbabwean Nationalists!"
+ zimbabweElection.5.c:0 "Abel Muzorewa!"
+ zimbabweElection.6.t:0 "Election Results"
+ zimbabweElection.61.d:0 "The conservative party Rhodesian Front has won the election."
+ zimbabweElection.61.a:0 "Alright."
+ zimbabweElection.62.d:0 "The nationalist party [Root.GetNationalistParty] has won the election."
+ zimbabweElection.62.a:0 "We'll just have to accept the results."
+ zimbabweElection.62.b:0 "Execute operation Quartz. "
+ zimbabweElection.63.d:0 "The Social Liberalist party UANC has won the election."
+ zimbabweElection.63.a:0 "Alright."
+ 
+ zimbabweElection.64.t:0 "Operation Quartz"
+ zimbabweElection.64.d:0 "We're prepared to launch the coup against the nationalist government."
+ zimbabweElection.64.a:0 "Let's start. §R(MAY CAUSE CIVIL WAR)"
+ zimbabweElection.64.b:0 "Nevermind, this is too risky."
+ 
+ zimbabweElection.641.t:0 "Coup in Rhodesia"
+ zimbabweElection.641.d:0 "After losing the election to the African nationalist party, Rhodesian officials and military personell staged a coup against the nationalists, where they successfully took control of the government."
+ zimbabweElection.641.a:0 "An interesting development."
+ zimbabweElection.641.b:0 "Disgraceful!"
+ zimbabweElection.641.c:0 "It had to be done."
+ 
+ zimbabweElection.642.t:0 "Civil War in Rhodesia"
+ zimbabweElection.642.d:0 "After a successful coup, the Zimbabwean government has declared war against the Rhodesian government."
+ zimbabweElection.642.a:0 "An interesting development."
+ zimbabweElection.642.b:0 "Zimbabwe must be free."
+ zimbabweElection.642.c:0 "Rhodesia must win!"
+ 
+ zimbabweElection.643.t:0 "Civil War in Rhodesia"
+ zimbabweElection.643.d:0 "After a failed coup, the Rhodesian government has declared war against the Zimbabwean government."
+ zimbabweElection.643.a:0 "An interesting development."
+ zimbabweElection.643.b:0 "Zimbabwe must be free."
+ zimbabweElection.643.c:0 "Rhodesia must win!"
+ 
+ zimbabweElection.65.t:0 "Civil War Recovery"
+ zimbabweElection.65.d:0 "Now that our civil war has ended, we can begin our nation's recovery."
+ zimbabweElection.65.a:0 "Alright."
+ 
+ zimbabweElection.66.t:0 "Choose Political Future"
+ zimbabweElection.66.d:0 "The Rhodesian military needs to give control of the government back, should it be returned to Ian Smith or should it be given to the previous controller?"
+ zimbabweElection.66.a:0 "Restore the RF."
+ zimbabweElection.66.b:0 "Maintain the status quo."
+ 
+ zimbabwe.61.t:0 "[zim_faction_target.GetName] Joins Faction!"
+ zimbabwe.3.t:0 "ZAPU Increases!"
+ zimbabwe.3.d:0 "ZAPU's influence in our country has increased."
+ zimbabwe.3.a:0 "Understood"
+ 
+ zimbabwe.35.t:0 "Reduce Nationalism"
+ zimbabwe.35.d:0 "Because of our relentless efforts, we can lower the tension of one of the two nationalist parties."
+ zimbabwe.35.a:0 "Reduce ZAPU influence"
+ zimbabwe.35.b:0 "Reduce ZANU influence"
+ 
+ zimbabwe.4.t:0 "ZAPU Decreases!"
+ zimbabwe.4.d:0 "ZAPU's influence in our country has decreased."
+ zimbabwe.4.a:0 "Understood"
+ zimbabwe.111.t:0 "The Rise of ZAPU"
+ zimbabwe.111.d:0 "Joshua Nkomo, after having his party banned, created a new party under the name ZAPU.  This new party is much more violent and radical that the last, and if left unchecked, could lead Rhodesia to ruin."
+ zimbabwe.111.a:0 "We need to stop him!"
+ zimbabwe.112.t:0 "The Rise of ZANU"
+ zimbabwe.112.d:0 "Robert Mugabe, following Nkomo's lead, created a new party named ZANU.  The two parties of ZANU and ZAPU are likely to compete for control of [ZIM.GetName], unless we do something about this."
+ zimbabwe.112.a:0 "This is getting serious."
+ zimbabwe.1.t:0 "ZANU Increases!"
+ zimbabwe.1.d:0 "ZANU's influence in our country has increased."
+ zimbabwe.1.a:0 "Understood"
+ zimbabwe.2.t:0 "ZANU Decreases!"
+ zimbabwe.2.d:0 "ZANU's influence in our country has decreased."
+ zimbabwe.2.a:0 "Understood"
+ ZIM_faction_relation:0 "In [ZIM.GetAdjective] Faction"
+ zimbabwe.5.t:0 "Invitation to The Central African Federation"
+ zimbabwe.5.d:0 "[ZIM.GetName] is requesting that we join their faction, the 'Central African Federation.'"
+ zimbabwe.5.a:0 "Join"
+ zimbabwe.5.b:0 "Don't join"
+ 
+ zimbabwe.51.t:0 "CAF Ultimatum"
+ zimbabwe.51.d:0 "[ZIM.GetName] is threatening us with war if we decline the invitation to their faction."
+ zimbabwe.51.a:0 "Join"
+ zimbabwe.51.b:0 "We will not be threatened!"
+ 
+ zimbabwe.511.t:0 "[ZIM.GetName] Requests Independence"
+ zimbabwe.511.d:0 "[ZIM.GetName], after abolishing their apartheid government and adopting black majority-rule, is requesting that we release them as an independent state."
+ zimbabwe.511.a:0 "Let them go"
+ zimbabwe.511.b:0 "Don't let them go"
+ 
+ zimbabwe.6.t:0 "[ZIM.GetName] Declares Faction"
+ zimbabwe.6.d:0 "[ZIM.GetName] has declared their faction, and we agreed to join them."
+ zimbabwe.6.a:0 "Let's join"
+ 
+ zimbabwe.60.t:0 "[ZIM.GetName] Declares Independence"
+ zimbabwe.60.d:0 "[ZIM.GetName] has declared their independence from us, what should we do?"
+ zimbabwe.60.a:0 "Let them go."
+ zimbabwe.60.b:0 "Sanction them."
+ zimbabwe.60.c:0 "Stop them!"
+ 
+ #zimbabwe.61.t:0 "Kick Rhodesia from NATO"
+ zimbabwe.61.d:0 "[zim_faction_target.GetName] has decided to join our faction."
+ zimbabwe.61.a:0 "Nice!"
+ #zimbabwe.61.b:0 "Nah."
+ 
+ zimbabwe.9.t:0 "[ZIM.GetName] Proposes Defense Pact"
+ zimbabwe.9.d:0 "[ZIM.GetName] has proposed an agreement among faction members, that in uncertain and dangerous times, we may form a single country under the [ZIM.GetAdjective] government."
+ zimbabwe.9.a:0 "Accept"
+ zimbabwe.9.b:0 "Decline"
+ 
+ zimbabwe.91.t:0 "[zim_annex_target.GetName] Accepts Pact!"
+ zimbabwe.91.d:0 "[zim_annex_target.GetName] has decided to accept our defense pact."
+ zimbabwe.91.a:0 "Nice!"
+ 
+ zimbabwe.92.t:0 "[ZIM.GetName] Issues Defense Pact Ultimatum"
+ zimbabwe.92.d:0 "[ZIM.GetName] demands we accept their annexation deal, or we risk the [ZIM.GetAdjective] government declaring war on us."
+ zimbabwe.92.a:0 "Accept"
+ zimbabwe.92.b:0 "Decline"
+ 
+ zimbabwe.7.t:0 "Rhodesia Unites!"
+ zimbabwe.7.d:0 "Southern Rhodesia has united with the nearby colonies of Northern Rhodesia and Malawi to form The \"Federation of Rhodesia and Nyasaland.\""
+ zimbabwe.7.a:0 "An interesting development."
+ 
+ zimbabwe.8.t:0 "[ZIM.GetName] is Free"
+ zimbabwe.8.d:0 "The United Kingdom has agreed to accept our request for independence, and we are now free."
+ zimbabwe.8.a:0 "At last, we are free."
+ 
+
+ 
+ zimbabwe.10.t:0 "Annex Faction Members"
+ zimbabwe.10.d:0 "It's time for us to annex our faction members and form a more powerful state to face any threats."
+ zimbabwe.10.a:0 "Let's do it."
+ 
+
+ 
+ zimbabwe.12.t:0 "Rhodesian Civil War"
+ zimbabwe.12.d:0 "The partition of Rhodesia took a turn for the worse when the Zimbabwean and Rhodesian protestors clashed along the borders of the newly established borders of Zimbabwe.  Once violence started to erupt in the streets, a full blown civil war broke out between the two nations."
+ zimbabwe.12.a:0 "Our worst fears have been realized."
+ 
+ zimbabwe.125.t:0 "Rhodesian Civil War"
+ zimbabwe.125.d:0 "Rhodesia has erupted into a violent civil war.  Zimbabwean nationalists and Rhodesian citizens are divided now more than ever."
+ 
+ zimbabwe.13.t:0 "Nationalist Ultimatum"
+ zimbabwe.13.d:0 "The nationalist groups have gained enough support to stage a coup against the Rhodesian government.  They are declaring that we should immediately surrender or face civil war!"
+ zimbabwe.13.a:0 "Let them rule"
+ zimbabwe.13.b:0 "Refuse"
+ 
+ zimbabwe.135.t:0 "Rhodesian Civil War"
+ zimbabwe.135.d:0 "Rhodesia has reached a boiling point.  The Rhodesian government has refused the Zimbabwean nationalist ultimatum and war has been declared."
+ zimbabwe.135.a:0 "An interesting development."
+ 
+ zimbabwe.14.t:0 "Rhodesian Election Results"
+ zimbabwe.14.d:0 "An overwhelming majority has elected Ian Smith from the Rhodesian Front as Prime Minister, and it's likely that he will be elected for years to come."
+ zimbabwe.14.a:0 "We need Ian Smith."
+ 
+ zimbabwe.141.t:0 "Elect Ian as Fascist Dictator"
+ zimbabwe.141.d:0 "Ian is compatible with our ideas, and with some convincing, could return to the head of this country, and greatly increase public approval of our party."
+ zimbabwe.141.a:0 "We need Ian Smith."
+ 
+ zimbabwe.15.t:0 "The FRN Dissolves!"
+ zimbabwe.15.d:0 "Nyasaland and Northern Rhodesia have broken away from the FRN due to political instability, leaving Rhodesia as the only apartheid state left from the federation."
+ zimbabwe.15.a:0 "That was short lived."
+ 
+ zimbabwe.151.t:0 "Malawi Declares Independence!"
+ zimbabwe.151.d:0 "Upon the dissolution of the FRN, Malawi has declared its independence."
+ zimbabwe.151.a:0 "Let them go."
+ zimbabwe.151.b:0 "Stop them!"
+ 
+ zimbabwe.152.t:0 "Zambia Declares Independence!"
+ zimbabwe.152.d:0 "Upon the dissolution of the FRN, Zambia has declared its independence."
+ zimbabwe.152.a:0 "Let them go."
+ zimbabwe.152.b:0 "Stop them!"
+ 
+ zimbabwe.16.t:0 "FRN Dissolution: Aftermath"
+ zimbabwe.16.d:0 "Because of the disbanding of the Federation of Rhodesia and Nyasaland, most of the nationalist rebels have left to the new nationalist nations they have formed.  This has greatly lowered nationalist tension and nationalist party popularity."
+ zimbabwe.16.a:0 "At least we made it out okay."
+ 
+ zimbabwe.17.t:0 "RHODESIA STEALS NUCLEAR TECHNOLOGY"
+ zimbabwe.17.d:0 "Rhodesia, taking advantage of our kindness, has stolen our most dangerous and powerful technology!  The consequences of this leak could be devastating for the future of mankind."
+ zimbabwe.17.a:0 "Well, there's nothing we can do about this now."
+ zimbabwe.17.b:0 "Force them into civil war!  We cannot allow them to keep this technology!"
+ zimbabwe.17.c:0 "Let's go get it back."
+ 
+ zimbabwe.24.t:0 "Rhodesian Faction"
+ zimbabwe.24.d:0 "Rhodesia wishes to create the South African Condederation, and they've invited us.  Should we join?"
+ zimbabwe.24.a:0 "Alright."
+ zimbabwe.24.b:0 "Absolutely not!"
+ 
+ zimbabwe.25.t:0 "Rhodesia Forms Faction"
+ zimbabwe.25.d:0 "Rhodesia has created the South African Confederation, and we agreed to join it."
+ zimbabwe.25.a:0 "Alright, let's join."
+ zimbabwe.25.b:0 "I've changed my mind!"
+ 
+ zimbabwe.26.t:0 "Treaty of Salisbury"
+ zimbabwe.26.d:0 "Rhodesia wishes to combine all faction members into a single nation if necessary.  Should we agree to the treaty?"
+ zimbabwe.26.a:0 "Alright. §R(You may be annexed in the future)"
+ zimbabwe.26.b:0 "Absolutely not!"
+ 
+ zimbabwe.69.t:0 "Rename Capital"
+ zimbabwe.69.d:0 "Now that we have liberated our country, we need to rename the capital."
+ zimbabwe.69.a:0 "Okay."
+ 
+ zimbabwe.70.t:0 "Nationalist Victory"
+ zimbabwe.70.d:0 "The African nationalists have successfully taken control of the former Rhodesian government."
+ zimbabwe.70.a:0 "Okay."
+ 
+ zimbabwe.71.t:0 "Unite Nationalist Parties"
+ zimbabwe.71.d:0 "We have liberated Zimbabwe from Rhodesia.  We now need to unite the rival parites, ZANU and ZAPU, under the one party of ZANU-PF."
+ zimbabwe.71.a:0 "Okay."
+ 
+ ZIM_NYA_independence_war:0 "Malawi Independence War"
+ 
+ ZIM_ZAM_independence_war:0 "Zambian Independence War"
