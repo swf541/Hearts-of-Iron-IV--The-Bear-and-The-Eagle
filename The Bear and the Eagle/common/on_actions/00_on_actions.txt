@@ -349,7 +349,7 @@ on_actions = {
 				limit = {
 					is_ai = no
 				}
-				news_event = news.1032
+				news_event = tutorial.1000
 			}
 			every_country = {
 				limit = {

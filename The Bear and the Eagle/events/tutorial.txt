@@ -12,11 +12,7 @@ news_event = {
 	#picture = GFX_news_event_001
 	major = yes
 
-	trigger = {
-		date > 1949.5.20
-		date < 9999.1.1
-		NOT = {has_global_flag = tutorial_fired}
-	}
+	is_triggered_only = yes
 
 	immediate = {
 		set_global_flag = tutorial_fired
