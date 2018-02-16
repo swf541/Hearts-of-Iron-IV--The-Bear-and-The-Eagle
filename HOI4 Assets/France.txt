@@ -1,0 +1,173 @@
+﻿########################
+# French Events
+########################
+
+add_namespace = fra
+
+# The Reunification of Austria
+country_event = {
+	id = fra.1
+	title = fra.1.t
+	desc = fra.1.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = fra.1.a
+		set_global_flag = fra_yes_austria
+		ai_chance = {
+			factor = 15
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 1
+		}
+		name = fra.1.b
+		set_global_flag = fra_no_austria
+	}
+}
+
+# UN recognition of PRC
+country_event = {
+	id = fra.2
+	title = fra.2.t
+	desc = fra.2.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = fra.2.a
+		set_global_flag = fra_yes_prc_un_recognition
+		ai_chance = {
+			factor = 15
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 1
+		}
+		name = fra.2.b
+		set_global_flag = fra_no_prc_un_recognition
+	}
+}
+
+#Independence of Guinea
+country_event = {
+  id = fra.3
+	title = fra.3.t
+	desc = fra.3.d
+
+  trigger_only_once = yes
+
+	trigger = {
+	  date > 1958.8.1
+		date < 1958.8.3
+  }
+		option = {
+		  ai_chance = {
+			  factor = 90
+			}
+      name = fra.3.a
+			release =	GUI
+			}
+
+			option = {
+			  ai_chance = {
+			    factor = 10
+				}
+				name = fra.3.b
+				add_political_power = -125
+			}
+    }
+
+#Independence of Niger
+country_event = {
+  id = fra.4
+	title = fra.4.t
+	desc = fra.4.d
+
+  trigger_only_once = yes
+
+	trigger = {
+	  date > 1960.8.2
+		date < 1960.8.4
+	}
+
+	option = {
+	  ai_chance = {
+		  factor = 90
+		}
+		name = fra.4.a
+		release = NIG
+	}
+
+	option = {
+	  ai_chance = {
+		  factor = 10
+		}
+		name = fra.4.b
+		add_political_power = -125
+	}
+
+#Independence of Chad
+country_event = {
+  id = fra.5
+	title = fra .5.t
+	desc = fra.5.d
+
+	trigger_only_once = yes
+
+	trigger = {
+	  date > 1960.8.10
+		date < 1960.8.12
+	}
+
+	option = {
+	  ai_chance = {
+		  factor = 90
+		}
+		name = fra.4.a
+		release = CHA
+	}
+
+	option = {
+	  ai_chance = {
+		  factor = 10
+		}
+		name = fra.4.b
+		add_political_power = -125
+	}
+
+#Independence of Gabon
+country_event = {
+  id = fra.6
+	title = fra.6.t
+	desc = fra.6.d
+
+	trigger_only_once = yes
+
+	trigger = {
+	  date > 1960.8.16
+		date < 1960.8.18
+	}
+
+	option = {
+	  ai_chance = {
+		  factor = 90
+		}
+		name = fra.6.a
+		release = GAB
+	}
+
+	option = {
+	  ai_chance = {
+		  factor = 10
+		}
+		name = fra.6.b
+		add_political_power = -125
+	}
+
+#Independence of

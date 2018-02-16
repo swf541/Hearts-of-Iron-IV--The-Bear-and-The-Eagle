@@ -1,0 +1,315 @@
+﻿[20:38:01][lexer.cpp:71]: File 'mod/Cold War Iron Curtain.mod' should be in utf8-bom encoding (will try to use it anyways)
+[20:38:01][lexer.cpp:71]: File 'mod/coldwarironcurtain.mod' should be in utf8-bom encoding (will try to use it anyways)
+[20:38:01][lexer.cpp:71]: File 'mod/Cold War Iron Curtain.mod' should be in utf8-bom encoding (will try to use it anyways)
+[20:38:01][lexer.cpp:71]: File 'mod/coldwarironcurtain.mod' should be in utf8-bom encoding (will try to use it anyways)
+[20:38:38][persistent.cpp:36]: Error: "Unknown modifier: equipment_bonus, near line: 89
+" in file: "common/ideas/WGR_ideas.txt" near line: 93
+[20:38:38][persistent.cpp:36]: Error: "Unknown modifier: equipment_bonus, near line: 108
+" in file: "common/ideas/WGR_ideas.txt" near line: 112
+[20:38:38][persistent.cpp:36]: Error: "Unknown modifier: production_speed_buildings_factory_factor, near line: 208
+" in file: "common/ideas/WGR_ideas.txt" near line: 208
+[20:38:38][persistent.cpp:36]: Error: "Unknown modifier: trade_laws_cost_factor, near line: 21
+" in file: "common/ideas/YUG_ideas.txt" near line: 21
+[20:38:38][persistent.cpp:36]: Error: "Unknown modifier: mobilization_laws_cost_factor, near line: 22
+" in file: "common/ideas/YUG_ideas.txt" near line: 22
+[20:38:38][persistent.cpp:36]: Error: "Unknown modifier: economy_cost_factor, near line: 23
+" in file: "common/ideas/YUG_ideas.txt" near line: 23
+[20:38:38][persistent.cpp:36]: Error: "Unknown modifier: monthly_national_unity, near line: 74
+" in file: "common/ideas/uk_focus_tree.txt" near line: 74
+[20:38:38][persistent.cpp:36]: Error: "Unknown modifier: equipment_bonus, near line: 92
+" in file: "common/ideas/uk_focus_tree.txt" near line: 106
+[20:38:38][idea.cpp:987]: Duplicate idea. YUG_idea_local_self_management is a duplicate.
+[20:38:41][persistent.cpp:36]: Error: "Malformed token: airborne_heavy_equipment, near line: 45
+" in file: "common/units/equipment/mechanized_airborne.txt" near line: 45
+[20:38:41][map.cpp:1463]: Province 9849 has no pixels in provinces.bmp
+[20:38:41][gameitemdatabasehelper.h:98]: Error: "Unexpected token: mechanized_airborne, near line: 431
+" in file: "common/units/infantry.txt" near line: 508
+[20:38:41][gameitemdatabasehelper.h:98]: Error: "Unexpected token: }, near line: 511
+" in file: "common/units/infantry.txt" near line: 511
+[20:38:41][gameitemdatabasehelper.h:98]: Error: "Unexpected token: =, near line: 511
+" in file: "common/units/infantry.txt" near line: 584
+[20:38:41][persistent.cpp:36]: Error: "Unexpected token: light_tank_aa_equipment, near line: 25
+" in file: "common/units/sp_anti-air_brigade.txt" near line: 25
+[20:38:41][persistent.cpp:36]: Error: "Unexpected token: medium_tank_aa_equipment, near line: 89
+" in file: "common/units/sp_anti-air_brigade.txt" near line: 89
+[20:38:41][persistent.cpp:36]: Error: "Unexpected token: heavy_tank_aa_equipment, near line: 156
+" in file: "common/units/sp_anti-air_brigade.txt" near line: 156
+[20:38:41][persistent.cpp:36]: Error: "Unexpected token: super_heavy_tank_aa_equipment, near line: 220
+" in file: "common/units/sp_anti-air_brigade.txt" near line: 220
+[20:38:41][persistent.cpp:36]: Error: "Unexpected token: modern_tank_aa_equipment, near line: 286
+" in file: "common/units/sp_anti-air_brigade.txt" near line: 286
+[20:38:41][persistent.cpp:36]: Error: "Unexpected token: light_tank_artillery_equipment, near line: 25
+" in file: "common/units/sp_artillery_brigade.txt" near line: 25
+[20:38:41][persistent.cpp:36]: Error: "Unexpected token: medium_tank_artillery_equipment, near line: 85
+" in file: "common/units/sp_artillery_brigade.txt" near line: 85
+[20:38:41][persistent.cpp:36]: Error: "Unexpected token: heavy_tank_artillery_equipment, near line: 150
+" in file: "common/units/sp_artillery_brigade.txt" near line: 150
+[20:38:41][persistent.cpp:36]: Error: "Unexpected token: super_heavy_tank_artillery_equipment, near line: 214
+" in file: "common/units/sp_artillery_brigade.txt" near line: 214
+[20:38:41][persistent.cpp:36]: Error: "Unexpected token: modern_tank_artillery_equipment, near line: 278
+" in file: "common/units/sp_artillery_brigade.txt" near line: 278
+[20:38:41][persistent.cpp:36]: Error: "Unexpected token: light_tank_destroyer_equipment, near line: 26
+" in file: "common/units/tank_destroyer_brigade.txt" near line: 26
+[20:38:41][persistent.cpp:36]: Error: "Unexpected token: medium_tank_destroyer_equipment, near line: 88
+" in file: "common/units/tank_destroyer_brigade.txt" near line: 88
+[20:38:41][persistent.cpp:36]: Error: "Unexpected token: heavy_tank_destroyer_equipment, near line: 154
+" in file: "common/units/tank_destroyer_brigade.txt" near line: 154
+[20:38:41][persistent.cpp:36]: Error: "Unexpected token: super_heavy_tank_destroyer_equipment, near line: 220
+" in file: "common/units/tank_destroyer_brigade.txt" near line: 220
+[20:38:41][persistent.cpp:36]: Error: "Unexpected token: modern_tank_destroyer_equipment, near line: 288
+" in file: "common/units/tank_destroyer_brigade.txt" near line: 288
+[20:38:41][persistent.cpp:36]: Error: "Malformed token: @17th_line, near line: 2186
+" in file: "common/technologies/armor.txt" near line: 2186
+[20:38:41][persistent.cpp:36]: Error: "Malformed token: @17th_line, near line: 2215
+" in file: "common/technologies/armor.txt" near line: 2215
+[20:38:41][persistent.cpp:36]: Error: "Malformed token: @17th_line, near line: 2239
+" in file: "common/technologies/armor.txt" near line: 2239
+[20:38:41][technologytemplate.cpp:692]: Technology "tech_society_19" has more than 1 XOR, this is not a big problem but only the first will be shown in graphical representation of tech tree.
+[20:38:41][technologytemplate.cpp:692]: Technology "tech_society_20" has more than 1 XOR, this is not a big problem but only the first will be shown in graphical representation of tech tree.
+[20:38:41][technologytemplate.cpp:692]: Technology "tech_society_21" has more than 1 XOR, this is not a big problem but only the first will be shown in graphical representation of tech tree.
+[20:38:41][technologytemplate.cpp:740]: Technology "tech_society_21" is primary mutual exclusive ( XOR ) with "tech_society_20", but "tech_society_20" does not specify "tech_society_21" as primary mutual exclusive.
+[20:38:41][effectimplementation.cpp:6811]: Unknown technology category naval scripted at:  file: common/national_focus/PRC49.txt line: 2125
+[20:38:41][effect.cpp:225]: Invalid effect 'remove_ideass' in common/national_focus/West_Germany.txt line : 19
+[20:38:41][effect.cpp:162]: Error: "Unknown effect-type: remove_ideass, near line: 19
+" in file: "common/national_focus/West_Germany.txt" near line: 23
+[20:38:41][effect.cpp:225]: Invalid effect 'remove_ideass' in common/national_focus/West_Germany.txt line : 51
+[20:38:41][effect.cpp:162]: Error: "Unknown effect-type: remove_ideass, near line: 51
+" in file: "common/national_focus/West_Germany.txt" near line: 55
+[20:38:41][effect.cpp:225]: Invalid effect 'remove_ideass' in common/national_focus/West_Germany.txt line : 198
+[20:38:41][effect.cpp:162]: Error: "Unknown effect-type: remove_ideass, near line: 198
+" in file: "common/national_focus/West_Germany.txt" near line: 199
+[20:38:41][effectimplementation.cpp:6811]: Unknown technology category infantry_equipment scripted at:  file: common/national_focus/West_Germany.txt line: 1411
+[20:38:41][effect.cpp:162]: Error: "Unexpected token: remove_ideas, near line: 1443
+" in file: "common/national_focus/West_Germany.txt" near line: 1444
+[20:38:41][effect.cpp:225]: Invalid effect 'remove_ideass' in common/national_focus/West_Germany.txt line : 2270
+[20:38:41][effect.cpp:162]: Error: "Unknown effect-type: remove_ideass, near line: 2270
+" in file: "common/national_focus/West_Germany.txt" near line: 2272
+[20:38:41][effectimplementation.cpp:6796]: No tech named jets at:  file: common/national_focus/West_Germany.txt line: 2395
+[20:38:41][effect.cpp:225]: Invalid effect 'remove_ideass' in common/national_focus/West_Germany.txt line : 2475
+[20:38:41][effect.cpp:162]: Error: "Unknown effect-type: remove_ideass, near line: 2475
+" in file: "common/national_focus/West_Germany.txt" near line: 2476
+[20:38:41][effect.cpp:225]: Invalid effect 'remove_ideass' in common/national_focus/West_Germany.txt line : 2592
+[20:38:41][effect.cpp:162]: Error: "Unknown effect-type: remove_ideass, near line: 2592
+" in file: "common/national_focus/West_Germany.txt" near line: 2594
+[20:38:41][effect.cpp:162]: Error: "Invalid idea: CZE_export_focus2, near line: 3633
+" in file: "common/national_focus/YugoslaviaFocus.txt" near line: 3634
+[20:38:41][effect.cpp:216]: Invalid scope type for effect add_building_construction in common/national_focus/northkorea.txt line : 67
+[20:38:41][effect.cpp:162]: Error: "Invalid idea: rehabilitated_military_focus, near line: 833
+" in file: "common/national_focus/northkorea.txt" near line: 834
+[20:38:41][effect.cpp:216]: Invalid scope type for effect add_ideas in common/national_focus/saudi_arabia.txt line : 327
+[20:38:41][effect.cpp:216]: Invalid scope type for effect add_national_unity in common/national_focus/saudi_arabia.txt line : 328
+[20:38:41][nationalfocus.cpp:1156]: WGR_Sign_the_Pleven_Plan: Couldn't find dependency WGR_Ridding_the_fascists 
+[20:38:41][nationalfocus.cpp:1156]: WGR_Request_to_Join_NATO: Couldn't find dependency WGR_Bonn_Paris_Convetions 
+[20:38:41][nationalfocus.cpp:1156]: DDR_night_vision_effort: Couldn't find dependency marine_effort 
+[20:38:41][nationalfocus.cpp:1156]: DDR_CAS_effort: Couldn't find dependency DDR_motorization_effort 
+[20:38:41][nationalfocus.cpp:1156]: DDR_rocket_effort: Couldn't find dependency DDR_infrastructure_effort 
+[20:38:42][effect.cpp:162]: Error: "Unexpected token: gwtank, near line: 18
+Unexpected token: basic_light_tank, near line: 19
+Unexpected token: improved_light_tank, near line: 20
+" in file: "history/countries/CAM - Cambodia.txt" near line: 41
+[20:38:42][effect.cpp:162]: Error: "Unexpected token: gwtank, near line: 15
+Unexpected token: basic_light_tank, near line: 16
+Unexpected token: improved_light_tank, near line: 17
+Unexpected token: basic_heavy_tank, near line: 18
+" in file: "history/countries/DDR - East Germany.txt" near line: 40
+[20:38:42][effect.cpp:162]: Error: "Unexpected token: improved_light_tank, near line: 55
+Unexpected token: basic_medium_tank, near line: 56
+" in file: "history/countries/GER - Germany.txt" near line: 113
+[20:38:42][countrytag.cpp:89]: KAZ - is not in the tag list
+[20:38:42][history.cpp:323]: Unknown history file in country database - history/countries/KAZ - Kazakhstan.txt
+[20:38:42][effect.cpp:162]: Error: "Unexpected token: gwtank, near line: 18
+Unexpected token: basic_light_tank, near line: 19
+Unexpected token: improved_light_tank, near line: 20
+" in file: "history/countries/LAO - Laos.txt" near line: 41
+[20:38:42][effect.cpp:162]: Error: "Malformed token: stalinsm, near line: 38
+" in file: "history/countries/MLA - Malaya.txt" near line: 39
+[20:38:42][persistent.cpp:36]: Error: "Invalid idea: anti_soviet_leadership, near line: 8
+" in file: "history/countries/YUG - Yugoslavia.txt" near line: 9
+[20:38:42][history.cpp:332]: TAN - is missing a history file.
+[20:38:42][history.cpp:332]: INS - is missing a history file.
+[20:38:42][history.cpp:332]: MNT - is missing a history file.
+[20:38:42][history.cpp:332]: UKR - is missing a history file.
+[20:38:42][history.cpp:332]: GEO - is missing a history file.
+[20:38:42][history.cpp:332]: AZR - is missing a history file.
+[20:38:42][history.cpp:332]: ARM - is missing a history file.
+[20:38:42][history.cpp:332]: BLR - is missing a history file.
+[20:38:42][history.cpp:332]: ANG - is missing a history file.
+[20:38:42][history.cpp:332]: MZB - is missing a history file.
+[20:38:42][history.cpp:332]: COG - is missing a history file.
+[20:38:42][history.cpp:332]: KEN - is missing a history file.
+[20:38:42][history.cpp:332]: MAN - is missing a history file.
+[20:38:42][history.cpp:332]: SDR - is missing a history file.
+[20:38:42][countrytag.cpp:89]: NET - is not in the tag list
+[20:38:42][countrytag.cpp:89]: SPA - is not in the tag list
+[20:38:42][countrytag.cpp:89]: NZE - is not in the tag list
+[20:38:42][trigger.cpp:269]: Error: "Not a valid value: NET, near line: 12
+Not a valid value: SPA, near line: 19
+Not a valid value: NZE, near line: 22
+" in file: "common/ai_strategy/NATO.txt" near line: 23
+[20:38:42][pdx_audio.cpp:1300]: Could not find music named nationalanthemofussr
+[20:38:42][idea.cpp:477]: Invalid trait
+[20:38:42][idea.cpp:477]: Invalid trait
+[20:38:42][idea.cpp:477]: Invalid trait
+[20:38:42][idea.cpp:477]: Invalid trait
+[20:38:42][trigger.cpp:355]: Invalid trigger 'option' in events/ElectionEvents.txt line : 622
+[20:38:42][trigger.cpp:269]: Error: "Unknown trigger-type: option, near line: 622
+" in file: "events/ElectionEvents.txt" near line: 626
+[20:38:42][persistent.cpp:36]: Error: "Unexpected token: country_event, near line: 627
+" in file: "events/ElectionEvents.txt" near line: 751
+[20:38:42][eventmanager.cpp:305]: Event #2300021 has no options in events/ElectionEvents.txt
+[20:38:42][eventmanager.cpp:311]: Event #3001000 is set to trigger every day. events/NewsEvents.txt
+[20:38:42][eventmanager.cpp:311]: Event #3001002 is set to trigger every day. events/NewsEvents.txt
+[20:38:42][trigger.cpp:355]: Invalid trigger 'MLA' in events/NewsEvents.txt line : 708
+[20:38:42][trigger.cpp:355]: Invalid trigger '=' in events/NewsEvents.txt line : 708
+[20:38:42][trigger.cpp:269]: Error: "Unknown trigger-type: MLA, near line: 708
+Unknown trigger-type: =, near line: 708
+" in file: "events/NewsEvents.txt" near line: 709
+[20:38:42][trigger.cpp:355]: Invalid trigger 'MLA' in events/NewsEvents.txt line : 740
+[20:38:42][trigger.cpp:355]: Invalid trigger '=' in events/NewsEvents.txt line : 740
+[20:38:42][trigger.cpp:269]: Error: "Unknown trigger-type: MLA, near line: 740
+Unknown trigger-type: =, near line: 740
+" in file: "events/NewsEvents.txt" near line: 742
+[20:38:42][eventmanager.cpp:309]: Event #3300001 is triggered only, but does not have a 1 base-factor in events/SAU_events.txt
+[20:38:42][eventmanager.cpp:309]: Event #3300009 is triggered only, but does not have a 1 base-factor in events/SAU_events.txt
+[20:38:42][eventmanager.cpp:309]: Event #3700006 is triggered only, but does not have a 1 base-factor in events/Trieste.txt
+[20:38:42][countrytag.cpp:89]: RUM - is not in the tag list
+[20:38:42][eventmanager.cpp:311]: Event #4200002 is set to trigger every day. events/prc.txt
+[20:38:42][eventmanager.cpp:311]: Event #4200003 is set to trigger every day. events/prc.txt
+[20:38:42][eventmanager.cpp:301]: Event #4200004 is missing a title in events/prc.txt
+[20:38:42][eventmanager.cpp:303]: Event #4200004 is missing a desc in events/prc.txt
+[20:38:42][onaction.cpp:62]: Random Event 2300022 in on_action on_new_term_election is not a valid event.
+[20:38:42][onaction.cpp:62]: Random Event 2300023 in on_action on_new_term_election is not a valid event.
+[20:38:42][onaction.cpp:62]: Random Event 2300024 in on_action on_new_term_election is not a valid event.
+[20:38:42][onaction.cpp:62]: Random Event 2300025 in on_action on_new_term_election is not a valid event.
+[20:38:42][triggerimplementation.cpp:2558]: Invalid idea in has_idea trigger: has_idea = Radicaliztion
+[20:38:42][triggerimplementation.cpp:2654]: Invalid tech in has_tech trigger: has_tech = basic_medium_tank
+[20:38:42][triggerimplementation.cpp:2654]: Invalid tech in has_tech trigger: has_tech = main_battle_tank
+[20:38:42][gamestate.cpp:1426]: The state 789 - Kosovo has no supply area.
+[20:38:42][gamestate.cpp:1426]: The state 790 - Ionia has no supply area.
+[20:38:42][gamestate.cpp:1731]: The province 1106 -  has no strategic region assigned.
+[20:38:42][gamestate.cpp:1731]: The province 1205 -  has no strategic region assigned.
+[20:38:42][gamestate.cpp:1731]: The province 9916 -  has no strategic region assigned.
+[20:38:42][gamestate.cpp:1731]: The province 10203 -  has no strategic region assigned.
+[20:38:42][gamestate.cpp:1731]: The province 11786 -  has no strategic region assigned.
+[20:38:42][gamestate.cpp:1731]: The province 11895 -  has no strategic region assigned.
+[20:38:42][gamestate.cpp:1731]: The province 12001 -  has no strategic region assigned.
+[20:38:42][gamestate.cpp:1731]: The province 13205 -  has no strategic region assigned.
+[20:38:42][gamestate.cpp:1731]: The province 13206 -  has no strategic region assigned.
+[20:38:42][gamestate.cpp:1667]: WARNING: State "Azawad"(#764) has provinces (#1115, #10788) belonging to different strategic areas: "Sahara Desert" (#127), "Sub-Saharan Africa" (#140)
+[20:38:42][gamestate.cpp:1667]: WARNING: State "Southern Niger"(#765) has provinces (#12707, #10758) belonging to different strategic areas: "Sub-Saharan Africa" (#140), "Sahara Desert" (#127)
+[20:38:42][gamestate.cpp:1667]: WARNING: State "Cameroon"(#768) has provinces (#7963, #6039) belonging to different strategic areas: "Central Africa" (#183), "South West Africa" (#184)
+[20:38:42][virtualfilesystem_physfs.cpp:1085]: Could not open file: common/countries/Bangladesh.txt, error: The system cannot find the file specified.
+[20:38:42][virtualfilesystem_physfs.cpp:1085]: Could not open file: common/countries/Assam.txt, error: The system cannot find the file specified.
+[20:38:42][virtualfilesystem_physfs.cpp:1085]: Could not open file: common/countries/Khalistan.txt, error: The system cannot find the file specified.
+[20:38:42][virtualfilesystem_physfs.cpp:1085]: Could not open file: common/countries/Kashmir.txt, error: The system cannot find the file specified.
+[20:38:44][flagtextureatlas.cpp:460]: Error loading flag for country PAN : Ideology conservative : Path gfx/flags/ : File not found
+[20:38:44][flagtextureatlas.cpp:460]: Error loading flag for country MLA : Ideology conservative : Path gfx/flags/ : File not found
+[20:38:44][flagtextureatlas.cpp:460]: Error loading flag for country PDG : Ideology conservative : Path gfx/flags/ : File not found
+[20:38:44][flagtextureatlas.cpp:460]: Error loading flag for country BRU : Ideology conservative : Path gfx/flags/ : File not found
+[20:38:44][flagtextureatlas.cpp:460]: Error loading flag for country BAN : Ideology conservative : Path gfx/flags/ : File not found
+[20:38:44][flagtextureatlas.cpp:460]: Error loading flag for country ASA : Ideology conservative : Path gfx/flags/ : File not found
+[20:38:44][flagtextureatlas.cpp:460]: Error loading flag for country KHA : Ideology conservative : Path gfx/flags/ : File not found
+[20:38:44][flagtextureatlas.cpp:460]: Error loading flag for country PAN : Ideology conservative : Path gfx/flags/medium/ : File not found
+[20:38:44][flagtextureatlas.cpp:460]: Error loading flag for country MLA : Ideology conservative : Path gfx/flags/medium/ : File not found
+[20:38:44][flagtextureatlas.cpp:460]: Error loading flag for country BRU : Ideology conservative : Path gfx/flags/medium/ : File not found
+[20:38:44][flagtextureatlas.cpp:460]: Error loading flag for country BAN : Ideology conservative : Path gfx/flags/medium/ : File not found
+[20:38:44][flagtextureatlas.cpp:460]: Error loading flag for country ASA : Ideology conservative : Path gfx/flags/medium/ : File not found
+[20:38:44][flagtextureatlas.cpp:460]: Error loading flag for country KHA : Ideology conservative : Path gfx/flags/medium/ : File not found
+[20:38:45][flagtextureatlas.cpp:460]: Error loading flag for country MLA : Ideology conservative : Path gfx/flags/small/ : File not found
+[20:38:45][flagtextureatlas.cpp:460]: Error loading flag for country KUW : Ideology conservative : Path gfx/flags/small/ : File not found
+[20:38:45][flagtextureatlas.cpp:460]: Error loading flag for country MOR : Ideology conservative : Path gfx/flags/small/ : File not found
+[20:38:45][flagtextureatlas.cpp:460]: Error loading flag for country BRU : Ideology conservative : Path gfx/flags/small/ : File not found
+[20:38:45][flagtextureatlas.cpp:460]: Error loading flag for country BAN : Ideology conservative : Path gfx/flags/small/ : File not found
+[20:38:45][flagtextureatlas.cpp:460]: Error loading flag for country ASA : Ideology conservative : Path gfx/flags/small/ : File not found
+[20:38:45][flagtextureatlas.cpp:460]: Error loading flag for country KHA : Ideology conservative : Path gfx/flags/small/ : File not found
+[20:38:45][flagtextureatlas.cpp:460]: Error loading flag for country MLA : Ideology conservative : Path gfx/flags/small/ : File not found
+[20:38:45][flagtextureatlas.cpp:460]: Error loading flag for country KUW : Ideology conservative : Path gfx/flags/small/ : File not found
+[20:38:45][flagtextureatlas.cpp:460]: Error loading flag for country MOR : Ideology conservative : Path gfx/flags/small/ : File not found
+[20:38:45][flagtextureatlas.cpp:460]: Error loading flag for country BRU : Ideology conservative : Path gfx/flags/small/ : File not found
+[20:38:45][flagtextureatlas.cpp:460]: Error loading flag for country BAN : Ideology conservative : Path gfx/flags/small/ : File not found
+[20:38:45][flagtextureatlas.cpp:460]: Error loading flag for country ASA : Ideology conservative : Path gfx/flags/small/ : File not found
+[20:38:45][flagtextureatlas.cpp:460]: Error loading flag for country KHA : Ideology conservative : Path gfx/flags/small/ : File not found
+[20:38:46][effect.cpp:162]: Error: "Unexpected token: gwtank, near line: 18
+Unexpected token: basic_light_tank, near line: 19
+Unexpected token: improved_light_tank, near line: 20
+" in file: "history/countries/CAM - Cambodia.txt" near line: 41
+[20:38:46][effect.cpp:162]: Error: "Unexpected token: gwtank, near line: 15
+Unexpected token: basic_light_tank, near line: 16
+Unexpected token: improved_light_tank, near line: 17
+Unexpected token: basic_heavy_tank, near line: 18
+" in file: "history/countries/DDR - East Germany.txt" near line: 40
+[20:38:46][effect.cpp:162]: Error: "Unexpected token: improved_light_tank, near line: 55
+Unexpected token: basic_medium_tank, near line: 56
+" in file: "history/countries/GER - Germany.txt" near line: 113
+[20:38:46][history.cpp:323]: Unknown history file in country database - history/countries/KAZ - Kazakhstan.txt
+[20:38:46][effect.cpp:162]: Error: "Unexpected token: gwtank, near line: 18
+Unexpected token: basic_light_tank, near line: 19
+Unexpected token: improved_light_tank, near line: 20
+" in file: "history/countries/LAO - Laos.txt" near line: 41
+[20:38:46][effect.cpp:162]: Error: "Malformed token: stalinsm, near line: 38
+" in file: "history/countries/MLA - Malaya.txt" near line: 39
+[20:38:46][persistent.cpp:36]: Error: "Invalid idea: anti_soviet_leadership, near line: 8
+" in file: "history/countries/YUG - Yugoslavia.txt" near line: 9
+[20:38:46][history.cpp:332]: TAN - is missing a history file.
+[20:38:46][history.cpp:332]: INS - is missing a history file.
+[20:38:46][history.cpp:332]: MNT - is missing a history file.
+[20:38:46][history.cpp:332]: UKR - is missing a history file.
+[20:38:46][history.cpp:332]: GEO - is missing a history file.
+[20:38:46][history.cpp:332]: AZR - is missing a history file.
+[20:38:46][history.cpp:332]: ARM - is missing a history file.
+[20:38:46][history.cpp:332]: BLR - is missing a history file.
+[20:38:46][history.cpp:332]: ANG - is missing a history file.
+[20:38:46][history.cpp:332]: MZB - is missing a history file.
+[20:38:46][history.cpp:332]: COG - is missing a history file.
+[20:38:46][history.cpp:332]: KEN - is missing a history file.
+[20:38:46][history.cpp:332]: MAN - is missing a history file.
+[20:38:46][history.cpp:332]: SDR - is missing a history file.
+[20:38:46][statehistory.cpp:293]: State Error: Trying to set invalid province building "naval_base" to province #11595.
+[20:38:46][id.cpp:85]: Failed to create id 26 55. Already exists in game.
+[20:38:46][id.cpp:85]: Failed to create id 26 55. Already exists in game.
+[20:38:46][id.cpp:85]: Failed to create id 26 55. Already exists in game.
+[20:38:46][id.cpp:85]: Failed to create id 26 55. Already exists in game.
+[20:38:46][country.cpp:3076]: Attempting to set captial state #448 for , they dont own it!
+[20:38:46][country.cpp:3076]: Attempting to set captial state #554 for Israel, they dont own it!
+[20:38:46][country.cpp:3076]: Attempting to set captial state #336 for Malaysia, they dont own it!
+[20:38:46][country.cpp:3076]: Attempting to set captial state #416 for , they dont own it!
+[20:38:46][country.cpp:3076]: Attempting to set captial state #416 for , they dont own it!
+[20:38:46][country.cpp:3065]: Attempting to set captial state #10297 for , it is not a valid state!
+[20:38:46][country.cpp:3065]: Attempting to set captial state #9627 for , it is not a valid state!
+[20:38:46][country.cpp:3065]: Attempting to set captial state #935 for , it is not a valid state!
+[20:38:46][country.cpp:3076]: Attempting to set captial state #47 for , they dont own it!
+[20:38:46][country.cpp:3076]: Attempting to set captial state #47 for , they dont own it!
+[20:38:46][country.cpp:3076]: Attempting to set captial state #671 for Vietnam, they dont own it!
+[20:38:46][country.cpp:3076]: Attempting to set captial state #330 for , they dont own it!
+[20:38:46][country.cpp:3076]: Attempting to set captial state #267 for , they dont own it!
+[20:38:46][country.cpp:3076]: Attempting to set captial state #322 for , they dont own it!
+[20:38:46][country.cpp:3076]: Attempting to set captial state #322 for Saarland, they dont own it!
+[20:38:46][country.cpp:3076]: Attempting to set captial state #361 for Trust Territory of the Pacific Islands, they dont own it!
+[20:38:46][country.cpp:3076]: Attempting to set captial state #322 for Andorra, they dont own it!
+[20:38:46][country.cpp:3076]: Attempting to set captial state #322 for , they dont own it!
+[20:38:46][country.cpp:3076]: Attempting to set captial state #671 for Laos, they dont own it!
+[20:38:46][country.cpp:3076]: Attempting to set captial state #416 for , they dont own it!
+[20:38:46][country.cpp:3076]: Attempting to set captial state #416 for , they dont own it!
+[20:38:46][country.cpp:3076]: Attempting to set captial state #416 for , they dont own it!
+[20:38:46][country.cpp:3076]: Attempting to set captial state #416 for , they dont own it!
+[20:38:46][country.cpp:3076]: Attempting to set captial state #416 for , they dont own it!
+[20:38:46][country.cpp:3076]: Attempting to set captial state #416 for , they dont own it!
+[20:38:46][country.cpp:3076]: Attempting to set captial state #617 for East Turkestan Republic, they dont own it!
+[20:38:46][country.cpp:3076]: Attempting to set captial state #336 for , they dont own it!
+[20:38:46][country.cpp:3076]: Attempting to set captial state #416 for Niger, they dont own it!
+[20:38:46][country.cpp:3076]: Attempting to set captial state #761 for Benin, they dont own it!
+[20:38:46][country.cpp:3076]: Attempting to set captial state #769 for Malawi, they dont own it!
+[20:38:47][effectimplementation.cpp:2455]: Invalid equipment parent version for create_equipment_variant: WGR submarine_2 ver. 0
+[20:38:47][effectimplementation.cpp:2445]: Equipment variant 'Zerstörer 1936' has invalid upgrades
+[20:39:05][flagtextureatlas.cpp:460]: Error loading flag for country BAN : Ideology socialist : Path gfx/flags/ : File not found
+[20:39:05][flagtextureatlas.cpp:460]: Error loading flag for country ASA : Ideology neutrality : Path gfx/flags/ : File not found
+[20:39:05][flagtextureatlas.cpp:460]: Error loading flag for country KHA : Ideology neutrality : Path gfx/flags/ : File not found
+[20:39:05][flagtextureatlas.cpp:460]: Error loading flag for country BAN : Ideology socialist : Path gfx/flags/medium/ : File not found
+[20:39:05][flagtextureatlas.cpp:460]: Error loading flag for country ASA : Ideology neutrality : Path gfx/flags/medium/ : File not found
+[20:39:05][flagtextureatlas.cpp:460]: Error loading flag for country KHA : Ideology neutrality : Path gfx/flags/medium/ : File not found
+[20:39:06][flagtextureatlas.cpp:460]: Error loading flag for country BAN : Ideology socialist : Path gfx/flags/small/ : File not found
+[20:39:06][flagtextureatlas.cpp:460]: Error loading flag for country ASA : Ideology neutrality : Path gfx/flags/small/ : File not found
+[20:39:06][flagtextureatlas.cpp:460]: Error loading flag for country KHA : Ideology neutrality : Path gfx/flags/small/ : File not found
+[20:39:06][flagtextureatlas.cpp:460]: Error loading flag for country BAN : Ideology socialist : Path gfx/flags/small/ : File not found
+[20:39:06][flagtextureatlas.cpp:460]: Error loading flag for country ASA : Ideology neutrality : Path gfx/flags/small/ : File not found
+[20:39:06][flagtextureatlas.cpp:460]: Error loading flag for country KHA : Ideology neutrality : Path gfx/flags/small/ : File not found

@@ -1,0 +1,69 @@
+Plans for next update
+New Focus Trees for:
+-Soviets - In Progress by myself
+-Afghanistan
+-Mongolia - Being Worked On
+-Czechozlovakia - Being worked on
+-Romania - Being worked on
+-Turkey - Needs Finished
+-Iran
+-Iraq
+-Bulgaria
+-Finland - Being Worked One
+-Greece - In Planning
+-Provisional Democratic Greece
+
+New Country Stuff
+-SSRs
+-Other releaseable Soviet States
+-More states for Cuba
+
+New Events
+-More Uprising Events
+-Stalin Note Event Chain
+-1961 Berlin Crisis
+-Space Events
+-Euromissile Crisis
+-Finnish Note Crisis
+
+Tech Stuff
+-Custom space trees for USA, USSR, ESA, PRC, and Japan
+-Continue Work on Infantry Tree
+
+
+Fixes
+-Better Balance for New Infantry Tech
+	-Scale Anti Tank Weapons and New Tank Tree
+-Remove province 9849 from definition.csv file
+
+History
+- All different party leaders for main NATO and Warsaw Pact countries (1949 - 1999)
+- Add the "liquid_propelled_rocket" technology to the history files of the main countries
+
+SSRs
+Armenia Soviet Socialist Republic
+Azerbaijan Soviet Socialist Republic
+Byelorussia Soviet Socialist Republic
+Estonia Soviet Socialist Republic
+Georgia Soviet Socialist Republic
+Kazakhstan Soviet Socialist Republic
+Kirghizia Soviet Socialist Republic
+Latvia Soviet Socialist Republic
+Lithuania Soviet Socialist Republic
+Moldavia Soviet Socialist Republic
+Tajikistan Soviet Socialist Republic
+Turkmenia Soviet Socialist Republic
+Ukraine Soviet Socialist Republic
+Uzbekistan Soviet Socialist Republic
+
+Karelo-Finnish Soviet Socialist Republic (Event for annexation in 1956)
+
+Autonomous SSRs
+Chechen-Ingush Autonomous Soviet Socialist Republic
+
+Attempted Break Aways
+Republic of Abkhazia
+Republic of Crimea
+Republic of Tatarstan
+Republic of South Ossetia
+Republic of Gagauzia

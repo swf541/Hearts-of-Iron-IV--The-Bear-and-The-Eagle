@@ -1,0 +1,32 @@
+Plans for American update
+New Focus Trees for:
+-America
+-Mexico
+-Canada
+-Colombia
+-FARC
+-Venezuela
+-Brazil
+-Peru
+-Ecuador
+-Bolivia
+-Argentina
+-Chile
+-Nicaurauga
+-Other central American and South American Minors
+
+New Country Stuff
+-Carribean Countries
+
+
+New Events
+
+
+Tech Stuff
+
+
+Fixes
+- Reducing the error.log to under 100 lines
+
+History
+- All different party leaders for main NATO and Warsaw Pact countries (1949 - 1999)
