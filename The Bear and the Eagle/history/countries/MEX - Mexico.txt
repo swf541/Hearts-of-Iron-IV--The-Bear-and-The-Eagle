@@ -1,0 +1,294 @@
+﻿capital = 277
+
+oob = "MEX_1936"
+
+# Starting tech
+set_technology = {
+	CAS1 = 1
+	CAS2 = 1
+	CAS3 = 1
+	CAS4 = 1
+	advanced_destroyer = 1
+	advanced_rocket_engines = 1
+	amphibious1 = 1
+	antiair1 = 1
+	basic_carrier = 1
+	basic_destroyer = 1
+	basic_light_cruiser = 1
+	basic_machine_tools = 1
+	basic_submarine = 1
+	battle_cruiser_1 = 1
+	battleship_2 = 1
+	battleship_3 = 1
+	construction1 = 1
+	cv_CAS1 = 1
+	cv_CAS2 = 1
+	cv_CAS3 = 1
+	cv_CAS4 = 1
+	cv_early_fighter = 1
+	cv_fighter1 = 1
+	cv_fighter2 = 1
+	cv_fighter3 = 1
+	cv_fighter4 = 1
+	cv_jet_CAS1 = 1
+	cv_naval_bomber1 = 1
+	cv_naval_bomber2 = 1
+	cv_naval_bomber3 = 1
+	cv_naval_bomber4 = 1
+	early_battleship = 1
+	early_bomber = 1
+	early_carrier = 1
+	early_destroyer = 1
+	early_fighter = 1
+	early_light_cruiser = 1
+	early_submarine = 1
+	electronic_mechanical_engineering = 1
+	experimental_rockets = 1
+	fighter1 = 1
+	fighter2 = 1
+	fighter3 = 1
+	frigate_1 = 1
+	frigate_2 = 1
+	great_war_infantry_equipment = 1
+	gw_artillery = 1
+	heavy_fighter1 = 1
+	heavy_fighter2 = 1
+	heavy_fighter3 = 1
+	heavy_infantry_weapons1 = 1
+	heavy_infantry_weapons2 = 1
+	heavy_tanks_2 = 1
+	heavy_tanks_3 = 1
+	improved_destroyer = 1
+	improved_light_cruiser = 1
+	improved_rocket_engines = 1
+	interwar_antiair = 1
+	infantry_equip_1 = 1
+	jet_CAS1 = 1
+	jet_engines = 1
+	jet_fighter1 = 1
+	jet_fighter2 = 1
+	jet_interceptor1 = 1
+	jet_interceptor2 = 1
+	jet_strategic_bomber1 = 1
+	jet_tactical_bomber1 = 1
+	landing_craft = 1
+	light_carrier1 = 1
+	light_carrier2 = 1
+	light_tanks_1 = 1
+	main_battle_tanks_1 = 1
+	main_battle_tanks_2 = 1
+	mechanized_heavy_infantry = 1
+	mechanized_infantry = 1
+	mechanized_infantry2 = 1
+	mortar_infantry_weapons_1 = 1
+	mortar_infantry_weapons_2 = 1
+	motorised_infantry = 1
+	naval_bomber1 = 1
+	naval_bomber2 = 1
+	naval_bomber3 = 1
+	naval_bomber4 = 1
+	nuclear_cg_1 = 1
+	radio = 1
+	radio_detection = 1
+	rocket_engines = 1
+	sp_rocket1 = 1
+	sp_rocket2 = 1
+	strategic_bomber1 = 1
+	strategic_bomber2 = 1
+	strategic_bomber3 = 1
+	suicide_craft = 1
+	synth_oil_experiments = 1
+	tactical_bomber1 = 1
+	tactical_bomber2 = 1
+	tactical_bomber3 = 1
+	tank_landing_craft = 1
+	tech_support = 1
+	transport = 1
+}
+
+
+add_ideas = {
+	population_growth_stagnation
+}
+
+set_convoys = 200
+
+set_country_flag = monroe_doctrine
+
+set_politics = {
+
+	parties = {
+		democratic = { 
+			popularity = 1
+		}
+		conservative = {
+			popularity = 19	
+		}
+		fascism = {
+			popularity = 0
+		}
+		
+		communism = {
+			popularity = 1
+		}
+		
+		neutrality = { 
+			popularity = 79
+		}
+	}
+	
+	ruling_party = neutrality
+	last_election = "1934.7.1"
+	election_frequency = 72
+	elections_allowed = yes
+}
+
+
+set_national_unity = 0.8
+
+create_country_leader = {
+	name = "Salvador Abascal"
+	desc = "POLITICS_SALVADOR_ABASCAL_DESC"
+	picture = "gfx/leaders/South America/Portrait_South_America_Generic_land_5.dds"
+	expire = "1965.1.1"
+	ideology = falangism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Efraín Luna"
+	desc = ""
+	picture = "Luna.dds"
+	expire = "1965.1.1"
+	ideology = conservatism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Vicente Lombardo"
+	desc = ""
+	picture = "Lombardo.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Adolfo Cortines"
+	desc = ""
+	picture = "Cortines.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
+}
+create_country_leader = { #from 1940, but he's prettier so he gets to win early
+	name = "Miguel Guzmán"
+	desc = ""
+	picture = "Guzmán.dds"
+	expire = "1965.1.1"
+	ideology = socialism
+	traits = {
+		#
+	}
+}
+create_country_leader = { #from 1940, but he's prettier so he gets to win early
+	name = "Miguel Alemán Valdés"
+	desc = "POLITICS_LAZARO_CARDENAS_DESC"
+	picture = "Portrait_MEX_Miguel.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
+}
+
+create_corps_commander = {
+	name = "Luis Farell"
+	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_land_2.dds"
+	traits = { }
+	skill = 3
+}
+
+create_corps_commander = {
+	name = "Gildardo Magaña"
+	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_land_4.dds"
+	traits = { desert_fox }
+	skill = 3
+}
+
+create_navy_leader = {
+	name = "Paul Suarez"
+	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_navy_2.dds"
+	traits = { superior_tactician }
+	skill = 3
+}
+1958.1.1 = {
+set_politics = {
+
+	parties = {
+		democratic = { 
+			popularity = 1
+		}
+		conservative = {
+			popularity = 19	
+		}
+		fascism = {
+			popularity = 0
+		}
+		
+		communism = {
+			popularity = 1
+		}
+		
+		centrist = { 
+			popularity = 79
+		}
+	}
+	
+	ruling_party = centrist
+	last_election = "1958.7.1"
+	election_frequency = 72
+	elections_allowed = yes
+}
+	create_country_leader = { #from 1940, but he's prettier so he gets to win early
+		name = "Adolfo López Mateos"
+		desc = ""
+		picture = "Mateos.dds"
+		expire = "1969.1.1"
+		ideology = centrism
+		traits = {
+			#
+		}
+	}
+}
+1970.1.1 = {
+	create_country_leader = { 
+		name = "Luis Echeverría"
+		desc = ""
+		picture = "Echeverría.dds"
+		expire = "2020.1.1"
+		ideology = centrism
+		traits = {
+			#
+		}
+	}
+}
+1976.1.1 = {
+	create_country_leader = { 
+		name = "José López Portillo"
+		desc = ""
+		picture = "Portillo.dds"
+		expire = "2020.1.1"
+		ideology = centrism
+		traits = {
+			#
+		}
+	}
+}

@@ -1,0 +1,374 @@
+﻿capital = 37
+
+oob = "DEN_1949"
+
+set_research_slots = 3
+
+set_technology = {
+	CAS1 = 1
+	CAS2 = 1
+	CAS3 = 1
+	CAS4 = 1
+	advanced_destroyer = 1
+	advanced_rocket_engines = 1
+	amphibious1 = 1
+	antiair1 = 1
+	basic_carrier = 1
+	basic_destroyer = 1
+	basic_light_cruiser = 1
+	basic_machine_tools = 1
+	basic_submarine = 1
+	battle_cruiser_1 = 1
+	battleship_2 = 1
+	battleship_3 = 1
+	construction1 = 1
+	cv_CAS1 = 1
+	cv_CAS2 = 1
+	cv_CAS3 = 1
+	cv_CAS4 = 1
+	cv_early_fighter = 1
+	cv_fighter1 = 1
+	cv_fighter2 = 1
+	cv_fighter3 = 1
+	cv_fighter4 = 1
+	cv_jet_CAS1 = 1
+	cv_naval_bomber1 = 1
+	cv_naval_bomber2 = 1
+	cv_naval_bomber3 = 1
+	cv_naval_bomber4 = 1
+	early_battleship = 1
+	early_bomber = 1
+	early_carrier = 1
+	early_destroyer = 1
+	early_fighter = 1
+	early_light_cruiser = 1
+	early_submarine = 1
+	electronic_mechanical_engineering = 1
+	experimental_rockets = 1
+	fighter1 = 1
+	fighter2 = 1
+	fighter3 = 1
+	frigate_1 = 1
+	frigate_2 = 1
+	great_war_infantry_equipment = 1
+	gw_artillery = 1
+	heavy_fighter1 = 1
+	heavy_fighter2 = 1
+	heavy_fighter3 = 1
+	heavy_infantry_weapons1 = 1
+	heavy_infantry_weapons2 = 1
+	heavy_tanks_2 = 1
+	heavy_tanks_3 = 1
+	improved_destroyer = 1
+	improved_light_cruiser = 1
+	improved_rocket_engines = 1
+	interwar_antiair = 1
+	infantry_equip_1 = 1
+	jet_CAS1 = 1
+	jet_engines = 1
+	jet_fighter1 = 1
+	jet_fighter2 = 1
+	jet_interceptor1 = 1
+	jet_interceptor2 = 1
+	jet_strategic_bomber1 = 1
+	jet_tactical_bomber1 = 1
+	landing_craft = 1
+	light_carrier1 = 1
+	light_carrier2 = 1
+	light_tanks_1 = 1
+	main_battle_tanks_1 = 1
+	main_battle_tanks_2 = 1
+	mechanized_heavy_infantry = 1
+	mechanized_infantry = 1
+	mechanized_infantry2 = 1
+	mortar_infantry_weapons_1 = 1
+	mortar_infantry_weapons_2 = 1
+	motorised_infantry = 1
+	naval_bomber1 = 1
+	naval_bomber2 = 1
+	naval_bomber3 = 1
+	naval_bomber4 = 1
+	nuclear_cg_1 = 1
+	radio = 1
+	radio_detection = 1
+	rocket_engines = 1
+	sp_rocket1 = 1
+	sp_rocket2 = 1
+	strategic_bomber1 = 1
+	strategic_bomber2 = 1
+	strategic_bomber3 = 1
+	suicide_craft = 1
+	synth_oil_experiments = 1
+	tactical_bomber1 = 1
+	tactical_bomber2 = 1
+	tactical_bomber3 = 1
+	tank_landing_craft = 1
+	tech_support = 1
+	transport = 1
+}
+
+
+add_ideas = {
+	population_growth_steady
+	nato_member
+}
+
+set_politics = {
+
+	parties = {
+		democratic = { 
+			popularity = 12
+		}
+		fascism = {
+			popularity = 1
+		}
+		communism = {
+			popularity = 7
+		}
+		socialist = {
+			popularity = 40		
+		}
+		centrist = {
+			popularity = 28
+		}
+		conservative = {
+			popularity = 12		
+		}
+	}
+	
+	ruling_party = socialist
+	last_election = "1947.4.3"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_convoys = 200
+
+create_country_leader = {
+	name = "Hans Hedtoft"
+	desc = "POLITICS_THORVALD_STAUNING_DESC"
+	picture = "Hans.dds"
+	expire = "1965.1.1"
+	ideology = socialism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Frits Clausen"
+	desc = "POLITICS_FRITS_CLAUSEN_DESC"
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+	expire = "1965.1.1"
+	ideology = nazism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Aksel Larsen"
+	desc = "POLITICS_AKSEL_LARSEN_DESC"
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+	expire = "1965.1.1"
+	ideology = leninism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Knud Kristensen"
+	desc = ""
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
+	expire = "1965.1.1"
+	ideology = centrism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Ole Bjørn Kraft"
+	desc = ""
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+	expire = "1965.1.1"
+	ideology = conservatism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Jørgen Jørgensen"
+	desc = ""
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
+	expire = "1965.1.1"
+	ideology = liberalism
+	traits = {
+		#
+	}
+}
+
+create_corps_commander = {
+	name = "Wilhelm Wain Prior"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+	traits = { trickster }
+	skill = 3
+}
+1949.1.1 = {
+	add_ai_strategy = {
+		type = alliance
+		id = "USA"
+		value = 1000
+	}
+}
+1960.1.1 = {
+	set_politics = {
+
+		parties = {
+			democratic = { 
+				popularity = 12
+			}
+			fascism = {
+				popularity = 1
+			}
+			communism = {
+				popularity = 7
+			}
+			socialist = {
+				popularity = 40		
+			}
+			centrist = {
+				popularity = 28
+			}
+			conservative = {
+				popularity = 12		
+			}
+		}
+		
+		ruling_party = socialist
+		last_election = "1947.4.3"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+	create_country_leader = {
+		name = "Viggo Kampmann"
+		desc = ""
+		picture = "Kampmann.dds"
+		expire = "1976.1.1"
+		ideology = socialism
+		traits = {
+			#
+		}
+	}
+}
+1973.1.1 = {
+	set_politics = {
+
+		parties = {
+			democratic = { 
+				popularity = 12
+			}
+			fascism = {
+				popularity = 1
+			}
+			communism = {
+				popularity = 7
+			}
+			socialist = {
+				popularity = 40		
+			}
+			centrist = {
+				popularity = 28
+			}
+			conservative = {
+				popularity = 12		
+			}
+		}
+		
+		ruling_party = socialist
+		last_election = "1947.4.3"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+	create_country_leader = {
+		name = "Anker Jorgensen"
+		desc = ""
+		picture = "Jorgensen.dds"
+		expire = "1976.1.1"
+		ideology = socialism
+		traits = {
+			#
+		}
+	}
+}
+1980.1.1 = {
+	set_politics = {
+
+		parties = {
+			socialist = { 
+				popularity = 38.30
+			}
+
+			democratic = {
+				popularity = 12.50
+			}
+			
+			conservative = {
+				popularity = 12.50
+			}
+		
+			neutrality = {
+				popularity = 13.60
+			}
+			
+			liberal = {
+				popularity = 5.90
+			}
+		
+			Social_Liberalism = {
+				popularity = 5.40
+			}
+			
+			communism = {
+				popularity = 6
+			}
+			
+			centrist = {
+				popularity = 3.20
+			}
+			
+			Christian_Democratic = {
+				popularity = 2.60
+			}
+			
+		}
+		
+		ruling_party = socialist
+		last_election = "1979.10.23"
+		election_frequency = 24
+		elections_allowed = yes
+	}
+
+	#puppet = FAR
+	#puppet = GRN
+
+
+
+
+	set_convoys = 40
+
+	create_country_leader = {
+		name = "Anker Jørgensen"
+		desc = "POLITICS_THORVALD_STAUNING_DESC"
+		picture = "gfx/leaders/DEN/Anker.dds"
+		expire = "1982.10.9"
+		ideology = socialism
+		traits = {
+			#
+		}
+	}
+}

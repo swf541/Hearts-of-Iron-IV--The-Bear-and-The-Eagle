@@ -1,0 +1,515 @@
+﻿capital = 545
+
+oob = "ZIM_1936"
+
+# Starting tech
+set_technology = {
+	CAS1 = 1
+	CAS2 = 1
+	CAS3 = 1
+	CAS4 = 1
+	advanced_destroyer = 1
+	advanced_rocket_engines = 1
+	amphibious1 = 1
+	antiair1 = 1
+	basic_carrier = 1
+	basic_destroyer = 1
+	basic_light_cruiser = 1
+	basic_machine_tools = 1
+	basic_submarine = 1
+	battle_cruiser_1 = 1
+	battleship_2 = 1
+	battleship_3 = 1
+	construction1 = 1
+	cv_CAS1 = 1
+	cv_CAS2 = 1
+	cv_CAS3 = 1
+	cv_CAS4 = 1
+	cv_early_fighter = 1
+	cv_fighter1 = 1
+	cv_fighter2 = 1
+	cv_fighter3 = 1
+	cv_fighter4 = 1
+	cv_jet_CAS1 = 1
+	cv_naval_bomber1 = 1
+	cv_naval_bomber2 = 1
+	cv_naval_bomber3 = 1
+	cv_naval_bomber4 = 1
+	early_battleship = 1
+	early_bomber = 1
+	early_carrier = 1
+	early_destroyer = 1
+	early_fighter = 1
+	early_light_cruiser = 1
+	early_submarine = 1
+	electronic_mechanical_engineering = 1
+	experimental_rockets = 1
+	fighter1 = 1
+	fighter2 = 1
+	fighter3 = 1
+	frigate_1 = 1
+	frigate_2 = 1
+	great_war_infantry_equipment = 1
+	gw_artillery = 1
+	heavy_fighter1 = 1
+	heavy_fighter2 = 1
+	heavy_fighter3 = 1
+	heavy_infantry_weapons1 = 1
+	heavy_infantry_weapons2 = 1
+	heavy_tanks_2 = 1
+	heavy_tanks_3 = 1
+	improved_destroyer = 1
+	improved_light_cruiser = 1
+	improved_rocket_engines = 1
+	interwar_antiair = 1
+	infantry_equip_1 = 1
+	jet_CAS1 = 1
+	jet_engines = 1
+	jet_fighter1 = 1
+	jet_fighter2 = 1
+	jet_interceptor1 = 1
+	jet_interceptor2 = 1
+	jet_strategic_bomber1 = 1
+	jet_tactical_bomber1 = 1
+	landing_craft = 1
+	light_carrier1 = 1
+	light_carrier2 = 1
+	light_tanks_1 = 1
+	main_battle_tanks_1 = 1
+	main_battle_tanks_2 = 1
+	mechanized_heavy_infantry = 1
+	mechanized_infantry = 1
+	mechanized_infantry2 = 1
+	mortar_infantry_weapons_1 = 1
+	mortar_infantry_weapons_2 = 1
+	motorised_infantry = 1
+	naval_bomber1 = 1
+	naval_bomber2 = 1
+	naval_bomber3 = 1
+	naval_bomber4 = 1
+	nuclear_cg_1 = 1
+	radio = 1
+	radio_detection = 1
+	rocket_engines = 1
+	sp_rocket1 = 1
+	sp_rocket2 = 1
+	strategic_bomber1 = 1
+	strategic_bomber2 = 1
+	strategic_bomber3 = 1
+	suicide_craft = 1
+	synth_oil_experiments = 1
+	tactical_bomber1 = 1
+	tactical_bomber2 = 1
+	tactical_bomber3 = 1
+	tank_landing_craft = 1
+	tech_support = 1
+	transport = 1
+}
+
+
+set_research_slots = 3
+add_ideas = {
+	population_growth_explosion
+}
+set_country_flag = rhodesia
+clr_country_flag = zimbabwe
+
+set_convoys = 200
+
+set_cosmetic_tag = CSRHO
+
+set_politics = {
+
+	parties = {
+		democratic = { 
+			popularity = 15
+		}
+
+		fascism = {
+			popularity = 5
+		}
+		
+		nationalism = {
+			popularity = 10
+			#banned = no #default is no
+		}
+		
+		conservative = {
+		popularity = 40
+		}
+		
+		neutrality = { 
+			popularity = 0
+		}
+		pan_arabism = {
+			popularity = 0
+			#banned = no
+		}
+		Liberal_Conservatism = {
+			popularity = 0
+		}
+		Christianism = {
+			popularity = 0
+		}
+		Judaism = {
+			popularity = 0
+		}
+		Republicanism = {
+			popularity = 0
+		}
+		Christian_Democratic = {
+			popularity = 0
+		}
+		American_Democratic = {
+			popularity = 0
+		}
+		centrist = {
+			popularity = 5
+		}
+		liberal = {
+			popularity = 0
+		}
+		trotskyism = {
+			popularity = 0
+		}
+		maoism = {
+			popularity = 0
+		}
+		National_Socialism = {
+			popularity = 0
+		}
+		communism = {
+			popularity = 0
+		}
+		monarchism = {
+			popularity = 0
+		}
+		islamism = {
+			popularity = 0
+		}
+		radical_shiaism = {
+			popularity = 0
+		}
+		Social_Democratic = {
+			popularity = 0
+		}
+		socialist = {
+			popularity = 0
+		}
+		Social_Liberalism = {
+			popularity = 25
+		}
+		Salafism = {
+			popularity = 0
+		}
+		
+		
+	}
+	
+	ruling_party = conservative
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Godfrey Huggins"
+	desc = ""
+	picture = "gfx/leaders/ZIM/Portrait_Huggins.dds"
+	expire = "1953.9.7"
+	ideology = conservatism
+	traits = {
+		#
+	}
+}
+1953.9.7 = {
+	set_cosmetic_tag = FRN
+	set_party_name = { ideology = conservative long_name = ZIM_UFP_long name = ZIM_UFP }
+	set_country_flag = frn
+	create_country_leader = {
+		name = "Garfield Todd"
+		desc = ""
+		picture = "gfx/leaders/ZIM/Portrait_Todd.dds"
+		expire = "1958.2.17"
+		ideology = conservatism
+		traits = {
+			#
+		}
+	}
+}
+1958.2.17 = {
+	create_country_leader = {
+		name = "Edgar Whitehead"
+		desc = ""
+		picture = "gfx/leaders/ZIM/Portrait_Whitehead.dds"
+		expire = "1962.12.17"
+		ideology = conservatism
+		traits = {
+			#
+		}
+	}
+}
+1960.1.1 = {
+	complete_national_focus = zim_our_future
+	complete_national_focus = zim_political
+	complete_national_focus = zim_colony
+	complete_national_focus = zim_defy
+	complete_national_focus = zim_apartheid
+	complete_national_focus = zim_frn
+	complete_national_focus = zim_frn_continued
+	complete_national_focus = zim_persuade_nr
+	complete_national_focus = zim_persuade_nya
+	complete_national_focus = zim_form_frn
+	create_country_leader = {
+		name = "Joshua Nkomo"
+		desc = "ZIM_NKOMO_DESC"
+		picture = "gfx/leaders/ZIM/Portrait_Nkomo.dds"
+		expire = "2007.12.12"
+		ideology = african_nationalism
+		traits = {
+		}
+	}
+	
+	
+	#set_party_name = { ideology = conservative long_name = RF_long name = RF }
+	set_party_name = { ideology = nationalism long_name = NDP_long name = NDP }
+}
+1962.12.17 = {
+	create_country_leader = {
+		name = "Winston Field"
+		desc = ""
+		picture = "gfx/leaders/ZIM/Portrait_Field.dds"
+		expire = "1964.4.13"
+		ideology = conservatism
+		traits = {
+			#
+		}
+	}
+	set_party_name = { ideology = nationalism long_name = ZAPU_long name = ZAPU }
+	set_party_name = { ideology = conservative long_name = RF_long name = RF }
+	set_country_flag = zapu_enabled
+}
+1963.7.5 = {
+	set_country_flag = formed_FRN
+	set_cosmetic_tag = RHO
+	set_country_flag = zanu_enabled
+	complete_national_focus = zim_independence
+	complete_national_focus = zim_indrho
+	complete_national_focus = zim_cut_british_ties
+	complete_national_focus = zim_udi
+}
+1964.4.13 = {
+	clr_country_flag = frn
+	create_country_leader = {
+		name = "Ian Smith"
+		desc = ""
+		picture = "gfx/leaders/ZIM/Portrait_Smith.dds"
+		expire = "2007.11.20"
+		ideology = conservatism
+		traits = {
+			#
+		}
+	}
+}
+
+1970.1.1 = {
+	complete_national_focus = zim_improvements
+	complete_national_focus = zim_turmoil
+	complete_national_focus = zim_resist
+	complete_national_focus = zim_frn_resist
+	complete_national_focus = zim_war_propaganda
+	complete_national_focus = zim_internal
+	complete_national_focus = zim_building_effort
+	complete_national_focus = zim_factory_effort_1
+	complete_national_focus = zim_factory_effort_2
+	complete_national_focus = zim_construction_effort_1
+	complete_national_focus = zim_construction_effort_2
+	complete_national_focus = zim_infrastructure_effort
+	complete_national_focus = zim_infrastructure_1
+	complete_national_focus = zim_army_effort
+	complete_national_focus = zim_infantry_effort
+	complete_national_focus = zim_air_effort
+	complete_national_focus = zim_bomber_effort
+	complete_national_focus = zim_ideology
+	remove_ideas = {
+		zim_zanu_1
+		zim_zanu_2
+		zim_zanu_3
+		zim_zanu_4
+		zim_zanu_5
+		zim_zanu_6
+		zim_zanu_7
+		zim_zanu_8
+		zim_zanu_9
+		zim_zanu_10
+		zim_zapu_1
+		zim_zapu_2
+		zim_zapu_3
+		zim_zapu_4
+		zim_zapu_5
+		zim_zapu_6
+		zim_zapu_7
+		zim_zapu_8
+		zim_zapu_9
+		zim_zapu_10
+	}
+	add_ideas = {
+		zim_zanu_3
+		zim_zapu_4
+	}
+}
+
+1974.1.1 = {
+	set_party_name = { ideology = nationalism long_name = ZANU_long name = ZANU }
+	create_country_leader = {
+		name = "Robert Mugabe"
+		desc = "ZIM_MUGABE_DESC"
+		picture = "gfx/leaders/ZIM/Portrait_Mugabe.dds"
+		expire = "2007.12.12"
+		ideology = african_nationalism
+		traits = {
+			
+		}
+	}
+}
+1979.4.13 = {
+	set_cosmetic_tag = RHO
+	create_country_leader = {
+		name = "Abel Muzorewa"
+		desc = "ZIM_MUZOREWA_DESC"
+		picture = "gfx/leaders/ZIM/Portrait_Muzorewa.dds"
+		expire = "2007.12.12"
+		ideology = social_liberalism
+		traits = {
+		}
+	}
+	set_politics = {
+		ruling_party = Social_Liberalism
+		parties = {
+			democratic = {
+				popularity = 0
+			}
+			communism = {
+				popularity = 5
+			}
+			conservative = {
+				popularity = 20
+			}
+			socialist = {
+				popularity = 5
+			}
+			Social_Liberalism = {
+				popularity = 20
+			}
+			nationalism = {
+				popularity = 50
+			}
+		
+		}
+	}
+}
+
+1980.1.1 = {
+	oob = "ZIM_1980"
+	
+	remove_ideas = {
+		zim_zanu_1
+		zim_zanu_2
+		zim_zanu_3
+		zim_zanu_4
+		zim_zanu_5
+		zim_zanu_6
+		zim_zanu_7
+		zim_zanu_8
+		zim_zanu_9
+		zim_zanu_10
+		zim_zapu_1
+		zim_zapu_2
+		zim_zapu_3
+		zim_zapu_4
+		zim_zapu_5
+		zim_zapu_6
+		zim_zapu_7
+		zim_zapu_8
+		zim_zapu_9
+		zim_zapu_10
+	}
+	add_ideas = {
+		zim_zanu_8
+		zim_zapu_6
+	}
+	
+	set_country_flag = zapu_enabled
+	set_country_flag = zanu_enabled
+	set_party_name = { ideology = nationalism long_name = ZANU_long name = ZANU }
+	set_politics = {
+
+		parties = {
+			democratic = {
+				popularity = 0
+			}
+			nationalism = {
+				popularity = 77
+			}
+			conservative = {
+				popularity = 10
+			}
+			fascism = {
+				popularity = 2
+			}
+			socialist = {
+				popularity = 0
+			}
+			Social_Liberalism = {
+				popularity = 13
+			}
+			communism = {
+				popularity = 8
+			}
+			
+		}
+
+	}
+
+}
+1980.2.14 = {
+	clr_country_flag = rhodesia
+	set_country_flag = zimbabwe
+	drop_cosmetic_tag = yes
+	remove_ideas = {
+		zim_zanu_1
+		zim_zanu_2
+		zim_zanu_3
+		zim_zanu_4
+		zim_zanu_5
+		zim_zanu_6
+		zim_zanu_7
+		zim_zanu_8
+		zim_zanu_9
+		zim_zanu_10
+		zim_zapu_1
+		zim_zapu_2
+		zim_zapu_3
+		zim_zapu_4
+		zim_zapu_5
+		zim_zapu_6
+		zim_zapu_7
+		zim_zapu_8
+		zim_zapu_9
+		zim_zapu_10
+	}
+	create_country_leader = {
+		name = "Robert Mugabe"
+		desc = "ZIM_MUGABE_DESC"
+		picture = "gfx/leaders/ZIM/Portrait_Mugabe.dds"
+		expire = "2007.12.12"
+		ideology = african_nationalism
+		traits = {
+		}
+	}
+	set_politics = {
+		ruling_party = nationalism
+		elections_allowed = no
+	}
+
+}

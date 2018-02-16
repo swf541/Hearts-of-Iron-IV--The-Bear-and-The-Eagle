@@ -1,0 +1,1025 @@
+﻿capital = 126
+
+oob = "ENG_1949"
+
+set_research_slots = 4
+
+set_national_unity = 0.6
+
+# Starting tech
+set_technology = {
+	CAS1 = 1
+	CAS2 = 1
+	CAS3 = 1
+	CAS4 = 1
+	advanced_destroyer = 1
+	advanced_rocket_engines = 1
+	amphibious1 = 1
+	antiair1 = 1
+	basic_carrier = 1
+	basic_destroyer = 1
+	basic_light_cruiser = 1
+	basic_machine_tools = 1
+	basic_submarine = 1
+	battle_cruiser_1 = 1
+	battleship_2 = 1
+	battleship_3 = 1
+	construction1 = 1
+	cv_CAS1 = 1
+	cv_CAS2 = 1
+	cv_CAS3 = 1
+	cv_CAS4 = 1
+	cv_early_fighter = 1
+	cv_fighter1 = 1
+	cv_fighter2 = 1
+	cv_fighter3 = 1
+	cv_fighter4 = 1
+	cv_jet_CAS1 = 1
+	cv_naval_bomber1 = 1
+	cv_naval_bomber2 = 1
+	cv_naval_bomber3 = 1
+	cv_naval_bomber4 = 1
+	early_battleship = 1
+	early_bomber = 1
+	early_carrier = 1
+	early_destroyer = 1
+	early_fighter = 1
+	early_light_cruiser = 1
+	early_submarine = 1
+	electronic_mechanical_engineering = 1
+	experimental_rockets = 1
+	fighter1 = 1
+	fighter2 = 1
+	fighter3 = 1
+	frigate_1 = 1
+	frigate_2 = 1
+	great_war_infantry_equipment = 1
+	gw_artillery = 1
+	heavy_fighter1 = 1
+	heavy_fighter2 = 1
+	heavy_fighter3 = 1
+	heavy_infantry_weapons1 = 1
+	heavy_infantry_weapons2 = 1
+	heavy_tanks_2 = 1
+	heavy_tanks_3 = 1
+	improved_destroyer = 1
+	improved_light_cruiser = 1
+	improved_rocket_engines = 1
+	interwar_antiair = 1
+	infantry_equip_1 = 1
+	jet_CAS1 = 1
+	jet_engines = 1
+	jet_fighter1 = 1
+	jet_fighter2 = 1
+	jet_interceptor1 = 1
+	jet_interceptor2 = 1
+	jet_strategic_bomber1 = 1
+	jet_tactical_bomber1 = 1
+	landing_craft = 1
+	light_carrier1 = 1
+	light_carrier2 = 1
+	light_tanks_1 = 1
+	main_battle_tanks_1 = 1
+	main_battle_tanks_2 = 1
+	mechanized_heavy_infantry = 1
+	mechanized_infantry = 1
+	mechanized_infantry2 = 1
+	mortar_infantry_weapons_1 = 1
+	mortar_infantry_weapons_2 = 1
+	motorised_infantry = 1
+	naval_bomber1 = 1
+	naval_bomber2 = 1
+	naval_bomber3 = 1
+	naval_bomber4 = 1
+	nuclear_cg_1 = 1
+	radio = 1
+	radio_detection = 1
+	rocket_engines = 1
+	sp_rocket1 = 1
+	sp_rocket2 = 1
+	strategic_bomber1 = 1
+	strategic_bomber2 = 1
+	strategic_bomber3 = 1
+	suicide_craft = 1
+	synth_oil_experiments = 1
+	tactical_bomber1 = 1
+	tactical_bomber2 = 1
+	tactical_bomber3 = 1
+	tank_landing_craft = 1
+	tech_support = 1
+	transport = 1
+}
+
+
+set_convoys = 800
+give_guarantee = WGR
+
+if = {
+	limit = {
+		has_dlc = "Together for Victory"
+	}
+	set_autonomy = {
+		target = OMA
+		autonomous_state = autonomy_protectorate
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = KUW
+		autonomous_state = autonomy_protectorate
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = SUD
+		autonomous_state = autonomy_colony
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = KNA
+		autonomous_state = autonomy_colony
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = DRY
+		autonomous_state = autonomy_protectorate
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = UGA
+		autonomous_state = autonomy_protectorate
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = MAL
+		autonomous_state = autonomy_protectorate
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = NIA
+		autonomous_state = autonomy_protectorate
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = ZIM
+		autonomous_state = autonomy_protectorate
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = ZAM
+		autonomous_state = autonomy_colony
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = NIA
+		autonomous_state = autonomy_colony
+		freedom_level = 0.7
+	}
+	set_autonomy = {
+		target = BOT
+		autonomous_state = autonomy_protectorate
+		freedom_level = 0.6
+	}
+	set_autonomy = {
+		target = NYA
+		autonomous_state = autonomy_protectorate
+		freedom_level = 0.6
+	}
+	set_autonomy = {
+		target = LBA
+		autonomous_state = autonomy_protectorate
+		freedom_level = 0.6
+	}
+	set_autonomy = {
+		target = CAN
+		autonomous_state = autonomy_dominion
+		freedom_level = 0.6
+	}
+	set_autonomy = {
+		target = AST
+		autonomous_state = autonomy_dominion
+		freedom_level = 0.6
+	}
+	set_autonomy = {
+		target = NZL
+		autonomous_state = autonomy_dominion
+		freedom_level = 0.6
+	}
+	set_autonomy = {
+		target = SAF
+		autonomous_state = autonomy_dominion
+		freedom_level = 0.6
+	}
+	set_autonomy = {
+		target = YEM
+		autonomous_state = autonomy_protectorate
+		freedom_level = 0.6
+	}
+	set_autonomy = {
+		target = CEY
+		autonomous_state = autonomy_dominion
+		freedom_level = 0.6
+	}
+	set_autonomy = {
+		target = NYA
+		autonomous_state = autonomy_protectorate
+		freedom_level = 0.6
+	}
+	set_autonomy = {
+		target = UGA
+		autonomous_state = autonomy_protectorate
+		freedom_level = 0.6
+	}
+	set_autonomy = {
+		target = BRU
+		autonomous_state = autonomy_protectorate
+		freedom_level = 0.6
+	}
+	set_autonomy = {
+		target = PAK
+		autonomous_state = autonomy_dominion
+		freedom_level = 0.6
+	}
+	set_autonomy = {
+		target = RAJ
+		autonomous_state = autonomy_dominion
+		freedom_level = 0.6
+	}
+	set_autonomy = {
+		target = BSL
+		autonomous_state = autonomy_protectorate
+		freedom_level = 0.6
+	}
+	set_autonomy = {
+		target = TAG
+		autonomous_state = autonomy_protectorate
+		freedom_level = 0.6
+	}	
+	
+	else = {
+		puppet = KUW
+		puppet = OMA
+		puppet = SUD
+		puppet = KNA
+		puppet = DRY
+		puppet = UGA
+		puppet = MAL
+		puppet = ZIM
+		puppet = ZAM
+		puppet = NYA
+		puppet = LBA
+		puppet = NIA
+		puppet = BOT
+		puppet = NYA
+		puppet = NIA
+		puppet = YEM
+		puppet = NYA
+		puppet = UGA
+		puppet = BRU
+		puppet = CAN
+		puppet = NZL
+		puppet = AST
+		puppet = SAF
+		puppet = PAK
+		puppet = RAJ
+		puppet = BSL
+		puppet = TAG
+	}
+}
+
+add_ideas = {
+	cold_war_civil_war_ideological_idea
+	population_growth_steady
+	european_foriegn_policy
+	nato_member
+	UN_Security_Council_Member_Perm
+}
+1949.1.1 = {
+			add_ai_strategy = {
+				type = alliance
+				id = "USA"
+				value = 1000
+			}
+}
+1951.1.1 = {
+	set_autonomy = { target = LBA autonomy_state = autonomy_free }	
+}
+1958.1.1 = {
+	set_autonomy = { target = MAL autonomy_state = autonomy_free }	
+}
+1960.1.1 = {
+	set_autonomy = { target = SUD autonomy_state = autonomy_free }	
+	set_autonomy = { target = NIA autonomy_state = autonomy_free }	
+}
+1966.1.1 = {
+	set_autonomy = { target = ZIM autonomy_state = autonomy_free }	
+	set_autonomy = { target = ZAM autonomy_state = autonomy_free }	
+	set_autonomy = { target = NYA autonomy_state = autonomy_free }	
+}
+1966.1.1 = {
+	set_autonomy = { target = BOT autonomy_state = autonomy_free }	
+}
+1967.1.1 = {
+	set_autonomy = { target = DRY autonomy_state = autonomy_free }	
+}
+1971.1.1 = {
+	set_autonomy = { target = OMA autonomy_state = autonomy_free }	
+}
+1975.12.12 = {
+    set_autonomy = { target = KNA autonomy_state = autonomy_free }    
+}
+1961.12.9 = {
+    set_autonomy = { target = TAG autonomy_state = autonomy_free }        
+}
+
+set_politics = {
+
+	parties = {
+		democratic = { 
+			popularity = 10
+		}
+
+		fascism = {
+			popularity = 2
+		}
+		
+		communism = {
+			popularity = 4
+		}
+		socialist = {
+			popularity = 48		
+		}
+		conservative = {
+			popularity = 36		
+		}
+	}
+	
+	ruling_party = socialist
+	last_election = "1945.6.26"
+	election_frequency = 48
+	elections_allowed = yes 
+}
+# DIPLOMACY
+
+create_country_leader = {
+	name = "Clement Attlee"
+	picture = "Portrait_Britain_Clement_Attlee.dds"
+	expire = "1967.10.8"
+	ideology = socialism
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Oswald Mosley"
+	desc = "POLITICS_OSWALD_MOSLEY_DESC"
+	picture = "Portrait_Britain_Oswald_Mosley.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Rajani Palme Dutt"
+	desc = "POLITICS_PALME_DUTT_DESC"
+	picture = "Portrait_Britain_Palme_Dutt.dds"
+	expire = "1965.1.1"
+	ideology = leninism
+	traits = {
+		
+	}
+}
+create_country_leader = {
+	name = "Winston Churchill"
+	desc = "POLITICS_WINSTON_CHURCHILL_DESC"
+	picture = "Portrait_Britain_Winston_Churchill.dds"
+	expire = "1965.1.1"
+	ideology = conservatism
+	traits = {
+	}
+}
+create_field_marshal = {
+	name = "Alan Brooke"
+	picture = "Portrait_Britain_Alan_Brooke.dds"
+	traits = { offensive_doctrine defensive_doctrine }
+	skill = 5
+}
+
+create_field_marshal = {
+	name = "Bernard Montgomery"
+	picture = "Portrait_Britain_Bernard_Montgomery.dds"
+	traits = { logistics_wizard offensive_doctrine  }
+	skill = 4 
+}
+
+create_corps_commander = {
+	name = "Claude Auchinleck"
+	picture = "Portrait_Britain_Claude_Auchinleck.dds"
+	traits = {  }
+	skill = 5
+}
+
+create_corps_commander = {
+	name = "Neil Ritchie"
+	picture = "Portrait_Britain_Neil_Ritchie.dds"
+	traits = { panzer_leader  }
+	skill = 4
+}
+
+create_corps_commander = {
+	name = "Alan Cunningham"
+	picture = "Portrait_Britain_Alan_Cunningham.dds"
+	traits = {}
+	skill = 4
+}
+
+create_corps_commander = {
+	name = "William Slim"
+	picture = "Portrait_Britain_William_Slim.dds"
+	traits = { trickster }
+	skill = 5
+}
+
+create_corps_commander = {
+	name = "Richard O'Connor"
+	picture = "Portrait_Britain_Richard_OConnor.dds"
+	traits = {  }
+	skill = 4
+}
+
+create_corps_commander = {
+	name = "William Platt"
+	picture = "Portrait_Britain_William_Platt.dds"
+	traits = {  }
+	skill = 3
+}
+
+create_corps_commander = {
+	name = "George Giffard"
+	picture = "Portrait_Britain_George_Giffard.dds"
+	traits = {  }
+	skill = 3
+}
+
+create_corps_commander = {
+	name = "Harold Alexander"
+	picture = "Portrait_Britain_Harold_Alexander.dds"
+	traits = {  }
+	skill = 5
+}
+
+create_corps_commander = {
+	name = "Jackie Smyth"
+	picture = "Portrait_Britain_John_Jackie_Smyth.dds"
+	traits = { old_guard }
+	skill = 1
+}
+
+create_corps_commander = {
+	name = "Thomas Jacomb Hutton"
+		picture = "Portrait_Britain_Thomas_Jacomb_Hutton.dds"
+	traits = {  }
+	skill = 2
+}
+
+create_corps_commander = {
+	name = "Arthur Percival"
+		picture = "Portrait_Britain_Arthur_Percival.dds"
+	traits = {   }
+	skill = 2
+}
+
+create_corps_commander = {
+	name = "Merton Beckwith-Smith"
+		picture = "Portrait_Britain_Merton_Beckwith_Smith.dds"
+	traits = { commando }
+	skill = 1
+}
+
+create_corps_commander = {
+	name = "Henry Pownall"
+	picture = "Portrait_Britain_Henry_Pownall.dds"
+	traits = {  trickster }
+	skill = 2
+}
+
+create_corps_commander = {
+	name = "John Vereker Lord Gort"
+	picture = "Portrait_Britain_John_Vereker.dds"
+	traits = {  }
+	skill = 4
+}
+
+create_corps_commander = {
+	name = "Henry Wilson"
+		picture = "Portrait_Britain_Henry_Maitland_Wilson.dds"
+	traits = {  }
+	skill = 4
+}
+
+create_corps_commander = {
+	name = "William Gott"
+		picture = "Portrait_Britain_William_Gott.dds"
+	traits = { panzer_leader }
+	skill = 3
+}
+
+create_corps_commander = {
+	name = "Jock Campbell"
+		picture = "Portrait_Britain_Jock_Campbell.dds"
+	traits = { panzer_leader  }
+	skill = 4
+}
+
+create_corps_commander = {
+	name = "Oliver Leese"
+	picture = "Portrait_Britain_Oliver_Leese.dds"
+	traits = {  panzer_leader }
+	skill = 4
+}
+
+create_corps_commander = {
+	name = "Miles Dempsey"
+	picture = "Portrait_Britain_Miles_Dempsey.dds"
+	traits = {  }
+	skill = 4
+}
+
+create_corps_commander = {
+	name = "Brian Horrocks"
+	picture = "Portrait_Britain_Brian_Horrocks.dds"
+	traits = {  panzer_leader }
+	skill = 3
+	
+}
+
+create_corps_commander = {
+	name = "Archibald Wavell"
+	picture = "Portrait_Britain_Archibald_Wavell.dds"
+	traits = {  }
+	skill = 4
+}
+
+create_navy_leader = {
+	name = "James Fownes Somerville"
+		picture = "Portrait_Britain_James_Fownes_Somerville.dds"
+	traits = { superior_tactician }
+	skill = 5
+}
+
+create_navy_leader = {
+	name = "Henry Harwood"
+		picture = "Portrait_Britain_Henry_Harwood.dds"
+	traits = { old_guard_navy blockade_runner }
+	skill = 3
+}
+
+create_navy_leader = {
+	name = "Andrew Cunningham"
+		picture = "Portrait_Britain_Andrew_Cunningham.dds"
+	traits = { blockade_runner superior_tactician }
+	skill = 5
+}
+
+create_navy_leader = {
+	name = "Bruce Fraser"
+		picture = "Portrait_Britain_Bruce_Fraser.dds"
+	traits = { blockade_runner }
+	skill = 4
+}
+
+create_navy_leader = {
+	name = "John Tovey"
+		picture = "Portrait_Britain_John_Tovey.dds"
+	traits = { superior_tactician }
+	skill = 4
+}
+
+create_navy_leader = {
+	name = "Bernard Rawlings"
+		picture = "Portrait_Britain_Bernard_Rawlings.dds"
+	traits = {  }
+	skill = 1
+}
+
+create_navy_leader = {
+	name = "John Cunningham"
+		picture = "Portrait_Britain_John_Cunningham.dds"
+	traits = {  }
+	skill = 4
+}
+
+create_navy_leader = {
+	name = "Charles Forbes"
+		picture = "Portrait_Britain_Charles_Forbes.dds"
+	traits = { fly_swatter }
+	skill = 3
+}
+
+create_navy_leader = {
+	name = "Algernon Willis"
+		picture = "Portrait_Britain_Algernon_Willis.dds"
+	traits = { spotter }
+	skill = 3
+}
+
+create_navy_leader = {
+	name = "Arthur Power"
+		picture = "Portrait_Britain_Arthur_Power.dds"
+	traits = {  }
+	skill = 2
+}
+
+### Ship Variants ###
+
+create_equipment_variant = {
+	name = "Illustrious Class"
+	type = carrier_1
+	upgrades = {
+			ship_deckspace_upgrade = 0
+			carrier_armor_upgrade = 0
+			ship_engine_upgrade = 0
+			ship_reliability_upgrade = 0
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "Implacable(1948 refit) Class"
+	type = carrier_1
+	upgrades = {
+			ship_deckspace_upgrade = 2
+			carrier_armor_upgrade = 2
+			ship_engine_upgrade = 2
+			ship_reliability_upgrade = 2
+	}
+}
+create_equipment_variant = {
+	name = "Colossus Class"
+	type = light_carrier_1
+	upgrades = {
+			ship_deckspace_upgrade = 0
+			carrier_armor_upgrade = 0
+			ship_engine_upgrade = 0
+			ship_reliability_upgrade = 0
+	}
+}
+
+### Variants ###
+# Submarines #
+# create_equipment_variant = {
+	# name = "O/P/R Class"
+	# type = submarine_1
+	# parent_version = 0
+	# upgrades = {
+		# ship_reliability_upgrade = 3
+		# sub_engine_upgrade = 2
+		# sub_stealth_upgrade = 2
+		# sub_torpedo_upgrade = 3
+	# }
+# }
+# Destroyers #
+create_equipment_variant = {
+	name = "M/O/P/Q/R Class"
+	type = destroyer_1
+	parent_version = 0
+	upgrades = {
+		ship_torpedo_upgrade = 1
+		destroyer_engine_upgrade = 3
+		ship_ASW_upgrade = 2
+		ship_anti_air_upgrade = 1
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "River Class"
+	type = frigate_1
+	parent_version = 0
+	upgrades = {
+		ship_torpedo_upgrade = 0
+		destroyer_engine_upgrade = 0
+		ship_ASW_upgrade = 0
+		ship_anti_air_upgrade = 0
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "S/T/U/V/W/Z Class"
+	type = destroyer_1
+	parent_version = 0
+	upgrades = {
+		ship_torpedo_upgrade = 2
+		destroyer_engine_upgrade = 4
+		ship_ASW_upgrade = 3
+		ship_anti_air_upgrade = 2
+	}
+	obsolete = yes
+}
+# Light Cruisers #
+create_equipment_variant = {
+	name = "Bellona Class"
+	type = light_cruiser_1
+	parent_version = 0
+	upgrades = {
+		ship_reliability_upgrade = 1
+		ship_engine_upgrade = 1
+		ship_gun_upgrade = 1
+		ship_anti_air_upgrade = 2
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "Town Class"
+	type = light_cruiser_1
+	parent_version = 0
+	upgrades = {
+		ship_reliability_upgrade = 0
+		ship_engine_upgrade = 0
+		ship_gun_upgrade = 0
+		ship_anti_air_upgrade = 0
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "Dido(refit) Class"
+	type = light_cruiser_1
+	parent_version = 0
+	upgrades = {
+		ship_reliability_upgrade = 1
+		ship_engine_upgrade = 1
+		ship_gun_upgrade = 1
+		ship_anti_air_upgrade = 1
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "County Class"
+	type = light_cruiser_1
+	parent_version = 0
+	upgrades = {
+		ship_reliability_upgrade = 0
+		ship_engine_upgrade = 0
+		ship_gun_upgrade = 1
+		ship_anti_air_upgrade = 0
+	}
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Spitfire Mk.21/22/24"
+	type = fighter_equipment_2
+	upgrades = {
+		plane_gun_upgrade = 3
+		plane_range_upgrade = 3
+		plane_engine_upgrade = 3
+		plane_reliability_upgrade = 3
+	}
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "de Havilland Hornet"
+	type = heavy_fighter_equipment_3
+	upgrades = {
+		plane_gun_upgrade = 3
+		plane_range_upgrade = 3
+		plane_engine_upgrade = 3
+		plane_reliability_upgrade = 3
+	}
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Bristol Brigand"
+	type = heavy_fighter_equipment_3
+	upgrades = {
+		plane_gun_upgrade = 5
+		plane_range_upgrade = 5
+		plane_engine_upgrade = 5
+		plane_reliability_upgrade = 5
+	}
+	obsolete = yes
+}
+
+1951.10.26 = {
+	set_politics = {
+
+		parties = {
+			democratic = { 
+				popularity = 10
+			}
+
+			fascism = {
+				popularity = 2
+			}
+		
+			communism = {
+				popularity = 4
+			}
+			socialist = {
+				popularity = 36		
+			}
+			conservative = {
+				popularity = 48		
+			}
+		}
+	
+		ruling_party = conservative
+		last_election = "1951.10.26"
+		election_frequency = 48
+		elections_allowed = yes 
+	}
+}
+
+1955.4.6 = {
+  	create_country_leader = {
+  		name = "Anthony Eden"
+  		picture = "Portrait_Britain_Anthony_Eden.dds"
+  		expire = "1977.1.14"
+  		ideology = conservatism
+	}
+}
+
+1957.1.10 = {
+	create_country_leader = {
+		name = "Harold Macmillan"
+		picture = "Portrait_Britain_Harold_Macmillan.dds"
+		expire = "1986.12.29"
+		ideology = conservatism
+	}
+}
+
+1963.10.29 = {
+	create_country_leader = {
+		name = "Sir Alec Douglas-Home"
+		picture = "Portrait_Britain_Alec_Douglas_Home.dds"
+		expire = "1995.10.9"
+		ideology = conservatism
+	}
+}
+
+1964.10.16 = {
+
+	set_politics = {
+
+		parties = {
+			democratic = { 
+				popularity = 10
+			}
+
+			fascism = {
+				popularity = 2
+			}
+		
+			communism = {
+				popularity = 4
+			}
+			socialist = {
+				popularity = 48	
+			}
+			conservative = {
+				popularity = 36		
+			}
+		}
+	
+		ruling_party = socialist
+		last_election = "1964.10.16"
+		election_frequency = 48
+		elections_allowed = yes 
+	}
+
+	create_country_leader = {
+		name = "Harold Wilson"
+		picture = "Portrait_Britain_Alec_Harold_Wilson.dds"
+		expire = "1995.10.9"
+		ideology = socialism
+	}
+}
+
+1970.6.19 = {
+	set_politics = {
+
+		parties = {
+			democratic = { 
+				popularity = 10
+			}
+
+			fascism = {
+				popularity = 2
+			}
+		
+			communism = {
+				popularity = 4
+			}
+			socialist = {
+				popularity = 36	
+			}
+			conservative = {
+				popularity = 48		
+			}
+  		}
+	
+		ruling_party = conservative
+		last_election = "1970.6.19"
+		election_frequency = 48
+		elections_allowed = yes 
+	}
+
+	create_country_leader = {
+		name = "Edward Heath"
+		picture = "Portrait_Britain_Edward_Heath.dds"
+		expire = "2005.6.16"
+		ideology = conservatism
+	}
+}
+
+1974.3.14 = {
+	set_politics = {
+
+		parties = {
+			democratic = { 
+				popularity = 10
+			}
+
+			fascism = {
+				popularity = 2
+			}
+		
+			communism = {
+				popularity = 4
+			}
+			socialist = {
+				popularity = 48	
+			}
+			conservative = {
+				popularity = 36		
+			}
+		}
+	
+		ruling_party = socialist
+		last_election = "1974.3.14"
+		election_frequency = 48
+		elections_allowed = yes 
+	}
+
+	create_country_leader = {
+		name = "Harold Wilson"
+		picture = "Portrait_Britain_Harold_Wilson.dds"
+		expire = "1995.5.24"
+		ideology = socialism
+	}
+}
+
+1976.4.5 = {
+	create_country_leader = {
+		name = "James Callaghan"
+		picture = "Portrait_Britain_James_Callaghan.dds"
+		expire = "2005.3.26"
+		ideology = socialism
+	}
+}
+
+1979.5.4 = {
+	set_politics = {
+
+		parties = {
+			democratic = { 
+				popularity = 10
+			}
+
+			fascism = {
+				popularity = 2
+			}
+		
+			communism = {
+				popularity = 4
+			}
+			socialist = {
+				popularity = 36	
+			}
+			conservative = {
+				popularity = 48		
+			}
+		}
+	
+		ruling_party = conservative
+		last_election = "1979.5.4"
+		election_frequency = 48
+		elections_allowed = yes 
+	}
+
+	create_country_leader = {
+		name = "Margaret Thatcher"
+		picture = "Portrait_Britain_Margaret_Thatcher.dds"
+		expire = "2013.4.8"
+		ideology = conservatism
+	}
+}
+
+1990.10.28 = {
+	create_country_leader = {
+		name = "John Major"
+		picture = "Portrait_Britain_John_Major.dds"
+		ideology = conservatism
+  	}
+ }

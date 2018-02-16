@@ -1,0 +1,423 @@
+﻿capital = 42
+
+oob = "WGR_1949"
+
+# Starting tech
+set_technology = {
+	CAS1 = 1
+	CAS2 = 1
+	CAS3 = 1
+	CAS4 = 1
+	advanced_destroyer = 1
+	advanced_rocket_engines = 1
+	amphibious1 = 1
+	antiair1 = 1
+	basic_carrier = 1
+	basic_destroyer = 1
+	basic_light_cruiser = 1
+	basic_machine_tools = 1
+	basic_submarine = 1
+	battle_cruiser_1 = 1
+	battleship_2 = 1
+	battleship_3 = 1
+	construction1 = 1
+	cv_CAS1 = 1
+	cv_CAS2 = 1
+	cv_CAS3 = 1
+	cv_CAS4 = 1
+	cv_early_fighter = 1
+	cv_fighter1 = 1
+	cv_fighter2 = 1
+	cv_fighter3 = 1
+	cv_fighter4 = 1
+	cv_jet_CAS1 = 1
+	cv_naval_bomber1 = 1
+	cv_naval_bomber2 = 1
+	cv_naval_bomber3 = 1
+	cv_naval_bomber4 = 1
+	early_battleship = 1
+	early_bomber = 1
+	early_carrier = 1
+	early_destroyer = 1
+	early_fighter = 1
+	early_light_cruiser = 1
+	early_submarine = 1
+	electronic_mechanical_engineering = 1
+	experimental_rockets = 1
+	fighter1 = 1
+	fighter2 = 1
+	fighter3 = 1
+	frigate_1 = 1
+	frigate_2 = 1
+	great_war_infantry_equipment = 1
+	gw_artillery = 1
+	heavy_fighter1 = 1
+	heavy_fighter2 = 1
+	heavy_fighter3 = 1
+	heavy_infantry_weapons1 = 1
+	heavy_infantry_weapons2 = 1
+	heavy_tanks_2 = 1
+	heavy_tanks_3 = 1
+	improved_destroyer = 1
+	improved_light_cruiser = 1
+	improved_rocket_engines = 1
+	interwar_antiair = 1
+	infantry_equip_1 = 1
+	jet_CAS1 = 1
+	jet_engines = 1
+	jet_fighter1 = 1
+	jet_fighter2 = 1
+	jet_interceptor1 = 1
+	jet_interceptor2 = 1
+	jet_strategic_bomber1 = 1
+	jet_tactical_bomber1 = 1
+	landing_craft = 1
+	light_carrier1 = 1
+	light_carrier2 = 1
+	light_tanks_1 = 1
+	main_battle_tanks_1 = 1
+	main_battle_tanks_2 = 1
+	mechanized_heavy_infantry = 1
+	mechanized_infantry = 1
+	mechanized_infantry2 = 1
+	mortar_infantry_weapons_1 = 1
+	mortar_infantry_weapons_2 = 1
+	motorised_infantry = 1
+	naval_bomber1 = 1
+	naval_bomber2 = 1
+	naval_bomber3 = 1
+	naval_bomber4 = 1
+	nuclear_cg_1 = 1
+	radio = 1
+	radio_detection = 1
+	rocket_engines = 1
+	sp_rocket1 = 1
+	sp_rocket2 = 1
+	strategic_bomber1 = 1
+	strategic_bomber2 = 1
+	strategic_bomber3 = 1
+	suicide_craft = 1
+	synth_oil_experiments = 1
+	tactical_bomber1 = 1
+	tactical_bomber2 = 1
+	tactical_bomber3 = 1
+	tank_landing_craft = 1
+	tech_support = 1
+	transport = 1
+}
+
+
+set_research_slots = 4
+set_convoys = 200
+set_national_unity = 0.7
+
+ENG = { diplomatic_relation = { country = WGR relation = military_access active = yes } }
+USA = { diplomatic_relation = { country = WGR relation = military_access active = yes } }
+FRA = { diplomatic_relation = { country = WGR relation = military_access active = yes } }
+BEL = { diplomatic_relation = { country = WGR relation = military_access active = yes } }
+CAN = { diplomatic_relation = { country = WGR relation = military_access active = yes } }
+HOL = { diplomatic_relation = { country = WGR relation = military_access active = yes } }
+DEN = { diplomatic_relation = { country = WGR relation = military_access active = yes } }
+
+set_politics = {
+
+	parties = {
+		democratic = { 
+			popularity = 12
+		}
+
+		fascism = {
+			popularity = 4
+		}
+		
+		communism = {
+			popularity = 6
+			banned = no #default is no
+		}
+		centrist = {
+			popularity = 4
+		}
+		socialist = {
+			popularity = 29		
+		}
+		Christian_Democratic = {
+			popularity = 45		
+		}
+	}
+	
+	ruling_party = Christian_Democratic
+	last_election = "1949.8.14"
+	election_frequency = 48
+	elections_allowed = yes
+
+}
+
+add_ideas = {
+	Occupation
+	NATO_Military_Restrictions
+	Scientific_Collapse
+	population_growth_steady}
+
+create_country_leader = {
+	name = "Otto Ernst Remer"
+	picture = "Otto.dds"
+	expire = "1965.1.1"
+	ideology = nazism
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Konrad Adenauer"
+	desc = "POLITICS_KONRAD_ADENAUER_DESC"
+	picture = "Portrait_WestGermany_Konrad_Adenauer.dds"
+	expire = "1967.4.19"
+	ideology = christian_democracy
+}
+
+
+### Ship Variants ###
+## 1936 Start ##
+# Light Cruisers #
+create_equipment_variant = {
+	name = "Königsberg Class"
+	type = light_cruiser_1
+	parent_version = 0
+	upgrades = {
+		ship_reliability_upgrade = 2
+		ship_engine_upgrade = 2
+		ship_gun_upgrade = 2
+		ship_anti_air_upgrade = 2
+	}
+	obsolete = yes
+}
+
+1957.10.22 = {
+	set_politics = {
+
+		parties = {
+			democratic = { 
+				popularity = 8
+			}
+
+			fascism = {
+				popularity = 4
+			}
+		
+			communism = {
+				popularity = 6
+				banned = no #default is no
+			}
+			centrist = {
+				popularity = 0
+			}
+			socialist = {
+				popularity = 32		
+			}
+			Christian_Democratic = {
+				popularity = 50		
+			}
+		}
+	
+		ruling_party = Christian_Democratic
+		last_election = "1957.10.22"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+}
+1963.10.17 = {
+	create_country_leader = {
+		name = "Ludwig Erhard"
+		picture = "Portrait_WestGermany_Ludwig_Erhard.dds"
+		expire = "1977.5.5"
+		ideology = christian_democracy
+	}
+}
+
+1966.12.1 = {
+	create_country_leader = {
+		name = "Kurt Georg Kiesinger"
+		picture = "Portrait_WestGermany_Kurt_Georg_Kiesinger.dds"
+		expire = "1988.3.9"
+		ideology = christian_democracy
+	}
+}
+
+1969.10.22 = {
+	set_politics = {
+
+		parties = {
+			democratic = { 
+				popularity = 12
+			}
+
+			fascism = {
+				popularity = 4
+			}
+		
+			communism = {
+				popularity = 6
+				banned = no #default is no
+			}
+			centrist = {
+				popularity = 4
+			}
+			socialist = {
+				popularity = 45		
+			}
+			Christian_Democratic = {
+				popularity = 29		
+			}
+		}
+	
+		ruling_party = socialist
+		last_election = "1969.10.22"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+	create_country_leader = {
+		name = "Willy Brandt"
+		picture = "Portrait_WestGermany_Willy_Brandt.dds"
+		expire = "1992.10.8"
+		ideology = democratic_socialist
+	}
+}
+
+1974.5.16 = {
+	create_country_leader = {
+		name = "Helmut Schmidt"
+		picture = "Portrait_WestGermany_Helmut_Schmidt.dds"
+		expire = "2015.11.10"
+		ideology = democratic_socialist
+	}
+}
+1980.1.1 = {
+	set_politics = {
+
+		parties = {
+			socialist = { 
+				popularity = 48.6
+			}
+			
+			Christian_Democratic = { 
+				popularity = 42.6
+			}
+
+			democratic = { 
+				popularity = 7.9
+			}
+			
+			nationalism = {
+				popularity = 0.4
+			}
+			
+			communism = {
+				popularity = 0.5
+				banned = no #default is no
+			}
+			
+		}
+		
+		ruling_party = socialist
+		last_election = "1976.10.3"
+		election_frequency = 48
+		elections_allowed = yes
+
+	}
+
+	create_country_leader = {
+		name = "Martin Mussgnug"
+		picture = "gfx/leaders/WGR/Helmut.dds"
+		expire = "1997.2.2"
+		ideology = nationalist_ideology
+		traits = {
+		}
+	}
+
+	create_country_leader = {
+		name = "Helmut Schmidt"
+		picture = "gfx/leaders/WGR/Helmut.dds"
+		expire = "2015.11.10"
+		ideology = democratic_socialist
+		traits = {
+		}
+	}
+	
+	create_country_leader = {
+		name = "Hans-Dietrich Genscher"
+		picture = "Portrait_WestGermany_Helmut_Kohl.dds"
+		expire = "2016.3.31"
+		ideology = liberalism
+	}
+	
+	create_country_leader = {
+		name = "Helmut Kohl"
+		picture = "Portrait_WestGermany_Helmut_Kohl.dds"
+		expire = "2017.6.16"
+		ideology = christian_democracy
+	}
+	
+}
+1982.10.1 = {
+	set_politics = {
+
+		parties = {
+			democratic = { 
+				popularity = 12
+			}
+
+			fascism = {
+				popularity = 4
+			}
+		
+			communism = {
+				popularity = 6
+			}
+			centrist = {
+				popularity = 4
+			}
+			socialist = {
+				popularity = 29	
+			}
+			Christian_Democratic = {
+				popularity = 45	
+			}
+			judaism = {
+				popularity = 0
+				banned = yes
+			}
+		}
+	
+		ruling_party = Christian_Democratic
+		last_election = "1982.10.1"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+	create_country_leader = {
+		name = "Helmut Kohl"
+		picture = "Portrait_WestGermany_Helmut_Kohl.dds"
+		expire = "2017.6.16"
+		ideology = christian_democracy
+	}
+}
+
+create_country_leader = {
+	name = "Wilhelm III"
+	picture = "Portrait_WestGermany_Wilhelm_III.dds"
+	expire = "1951.6.16"
+	ideology = absolute_monarchist
+}
+
+create_country_leader = {
+	name = "Kurt Schumacher"
+	picture = "Portrait_WestGermany_Kurt_Schumacher.tga"
+	ideology = democratic_socialist
+}
+
+create_country_leader = {
+	name = "Ernst Thälmann"
+	picture = "Portrait_WestGermany_Ernst_Tahlmann.dds"
+	ideology = stalinism
+}			

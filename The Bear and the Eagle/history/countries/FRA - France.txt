@@ -1,0 +1,593 @@
+﻿capital = 16
+
+oob = "FRA_1949"
+
+set_research_slots = 4
+
+# Starting tech
+set_technology = {
+	CAS1 = 1
+	CAS2 = 1
+	CAS3 = 1
+	CAS4 = 1
+	advanced_destroyer = 1
+	advanced_rocket_engines = 1
+	amphibious1 = 1
+	antiair1 = 1
+	basic_carrier = 1
+	basic_destroyer = 1
+	basic_light_cruiser = 1
+	basic_machine_tools = 1
+	basic_submarine = 1
+	battle_cruiser_1 = 1
+	battleship_2 = 1
+	battleship_3 = 1
+	construction1 = 1
+	cv_CAS1 = 1
+	cv_CAS2 = 1
+	cv_CAS3 = 1
+	cv_CAS4 = 1
+	cv_early_fighter = 1
+	cv_fighter1 = 1
+	cv_fighter2 = 1
+	cv_fighter3 = 1
+	cv_fighter4 = 1
+	cv_jet_CAS1 = 1
+	cv_naval_bomber1 = 1
+	cv_naval_bomber2 = 1
+	cv_naval_bomber3 = 1
+	cv_naval_bomber4 = 1
+	early_battleship = 1
+	early_bomber = 1
+	early_carrier = 1
+	early_destroyer = 1
+	early_fighter = 1
+	early_light_cruiser = 1
+	early_submarine = 1
+	electronic_mechanical_engineering = 1
+	experimental_rockets = 1
+	fighter1 = 1
+	fighter2 = 1
+	fighter3 = 1
+	frigate_1 = 1
+	frigate_2 = 1
+	great_war_infantry_equipment = 1
+	gw_artillery = 1
+	heavy_fighter1 = 1
+	heavy_fighter2 = 1
+	heavy_fighter3 = 1
+	heavy_infantry_weapons1 = 1
+	heavy_infantry_weapons2 = 1
+	heavy_tanks_2 = 1
+	heavy_tanks_3 = 1
+	improved_destroyer = 1
+	improved_light_cruiser = 1
+	improved_rocket_engines = 1
+	interwar_antiair = 1
+	infantry_equip_1 = 1
+	jet_CAS1 = 1
+	jet_CAS2 = 1
+	jet_engines = 1
+	jet_fighter1 = 1
+	jet_fighter2 = 1
+	jet_interceptor1 = 1
+	jet_interceptor2 = 1
+	jet_strategic_bomber1 = 1
+	jet_tactical_bomber1 = 1
+	landing_craft = 1
+	light_carrier1 = 1
+	light_carrier2 = 1
+	light_tanks_1 = 1
+	main_battle_tanks_1 = 1
+	main_battle_tanks_2 = 1
+	mechanized_heavy_infantry = 1
+	mechanized_infantry = 1
+	mechanized_infantry2 = 1
+	mortar_infantry_weapons_1 = 1
+	mortar_infantry_weapons_2 = 1
+	motorised_infantry = 1
+	naval_bomber1 = 1
+	naval_bomber2 = 1
+	naval_bomber3 = 1
+	naval_bomber4 = 1
+	nuclear_cg_1 = 1
+	radio = 1
+	radio_detection = 1
+	rocket_engines = 1
+	sp_rocket1 = 1
+	sp_rocket2 = 1
+	strategic_bomber1 = 1
+	strategic_bomber2 = 1
+	strategic_bomber3 = 1
+	suicide_craft = 1
+	synth_oil_experiments = 1
+	tactical_bomber1 = 1
+	tactical_bomber2 = 1
+	tactical_bomber3 = 1
+	tank_landing_craft = 1
+	tech_support = 1
+	transport = 1
+}
+
+add_ideas = {
+	cold_war_civil_war_ideological_idea	
+	population_growth_steady
+	european_foriegn_policy
+	fra_rationing
+	fra_legacy_of_occupation
+	nato_member
+	UN_Security_Council_Member_Perm
+}
+1949.1.1 = {
+	declare_war_on = {
+		target = VIN
+		type = civil_war
+	}
+}
+
+set_convoys = 300
+set_national_unity = 0.7
+give_guarantee = WGR
+give_guarantee = MOC
+give_guarantee = AND
+
+if = {
+	limit = {
+		has_dlc = "Together for Victory"
+	}
+	set_autonomy = {
+		target = MLI
+		autonomous_state = autonomy_colony
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = GUI
+		autonomous_state = autonomy_colony
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = BRK
+		autonomous_state = autonomy_colony
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = MAU
+		autonomous_state = autonomy_colony
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = TOG
+		autonomous_state = autonomy_colony
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = BEN
+		autonomous_state = autonomy_colony
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = SEN
+		autonomous_state = autonomy_colony
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = MOR
+		autonomous_state = autonomy_protectorate
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = CHA
+		autonomous_state = autonomy_colony
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = CTD
+		autonomous_state = autonomy_colony
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = TUN
+		autonomous_state = autonomy_protectorate
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = GUI
+		autonomous_state = autonomy_protectorate
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = NIG
+		autonomous_state = autonomy_protectorate
+		freedom_level = 0.4
+	}	
+	set_autonomy = {
+		target = SAR
+		autonomous_state = autonomy_protectorate
+		freedom_level = 0.4
+	}		
+	set_autonomy = {
+		target = AND
+		autonomous_state = autonomy_protectorate
+		freedom_level = 0.4
+	}		
+	set_autonomy = {
+		target = LOS
+		autonomous_state = autonomy_protectorate
+		freedom_level = 0.4
+	}		
+	set_autonomy = {
+		target = CAM
+		autonomous_state = autonomy_protectorate
+		freedom_level = 0.4
+	}	
+	set_autonomy = {
+		target = VIE
+		autonomous_state = autonomy_protectorate
+		freedom_level = 0.4
+	}	
+	else = {
+		puppet = MOR
+		puppet = TUN
+		puppet = SAR
+		puppet = AND
+		puppet = CTD
+		puppet = CHA
+		puppet = SEN
+		puppet = BEN
+		puppet = TOG
+		puppet = MAU
+		puppet = BRK
+		puppet = MLI
+		puppet = NIG
+		puppet = GUI
+		puppet = VIE
+		puppet = CAM
+		puppet = LOS
+	}
+}
+1949.1.1 = {
+	add_ai_strategy = {
+		type = alliance
+		id = "USA"
+		value = 1000
+	}
+}
+1956.1.1 = {
+	set_autonomy = { target = MOR autonomy_state = autonomy_free }	
+	set_autonomy = { target = TUN autonomy_state = autonomy_free }	
+	set_autonomy = { target = VIE autonomy_state = autonomy_free }	
+	set_autonomy = { target = LOS autonomy_state = autonomy_free }	
+	set_autonomy = { target = CAM autonomy_state = autonomy_free }	
+}
+1960.1.1 = {
+	set_autonomy = { target = MAU autonomy_state = autonomy_free }	
+	set_autonomy = { target = MLI autonomy_state = autonomy_free }	
+	set_autonomy = { target = SEN autonomy_state = autonomy_free }	
+	set_autonomy = { target = NIG autonomy_state = autonomy_free }	
+	set_autonomy = { target = BRK autonomy_state = autonomy_free }	
+	set_autonomy = { target = TOG autonomy_state = autonomy_free }	
+	set_autonomy = { target = CTD autonomy_state = autonomy_free }	
+	set_autonomy = { target = GUI autonomy_state = autonomy_free }	
+	set_autonomy = { target = CHA autonomy_state = autonomy_free }	
+}
+set_politics = {
+
+	parties = {
+		centrist = { 
+			popularity = 14
+		}
+
+		fascism = {
+			popularity = 1
+		}
+		
+		communism = {
+			popularity = 15
+		}
+		socialist = {
+			popularity = 36		
+		}
+		conservative = {
+			popularity = 34		
+		}
+	}
+	
+	ruling_party = socialist
+	last_election = "1947.1.26"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+#Order matters here Daladier will start as leaders because added last
+create_country_leader = {
+	name = "Vincent Auriol"
+	picture = "gfx/leaders/FRA/Portrait_France_Vincent_Auriol.dds"
+	expire = "1966.1.1"
+	ideology = socialism
+}
+
+create_country_leader = {
+	name = "Maurice Thorez"
+	desc = "POLITICS_MAURICE_THOREZ_DESC"
+	picture = "Portrait_France_Maurice_Thorez.dds"
+	expire = "1965.1.1"
+	ideology = stalinism
+}
+
+create_country_leader = {
+	name = "Pierre Poujade"
+	desc = "POLITICS_MAURICE_THOREZ_DESC"
+	picture = "Portrait_France_Poujade.dds"
+	expire = "1965.1.1"
+	ideology = national_democrat
+}
+	create_country_leader = {
+		name = "René Coty"
+		picture = "Portrait_France_Rene_Coty.dds"
+		expire = "1962.11.22"
+		ideology = conservatism
+	}
+
+
+
+### Ship Variants ###
+
+	create_equipment_variant = {
+		name = "Capitani Romani Class"
+		type = light_cruiser_1
+		upgrades = {
+			ship_reliability_upgrade = 0
+			ship_engine_upgrade = 1
+			ship_gun_upgrade = 0
+			ship_anti_air_upgrade = 0
+		}
+	obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Duquesne Class"
+		type = light_cruiser_1
+		upgrades = {
+			ship_reliability_upgrade = 0
+			ship_engine_upgrade = 0
+			ship_gun_upgrade = 0
+			ship_anti_air_upgrade = 0
+		}
+	obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Suffren Class"
+		type = light_cruiser_1
+		upgrades = {
+			ship_reliability_upgrade = 0
+			ship_engine_upgrade = 0
+			ship_gun_upgrade = 0
+			ship_anti_air_upgrade = 0
+		}
+	obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "Le Fantasque Class"
+		type = frigate_1
+		upgrades = {
+			ship_torpedo_upgrade = 0
+			destroyer_engine_upgrade = 0
+			ship_ASW_upgrade = 0
+			ship_anti_air_upgrade = 0
+		}
+	obsolete = yes
+	}
+	
+1954.1.26 = {
+	set_politics = {
+	
+		parties = {
+			centrist = { 
+				popularity = 14
+			}
+	
+			fascism = {
+				popularity = 1
+			}
+			
+			communism = {
+				popularity = 15
+			}
+			socialist = {
+				popularity = 34		
+			}
+			conservative = {
+				popularity = 36		
+			}
+		}
+	
+	ruling_party = conservative
+	last_election = "1954.1.26"
+	election_frequency = 48
+	elections_allowed = yes
+	}
+
+	create_country_leader = {
+		name = "René Coty"
+		picture = "Portrait_France_Rene_Coty.dds"
+		expire = "1962.11.22"
+		ideology = conservatism
+	}
+}
+
+1959.1.8 = {
+	set_politics = {
+	
+		parties = {
+			centrist = { 
+				popularity = 20
+			}
+	
+			fascism = {
+				popularity = 1
+			}
+			
+			communism = {
+				popularity = 15
+			}
+			socialist = {
+				popularity = 25		
+			}
+			conservative = {
+				popularity = 39		
+			}
+		}
+	
+	ruling_party = conservative
+	last_election = "1959.1.8"
+	election_frequency = 48
+	elections_allowed = yes
+	}
+
+	create_country_leader = {
+		name = "Charles de Gaulle"
+		picture = "Portrait_France_Charles_de_Gaulle.dds"
+		expire = "1970.11.9"
+		ideology = gaullist
+	}
+}
+
+1969.4.28 = {
+	create_country_leader = {
+		name = "Georges Pompidou"
+		picture = "Portrait_France_Georges_Pompidou.dds"
+		expire = "1974.4.2"
+		ideology = gaullist
+	}
+}
+
+1974.4.2 = {
+	set_politics = {
+	
+		parties = {
+			centrist = { 
+				popularity = 39
+			}
+	
+			fascism = {
+				popularity = 1
+			}
+			
+			communism = {
+				popularity = 15
+			}
+			socialist = {
+				popularity = 25		
+			}
+			conservative = {
+				popularity = 20	
+			}
+		}
+	
+	ruling_party = centrist
+	last_election = "1974.4.2"
+	election_frequency = 48
+	elections_allowed = yes
+	}
+
+	create_country_leader = {
+		name = "Valéry Giscard d'Estaing"
+		picture = "Portrait_France_Valery_Giscard_dEstaing.dds"
+		ideology = christian_centrist
+	}
+}
+
+1981.5.21 = {
+	set_politics = {
+	
+		parties = {
+			centrist = { 
+				popularity = 25
+			}
+	
+			fascism = {
+				popularity = 1
+			}
+			
+			communism = {
+				popularity = 15
+			}
+			socialist = {
+				popularity = 39	
+			}
+			conservative = {
+				popularity = 20	
+			}
+		}
+	
+	ruling_party = socialist
+	last_election = "1974.4.2"
+	election_frequency = 48
+	elections_allowed = yes
+	}
+
+	create_country_leader = {
+		name = "François Mitterrand"
+		picture = "Portrait_France_Francois_Mitterrand.dds"
+		expire = "1996.1.8"
+		ideology = socialism
+	}
+}
+1980.1.1 = {
+	set_politics = {
+
+		parties = {
+		
+			socialist = { 
+				popularity = 43.25
+			}
+
+			Liberal_Conservatism = { 
+				popularity = 37.85
+			}
+			
+			conservative = { 
+				popularity = 18.28
+			}
+			
+			communism = {
+				popularity = 2.70
+			}
+			
+			liberal = { 
+				popularity = 1.32
+			}
+			
+			
+			neutrality = {
+				popularity = 0.75
+			}
+			
+			centrist = {
+				popularity = 0.69
+			}
+			
+			monarchism = {
+				popularity = 0.17
+			}
+			
+		}
+		
+		ruling_party = Liberal_Conservatism
+		last_election = "1977.5.10"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+
+	create_country_leader = {
+		name = "Valéry Giscard d'Estaing"
+		desc = "POLITICS_CHARLES_DE_GAULLE_DESC"
+		picture = "gfx/leaders/FRA/Valery.dds"
+		expire = "1981.5.21"
+		ideology = liberal_conservatism
+		traits = {
+			
+		}
+	}
+}

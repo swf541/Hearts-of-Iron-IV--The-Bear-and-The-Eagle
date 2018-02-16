@@ -1,0 +1,279 @@
+﻿capital = 613 # Nanjing
+
+oob = "CHI_1949"
+
+
+add_ideas = {
+	CHI_communist_uprisings
+	tot_economic_mobilisation
+	service_by_requirement
+	closed_economy
+	population_growth_explosion
+	CHI_disorganized_military
+	CHI_xie_juezai
+	CHI_deng_xiaoping
+	CHI_bo_yibo
+	CHI_xiao_yisu
+	CHI_chen_shaokuan
+	jiangnan_shipyard_group
+	UN_Security_Council_Member_Perm
+}
+
+set_convoys = 200
+set_national_unity = 0.60
+
+
+
+set_technology = {
+	CAS1 = 1
+	CAS2 = 1
+	CAS3 = 1
+	CAS4 = 1
+	advanced_destroyer = 1
+	advanced_rocket_engines = 1
+	amphibious1 = 1
+	antiair1 = 1
+	basic_carrier = 1
+	basic_destroyer = 1
+	basic_light_cruiser = 1
+	basic_machine_tools = 1
+	basic_submarine = 1
+	battle_cruiser_1 = 1
+	battleship_2 = 1
+	battleship_3 = 1
+	construction1 = 1
+	cv_CAS1 = 1
+	cv_CAS2 = 1
+	cv_CAS3 = 1
+	cv_CAS4 = 1
+	cv_early_fighter = 1
+	cv_fighter1 = 1
+	cv_fighter2 = 1
+	cv_fighter3 = 1
+	cv_fighter4 = 1
+	cv_jet_CAS1 = 1
+	cv_naval_bomber1 = 1
+	cv_naval_bomber2 = 1
+	cv_naval_bomber3 = 1
+	cv_naval_bomber4 = 1
+	early_battleship = 1
+	early_bomber = 1
+	early_carrier = 1
+	early_destroyer = 1
+	early_fighter = 1
+	early_light_cruiser = 1
+	early_submarine = 1
+	electronic_mechanical_engineering = 1
+	experimental_rockets = 1
+	fighter1 = 1
+	fighter2 = 1
+	fighter3 = 1
+	frigate_1 = 1
+	frigate_2 = 1
+	great_war_infantry_equipment = 1
+	gw_artillery = 1
+	heavy_fighter1 = 1
+	heavy_fighter2 = 1
+	heavy_fighter3 = 1
+	heavy_infantry_weapons1 = 1
+	heavy_infantry_weapons2 = 1
+	heavy_tanks_2 = 1
+	heavy_tanks_3 = 1
+	improved_destroyer = 1
+	improved_light_cruiser = 1
+	improved_rocket_engines = 1
+	interwar_antiair = 1
+	infantry_equip_1 = 1
+	jet_CAS1 = 1
+	jet_engines = 1
+	jet_fighter1 = 1
+	jet_fighter2 = 1
+	jet_interceptor1 = 1
+	jet_interceptor2 = 1
+	jet_strategic_bomber1 = 1
+	jet_tactical_bomber1 = 1
+	landing_craft = 1
+	light_carrier1 = 1
+	light_carrier2 = 1
+	light_tanks_1 = 1
+	main_battle_tanks_1 = 1
+	main_battle_tanks_2 = 1
+	mechanized_heavy_infantry = 1
+	mechanized_infantry = 1
+	mechanized_infantry2 = 1
+	mortar_infantry_weapons_1 = 1
+	mortar_infantry_weapons_2 = 1
+	motorised_infantry = 1
+	naval_bomber1 = 1
+	naval_bomber2 = 1
+	naval_bomber3 = 1
+	naval_bomber4 = 1
+	nuclear_cg_1 = 1
+	radio = 1
+	radio_detection = 1
+	rocket_engines = 1
+	sp_rocket1 = 1
+	sp_rocket2 = 1
+	strategic_bomber1 = 1
+	strategic_bomber2 = 1
+	strategic_bomber3 = 1
+	suicide_craft = 1
+	synth_oil_experiments = 1
+	tactical_bomber1 = 1
+	tactical_bomber2 = 1
+	tactical_bomber3 = 1
+	tank_landing_craft = 1
+	tech_support = 1
+	transport = 1
+}
+
+if = {
+	limit = {
+		has_dlc = "Together for Victory"
+	}
+	set_autonomy = {
+		target = TIB
+		autonomous_state = autonomy_protectorate
+		freedom_level = 0.4
+	}
+	else = {
+		puppet = TIB
+	}
+}
+
+set_politics = {
+
+	parties = {
+		democratic = { 
+			popularity = 0
+		}
+
+		fascism = {
+			popularity = 0
+		}
+		
+		communism = {
+			popularity = 0
+			#banned = no #default is no
+		}
+		
+		neutrality = { 
+			popularity = 100
+		}
+	}
+	
+	ruling_party = neutrality
+	last_election = "1949.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Chiang Kai-shek"
+	desc = "POLITICS_CHIANG_KAI-SHEK_DESC"
+	picture = "Portrait_China_Chiang_Kai_Shek.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Mao Zedong"
+	desc = "POLITICS_MAO_ZEDONG_DESC"
+	picture = "Portrait_China_Mao_Zedong.dds"
+	expire = "1965.1.1"
+	ideology = leninism
+	traits = {
+		cornered_fox
+	}
+}
+
+create_country_leader = {
+	name = "Wang Jingwei"
+	desc = "POLITICS_WANG_JINGWEI_DESC"
+	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_navy_1.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Kung Te-cheng"
+	desc = "POLITICS_Kung_TE_CHENG_DESC"
+	picture = "Kung_Te_cheng.dds"
+	ideology = royal_democrat
+}
+create_country_leader = {
+	name = "Zhang Lan"
+	desc = "POLITICS_ZHANG_LAN_DESC"
+	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_navy_3.dds"
+	expire = "1965.1.1"
+	ideology = socialism
+	traits = {
+		#
+	}
+}
+
+add_opinion_modifier = { target = PRC modifier = hostile_status }
+
+create_field_marshal = {
+	name = "Tu Yu-ming"
+	portrait_path = "gfx/leaders/Asia/Portrait_Asia_Generic_land_2.dds"
+	traits = { }
+	skill = 4
+}
+
+create_field_marshal = {
+	name = "Hsueh Yueh"
+	portrait_path = "gfx/leaders/Asia/Portrait_Asia_Generic_land_5.dds"
+	traits = { }
+	skill = 3
+}
+
+create_field_marshal = {
+	name = "Tai An-lan"
+	portrait_path = "gfx/leaders/Asia/Portrait_Asia_Generic_land_3.dds"
+	traits = { }
+	skill = 3
+}
+
+create_field_marshal = {
+	name = "Wang Yao-wu"
+	portrait_path = "gfx/leaders/Asia/Portrait_Asia_Generic_land_4.dds"
+	traits = { }
+	skill = 2
+}
+1980.1.1 = {
+	set_politics = {
+
+		parties = {
+			conservative = { 
+				popularity = 55
+			}
+
+			democratic = {
+				popularity = 45
+			}
+		
+		}
+		
+		ruling_party = conservative
+		last_election = "1978.3.21"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+	create_country_leader = {
+		name = "Chiang Ching-kuo"
+		desc = "POLITICS_CHIANG_KAI-SHEK_DESC"
+		picture = "gfx/leaders/CHI/Chiang.dds"
+		expire = "1988.1.13"
+		ideology = conservatism
+		traits = {
+			#
+		}
+	}
+}

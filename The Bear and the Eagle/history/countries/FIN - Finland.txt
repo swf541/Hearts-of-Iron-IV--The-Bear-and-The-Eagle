@@ -1,0 +1,354 @@
+﻿capital = 111
+
+oob = "FIN_1949"
+
+set_research_slots = 3
+
+add_ideas = {
+	limited_conscription
+	soviet_reparations
+}
+
+set_technology = {
+	CAS1 = 1
+	CAS2 = 1
+	CAS3 = 1
+	CAS4 = 1
+	advanced_destroyer = 1
+	advanced_rocket_engines = 1
+	amphibious1 = 1
+	antiair1 = 1
+	basic_carrier = 1
+	basic_destroyer = 1
+	basic_light_cruiser = 1
+	basic_machine_tools = 1
+	basic_submarine = 1
+	battle_cruiser_1 = 1
+	battleship_2 = 1
+	battleship_3 = 1
+	construction1 = 1
+	cv_CAS1 = 1
+	cv_CAS2 = 1
+	cv_CAS3 = 1
+	cv_CAS4 = 1
+	cv_early_fighter = 1
+	cv_fighter1 = 1
+	cv_fighter2 = 1
+	cv_fighter3 = 1
+	cv_fighter4 = 1
+	cv_jet_CAS1 = 1
+	cv_naval_bomber1 = 1
+	cv_naval_bomber2 = 1
+	cv_naval_bomber3 = 1
+	cv_naval_bomber4 = 1
+	early_battleship = 1
+	early_bomber = 1
+	early_carrier = 1
+	early_destroyer = 1
+	early_fighter = 1
+	early_light_cruiser = 1
+	early_submarine = 1
+	electronic_mechanical_engineering = 1
+	experimental_rockets = 1
+	fighter1 = 1
+	fighter2 = 1
+	fighter3 = 1
+	frigate_1 = 1
+	frigate_2 = 1
+	great_war_infantry_equipment = 1
+	gw_artillery = 1
+	heavy_fighter1 = 1
+	heavy_fighter2 = 1
+	heavy_fighter3 = 1
+	heavy_infantry_weapons1 = 1
+	heavy_infantry_weapons2 = 1
+	heavy_tanks_2 = 1
+	heavy_tanks_3 = 1
+	improved_destroyer = 1
+	improved_light_cruiser = 1
+	improved_rocket_engines = 1
+	interwar_antiair = 1
+	infantry_equip_1 = 1
+	jet_CAS1 = 1
+	jet_engines = 1
+	jet_fighter1 = 1
+	jet_fighter2 = 1
+	jet_interceptor1 = 1
+	jet_interceptor2 = 1
+	jet_strategic_bomber1 = 1
+	jet_tactical_bomber1 = 1
+	landing_craft = 1
+	light_carrier1 = 1
+	light_carrier2 = 1
+	light_tanks_1 = 1
+	main_battle_tanks_1 = 1
+	main_battle_tanks_2 = 1
+	mechanized_heavy_infantry = 1
+	mechanized_infantry = 1
+	mechanized_infantry2 = 1
+	mortar_infantry_weapons_1 = 1
+	mortar_infantry_weapons_2 = 1
+	motorised_infantry = 1
+	naval_bomber1 = 1
+	naval_bomber2 = 1
+	naval_bomber3 = 1
+	naval_bomber4 = 1
+	nuclear_cg_1 = 1
+	radio = 1
+	radio_detection = 1
+	rocket_engines = 1
+	sp_rocket1 = 1
+	sp_rocket2 = 1
+	strategic_bomber1 = 1
+	strategic_bomber2 = 1
+	strategic_bomber3 = 1
+	suicide_craft = 1
+	synth_oil_experiments = 1
+	tactical_bomber1 = 1
+	tactical_bomber2 = 1
+	tactical_bomber3 = 1
+	tank_landing_craft = 1
+	tech_support = 1
+	transport = 1
+}
+
+
+set_convoys = 200
+
+
+set_politics = {
+
+	parties = {
+		democratic = { 
+			popularity = 14
+		}
+		socialist = {
+			popularity = 23
+		}
+		Liberal_Conservatism = {
+			popularity = 23		
+		}
+		fascism = {
+			popularity = 0
+		}
+	
+		communism = {
+			popularity = 20
+		}
+
+		centrist = {
+			popularity = 20
+		}
+	}
+	
+	ruling_party = Liberal_Conservatism
+	last_election = "1944.7.1"
+	election_frequency = 72
+	elections_allowed = yes
+}
+
+create_country_leader = {
+	name = "Eino Kilpi"
+	picture = "Kilpi.dds"
+	ideology = socialism
+}
+
+create_country_leader = {
+	name = "Aimo Aaltonen"
+	desc = "POLITICS_AIMO_AALTONEN_DESC"
+	picture = "Aaltonen.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+}
+
+create_country_leader = {
+	name = "Vilho Annala"
+	desc = "POLITICS_VILHO_ANNALA_DESC"
+	picture = "Annala.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+}
+
+
+create_country_leader = {
+	name = "Sakari Tuomioja"
+	picture = "tuomioja.dds"
+	ideology = social_liberalism
+}
+
+create_country_leader = {
+	name = "Urho Kekkonen"
+	picture = "kekkonen.dds"
+	ideology = centrism
+}
+
+create_country_leader = {
+	name = "J. K. Paasikivi"
+	picture = "paasikivi.dds"
+	ideology = Liberal_Conservatism
+}
+
+create_country_leader = {
+	name = "Eino Saari"
+	picture = "saari.dds"
+	ideology = national_democrat
+}
+
+create_country_leader = {
+	name = "Ralf Törngren"
+	picture = "Torningren.dds"
+	ideology = conservatism
+}
+create_country_leader = {
+	name = "Kusti Kulo"
+	picture = "Kulo.dds"
+	ideology = market_socialism
+}
+
+add_ideas = {
+	sisu
+}
+
+create_field_marshal = {
+	name = "Adolf Ehrnrooth"
+	picture = "general_Ehrnrooth.dds"
+	traits = { winter_specialist ranger old_guard }
+	skill = 4
+}
+
+create_corps_commander = {
+	name = "Sakari Simelius"
+	picture = "general_Simelius.dds"
+	traits = { winter_specialist commando }
+	skill = 3
+}
+create_corps_commander = {
+	name = "Kaarlo Heiskanen"
+	picture = "general_Heiskanen.dds"
+	traits = { winter_specialist commando }
+	skill = 3
+}
+create_corps_commander = {
+	name = "Yrjö Keinonen"
+	picture = "general_Keinonen.dds"
+	traits = { winter_specialist commando }
+	skill = 2
+}
+create_corps_commander = {
+	name = "Aarne Sihvo"
+	picture = "general_Sihvo.dds"
+	traits = { }
+	skill = 1
+}
+create_corps_commander = {
+	name = "Oiva Olenius"
+	picture = "general_Olenius.dds"
+	traits = { }
+	skill = 1
+}
+create_corps_commander = {
+	name = "Kustaa Tapola"
+	picture = "general_Tapola.dds"
+	traits = { }
+	skill = 1
+}
+create_corps_commander = {
+	name = "Jarl Lundqvist"
+	picture = "general_Jarl.dds"
+	traits = { }
+	skill = 1
+}
+1960.1.1 = {
+	set_politics = {
+
+		parties = {
+			democratic = { 
+				popularity = 15
+			}
+			socialist = {
+				popularity = 24
+			}
+			conservative = {
+				popularity = 15		
+			}
+			fascism = {
+				popularity = 0
+			}
+		
+			communism = {
+				popularity = 23
+			}
+
+			centrist = {
+				popularity = 23
+			}
+		}
+		
+		ruling_party = centrist
+		last_election = "1956.7.1"
+		election_frequency = 72
+		elections_allowed = yes
+	}
+	create_country_leader = {
+		name = "Urho Kekkonen"
+		picture = "kekkonen.dds"
+		ideology = centrism
+	}
+}
+1980.1.1 = {
+	set_politics = {
+
+		parties = {
+			socialist = { 
+				popularity = 23.90
+			}
+
+			Liberal_Conservatism = { 
+				popularity = 22.70
+			}
+			
+			communism = {
+				popularity = 17.90
+			}
+			
+			centrist = {
+				popularity = 17.30
+			}
+
+			Christian_Democratic = {
+				popularity = 4.80
+			}
+			
+			conservative = {
+				popularity = 4.60
+			}
+			
+			Social_Liberalism = {
+				popularity = 4.20
+			}
+			
+			democratic = {
+				popularity = 3.70
+			}
+			
+			neutrality = {
+				popularity = 1.20
+			}
+			
+		}
+		
+		ruling_party = centrist
+		last_election = "1976.7.1"
+		election_frequency = 72
+		elections_allowed = yes
+	}
+
+	create_country_leader = {
+		name = "Urho Kekkonen"
+		picture = "kekkonen_old.dds"
+		ideology = centrism
+		traits = {
+			#
+		}
+	}
+}

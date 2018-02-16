@@ -1,0 +1,320 @@
+﻿capital = 10
+
+oob = "POL_1949"
+
+set_research_slots = 3
+
+# Starting tech
+set_technology = {
+	CAS1 = 1
+	CAS2 = 1
+	CAS3 = 1
+	CAS4 = 1
+	advanced_destroyer = 1
+	advanced_rocket_engines = 1
+	amphibious1 = 1
+	antiair1 = 1
+	basic_carrier = 1
+	basic_destroyer = 1
+	basic_light_cruiser = 1
+	basic_machine_tools = 1
+	basic_submarine = 1
+	battle_cruiser_1 = 1
+	battleship_2 = 1
+	battleship_3 = 1
+	construction1 = 1
+	cv_CAS1 = 1
+	cv_CAS2 = 1
+	cv_CAS3 = 1
+	cv_CAS4 = 1
+	cv_early_fighter = 1
+	cv_fighter1 = 1
+	cv_fighter2 = 1
+	cv_fighter3 = 1
+	cv_fighter4 = 1
+	cv_jet_CAS1 = 1
+	cv_naval_bomber1 = 1
+	cv_naval_bomber2 = 1
+	cv_naval_bomber3 = 1
+	cv_naval_bomber4 = 1
+	early_battleship = 1
+	early_bomber = 1
+	early_carrier = 1
+	early_destroyer = 1
+	early_fighter = 1
+	early_light_cruiser = 1
+	early_submarine = 1
+	electronic_mechanical_engineering = 1
+	experimental_rockets = 1
+	fighter1 = 1
+	fighter2 = 1
+	fighter3 = 1
+	frigate_1 = 1
+	frigate_2 = 1
+	great_war_infantry_equipment = 1
+	gw_artillery = 1
+	heavy_fighter1 = 1
+	heavy_fighter2 = 1
+	heavy_fighter3 = 1
+	heavy_infantry_weapons1 = 1
+	heavy_infantry_weapons2 = 1
+	heavy_tanks_2 = 1
+	heavy_tanks_3 = 1
+	improved_destroyer = 1
+	improved_light_cruiser = 1
+	improved_rocket_engines = 1
+	interwar_antiair = 1
+	infantry_equip_1 = 1
+	jet_CAS1 = 1
+	jet_engines = 1
+	jet_fighter1 = 1
+	jet_fighter2 = 1
+	jet_interceptor1 = 1
+	jet_interceptor2 = 1
+	jet_strategic_bomber1 = 1
+	jet_tactical_bomber1 = 1
+	landing_craft = 1
+	light_carrier1 = 1
+	light_carrier2 = 1
+	light_tanks_1 = 1
+	main_battle_tanks_1 = 1
+	main_battle_tanks_2 = 1
+	mechanized_heavy_infantry = 1
+	mechanized_infantry = 1
+	mechanized_infantry2 = 1
+	mortar_infantry_weapons_1 = 1
+	mortar_infantry_weapons_2 = 1
+	motorised_infantry = 1
+	naval_bomber1 = 1
+	naval_bomber2 = 1
+	naval_bomber3 = 1
+	naval_bomber4 = 1
+	nuclear_cg_1 = 1
+	radio = 1
+	radio_detection = 1
+	rocket_engines = 1
+	selfpropart1 = 1
+	sp_rocket1 = 1
+	sp_rocket2 = 1
+	strategic_bomber1 = 1
+	strategic_bomber2 = 1
+	strategic_bomber3 = 1
+	suicide_craft = 1
+	synth_oil_experiments = 1
+	tactical_bomber1 = 1
+	tactical_bomber2 = 1
+	tactical_bomber3 = 1
+	tank_landing_craft = 1
+	tech_support = 1
+	transport = 1
+}
+
+
+add_ideas = {
+	population_growth_steady
+}
+
+set_convoys = 200
+
+set_politics = {
+
+	parties = {
+		pan_arabism = {
+			popularity = 0
+			banned = yes
+		}
+		democratic = { 
+			popularity = 25
+		}
+
+		fascism = {
+			popularity = 5
+		}
+		
+		communism = {
+			popularity = 35
+		}
+		
+		trotskyism = {
+			popularity = 35
+		}		
+
+	}
+	
+	ruling_party = communism
+	last_election = "1947.9.8"
+	election_frequency = 36
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Stanisław Mikołajczyk"
+	desc = "POLITICS_WLADYSLAW_SIKORSKI_DESC"
+	picture = "Mikolajczyk.dds"
+	expire = "1965.1.1"
+	ideology = christian_centrist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Janusz Radziwill"
+	desc = "POLITICS_WLADYSLAW_SIKORSKI_DESC"
+	picture = "Radziwill.dds"
+	expire = "1967.1.1"
+	ideology = royal_democrat
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "August Zaleski"
+	desc = "POLITICS_IGNACY_MOSCICKI_DESC"
+	picture = "Zaleski.dds"
+	expire = "1972.1.1"
+	ideology = conservatism
+	traits = {
+		#
+	}
+}
+
+
+create_country_leader = {
+	name = "Bolesław Bierut"
+	desc = "POLITICS_WLADYSLAW_GOMULKA_DESC"
+	picture = "Gomulka.dds"
+	expire = "1971.1.1"
+	ideology = trotskyism_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Edward Ochab"
+	desc = "POLITICS_WLADYSLAW_GOMULKA_DESC"
+	picture = "Ochab.dds"
+	expire = "1957.1.1"
+	ideology = stalinism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Bolesław Bierut"
+	desc = "POLITICS_WLADYSLAW_GOMULKA_DESC"
+	picture = "Bierut.dds"
+	expire = "1954.1.1"
+	ideology = stalinism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Bolesław Piasecki"
+	desc = "POLITICS_BOLESLAW_PIASECKI_DESC"
+	picture = "GFX_POL_boleslaw_piasecki"
+	expire = "1974.1.1"
+	ideology = falangism
+	traits = {
+		#
+	}
+}
+create_corps_commander = {
+    name = "Michal Rola Zymeriski"
+    portrait_path = "Zymierski.dds"
+    traits = {   }
+    skill = 2
+}
+create_field_marshal = {
+	name = "Konstanty Rokossowski"
+	gfx = "Rokossowski.dds"
+	traits = {  offensive_doctrine }
+	skill = 3
+}
+
+create_field_marshal = {
+	name = "Marian Spychalski"
+	gfx = "Spychalski.dds"
+	traits = { thorough_planner }
+	skill = 4
+}
+create_corps_commander = {
+	name = "Karol Świerczewski"
+	gfx = "Swierczewski.dds"
+	traits = {  panzer_leader }
+	skill = 1
+}
+
+create_corps_commander = {
+	name = "Zygmunt Berling"
+	gfx = "Berling.dds"
+	traits = { trickster }
+	skill = 2
+}
+1957.1.1 = {
+			create_country_leader = {
+				name = "Władysław Gomułka"
+				desc = "POLITICS_WLADYSLAW_GOMULKA_DESC"
+				picture = "Gomulka.dds"
+				expire = "1980.1.1"
+				ideology = marxism
+				traits = {
+					#
+				}
+			}
+}
+1970.1.1 = {
+	create_country_leader = {
+		name = "Edward Gierek"
+		desc = ""
+		picture = "Gierek.dds"
+		expire = "1980.9.6"
+		ideology = marxism
+		traits = {
+			#
+		}
+	}
+}
+1980.1.1 = {
+	set_politics = {
+
+		parties = {
+			conservative = { 
+				popularity = 5 #shared between all parties, should add to 33
+				#banned = yes #default is yes
+			}
+
+			socialist = { 
+				popularity = 5 #shared between all parties, should add to 33
+				#banned = yes #default is yes
+			}
+			
+			centrist = { 
+				popularity = 5 #shared between all parties, should add to 33
+				#banned = yes #default is yes
+			}
+			
+			fascism = {
+				popularity = 0
+			}
+			
+			communism = {
+				popularity = 85
+			}
+			
+			neutrality = { 
+				popularity = 0
+			}
+		}
+		
+		ruling_party = communism
+		last_election = "1933.3.5"
+		election_frequency = 48
+		elections_allowed = no
+	}
+
+}
