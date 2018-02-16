@@ -1,0 +1,28 @@
+﻿units = {
+
+	division = {
+		name = "219th Tankovaya Diviziya"
+		location = 301
+		division_template = "Tankovaya Diviziya"
+	}
+	division = {
+		name = "220th Tankovaya Diviziya"
+		location = 301
+		division_template = "Tankovaya Diviziya"
+	}
+	division = {
+		name = "221st Tankovaya Diviziya"
+		location = 301
+		division_template = "Tankovaya Diviziya"
+	}
+	division = {
+		name = "222nd Tankovaya Diviziya"
+		location = 301
+		division_template = "Tankovaya Diviziya"
+	}
+	division = {
+		name = "223rd Tankovaya Diviziya"
+		location = 301
+		division_template = "Tankovaya Diviziya"
+	}
+}

@@ -1,0 +1,297 @@
+﻿division_template = {
+	name = "Divizia Infanterie"		
+	# Note: also represents Guards, Fortress divisions
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }  		# 2x 100mm howitzer bns, on average
+		engineer = { x = 0 y = 1 }   
+	}
+}
+division_template = {
+	name = "Diviziune Munte"		
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 1 y = 0 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }   
+	}
+}
+division_template = {
+	name = "Cavalerie Brigada" 
+	# Note: regiments within the brigade were battalion-sized units
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }			# one cav rgt upgraded to truck-bourne in 1939-40
+	}
+}
+division_template = {
+	name = "Diviziune Marin" 		
+
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 0 y = 2 }
+		marine = { x = 1 y = 0 }
+		marine = { x = 1 y = 1 }
+		marine = { x = 1 y = 2 }
+		light_armor = { x = 2 y = 0 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }   
+	}
+	priority = 0
+}
+division_template = {
+	name = "Diviziune Aeropurtat"
+
+	regiments = {
+		paratrooper = { x = 0 y = 0 }
+		paratrooper = { x = 0 y = 1 }
+        		paratrooper = { x = 0 y = 2 }
+		paratrooper = { x = 1 y = 0 }
+		paratrooper = { x = 1 y = 1 }
+        		paratrooper = { x = 1 y = 2 }
+		light_armor = { x = 2 y = 0 }
+	}
+}
+division_template = {
+	name = "Diviziune Motorizat" 	
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+	    	motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+	    	motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+	}
+	support = {
+	 	engineer = { x = 0 y = 0 }
+        recon = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Diviziune Ușoară Mecanizat Infanterie"
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		light_armor = { x = 0 y = 0 }
+	}
+	support = {
+	 	engineer = { x = 0 y = 0 }
+	    recon = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Diviziune Greu Mecanizat Infanterie"
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1}
+		light_armor = { x = 0 y = 2 }
+	}
+	support = {
+	 	engineer = { x = 0 y = 0 }
+	    recon = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Diviziune Ușoară Blindat"
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+        		light_armor = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+       		motorized = { x = 1 y = 1 }
+	}
+	support = {
+        recon = { x = 0 y = 0 }
+        engineer = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Diviziune Mijloc Blindat"
+
+	regiments = {
+		medium_armor = { x = 0 y = 0 }
+		medium_armor = { x = 0 y = 1 }
+        		medium_armor = { x = 0 y = 2 }
+		light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1}
+		motorized = { x = 1 y = 2}
+       		motorized = { x = 2 y = 0 }
+	}
+	support = {
+        recon = { x = 0 y = 0 }
+        engineer = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Diviziune Greu Blindat"
+
+	regiments = {
+		heavy_armor = { x = 0 y = 0 }
+		heavy_armor = { x = 0 y = 1 }
+        		heavy_armor = { x = 0 y = 2}
+		medium_armor = { x = 1 y = 0 }
+		medium_armor = { x = 1 y = 1 }
+		light_armor = { x = 1 y = 2 }
+		motorized = { x = 2 y = 0 }
+       		motorized = { x = 2 y = 1 }
+	}
+	support = {
+        recon = { x = 0 y = 0 }
+        engineer = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }
+	}
+}
+
+
+units = {
+	######## LAND UNITS ########
+	##### Fortele Terestre Române #####
+	division= {	
+		name = "1. Diviziune 'Tudor Vladimirescu' Blindat"
+		location = 9617
+		division_template = "Diviziune Mijloc Blindat"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "1. Diviziune Munte"
+		location = 690
+		division_template = "Diviziune Munte"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "2. Diviziune Infanterie"
+		location = 6652
+		division_template = "Divizia Infanterie"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "2. Diviziune 'Horia, Cloșca și Crișan' Ușoară Mecanizat Infanterie"
+		location = 9672
+		division_template = "Diviziune Ușoară Mecanizat Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "3. Diviziune Infanterie"
+		location = 11603
+		division_template = "Divizia Infanterie"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "4. Diviziune Infanterie"
+		location = 693
+		division_template = "Divizia Infanterie"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "4. Diviziune Munte"
+		location = 693
+		division_template = "Diviziune Munte"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "5. Diviziune Infanterie"
+		location = 3630
+		division_template = "Divizia Infanterie"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "5. Diviziune Munte"
+		location = 6667
+		division_template = "Diviziune Munte"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "6. Diviziune Infanterie"
+		location = 11588
+		division_template = "Divizia Infanterie"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "7. Diviziune Infanterie"
+		location = 818
+		division_template = "Divizia Infanterie"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "8. Diviziune Infanterie"
+		location = 6682
+		division_template = "Divizia Infanterie"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "9. Diviziune Infanterie"
+		location = 657
+		division_template = "Divizia Infanterie"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "10. Diviziune Infanterie"
+		location = 9606
+		division_template = "Divizia Infanterie"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "11. Diviziune Infanterie"
+		location = 6658
+		division_template = "Divizia Infanterie"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "12. Diviziune Infanterie"
+		location = 746
+		division_template = "Divizia Infanterie"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "59. Diviziune Cavalerie"
+		location = 3696
+		division_template = "Cavalerie Brigada"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+
+
+	##### NAVAL UNITS #####		
+}
+
+

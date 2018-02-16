@@ -1,0 +1,320 @@
+﻿division_template = {
+	name = "Pezikó Diaíresi"			
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+        		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+       	engineer = { x = 0 y = 0 }
+       	recon = { x = 0 y = 1 }
+       	artillery = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Thalássia Diaíresi" 		
+
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 0 y = 2 }
+		marine = { x = 1 y = 0 }
+		marine = { x = 1 y = 1 }
+		marine = { x = 1 y = 2 }
+		light_armor = { x = 2 y = 0 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }   
+	}
+	priority = 0
+}
+division_template = {
+	name = "Aerometaferómena Diaíresi"
+
+	regiments = {
+		paratrooper = { x = 0 y = 0 }
+		paratrooper = { x = 0 y = 1 }
+        		paratrooper = { x = 0 y = 2 }
+		paratrooper = { x = 1 y = 0 }
+		paratrooper = { x = 1 y = 1 }
+        		paratrooper = { x = 1 y = 2 }
+		light_armor = { x = 2 y = 0 }
+	}
+}
+division_template = {
+	name = "Vounó Pezikó Diaíresi"
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+      		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+        mountaineers = { x = 1 y = 2 }
+	}
+	support = {
+	 	engineer = { x = 0 y = 0 }
+	    recon = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Michanokínita Diaíresi" 	
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+	    	motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+	    	motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+	}
+	support = {
+	 	engineer = { x = 0 y = 0 }
+        recon = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Fos Michanismós Pezikó Diaíresi"
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		light_armor = { x = 0 y = 0 }
+	}
+	support = {
+	 	engineer = { x = 0 y = 0 }
+	    recon = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Varýs Michanismós Pezikó Diaíresi"
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1}
+		light_armor = { x = 0 y = 2 }
+	}
+	support = {
+	 	engineer = { x = 0 y = 0 }
+	    recon = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Fos Thorakisménos Diaíresi"
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+        		light_armor = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+       		motorized = { x = 1 y = 1 }
+	}
+	support = {
+        recon = { x = 0 y = 0 }
+        engineer = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Mesaío Thorakisménos Diaíresi"
+
+	regiments = {
+		medium_armor = { x = 0 y = 0 }
+		medium_armor = { x = 0 y = 1 }
+        		medium_armor = { x = 0 y = 2 }
+		light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1}
+		motorized = { x = 1 y = 2}
+       		motorized = { x = 2 y = 0 }
+	}
+	support = {
+        recon = { x = 0 y = 0 }
+        engineer = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Varýs Thorakisménos Diaíresi"
+
+	regiments = {
+		heavy_armor = { x = 0 y = 0 }
+		heavy_armor = { x = 0 y = 1 }
+        		heavy_armor = { x = 0 y = 2}
+		medium_armor = { x = 1 y = 0 }
+		medium_armor = { x = 1 y = 1 }
+		light_armor = { x = 1 y = 2 }
+		motorized = { x = 2 y = 0 }
+       		motorized = { x = 2 y = 1 }
+	}
+	support = {
+        recon = { x = 0 y = 0 }
+        engineer = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Fos Thorakisménos Taxiarchía"				
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }		
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Mesaío Thorakisménos Taxiarchía"				
+
+	regiments = {
+		medium_armor = { x = 0 y = 0 }
+		medium_armor = { x = 0 y = 1 }
+		medium_armor = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Varýs Thorakisménos Taxiarchía"				# Represents (light) Army Tank Brigades (LT Mk VIs, some Matilda Is)
+
+	regiments = {
+		heavy_armor = { x = 0 y = 0 }
+		heavy_armor = { x = 0 y = 1 }
+        		heavy_armor = { x = 0 y = 2}
+	}
+}
+division_template = {
+	name = "Ippikó Taxiarchía"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Pezikó Taxiarchía"			
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Vounó Pezikó Taxiarchía"
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+      	mountaineers = { x = 0 y = 2 }
+	}
+}
+
+units = {
+	######## Ellinikó Genikó Epiteleío ########
+	division = {
+		name = "I Pezikó 'Iron' Diaíresi"
+		location = 10163
+		division_template = "Pezikó Diaíresi" 
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "III Pezikó Diaíresi"
+		location = 11818
+		division_template = "Pezikó Diaíresi" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "IV Pezikó Diaíresi"
+		location = 863
+		division_template = "Pezikó Diaíresi" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "II Fos Michanismós Pezikó Diaíresi"
+		location = 1109
+		division_template = "Fos Michanismós Pezikó Diaíresi" 
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "I Aerometaferómena 'Raider' Diaíresi"
+		location = 9916
+		division_template = "Aerometaferómena Diaíresi" 
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "I Vounó Pezikó 'Raider' Diaíresi"
+		location = 6930
+		division_template = "Vounó Pezikó Diaíresi" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "II Vounó Pezikó Diaíresi"
+		location = 936
+		division_template = "Vounó Pezikó Diaíresi" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "III Vounó Pezikó Diaíresi"
+		location = 966
+		division_template = "Vounó Pezikó Diaíresi" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "XXV Mesaío Thorakisménos Diaíresi"
+		location = 1205
+		division_template = "Mesaío Thorakisménos Diaíresi" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+
+	##### NAVAL UNITS #####
+}
+
+##### Air Force #####
+air_wings = {
+	47 = { 														# Athens  
+		CAS_equipment_1 = { owner = "GRE" amount = 27}			# Bomber Group -- Blenheim Is, Battle Is, Potez 633s
+	}
+}
+
+
+### Starting Production ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "GRE"
+		}
+		requested_factories = 1
+		progress = 0.10
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "GRE" 
+		}
+		requested_factories = 1
+		progress = 0.56
+		efficiency = 100
+	}
+}

@@ -1,0 +1,62 @@
+﻿
+
+###### OOB ######
+units = {
+
+	division= {
+		name = "Pathet Lao Militia"
+		location = 1324
+		division_template = "Bo binh Su đoàn"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.25
+	}
+	division= {
+		name = "Pathet Lao Militia"
+		location = 1324
+		division_template = "Bo binh Su đoàn"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.25
+	}
+	division= {
+		name = "Pathet Lao Militia"
+		location = 1324
+		division_template = "Bo binh Su đoàn"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.25
+	}
+	division= {
+		name = "Pathet Lao Militia"
+		location = 1324
+		division_template = "Bo binh Su đoàn"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.25
+	}
+	division= {
+		name = "Pathet Lao Militia"
+		location = 1324
+		division_template = "Bo binh Su đoàn"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.25
+	}
+	division= {
+		name = "Pathet Lao Militia"
+		location = 1324
+		division_template = "Bo binh Su đoàn"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.25
+	}
+	division= {
+		name = "Pathet Lao Militia"
+		location = 1324
+		division_template = "Bo binh Su đoàn"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.25
+	}
+	division= {
+		name = "Pathet Lao Militia"
+		location = 1324
+		division_template = "Bo binh Su đoàn"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.25
+	}
+}

@@ -1,0 +1,87 @@
+﻿####### OOB #######
+units = {
+	division= {	
+		name = "9th American Volunteer Division"
+		location = 4056
+		division_template = "Bich Gigyehwa Doen Bobyeong  Bunhal"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "10th American Volunteer Division"
+		location = 4056
+		division_template = "Bobyeong Bunhal"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "11th American Volunteer Division"
+		location = 4056
+		division_template = "Bobyeong Bunhal"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1	
+	}
+	division= {	
+		name = "12th American Volunteer Division"
+		location = 4056
+		division_template = "Bobyeong Bunhal"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "13th American Volunteer Division"
+		location = 4056
+		division_template = "Bobyeong Bunhal"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "14th American Volunteer Division"
+		location = 4056
+		division_template = "Bobyeong Bunhal"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "15th American Volunteer Division"
+		location = 4056
+		division_template = "Bobyeong Bunhal"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "16th American Volunteer Division"
+		location = 4056
+		division_template = "Bobyeong Bunhal"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "17th American Volunteer Division"
+		location = 4056
+		division_template = "Seonbag Bunhal"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "18th American Volunteer Division"
+		location = 4056
+		division_template = "Seonbag Bunhal"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "19th American Volunteer Division"
+		location = 4056
+		division_template = "Seonbag Bunhal"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "20th American Volunteer Division"
+		location = 4056
+		division_template = "Seonbag Bunhal"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+}

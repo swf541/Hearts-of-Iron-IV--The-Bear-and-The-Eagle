@@ -1,0 +1,29 @@
+﻿
+units = {
+
+	division = {
+		name = "100th Gyaloghadosztály"
+		location = 9660
+		division_template = "Gyaloghadosztály"
+	}
+	division = {
+		name = "101st Gyaloghadosztály"
+		location = 9660
+		division_template = "Gyaloghadosztály"
+	}
+	division = {
+		name = "102nd Gyaloghadosztály"
+		location = 9660
+		division_template = "Gyaloghadosztály"
+	}
+	division = {
+		name = "103rd Gyaloghadosztály"
+		location = 9660
+		division_template = "Gyaloghadosztály"
+	}
+	division = {
+		name = "104th Gyaloghadosztály"
+		location = 9660
+		division_template = "Gyaloghadosztály"
+	}
+}

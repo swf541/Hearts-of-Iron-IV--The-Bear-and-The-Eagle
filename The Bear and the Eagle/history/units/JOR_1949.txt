@@ -1,0 +1,79 @@
+﻿division_template = {
+	name = "Infantry Division"			# Represents regional reserve mixed brigades
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+}
+
+units = {
+	##### Army of the Israeli Defense Forces #####
+	division= {	
+		name = "1er Arab Legion"
+		location = 7151
+		division_template = "Infantry Division"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	division = {
+		name = "2er Arab Legion"
+		location = 7151
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+		division= {	
+		name = "3er Arab Legion"
+		location = 7151
+		division_template = "Infantry Division"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	division = {
+		name = "4er Arab Legion"
+		location = 7151
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+		division= {	
+		name = "5er Arab Legion"
+		location = 7151
+		division_template = "Infantry Division"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+	division = {
+		name = "6er Arab Legionn"
+		location = 7151
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "JOR"
+		}
+		requested_factories = 1
+		progress = 0.33
+		efficiency = 100
+	}
+}

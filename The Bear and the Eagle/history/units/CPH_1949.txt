@@ -1,0 +1,182 @@
+﻿division_template = {
+	name = "Infantry Dibisyon"			
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+	}
+	support = {
+	        engineer = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "Cavalry Dibisyon"		# Represents two-division cavalry corps (generally poorly-equipped)
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "Pandagat Dibisyon" 		
+
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 0 y = 2 }
+		light_armor = { x = 1 y = 0 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }   
+	}
+	priority = 0
+}
+division_template = {
+	name = "Airborne Dibisyon"
+
+	regiments = {
+		paratrooper = { x = 0 y = 0 }
+		paratrooper = { x = 0 y = 1 }
+        		paratrooper = { x = 0 y = 2 }
+		light_armor = { x = 1 y = 0 }
+	}
+}
+division_template = {
+	name = "Mekaniko Dibisyon"
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+       		motorized = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Light Mechanized Dibisyon"
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		light_armor = { x = 0 y = 0 }
+	}
+	support = {
+	 	engineer = { x = 0 y = 0 }
+	    recon = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Heavy Mehanized Dibisyon"
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1}
+		light_armor = { x = 0 y = 2 }
+	}
+	support = {
+	 	engineer = { x = 0 y = 0 }
+	    recon = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Mga Mountaineer Dibisyon"
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+      		mountaineers = { x = 0 y = 2 }
+	}
+	support = {
+	 	engineer = { x = 0 y = 0 }
+	    recon = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = " Banayad Nakabaluti Dibisyonī"
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+        		light_armor = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+       		motorized = { x = 1 y = 1 }
+	}
+	support = {
+        recon = { x = 0 y = 0 }
+        engineer = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Katamtaman Nakabaluti Dibisyonī"
+
+	regiments = {
+		medium_armor = { x = 0 y = 0 }
+		medium_armor = { x = 0 y = 1 }
+        		medium_armor = { x = 0 y = 2 }
+		light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1}
+		motorized = { x = 1 y = 2}
+       		motorized = { x = 2 y = 0 }
+	}
+	support = {
+        recon = { x = 0 y = 0 }
+        engineer = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Malakas Nakabaluti Dibisyon"
+
+	regiments = {
+		heavy_armor = { x = 0 y = 0 }
+		heavy_armor = { x = 0 y = 1 }
+        		heavy_armor = { x = 0 y = 2}
+		medium_armor = { x = 1 y = 0 }
+		medium_armor = { x = 1 y = 1 }
+		light_armor = { x = 1 y = 2 }
+		motorized = { x = 2 y = 0 }
+       		motorized = { x = 2 y = 1 }
+	}
+	support = {
+        recon = { x = 0 y = 0 }
+        engineer = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }
+	}
+}
+
+units = {
+	division = {
+		name = "1st People's Milita"
+		location = 1288
+		division_template = "Infantry Dibisyon"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "2nd People's Milita"
+		location = 10165
+		division_template = "Infantry Dibisyon"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "3rd People's Milita"
+		location = 7323
+		division_template = "Infantry Dibisyon"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "4th People's Milita"
+		location = 1388
+		division_template = "Infantry Dibisyon"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7

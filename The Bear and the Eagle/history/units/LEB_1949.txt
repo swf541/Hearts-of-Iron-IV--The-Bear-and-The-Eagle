@@ -1,0 +1,92 @@
+﻿division_template = {
+	name = "Alfurqat Almasha"		# 'Infantry Division' - Represents local tribal levies (militia)
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+		infantry = { x = 3 y = 2 }
+	}
+	
+	support = {
+	 	engineer = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "Alfurqat Alfursan"		# 'Cavalry Division' - Camel-mounted levies (militia)
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+		cavalry = { x = 3 y = 0 }
+		cavalry = { x = 3 y = 1 }
+	}
+	
+	support = {
+	 	engineer = { x = 0 y = 0 }
+	}
+}
+
+
+units = {
+
+}
+
+units = {
+	division = {
+		name = "1er Division"
+		location = 11919
+		division_template = "Alfurqat Almasha"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "2er Division"
+		location = 11919
+		division_template = "Alfurqat Almasha"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+
+
+	division = {
+		name = "11er Division"
+		location = 792
+		division_template = "Alfurqat Alfursan"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "12er Division"
+		location = 792
+		division_template = "Alfurqat Alfursan"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	
+}
+
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "SAU"
+		}
+		requested_factories = 1
+		progress = 0.13
+		efficiency = 100
+	}
+}

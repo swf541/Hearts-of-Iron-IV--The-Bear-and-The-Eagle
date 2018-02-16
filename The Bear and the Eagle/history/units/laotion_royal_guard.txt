@@ -1,0 +1,62 @@
+﻿
+
+###### OOB ######
+units = {
+
+	division= {
+		name = "Laotion Royal Guard"
+		location = 1324
+		division_template = "Bo binh Su đoàn"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "Laotion Royal Guard"
+		location = 1324
+		division_template = "Bo binh Su đoàn"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "Laotion Royal Guard"
+		location = 1324
+		division_template = "Bo binh Su đoàn"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "Laotion Royal Guard"
+		location = 1324
+		division_template = "Bo binh Su đoàn"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "Laotion Royal Guard"
+		location = 1324
+		division_template = "Bo binh Su đoàn"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "Laotion Royal Guard"
+		location = 1324
+		division_template = "Bo binh Su đoàn"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "Laotion Royal Guard"
+		location = 1324
+		division_template = "Bo binh Su đoàn"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "Laotion Royal Guard"
+		location = 1324
+		division_template = "Bo binh Su đoàn"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+	}
+}

@@ -1,0 +1,240 @@
+﻿division_template = {
+	name = "Këmbësori Divizioni"			#Infantry Division - In 1936, Albania only had one triangular division.	They did have some tankettes and infantry support tanks, so 1 recon
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "Detar Divizioni" 		
+
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 0 y = 2 }
+		marine = { x = 1 y = 0 }
+		marine = { x = 1 y = 1 }
+		marine = { x = 1 y = 2 }
+		light_armor = { x = 2 y = 0 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }   
+	}
+	priority = 0
+}
+division_template = {
+	name = "Në Fluturim Divizioni"
+
+	regiments = {
+		paratrooper = { x = 0 y = 0 }
+		paratrooper = { x = 0 y = 1 }
+        		paratrooper = { x = 0 y = 2 }
+		paratrooper = { x = 1 y = 0 }
+		paratrooper = { x = 1 y = 1 }
+        		paratrooper = { x = 1 y = 2 }
+		light_armor = { x = 2 y = 0 }
+	}
+}
+division_template = {
+	name = "Motorizuara Divizioni" 
+	
+	regiments = {
+		motorized = { x = 0 y = 0 }
+	    	motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+	    	motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+	}
+	support = {
+	 	engineer = { x = 0 y = 0 }
+        recon = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Dritë Mekanizuar Këmbësori Divizioni"
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		light_armor = { x = 0 y = 0 }
+	}
+	support = {
+	 	engineer = { x = 0 y = 0 }
+	    recon = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "I Rëndë Mekanizuar Këmbësori Divizioni"
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1}
+		light_armor = { x = 0 y = 2 }
+	}
+	support = {
+	 	engineer = { x = 0 y = 0 }
+	    recon = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Dritë I Blinduar Divizioni"
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+        		light_armor = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+       		motorized = { x = 1 y = 1 }
+	}
+	support = {
+        recon = { x = 0 y = 0 }
+        engineer = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Mesatare I Blinduar Divizioni"
+
+	regiments = {
+		medium_armor = { x = 0 y = 0 }
+		medium_armor = { x = 0 y = 1 }
+        		medium_armor = { x = 0 y = 2 }
+		light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1}
+		motorized = { x = 1 y = 2}
+       		motorized = { x = 2 y = 0 }
+	}
+	support = {
+        recon = { x = 0 y = 0 }
+        engineer = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "I Rëndë I Blinduar Divizioni"
+
+	regiments = {
+		heavy_armor = { x = 0 y = 0 }
+		heavy_armor = { x = 0 y = 1 }
+        		heavy_armor = { x = 0 y = 2}
+		medium_armor = { x = 1 y = 0 }
+		medium_armor = { x = 1 y = 1 }
+		light_armor = { x = 1 y = 2 }
+		motorized = { x = 2 y = 0 }
+       		motorized = { x = 2 y = 1 }
+	}
+	support = {
+        recon = { x = 0 y = 0 }
+        engineer = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }
+	}
+}
+
+###### OOB ######
+units = {
+		#Ushtria Shqipëtarë
+	division = {
+		name = "1.Këmbësori Brigadë"
+		location = 9914
+		division_template = "Këmbësori Divizioni"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "2.Këmbësori Brigadë"
+		location = 3896
+		division_template = "Këmbësori Divizioni"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "3.Këmbësori Brigadë"
+		location = 9780
+		division_template = "Këmbësori Divizioni"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "4.Këmbësori Brigadë"
+		location = 3884
+		division_template = "Këmbësori Divizioni"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "5.Këmbësori Brigadë"
+		location = 11767
+		division_template = "Këmbësori Divizioni"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "6.Këmbësori Brigadë"
+		location = 914
+		division_template = "Këmbësori Divizioni"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "7.Këmbësori Brigadë"
+		location = 3448
+		division_template = "Këmbësori Divizioni"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "8.Këmbësori Brigadë"
+		location = 9875
+		division_template = "Këmbësori Divizioni"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "9.Këmbësori Brigadë"
+		location = 11762
+		division_template = "Këmbësori Divizioni"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+}
+
+### Starting Production ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "ALB"
+		}
+		requested_factories = 1
+		progress = 0.86
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "ALB"
+		}
+		requested_factories = 1
+		progress = 0.40
+		efficiency = 100
+	}
+}

@@ -1,0 +1,29 @@
+﻿
+units = {
+
+	division = {
+		name = "100th Pekhotna Divizija"
+		location = 949
+		division_template = "Pekhotna Divizija"
+	}
+	division = {
+		name = "101st Pekhotna Divizija"
+		location = 949
+		division_template = "Pekhotna Divizija"
+	}
+	division = {
+		name = "102nd Pekhotna Divizija"
+		location = 949
+		division_template = "Pekhotna Divizija"
+	}
+	division = {
+		name = "103rd Pekhotna Divizija"
+		location = 949
+		division_template = "Pekhotna Divizija"
+	}
+	division = {
+		name = "104th Pekhotna Divizija"
+		location = 949
+		division_template = "Pekhotna Divizija"
+	}
+}

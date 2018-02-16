@@ -1,0 +1,65 @@
+﻿units = {
+	division = {
+		name = "19th Chinese Volunteer Division"
+		location = 6944
+		division_template = "Bobyeong Bunhal"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "20th Chinese Volunteer Division"
+		location = 6944
+		division_template = "Bobyeong Bunhal"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "21st Chinese Volunteer Division"
+		location = 6944
+		division_template = "Jeondong Bobyeong Bunhal"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "22nd Chinese Volunteer Division"
+		location = 6944
+		division_template = "Bich Gigyehwa Doen Bobyeong  Bunhal"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "23rd Chinese Volunteer Division"
+		location = 6944
+		division_template = "Bobyeong Bunhal"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "24th Chinese Volunteer Division"
+		location = 6944
+		division_template = "Bobyeong Bunhal"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "25th Chinese Volunteer Division"
+		location = 6944
+		division_template = "Bobyeong Bunhal"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "26th Chinese Volunteer Division"
+		location = 6944
+		division_template = "Bich Gigyehwa Doen Bobyeong  Bunhal"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "27th Chinese Volunteer Division"
+		location = 6944
+		division_template = "Jeondong Bobyeong Bunhal"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+}

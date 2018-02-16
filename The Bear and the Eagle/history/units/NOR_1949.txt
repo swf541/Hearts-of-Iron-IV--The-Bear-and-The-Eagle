@@ -1,0 +1,315 @@
+﻿start_equipment_factor = 0.2
+division_template = {
+	name = "Infanteriet Divisjon"		
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }  
+	}
+}
+division_template = {
+	name = "Mekanisert Kavaleri"  
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		medium_armor = { x = 1 y = 0}
+		light_armor = { x = 1 y = 1 }
+		light_armor = { x = 1 y = 2}
+	}
+	support = {
+		recon = { x = 0 y = 0 }      
+		engineer = { x = 0 y = 1 }   
+	}
+}
+division_template = {
+	name = "Marine Divisjon" 		
+
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 0 y = 2 }
+		marine = { x = 1 y = 0 }
+		marine = { x = 1 y = 1 }
+		marine = { x = 1 y = 2 }
+		light_armor = { x = 2 y = 0 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }   
+	}
+	priority = 0
+}
+division_template = {
+	name = "Binær Divisjon"		
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }  
+	}
+}
+division_template = {
+	name = "Luftbårne Divisjon"
+
+	regiments = {
+		paratrooper = { x = 0 y = 0 }
+		paratrooper = { x = 0 y = 1 }
+        		paratrooper = { x = 0 y = 2 }
+		paratrooper = { x = 1 y = 0 }
+		paratrooper = { x = 1 y = 1 }
+        		paratrooper = { x = 1 y = 2 }
+		light_armor = { x = 2 y = 0 }
+	}
+}
+division_template = {
+	name = "Lett Pansret Divisjon"
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+        		light_armor = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+       		motorized = { x = 1 y = 1 }
+	}
+	support = {
+        recon = { x = 0 y = 0 }
+        engineer = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Middels Pansret Divisjon"
+
+	regiments = {
+		medium_armor = { x = 0 y = 0 }
+		medium_armor = { x = 0 y = 1 }
+        		medium_armor = { x = 0 y = 2 }
+		light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1}
+		motorized = { x = 1 y = 2}
+       		motorized = { x = 2 y = 0 }
+	}
+	support = {
+        recon = { x = 0 y = 0 }
+        engineer = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Tung Pansret Divisjon"
+
+	regiments = {
+		heavy_armor = { x = 0 y = 0 }
+		heavy_armor = { x = 0 y = 1 }
+        		heavy_armor = { x = 0 y = 2}
+		medium_armor = { x = 1 y = 0 }
+		medium_armor = { x = 1 y = 1 }
+		light_armor = { x = 1 y = 2 }
+		motorized = { x = 2 y = 0 }
+       		motorized = { x = 2 y = 1 }
+	}
+	support = {
+        recon = { x = 0 y = 0 }
+        engineer = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Motorisert infanteri Divisjon"
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+       		motorized = { x = 0 y = 2 }
+       		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+        		motorized = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Lys Mekanisert Infanteri Divisjon"
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		light_armor = { x = 0 y = 0 }
+	}
+	support = {
+	 	engineer = { x = 0 y = 0 }
+	    recon = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Tung Mekanisert Infanteri Divisjon"
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1}
+		light_armor = { x = 0 y = 2 }
+	}
+	support = {
+	 	engineer = { x = 0 y = 0 }
+	    recon = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Fjell Infanteri Divisjon"
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+      		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+        mountaineers = { x = 1 y = 2 }
+	}
+	support = {
+	 	engineer = { x = 0 y = 0 }
+	    recon = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Dragonregiment" 
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+	}
+}
+
+
+units = {
+	######## LAND UNITS ########
+	##### Kongelige Norwegan Overkommando #####
+
+	division = {
+		name = "1. Dragonregiment"
+		location = 6115
+		division_template = "Mekanisert Kavaleri"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "2. Dragonregiment"
+		location = 9157
+		division_template = "Mekanisert Kavaleri"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "3. Dragonregiment"
+		location = 3022
+		division_template = "Mekanisert Kavaleri"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "6. Divisjon"
+		location = 91
+		division_template = "Lys Mekanisert Infanteri Divisjon"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "Hans Majestet Kongens Garde Brigaden"
+		location = 6115
+		division_template = "Binær Divisjon"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "Finnmark Brigaden"
+		location = 9116
+		division_template = "Binær Divisjon"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "6th Brigaden"
+		location = 6130
+		division_template = "Binær Divisjon"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "7th Brigaden"
+		location = 11050
+		division_template = "Binær Divisjon"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "Brigaden Nord"
+		location = 9116
+		division_template = "Binær Divisjon"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "1. Marinejeger Divisjon"
+		location = 192
+		division_template = "Marine Divisjon"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+
+	##### NAVAL UNITS #####
+
+}
+
+air_wings = {
+	### Luftforsvaret -- Oslo
+	110 = {
+		fighter_equipment_0 =  { owner = "NOR" amount = 15 }			# Fighter Squadron -- Gloster Gladiator
+		tac_bomber_equipment_0 =  { owner = "NOR" amount = 15 }			# Bomber Squadron -- Fokker C.Vd
+	}
+}
+
+### Starting Production ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "NOR"
+		}
+		requested_factories = 1
+		progress = 0.28
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "NOR" 
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 100
+	}
+}

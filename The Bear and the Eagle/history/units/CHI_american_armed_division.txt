@@ -1,0 +1,68 @@
+﻿####### OOB #######
+units = {
+####### OOB #######
+units = {
+	division= {	
+		name = "2nd Qīngxíng Jīdòng huà Bùbīng Shī"
+		location = 7186
+		division_template = "Bich Gigyehwa Doen Bobyeong  Bunhal"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "1st Qīngxíng Jīdòng huà Bùbīng Shī"
+		location = 7186
+		division_template = "Qīngxíng Jīdòng huà Bùbīng Shī"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "9th Qīngxíng Jīdòng huà Bùbīng Shī"
+		location = 7186
+		division_template = "Qīngxíng Jīdòng huà Bùbīng Shī"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1	
+	}
+	division= {	
+		name = "10th Qīngxíng Jīdòng huà Bùbīng Shī"
+		location = 7186
+		division_template = "Qīngxíng Jīdòng huà Bùbīng Shī"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "11th Qīngxíng Jīdòng huà Bùbīng Shī"
+		location = 7186
+		division_template = "Qīngxíng Jīdòng huà Bùbīng Shī"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "12th Qīngxíng Jīdòng huà Bùbīng Shī"
+		location = 7186
+		division_template = "Qīngxíng Jīdòng huà Bùbīng Shī"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "13th Qīngxíng Jīdòng huà Bùbīng Shī"
+		location = 7186
+		division_template = "Qīngxíng Jīdòng huà Bùbīng Shī"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "14th Qīngxíng Jīdòng huà Bùbīng Shī"
+		location = 7186
+		division_template = "Qīngxíng Jīdòng huà Bùbīng Shī"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "2nd Qīngxíng Jīdòng huà Bùbīng Shī"
+		location = 7186
+		division_template = "Qīngxíng Jīdòng huà Bùbīng Shī"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+}

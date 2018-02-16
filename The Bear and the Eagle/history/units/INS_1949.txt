@@ -1,0 +1,401 @@
+﻿start_equipment_factor = 0.25
+division_template = {
+	name = "Infanterie Divisie"		
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+division_template = {
+	name = "Leichte Divisie"			# Light Division - elite bicycle infantry
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      
+	}
+	priority = 2
+}
+division_template = {
+	name = "Cavalerie Divisie"  	
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 0 y = 3 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 1 y = 3 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      
+		engineer = { x = 0 y = 1 } 
+	}
+}
+division_template = {
+	name = "Marinier Divisie" 
+
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 0 y = 2 }
+		marine = { x = 1 y = 0 }
+		marine = { x = 1 y = 1 }
+		marine = { x = 1 y = 2 }
+		light_armor = { x = 2 y = 0 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 } 
+	}
+}
+division_template = {
+	name = "Luchtlandings Divisie"
+
+	regiments = {
+		paratrooper = { x = 0 y = 0 }
+		paratrooper = { x = 0 y = 1 }
+        		paratrooper = { x = 0 y = 2 }
+		paratrooper = { x = 1 y = 0 }
+		paratrooper = { x = 1 y = 1 }
+        		paratrooper = { x = 1 y = 2 }
+		light_armor = { x = 2 y = 0 }
+	}
+}
+division_template = {
+	name = "Pantser Brigade"				# Represents (light) Army Tank Brigades (LT Mk VIs, some Matilda Is)
+
+	regiments = {
+		medium_armor = { x = 0 y = 0 }
+		medium_armor = { x = 0 y = 1 }
+        		medium_armor = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Leichte Gepantserd Divisie"
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+        		light_armor = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+       		motorized = { x = 1 y = 1 }
+	}
+	support = {
+        recon = { x = 0 y = 0 }
+        engineer = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }
+	}
+	}
+division_template = {
+	name = "Gemiddeld Gepantserd Divisie"
+
+	regiments = {
+		medium_armor = { x = 0 y = 0 }
+		medium_armor = { x = 0 y = 1 }
+        		medium_armor = { x = 0 y = 2 }
+		light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1}
+		motorized = { x = 2 y = 0}
+       		motorized = { x = 2 y = 1 }
+	}
+	support = {
+        recon = { x = 0 y = 0 }
+        engineer = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Zwaar Gepantserd Divisie"
+
+	regiments = {
+		heavy_armor = { x = 0 y = 0 }
+		heavy_armor = { x = 0 y = 1 }
+        		heavy_armor = { x = 0 y = 2}
+		medium_armor = { x = 1 y = 0 }
+		medium_armor = { x = 1 y = 1 }
+		light_armor = { x = 1 y = 2 }
+		motorized = { x = 2 y = 0 }
+       		motorized = { x = 2 y = 1 }
+	}
+	support = {
+        recon = { x = 0 y = 0 }
+        engineer = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Gemotoriseerde Infanterie Divisie"
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+       		motorized = { x = 0 y = 2 }
+       		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+        		motorized = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Leichte Gemechaniseerde Infanterie Brigade"				# Represents (light) Army Tank Brigades (LT Mk VIs, some Matilda Is)
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		light_armor = { x = 1 y = 0 }
+	}
+}
+division_template = {
+	name = "Leichte Gemechaniseerde Infanterie Divisie"
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		light_armor = { x = 0 y = 0 }
+	}
+	support = {
+	 	engineer = { x = 0 y = 0 }
+	    recon = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Zwaar Gemechaniseerde Infanterie Divisie"
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		light_armor = { x = 1 y = 0 }
+		light_armor = { x = 0 y = 1}
+		light_armor = { x = 0 y = 2 }
+	}
+	support = {
+	 	engineer = { x = 0 y = 0 }
+	    recon = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Berg Infanterie Divisie"
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+      		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+        mountaineers = { x = 1 y = 2 }
+	}
+	support = {
+	 	engineer = { x = 0 y = 0 }
+	    recon = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Koloniale Garnizoen"		# Colonial militia forces (lowest experience, oldest equipment)
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+	}
+	priority = 0
+}
+
+units = { 				
+	##### ROYAL NETHERLANDS EAST INDIES ARMY #####
+	division= {	
+		name = "1.Infanterie Divisie"
+		location = 7381
+		division_template = "Infanterie Divisie"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "2.Infanterie Divisie"
+		location = 1413
+		division_template = "Infanterie Divisie"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "3.Infanterie Divisie"
+		location = 4608
+		division_template = "Infanterie Divisie"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "Sumatra High Command"
+		location = 12268
+		division_template = "Infanterie Divisie"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "Sumatra Territorial Command"
+		location = 4652
+		division_template = "Koloniale Garnizoen"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "Sumatra Territorial Command"
+		location = 4652
+		division_template = "Koloniale Garnizoen"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "1.Leichte Gemechaniseerde Infanterie Brigade"
+		location = 4652
+		division_template = "Leichte Gemechaniseerde Infanterie Brigade"
+		start_experience_factor = 0.7
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "1. KNIL"
+		location = 7381 
+		division_template = "Koloniale Garnizoen"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "2. KNIL"
+		location = 12293
+		division_template = "Koloniale Garnizoen"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "1. Leichte Gepantserd Divisie"
+		location = 7381
+		division_template = "Leichte Gepantserd Divisie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "3. KNIL"
+		location = 10135
+		division_template = "Koloniale Garnizoen"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "4. KNIL"
+		location = 7642
+		division_template = "Koloniale Garnizoen"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "5. KNIL"
+		location = 4608
+		division_template = "Koloniale Garnizoen"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "6. KNIL"
+		location = 10522
+		division_template = "Koloniale Garnizoen"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "7. KNIL"
+		location = 1274
+		division_template = "Koloniale Garnizoen"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "8. KNIL"
+		location = 12296
+		division_template = "Koloniale Garnizoen"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "9. KNIL"
+		location = 1401
+		division_template = "Koloniale Garnizoen"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "10. KNIL"
+		location = 10522
+		division_template = "Koloniale Garnizoen"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "11. KNIL"
+		location = 4446
+		division_template = "Koloniale Garnizoen"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "12. KNIL"
+		location = 1252
+		division_template = "Koloniale Garnizoen"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "13. KNIL"
+		location = 10237
+		division_template = "Koloniale Garnizoen"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "14. KNIL"
+		location = 12415
+		division_template = "Koloniale Garnizoen"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "15. KNIL"
+		location = 12343
+		division_template = "Koloniale Garnizoen"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5
+	}
+
+
+	##### NAVAL UNITS #####
+	### ROYAL NAVY (CO: ) ###
+	
+}
+
+### Air Wings
+air_wings = {
+	
+}
+### Starting Production ###
+instant_effect = {
+	
+}

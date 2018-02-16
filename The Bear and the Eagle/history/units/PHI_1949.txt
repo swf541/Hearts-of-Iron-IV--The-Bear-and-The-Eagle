@@ -1,0 +1,53 @@
+﻿division_template = {
+	name = "Infantry Division"			# Represents both regular and reserve Philippines divisions
+										# Regular division had decent experience, close to up-to-date US equipment
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+	        engineer = { x = 0 y = 0 }
+	}
+}
+
+
+units = {
+	######## LAND OOB ########
+	##### Philippine High Command #####
+	division = {
+		name = "1st Philippines Division"
+		location = 10265
+		division_template = "Infantry Division"		
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "1st Philippines Expeditionary Force"
+		location = 10265
+		division_template = "Infantry Division"		
+		start_experience_factor = 0.8
+	}	
+	division = {
+		name = "2nd Philippines Expeditionary Force"
+		location = 10265
+		division_template = "Infantry Division"		
+		start_experience_factor = 0.8
+	}	
+	### Note: Ten reserve divisions in existence in 1939, but mostly paper divisions with small cadres of troops
+	
+	######## No Naval OOB ########
+}
+
+air_wings = {
+	### Philippine Army Air Corps ###
+	327 = {
+		fighter_equipment_0 =  { owner = "PHI" amount = 12 }			# Fighter Squadron -- Curtis P-26A's
+	}
+}
+

@@ -1,0 +1,335 @@
+﻿division_template = {
+	name = "Division Infanterie"		# Same for "Active" and "Reserve" Infantry Divisions
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }  
+	}
+}
+division_template = {
+	name = "Division de Cavalerie"  	# Cavalry Division
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      	# Actually, 2x bicycle cav bns
+		engineer = { x = 0 y = 1 }   
+	}
+}
+division_template = {
+	name = "Cavalerie Motorisée"  		# Motorized Cavalry Brigade
+										# Note: motorized cavalry. Most sources have them truck-equipped.
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "Division d'infanterie Motorisée"
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+       		motorized = { x = 0 y = 2 }
+       		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+        		motorized = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Brigade mécanisée d'infanterie mécanisée"				# Represents (light) Army Tank Brigades (LT Mk VIs, some Matilda Is)
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		light_armor = { x = 1 y = 0 }
+	}
+}
+division_template = {
+	name = "Division d'infanterie mécanisée par éclairage"
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		light_armor = { x = 0 y = 0 }
+	}
+	support = {
+	 	engineer = { x = 0 y = 0 }
+	    recon = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Division d'infanterie mécanisée lourde"
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1}
+		light_armor = { x = 0 y = 2 }
+	}
+	support = {
+	 	engineer = { x = 0 y = 0 }
+	    recon = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Division d'infanterie de Montagne"
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+      		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+        mountaineers = { x = 1 y = 2 }
+	}
+	support = {
+	 	engineer = { x = 0 y = 0 }
+	    recon = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Division Maritime" 		# 1st, 2nd Marine Brigades, precursors to 1st, 2nd USMC Divisions
+
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 0 y = 2 }
+		marine = { x = 1 y = 0 }
+		marine = { x = 1 y = 1 }
+		marine = { x = 1 y = 2 }
+		light_armor = { x = 2 y = 0 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }   
+	}
+	priority = 2
+}
+division_template = {
+	name = "Division Aérienne"
+
+	regiments = {
+		paratrooper = { x = 0 y = 0 }
+		paratrooper = { x = 0 y = 1 }
+        		paratrooper = { x = 0 y = 2 }
+		paratrooper = { x = 1 y = 0 }
+		paratrooper = { x = 1 y = 1 }
+        		paratrooper = { x = 1 y = 2 }
+		light_armor = { x = 2 y = 0 }
+	}
+}
+division_template = {
+	name = "Division Coloniale"			# Colonial militia, lower experience, equipment
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	priority = 0
+}
+division_template = {
+	name = "Brigade Blindée"				# Represents (light) Army Tank Brigades (LT Mk VIs, some Matilda Is)
+
+	regiments = {
+		medium_armor = { x = 0 y = 0 }
+		medium_armor = { x = 0 y = 1 }
+        		medium_armor = { x = 0 y = 2 }
+	}
+
+}
+division_template = {
+	name = "Division Blindée Légère"
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+        		light_armor = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+       		motorized = { x = 1 y = 1 }
+	}
+	support = {
+        recon = { x = 0 y = 0 }
+        engineer = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Division Blindée Moyenne"
+
+	regiments = {
+		medium_armor = { x = 0 y = 0 }
+		medium_armor = { x = 0 y = 1 }
+        		medium_armor = { x = 0 y = 2 }
+		light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1}
+		motorized = { x = 1 y = 2}
+       		motorized = { x = 2 y = 0 }
+	}
+	support = {
+        recon = { x = 0 y = 0 }
+        engineer = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Division Blindée Lourd"
+
+	regiments = {
+		heavy_armor = { x = 0 y = 0 }
+		heavy_armor = { x = 0 y = 1 }
+        		heavy_armor = { x = 0 y = 2}
+		medium_armor = { x = 1 y = 0 }
+		medium_armor = { x = 1 y = 1 }
+		light_armor = { x = 1 y = 2 }
+		motorized = { x = 2 y = 0 }
+       		motorized = { x = 2 y = 1 }
+	}
+	support = {
+        recon = { x = 0 y = 0 }
+        engineer = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }
+	}
+}
+
+### OOB ###
+units = {
+	##### L'Armée Belge #####
+	division= {	
+		name = "1er Division d'Infanterie"
+		location = 6570
+		division_template = "Division Infanterie"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "1er Division Pantserinfanterie"
+		location = 9574
+		division_template = "Brigade mécanisée d'infanterie mécanisée"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	
+	}
+	division= {	
+		name = "4de Pantserinfanteriebrigade"
+		location = 6535
+		division_template = "Brigade mécanisée d'infanterie mécanisée"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "10e Pantserinfanteriebrigade"
+		location = 3488
+		division_template = "Brigade mécanisée d'infanterie mécanisée"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "12ème Division d'Infanterie"
+		location = 11519
+		division_template = "Division Infanterie"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "1ère Division Para-Commando"
+		location = 516
+		division_template = "Division Aérienne"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "7ème Division Blindée Légère"
+		location = 11407
+		division_template = "Division Blindée Légère"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "16de Pantserdivisie"
+		location = 9443
+		division_template = "Division Blindée Moyenne"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "17ème Brigade Blindée"
+		location = 9509
+		division_template = "Brigade Blindée"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	### Belgian Congo ###
+	division= {	
+		name = "Force Publique du Congo Belge"
+		location = 10968  # Leopoldville
+		division_template = "Division Coloniale"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "BEL" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+}
+
+air_wings = {
+
+}
+
+### Starting Production ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "BEL"
+		}
+		requested_factories = 2
+		progress = 0.52
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "BEL"
+		}
+		requested_factories = 1
+		progress = 0.85
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = fighter_equipment_0
+			creator = "BEL"
+		}
+		requested_factories = 1
+		progress = 0.85
+		efficiency = 100
+	}
+}

@@ -1,0 +1,62 @@
+﻿
+
+###### OOB ######
+units = {
+
+	division= {
+		name = "1st Ánh sáng Co gioi hóa Bo binh Su đoàn"
+		location = 4401
+		division_template = "Ánh sáng Co gioi hóa Bo binh Su đoàn"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "2nd Ánh sáng Co gioi hóa Bo binh Su đoàn"
+		location = 4401
+		division_template = "Ánh sáng Co gioi hóa Bo binh Su đoàn"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "3rd Ánh sáng Co gioi hóa Bo binh Su đoàn"
+		location = 4401
+		division_template = "Ánh sáng Co gioi hóa Bo binh Su đoàn"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "4th Ánh sáng Co gioi hóa Bo binh Su đoàn"
+		location = 4401
+		division_template = "Ánh sáng Co gioi hóa Bo binh Su đoàn"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "5th Ánh sáng Co gioi hóa Bo binh Su đoàn"
+		location = 4401
+		division_template = "Ánh sáng Co gioi hóa Bo binh Su đoàn"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "6th Ánh sáng Co gioi hóa Bo binh Su đoàn"
+		location = 4401
+		division_template = "Ánh sáng Co gioi hóa Bo binh Su đoàn"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "7th Ánh sáng Co gioi hóa Bo binh Su đoàn"
+		location = 4401
+		division_template = "Ánh sáng Co gioi hóa Bo binh Su đoàn"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "8th Ánh sáng Co gioi hóa Bo binh Su đoàn"
+		location = 4401
+		division_template = "Ánh sáng Co gioi hóa Bo binh Su đoàn"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+	}
+}

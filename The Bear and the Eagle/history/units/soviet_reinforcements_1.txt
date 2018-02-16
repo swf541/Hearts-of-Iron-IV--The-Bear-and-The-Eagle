@@ -1,0 +1,29 @@
+﻿
+units = {
+
+	division = {
+		name = "100th Strelkovaya Diviziya"
+		location = 301
+		division_template = "Strelkovaya Diviziya"
+	}
+	division = {
+		name = "101st Strelkovaya Diviziya"
+		location = 301
+		division_template = "Strelkovaya Diviziya"
+	}
+	division = {
+		name = "102nd Strelkovaya Diviziya"
+		location = 301
+		division_template = "Strelkovaya Diviziya"
+	}
+	division = {
+		name = "103rd Strelkovaya Diviziya"
+		location = 301
+		division_template = "Strelkovaya Diviziya"
+	}
+	division = {
+		name = "104th Strelkovaya Diviziya"
+		location = 301
+		division_template = "Strelkovaya Diviziya"
+	}
+}

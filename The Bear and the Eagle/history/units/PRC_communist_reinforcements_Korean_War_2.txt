@@ -1,0 +1,71 @@
+﻿units = {
+		###### People's Volunteer's Army######
+		###### 38th Corps ######
+	division = {
+		name = "1st Chinese Volunteer Division"
+		location = 6910
+		division_template = "Bobyeong Bunhal"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "2nd Chinese Volunteer Division"
+		location = 3839
+		division_template = "Bobyeong Bunhal"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "3rd Chinese Volunteer Division"
+		location = 6981
+		division_template = "Jeondong Bobyeong Bunhal"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+				
+		###### 39th Corps ######
+	}
+	division = {
+		name = "4th Chinese Volunteer Division"
+		location = 6860
+		division_template = "Bich Gigyehwa Doen Bobyeong  Bunhal"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "5th Chinese Volunteer Division"
+		location = 6981
+		division_template = "Bobyeong Bunhal"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "6th Chinese Volunteer Division"
+		location = 6981
+		division_template = "Bobyeong Bunhal"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+
+		###### 40th Corps ######
+	}
+	division = {
+		name = "7th Chinese Volunteer Division"
+		location = 9848
+		division_template = "Bobyeong Bunhal"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "8th Chinese Volunteer Division"
+		location = 3949
+		division_template = "Bich Gigyehwa Doen Bobyeong  Bunhal"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "9th Chinese Volunteer Division"
+		location = 945
+		division_template = "Jeondong Bobyeong Bunhal"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+}

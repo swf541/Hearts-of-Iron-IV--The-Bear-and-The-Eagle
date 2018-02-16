@@ -1,0 +1,31 @@
+﻿####### OOB #######
+units = {
+	division= {	
+		name = "1st Commonwealth Volunteer Division"
+		location = 7125
+		division_template = "Bich Gigyehwa Doen Bobyeong  Bunhal"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "2nd Commonwealth Volunteer Division"
+		location = 7221
+		division_template = "Bobyeong Bunhal"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "3rd Commonwealth Volunteer Division"
+		location = 1148
+		division_template = "Bobyeong Bunhal"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1	
+	}
+	division= {	
+		name = "4th Commonwealth Volunteer Division"
+		location = 7125
+		division_template = "Bobyeong Bunhal"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+}

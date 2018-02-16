@@ -1,0 +1,301 @@
+units = {
+
+navy = {					
+		name = "Atlantic Reserve Fleet"				
+		base = 3878
+		location = 3878 # NY
+		ship = { name = "USS New Jersey" definition = battleship equipment = { battleship_2 = { amount = 1 owner = USA  } } }
+		ship = { name = "USS Wisconsin" definition = battleship equipment = { battleship_2 = { amount = 1 owner = USA  } } }
+		ship = { name = "USS Randolph" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA version_name = "Essex Class" } }  
+			air_wings = {
+				cv_fighter_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_CAS_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_nav_bomber_equipment_3 =  { owner = "USA" amount = 0 } 
+			}
+		}
+		ship = { name = "USS Wasp" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA version_name = "Essex Class" } }  
+			air_wings = {
+				cv_fighter_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_CAS_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_nav_bomber_equipment_3 =  { owner = "USA" amount = 0 } 
+			}
+		}
+		ship = { name = "USS Bennington" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA version_name = "Essex Class" } }  
+			air_wings = {
+				cv_fighter_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_CAS_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_nav_bomber_equipment_3 =  { owner = "USA" amount = 0 } 
+			}
+		}
+		ship = { name = "USS Lake Champlain" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA version_name = "Essex Class" } }  
+			air_wings = {
+				cv_fighter_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_CAS_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_nav_bomber_equipment_3 =  { owner = "USA" amount = 0 } 
+			}
+		}
+		ship = { name = "USS Tarawa" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA version_name = "Essex Class" } }  
+			air_wings = {
+				cv_fighter_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_CAS_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_nav_bomber_equipment_3 =  { owner = "USA" amount = 0 } 
+			}
+		}
+		ship = { name = "USS Gilbert Islands" definition = light_carrier equipment = { light_carrier_1 = { amount = 1 owner = USA  } }  
+			air_wings = {
+				cv_fighter_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_CAS_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_nav_bomber_equipment_3 =  { owner = "USA" amount = 0 } 
+			}
+		}
+		ship = { name = "USS Kula Gulf" definition = light_carrier equipment = { light_carrier_1 = { amount = 1 owner = USA  } }  
+			air_wings = {
+				cv_fighter_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_CAS_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_nav_bomber_equipment_3 =  { owner = "USA" amount = 0 } 
+			}
+		}
+		ship = { name = "USS Salerno Bay" definition = light_carrier equipment = { light_carrier_1 = { amount = 1 owner = USA  } }  
+			air_wings = {
+				cv_fighter_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_CAS_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_nav_bomber_equipment_3 =  { owner = "USA" amount = 0 } 
+			}
+		}
+		ship = { name = "USS Monterey" definition = light_carrier equipment = { light_carrier_1 = { amount = 1 owner = USA version_name = "Independence Class" } }  
+			air_wings = {
+				cv_fighter_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_CAS_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_nav_bomber_equipment_3 =  { owner = "USA" amount = 0 } 
+			}
+		}
+		ship = { name = "USS Bataan" definition = light_carrier equipment = { light_carrier_1 = { amount = 1 owner = USA version_name = "Independence Class" } }  
+			air_wings = {
+				cv_fighter_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_CAS_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_nav_bomber_equipment_3 =  { owner = "USA" amount = 0 } 
+			}
+		}
+		ship = { name = "USS Saufley" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Waller" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Bache" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Beale" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Philip" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Renshaw" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Cony" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Eaton" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Ammen" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Robinson" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Rowe" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Smalley" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Stoddard" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Watts" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Wren" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Murray" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Sigourney" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Caperton" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Ingersoll" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Knapp" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Bearss" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS John Hood" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Dashiell" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Cotten" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Gatling" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Healy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Porter" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Putnam" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS DeLong" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Coates" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Parle" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Tweedy" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Rizzi" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Osberg" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Tench" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA version_name = "Tench Class" } } }
+		ship = { name = "USS Tirante" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA version_name = "Tench Class" } } }
+		ship = { name = "USS Balao" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA version_name = "Balao Class" } } }
+		ship = { name = "USS Bowfin" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA version_name = "Balao Class" } } }
+	}
+		
+	navy = {					
+		name = "Pacific Reserve Fleet"				
+		base = 7315
+		location = 7315 # Seattle
+		ship = { name = "USS Iowa" definition = battleship equipment = { battleship_2 = { amount = 1 owner = USA  } } }
+		ship = { name = "USS Essex" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA version_name = "Essex Class" } }
+			air_wings = {
+				cv_fighter_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_CAS_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_nav_bomber_equipment_3 =  { owner = "USA" amount = 0 } 
+			}
+		}
+		ship = { name = "USS Yorktown" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA version_name = "Essex Class" } } 
+			air_wings = {
+				cv_fighter_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_CAS_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_nav_bomber_equipment_3 =  { owner = "USA" amount = 0 } 
+			}
+		}
+		ship = { name = "USS Intrepid" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA version_name = "Essex Class" } } 
+			air_wings = {
+				cv_fighter_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_CAS_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_nav_bomber_equipment_3 =  { owner = "USA" amount = 0 } 
+			}
+		}
+		ship = { name = "USS Hornet" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA version_name = "Essex Class" } } 
+			air_wings = {
+				cv_fighter_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_CAS_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_nav_bomber_equipment_3 =  { owner = "USA" amount = 0 } 
+			}
+		}
+		ship = { name = "USS Ticonderoga" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA version_name = "Essex Class" } } 
+			air_wings = {
+				cv_fighter_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_CAS_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_nav_bomber_equipment_3 =  { owner = "USA" amount = 0 } 
+			}
+		}
+		ship = { name = "USS Lexington" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA version_name = "Essex Class" } } 
+			air_wings = {
+				cv_fighter_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_CAS_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_nav_bomber_equipment_3 =  { owner = "USA" amount = 0 } 
+			}
+		}
+		ship = { name = "USS Hancock" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA version_name = "Essex Class" } }  
+			air_wings = {
+				cv_fighter_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_CAS_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_nav_bomber_equipment_3 =  { owner = "USA" amount = 0 } 
+			}
+		}
+		ship = { name = "USS Bon Homme Richard" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA version_name = "Essex Class" } }  
+			air_wings = {
+				cv_fighter_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_CAS_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_nav_bomber_equipment_3 =  { owner = "USA" amount = 0 } 
+			}
+		}
+		ship = { name = "USS Antietam" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA version_name = "Essex Class" } }  
+			air_wings = {
+				cv_fighter_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_CAS_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_nav_bomber_equipment_3 =  { owner = "USA" amount = 0 } 
+			}
+		}
+		ship = { name = "USS Princeton" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA version_name = "Essex Class" } }  
+			air_wings = {
+				cv_fighter_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_CAS_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_nav_bomber_equipment_3 =  { owner = "USA" amount = 0 } 
+			}
+		}
+		ship = { name = "USS Shangri-La" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA version_name = "Essex Class" } }  
+			air_wings = {
+				cv_fighter_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_CAS_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_nav_bomber_equipment_3 =  { owner = "USA" amount = 0 } 
+			}
+		}
+		ship = { name = "USS Point Cruz" definition = light_carrier equipment = { light_carrier_1 = { amount = 1 owner = USA  } }  
+			air_wings = {
+				cv_fighter_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_CAS_equipment_3 =  { owner = "USA" amount = 0 } 
+				cv_nav_bomber_equipment_3 =  { owner = "USA" amount = 0 } 
+			}
+		}
+		ship = { name = "USS Baltimore" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Boston" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Canberra" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Quincy" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Pittsburgh" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Bremerton" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Los Angeles" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Chicago" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Fletcher" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Radford" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Jenkins" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Nicholas" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS O'Bannon" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Daly" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Trathen" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Hazelwood" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS McCord" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Miller" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Owen" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS The Sullivans" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Stephen Potter" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Tingey" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Laws" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Ross" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Sproston" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Abbot" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Charles J. Badger" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Colahan" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Kidd" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Black" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Chauncey" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Hunt" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Marshall" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS McDermut" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS McNair" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Melvin" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Hopewell" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Porterfield" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Stockham" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Weddenburn" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Picking" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Uhlmann" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Remey" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Cassin Young" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Monssen" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Gregory" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Laffey" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA } } }
+		ship = { name = "USS O'Brien" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Harry E. Hubbard" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Alfred A. Cunningham" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Frank E. Evans" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA } } }
+		ship = { name = "USS John C. Butler" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Raymond" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Maurice J. Manuel" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Naifeh" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Kenneth M. Willett" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA } } }
+		ship = { name = "USS George E. Davis" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Woodson" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Johnnie Hutchins" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Walton" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Rombach" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA } } }
+		ship = { name = "USS McGinty" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Alvin C. Cockrell" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Thaddeus Parker" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Edmonds" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA } } }
+		ship = { name = "USS LeRay Wilson" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Melvin R. Nawman" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Tabberer" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Douglas A. Munro" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Ulvert M. Moore" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Albert T. Harris" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Cross" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Hanna" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Gilligan" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Heyliger" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Edward H. Allen" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Silverstein" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Lewis" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA } } }
+		ship = { name = "USS Manta" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA version_name = "Balao Class" } } }
+		ship = { name = "USS Aspro" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA version_name = "Balao Class" } } }
+		ship = { name = "USS Batfish" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA version_name = "Balao Class" } } }
+		ship = { name = "USS Archerfish" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA version_name = "Balao Class" } } }
+		ship = { name = "USS Perch" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA version_name = "Balao Class" } } }
+		ship = { name = "USS Blackfin" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA version_name = "Balao Class" } } }
+		ship = { name = "USS Menhaden" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA version_name = "Balao Class" } } }
+		ship = { name = "USS Crevalle" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA version_name = "Balao Class" } } }
+		ship = { name = "USS Lionfish" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA version_name = "Balao Class" } } }
+		ship = { name = "USS Sabalo" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA version_name = "Balao Class" } } }
+		ship = { name = "USS Sterlet" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA version_name = "Balao Class" } } }
+		ship = { name = "USS Sea Devil" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA version_name = "Balao Class" } } }
+		ship = { name = "USS Stickleback" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA version_name = "Balao Class" } } }
+	}
+}
+	

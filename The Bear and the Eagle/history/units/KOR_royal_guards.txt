@@ -1,0 +1,66 @@
+﻿####### OOB #######
+units = {
+	division= {	
+		name = "2nd Jabon Gigyehwa Doen Bobyeong 'Tiger' Bunhal"
+		location = 7125
+		division_template = "Bich Gigyehwa Doen Bobyeong  Bunhal"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "1st Bobyeong 'Foward' Bunhal"
+		location = 7221
+		division_template = "Bobyeong Bunhal"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "9th Bobyeong 'Furious Wave' Bunhal"
+		location = 1148
+		division_template = "Bobyeong Bunhal"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1	
+	}
+	division= {	
+		name = "10th Bobyeong 'Furious Wave' Bunhal"
+		location = 7125
+		division_template = "Bobyeong Bunhal"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "11th Bobyeong 'The Key' Bunhal"
+		location = 12040
+		division_template = "Bobyeong Bunhal"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "12th Bobyeong 'Blue Star' Bunhal"
+		location = 1100
+		division_template = "Bobyeong Bunhal"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "13th Bobyeong 'Seven Star' Bunhal"
+		location = 7125
+		division_template = "Bobyeong Bunhal"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "14th Bobyeong 'Roly Poly' Bunhal"
+		location = 10036
+		division_template = "Bobyeong Bunhal"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "2nd Seonbag Bunhal"
+		location = 4086
+		division_template = "Seonbag Bunhal"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+}

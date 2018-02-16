@@ -1,0 +1,1699 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Motostrelkovaya Diviziya"	# Motorized Rifle DIvision ( in future still APC )
+
+	regiments = {
+		mechanized = { x = 0 y = 0 }
+		mechanized = { x = 0 y = 1 }
+		mechanized = { x = 0 y = 2 }
+		motorized_rocket_brigade = { x = 0 y = 3 }		
+		mechanized = { x = 1 y = 0 }		
+		mechanized = { x = 1 y = 1 }
+		mechanized = { x = 1 y = 2 }
+		motorized_rocket_brigade = { x = 1 y = 3 }		
+		medium_armor = { x = 2 y = 0 }
+		medium_armor = { x = 2 y = 1 }
+		medium_sp_artillery_brigade = { x = 2 y = 2 }
+		light_sp_anti_air_brigade  = { x = 2 y = 3 }		
+		medium_armor = { x = 3 y = 0 }	
+		medium_armor = { x = 3 y = 1 }
+		medium_sp_artillery_brigade = { x = 3 y = 2 }
+		light_sp_anti_air_brigade  = { x = 3 y = 3 }		
+	}
+	support = {
+	 	engineer = { x = 0 y = 0 }
+	    recon = { x = 0 y = 1 }
+	    maintenance_company = { x = 0 y = 2 }
+	    logistics_company = { x = 0 y = 3 }
+		field_hospital = { x = 0 y = 4 }		
+	}
+}
+division_template = {
+	name = "Gvardiya Motostrelkovaya Diviziya"	# Guard Motorized Rifle DIvision ( in future still APC )
+
+	regiments = {
+		mechanized = { x = 0 y = 0 }
+		mechanized = { x = 0 y = 1 }
+		mechanized = { x = 0 y = 2 }
+		mechanized = { x = 0 y = 3 }		
+		motorized_rocket_brigade = { x = 0 y = 4 }		
+		mechanized = { x = 1 y = 0 }		
+		mechanized = { x = 1 y = 1 }
+		mechanized = { x = 1 y = 2 }
+		mechanized = { x = 1 y = 3 }		
+		motorized_rocket_brigade = { x = 1 y = 4 }		
+		medium_armor = { x = 2 y = 0 }
+		medium_armor = { x = 2 y = 1 }
+		medium_armor = { x = 2 y = 2 }		
+		medium_sp_artillery_brigade = { x = 2 y = 3 }
+		light_sp_anti_air_brigade  = { x = 2 y = 4 }		
+		medium_armor = { x = 3 y = 0 }	
+		medium_armor = { x = 3 y = 1 }
+		medium_armor = { x = 3 y = 2 }		
+		medium_sp_artillery_brigade = { x = 3 y = 3 }
+		light_sp_anti_air_brigade  = { x = 3 y = 4 }	
+	}
+	support = {
+	 	engineer = { x = 0 y = 0 }
+	    recon = { x = 0 y = 1 }
+	    maintenance_company = { x = 0 y = 2 }
+	    logistics_company = { x = 0 y = 3 }
+		field_hospital = { x = 0 y = 4 }		
+	}
+	priority = 2	
+}
+division_template = {
+	name = "Morskoy Diviziya" 		# 1st, 2nd Marine Brigades, precursors to 1st, 2nd USMC Divisions
+
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 0 y = 2 }
+		marine = { x = 1 y = 0 }
+		marine = { x = 1 y = 1 }
+		marine = { x = 1 y = 2 }
+		light_armor = { x = 2 y = 0 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+	    recon = { x = 0 y = 1 }		
+	}
+}
+division_template = {
+	name = "Gvardiya Morskoy Diviziya" 		# Guad Marine Division
+
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 0 y = 2 }		
+		marine = { x = 1 y = 0 }
+		marine = { x = 1 y = 1 }
+		marine = { x = 1 y = 2 }
+		marine = { x = 2 y = 0 }
+		marine = { x = 2 y = 1 }
+		marine = { x = 2 y = 2 }		
+		light_armor = { x = 3 y = 0 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+	    recon = { x = 0 y = 1 }		
+	}
+	priority = 2		
+}
+division_template = {
+	name = "Strelkovaya Diviziya"			# Rifle Division
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		artillery_brigade = { x = 0 y = 3 }		
+		anti_tank_brigade = { x = 0 y = 4 }		
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		artillery_brigade = { x = 1 y = 3 }		
+		anti_tank_brigade = { x = 1 y = 4 }		
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		artillery_brigade = { x = 2 y = 3 }		
+		anti_tank_brigade = { x = 2 y = 4 }		
+		artillery_brigade = { x = 3 y = 0 }
+		artillery_brigade = { x = 3 y = 1 }
+		artillery_brigade = { x = 3 y = 2 }
+		artillery_brigade = { x = 3 y = 3 }
+		anti_air_brigade = { x = 3 y = 3 }			
+	}
+	support = {
+		recon = { x = 0 y = 0 } 		
+		engineer = { x = 0 y = 1 } 		
+		artillery = { x = 0 y = 2 } 		# Heavy Arty Regiment had 1x 152mm bn + 2x 122mm bn
+	    logistics_company = { x = 0 y = 3 }
+		field_hospital = { x = 0 y = 4 }		
+	}
+}
+division_template = {
+	name = "Gvardiya Strelkovaya Diviziya"			# Guard Rifle Division
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		artillery_brigade = { x = 0 y = 3 }		
+		anti_tank_brigade = { x = 0 y = 4 }		
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		artillery_brigade = { x = 1 y = 3 }		
+		anti_tank_brigade = { x = 1 y = 4 }		
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		artillery_brigade = { x = 2 y = 3 }		
+		anti_tank_brigade = { x = 2 y = 4 }
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+		infantry = { x = 3 y = 2 }
+		artillery_brigade = { x = 3 y = 3 }		
+		anti_tank_brigade = { x = 3 y = 4 }
+		artillery_brigade = { x = 4 y = 0 }
+		artillery_brigade = { x = 4 y = 1 }
+		artillery_brigade = { x = 4 y = 2 }
+		artillery_brigade = { x = 4 y = 3 }
+		anti_air_brigade = { x = 4 y = 3 }			
+	}
+	support = {
+		recon = { x = 0 y = 0 } 		
+		engineer = { x = 0 y = 1 } 		
+		artillery = { x = 0 y = 2 } 		# Heavy Arty Regiment had 1x 152mm bn + 2x 122mm bn
+	    logistics_company = { x = 0 y = 3 }
+		field_hospital = { x = 0 y = 4 }		
+	}
+	priority = 2		
+}
+division_template = {
+	name = "Gornostrelkovaya Diviziya"		# Mountain Rifle Division
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }	
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }	
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }	
+		mountaineers = { x = 1 y = 2 }
+		artillery_brigade = { x = 2 y = 0 }
+		artillery_brigade = { x = 2 y = 1 }
+		artillery_brigade = { x = 2 y = 2 }			
+	}
+	support = {
+		engineer = { x = 0 y = 0 } 
+		recon = { x = 0 y = 1 } 		# Heavy Arty Regiment had 2x 122mm bn
+		artillery = { x = 0 y = 2 } 		
+	}
+}
+division_template = {
+	name = "Gvardiya Gornostrelkovaya Diviziya"		# Guard Mountain Rifle Division
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }	
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 0 y = 3 }		
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }	
+		mountaineers = { x = 1 y = 2 }
+		mountaineers = { x = 1 y = 3 }			
+		artillery_brigade = { x = 2 y = 0 }
+		artillery_brigade = { x = 2 y = 1 }
+		artillery_brigade = { x = 2 y = 2 }
+		artillery_brigade = { x = 2 y = 3 }			
+	}
+	support = {
+		engineer = { x = 0 y = 0 } 
+		recon = { x = 0 y = 1 }
+		artillery = { x = 0 y = 2 } 		
+	}
+	priority = 2	
+}
+division_template = {
+	name = "Pogranichnaya Diviziya"		# NKVD-KGB Border Guard Division
+												# Note: garrison units (all have oldest equipment, low experience)
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+		light_infantry = { x = 0 y = 1 }
+		light_infantry = { x = 1 y = 0 }
+		light_infantry = { x = 1 y = 1 }		
+	}
+	support = 	{
+		military_police = { x = 0 y = 0 }
+	}
+	priority = 0
+}
+division_template = {
+	name = "Vozdushno-Desantnaya"				# Represents a pair of independent airborne brigades
+	
+	regiments = {
+		paratrooper = { x = 0 y = 0 }
+		paratrooper = { x = 0 y = 1 }
+		paratrooper = { x = 1 y = 0 }
+		paratrooper = { x = 1 y = 1 }
+		paratrooper = { x = 2 y = 0 }
+		paratrooper = { x = 2 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 } 		 		
+	}	
+}
+division_template = {
+	name = "Gvardiya Vozdushno-Desantnaya"				# Guard Airborne Division
+	
+	regiments = {
+		paratrooper = { x = 0 y = 0 }
+		paratrooper = { x = 0 y = 1 }
+		paratrooper = { x = 0 y = 2 }		
+		paratrooper = { x = 1 y = 0 }
+		paratrooper = { x = 1 y = 1 }
+		paratrooper = { x = 1 y = 2 }		
+		paratrooper = { x = 2 y = 0 }
+		paratrooper = { x = 2 y = 1 }
+		paratrooper = { x = 2 y = 2 }		
+	}
+	support = {
+		recon = { x = 0 y = 0 } 		 		
+	}
+	priority = 2	
+}
+division_template = {
+	name = "Tankovaya Diviziya" 				# Tank Division
+	
+	regiments = {
+		medium_armor = { x = 0 y = 0 }
+		medium_armor = { x = 0 y = 1 }
+		medium_sp_artillery_brigade = { x = 0 y = 2 }
+		light_sp_anti_air_brigade  = { x = 0 y = 3 }		
+		medium_armor = { x = 1 y = 0 }	
+		medium_armor = { x = 1 y = 1 }
+		medium_sp_artillery_brigade = { x = 1 y = 2 }
+		light_sp_anti_air_brigade  = { x = 1 y = 3 }
+		medium_armor = { x = 2 y = 0 }	
+		medium_armor = { x = 2 y = 1 }
+		medium_sp_artillery_brigade = { x = 2 y = 2 }
+		light_sp_anti_air_brigade  = { x = 2 y = 3 }		
+		mechanized = { x = 3 y = 0 }			
+		mechanized = { x = 3 y = 1 }
+		motorized_rocket_brigade = { x = 3 y = 2 }
+		mechanized = { x = 4 y = 0 }			
+		mechanized = { x = 4 y = 1 }
+		motorized_rocket_brigade = { x = 4 y = 2 }		
+	
+	}
+	support = {
+	 	engineer = { x = 0 y = 0 }
+	    recon = { x = 0 y = 1 }
+	    maintenance_company = { x = 0 y = 2 }
+	    logistics_company = { x = 0 y = 3 }	
+		field_hospital = { x = 0 y = 4 }
+	}
+}
+division_template = {
+	name = "Gvardiya Tankovaya Diviziya" 				# Guard Tank Division
+	
+	regiments = {
+		medium_armor = { x = 0 y = 0 }
+		medium_armor = { x = 0 y = 1 }
+		medium_armor = { x = 0 y = 2 }		
+		medium_sp_artillery_brigade = { x = 0 y = 3 }
+		light_sp_anti_air_brigade  = { x = 0 y = 4 }		
+		medium_armor = { x = 1 y = 0 }	
+		medium_armor = { x = 1 y = 1 }
+		medium_armor = { x = 1 y = 2 }		
+		medium_sp_artillery_brigade = { x = 1 y = 3 }
+		light_sp_anti_air_brigade  = { x = 1 y = 4 }
+		medium_armor = { x = 2 y = 0 }	
+		medium_armor = { x = 2 y = 1 }
+		medium_armor = { x = 2 y = 2 }		
+		medium_sp_artillery_brigade = { x = 2 y = 3 }
+		light_sp_anti_air_brigade  = { x = 2 y = 4 }		
+		mechanized = { x = 3 y = 0 }			
+		mechanized = { x = 3 y = 1 }
+		mechanized = { x = 3 y = 2 }		
+		motorized_rocket_brigade = { x = 3 y = 3 }
+		mechanized = { x = 4 y = 0 }			
+		mechanized = { x = 4 y = 1 }
+		mechanized = { x = 4 y = 2 }		
+		motorized_rocket_brigade = { x = 4 y = 3 }
+		
+	}
+	support = {
+	 	engineer = { x = 0 y = 0 }
+	    recon = { x = 0 y = 1 }
+	    maintenance_company = { x = 0 y = 2 }
+	    logistics_company = { x = 0 y = 3 }	
+		field_hospital = { x = 0 y = 4 }	
+	}
+	priority = 2	
+}
+
+### Note: OOB abstracts away the following:
+#	Marine Brigade (3x marine bn, engineers), 2 Brigades: Leningrad, Sevastopol
+
+##### OOB #####
+units = {
+	####### Severno-Zapadnoe TVD (North West Theatre Military District) (CO: ) #######
+	division= {			
+		name = "1st Gvardiya Strelkovaya Diviziya"		
+		location = 6332
+		division_template = "Gvardiya Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "1st Motostrelkovaya Diviziya"		
+		location = 9428
+		division_template = "Motostrelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {			
+		name = "1st Gvardiya 'Moscow' Motostrelkovaya Diviziya"		
+		location = 6332
+		division_template = "Gvardiya Motostrelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "2nd Gvardiya 'Tamanskaya' Motostrelkovaya Diviziya"		
+		location = 9499
+		division_template = "Gvardiya Motostrelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "2nd Gvardiya Motostrelkovaya Diviziya"		
+		location = 6703
+		division_template = "Gvardiya Motostrelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "5th Gvardiya 'Prague' Motostrelkovaya Diviziya"		
+		location = 9429
+		division_template = "Gvardiya Motostrelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "5th Gvardiya 'Gorodok' Strelkovaya Diviziya"		
+		location = 348
+		division_template = "Gvardiya Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "8th Gvardiya 'Panfilov's Men' Strelkovaya Diviziya"		
+		location = 83
+		division_template = "Gvardiya Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "8th Gvardiya 'Carpathia-Berlin' Motostrelkovaya Diviziya"		
+		location = 11481
+		division_template = "Gvardiya Motostrelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "9th Gvardiya 'Rymnik' Motostrelkovaya Diviziya"		
+		location = 12622
+		division_template = "Gvardiya Motostrelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "10th Gvardiya Gornostrelkovaya Diviziya"		
+		location = 6669
+		division_template = "Gvardiya Gornostrelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "13th Gvardiya 'Vienna' Motostrelkovaya Diviziya"		
+		location = 11666
+		division_template = "Gvardiya Motostrelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "15th Gvardiya Motostrelkovaya Diviziya"		
+		location = 6220
+		division_template = "Gvardiya Motostrelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "16th 'Lithuanian' Strelkovaya Diviziya"		
+		location = 9483
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {			
+		name = "17th Gvardiya Strelkovaya Diviziya"		
+		location = 6989
+		division_template = "Gvardiya Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "18th Motostrelkovaya Diviziya"		
+		location = 11219
+		division_template = "Motostrelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {			
+		name = "19th Gornostrelkovaya Diviziya"		
+		location = 12320
+		division_template = "Gornostrelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {			
+		name = "20th Gvardiya Motostrelkovaya Diviziya"		
+		location = 9471
+		division_template = "Gvardiya Motostrelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "21st Gvardiya Motostrelkovaya Diviziya"		
+		location = 6501
+		division_template = "Gvardiya Motostrelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "24th Strelkovaya Diviziya"		
+		location = 9548
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {			
+		name = "25th Motostrelkovaya Diviziya"		
+		location = 657
+		division_template = "Motostrelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5	
+	}
+	division= {			
+		name = " 25th Gvardiya 'Chapayevskaya' Strelkovaya Diviziya"		
+		location = 525
+		division_template = "Gvardiya Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9	
+	}
+	division= {			
+		name = "26th Strelkovaya Diviziya"		
+		location = 9570
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {			
+		name = "27th Gornostrelkovaya Diviziya"		
+		location = 10417
+		division_template = "Gornostrelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {			
+		name = "27th Motostrelkovaya Diviziya"		
+		location = 422
+		division_template = "Motostrelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {			
+		name = "27th Gvardiya Strelkovaya Diviziya"		
+		location = 6512
+		division_template = "Gvardiya Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "28th Gvardiya Strelkovaya Diviziya"		
+		location = 9576
+		division_template = "Gvardiya Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "29th Gvardiya Strelkovaya Diviziya"		
+		location = 9340
+		division_template = "Gvardiya Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "30th Gvardiya 'Insterburg' Motostrelkovaya Diviziya"		
+		location = 3288
+		division_template = "Gvardiya Motostrelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "35th Gvardiya Motostrelkovaya Diviziya"		
+		location = 478
+		division_template = "Gvardiya Motostrelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "36th Gvardiya Motostrelkovaya Diviziya"		
+		location = 9340
+		division_template = "Gvardiya Motostrelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9	
+	}
+	division= {			
+		name = "37th Gvardiya Motostrelkovaya Diviziya"		
+		location = 9150
+		division_template = "Gvardiya Motostrelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "39th Motostrelkovaya Diviziya"		
+		location = 7370
+		division_template = "Motostrelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {			
+		name = "39th Gvardiya Motostrelkovaya Diviziya"		
+		location = 3500
+		division_template = "Gvardiya Motostrelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}	
+	division= {			
+		name = "42nd Gvardiya Motostrelkovaya Diviziya"		
+		location = 3672
+		division_template = "Gvardiya Motostrelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "45th Gvardiya Strelkovaya Diviziya"		
+		location = 3151
+		division_template = "Gvardiya Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "47th Gvardiya Motostrelkovaya Diviziya"		
+		location = 306
+		division_template = "Gvardiya Motostrelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "51st Gvardiya Strelkovaya Diviziya"		
+		location = 11630
+		division_template = "Gvardiya Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "57th Gvardiya Strelkovaya Diviziya"		
+		location = 482
+		division_template = "Gvardiya Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "64th Gvardiya Strelkovaya Diviziya"		
+		location = 9206
+		division_template = "Gvardiya Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "66th Gvardiya Motostrelkovaya Diviziya"		
+		location = 6245
+		division_template = "Gvardiya Motostrelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "70th Gvardiya Strelkovaya Diviziya"		
+		location = 3577
+		division_template = "Gvardiya Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "73rd Strelkovaya Diviziya"		
+		location = 6724
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {			
+		name = "74th Gvardiya Strelkovaya Diviziya"		
+		location = 11276
+		division_template = "Gvardiya Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}	
+	division= {			
+		name = "79th Strelkovaya Diviziya"		
+		location = 1755
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {			
+		name = "94th Gvardiya Strelkovaya Diviziya"		
+		location = 3392
+		division_template = "Gvardiya Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "95th Gvardiya Strelkovaya Diviziya"		
+		location = 11651
+		division_template = "Gvardiya Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "97th Gvardiya Strelkovaya Diviziya"		
+		location = 9451
+		division_template = "Gvardiya Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "120th Gvardiya Strelkovaya Diviziya"		
+		location = 11370
+		division_template = "Gvardiya Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "128th Gornostrelkovaya Diviziya"		
+		location = 6431
+		division_template = "Gornostrelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {			
+		name = "161st Strelkovaya Diviziya"		
+		location = 11479
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {			
+		name = "180th Strelkovaya Diviziya"		
+		location = 525
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {			
+		name = "207th Strelkovaya Diviziya"		
+		location = 9238
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {			
+		name = "262nd Gvardiya Diviziya"		
+		location = 1150
+		division_template = "Gvardiya Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "338th Gvardiya Diviziya"		
+		location = 1150
+		division_template = "Gvardiya Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "341st Strelkovaya Diviziya"		
+		location = 3134
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {			
+		name = "358th Gvardiya Diviziya"		
+		location = 1150
+		division_template = "Gvardiya Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "7th Gvardiya Vozdushnaya Diviziya"		
+		location = 6296
+		division_template = "Gvardiya Vozdushno-Desantnaya"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "11th Vozdushnaya Brigada"		
+		location = 11314
+		division_template = "Vozdushno-Desantnaya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}		
+	division= {			
+		name = "13th Gvardiya Vozdushnaya Diviziya"		
+		location = 4725
+		division_template = "Gvardiya Vozdushno-Desantnaya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}		
+	division= {			
+		name = "21st Gvardiya Vozdushnaya Diviziya"		
+		location = 6408
+		division_template = "Gvardiya Vozdushno-Desantnaya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}			
+	division= {			
+		name = "31st Vozdushnaya Brigada"		
+		location = 6520
+		division_template = "Vozdushno-Desantnaya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}		
+	division= {			
+		name = "76th Gvardiya Vozdushnaya Diviziya"		
+		location = 11202
+		division_template = "Gvardiya Vozdushno-Desantnaya"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.9
+	}	
+	division= {			
+		name = "95th Gvardiya Vozdushnaya Diviziya"		
+		location = 10655
+		division_template = "Gvardiya Vozdushno-Desantnaya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}	
+	division= {			
+		name = "98th Gvardiya Vozdushnaya Diviziya"		
+		location = 12189
+		division_template = "Gvardiya Vozdushno-Desantnaya"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "99th Gvardiya Vozdushnaya Diviziya"		
+		location = 12189
+		division_template = "Gvardiya Vozdushno-Desantnaya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}	
+	division= {			
+		name = "100th Gvardiya Vozdushnaya Diviziya"		
+		location = 9288
+		division_template = "Gvardiya Vozdushno-Desantnaya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}	
+	division= {			
+		name = "103rd Gvardiya Vozdushnaya Diviziya"		
+		location = 9241
+		division_template = "Gvardiya Vozdushno-Desantnaya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "105th Gvardiya Vozdushnaya Diviziya"		
+		location = 357
+		division_template = "Gvardiya Vozdushno-Desantnaya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}	
+	division= {			
+		name = "106th Gvardiya Vozdushnaya Diviziya"		
+		location = 6262
+		division_template = "Gvardiya Vozdushno-Desantnaya"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "107th Gvardiya Vozdushnaya Diviziya"		
+		location = 350
+		division_template = "Gvardiya Vozdushno-Desantnaya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "108th Gvardiya Vozdushnaya Diviziya"		
+		location = 12427
+		division_template = "Gvardiya Vozdushno-Desantnaya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "114th Gvardiya Vozdushnaya Diviziya"		
+		location = 9302
+		division_template = "Gvardiya Vozdushno-Desantnaya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "2nd Tankovaya Diviziya"		
+		location = 957
+		division_template = "Tankovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}			
+	division= {			
+		name = "2nd Gvardiya 'Tatsinskaya' Tankovaya Diviziya"		
+		location = 3298
+		division_template = "Gvardiya Tankovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}	
+	division= {			
+		name = "3rd Gvardiya 'Harbin' Tankovaya Diviziya"		
+		location = 4805
+		division_template = "Gvardiya Tankovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}		
+	division= {			
+		name = "4th Gvardiya 'Kantemirovskaya' Tankovaya Diviziya"		
+		location = 3391
+		division_template = "Gvardiya Tankovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}			
+	division= {			
+		name = "5th Gvardiya 'Don' Tankovaya Diviziya"		
+		location = 9417
+		division_template = "Gvardiya Tankovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}	
+	division= {			
+		name = "7th Gvardiya ' Kievsko-Berlinskaya' Tankovaya Diviziya"		
+		location = 445
+		division_template = "Gvardiya Tankovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}	
+	division= {			
+		name = "9th Tankovaya Diviziya"		
+		location = 6441
+		division_template = "Tankovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}		
+	division= {			
+		name = "9th Gvardiya 'Uman' Tankovaya Diviziya"		
+		location = 3258
+		division_template = "Gvardiya Tankovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}		
+	division= {			
+		name = "10th Tankovaya Diviziya"		
+		location = 9508
+		division_template = "Tankovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}		
+	division= {			
+		name = "10th Gvardiya 'Uralso-Lvovskaya' Tankovaya Diviziya"		
+		location = 3499
+		division_template = "Gvardiya Tankovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}		
+	division= {			
+		name = "11th Gvardiya 'Carpathian-Berlin' Tankovaya Diviziya"		
+		location = 514
+		division_template = "Gvardiya Tankovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}		
+	division= {			
+		name = "12th Gvardiya 'Suvorov' Tankovaya Diviziya"		
+		location = 11444
+		division_template = "Gvardiya Tankovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "13th Gvardiya 'Poltava' Tankovaya Diviziya"		
+		location = 701
+		division_template = "Gvardiya Tankovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "15th Tankovaya Diviziya"		
+		location = 4482
+		division_template = "Tankovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {			
+		name = "18th Tankovaya Diviziya"		
+		location = 6690
+		division_template = "Tankovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {			
+		name = "20th Tankovaya Diviziya"		
+		location = 6462
+		division_template = "Tankovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {			
+		name = "25th Tankovaya Diviziya"		
+		location = 11627
+		division_template = "Tankovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {			
+		name = "111th Tankovaya Diviziya"		
+		location = 7786
+		division_template = "Tankovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {			
+		name = "55th Morskoy Diviziya "		
+		location = 957
+		division_template = "Morskoy Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {			
+		name = "63rd Gvardiya 'Kirkenneskaya' Morskoy Diviziya "		
+		location = 9140
+		division_template = "Gvardiya Morskoy Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {			
+		name = "175th Morskoy Diviziya "		
+		location = 3134
+		division_template = "Morskoy Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {			
+		name = "336th Morskoy Diviziya "		
+		location = 6314
+		division_template = "Morskoy Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {			
+		name = "810th Morskoy Diviziya "		
+		location = 3686
+		division_template = "Morskoy Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+		
+		
+	##### NAVAL UNITS #####
+	### Northern Fleet -- Murmansk
+	navy = {	
+		name = "Severnyy Flot"
+		base = 3134
+		location = 3134 # Murmansk
+		#ship = { name = "Dzerzhinskiy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Gordy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Gromky" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Grozny" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Gremyashchiy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Sokrushitelny" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Razyaryonnyy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Razumnyy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Stalin" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = SOV } } }
+		ship = { name = "S-14" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV version_name = "S Class" } } }
+		ship = { name = "S-56" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV version_name = "S Class" } } }
+		ship = { name = "S-101" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV version_name = "S Class" } } }
+		ship = { name = "S-15" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV version_name = "S Class" } } }
+		ship = { name = "S-16" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV version_name = "S Class" } } }
+		ship = { name = "S-103" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV version_name = "S Class" } } }
+		ship = { name = "S-104" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV version_name = "S Class" } } }
+		ship = { name = "K-21" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV version_name = "K Class" } } }
+		ship = { name = "K-51" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV version_name = "K Class" } } }
+		ship = { name = "K-52" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV version_name = "K Class" } } }
+		ship = { name = "K-57" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV version_name = "K Class" } } }
+	}	
+	
+	### Baltic Fleet -- Leningrad
+	navy = {	
+		name = "Baltiyskiy Flot"
+		base = 3151
+		location = 3151 # Leningrad
+		#ship = { name = "Dzerzhinskiy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Grozyashtchi" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Sil'nyi" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = SOV } } }
+		ship = { name = "Storozhevoi" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = SOV } } }
+		ship = { name = "Slavnyi" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = SOV } } }
+		ship = { name = "Vitse-Admiral Drozd" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = SOV } } }
+		ship = { name = "Svirepiy" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = SOV } } }
+		ship = { name = "Osmotritelny" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = SOV } } }
+		ship = { name = "Otlichny" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = SOV } } }
+		ship = { name = "Obraztsovy" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = SOV } } }
+		ship = { name = "Otvazhny" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = SOV } } }
+		ship = { name = "Odaryonny" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = SOV } } }
+		ship = { name = "Kirov" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Maxim Gorky" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "S-13" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV version_name = "S Class" } } }
+		ship = { name = "S-31" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV version_name = "S Class" } } }
+		ship = { name = "S-33" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV version_name = "S Class" } } }
+		ship = { name = "S-35" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV version_name = "S Class" } } }
+		ship = { name = "S-51" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV version_name = "S Class" } } }
+		ship = { name = "S-52" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV version_name = "S Class" } } }
+		ship = { name = "S-53" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV version_name = "S Class" } } }
+		ship = { name = "S-102" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV version_name = "S Class" } } }
+	}	
+
+	### Black Sea Fleet -- Sevastopol
+	navy = {	
+		name = "Chernomorskiy Flot"
+		base = 3686
+		location = 3686 # Sevastopol
+		ship = { name = "Bodry" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Boiky" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Soobrazitel'ny" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = SOV } } }
+		ship = { name = "Ozornoi" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = SOV } } }
+		ship = { name = "Voroshilov" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Molotov" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "S-22" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV version_name = "S Class" } } }
+		ship = { name = "S-23" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV version_name = "S Class" } } }
+		ship = { name = "S-24" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV version_name = "S Class" } } }
+		ship = { name = "S-26" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV version_name = "S Class" } } }
+	}	
+
+	### Pacific Fleet -- Vladivostok
+	navy = {	
+		name = "Tihookyeanskiy Flot"
+		base = 957
+		location = 957 # Vladivostok
+		#ship = { name = "Shch-134" definition = submarine equipment = { submarine_2 = { amount = 1 owner = SOV version_name = "Series X Shchuka" } } }
+		ship = { name = "Rezvyy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Ryanyy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Rastoropnyy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Redkiy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Razyashchyy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Reshitelnyy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Retivyy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Revnostnyy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Rekordnyy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Rezkiy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Vnushitelny" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = SOV } } }
+		ship = { name = "Vlastny" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = SOV } } }
+		ship = { name = "Vynoslivy" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = SOV } } }
+		ship = { name = "Lazar Kaganovich" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Kalinin" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "S-17" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV version_name = "S Class" } } }
+		ship = { name = "S-18" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV version_name = "S Class" } } }
+		ship = { name = "S-19" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV version_name = "S Class" } } }
+		ship = { name = "S-20" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV version_name = "S Class" } } }
+		ship = { name = "S-21" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV version_name = "S Class" } } }
+		ship = { name = "S-25" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV version_name = "S Class" } } }
+		ship = { name = "K-53" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV version_name = "K Class" } } }
+		ship = { name = "K-55" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV version_name = "K Class" } } }
+		ship = { name = "EK-11" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Tacoma Class" } } }
+		ship = { name = "EK-16" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Tacoma Class" } } }
+		ship = { name = "EK-13" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Tacoma Class" } } }
+		ship = { name = "EK-12" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Tacoma Class" } } }
+		ship = { name = "EK-14" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Tacoma Class" } } }
+		ship = { name = "EK-15" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Tacoma Class" } } }
+		ship = { name = "EK-25" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Tacoma Class" } } }
+		ship = { name = "EK-26" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Tacoma Class" } } }
+		ship = { name = "EK-1" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Tacoma Class" } } }
+		ship = { name = "EK-27" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Tacoma Class" } } }
+		ship = { name = "EK-28" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Tacoma Class" } } }
+		ship = { name = "EK-2" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Tacoma Class" } } }
+		ship = { name = "EK-3" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Tacoma Class" } } }
+		ship = { name = "EK-6" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Tacoma Class" } } }
+		ship = { name = "EK-5" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Tacoma Class" } } }
+		ship = { name = "EK-8" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Tacoma Class" } } }
+		ship = { name = "EK-10" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Tacoma Class" } } }
+		ship = { name = "EK-17" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Tacoma Class" } } }
+		ship = { name = "EK-22" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Tacoma Class" } } }
+		ship = { name = "EK-18" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Tacoma Class" } } }
+		ship = { name = "EK-19" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Tacoma Class" } } }
+		ship = { name = "EK-20" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Tacoma Class" } } }
+		ship = { name = "EK-21" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Tacoma Class" } } }
+		ship = { name = "EK-9" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Tacoma Class" } } }
+		ship = { name = "EK-4" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Tacoma Class" } } }
+		ship = { name = "EK-7" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Tacoma Class" } } }
+		ship = { name = "EK-29" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Tacoma Class" } } }
+		ship = { name = "EK-30" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Tacoma Class" } } }
+	}	
+}					
+					
+
+### Air Wings
+air_wings = {
+		##### Soviet Air Force (VVS) #####
+	188 = {		#Kalinigrad														
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }	
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		fighter_equipment_2 = { owner = "FRA" amount = 40 }		
+	}
+	60 = {		#Thuringen														
+		fighter_equipment_3 = { owner = "SOV" amount = 40 }						
+		fighter_equipment_3 = { owner = "SOV" amount = 40 }	
+	}
+	64 = {		#Brandenburg														
+		fighter_equipment_3 = { owner = "SOV" amount = 40 }		
+		fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		jet_interceptor_equipment_1 = { owner = "PRC" amount = 40 }
+		jet_fighter_equipment_2 = { owner = "SOV" amount = 40 }	
+		jet_fighter_equipment_2 = { owner = "SOV" amount = 40 }	
+		jet_fighter_equipment_2 = { owner = "SOV" amount = 40 }	
+		jet_fighter_equipment_2 = { owner = "SOV" amount = 40 }	
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }	
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }		
+		fighter_equipment_3 = { owner = "SOV" amount = 40 }	
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+	}
+	62 = {		#Pommern										
+		cas_equipment_2 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+	}
+	65 = {		#Sachsen														
+		jet_fighter_equipment_2 = { owner = "SOV" amount = 40 }		
+		jet_fighter_equipment_2 = { owner = "SOV" amount = 40 }
+		jet_fighter_equipment_2 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+	}
+	152 = {		#Burgenland														
+		fighter_equipment_3 = { owner = "SOV" amount = 40 }		
+		fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		fighter_equipment_3 = { owner = "SOV" amount = 40 }		
+		fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		heavy_fighter_equipment_1 = { owner = "SOV" amount = 40 }
+		heavy_fighter_equipment_1 = { owner = "SOV" amount = 40 }
+		heavy_fighter_equipment_1 = { owner = "SOV" amount = 40 }
+		heavy_fighter_equipment_1 = { owner = "SOV" amount = 40 }
+		heavy_fighter_equipment_1 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+		cas_equipment_2 = { owner = "SOV" amount = 40 }
+		cas_equipment_2 = { owner = "SOV" amount = 40 }
+		cas_equipment_2 = { owner = "SOV" amount = 40 }
+	}
+	405 = {		#Tashkent														
+		fighter_equipment_3 = { owner = "SOV" amount = 40 }		
+		fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		fighter_equipment_3 = { owner = "SOV" amount = 40 }
+	}
+	216 = {		#Olonets														
+		fighter_equipment_2 = { owner = "SOV" amount = 40 }		
+		fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		fighter_equipment_2 = { owner = "SOV" amount = 40 }
+	}
+	195 = {		#Leningrad														
+		fighter_equipment_2 = { owner = "ENG" amount = 40 }		
+		fighter_equipment_2 = { owner = "ENG" amount = 40 }
+		fighter_equipment_2 = { owner = "ENG" amount = 40 }
+		fighter_equipment_2 = { owner = "ENG" amount = 40 }	
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }	
+		jet_fighter_equipment_2 = { owner = "SOV" amount = 40 }
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+	}
+	637 = {		#Kamchatka										
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+	}
+	13 = {		#Estonia						
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+	}
+	89 = {		#Stanislawow						
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		cas_equipment_2 = { owner = "USA" amount = 40 }
+		cas_equipment_2 = { owner = "USA" amount = 40 }
+		cas_equipment_2 = { owner = "USA" amount = 40 }
+	}
+	95 = {		#Nowogrodek						
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+	}
+	94 = {		#Polesie						
+		jet_fighter_equipment_1 = { owner = "SOV" amount = 40 }
+		jet_fighter_equipment_2 = { owner = "SOV" amount = 40 }
+		jet_fighter_equipment_2 = { owner = "SOV" amount = 40 }
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+	}
+	408 = {		#Vladivostok						
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+		fighter_equipment_2 = { owner = "FRA" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+		nav_bomber_equipment_1 = { owner = "SOV" amount = 40 }
+		nav_bomber_equipment_1 = { owner = "SOV" amount = 40 }
+		nav_bomber_equipment_1 = { owner = "SOV" amount = 40 }
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		fighter_equipment_2 = { owner = "FRA" amount = 40 }
+		fighter_equipment_2 = { owner = "FRA" amount = 40 }					
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+	}
+	229 = {		#Azerbaijan						
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+	}
+	201 = {		#Kharkov	
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+		tac_bomber_equipment_2 = { owner = "USA" amount = 40 }
+		tac_bomber_equipment_2 = { owner = "USA" amount = 40 }
+		tac_bomber_equipment_2 = { owner = "USA" amount = 40 }
+		tac_bomber_equipment_2 = { owner = "USA" amount = 40 }
+	}
+	219 = {		#Moscow	
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+		fighter_equipment_2 = { owner = "ENG" amount = 40 }
+		jet_interceptor_equipment_1 = { owner = "SOV" amount = 40 }
+	}
+	46 = {		#Bucarest	
+		fighter_equipment_1 = { owner = "USA" amount = 40 }
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+	}
+	155 = {		#Transdanubia	
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+		jet_fighter_equipment_2 = { owner = "SOV" amount = 40 }
+		fighter_equipment_3 = { owner = "SOV" amount = 40  }
+	}
+	229 = {		#Askhabad						
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+		fighter_equipment_2 = { owner = "FRA" amount = 40 }
+	}
+	242 = {		#Smolensk
+		jet_interceptor_equipment_1 = { owner = "PRC" amount = 40 }
+		nav_bomber_equipment_1 = { owner = "SOV" amount = 40 }
+		nav_bomber_equipment_1 = { owner = "SOV" amount = 40 }
+	}
+	207 = {		#Vitebsk
+		strat_bomber_equipment_2 = { owner = "USA" amount = 20 }
+		strat_bomber_equipment_1 = { owner = "USA" amount = 20 }
+		tac_bomber_equipment_2 = { owner = "USA" amount = 40 }
+		tac_bomber_equipment_2 = { owner = "USA" amount = 40 }
+		tac_bomber_equipment_2 = { owner = "USA" amount = 40 }
+		tac_bomber_equipment_2 = { owner = "USA" amount = 40 }
+		tac_bomber_equipment_2 = { owner = "USA" amount = 40 }
+		tac_bomber_equipment_2 = { owner = "USA" amount = 40 }
+		tac_bomber_equipment_2 = { owner = "USA" amount = 40 }
+	}
+	243 = {		#Roslav
+		fighter_equipment_2 = { owner = "FRA" amount = 40 }
+	}
+	224 = {		#Bryansk
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		nav_bomber_equipment_1 = { owner = "SOV" amount = 40 }
+		nav_bomber_equipment_1 = { owner = "SOV" amount = 40 }
+		nav_bomber_equipment_1 = { owner = "SOV" amount = 40 }
+		nav_bomber_equipment_1 = { owner = "SOV" amount = 40 }
+		nav_bomber_equipment_1 = { owner = "SOV" amount = 40 }
+	}
+	213 = {		#Murmansk
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+	}
+	11 = {		#Kaunas
+		fighter_equipment_3 = { owner = "SOV" amount = 40  }
+		fighter_equipment_3 = { owner = "SOV" amount = 40  }
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+	}
+	61 = {		#Mackleburg
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+	}
+	409 = {		#Khabarovsk
+		fighter_equipment_2 = { owner = "FRA" amount = 40 }
+		fighter_equipment_2 = { owner = "FRA" amount = 40 }
+		fighter_equipment_2 = { owner = "FRA" amount = 40 }
+		fighter_equipment_3 = { owner = "SOV" amount = 40  }
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		fighter_equipment_3 = { owner = "SOV" amount = 40  }
+		fighter_equipment_3 = { owner = "SOV" amount = 40  }
+		fighter_equipment_3 = { owner = "SOV" amount = 40  }
+	}
+	655 = {		#North Sakhalin	
+		fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		tac_bomber_equipment_2 = { owner = "SOV" amount = 40 }
+		tac_bomber_equipment_2 = { owner = "SOV" amount = 40 }
+		tac_bomber_equipment_2 = { owner = "SOV" amount = 40 }
+		tac_bomber_equipment_2 = { owner = "SOV" amount = 40 }
+		tac_bomber_equipment_2 = { owner = "SOV" amount = 40 }
+		tac_bomber_equipment_2 = { owner = "SOV" amount = 40 }
+		tac_bomber_equipment_2 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+	}
+	200 = {		#Zaporozhie
+		jet_interceptor_equipment_1 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+	}
+	226 = {		#Dnepropetrovsk 
+		jet_interceptor_equipment_1 = { owner = "SOV" amount = 40 }
+	}
+	227 = {		#Stalino
+		jet_interceptor_equipment_1 = { owner = "SOV" amount = 40 }
+	}
+	137 = {		#Crimea
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+	}
+	795 = {		#Opolskie
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+	}
+	563 = {		#Chits
+		fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+	}
+	566 = {		#Irkutsk
+		fighter_equipment_3 = { owner = "SOV" amount = 40 }
+	}
+	258 = {		#Lipetsk
+		jet_interceptor_equipment_1 = { owner = "SOV" amount = 40 }
+		jet_interceptor_equipment_1 = { owner = "SOV" amount = 40 }
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+	}
+	247 = {		#Kalinin
+		jet_interceptor_equipment_1 = { owner = "SOV" amount = 40 }
+		jet_interceptor_equipment_1 = { owner = "SOV" amount = 40 }
+		tac_bomber_equipment_2 = { owner = "SOV" amount = 40 }
+		tac_bomber_equipment_2 = { owner = "SOV" amount = 40 }
+		tac_bomber_equipment_2 = { owner = "SOV" amount = 40 }
+	}
+	91 = {		#Galicia
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+	}
+	222 = {		#Orel
+		jet_fighter_equipment_1 = { owner = "SOV" amount = 40 }
+		jet_fighter_equipment_1 = { owner = "SOV" amount = 40 }
+	}
+	205 = {		#Kaluga
+		fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		fighter_equipment_2 = { owner = "ENG" amount = 40 }
+		fighter_equipment_2 = { owner = "ENG" amount = 40 }
+	}
+	202 = {		#Kiev
+		jet_interceptor_equipment_1 = { owner = "SOV" amount = 40 }
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+		tac_bomber_equipment_2 = { owner = "USA" amount = 40 }
+	}
+	201 = {		#Zhitomir
+		jet_fighter_equipment_1 = { owner = "SOV" amount = 40 }
+		tac_bomber_equipment_2 = { owner = "USA" amount = 40 }
+		tac_bomber_equipment_2 = { owner = "USA" amount = 40 }
+	}
+	192 = {		#Odessa
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		fighter_equipment_2 = { owner = "FRA" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+	}
+	231 = {		#Georgia
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+		fighter_equipment_2 = { owner = "FRA" amount = 40 }
+		fighter_equipment_2 = { owner = "FRA" amount = 40 }
+		fighter_equipment_2 = { owner = "FRA" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+	}
+	64 = {		#Ostmark
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+	}
+	252 = {		#Gorki
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		fighter_equipment_2 = { owner = "ENG" amount = 40 }
+	}
+	230 = {		#Armenia
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+		fighter_equipment_3 = { owner = "SOV" amount = 40  }
+		fighter_equipment_3 = { owner = "SOV" amount = 40  }
+	}
+	66 = {		#Dolno-Slaksie
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
+		fighter_equipment_3 = { owner = "SOV" amount = 40  }
+	}
+	66 = {		#Azerbaijan
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		heavy_fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		fighter_equipment_3 = { owner = "SOV" amount = 40 }
+		fighter_equipment_2 = { owner = "FRA" amount = 40 }
+		fighter_equipment_2 = { owner = "FRA" amount = 40 }
+	}
+	5 = {		#Warminsko
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+	}
+	657 = {		#Birobidzhan
+		nav_bomber_equipment_1 = { owner = "SOV" amount = 40 }
+		nav_bomber_equipment_1 = { owner = "SOV" amount = 40 }
+		nav_bomber_equipment_1 = { owner = "SOV" amount = 40 }
+	}
+	12 = {		#Vidzeme
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+		cas_equipment_3 = { owner = "SOV" amount = 40 }
+	}
+	193 = {		#Chernigov
+		tac_bomber_equipment_2 = { owner = "USA" amount = 40 }
+		strat_bomber_equipment_3 = { owner = "SOV" amount = 40 }
+		strat_bomber_equipment_3 = { owner = "SOV" amount = 40 }
+	}
+	259 = {		#Poltava
+		strat_bomber_equipment_3 = { owner = "SOV" amount = 40 }
+		strat_bomber_equipment_3 = { owner = "SOV" amount = 40 }
+		strat_bomber_equipment_3 = { owner = "SOV" amount = 40 }
+		strat_bomber_equipment_3 = { owner = "SOV" amount = 40 }
+	}
+	248 = {		#Yaroslavl
+		jet_fighter_equipment_1 = { owner = "SOV" amount = 40 }
+		jet_fighter_equipment_1 = { owner = "SOV" amount = 40 }
+		jet_fighter_equipment_1 = { owner = "SOV" amount = 40 }
+	}
+}
+
+
+	#########################
+	## STARTING PRODUCTION ##
+	#########################
+instant_effect = {
+	
+
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "SOV"
+		}
+		requested_factories = 10
+		progress = 0.1
+		efficiency = 100
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "SOV" 
+		}
+		requested_factories = 3
+		progress = 0.3
+		efficiency = 100
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "SOV" 
+		}
+		requested_factories = 2
+		progress = 0.3
+		efficiency = 100
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = mbt_equipment_1
+			creator = "SOV" 
+		}
+		requested_factories = 15
+		progress = 0.4
+		efficiency = 100
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = motorized_equipment_1
+			creator = "SOV" 
+		}
+		requested_factories = 5
+		progress = 0.4
+		efficiency = 100
+	}
+	
+	add_equipment_production = {
+		equipment = {
+			type = mechanized_equipment_2
+			creator = "SOV" 
+		}
+		requested_factories = 5
+		progress = 0.4
+		efficiency = 100
+	}	
+
+	add_equipment_production = {
+		equipment = {
+			type = fighter_equipment_2
+			creator = "SOV" 
+		}
+		requested_factories = 2
+		progress = 0.15
+		efficiency = 100
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = strat_bomber_equipment_2
+			creator = "SOV" 
+		}
+		requested_factories = 2
+		progress = 0.2
+		efficiency = 100
+	}
+
+	### Under Construction Notes ###
+	# CL Chapayev
+	add_equipment_production = {
+		equipment = {
+			type = light_cruiser_2
+			creator = "SOV"
+		}
+		requested_factories = 1
+		progress = 0.6
+		amount = 1
+	}
+	# CL Zheleznyakov
+	add_equipment_production = {
+		equipment = {
+			type = light_cruiser_2
+			creator = "SOV"
+		}
+		requested_factories = 1
+		progress = 0.7
+		amount = 1
+	}
+	# CL Kuybyshev
+	add_equipment_production = {
+		equipment = {
+			type = light_cruiser_2
+			creator = "SOV"
+		}
+		requested_factories = 1
+		progress = 0.65
+		amount = 1
+	}
+	# CL Chkalov
+	add_equipment_production = {
+		equipment = {
+			type = light_cruiser_2
+			creator = "SOV"
+		}
+		requested_factories = 1
+		progress = 0.55
+		amount = 1
+	}
+	# CL Frunze
+	add_equipment_production = {
+		equipment = {
+			type = light_cruiser_2
+			creator = "SOV"
+		}
+		requested_factories = 1
+		progress = 0.50
+		amount = 1
+	}
+}
+	#####################

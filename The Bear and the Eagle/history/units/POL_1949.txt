@@ -1,0 +1,388 @@
+﻿division_template = {
+	name = "Dywizja Piechoty"			
+										
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }		
+	}
+	priority = 0	
+	support = {
+		recon = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+		artillery = { x = 0 y = 2 }		
+	}
+}
+division_template = {
+	name = "Dywizja Piechoty Górskiej"
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }	
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }			
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+		artillery = { x = 0 y = 2 }			
+	}
+}
+division_template = {
+	name = "Dywizja Desantowa" 		
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 0 y = 2 }
+		marine = { x = 1 y = 0 }
+		marine = { x = 1 y = 1 }
+		marine = { x = 1 y = 2 }
+		light_armor = { x = 2 y = 0 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+	}
+
+}
+division_template = {
+	name = "Dywizja Powietrznodesantowa"
+
+	regiments = {
+		paratrooper = { x = 0 y = 0 }
+		paratrooper = { x = 0 y = 1 }
+		paratrooper = { x = 1 y = 0 }
+		paratrooper = { x = 1 y = 1 }
+		paratrooper = { x = 2 y = 0 }
+		paratrooper = { x = 2 y = 1 }	
+	}
+	priority = 2	
+	support = {
+			recon = { x = 0 y = 0 }
+	}	
+}
+division_template = {
+	name = "Dywizja Piechoty Motorowej"
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+      	motorized = { x = 1 y = 0 }
+       	motorized = { x = 1 y = 1 }
+		motorized = { x = 2 y = 0 }
+        motorized = { x = 2 y = 1 }
+ 	}
+}
+division_template = {
+	name = "Dywizja Zmechanizowana-Kolowa"
+	regiments = {
+		mechanized = { x = 0 y = 0 }
+		mechanized = { x = 0 y = 1 }
+		mechanized = { x = 0 y = 2 }		
+		mechanized = { x = 1 y = 0 }
+		mechanized = { x = 1 y = 1 }
+		medium_armor = { x = 2 y = 0 }
+		
+	}
+	support = {
+       	recon = { x = 0 y = 0 }
+	 	engineer = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Pulk Czolgow"
+
+	regiments = {
+		medium_armor = { x = 0 y = 0 }
+		medium_armor = { x = 0 y = 1 }
+		medium_armor = { x = 0 y = 2 }
+	}
+	support = {
+			recon = { x = 0 y = 0 }
+			engineer = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Pulk Artylerii Pancernej"
+
+	regiments = {
+		medium_sp_artillery_brigade = { x = 0 y = 0 }
+		medium_sp_artillery_brigade = { x = 0 y = 1 }
+		medium_sp_artillery_brigade = { x = 0 y = 2 }		
+	}
+	support = {
+        	recon = { x = 0 y = 0 }
+       		engineer = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Pulk Czolgow Ciezkich"
+
+	regiments = {
+		heavy_armor = { x = 0 y = 0 }
+		heavy_armor = { x = 0 y = 1 }
+		heavy_armor = { x = 0 y = 2 }		
+	}	
+ 	support = {
+     		 recon = { x = 0 y = 0 }
+       		 engineer = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Dywizja Pancerna"
+
+	regiments = {
+		medium_armor = { x = 0 y = 0 }
+		medium_armor = { x = 0 y = 1 }
+		medium_armor = { x = 1 y = 0 }
+		medium_armor = { x = 1 y = 1 }
+		mechanized = { x = 2 y = 0 }
+		mechanized = { x = 2 y = 1 }		
+	}
+	support = {
+			recon = { x = 0 y = 0 }
+			engineer = { x = 0 y = 1 }
+			artillery = { x = 0 y = 2 }
+	}
+}
+##### OOB #####
+units = {
+	######## Dowodztwo Wojsk Ladowych ########
+	division= {
+		name = "1. Dywizja 'Tadeusza Kościuszki' Piechoty"					
+		location = 3544
+ 		division_template = "Dywizja Piechoty"
+ 		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "15. Dywizja Piechoty"					
+		location = 3544
+ 		division_template = "Dywizja Piechoty"
+ 		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "18. Dywizja Piechoty"					
+		location = 6558
+ 		division_template = "Dywizja Piechoty"
+ 		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+ 	division= {	
+		name = "1. Pulk Czolgow"					
+		location = 3473
+		division_template = "Pulk Czolgow"
+ 		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+ 	}
+ 	division= {
+		name =  "13. Pulk Artylerii Pancernej"
+		location = 6558
+ 		division_template = "Pulk Artylerii Pancernej"
+ 		start_experience_factor = 0.3
+		start_equipment_factor = 0.5	
+	 }	
+ 	division= {	
+		name = "12. Dywizja Piechoty"					
+ 		location = 11558
+		division_template = "Dywizja Piechoty"
+		start_equipment_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+ 	division= {
+		name = "16. Dywizja Piechoty"
+		location = 11413
+		division_template = "Dywizja Piechoty"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "9. Pulk Czolgow"
+		location = 6464
+		division_template = "Pulk Czolgow"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+ 	division= {
+		name = "4 Pulk Czolgow Ciezkich"
+		location = 6334
+		division_template = "Pulk Czolgow Ciezkich"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "4. Dywizja Piechoty"	
+		location = 552
+		division_template = "Dywizja Piechoty"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+ 	division= {
+		name = "5. Dywizja Piechoty"					
+		location = 3572
+		division_template = "Dywizja Piechoty"
+ 		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+ 	division= {
+		name = "8. Dywizja Piechoty"					
+		location = 6282
+ 		division_template = "Dywizja Piechoty"
+ 		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+ 	division= {
+		name = "2. Pulk Czolgow"				
+		location = 3473
+ 		division_template = "Pulk Czolgow"
+ 		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+ 	division= {
+		name =  "28. Pulk Artylerii Pancernej"
+		location = 3473
+ 		division_template = "Pulk Artylerii Pancernej"
+ 		start_experience_factor = 0.2
+		start_equipment_factor = 0.5	
+	 }	
+ 	division= {
+		name = "7. Dywizja Piechoty"				
+		location = 6558
+ 		division_template = "Dywizja Piechoty"
+ 		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+ 	division= {
+		name = "10. Dywizja Piechoty"			
+		location = 537
+ 		division_template = "Dywizja Piechoty"
+ 		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+ 	division= {
+		name = "11. Dywizja Piechoty"
+		location = 362
+ 		division_template = "Dywizja Piechoty"
+ 		start_experience_factor = 0.3
+		start_equipment_factor = 0.5	
+	}
+ 	division= {
+		name = "6. Pulk Czolgow Ciezkich"
+		location = 6567
+ 		division_template = "Pulk Czolgow Ciezkich"
+ 		start_experience_factor = 0.3
+		start_equipment_factor = 0.5	
+	}
+ 	division= {
+		name =  "24. Pulk Artylerii Pancernej"
+		location = 3572
+ 		division_template = "Pulk Artylerii Pancernej"
+ 		start_experience_factor = 0.2
+		start_equipment_factor = 0.5	
+	}
+ 	division= {
+		name =  "25. Pulk Artylerii Pancernej"
+		location = 11428
+ 		division_template = "Pulk Artylerii Pancernej"
+ 		start_experience_factor = 0.2
+		start_equipment_factor = 0.5	
+	 }
+ 	division= {
+		name =  "6. Dywizja Piechoty"
+		location = 389
+ 		division_template = "Dywizja Piechoty"
+ 		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	 }
+ 	division= {
+		name = "9. Dywizja Piechoty"
+		location = 6309
+ 		division_template = "Dywizja Piechoty"
+ 		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+ 	division= {
+		name = "8. Pulk Czolgow Ciezkich"
+		location = 6567
+ 		division_template = "Pulk Czolgow Ciezkich"
+ 		start_experience_factor = 0.3
+		start_equipment_factor = 0.5	
+	}
+	 division= {
+		name =  "2. Dywizja Piechoty"
+		location = 389
+ 		division_template = "Dywizja Piechoty"
+ 		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	 }
+ 	division= {
+		name = "3. Dywizja Piechoty"
+		location = 6309
+ 		division_template = "Dywizja Piechoty"
+ 		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+ 	division= {
+		name = "15. Dywizja Piechoty"
+		location = 6309
+ 		division_template = "Dywizja Piechoty"
+ 		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}	
+}
+
+##### Wojska Lotnicze i Obrony Powietrzne (CO: Zajec) #####
+air_wings = {
+
+}
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "POL"
+		}
+		requested_factories = 3
+		progress = 0.1
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "POL" 
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = lt_equipment_1
+			creator = "POL" 
+		}
+		requested_factories = 1
+		progress = 0.4
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = motorized_equipment_1
+			creator = "POL" 
+		}
+		requested_factories = 1
+		progress = 0.4
+		efficiency = 100
+	}
+
+}
+#####################

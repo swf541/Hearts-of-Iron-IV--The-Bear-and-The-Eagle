@@ -1,0 +1,29 @@
+﻿
+units = { 
+
+	division = {
+		name = "100th Divizia Infanterie"
+		location = 9617
+		division_template = "Divizia Infanterie"
+	}
+	division = {
+		name = "101st Divizia Infanterie"
+		location = 9617
+		division_template = "Divizia Infanterie"
+	}
+	division = {
+		name = "102nd Divizia Infanterie"
+		location = 9617
+		division_template = "Divizia Infanterie"
+	}
+	division = {
+		name = "103rd Divizia Infanterie"
+		location = 9617
+		division_template = "Divizia Infanterie"
+	}
+	division = {
+		name = "104th Divizia Infanterie"
+		location = 9617
+		division_template = "Divizia Infanterie"
+	}
+}

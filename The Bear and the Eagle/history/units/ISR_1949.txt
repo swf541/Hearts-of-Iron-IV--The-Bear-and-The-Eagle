@@ -1,0 +1,360 @@
+﻿
+division_template = {
+	name = "Division Infantery"		# Default template
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 2 y = 3 }
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+		infantry = { x = 3 y = 2 }
+		infantry = { x = 3 y = 3 }
+		infantry = { x = 4 y = 0 }
+		infantry = { x = 4 y = 1 }
+		infantry = { x = 4 y = 2 }
+		infantry = { x = 4 y = 3 }
+		
+	}
+	support = {
+		engineer = { x = 0 y = 0 }  
+		recon = { x = 0 y = 1 }
+		artillery = { x = 0 y = 2 }
+	}
+	priority = 2
+}
+
+division_template = {
+	name = "Division Cavalery"		# Default template
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 0 y = 3 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 1 y = 3 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+		cavalry = { x = 2 y = 2 }
+		cavalry = { x = 2 y = 3 }
+		cavalry = { x = 3 y = 0 }
+		cavalry = { x = 3 y = 1 }
+		cavalry = { x = 3 y = 2 }
+		cavalry = { x = 3 y = 3 }
+		cavalry = { x = 4 y = 0 }
+		cavalry = { x = 4 y = 1 }
+		cavalry = { x = 4 y = 2 }
+		cavalry = { x = 4 y = 3 }
+		
+	}
+	support = {
+		engineer = { x = 0 y = 0 }  
+		recon = { x = 0 y = 1 }
+		artillery = { x = 0 y = 2 }
+	}
+	priority = 2
+}
+
+division_template = {
+	name = "Division Mountain"		# Default template
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 0 y = 3 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+		mountaineers = { x = 1 y = 3 }
+		mountaineers = { x = 2 y = 0 }
+		mountaineers = { x = 2 y = 1 }
+		mountaineers = { x = 2 y = 2 }
+		mountaineers = { x = 2 y = 3 }
+		mountaineers = { x = 3 y = 0 }
+		mountaineers = { x = 3 y = 1 }
+		mountaineers = { x = 3 y = 2 }
+		mountaineers = { x = 3 y = 3 }
+		mountaineers = { x = 4 y = 0 }
+		mountaineers = { x = 4 y = 1 }
+		mountaineers = { x = 4 y = 2 }
+		mountaineers = { x = 4 y = 3 }
+		
+	}
+	support = {
+		engineer = { x = 0 y = 0 }  
+		recon = { x = 0 y = 1 }
+		artillery = { x = 0 y = 2 }
+	}
+	priority = 2
+}
+
+
+division_template = {
+	name = "Division Marine"		# Default template
+
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 0 y = 2 }
+		marine = { x = 0 y = 3 }
+		marine = { x = 1 y = 0 }
+		marine = { x = 1 y = 1 }
+		marine = { x = 1 y = 2 }
+		marine = { x = 1 y = 3 }
+		marine = { x = 2 y = 0 }
+		marine = { x = 2 y = 1 }
+		marine = { x = 2 y = 2 }
+		marine = { x = 2 y = 3 }
+		marine = { x = 3 y = 0 }
+		marine = { x = 3 y = 1 }
+		marine = { x = 3 y = 2 }
+		marine = { x = 3 y = 3 }
+		marine = { x = 4 y = 0 }
+		marine = { x = 4 y = 1 }
+		marine = { x = 4 y = 2 }
+		marine = { x = 4 y = 3 }
+		
+	}
+	support = {
+		engineer = { x = 0 y = 0 }  
+		recon = { x = 0 y = 1 }
+		artillery = { x = 0 y = 2 }
+	}
+	priority = 2
+}
+
+division_template = {
+	name = "Division Cruisser"		# Default
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 0 y = 3 }
+		light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+		light_armor = { x = 1 y = 2 }
+		heavy_armor = { x = 1 y = 3 }
+		light_armor = { x = 2 y = 0 }
+		light_armor = { x = 2 y = 1 }
+		light_armor = { x = 2 y = 2 }
+		heavy_armor = { x = 2 y = 3 }
+		motorized = { x = 3 y = 0 }
+		motorized = { x = 3 y = 1 }
+		motorized = { x = 3 y = 2 }
+		motorized = { x = 3 y = 3 }
+		motorized = { x = 4 y = 0 }
+		motorized = { x = 4 y = 1 }
+		motorized = { x = 4 y = 2 }
+		motorized = { x = 4 y = 3 }
+		
+	}
+	support = {
+		engineer = { x = 0 y = 0 }  
+		recon = { x = 0 y = 1 }
+		artillery = { x = 0 y = 2 }
+	}
+	priority = 2
+}
+
+division_template = {
+	name = "Infantry Division"
+	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+		infantry = { x = 3 y = 2 }
+
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+}
+
+
+division_template = {
+	name = "Paratrooper Brigade"
+	
+	regiments = {
+		paratrooper = { x = 0 y = 0 }
+		paratrooper = { x = 0 y = 1 }
+		paratrooper = { x = 0 y = 2 }
+		paratrooper = { x = 0 y = 3 }
+		paratrooper = { x = 0 y = 4 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+	
+	priority = 2
+}
+
+division_template = {
+	name = "Mountain Brigade"
+	
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 0 y = 3 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Mountain Division"
+	
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 0 y = 3 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+		mountaineers = { x = 1 y = 3 }
+		mountaineers = { x = 2 y = 0 }
+		mountaineers = { x = 2 y = 1 }
+		mountaineers = { x = 2 y = 2 }
+		mountaineers = { x = 2 y = 3 }
+		mountaineers = { x = 3 y = 0 }
+		mountaineers = { x = 3 y = 1 }
+		mountaineers = { x = 3 y = 2 }
+		mountaineers = { x = 3 y = 3 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+	
+	priority = 2
+}
+
+division_template = {
+	name = "Marine Brigade"
+	
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 0 y = 2 }
+		marine = { x = 0 y = 3 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+	
+	priority = 2
+}
+
+units = {
+	division = {
+		name = "Israeli Paratroopers"
+		location = 1201
+		division_template = "Paratrooper Brigade"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "1st Southern Division"
+		location = 7176
+		division_template = "Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "2nd Southern Division"
+		location = 7176
+		division_template = "Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "3rd Southern Division"
+		location = 1015
+		division_template = "Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "4th Southern Division"
+		location = 7176
+		division_template = "Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "5th Southern Division"
+		location = 1015
+		division_template = "Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "6th Southern Division"
+		location = 1015
+		division_template = "Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "7th Southern Division"
+		location = 1015
+		division_template = "Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "1st Eastern Division"
+		location = 1065
+		division_template = "Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "2nd Eastern Division"
+		location = 1065
+		division_template = "Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "Golan Division"
+		location = 1065
+		division_template = "Mountain Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Lebanon Border Division"
+		location = 1065
+		division_template = "Mountain Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	
+}
+

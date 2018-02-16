@@ -1,0 +1,39 @@
+﻿
+units = {
+
+	division = {
+		name = "219th Diviziune Mijloc Blindat"
+		location = 9617
+		division_template = "Diviziune Mijloc Blindat"
+	}
+	division = {
+		name = "220th Diviziune Mijloc Blindat"
+		location = 9617
+		division_template = "Diviziune Mijloc Blindat"
+	}
+	division = {
+		name = "221st Diviziune Mijloc Blindat"
+		location = 9617
+		division_template = "Diviziune Mijloc Blindat"
+	}
+	division = {
+		name = "222nd Diviziune Mijloc Blindat"
+		location = 9617
+		division_template = "Diviziune Mijloc Blindat"
+	}
+	division = {
+		name = "223rd Diviziune Mijloc Blindat"
+		location = 9617
+		division_template = "Diviziune Mijloc Blindat"
+	}
+	division = {
+		name = "224th Diviziune Mijloc Blindat"
+		location = 9617
+		division_template = "Diviziune Mijloc Blindat"
+	}
+	division = {
+		name = "225th Diviziune Mijloc Blindat"
+		location = 9617
+		division_template = "Diviziune Mijloc Blindat"
+	}
+}

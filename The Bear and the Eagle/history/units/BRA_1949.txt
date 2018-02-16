@@ -1,0 +1,179 @@
+﻿division_template = {
+	name = "Divisão de Infantaria"		# Infantry Division
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+	}
+	support = {
+  	      engineer = { x = 0 y = 0 }
+ 	}
+}
+division_template = {
+	name = "Divisão de Cavalaria"  		# Cavalry Division
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 0 y = 3 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 1 y = 3 }
+	}
+}
+
+units = {
+	##### Exército Brasileiro #####
+	division= {	
+		name = "1a Divisão de Infantaria"
+		location = 10980 # Rio de Janiero
+		division_template = "Divisão de Infantaria"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "2a Divisão de Infantaria"
+		location = 10513 # Sao Paulo
+		division_template = "Divisão de Infantaria"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "3a Divisão de Infantaria"
+		location = 10447 # Porto Alegre
+		division_template = "Divisão de Infantaria"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "4a Divisão de Infantaria"
+		location = 5168 # Recife
+		division_template = "Divisão de Infantaria"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "5a Divisão de Infantaria"
+		location = 8242 # Belo Horizonte
+		division_template = "Divisão de Infantaria"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "1a Divisão de Cavalaria"
+		location = 12853 # Belem
+		division_template = "Divisão de Cavalaria"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "2a Divisão de Cavalaria"
+		location = 5156 # Curitiba
+		division_template = "Divisão de Cavalaria"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+
+
+	##### Naval OOB #####
+	navy = {				
+		name = "Marinha do Brasil"			
+		base = 10980 
+		location = 10980 # Rio de Janiero
+		ship = { name = "Amazonas" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = BRA } } }
+		ship = { name = "Araguari" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = BRA } } }
+		ship = { name = "Ajuricaba" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = BRA } } }
+		ship = { name = "Acre" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = BRA } } }
+		ship = { name = "Araguaia" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = BRA } } }
+		ship = { name = "Apa" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = BRA } } }
+		ship = { name = "Bertioga" definition = frigate equipment = { frigate_1 = { amount = 1 owner = BRA } } }
+		ship = { name = "Beberibe" definition = frigate equipment = { frigate_1 = { amount = 1 owner = BRA } } }
+		ship = { name = "Bracuí" definition = frigate equipment = { frigate_1 = { amount = 1 owner = BRA } } }
+		ship = { name = "Bauru" definition = frigate equipment = { frigate_1 = { amount = 1 owner = BRA } } }
+		ship = { name = "Baependi" definition = frigate equipment = { frigate_1 = { amount = 1 owner = BRA } } }
+		ship = { name = "Benevente" definition = frigate equipment = { frigate_1 = { amount = 1 owner = BRA } } }
+		ship = { name = "Babitonga" definition = frigate equipment = { frigate_1 = { amount = 1 owner = BRA } } }
+		ship = { name = "Bocaina" definition = frigate equipment = { frigate_1 = { amount = 1 owner = BRA } } }
+		ship = { name = "Marcílio Dias" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = BRA } } }
+		ship = { name = "Mariz e Barros" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = BRA } } }
+		ship = { name = "Greenhalgh" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = BRA } } }
+	}				
+	navy = {				
+		name = "Força de Submarinos"			
+		base = 10980 
+		location = 10980 # Rio de Janiero
+		ship = { name = "Tupy" definition = submarine equipment = { submarine_1 = { amount = 1 owner = BRA } } }
+		ship = { name = "Timbira" definition = submarine equipment = { submarine_1 = { amount = 1 owner = BRA } } }
+		ship = { name = "Tamoio" definition = submarine equipment = { submarine_1 = { amount = 1 owner = BRA } } }
+	}				
+}
+
+
+air_wings = {
+	### Aviação Militar -- Rio de Janiero
+	500 = { #Rio de Janeiro
+		fighter_equipment_3 =  { owner = "BRA" amount = 30 }		# 1º GAVCA
+		fighter_equipment_3 =  { owner = "BRA" amount = 25 }		# 2º GAVCA
+		tac_bomber_equipment_2 =  { owner = "BRA" amount = 30 }		# 1/7º GAV
+		tac_bomber_equipment_2 =  { owner = "BRA" amount = 30 }		# 5º GAV
+		cas_equipment_3 =  { owner = "BRA" amount = 15 }		    # 1º GBL
+	}
+	502 = { #Rio Grande do Sul
+		fighter_equipment_1 =  { owner = "BRA" amount = 25 }		# 3º GAVCA
+		cas_equipment_3 =  { owner = "BRA" amount = 15 }		    # 2º GBL
+	}
+	498 = { #Rio Grande
+		tac_bomber_equipment_2 =  { owner = "BRA" amount = 30 }		# 1/4º GAV
+		nav_bomber_equipment_1 =  { owner = "BRA" amount = 20 }		# 1/2º GAV
+	}
+	497 = { #Maranhao
+		nav_bomber_equipment_3 =  { owner = "BRA" amount = 22 }		# 1/2º GAV
+	}
+}
+
+
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "BRA"
+		}
+		requested_factories = 1
+		progress = 0.67
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "BRA"
+		}
+		requested_factories = 1
+		progress = 0.27
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = fighter_equipment_0
+			creator = "BRA"
+		}
+		requested_factories = 1
+		progress = 0.35
+		efficiency = 100
+	}
+}
