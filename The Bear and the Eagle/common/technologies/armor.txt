@@ -574,7 +574,7 @@ technologies = {
 		start_year = 1952
 		folder = {
 			name = armour_folder
-			position = { x = 14 y = 3 }
+			position = { x = 14 y = 2 }
 		}
 		
 		categories = {
