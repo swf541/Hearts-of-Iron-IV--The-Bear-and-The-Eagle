@@ -118,39 +118,21 @@ country_event = {
 	
 	fire_only_once = yes
 	
-	trigger = {
-		PRC = {
-			owns_state = 524
-			owns_state = 604
-			owns_state = 601
-			controls_state = 524
-			controls_state = 604
-			controls_state = 601
-		}
-	}
-
+	is_triggered_only = yes
+	
 	immediate = {
+		annex_country = { target = CHI } 
 		CHI = {
 			transfer_state = 524
-                                                transfer_state = 1006
-                                                transfer_state = 1024
+            transfer_state = 1006
+            transfer_state = 1024
 			country_event = chi.2
-                                                if = {
-			limit = {
-			              CHI = { owns_state = 618 }
-			}
-			PRC = { transfer_state = 618 }
-		}
+
 		}
 		set_global_flag = PRC_mainland
 		news_event = news.1009
 	}
 
-	option = {}
-
-	mean_time_to_happen = {
-		days = 7
-	}
 }
 
 # 7 division because of Focus Tree
