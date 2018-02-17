@@ -168,70 +168,7 @@
 			focus = PRU_Focus_on_Doctrines
 		}
 		x = 1
-		y = 4
-		completion_reward = {	#Civilian Factory Focus Template
-					random_owned_controlled_state = {
-							limit = {
-									free_building_slots = {
-											building = industrial_complex
-											size > 0
-											include_locked = yes
-										}
-									OR = {
-											is_in_home_area = yes
-											NOT = {
-													owner = {
-															any_owned_state = {
-																	free_building_slots = {
-																			building = industrial_complex
-																			size > 0
-																			include_locked = yes
-																		}
-																	is_in_home_area = yes
-																}
-														}
-												}
-										}
-								}
-							add_extra_state_shared_building_slots = 1
-							add_building_construction = {
-									type = industrial_complex
-									level = 1
-									instant_build = yes
-								}
-						}
-				
-					random_owned_controlled_state = {
-							limit = {
-									free_building_slots = {
-											building = industrial_complex
-											size > 0
-											include_locked = yes
-										}
-									OR = {
-											is_in_home_area = yes
-											NOT = {
-													owner = {
-															any_owned_state = {
-																	free_building_slots = {
-																			building = industrial_complex
-																			size > 0
-																			include_locked = yes
-																		}
-																	is_in_home_area = yes
-																}
-														}
-												}
-										}
-								}
-							add_extra_state_shared_building_slots = 1
-							add_building_construction = {
-									type = industrial_complex
-									level = 1
-									instant_build = yes
-								}
-						}
-				}
+		y = 4	
 	}
 	focus = {
 		id = PRU_Continue_Building_More_Factories
@@ -1158,7 +1095,69 @@
 		}
 		x = 18
 		y = 12
-
+        completion_reward = {                          #Civilian Factory Focus Template
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+									OR = {
+											is_in_home_area = yes
+											NOT = {
+													owner = {
+															any_owned_state = {
+																	free_building_slots = {
+																			building = industrial_complex
+																			size > 0
+																			include_locked = yes
+																		}
+																	is_in_home_area = yes
+																}
+														}
+												}
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
 	}
 	focus = {
 		id = PRU_Build_Central_Asistencia_Central
