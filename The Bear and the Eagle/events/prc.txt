@@ -133,8 +133,6 @@ country_event = {
 		news_event = news.1009
 	}
 
-	option = {}
-
 }
 
 # 7 division because of Focus Tree
