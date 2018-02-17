@@ -1,0 +1,37 @@
+﻿###########################
+# NATO Events
+###########################
+
+add_namespace = nato
+# If not in NATO and has spirit, remove spirit
+country_event = {
+	id = nato.50
+	hidden = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea = nato_member
+        NOT = { is_in_faction_with = USA }
+	}
+	
+	immediate = {
+		remove_ideas = nato_member 
+	}
+
+}
+
+# If in NATO, get national spirit
+country_event = {
+	id = nato.51
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_in_faction_with = USA 
+        NOT = { has_idea = nato_member }
+	}
+	
+	immediate = {
+		add_ideas = nato_member 
+	}
+}

@@ -8,6 +8,7 @@ set_national_unity = 0.6
 
 # Starting tech
 set_technology = {
+	interwar_antitank = 1
 	CAS1 = 1
 	CAS2 = 1
 	CAS3 = 1
@@ -61,7 +62,7 @@ set_technology = {
 	heavy_infantry_weapons1 = 1
 	heavy_infantry_weapons2 = 1
 	heavy_tanks_2 = 1
-	heavy_tanks_3 = 1
+	heavy_tanks_1 = 1
 	improved_destroyer = 1
 	improved_light_cruiser = 1
 	improved_rocket_engines = 1

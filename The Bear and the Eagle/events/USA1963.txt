@@ -2,6 +2,7 @@
 news_event = {	#lbj_63 
 	id = swf.100
 	title = "Assasination of President Nixon"
+	desc = "President Nixon Assasinated"
 	
 	
 	picture = GFX_news_assasination

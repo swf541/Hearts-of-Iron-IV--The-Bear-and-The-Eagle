@@ -2920,7 +2920,7 @@ focus_tree = {
 		x = 37
 		y = 1
 		completion_reward = {
-			#LAND
+			add_state_core = 964
 		}
 	}
 	focus = {

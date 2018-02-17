@@ -93,9 +93,16 @@ on_actions = {
 	}
 
 	# country random events
-	#on_bi_yearly_pulse = {
-	#
-	#}
+	on_bi_yearly_pulse = {
+		effect = {
+			country_event = { id = nato.50 }
+			country_event = { id = nato.51 }
+			country_event = { id = eng.5 }
+			country_event = { id = eng.6 }
+			country_event = { id = eng.7 }
+			country_event = { id = eng.8 }
+		}
+	}
 
 	#on_five_year_pulse = {
 	#
