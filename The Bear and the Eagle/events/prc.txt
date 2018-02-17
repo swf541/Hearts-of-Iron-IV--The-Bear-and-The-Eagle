@@ -120,8 +120,13 @@ country_event = {
 	
 	is_triggered_only = yes
 	
+	trigger = {
+			FROM = { tag = PRC }
+			ROOT = { tag = CHI }			
+	}
+	
 	immediate = {
-		annex_country = { target = CHI } 
+		PRC = { annex_country = { target = CHI } }
 		CHI = {
 			transfer_state = 524
             transfer_state = 1006
@@ -304,28 +309,6 @@ country_event = {
 	}
 }
 
-# Annexation of ETR
-country_event = {
-	id = prc.12
-	title = prc.12.t
-	desc = prc.12.d
-
-	trigger = {
-		PRC = { NOT = { has_war_with = CHI } }
-		country_exists = ETR
-	}
-	
-	fire_only_once = yes
-
-	option = {
-		name = prc.12.a
-		ETR = { country_event = prc.13 }
-	}
-
-	mean_time_to_happen = { days = 7 }
-
-}
-
 # Annexation of ETR to ETR
 country_event = {
 	id = prc.13
@@ -340,7 +323,7 @@ country_event = {
 		name = prc.13.a
 		PRC = { annex_country = { target = ETR } }
 		ai_chance = {
-			factor = 50
+			factor = 90
 		}
 	}
 
@@ -353,7 +336,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 50
+			factor = 10
 		}
 	}
 }

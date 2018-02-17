@@ -42,6 +42,8 @@ news_event = {
 	picture = GFX_news_event_nuremberg
 
 	major = yes
+	
+	fire_only_once = yes
 
 	trigger = {
 		date > 1949.5.20
@@ -68,13 +70,13 @@ news_event = {
 	title = news.1002.t
 	desc = news.1002.d
 	picture = GFX_news_event_berlin_airlift
-
+	fire_only_once = yes
 	major = yes
 
 	immediate = {
 		set_global_flag = berlin_airlift_over
 	}
-
+	
 	trigger = {
 		date > 1949.9.29
 		date < 1949.10.3

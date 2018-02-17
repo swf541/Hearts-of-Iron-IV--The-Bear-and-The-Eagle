@@ -172,6 +172,8 @@ country_event = {
 	
 	fire_only_once = yes
 
+	is_triggered_only = yes
+	
 	trigger = {
 		CPI = {
 		NOT = {
@@ -189,9 +191,6 @@ country_event = {
 		}
 	}
 
-	option = { }
-
-	mean_time_to_happen = { days = 7 }
 }
 # CPI victory
 news_event = {
@@ -227,19 +226,14 @@ news_event = {
 
 
 }
-# RAJ win against CPI
+# CPI win against RAJ
 country_event = {
 	id = india.9
 	hidden = yes
 	
 	fire_only_once = yes
 
-	trigger = {
-		RAJ = {
-		surrender_progress > 0.5
-		has_war_with = CPI
-		}
-	}
+	is_triggered_only = yes
 	
 	immediate = {
 			CPI = { 
@@ -250,9 +244,6 @@ country_event = {
 		}
 	}
 
-	option = { }
-
-	mean_time_to_happen = { days = 7 }
 }
 
 

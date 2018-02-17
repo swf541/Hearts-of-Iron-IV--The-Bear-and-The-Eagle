@@ -18,7 +18,9 @@ ideas = {
 				removal_cost = -1
 				
 				picture = generic_volunteer_expedition_bonus
-		
+				rule = {
+					can_force_government = no
+				}		
 				modifier = {
 					join_faction_tension = 1.50
 					send_volunteers_tension = 0.20
