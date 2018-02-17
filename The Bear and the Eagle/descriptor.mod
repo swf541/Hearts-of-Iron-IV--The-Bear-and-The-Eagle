@@ -1,4 +1,4 @@
-name="Cold War: The Iron Curtain"
+name="Iron Curtain: A World Divided"
 path="mod/coldwarironcurtain/"
 replace_path="events"
 replace_path="history\\states"

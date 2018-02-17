@@ -133,14 +133,17 @@ bookmarks = {
 				
 			}
 		}
-		"PER"={
+		"FIN"={
 			minor = yes
-			history = "PER_GATHERING_STORM_DESC"
-			ideology = monarchism
+			history = "FIN_GATHERING_STORM_DESC"
+			ideology = Liberal_Conservatism
 			ideas = {
-				
+				soviet_reparations
 			}
 			focuses = {
+				FIN_join_nato
+				FIN_legacy_of_1918
+				FIN_back_to_30s
 				
 			}
 		}
