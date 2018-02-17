@@ -5651,18 +5651,18 @@ completion_reward = {
 			YUG = {
 				add_opinion_modifier = {
 					target = SOV
-					modifier = large_increase
+					modifier = large_decrease
 				}
 			}
 			SOV = {
 				add_opinion_modifier = {
 					target = YUG
-					modifier = large_increase
+					modifier = large_decrease
 				}
 			}
 			create_wargoal = {
 				type = puppet_wargoal_focus
-				target = PRC
+				target = YUG
 			}
 		}
 		ai_will_do = {
