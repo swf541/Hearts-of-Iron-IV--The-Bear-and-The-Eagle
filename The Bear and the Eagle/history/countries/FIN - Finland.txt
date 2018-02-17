@@ -205,14 +205,10 @@ create_country_leader = {
 	ideology = market_socialism
 }
 
-add_ideas = {
-	sisu
-}
-
 create_field_marshal = {
 	name = "Adolf Ehrnrooth"
 	picture = "general_Ehrnrooth.dds"
-	traits = { winter_specialist ranger old_guard }
+	traits = { ranger old_guard }
 	skill = 4
 }
 
