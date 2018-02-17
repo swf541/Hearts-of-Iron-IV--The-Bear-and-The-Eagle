@@ -20,6 +20,7 @@ ideas = {
 				picture = generic_volunteer_expedition_bonus
 				rule = {
 					can_force_government = no
+					can_puppet = no
 				}		
 				modifier = {
 					join_faction_tension = 1.50

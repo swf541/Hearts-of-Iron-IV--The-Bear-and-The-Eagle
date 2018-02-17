@@ -119,12 +119,7 @@ country_event = {
 	fire_only_once = yes
 	
 	is_triggered_only = yes
-	
-	trigger = {
-			FROM = { tag = PRC }
-			ROOT = { tag = CHI }			
-	}
-	
+
 	immediate = {
 		PRC = { annex_country = { target = CHI } }
 		CHI = {

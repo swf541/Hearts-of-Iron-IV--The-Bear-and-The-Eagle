@@ -340,9 +340,26 @@ on_actions = {
 					}
 					NOT = { has_global_flag = set_global_flag = PRC_mainland }
 				}
-				PRC = { country_event = prc.4 }
-				ETR = { country_event = prc.13 }
-			}			
+				country_event = { id = prc.4 days = 0 }
+				if = {
+					limit = { 
+						country_exists = { 
+							TAG = ETR 
+						}
+					}
+					ETR = { country_event = prc.13 }
+				}
+			}		
+			if = {
+				limit = {
+					ROOT = { tag = GRE }
+					FROM = {
+						tag = PDG
+					}
+					NOT = { has_global_flag = set_global_flag = PRC_mainland }
+				}
+				news_event = news.1025
+			}				
 		}
 	}
 

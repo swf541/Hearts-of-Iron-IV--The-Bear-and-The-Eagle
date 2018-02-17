@@ -48,7 +48,7 @@ ideas = {
 
 			modifier = {
 				army_morale_factor = 0.15
-				army_org_factor = -0.1
+				army_org_factor = 0.1
 				army_org = 5.00
 			}
 
