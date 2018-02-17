@@ -13,12 +13,14 @@ music = {
 	
 	chance = {
 		modifier = {
-			factor = 3
+			factor = 2
 
 			AND = {
+					OR = { 
 					has_government = communism
 					has_government = maoism
 					has_government = trotskyism
+				}
 			}
 
 		}		
@@ -30,7 +32,7 @@ music = {
 	
 	chance = {
 		modifier = {
-			factor = 3
+			factor = 2
 			has_war = no
 
 		}		
@@ -56,7 +58,10 @@ music = {
 	chance = {
 		modifier = {
 			factor = 1
-			tag = PRU
+			AND = {
+				has_war = no
+				tag = PRU
+			}
 
 		}		
 	}	
@@ -69,7 +74,9 @@ music = {
 	chance = {
 		modifier = {
 			factor = 1
-			tag = SOV
+			AND = {
+				tag = SOV
+			}
 
 		}		
 	}	

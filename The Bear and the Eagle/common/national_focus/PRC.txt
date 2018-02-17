@@ -813,10 +813,11 @@ focus_tree = {
 		prerequisite = {
 			focus = one_china
 		}
+             available = {
+			country_exists = TIB
+			}
 		bypass = {
 			OR = {
-				has_war_with = TIB
-				is_in_faction_with = TIB
 				NOT = { country_exists = TIB }
 			}
 		}
@@ -843,7 +844,10 @@ focus_tree = {
 		}
 		x = 20
 		y = 4
-
+        available = {
+			owns_state = 322
+            owns_state = 867
+		}
 	}
 	focus = {
 		id = denounce_lama

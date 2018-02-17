@@ -2767,7 +2767,7 @@ focus_tree = {
 		icon = GFX_goal_generic_propaganda
 		cost = 10.00
 		available = {
-			EGY = {  has_autonomy_state = autonomy_free }
+			EGY = { is_puppet = no }
 		}
 		prerequisite = {
 			focus = EGY_arab_cold_war
@@ -3198,7 +3198,7 @@ focus_tree = {
 		icon = GFX_goal_generic_propaganda
 		cost = 10.00
 		available = {
-			EGY = {  has_autonomy_state = autonomy_free }
+			EGY = EGY = { is_puppet = no }
 		}
 		prerequisite = {
 			focus = EGY_new_path
@@ -3853,7 +3853,7 @@ focus_tree = {
 		icon = GFX_focus_generic_military_mission
 		cost = 10.00
 		available = {
-			EGY = {  has_autonomy_state = autonomy_free }
+			EGY = { is_puppet = no }
 		}
 		prerequisite = {
 			focus = EGY_coptic_military_cliques
@@ -3927,7 +3927,7 @@ focus_tree = {
 			focus = EGY_coptic_military_cliques
 		}
 		available = {
-			EGY = {  has_autonomy_state = autonomy_free }
+			EGY = { is_puppet = no }
 		}
 		x = 50
 		y = 2
